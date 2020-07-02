@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo心得体会</title>
-    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
-<a id="more"></a>
-
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
-<p>部署Hexo + GithubPages</p>
-</blockquote>
-<ul>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">参考1</a></li>
-<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/" target="_blank" rel="noopener">参考2</a></li>
-</ul>
-<blockquote>
-<p>如何只显示缩略内容？</p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">在md文件中加入<span class="xml"><span class="comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Bugs解决"><a href="#Bugs解决" class="headerlink" title="Bugs解决"></a>Bugs解决</h1><blockquote>
-<p>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</p>
-</blockquote>
-<p>最后的解决方法是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ rm -rf .deploy</span><br><span class="line">$$ hexo generate</span><br><span class="line">$$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关于博文发布</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ hexo clean</span><br><span class="line">$$ hexo deploy -g</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</p>
-</blockquote>
-<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-  </entry>
-  <entry>
     <title>聆听音乐答案(第五版)</title>
     <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己再做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
@@ -304,6 +264,46 @@
 ]]></content>
       <categories>
         <category>Holy</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hexo心得体会</title>
+    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
+<a id="more"></a>
+
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
+<p>部署Hexo + GithubPages</p>
+</blockquote>
+<ul>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">参考1</a></li>
+<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/" target="_blank" rel="noopener">参考2</a></li>
+</ul>
+<blockquote>
+<p>如何只显示缩略内容？</p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">在md文件中加入<span class="xml"><span class="comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Bugs解决"><a href="#Bugs解决" class="headerlink" title="Bugs解决"></a>Bugs解决</h1><blockquote>
+<p>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</p>
+</blockquote>
+<p>最后的解决方法是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ rm -rf .deploy</span><br><span class="line">$$ hexo generate</span><br><span class="line">$$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于博文发布</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ hexo clean</span><br><span class="line">$$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</p>
+</blockquote>
+<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
       </categories>
   </entry>
 </search>
