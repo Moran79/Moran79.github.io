@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo心得体会</title>
-    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
-<a id="more"></a>
-
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
-<p>部署Hexo + GithubPages</p>
-</blockquote>
-<ul>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">参考1</a></li>
-<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/" target="_blank" rel="noopener">参考2</a></li>
-</ul>
-<blockquote>
-<p>如何只显示缩略内容？</p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">在md文件中加入<span class="xml"><span class="comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Bugs解决"><a href="#Bugs解决" class="headerlink" title="Bugs解决"></a>Bugs解决</h1><blockquote>
-<p>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</p>
-</blockquote>
-<p>最后的解决方法是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ rm -rf .deploy</span><br><span class="line">$$ hexo generater</span><br><span class="line">$$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关于博文发布</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ hexo clean</span><br><span class="line">$$ hexo deploy -g</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-  </entry>
-  <entry>
     <title>聆听音乐答案(第五版)</title>
     <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己再做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
@@ -182,7 +144,7 @@
 
 
 
-<h1 id="第一课-做主门徒"><a href="#第一课-做主门徒" class="headerlink" title="第一课 做主门徒"></a>第一课 做主门徒</h1><h2 id="为什么我们需要门徒训练"><a href="#为什么我们需要门徒训练" class="headerlink" title="为什么我们需要门徒训练"></a>为什么我们需要门徒训练</h2><blockquote>
+<h1 id="第一课-做主门徒"><a href="#第一课-做主门徒" class="headerlink" title="第一课 做主门徒"></a>第一课 做主门徒</h1><h2 id="Why-为什么我们需要门徒训练"><a href="#Why-为什么我们需要门徒训练" class="headerlink" title="Why 为什么我们需要门徒训练"></a>Why 为什么我们需要门徒训练</h2><blockquote>
 <p>那撒在路旁的，就是人听了道，撒旦立刻来，把撒在他心里的道夺了去。《馬可福音 4:15》</p>
 </blockquote>
 <ul>
@@ -217,7 +179,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="选择谁来参与门徒训练"><a href="#选择谁来参与门徒训练" class="headerlink" title="选择谁来参与门徒训练"></a>选择谁来参与门徒训练</h2><blockquote>
+<h2 id="Who-选择谁来参与门徒训练"><a href="#Who-选择谁来参与门徒训练" class="headerlink" title="Who 选择谁来参与门徒训练"></a>Who 选择谁来参与门徒训练</h2><blockquote>
 <p>你在许多见证人面前听见我所教训的，也要交托那忠心能教导别人的人。《提摩太後書 2:2》</p>
 </blockquote>
 <ul>
@@ -237,7 +199,7 @@
 <li>A: Available. 有时间参与</li>
 <li>T: Teachable. 肯受教</li>
 </ul>
-<h2 id="如何进行门徒训练"><a href="#如何进行门徒训练" class="headerlink" title="如何进行门徒训练"></a>如何进行门徒训练</h2><p><strong>主日学的一个问题：</strong></p>
+<h2 id="How-如何进行门徒训练"><a href="#How-如何进行门徒训练" class="headerlink" title="How 如何进行门徒训练"></a>How 如何进行门徒训练</h2><p><strong>主日学的一个问题：</strong></p>
 <ul>
 <li>讲得过多，并且不一定是听众所需要的。所以门徒训练的两大核心是：<ol>
 <li>充分的互动，鼓励每个人都讲讲<ul>
@@ -263,7 +225,7 @@
 <li>在我们鼓励大家互动的时候，对于他人的分享，我们的负担是：如何通过圣经/神的话，来给他提供一个新的视角呢？</li>
 <li>这也有助于让他意识到神与他生活的关系，信仰是活泼的。</li>
 </ul>
-<p>找教会 = 找老婆</p>
+<p><strong>找教会 = 找老婆：</strong></p>
 <ul>
 <li>W: Worship. 教会需要有很好的崇拜，敬神。</li>
 <li>I: Instruction. 注重指导，灵里的培养。</li>
@@ -290,11 +252,58 @@
 <li>帮助一起灵修（防止自己灵修的时候出现【灵来灵去都是零】）</li>
 <li>代代相传：劝勉他一定要好好学习，以后可以带别人进行门徒训练</li>
 </ol>
-<p>背诵经文的目的：会在你需要他们的时候，突然在脑海中弹出来。</p>
-<p>如何劝说他人参与？：就算是骗你，也只骗三个月啦，进行风险控制。</p>
+<p><strong>背诵经文的目的：</strong>会在你需要他们的时候，突然在脑海中弹出来。</p>
+<p><strong>如何劝说他人参与：</strong>就算是骗你，也只骗三个月啦，进行风险控制。</p>
+<h2 id="实践体会"><a href="#实践体会" class="headerlink" title="实践体会"></a>实践体会</h2><p>07/01/2020</p>
+<p>有小伙伴对这句经文感受很深：</p>
+<blockquote>
+<p>人若不常在我里面，就像枝子丢在外面枯干，人拾起来，扔在火里烧了。</p>
+</blockquote>
+<p>这无论是不是基督徒，只要不常在主里面，就会失去了功效，从有生命的树枝变成了无生命的柴火。</p>
+<p>有一个小伙伴迟到了，不过当他代祷的时候，他真的摸到了我的需要。我不敢相信他居然准确地说出了我的想法。反而是我祷告的时候磕磕绊绊。上帝这样的安排令我羞愧，愿我有更多的爱心。</p>
 ]]></content>
       <categories>
-        <category>Bible</category>
+        <category>Holy</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hexo心得体会</title>
+    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
+<a id="more"></a>
+
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
+<p>部署Hexo + GithubPages</p>
+</blockquote>
+<ul>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">参考1</a></li>
+<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/" target="_blank" rel="noopener">参考2</a></li>
+</ul>
+<blockquote>
+<p>如何只显示缩略内容？</p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">在md文件中加入<span class="xml"><span class="comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Bugs解决"><a href="#Bugs解决" class="headerlink" title="Bugs解决"></a>Bugs解决</h1><blockquote>
+<p>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</p>
+</blockquote>
+<p>最后的解决方法是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ rm -rf .deploy</span><br><span class="line">$$ hexo generate</span><br><span class="line">$$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于博文发布</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ hexo clean</span><br><span class="line">$$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</p>
+</blockquote>
+<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
       </categories>
   </entry>
 </search>
