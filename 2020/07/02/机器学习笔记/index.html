@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="关于这门MOOCCoursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。 注意事项：  要把每次编程作业放在桌面，再cd改到位置 可以直接在命令行type submit来提交 吴恩达不太喜欢gut feelings，更偏好systematic way">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="大家一起来">
+<meta property="og:description" content="关于这门MOOCCoursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。 注意事项：  要把每次编程作业放在桌面，再cd改到位置 可以直接在命令行type submit来提交 吴恩达不太喜欢gut feelings，更偏好systematic way">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed.png?expiry=1522454400000&hmac=1E-Lq6rt765ATz0C9v6hVDu6kI-vvqxkgRDRJjPzv6g">
+<meta property="og:image" content="http://spark-public.s3.amazonaws.com/ml/images/10.5-quiz-1-option4.png">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/bpAOvt9uEeaQlg5FcsXQDA_ecad653e01ee824b231ff8b5df7208d9_2-am.png?expiry=1522454400000&hmac=B5ywTJzWN1IdcfxIx5LZi95HO4qj3LSKt58YMNlcFk8">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/vqlG7t9uEeaizBK307J26A_3e3e9f42b5e3ce9e3466a0416c4368ee_ITu3antfEeam4BLcQYZr8Q_37fe6be97e7b0740d1871ba99d4c2ed9_300px-Learning1.png?expiry=1522454400000&hmac=r2oACMou0U4Qm-LtPW7WwfdD-rd7dRiokQU8jYo61Co">
+<meta property="og:image" content="http://spark-public.s3.amazonaws.com/ml/images/11.3-quiz-1-q1.png">
+<meta property="og:image" content="https://i.stack.imgur.com/Yl4tV.png">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwgy1fpwrxdd0l3j30qu0miwu5.jpg">
+<meta property="article:published_time" content="2020-07-02T16:17:44.000Z">
+<meta property="article:modified_time" content="2020-07-02T16:43:46.688Z">
+<meta property="article:author" content="大连铁板王">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed.png?expiry=1522454400000&hmac=1E-Lq6rt765ATz0C9v6hVDu6kI-vvqxkgRDRJjPzv6g">
+
+<link rel="canonical" href="http://yoursite.com/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>机器学习笔记 | 大家一起来</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大家一起来</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.jpg">
+      <meta itemprop="name" content="大连铁板王">
+      <meta itemprop="description" content="分享笔记——实践费曼学习法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大家一起来">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          机器学习笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-02 11:17:44 / 修改时间：11:43:46" itemprop="dateCreated datePublished" datetime="2020-07-02T11:17:44-05:00">2020-07-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Courses/" itemprop="url" rel="index"><span itemprop="name">Courses</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Courses/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>17k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="关于这门MOOC"><a href="#关于这门MOOC" class="headerlink" title="关于这门MOOC"></a>关于这门MOOC</h1><p>Coursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。</p>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>要把每次编程作业放在桌面，再cd改到位置</li>
+<li>可以直接在命令行type submit来提交</li>
+<li>吴恩达不太喜欢gut feelings，更偏好systematic way</li>
+</ul>
+<a id="more"></a>
+
+
+
+<h1 id="GUIDE"><a href="#GUIDE" class="headerlink" title="GUIDE"></a>GUIDE</h1><p>GUIDE default 只有十层 然后开始prune</p>
+<p>一棵树的复杂度取决于两点：Tree的复杂度，Node的复杂度。</p>
+<p>Node复杂度排序：Piecewise: constant&lt; simple linear&lt; simple polynomial&lt; stepwise&lt; multiple linear</p>
+<p>有一个内置的可以建立交互作用的列的方法，在dsc-file里面序列写成0</p>
+<p>Importance-Score 是用来提示我们不要漏掉某些在树上没有出现，但是实际也很重要的variable。</p>
+<p>Loh说Box-plot应用场景是当我们只有20~50数据的时候，所以现在数据量很大的时候，不能用box-plot做outlier-detection</p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>机器学习的定义：在标准P不变的情况下，从经验E中提升自己T操作的能力。<br>机器学习分为：</p>
+<ul>
+<li>监督学习：对于数据集中的每个数据，都有相应的真实值，以供机器来训练自己。例如：Regression &amp; Classification</li>
+<li>无监督学习：对于数据集中的数据，是否能找出一种结构？例如：聚类（cluster）算法、鸡尾酒宴会（分离两种声音）</li>
+</ul>
+<p>Notations:</p>
+<ul>
+<li>m:训练集的数据量</li>
+<li>h:拟合出来的函数是一个从x到y的映射，例如：Guide输出的R-function</li>
+<li>J(θ):平方误差代价函数。J=RSS/2m</li>
+<li>:= colon-equal 赋值assignment</li>
+<li>n:自变量的个数:x1~xn</li>
+</ul>
+<p>要注意：h(x)是x的函数而J(θ)是θ的函数<br>J(θ)在只有一个参数的时候是抛物线，有两个参数的时候变成了一个『抛物面』。但是二维图中画不出来，所以便有一招，二维图两个轴分别代表θ0和θ1，然后画出contour plot。</p>
+<p>Gradient Descent Algorithm梯度下降法：</p>
+<ul>
+<li>可以最小化函数。想象自己在一座山上，每次迈出一步，这一步的方向是当前位置下山最快的方向。</li>
+<li>算法：repeat until convergence{θj := θj - α * (J对θj求偏导) 对J里面的每个θ同时操作} </li>
+<li>α被称为learning rate，也就是下山的时候该迈多大的步子。</li>
+<li>随着越来越接近最低点，导数项会变小，步子自然地也会越迈越小。</li>
+<li>Batch GD：每一步求导都要用到整个（Batch）训练集。</li>
+</ul>
+<p>还有种方法叫Normal equation method? 答：就是正常的回归分析</p>
+<p>3 * 3矩阵有时候也被写成R，3 * 3被放在了上标里面。n * 1的矩阵是R(4 * 1)，*1可以省略，于是就变成了常见的那个样子。<br>矩阵的(i,j)元素被称为：i,j entry<br>1-indexed &amp; 0-indexed：y1<del>yn &amp; y0</del>yn</p>
+<p>Feature Scaling: </p>
+<ul>
+<li>Idea: Make sure features are on a similar scale.</li>
+<li>做法：通过除法，将他们的Range搞到（-1，1）吴恩达自己的建议是（-3，3）</li>
+</ul>
+<p>经常通过画一个 min(J(θ))—No.of iterations 的图来判断收敛情况。<br>如果一次迭代导致的变化小于10^-3 jiu认为是收敛了<br>如果迭代之后MIN不降反升，那么可能是步子迈得太大，应该缩小α。<br>数学家证明了如果步子足够小，J（θ）应该每次迭代都会下降<br>α太小或者太小都有可能导致收敛的速度过慢。<br>所以如何寻找α？吴恩达先找一个足够大的上界和一个足够小的下界。然后三倍关系去试：0.001-0.003-0.01-0.03-0.1-…<br>存在一些算法来自动帮我们选择多项式回归次数<br>Normal Equation：就是用（x’x）-1x’y来计算β。缺点是在自变量很多的时候，矩阵不好算，而梯度更快（n大于10000）<br>计算n阶矩阵的逆大概需要O(n^3)<br>xTx不可逆一般有两种可能性：</p>
+<ol>
+<li>有两列高度线性相关</li>
+<li>数据量过少或者自变量过多（极端情况就是行数小于列数）对于这种情况，要么删一些列，要么用regularization</li>
+</ol>
+<p>loss function 也叫 objective function</p>
+<h1 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h1><p>除了Gradient Descend 其他方法都不需要自己输入步长$\alpha$并且也比梯度下降更快，缺点只是更复杂一点</p>
+<p>主要方法：</p>
+<ul>
+<li>Gradient Descend</li>
+<li>Conjugate Gradient</li>
+<li>BFGS</li>
+<li>L-BFGS</li>
+<li>…</li>
+</ul>
+<h1 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h1><p>如果我们用线性拟合的话，一些超远处的离群值可能会对整个拟合直线产生巨大影响。</p>
+<p>##Logistic</p>
+<ul>
+<li>用的是logistic/sigmoid function $y = \frac{1}{1+e^{-z}}$ 会产生一个0~1的函数。 Threshold一般设为0.5 也就是在z&gt;0的时候。一般来说z = $\theta^TX$ 所以，$\theta^TX=0$又被称为 Decision Boundry。所以Decision-boundary是一个关于hypothesis的性质而不是关于data set的性质</li>
+<li>sigmoid在4.6的时候函数值为0.99. 在-4.6的时候函数值为0.01</li>
+<li>Cost function. 如果用常规的square-error的话，最后的损失函数是non-convex的，会有多个局部最小值。Cost function: $cost(h_\theta(x),y) = -log(h_\theta(x))I_{y=1}-log(1-h_\theta(x))I_{y=0} =\ -ylog(h_\theta(x))-(1-y)log(1-h_\theta(x))$</li>
+<li>哇！我们神奇的发现，使用梯度下降法时，logistic和linear的导数部分具有同样的形式$\theta_j:=\theta_j-\alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})x^{(i)}$</li>
+<li></li>
+</ul>
+<h2 id="Multiclass-Classification"><a href="#Multiclass-Classification" class="headerlink" title="Multiclass Classification"></a>Multiclass Classification</h2><p>One v.s. All</p>
+<ul>
+<li>本质上还是logistic。对于每一个class，做一个属于该class和不属于该class的logistic。得到一个$h_\theta^1(x)$. 以此类推得到其他的。则对于一个新的test sample，我们看哪一个h最大，就将他划为哪一组。这时的y就不是一个单一的0/1随机变量，而是一个1一堆0的随机向量</li>
+</ul>
+<h1 id="Overfitting"><a href="#Overfitting" class="headerlink" title="Overfitting"></a>Overfitting</h1><ul>
+<li>underfitting一般会带来High bias。overfitting会带来high variance</li>
+<li>解决overfitting的办法：1、减少features（手动/采用一些变量选择方法）2.Regularization.</li>
+</ul>
+<h2 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h2><p>keep all features, but reduce magnitude/values of parameter.(变量前面的系数变小了) Works well when there are lots of features and each contributes a bit to the response.</p>
+<p>Small values for parameter: 1. ‘Simpler Hypothesis’ 2.Less prone to overfitting</p>
+<ul>
+<li>具体操作：在损失函数后面加上$\lambda/2m$倍的所有系数平方和（除了intercept），shrink all parameters。$\lambda$被称为regularization parameter</li>
+<li>在梯度递降法里面多了一项$-\frac{\alpha}{m}\lambda\theta_j$. 在最小二乘法中变成了$\widehat{\beta}=(X’X+\lambda*A)^{-1}X’Y$ 其中A是一个在1,1位置上是0的单位阵</li>
+<li>这一招还顺带解决了$X’X$矩阵不可逆的情况，使之可逆</li>
+</ul>
+<h1 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h1><p>传统方法会有一些问题，比如在Nonlinear-classification的情况下：如果单单用线性拟合的话，在100个feature的时候，我们要动用polynomial轻易就可以达到O(n^3)，实在是太多变量了</p>
+<p>大脑有个一个主管学习的区域，无论给他输入什么数据，他慢慢自己都能学会。例子：一个主管听力的皮层在改为接受视觉信号之后学会了主管视觉</p>
+<p>六部走：</p>
+<ol>
+<li>Randomly initialize weights</li>
+<li>implement forward propagation to get $h_{\Theta}(x^{(i)})$ for any $x^{(i)}$</li>
+<li>compute cost function $J(\Theta)$</li>
+<li>implement back-prop to compute partial derivatives</li>
+<li>Use gradient-checking the derivatives.</li>
+<li>Using advanced optimization method with back-prop to minimize cost function</li>
+</ol>
+<ul>
+<li>parameters 有时也被称作weights</li>
+<li>input layer - hidden layer - output layer</li>
+<li>$a^{(j)}<em>{i}$表示第j层layer中第i个neuron. $\Theta^{(j)}$表示从第j层到第j+1层的变换（左乘）矩阵，矩阵维数为$S</em>{j+1}*(S_j+1)$最后加的这个1是因为有$a_0$截距项：Forward propagation</li>
+<li>跟logistic的一个明显区别：不用原来的自变量x而是用经过hidden-layer变换后的新自变量</li>
+<li>logical and/or 可以用sigmoid-function写。给intercept-a-b分别加权(-30,20,20)/(-10,20,20)</li>
+<li>一般来说的话，先假设有一个hidden-layer，如果实在想多几个，那么也尽量保证每个hidden-layer的units个数相同。通常来说hidden-layer的units尽量也比feature（input-layer）多一点.</li>
+</ul>
+<h2 id="back-propagation-反向传播算法"><a href="#back-propagation-反向传播算法" class="headerlink" title="back-propagation 反向传播算法"></a>back-propagation 反向传播算法</h2><ul>
+<li>先从左到右算出来函数值，再从右到左算出来导数/误差值。不计算常数项的误差</li>
+<li>有时虽然cost-function在递降，但是可能会存在一些小bug，这是我们需要引入gradient-check：2-sided-difference 用切线斜率来估计导数：$[f(x+\epsilon)-f(x-\epsilon)]/2\epsilon$, where $\epsilon \approx 10^{-4}$.</li>
+<li>random-initializing: 在$[-\epsilon,\epsilon]$里面取值。rand(dim)*2$\epsilon$-$\epsilon$.</li>
+</ul>
+<h1 id="Debugging-a-learning-algorithm"><a href="#Debugging-a-learning-algorithm" class="headerlink" title="Debugging a learning algorithm"></a>Debugging a learning algorithm</h1><ul>
+<li>Get more training samples：解决过拟合</li>
+<li>Try small sets of features(avoid overfitting)：解决过拟合</li>
+<li>Try getting addtional features：解决欠拟合</li>
+<li>Try adding polynomial features：解决欠拟合</li>
+<li>increasing/decresing $\lambda$ in the regularization term</li>
+</ul>
+<h1 id="Diagnose-the-ML-algorithm"><a href="#Diagnose-the-ML-algorithm" class="headerlink" title="Diagnose the ML algorithm"></a>Diagnose the ML algorithm</h1><ul>
+<li><p>error for classificationo problem: </p>
+<ol>
+<li>Misclassification cost(0,1) </li>
+<li>logistic loss: $\frac{1}{m}\sum-ylog(h_\theta(x))-(1-y)log(1-h_\theta(x))$</li>
+</ol>
+</li>
+<li><p>如果只把data分成70%train-30%test（只分一次），会导致选出来一个针对30%test最优化的算法，也不够generalize。所以我们可以60%train-20%CV-20%test. 先用train来拟合参数，再用CV来选算法，最后用test来估计误差</p>
+</li>
+<li><p>High-bias = under-fitting. High-variance = over-fitting</p>
+</li>
+<li><p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed.png?expiry=1522454400000&hmac=1E-Lq6rt765ATz0C9v6hVDu6kI-vvqxkgRDRJjPzv6g" alt=""><br>这个图表示如果Train&amp;CV的误差都很大，那么是under-fitting，如果Train小CV大很可能是over-fitting</p>
+</li>
+<li><p>在包含regularization的例子中，如果我们选择的$\lambda$很大的话可能会导致under-fitting，相反则会导致over-fitting</p>
+</li>
+<li><p>所以我们该如何选择$\lambda$?：将$\lambda$从小到大排即是不同的模型，再用cost来拟合，CV来选择（这个CV的cost是不含regular那一项的，同理我们只用含regular的来拟合参数，报告train-error的时候也是不含regular那一项的）<br><img src="http://spark-public.s3.amazonaws.com/ml/images/10.5-quiz-1-option4.png" alt=""></p>
+</li>
+<li><p>一般来说，用一个复杂的神经网络+regularization，要比用一个简单的神经网络效果要好<br>##Learning curves: </p>
+</li>
+<li><p>横坐标是sample-size，纵坐标是error。其中error的计算只对用到的数据取平均（从100个样本中用了三个来拟合模型，那最后算cost的时候就只算这三个的平均cost）</p>
+</li>
+<li><p>在出现high-bias(under-fitting)的时候，增加数据量是没什么用的，但是overfitting的时候，增加数据量有用（模型不变的情况下）</p>
+</li>
+<li><p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/bpAOvt9uEeaQlg5FcsXQDA_ecad653e01ee824b231ff8b5df7208d9_2-am.png?expiry=1522454400000&hmac=B5ywTJzWN1IdcfxIx5LZi95HO4qj3LSKt58YMNlcFk8" alt="High Bias"></p>
+</li>
+<li><p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/vqlG7t9uEeaizBK307J26A_3e3e9f42b5e3ce9e3466a0416c4368ee_ITu3antfEeam4BLcQYZr8Q_37fe6be97e7b0740d1871ba99d4c2ed9_300px-Learning1.png?expiry=1522454400000&hmac=r2oACMou0U4Qm-LtPW7WwfdD-rd7dRiokQU8jYo61Co" alt="High Variance"></p>
+</li>
+</ul>
+<h1 id="Recommended-Approach"><a href="#Recommended-Approach" class="headerlink" title="Recommended Approach"></a>Recommended Approach</h1><ol>
+<li>先采用一个快速容易实现的方法，并且用CV来验证</li>
+<li>画出learning-curves来判断我们是否需要更多数据/更多特征</li>
+<li>Error-analysis 观看那些残差很大的点（或者是分错类的点），看他们为什么出了错</li>
+<li>对各种不同的算法用一种方式来量化比较</li>
+</ol>
+<p>有时还涉及到要不要stemming/大小写（把discount,discounts看做一个，但也会把universe和university看成一个）这时候很难说效果怎么样，所以只能在CV集合上面测试一下，然后看看出错率</p>
+<h2 id="Skewed-class"><a href="#Skewed-class" class="headerlink" title="Skewed class"></a>Skewed class</h2><ul>
+<li><p>Precision/Recall: 可以写成一个二乘二矩阵<br>Precison = True prositive/Predicted Positive(第一行)<br>Recall = True prositive/Actual Positive(第一列)</p>
+<p><img src="http://spark-public.s3.amazonaws.com/ml/images/11.3-quiz-1-q1.png" alt=""></p>
+</li>
+<li><p>一般来说都用y=1 来表示那个稀少的类（比如患了癌症）</p>
+</li>
+</ul>
+<h3 id="Trade-off-between-Precision-amp-Recall"><a href="#Trade-off-between-Precision-amp-Recall" class="headerlink" title="Trade off between Precision&amp;Recall"></a>Trade off between Precision&amp;Recall</h3><ul>
+<li>我们可以调整logistic的threshold。如果调高的话，会增加precision，降低recall</li>
+<li>一种简单的方法是计算$\frac{P+R}{2}$，但明显不好，全部预测为0会得到差不多最好的结果</li>
+<li>一种更通用的方法是计算F1-score:$2\frac{PR}{P+R}$。调和平均，（如果有一个0的话基本上F1-score就是0了）</li>
+<li></li>
+</ul>
+<h2 id="Large-Data-Set"><a href="#Large-Data-Set" class="headerlink" title="Large Data Set"></a>Large Data Set</h2><ul>
+<li>比的不是谁的算法吊，而是谁的数据量大（希望自己有朝一日能取到一家海量数据的公司）</li>
+<li>遇到一个问题，问问自己，如果把这个信息告诉一个这方面的专家，他能不能做出准确的预测，如果能的话，说明这信息是充分的，那我们可以用海量数据来减小误差，如果不能，单纯增加数据量是没用的，我们必须获取其他的特征。</li>
+</ul>
+<h1 id="Support-Vector-Machine"><a href="#Support-Vector-Machine" class="headerlink" title="Support Vector Machine"></a>Support Vector Machine</h1><ul>
+<li>cost function: $C\sum_{i=1}^m[y^{(i)}cost_1(\theta^Tx^{(i)})+(1-y^{(i)})cost_0(\theta^Tx^{(i)})] + \frac{1}{2}\sum_{i=1}^n\theta_j^2$</li>
+<li>hypothesis: $h_\theta(x)=I(\theta^Tx\ge0)$</li>
+<li>Large Marigin Intuition: margin指的是分界线距离两类各自边缘的距离，svm会选出来一条线使得这个距离最大，所以更robust。</li>
+<li>C如果越大的话（相当于regularization里面的$\lambda$越小），整个SVM就会对离群值越敏感，容易出现过拟合</li>
+<li>decision boundary那条线与$\vec{\theta}$ 是垂直的。</li>
+<li>疑问：SVM desicion boundary是不是只由最边缘的点决定？</li>
+<li>VS logistic：当数据量m远小于参数个数n的时候，用logistic/不带kernal的SVM，如果n比较小（1-1000）而m适中（10-10000），可以用Gaussian-kernal。如果n小m大（50000+）这时跑SVM就慢的一批，只能多加几个feature然后用logistic/不带kernal的SVM</li>
+</ul>
+<h2 id="Kernal"><a href="#Kernal" class="headerlink" title="Kernal"></a>Kernal</h2><ul>
+<li>kernals有好多种（Gaussian…）目的是为了刻画x和landmark之间的similarity。不用kernal又被称为linear-kernal，在数据量不足的时候一般我们不能用太复杂的kernal</li>
+<li>一个Kernal一定要满足Mercer’s Theorem</li>
+<li>Ng举了一个中间护舒宝形状的X外面是O的分类例子，可以在中间设置两个landmark，然后用kernal来解决</li>
+<li>Gauss的参数$\sigma^2$：$\sigma^2$越大，$f_i$的变化就越缓慢，容易导致欠拟合，higher-bias</li>
+<li>做Gaussian之前，要对feature做scaling</li>
+<li>其他kernal：polynomial-kernal（like $(X^Tl+a)^b$…），string-kernal(针对text类型的数据), chi-square-kernal, histogram-intersection-kernal</li>
+</ul>
+<h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><ol>
+<li>把每一个数据点都先标记成为landmark</li>
+<li>计算feature vector：$f_i=similarity(x,l^{(i)})$ 可以增加常数项：$f_0=1$</li>
+<li>预测y=1，当且仅当$\theta^Tf \ge 0$</li>
+</ol>
+<h1 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning"></a>Unsupervised Learning</h1><h2 id="Clustering-Algorithm"><a href="#Clustering-Algorithm" class="headerlink" title="Clustering Algorithm"></a>Clustering Algorithm</h2><p><img src="https://i.stack.imgur.com/Yl4tV.png" alt="各个聚类方法的scale时间"></p>
+<h3 id="K-means"><a href="#K-means" class="headerlink" title="K-means"></a>K-means</h3><ul>
+<li>先随机找到两个点（只分两组的时候）</li>
+<li>把其他的点根据距离初始点的距离划分成两大类</li>
+<li>用分好的两大类的重心来代替原来的两个点。</li>
+<li>循环1-3，直至converge</li>
+</ul>
+<p>distortion-cost-function：$\frac{1}{m}\sum_{i=1}^m||x^{(i)}-\mu_{c^{(i)}}||^2$</p>
+<p>Initialization: 选取k&lt;m, 然后从数据点中随机选取k个作为$\mu_1 \sim \mu_k$. 有时候数据点选择的不好的话，会导致算法优化到局部最优而不是全局最优，这时我们可以做的是：随机选取100次，对于每次选择的k个随机点，我们计算他的cost，最后，在这100个随机cost中，选择cost最小的那个作为我们的initial k个点。</p>
+<p>Elbow Method for choosing K：选择那个斜率变化最大点</p>
+<h2 id="Dimensionality-Reduction"><a href="#Dimensionality-Reduction" class="headerlink" title="Dimensionality Reduction"></a>Dimensionality Reduction</h2><p>主要用途：</p>
+<ul>
+<li>为了visualize数据，我们可以把维数强行降到2，然后打印在平面图上</li>
+<li>加快分析速度，减少内存使用</li>
+</ul>
+<p>PCA与linear的一个明显的区别：lm最小化竖着的线段平方，PCA最小化垂直线段的平方。因为lm里面y是我们更关心的点（主要目的就是为了预测y），而PCA中各个x地位是平等的。</p>
+<p>步骤：</p>
+<ul>
+<li>先计算cov矩阵$\Sigma=\frac{1}{m}X^TX$（包含了标准化）</li>
+<li>计算$\Sigma$矩阵的eigen：[U, S, V] = svd(Sigma) [其实eig函数也可以做，但是不如svd稳定] 其中U会返回按列排放的特征向量，S是个对角矩阵，存放了每个PC分别解释了多少的方差</li>
+<li>最后: $z^{(i)}=U^Tx^{(i)}$</li>
+<li>$x_{approx} = Uz^{(i)}$</li>
+</ul>
+<p>一个选择PCA个数的准则是解释99%/95%的方差</p>
+<p>在做PCA的时候，只对train做，而不做CV和test</p>
+<p>一个不好的例子：用PCA来防止过拟合（因为少了需要拟合的参数个数）。因为有时候我们在PCA中扔掉了一部分信息，但这部分信息很可能和y很有关，所以为了防止过拟合，不如直接使用regularization。</p>
+<p>PCA使用建议：先对raw-data直接做分析，只有当原始数据做不了的时候（比如说太慢了或者内存不够大），再开始尝试PCA</p>
+<h1 id="Anomaly-Detection"><a href="#Anomaly-Detection" class="headerlink" title="Anomaly Detection"></a>Anomaly Detection</h1><p>对于那些离群的异常点检测，定义一个p值（一个关于自变量的函数），如果p值过小就被视为离群值。</p>
+<p>Machine-learning里面习惯用MLE来估计方差（分母是m）</p>
+<h2 id="Gaussian-Distribution"><a href="#Gaussian-Distribution" class="headerlink" title="Gaussian Distribution"></a>Gaussian Distribution</h2><p>具体步骤：</p>
+<ul>
+<li>假设n个$x^{(i)}$是独立且是正态分布的，用已有的样本来估算均值和方差。</li>
+<li>给定一个新样本，他的p值定义为$\prod_{i=1}^n\Phi_i(x_i)$</li>
+<li>跟临界值进行大小比较</li>
+</ul>
+<p>一个实例：</p>
+<ul>
+<li>假设我们现在的数据多了一个label：正常/不正常，我们现在有10000个正常和20个不正常</li>
+<li>先将数据分为三组：train（6000，0）CV（2000，10）Test（2000，10）</li>
+<li>用Train那一组来拟合参数（每个变量的均值&amp;方差）</li>
+<li>拿出CV，对于一个选定的临界值$\epsilon$，我们将$p(x_i)&lt;\epsilon$的那些样本点赋予y=1(不正常)，其他点赋值y=0. </li>
+<li>将y对x进行NN/logistic，计算F1-score。通过不同$\epsilon$的选取，选出其中能使得F1-score最大的$\epsilon$作为最后的临界值。</li>
+</ul>
+<p>Anomaly-Detection v.s. Supervised-learning</p>
+<ul>
+<li>一般来说，Supervised-learning一般解决的问题是当两类数量差不多的时候，而当y=1特别少（skewed-class）的时候，我们惯用Anomaly-Detection</li>
+<li>S-L一般解决未知数据长的很像test数据的问题，所以准确性更高。但一般skwed-class的异常都是「各有各的异常」，很可能未知的数据在以前就没有出现过，这时候一般都交给A-D来做。</li>
+<li>像Spam-Email那个例子中，因为我们有很多Spam可以供训练模型，并且可能一般来说未来出现的垃圾邮件很可能和之前的垃圾邮件长得很像，所以我们采用Supervised-learning</li>
+</ul>
+<p>How to choose features?</p>
+<ul>
+<li>首先我们可以画出feature的分布图，如果看起来不是很正态，我们可以做一下box-cox（或者取log）来使得它看起来正态。（但是他说好像如果正态不满足的话好像算法也没啥大问题）</li>
+<li>经常还会遇到的一个问题是：我们经常假设如果数据越异常，p(x)就会越小，但是有时候不论是不是异常，p(x)始终都差不多，这时候我们就需要加入新的变量（这里的新不仅可以加入之前没用的变量，还可以是一些变量的函数）。</li>
+</ul>
+<h2 id="Multivariate-Gaussian-Distribution"><a href="#Multivariate-Gaussian-Distribution" class="headerlink" title="Multivariate Gaussian Distribution"></a>Multivariate Gaussian Distribution</h2><p>如果两个变量之间存在cor，那么原来的圆形置信域就会变成椭圆形，导致一些异常点检测不出来(例子：一三象限方向的椭圆，对于二四象限的异常点有可能检测不出来，因为关于x-y轴的两个投影都不是很小)</p>
+<ul>
+<li><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fpwrxdd0l3j30qu0miwu5.jpg" alt=""></li>
+</ul>
+<p>我们只需要将原来的p(x)连乘变成多元正态里面的p(x)就可以了$p(x)=\frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$<br>同样使用样本均值和样本协方差矩阵来估计那两个参数</p>
+<h2 id="两种分布的对比："><a href="#两种分布的对比：" class="headerlink" title="两种分布的对比："></a>两种分布的对比：</h2><ul>
+<li>多元正态自动捕捉了feature之间的协相关，单变量正态需要自己手动添加</li>
+<li>单变量要比多元快很多</li>
+<li>当数据量m小于变量个数n的时候（或者当feature之间线性相关的时候），多元正态协方差阵不可逆。当m比n大很多的时候（10倍），考虑用多元。</li>
+</ul>
+<h1 id="Recommander-System"><a href="#Recommander-System" class="headerlink" title="Recommander System"></a>Recommander System</h1><p>就拿电影评分来举例子：</p>
+<ul>
+<li>Feature-vector: 每个电影可以被量化成一个向量$x^{(i)}$, 第一位是截距项，后面的是每一种类别涉及到的比例（爱情0.5，动作0.8…）</li>
+<li>r(i, j) = if user j has rated movie i 示性变量</li>
+<li>$y^{(i,j)}$ = rating by user j on movie i</li>
+<li>$\theta^{(j)}$ = parameter vector for user j : 观众的喜好向量(爱情5，动作8…)</li>
+<li>$m^{(j)}$ = #of movies rated by user j</li>
+<li>For user j , movie i, predicted rating: $(\theta^{(j)})^Tx^{(i)}$</li>
+<li>Cost-function for each $\theta^{(j)}$: $\frac{1}{2m^{(j)}}\sum_{r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2m^{(j)}}$</li>
+<li>Cost-function for all users: 只需要把上面这个cost-function 对所有用户求和即可</li>
+</ul>
+<h2 id="Collabrative-Filtering"><a href="#Collabrative-Filtering" class="headerlink" title="Collabrative Filtering"></a>Collabrative Filtering</h2><ul>
+<li>Optimization algorithm: 还可以给定$\theta$ 反向来求出feature-vector $x^{(i)}$</li>
+<li>Try to minimize: $\frac{1}{2}\sum_{r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2}\sum_{k=1}^n (x_k^{(i)})^2$</li>
+<li>最后我们对每一个电影都算一下上面的cost然后求和。</li>
+</ul>
+<p>所以实际上我们可以估计用户的初始$\theta$，然后来拟合feature，再用拟合的feature重新拟合用户的$\theta$，如此循环往复，最后收敛到一个合理的结果。</p>
+<p>但是我们可以更进一步，把两种cost-function写在一起，同时对他们整体做minimization，一步到位。这时候也不用填写截距项，因为算法应该会自动添加需要的截距项。开始需要randomly initialize number，为了symmetry-breaking</p>
+<p>Low rank matrix factorization: 将预测用户的评分写成一个矩阵：$X\Theta^T$</p>
+<p>判断两个电影很像，small $||x^{(i)}-x^{(j)}||$</p>
+<h2 id="Mean-Normalization"><a href="#Mean-Normalization" class="headerlink" title="Mean Normalization"></a>Mean Normalization</h2><p>如果一个新用户曾经没有给任何电影评分，那么根据我们上面的cost-function来看，最佳的预测就是该用户的$\theta$是一个零向量。这样我们也不能给他推荐什么电影，没有什么意义。</p>
+<p>步骤：</p>
+<ul>
+<li>对于每个电影，计算当前用户评分的均值。</li>
+<li>然后将每个用户对于当前电影的评分减去均值</li>
+<li>这时新用户的一排零，就变成了各个电影都是‘‘适中’’评分，我们就可以给他推荐电影啦</li>
+</ul>
+<h1 id="Dealing-With-Large-Data-Set"><a href="#Dealing-With-Large-Data-Set" class="headerlink" title="Dealing With Large Data Set"></a>Dealing With Large Data Set</h1><p>为什么我们要用更多的数据？</p>
+<ul>
+<li>我们可以画出learning-curve，然后发现当m很小的时候，$J_{CV}$很大，我们面临了high variance的情况，这时候提高m的数量有助于更好的拟合。但是如果我们发现learning-curve呈现的是high-bias的情况，那么我们就没啥必要提高m的数量了。</li>
+</ul>
+<h2 id="Stochastic-Gradient-Descent"><a href="#Stochastic-Gradient-Descent" class="headerlink" title="Stochastic Gradient Descent"></a>Stochastic Gradient Descent</h2><p>正常的一次性计算所有的梯度下降又被称为Batch-Gradient-Descent：$\theta_j:=\theta_j-\alpha\sum_{i=1}^m (h_\theta(x^{(i)})-y^{(i)})x^{(i)}$</p>
+<p>步骤：</p>
+<ol>
+<li>Randomly Shuffle the dataset 随机排序</li>
+<li>从第一个数据开始，对每个数据做一个小的单变量梯度递降。$\theta_j:=\theta_j-\alpha (h_\theta(x^{(i)})-y^{(i)})x^{(i)}$ for every j</li>
+<li>重复做第二步1-10遍(每一次都重新shuffle)</li>
+<li>最后应该会落到全局最优的附近</li>
+</ol>
+<p>Check for convergence:</p>
+<ul>
+<li>在每一次更新$\theta$之前，记录当前数据点的$cost(\theta,(x^{(i)},y^{(i)}))$</li>
+<li>每更新比如说1000次，计算一下1000个cost的平均</li>
+<li>最后将这些平均数进行比较，画个图</li>
+<li>一般来说数据取得越大（比如说用5000代替1000），$J_\theta$关于迭代次数的曲线就会越平滑</li>
+<li>如果发现$J_\theta$不降反升，那么我们可以试着减少步长$\alpha$（learning-rate）</li>
+<li>如果我们想试着最后落入到全局最优点，我们可以逐渐减小步长，let $\alpha = const1/(#iteration+const2)$</li>
+<li></li>
+</ul>
+<h2 id="Mini-batch-Gradient-Descent"><a href="#Mini-batch-Gradient-Descent" class="headerlink" title="Mini-batch Gradient Descent"></a>Mini-batch Gradient Descent</h2><p>正常的Batch每次迭代用到all m examples. Stochastic只用1个。Mini-batch取了个中间地带，每次用b个，其中b也被称为mini-batch size.</p>
+<p>步骤：</p>
+<ol>
+<li>Randomly Shuffle the dataset 随机排序</li>
+<li>从第一个数据开始，b个b个的应用梯度下降来迭代$\theta_j$</li>
+<li>重复做第二步1-10遍(每一次都重新shuffle)</li>
+<li>最后应该会落到全局最优的附近</li>
+</ol>
+<p>Mini-Batch 如果想要比Stochastic跑得更快，就必须要应用Vectorization</p>
+<h2 id="Online-Learning"><a href="#Online-Learning" class="headerlink" title="Online Learning"></a>Online Learning</h2><p>一个数据网站，获取用户的数据，不停的更新原来的$\theta$, learning continuously<br>CTR: 用户搜索一个信息，我们来预测他会不会点击我们给他提供的链接，learning the predicted Click Through Rate</p>
+<p>步骤：</p>
+<ul>
+<li>永久性的循环以下步骤</li>
+<li>获得数据（x, y）, 更新$\theta_j:=\theta_j-\alpha (h_\theta(x)-y)x_j$</li>
+<li>把数据(x, y)扔掉，只保留更新后的$\theta$</li>
+</ul>
+<h2 id="Map-Reduce"><a href="#Map-Reduce" class="headerlink" title="Map Reduce"></a>Map Reduce</h2><p>如果有四百个数据，在计算梯度下降的时候可以把数据分成四份，分给四个电脑去同时并行做。</p>
+<p>为什么可以用Map-Reduce：Many learning algorithm can be expressed as computing sums of functions over the training set. 算法可以写成关于数据量的求和</p>
+<p>有时候就算没有多台电脑，一个电脑有很多个核，也可以做Multi-core Machines</p>
+<p>Open Source：Hadoop</p>
+<h1 id="Photo-OCR"><a href="#Photo-OCR" class="headerlink" title="Photo OCR"></a>Photo OCR</h1><p>Photo Optical Character Recognition</p>
+<p>主要步骤（pipeline）: </p>
+<ol>
+<li>Get a Image</li>
+<li>Text Detection</li>
+<li>Charcter Segmentation</li>
+<li>Character Classification</li>
+</ol>
+<h2 id="Sliding-Windows"><a href="#Sliding-Windows" class="headerlink" title="Sliding Windows"></a>Sliding Windows</h2><h3 id="Pedestrian-Detection"><a href="#Pedestrian-Detection" class="headerlink" title="Pedestrian Detection"></a>Pedestrian Detection</h3><p>Supervised-learning-version: </p>
+<ul>
+<li>我们给定一些<u>固定大小</u>的人像的正确例子（y=1），和一些不是人像的例子（y=0）</li>
+<li>紧接着，我们在原图上从左上角开始一点点向右移（step/sliding-size）如果一个像素一个像素移动的话太慢了，所以我们会让他每次跨的大一点。过完一行，再来一行….直到整个图都被过了一遍</li>
+<li>然后，我们将选取框放大一点，再跑一边步骤二（不管选取框是多大，在做检验的时候都要先变成和给定例子training-set中的大小一致）</li>
+</ul>
+<p>现在让我们回到Text-Detection：</p>
+<ul>
+<li>text-detection比行人识别的一大难点在于大小不是固定的</li>
+<li>所以开始的时候先一个一个像素点过，形成一个黑底图，上面的白色表示可能存在text</li>
+<li>下一步是Text-expansion 将临近的白色区域连接起来，看成一大块文字域</li>
+</ul>
+<p>Character-segmentation 也可以用sliding window来做</p>
+<h1 id="Artificial-Data-Synthesis"><a href="#Artificial-Data-Synthesis" class="headerlink" title="Artificial Data Synthesis"></a>Artificial Data Synthesis</h1><ol>
+<li>creating data from stretch 无中生有</li>
+<li>amplify the small data set 将小数据集变大</li>
+</ol>
+<p>吴恩达用的是字母识别的例子，无中生有：自己在网上找点字体，自己加点背景上去。以小见大：从已有的字体图片，经过旋转变形生出新的字体图片</p>
+<p>Make sure you have a low bias classfier before expending the effort. 如果当前是过拟合的话是需要更多数据，但如果是欠拟合的话，我们首先应该考虑的是在模型里面多放几个变量，而不是通过这种方式使得数据变多。</p>
+<p>其次应该问自己的问题是，如果要把当前数据量变成十倍，需要多少工作量？</p>
+<h1 id="Ceiling-Analysis"><a href="#Ceiling-Analysis" class="headerlink" title="Ceiling Analysis"></a>Ceiling Analysis</h1><p>在一个pipeline中，先看overall accuracy。然后再去第一个环节，手动把第一个环节准确率调成100%，看看对overall有什么影响。</p>
+<p>有助于我们发现pipeline中哪一环节是最需要花时间来提高的</p>
+<p>吴恩达嘲讽了一手：说有个小组，花了一年时间专门研究怎么去掉背景，甚至还发了论文，但最后发现准确率从85%提高到了85.1%，并没什么卵用</p>
+<h1 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h1><h2 id="Sentiment-Analysis"><a href="#Sentiment-Analysis" class="headerlink" title="Sentiment Analysis"></a>Sentiment Analysis</h2><p>There are many types and flavors of sentiment analysis:</p>
+<ol>
+<li>Fine-grained Sentiment Analysis</li>
+<li>Emotion detection</li>
+<li>Aspect-based Sentiment Analysis</li>
+<li>Intent analysis</li>
+<li>Multilingual sentiment analysis</li>
+</ol>
+<p>Some of the advantages of sentiment analysis:</p>
+<ol>
+<li>Scalability</li>
+<li>Real-time analysis</li>
+<li>Consistent criteria</li>
+</ol>
+<p>Methods and algorithms to implement sentiment analysis systems:</p>
+<ol>
+<li><p><strong>Rule-based</strong> systems that perform sentiment analysis based on a set of manually crafted rules.</p>
+<ul>
+<li><p>Classic NLP techniques like <em>stemming</em>, <em>tokenization</em>, <em>part of speech tagging</em> and <em>parsing</em>.</p>
+</li>
+<li><p>常用方式是建立两个集合，一个好一个坏。对一段文字，我们数其中好的词出现的频率和坏的词出现的频率，哪个多选哪个。一样多就是中性。这个方法坏处在于：</p>
+<ol>
+<li>只算了单个的词而没有组合起来</li>
+<li>添加更多规则之后很容易就变得超级复杂，并且不同的rule之间可能冲突，需要很多的人工进行tune</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Learning-based/Automatic</strong> systems that rely on machine learning techniques to learn from data.</p>
+<ul>
+<li>不用人工的rule，从文字中抽取feature和label，都一起扔给机器学习算法。</li>
+<li><strong>Feature</strong>: 一般是numeric结果。Usually, each component of the vector represents the <u>frequency</u> of a word or expression in a <u>predefined dictionary</u> . The classical approach has been <a href="https://machinelearningmastery.com/gentle-introduction-bag-words-model/" target="_blank" rel="noopener">bag-of-words</a> or <a href="https://www.quora.com/What-is-the-difference-between-bag-of-words-and-bag-of-n-grams" target="_blank" rel="noopener">bag-of-ngrams</a> with their frequency. </li>
+<li>More recently, new feature extraction techniques have been applied based on word embeddings (also known as <em>word vectors</em>). This kind of representations makes it possible for words with similar meaning to have a similar representation, which can improve the performance of classifiers. （这一段是为了提高准确率的，但是我没搞懂他是怎么操作的）</li>
+<li><strong>Classification Algorithms:</strong> Naïve Bayes, Logistic Regression, Support Vector Machines, or Neural Networks</li>
+<li>Metric 判断：Precision, Recall, and Accuracy（是不是也考虑F1）但是老师要求的是RMSE。<a href="https://en.wikipedia.org/wiki/Krippendorff%27s_alpha" target="_blank" rel="noopener">Krippendorff’s Alpha</a> 也是一个好的评分方法，0.67/0.8为界</li>
+</ul>
+</li>
+<li><p><strong>Hybrid</strong> systems that combine both rule based and automatic approaches.</p>
+<ul>
+<li>Usually, by combining both approaches, the methods can improve accuracy and precision. 周子涵说过什么stacking</li>
+</ul>
+</li>
+</ol>
+<p><strong>Irony and Sarcasm</strong> 讽刺语气感觉是个难点。Yeah, sure.有时候表达的是无所谓了就这样吧的意思</p>
+<p><strong>Comparisons</strong>: 一些例子：</p>
+<ol>
+<li><em>This product is second to none.</em></li>
+<li><em>This is better than old tools.</em></li>
+<li><em>This is better than nothing.</em></li>
+</ol>
+<p><strong>Emojis</strong>: 疯了。丧心病狂</p>
+<p><em>Western emojis</em> (e.g. :D) are encoded in only one character or in a combination of a couple of them whereas <em>Eastern emojis</em> (e.g. ¯ \ _ (ツ) _ / ¯) are a longer combination of characters of a vertical nature. </p>
+<p><strong>转折Ordering Effect</strong>：</p>
+<p>听说不错，演员也好，票房也高，然而我觉得它糟糕透了。</p>
+<h3 id="Subjectivity-classification"><a href="#Subjectivity-classification" class="headerlink" title="Subjectivity classification"></a>Subjectivity classification</h3><p>Goal: Classifying a sentence as <em>subjective</em> or <em>objective</em></p>
+<p>Text information can be broadly categorized into two main types: <em>facts</em> and <em>opinions</em>.</p>
+<h4 id="Opinion"><a href="#Opinion" class="headerlink" title="Opinion"></a>Opinion</h4><p>There are two kinds of opinions: <em>direct</em> and <em>comparative</em>.</p>
+<p>There are also two kinds of opinions: <em>Explicit</em> and <em>Implicit</em>.</p>
+<h3 id="Polarity-classification"><a href="#Polarity-classification" class="headerlink" title="Polarity classification"></a>Polarity classification</h3><p>Goal: Classifying a sentence as expressing a <em>positive</em>, <em>negative</em> or <em>neutral</em> opinion</p>
+<p><strong>Baseline Algorithms</strong>:</p>
+<ol>
+<li>Tokenize<ul>
+<li>Christopher potts sentiment tokenizer</li>
+<li>How to handle negation?<ul>
+<li>Das and Chen: add NOT_ 然后把很多NOT_like 这种词也变成一个feature</li>
+</ul>
+</li>
+<li>All words/Only adj ? [It seems all words is better]</li>
+</ul>
+</li>
+<li>Feature Extraction</li>
+<li>Classification:<ul>
+<li>Naive Bayes<ul>
+<li>$\frac{count(w,c)+1}{count(c) + V}$</li>
+<li>Binarized / (boolean feature) multinomial naive bayes.<ul>
+<li>Word occurance matter more than word frenquency</li>
+<li>Prior: $p(c) = \frac{doc\ with\ words}{all\ docs}$ . Prob: <strong>Remove duplicate</strong> in each doc and then same as above.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MaxEnt</li>
+<li>SVM</li>
+</ul>
+</li>
+</ol>
+<p><strong>正负词汇包：</strong></p>
+<ol>
+<li><p>The Genearal Inquiry 包含了正面以及负面的词汇</p>
+</li>
+<li><p>LIWC 单次分类 <a href="http://liwc.wpengine.com/" target="_blank" rel="noopener">http://liwc.wpengine.com/</a></p>
+</li>
+<li><p>MPQA 单次分类 还包含了程度<a href="http://people.cs.pitt.edu/mpqa/subj_lexicon.html" target="_blank" rel="noopener">http://people.cs.pitt.edu/mpqa/subj_lexicon.html</a></p>
+</li>
+<li><p>Bing Liu Opinion Lexicon</p>
+</li>
+<li><p>SentiWordnet</p>
+</li>
+</ol>
+<p>我们不能单纯的用raw count。eg. bad这个词出现的10星评论比2星评论多，是因为2星评论本来就很少。我们应该:<br>​    1. 用likelihood(ratio) $\frac{Target\ words}{Total\ words}$</p>
+<ol start="2">
+<li>scaled likelihood, make them camparable between words</li>
+</ol>
+<p>logical negation 也是一个好的feature，更多出现在负面评价里面</p>
+<p>除了用别人的词汇包，我们可以自创词汇包：semi-supervised learning of lexicon</p>
+<p>Finding <strong>aspects or attributes</strong>: Target of sentiment：</p>
+<pre><code>1. Find all highly frequent phrases
+2. Filter rule like: *Occur right after a sentiment word*
+3. Supervised learning. 先找到商家对应的类别（比如餐厅），然后在餐厅的常见aspect中做一个classifier判断是哪一类</code></pre><p>所以整个流程是:</p>
+<ol>
+<li>Extract sentences and phrases</li>
+<li>Sentiment classifier: 判断是积极/消极/中性</li>
+<li>对于不是中性的评论，我们找出他们的类别</li>
+<li>汇总在一起</li>
+</ol>
+<p>还有个问题是：Baseline methods assume classes have equal frequencies. 解决办法：</p>
+<ol>
+<li>不用accuracy， 最好用F-score</li>
+<li>Re-sampling. 变为同样样本数</li>
+<li>penalize for misclassification of the rare class</li>
+</ol>
+<p>对于五分类问题：</p>
+<ol>
+<li>Linear / Ordinal regression</li>
+<li>Specialized model like metric labeling</li>
+</ol>
+<h2 id="Information-Exaction"><a href="#Information-Exaction" class="headerlink" title="Information Exaction"></a>Information Exaction</h2><p>目的：</p>
+<ol>
+<li>Find and understand limited relevant parts of texts</li>
+<li>Gather INformation from many pieces of texts</li>
+<li>NER: Name Entity Recognition</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/02/The-Reason-for-God/" rel="prev" title="The Reason for God">
+      <i class="fa fa-chevron-left"></i> The Reason for God
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/" rel="next" title="博弈论笔记">
+      博弈论笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于这门MOOC"><span class="nav-text">关于这门MOOC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GUIDE"><span class="nav-text">GUIDE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Optimization"><span class="nav-text">Optimization</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Classification"><span class="nav-text">Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Multiclass-Classification"><span class="nav-text">Multiclass Classification</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Overfitting"><span class="nav-text">Overfitting</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Regularization"><span class="nav-text">Regularization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Neural-Network"><span class="nav-text">Neural Network</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#back-propagation-反向传播算法"><span class="nav-text">back-propagation 反向传播算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Debugging-a-learning-algorithm"><span class="nav-text">Debugging a learning algorithm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Diagnose-the-ML-algorithm"><span class="nav-text">Diagnose the ML algorithm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Recommended-Approach"><span class="nav-text">Recommended Approach</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Skewed-class"><span class="nav-text">Skewed class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trade-off-between-Precision-amp-Recall"><span class="nav-text">Trade off between Precision&amp;Recall</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Large-Data-Set"><span class="nav-text">Large Data Set</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Support-Vector-Machine"><span class="nav-text">Support Vector Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernal"><span class="nav-text">Kernal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本步骤"><span class="nav-text">基本步骤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unsupervised-Learning"><span class="nav-text">Unsupervised Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Clustering-Algorithm"><span class="nav-text">Clustering Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#K-means"><span class="nav-text">K-means</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dimensionality-Reduction"><span class="nav-text">Dimensionality Reduction</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Anomaly-Detection"><span class="nav-text">Anomaly Detection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gaussian-Distribution"><span class="nav-text">Gaussian Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Multivariate-Gaussian-Distribution"><span class="nav-text">Multivariate Gaussian Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种分布的对比："><span class="nav-text">两种分布的对比：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Recommander-System"><span class="nav-text">Recommander System</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Collabrative-Filtering"><span class="nav-text">Collabrative Filtering</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mean-Normalization"><span class="nav-text">Mean Normalization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dealing-With-Large-Data-Set"><span class="nav-text">Dealing With Large Data Set</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stochastic-Gradient-Descent"><span class="nav-text">Stochastic Gradient Descent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mini-batch-Gradient-Descent"><span class="nav-text">Mini-batch Gradient Descent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Online-Learning"><span class="nav-text">Online Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map-Reduce"><span class="nav-text">Map Reduce</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Photo-OCR"><span class="nav-text">Photo OCR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sliding-Windows"><span class="nav-text">Sliding Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pedestrian-Detection"><span class="nav-text">Pedestrian Detection</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Artificial-Data-Synthesis"><span class="nav-text">Artificial Data Synthesis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ceiling-Analysis"><span class="nav-text">Ceiling Analysis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NLP"><span class="nav-text">NLP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sentiment-Analysis"><span class="nav-text">Sentiment Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Subjectivity-classification"><span class="nav-text">Subjectivity classification</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Opinion"><span class="nav-text">Opinion</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Polarity-classification"><span class="nav-text">Polarity classification</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Information-Exaction"><span class="nav-text">Information Exaction</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大连铁板王"
+      src="/images/me.jpg">
+  <p class="site-author-name" itemprop="name">大连铁板王</p>
+  <div class="site-description" itemprop="description">分享笔记——实践费曼学习法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="http://douban.com/people/49183240" title="豆瓣 → http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;49183240" rel="noopener" target="_blank"><i class="fa fa-film fa-fw"></i>豆瓣</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/siyu79" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;siyu79" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://kehuiyao.github.io/" title="https:&#x2F;&#x2F;kehuiyao.github.io&#x2F;" rel="noopener" target="_blank">姚可辉's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大连铁板王</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">137k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yoursite.com/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/";
+    this.page.identifier = "2020/07/02/机器学习笔记/";
+    this.page.title = "机器学习笔记";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://iamwangsiyu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

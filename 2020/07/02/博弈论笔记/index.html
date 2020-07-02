@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="介绍来自于Coursera的斯坦福公开课Game Theory。学的虎头蛇尾，兴趣全无。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博弈论笔记">
+<meta property="og:url" content="http://yoursite.com/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="大家一起来">
+<meta property="og:description" content="介绍来自于Coursera的斯坦福公开课Game Theory。学的虎头蛇尾，兴趣全无。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-02T16:18:14.000Z">
+<meta property="article:modified_time" content="2020-07-02T16:43:30.599Z">
+<meta property="article:author" content="大连铁板王">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>博弈论笔记 | 大家一起来</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大家一起来</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.jpg">
+      <meta itemprop="name" content="大连铁板王">
+      <meta itemprop="description" content="分享笔记——实践费曼学习法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大家一起来">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          博弈论笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-02 11:18:14 / 修改时间：11:43:30" itemprop="dateCreated datePublished" datetime="2020-07-02T11:18:14-05:00">2020-07-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Courses/" itemprop="url" rel="index"><span itemprop="name">Courses</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Courses/%E5%8D%9A%E5%BC%88%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">博弈论</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.1k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>来自于Coursera的斯坦福公开课Game Theory。学的虎头蛇尾，兴趣全无。</p>
+<a id="more"></a>
+
+
+
+<p>博弈有三部分构成：玩家，行为，收益<br>博弈论分为两种基本形式：</p>
+<ul>
+<li>范式博弈（Normal）：假定所有玩家同时采取行动，</li>
+<li>展开博弈（Extensive）：设计不同玩家之间的Timing&amp;Information，一般用树模型。</li>
+</ul>
+<p>n人的范式博弈：&lt;N,A,μ&gt;</p>
+<ul>
+<li>N：1~n 表示了参与人数</li>
+<li>Ai：Action Set行为集合</li>
+<li>μi：效用函数utility/payoff Function</li>
+</ul>
+<p>常用矩阵来描绘博弈：如果两个玩家的话，行是一个玩家，列是一个玩家，矩阵的元素是一个二维的向量，表示他们各自的收益</p>
+<p>反抗政府的那个例子中我们发现，如果其他人的决策对个体的决策有影响的话，就不能用矩阵形式来表示了。</p>
+<p>一个简单的常和博弈的例子——匹配硬币:pure competition 效用函数之和是0或是个常数</p>
+<ul>
+<li><p>两个人正反面相同：A给B一块钱</p>
+</li>
+<li><p>两个人正反面不同：B给A一块钱</p>
+</li>
+</ul>
+<p>Pure cooperation：每个人的效用函数相同</p>
+<p>夫妻两人看电影的例子：可以同时存在竞争和合作</p>
+<p>纳什均衡考虑的步骤：</p>
+<ol>
+<li>其他人会怎么做</li>
+<li>我要如何来应对</li>
+</ol>
+<p>纳什均衡就是每个人都作出最优解所形成的局面<br>纳什均衡是稳定的，因为不是纳什均衡的情况是不稳定的。（随着人们对问题的了解深入，他们会改变他们的主意）</p>
+<p>凯恩斯的选美比赛（keynes’s beauty contest game）：英国的报纸上，在几幅美女图片中，选出来你认为最受其他人欢迎的美女。这就是一种要考虑其他人行为而不是单单考虑自己行为的博弈。</p>
+<p>又一个game：每个人说出一个1-100的数字，然后最接近大家平均数的2/3的那个人获胜，下面开始解题：</p>
+<ol>
+<li>每个人猜平均是X，所以会出0.66X,但因为X&lt;=100,所以每个人的数字不会超过67</li>
+<li>所以平均会是67及以下，所以会出0.66*67，所以无限循环下去</li>
+<li>纳什均衡告诉我们，每个人该出1！</li>
+<li>最后结果第一轮是23胜出，又做了一遍是4，结果向着纳什均衡（1）在发展</li>
+</ol>
+<p>我们将a(-i)定义为除了自己其他人的策略集，a<em>定义为自己的最优策略，最优策略可以不唯一，但一定是出自最优对策集BR(Best response)。最优对策集的假设是其他所有人都会使用策略a(-i),那么BR的定义：<br>ai</em> ∈ BR(a(-i)) iff 对任意ai∈Ai,Ui(ai*,a(-i))&gt;=Ui(ai,a(-i))<br>Best response 不一定只有一个</p>
+<p>&lt;a1,…,an&gt; is called a pure strategy Nash equilibrium iff 任意i,ai ∈ BR(a(-i))</p>
+<p>Si Strictlly dominate/Very weakly dominate Si’: 对于其他人的任何行为S-i,U(Si,S-i) &gt;(=) U(Si’,S-i)  如果有一个策略比任何其他策略都好，那么他叫dominant</p>
+<p>纳什均衡：每个人都出自己的dominant</p>
+<p>帕累托最优pareto optimality：</p>
+<ul>
+<li>因为在衡量全局好坏的时候，你不知道每个个体的效用函数是什么样子的，所以这就像你想提高你的回报，但是这回报是以一种你不知道汇率的不同外汇来分给每一个人。</li>
+<li>如果一个outcome O at least as good as O’ 并且对于某些agent，他们strictly prefer O。这时我们就可以说O pareto-dominates O’ 如果一个outcome O 不能再被其他 O’pareto-dominates,那么就称他为帕累托最优。</li>
+</ul>
+<p>帕累托最优结果可能不唯一：可能有两个outcome谁也不比谁好<br>每个游戏至少有一个帕累托最优</p>
+<p>mixed strategy：</p>
+<ul>
+<li>idea：confuse the opponent by play randomly</li>
+<li>与pure strategy的区别就在于，同样是关于行动的分布，pure是只有一个行动的概率是1，其他都是零，而mixed则是有多个可能性大于0的行动</li>
+<li>此时效用函数变成了多个小部分效用函数的加权均值</li>
+</ul>
+<p>纳什定律：Every Finite game has a Nash equilibrium. 有限的意思是总情况空间是有限的。有限的玩家*每人有着有限的行动集</p>
+<p>mixed strategy equilibrium: 一个稳态，不过此时参与者并不是只选一种，而是按照某种概率选择多种方案。计算的方式是，先定其中一个人的概率，使得另一个人无论选哪种方案，都会得到一样的回报。（因为如果不一样的话，另一个人就没必要random，直接全部投入最优的解即可）解方程出来之后。再对剩下的人依次求解。最后获得一个平衡。</p>
+<p>两个寻找纳什均衡的算法：</p>
+<ol>
+<li>LCP(Linear Complementarity) formulation(By Lemke-Howson)</li>
+<li>Support Enumeration Method</li>
+</ol>
+<p>PPAD：Polynomial Parity Arguments on Directed graphs.<br>复杂度排序：P&lt;PPAD&lt;NP&lt;NP-complete</p>
+<p>开始对支撑集做假设的时候，我们假设两个选手的可能取值差不多。而不是一人有两个方案，一个人有十七个方案。</p>
+<p>correlated equilibrium</p>
+<p>Rationality: A basic premise: Players maximize their payoffs</p>
+<p>如何检查纳什均衡：看看两个玩家在当前条件下有没有动力改变自己的决策。纳什均衡=每个人都没有profitable deviation</p>
+<h2 id="Iterative-Removal："><a href="#Iterative-Removal：" class="headerlink" title="Iterative Removal："></a>Iterative Removal：</h2><p>删去被最好行动压制的其他行动</p>
+<p>A strictly dominated（被动） strategy can never be a best play, so we can remove it.</p>
+<p>但是删掉一个被dominate之后，剩下的里面会再出来一个新的dominated，所以我们要不断的iterate。</p>
+<p>不仅可以被pure strategy打败 被mixed打败也可以。所以在没有单纯的strictly dominant的时候，我们可以用组合策略来删除</p>
+<p>dominant solvability：可以被最小迭代变成一个pure</p>
+<p>对于strictly dominant来说 删除的order并不重要</p>
+<p>但如果是weak的话，可能会在删的过程中也删掉一些纳什均衡，这时候order重要，但至少有一个纳什均衡会被保留下来。</p>
+<p>两只猪的游戏：用来论证事实上猪也会博弈论</p>
+<p>maxmin strategy: maximize worst-case payoff. </p>
+<p>Maxmin value(safety level): the minimum payoff guarenteed by maxmin strategy.</p>
+<p>minmax strategy: minimize enemy’s best-case payoff. 在零和游戏中，损人=利己</p>
+<p>correlated equilibrium：A randomized assignments of (potential related) action ecommandations to agents, such that nobody wants to deviate.</p>
+<h2 id="Extensive-Form"><a href="#Extensive-Form" class="headerlink" title="Extensive-Form"></a>Extensive-Form</h2><p>有时，时间也影响着决策。Game Tree:人们轮流采取行动，最后会终结在树的某一个节点上。</p>
+<h3 id="Perfect-Information"><a href="#Perfect-Information" class="headerlink" title="Perfect Information"></a>Perfect Information</h3><ul>
+<li>参数：N、A、H、Z、chi、rho、sigma、u</li>
+<li>N：players。</li>
+<li>A: Actions（这时每个人能采取的行动是一样的）</li>
+<li>H：choice nodes:  non-terminal</li>
+<li>chi: Action-function 将H映射到2^A assign actions to each node</li>
+<li>rho: Player-function: assign player to non-terminal node</li>
+<li>Z: terminal nodes</li>
+<li>sigma: sucessor function 将H*A 映射到H并Z</li>
+<li>u: utility function. 对每一个Z映射一个得分</li>
+</ul>
+<p>注意这棵树是单射。不存在多个节点或者一个节点的多个行为指向到同一个结果</p>
+<p>在计算pure strategy 个数的时候，就连那些肯定到不了的节点也要算进去。因为博弈论认为到不了的A和到不了的B也是不一样的</p>
+<p>定理：Every perfect information game in extensive form has a PSNE(Pure Strategy Nash Equilibrium)</p>
+<h4 id="Induced-Normal-Form"><a href="#Induced-Normal-Form" class="headerlink" title="Induced Normal Form"></a>Induced Normal Form</h4><ul>
+<li>将A与B的pure strategy做一个笛卡尔积。树的很多根节点被重复了多次，在树很大的时候会造成指数的数据上涨，不好</li>
+<li>并且我们一般不能把一个Normal Form Game变成一个Extensive Form Game。因为有时候Game就是需要两个人同时发出动作，但是Extensive是有先后顺序的</li>
+</ul>
+<h4 id="Subgame-perfection"><a href="#Subgame-perfection" class="headerlink" title="Subgame perfection"></a>Subgame perfection</h4><ul>
+<li>在一个perfect information game 的某个纳什均衡决策中，所有的子决策族都没有profitable deviation。</li>
+<li>Backward Induction: 在零和游戏中又被称为minimax。在每个节点处以自己孩子点中最大值作为自己的值</li>
+<li>Ultimate Bargaining：举得例子是10份东西两个人分。A提出一个分法，B同意的话就按照这个方法分，B不同意的话两个人都是0。这种情况下A的最好策略应该是9/1 但事实上很多人选择了5/5。有可能是因为总体太小了。当研究人员把总体调的越来越大的时候，人们倾向于给对方更小的比例，并且对方也倾向于接受更小的比例</li>
+</ul>
+<h3 id="Imperfect-Information"><a href="#Imperfect-Information" class="headerlink" title="Imperfect Information"></a>Imperfect Information</h3><p>玩家不知道对手的全部行动</p>
+<ul>
+<li>equivalence class：将不同的node分成几个类，这样虽然不知道具体是来自哪一个node，但是我们知道它们不来自于哪些nodes</li>
+<li>可以将IIEF-NF-IIEF：开始的IIEF可能会很深，但是变成Normal-Form在变回IIEF的时候，IIEF只有两层了。虽然两个IIEF可能长得不同，但是它们的行动空间是一样的。</li>
+</ul>
+<h4 id="Imperfect-Recall"><a href="#Imperfect-Recall" class="headerlink" title="Imperfect Recall"></a>Imperfect Recall</h4><p>玩家无法回忆自己曾经选择的node具体是哪一个</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="机器学习笔记">
+      <i class="fa fa-chevron-left"></i> 机器学习笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/" rel="next" title="算法心得">
+      算法心得 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Iterative-Removal："><span class="nav-text">Iterative Removal：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extensive-Form"><span class="nav-text">Extensive-Form</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Perfect-Information"><span class="nav-text">Perfect Information</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Induced-Normal-Form"><span class="nav-text">Induced Normal Form</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Subgame-perfection"><span class="nav-text">Subgame perfection</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Imperfect-Information"><span class="nav-text">Imperfect Information</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Imperfect-Recall"><span class="nav-text">Imperfect Recall</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大连铁板王"
+      src="/images/me.jpg">
+  <p class="site-author-name" itemprop="name">大连铁板王</p>
+  <div class="site-description" itemprop="description">分享笔记——实践费曼学习法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="http://douban.com/people/49183240" title="豆瓣 → http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;49183240" rel="noopener" target="_blank"><i class="fa fa-film fa-fw"></i>豆瓣</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/siyu79" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;siyu79" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://kehuiyao.github.io/" title="https:&#x2F;&#x2F;kehuiyao.github.io&#x2F;" rel="noopener" target="_blank">姚可辉's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大连铁板王</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">137k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yoursite.com/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/";
+    this.page.identifier = "2020/07/02/博弈论笔记/";
+    this.page.title = "博弈论笔记";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://iamwangsiyu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

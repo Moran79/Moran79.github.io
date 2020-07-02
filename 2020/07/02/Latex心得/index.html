@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="介绍老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latex心得">
+<meta property="og:url" content="http://yoursite.com/2020/07/02/Latex%E5%BF%83%E5%BE%97/index.html">
+<meta property="og:site_name" content="大家一起来">
+<meta property="og:description" content="介绍老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-02T16:19:35.000Z">
+<meta property="article:modified_time" content="2020-07-02T17:04:15.988Z">
+<meta property="article:author" content="大连铁板王">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/07/02/Latex%E5%BF%83%E5%BE%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Latex心得 | 大家一起来</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大家一起来</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/02/Latex%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.jpg">
+      <meta itemprop="name" content="大连铁板王">
+      <meta itemprop="description" content="分享笔记——实践费曼学习法">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大家一起来">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Latex心得
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-02 11:19:35 / 修改时间：12:04:15" itemprop="dateCreated datePublished" datetime="2020-07-02T11:19:35-05:00">2020-07-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Coding/Latex/" itemprop="url" rel="index"><span itemprop="name">Latex</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
+<a id="more"></a>
+
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<li>\docunmentclass{book/report/letter/article} 确定文件类型</li>
+<li>\begin{document}文章开始</li>
+<li>\end{document} 文章结束</li>
+<li>\title{} 添加题目</li>
+<li>\author{}添加作者</li>
+<li>\maketitle 制作封面-如果不在begin{document}后面加这句话，其他话都白写了</li>
+<li>\tableofcontents 加入目录，包括页码</li>
+<li>层次结构：part-chapter-section-subsection 用法: \part{}</li>
+<li>无序列表：\begin{itemize}  换行\item ***  换行\end{itemize}</li>
+<li>自定义列表：将itemize变成enumerate。默认是数字，可以加其他宏包</li>
+<li>输入一些\alpha这种特殊字符要在句子前后各加一个$</li>
+<li>一般字符需要用\来转义：{, }, %, $, &amp;,#, ~, ^, _ 但是反斜杠需要用\textbackslash</li>
+</ul>
+<p>换行 \\</p>
+<ul>
+<li><a href="https://www.latex-tutorial.com/tutorials/figures/" target="_blank" rel="noopener">添加图片</a> </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125; </span><br><span class="line">\item 带编号的列表</span><br><span class="line">\end&#123;enumerate&#125; </span><br><span class="line"></span><br><span class="line">\begin&#123;itemize&#125; </span><br><span class="line">\item 不带编号的列表</span><br><span class="line">\end&#123;itemize&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<p>##环境：</p>
+<p>  \begin{环境名}[可选参数]{参数}。document可以被看成最大的环境。</p>
+<p>常用环境：</p>
+<ul>
+<li>居中：center</li>
+<li>左对齐/右对齐：flushleft/flushright</li>
+<li>verbatim：抄录环境内的字符，忽视tex命令。verbatim* 将空格以␣␣的形式标注出来。行内抄录\verb+内容+和\verb*+内容+</li>
+<li>定理类环境：<br>\newtheorem{Theorem}{ 定 理 }[section]<br>\newtheorem{Proposition}[Theorem]{命题}<br>\newtheorem{Lemma}[Theorem]{引理}<br>\newtheorem{Definition}[Theorem]{定义}<br>最后加上：<br>\begin{Theorem} \label{thm:math}<br>定理内容。<br>\end{Theorem}</li>
+</ul>
+<h2 id="间距："><a href="#间距：" class="headerlink" title="间距："></a>间距：</h2><ul>
+<li>.\\表示一行的结束 相当于换行符</li>
+<li>\hskip(vskip) 长度 或 \hspace{长度} 或 hspace*{长度}</li>
+<li>长度单位sp&lt;&lt;pt&lt;=bp&lt;mm&lt;cm&lt;in 还有em表示字母m的宽度，ex表示字母x的高度</li>
+<li>不可换行的水平间距：\enspace =0.5em   , =1/6em    \!=-1/6em  ~=空格</li>
+<li>可换行的水平间距：\quad=1em  \qquad=2em  \enskip=0.5em \空格=空格 </li>
+</ul>
+<h2 id="段落："><a href="#段落：" class="headerlink" title="段落："></a>段落：</h2><ul>
+<li>\section{} \subsection … 可以在中括号前面加个星号，避免自动标号</li>
+</ul>
+<h2 id="数学："><a href="#数学：" class="headerlink" title="数学："></a>数学：</h2><ul>
+<li>行内公式用$…$连接</li>
+<li>行间公式：\[…\] 连接 \mbox添加有空格的文字。\mathrm添加没空格的文字</li>
+<li>为数字a戴上帽子：hat{a}或者hat a 其他符号：\tilde波浪线，\bar一条横线，\vec向量</li>
+<li>三种矩阵：中括号bmatrix，圆括号pmatrix，竖线vmatrix。行间公式—\begin{bmatrix}—a_ {1,1}&amp;\dots&amp;a_ {1,n}\\</li>
+<li>带编号的表达式：\begin{equation}\label{eq:ex1}</li>
+<li>不带编号的多行表达式：\begin{eqnarray*}  都是用\\换行</li>
+<li>带编号多行表达式：\begin{eqnarray} 没有标号的行用\nonumber \\换行 最后一行\label{eq:a2}</li>
+<li>大算子号：迭代指标写在求和号上下的情况用行间公式括起来。迭代指标写在求和号右侧的用行间公式连接起来。如$\sum_{i=1}^n a_i^2$</li>
+<li>其他大算子：连乘\prod 积分\int 环路积分\oint 交集\bigcap 并集\bigcup</li>
+<li>圆括号和大括号大小：\Bigg( &gt;bigg &gt;Big &gt;big&gt;什么都不加就是一个(</li>
+<li>像分段函数之类的东西，要用\left\{\begin{array}{ll} 配合 \right</li>
+<li>不等号 \not=  或者 \ne </li>
+<li>元素不属于\not\in 集合不属于 \not\subset</li>
+<li>不小于等于 \not\le  不大于等于\not\ge</li>
+<li>^上标 _下标</li>
+<li>\stackrel{i.i.d}{\sim}  波浪线上添加iid</li>
+<li>偏导数用frac + \partial</li>
+<li>正比于 \propto</li>
+<li>hat如果不够大的话还有widehat reallywidehat….</li>
+<li>二项式系数：\binom 或者直接 C_3^2</li>
+</ul>
+<h2 id="字体与字号："><a href="#字体与字号：" class="headerlink" title="字体与字号："></a>字体与字号：</h2><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>影响字形的参数有：fontencoding-fontfamily-fontseries-fontshape 用花括号括起来</p>
+<p>常用的有:</p>
+<ul>
+<li>缺省\rmfamily  打印机字体\ttfamily 无衬线字体\sffamily</li>
+<li>缺省\mdseries 粗体\bfseries</li>
+<li>缺省\upshape 意大利体\itshape 斜体\slshape 小号大写字体\scshape</li>
+</ul>
+<p>还可以通过{\fontspec{Times New Roman} 文本}来特定某一种字体</p>
+<p>还可以通过\textbf \textsf \textit{文本}…的方式</p>
+<p>\mathcal{花体字} 、mathbb{实数集R}</p>
+<h3 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h3><p>格式：{\tiny 文本}</p>
+<p>从小到大：tiny-footnotesize-small-normalsize-large-Large-LARGE-huge=Huge</p>
+<ul>
+<li>还可以固定宽度高度{\fontsize{120}{160} \selectfont 文本}</li>
+<li>不过一般来说，TEX文件正文中不需要设置字体/字号</li>
+</ul>
+<h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a>表格：</h2><p>\begin{tabular}[pos]{table spec}<br>…<br>\end{tabular}</p>
+<ul>
+<li>table spec定义了表格的格式:| l | c | rcl | 竖线就是竖线，lrc分别是左/右对齐和居中，还可以用p{width}来创建一个段落单元格</li>
+<li>tabular环境中，用&amp;分隔列，\\开始新的一行</li>
+<li>\hline 添加一个水平线 \cline{i-j}添加一个第i列到第j列的水平线</li>
+</ul>
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul>
+<li>alt+delete 迅速删除一行t</li>
+</ul>
+<h1 id="犯过的错误"><a href="#犯过的错误" class="headerlink" title="犯过的错误"></a>犯过的错误</h1><p>使用\\来进行换行操作的时候报错，解决方法：<a href="https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~\\ 使用它来代替 \\</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/02/Laioffer%E7%AC%94%E8%AE%B0/" rel="prev" title="Laioffer笔记">
+      <i class="fa fa-chevron-left"></i> Laioffer笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/02/Linux%E5%BF%83%E5%BE%97/" rel="next" title="Linux心得">
+      Linux心得 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#间距："><span class="nav-text">间距：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#段落："><span class="nav-text">段落：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学："><span class="nav-text">数学：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体与字号："><span class="nav-text">字体与字号：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字体"><span class="nav-text">字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字号"><span class="nav-text">字号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格："><span class="nav-text">表格：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快捷键"><span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#犯过的错误"><span class="nav-text">犯过的错误</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="大连铁板王"
+      src="/images/me.jpg">
+  <p class="site-author-name" itemprop="name">大连铁板王</p>
+  <div class="site-description" itemprop="description">分享笔记——实践费曼学习法</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="http://douban.com/people/49183240" title="豆瓣 → http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;49183240" rel="noopener" target="_blank"><i class="fa fa-film fa-fw"></i>豆瓣</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/siyu79" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;siyu79" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://kehuiyao.github.io/" title="https:&#x2F;&#x2F;kehuiyao.github.io&#x2F;" rel="noopener" target="_blank">姚可辉's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大连铁板王</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">137k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yoursite.com/2020/07/02/Latex%E5%BF%83%E5%BE%97/";
+    this.page.identifier = "2020/07/02/Latex心得/";
+    this.page.title = "Latex心得";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://iamwangsiyu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
