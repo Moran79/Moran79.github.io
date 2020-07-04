@@ -688,281 +688,211 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
       </categories>
   </entry>
   <entry>
-    <title>SQL心得</title>
-    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
+    <title>Linux心得</title>
+    <url>/2020/07/02/Linux%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
 <a id="more"></a>
 
 
 
-<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
-<li>拿到某一列最大值的那一行数据</li>
-</ul>
-<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
-<li><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum" target="_blank" rel="noopener">首字母是元音</a><ul>
-<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
-<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
-</ul>
-</li>
-</ol>
-<p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-1/problem" target="_blank" rel="noopener">打印小星星</a></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="built_in">number</span> = <span class="number">21</span>; <span class="comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">repeat</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span> - <span class="number">1</span>) <span class="keyword">from</span> information_schema.tables<span class="comment">/*内置table可供遍历*/</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @COUNTER <span class="built_in">INT</span> = <span class="number">20</span>;</span><br><span class="line">WHILE @COUNTER &gt;= 0</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    PRINT <span class="keyword">REPLICATE</span>(<span class="string">'* '</span>, @COUNTER)</span><br><span class="line">    <span class="keyword">SET</span> @COUNTER = @COUNTER - <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
-<li>Statement always end in a semi-colon;</li>
-<li>注释一般用/**/</li>
-<li>Command 一般都用大写来表示</li>
-<li>character在这里面被称为TEXT：（四种常见格式：INTEGER, TEXT, DATE, REAL）</li>
-<li>missing value 用 NULL 表示</li>
-<li>Line breaks don’t mean anything specific in SQL. We could write this entire query in one line, and it would run just fine.</li>
-<li><code>AS</code> is a keyword in SQL that allows you to <em>rename</em> a column or table using an alias. 跟sas的label一样，只改变输出不改变原数据</li>
-<li><code>DISTINCT</code> is used to return unique values in the output. It filters out all duplicate values in the specified column(s).</li>
-<li>判断等号的方式就是一个等于号</li>
-<li>FROM some_table a 可以用a来指代这个table</li>
-<li>如果没有数据的时候要返回NULL 可以用双重SELECT 也可以把UNION SELECT NULL放在语句中</li>
-<li>DROP TABLE xxx 彻底删除数据库</li>
-<li>IN/NOT IN 判断属于情况</li>
-<li>DELETE可以直接删除某一行观测值</li>
-<li>关于时间的函数：<strong>TO_DAYS(wt1.DATE)</strong> return the number of days between from year 0 to date DATE, <strong>subdate</strong>(w1.Date, k)可以把日期往前调k天</li>
-<li>mod(id,2)=0 偶数 还可以用id % 2 =0</li>
-</ul>
-<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
+<h1 id="乱七八糟"><a href="#乱七八糟" class="headerlink" title="乱七八糟"></a>乱七八糟</h1><p>cd /workspace 前面那个slash目的是回到主界面在进入workspace 而不是进入当前目录下的workspace<br>rm -rf 直接删除所有类型的文件<br>ssh <a href="mailto:siyuw@lunchbox.stat.wisc.edu">siyuw@lunchbox.stat.wisc.edu</a><br>ls -l: ①文件夹d其他-②read③write④是否可执行 可执行x ⑨最后三个说的是其他人<br>ls -lt 按修改时间倒序排列<br>cat语句可以连接两个文件<br>clear:清屏<br>shuf —-help 可以从一个文件随机选出几行</p>
 <ul>
-<li>任意两行都不具有相同的主键值；</li>
-<li>每一行都必须具有一个主键值（主键列不允许NULL值）；</li>
-<li>主键列中的值不允许修改或更新；</li>
-<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）。</li>
+<li>但是MAC没有shuf，只能用gshuf，还得安装一下<code>brew install coreutils</code></li>
 </ul>
-<p>注释用#或者/**/</p>
-<p>不等于可以用&lt;&gt;</p>
-<p>Between and 是包含一个闭集</p>
-<p>在SELECT语句中，子查询总是从内向外处理。在处理上面的SELECT语句时，DBMS实际上执行了两个操作。</p>
-<p>作为子查询的SELECT语句只能查询单个列。企图检索多个列将返回错误。</p>
-<p>if(判断，如果真，如果假)</p>
-<p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
-<p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
-<p>information_schema.tables 是内置的一个table，有61行</p>
-<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
-<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
-age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
-<li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
-<li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
-<li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
-<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
-<li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
-<li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
-<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
-<li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
-<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
-<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
-<li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
-<li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
-<li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
-</ul>
-<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
+<p>tail -n +2 “$FILE” &gt; “$FILE.tmp” &amp;&amp; mv “$FILE.tmp” “$FILE” 可以删除文本文件第一行<br>cat 1.txt 2.txt &gt; 3.txt 可以把1.2文件行combine到3文件中<br>wc -l &lt; <filename> 返回文件有多少行</p>
+<p>sed ‘2,$d’ ab           #删除第二行到最后一行</p>
+<p>python -V #查看python的版本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># wc -l &#96;find &#x2F;path&#x2F;to&#x2F;directory&#x2F; -type f&#96; #print一个文件夹下所有文件的行数</span><br></pre></td></tr></table></figure>
+
+<h1 id="犯过的错误"><a href="#犯过的错误" class="headerlink" title="犯过的错误"></a>犯过的错误</h1><p>bash没保存 反复运行发现没什么变化，以为电脑坏了</p>
+<p><strong>Slurm 装R包</strong>：</p>
 <ul>
-<li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
-<li>唯一约束列可包含NULL值。 </li>
-<li>唯一约束列可修改或更新。 </li>
-<li>唯一约束列的值可重复使用。 </li>
-<li>与主键不一样，唯一约束不能用来定义外键。</li>
+<li>module load R 才可以把R的版本换成3.5</li>
+<li>装R的时候需要带上dependencies = TRUE</li>
 </ul>
-<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
+<p><strong>Slurm报错</strong>：slurmstepd: error: Exceeded step memory limit at some point.</p>
 <ul>
-<li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
-<li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
-<li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
-<li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
-<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
-<li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
-<li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
-<li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
-<li>可以用AND/OR 来连接多个condition</li>
-<li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
-<li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
-<li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
-<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
-<li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
-<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
-<li>COUNT(1) 可以辅助分组计数</li>
+<li>#SBATCH –mem-per-cpu=10gb </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> Country <span class="keyword">IN</span> (<span class="string">'Germany'</span>,<span class="string">'UK'</span>); <span class="comment">#IN 可以从多个元素中找东西</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/weiguang1017/article/details/80345058" target="_blank" rel="noopener">mac下插入文件到某一行</a></p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>不要在一个终端窗口里使用 Ctrl-c 和 Ctrl-v 快捷键来执行拷贝和粘贴操作。它们不 起作用。对于 shell 来说，这两个控制代码有着不同的含义，它们在早于 Microsoft Windows （定义复制粘贴的含义）许多年之前就赋予了不同的意义。</p>
+<h1 id="一些简单命令"><a href="#一些简单命令" class="headerlink" title="一些简单命令"></a>一些简单命令</h1><p>date 显示时间</p>
+<p>cal 显示日历</p>
+<p>查看磁盘剩余空间的数量，输入 df</p>
+<p>显示空闲内存的数量，输入命令 free。</p>
+<p>退出 exit</p>
+<p>mv 重命名/剪切  rm删除</p>
+<p>如何获取ubuntu管理员权限？<br>①sudo passwd root  （创建root的密码）<br>②su命令进入管理员权限</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">wc -l &lt; file.txt <span class="comment">#可以不显示文件名直接显示行数</span></span><br></pre></td></tr></table></figure>
 
+<p>=~ 来匹配正则式</p>
+<p>下载Kaggle数据需要权限：传递cookie <a href="https://wdeback.gitlab.io/post/2018-03-08-how-to-download-kaggle-dataset-from-command-line/" target="_blank" rel="noopener">https://wdeback.gitlab.io/post/2018-03-08-how-to-download-kaggle-dataset-from-command-line/</a></p>
+<p><strong>Linux下，删除大于固定大小的文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find .&#x2F; -size +50M1</span><br></pre></td></tr></table></figure>
 
+<p>显示当前路径下，大于50M的文件。（包含子文件夹内的文件）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find .&#x2F; -size +50M -exec rm &#123;&#125; \;1</span><br></pre></td></tr></table></figure>
 
-<p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
-<p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
-<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
-<p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">50</span> <span class="keyword">PERCENT</span> * <span class="keyword">FROM</span> Customers; <span class="comment">#可以选出前50%的数据</span></span><br></pre></td></tr></table></figure>
+<p>删除当前路径下，大于50M的文件。（包含子文件夹内的文件）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find shakespeare -type f -exec cat &#123;&#125; \; &gt; file</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
-<p>‘+’ 或者|| 可以用来拼接字符</p>
-<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
-<p>LEFT/RIGHT 返回最左（右）面的字符</p>
-<p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
-<p>PI()返回圆周率</p>
-<p>GRESTEST 返回最大值</p>
-<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
-<li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
-<li>SUM/MAX/MIN/AVG/ROUND</li>
-<li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
-<li>在用于文本数据时，MAX()返回按该列排序后的最后一行。MAX()函数忽略列值为NULL的行。</li>
-<li>如果指定列名，则DISTINCT只能用于COUNT()。DISTINCT不能用于COUNT(*)。类似地，DISTINCT必须使用列名，不能用于计算或表达式。</li>
-<li>GROUP BY 按照某一指标分类。后面可以接数字，表示按照SELECT语句中第几个column来分组</li>
-<li>When we want to limit the results of a query based on an aggregate property, use <code>HAVING</code>. <code>HAVING</code> statement always comes after <code>GROUP BY</code>, but before <code>ORDER BY</code> and <code>LIMIT</code>. 事实上，目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是，WHERE过滤行，而HAVING过滤分组。</li>
-<li>在指定别名以包含某个聚集函数的结果时，不应该使用表中实际的列名。虽然这样做也算合法，但许多SQL实现不支持，可能会产生模糊的 错误消息。</li>
-</ul>
-<p>GROUP BY子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组。</p>
-<p>GROUP BY子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在GROUP BY子 句中指定相同的表达式。不能使用别名。</p>
-<p>大多数SQL实现不允许GROUP BY列带有长度可变的数据类型</p>
-<p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
-<p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
-<p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
-<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
-<p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
-<p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
-<p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
-<p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
-<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
-<p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
-<p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
-<p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
-<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
-<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
-<li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
-<li>CROSS JOIN 返回所有可能种排列组合</li>
-<li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
-<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
-</ul>
-<p>##Constrains</p>
-<p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
+<p>找到所有文件并把他们合在一起</p>
+<p>M-x erase-buffer 删除所有内容</p>
+<p>Counting Files in the Current Directory: <code>ls -l | wc -l</code></p>
+<p><a href="https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html" target="_blank" rel="noopener">ARRAY 操作</a></p>
+<h1 id="一些操作上的快捷键"><a href="#一些操作上的快捷键" class="headerlink" title="一些操作上的快捷键"></a>一些操作上的快捷键</h1><p>C-L 可以将命令行移动到屏幕的上/中/下</p>
+<h1 id="HTCondor"><a href="#HTCondor" class="headerlink" title="HTCondor"></a>HTCondor</h1><p>proc=$$([$(Process)+3586]) 来调节命令序号</p>
+<h1 id="Slurm"><a href="#Slurm" class="headerlink" title="Slurm"></a>Slurm</h1><p>操作指南：<a href="https://slurm.schedmd.com/sbatch.html" target="_blank" rel="noopener">https://slurm.schedmd.com/sbatch.html</a></p>
+<h1 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h1><p>新建窗口 emacs -nw</p>
+<p>退出 C-x C-c</p>
+<p>查找文件：C-x C-f</p>
+<p>删除一行 C-k</p>
+<p>删除当前C-d</p>
+<p>拷贝 M-w</p>
+<p>去掉一些空白换行符 tab</p>
+<p>去掉一些空白区域 M-p</p>
+<p>自动合并段落 M-q</p>
+<p>list buffers: C-x C-b </p>
 <ul>
-<li><p>CREATE TABLE celebs (</p>
-<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
-</li>
-<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
-</li>
-<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
-</li>
-<li><p><code>NOT NULL</code> columns must have a value. </p>
-</li>
-<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
-</li>
-<li></li>
+<li>按space进入选中的buffer </li>
+<li>在bufferlist里面关掉buffer 直接用 k 选中多个 然后enter来删除</li>
 </ul>
-<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
-<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
+<p>唤起shell : M-x shell / C-z</p>
+<p>删掉输入一般的错误/不想要命令</p>
+<p>撤销：C-/</p>
+<p>字体： C-_ 缩小    C-shift-+ 放大    C-0 回到原来样子</p>
+<p>C-x d 进入文件管理界面</p>
 <ul>
-<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
-<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
-AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
-       dep_day_of_week,
-        dep_date,
-        SUM(distance) AS flight_distance
-   FROM flights
-  GROUP BY 1,2,3
-) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
+<li>按+可以创建新文件夹 </li>
+<li>按d可以添加删除标记最后按x执行删除命令 </li>
+<li>g刷新</li>
+<li>u取消标记</li>
+<li><a href="http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html" target="_blank" rel="noopener">http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html</a> 里面提到了很多dired的操作</li>
+<li><a href="http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作" target="_blank" rel="noopener">http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作</a></li>
 </ul>
-<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
+<p>M-p 重复上一命令</p>
+<p>M-x replace-string C-q C-j 可以插入回车</p>
+<p>C-v 向下翻页 M-v 向上翻页</p>
+<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>跑R程序可以直接 Rscript xxx.R</p>
+<h2 id="学校CHTC介绍"><a href="#学校CHTC介绍" class="headerlink" title="学校CHTC介绍"></a>学校CHTC介绍</h2><p>HTC(高吞吐量计算)与HPC(高性能计算)：</p>
 <ol>
-<li>A row is processed in the outer query. </li>
-<li>Then, for that particular row in the outer query, the subquery is executed.</li>
+<li>HTC分成的若干个部分之间不需要交流信息，而HPC需要</li>
+<li>HTC更感兴趣的是可以在很长一段时间内完成多少工作而不是多快。</li>
 </ol>
-<ul>
-<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
-</ul>
-<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
-<ul>
-<li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
-<li>INTERSECT 连接两个SELECT，只包含相同的行</li>
-<li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
-</ul>
-<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
-<li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
-<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
-</ul>
-<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
-<ol>
-<li>Date: YYYY-MM-DD</li>
-<li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
-</ol>
-<ul>
-<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
-</li>
-<li><p>YEAR(xxx)来返回年份</p>
-</li>
-<li><p>获取系统日期：CURRENT_DATE()</p>
-</li>
-</ul>
-<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
-<li>SELECT (number1 + number2) 直接四则运算</li>
-<li>SELECT CAST(number1 AS REAL) 转换格式</li>
-<li>SELECT ROUND(number, precision) 取整</li>
-<li>MAX/MIN</li>
-</ul>
-<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
-<li>A || ‘ ’ || B 用空格连接A和B</li>
-<li>REPLACE(string,from_string,to_string) 字符串替换</li>
-</ul>
-<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
-<p>为什么要用视图：</p>
-<ul>
-<li>重用SQL语句。</li>
-<li>简化复杂的SQL操作。</li>
-<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
-<li>使用表的一部分而不是整个表。 </li>
-<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
-<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
-</ul>
-<p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
-<p>视图常见用途：</p>
-<ol>
-<li>利用视图简化复杂的联结</li>
-<li>用视图重新格式化检索出的数据</li>
-<li>用视图过滤不想要的数据</li>
-<li>使用视图与计算字段</li>
-</ol>
-<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
-<p>有点难 不知道这个具体是干嘛的</p>
-<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
-<p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
-<ul>
-<li>事务（transaction）指一组SQL语句； </li>
-<li>回退（rollback）指撤销指定SQL语句的过程； </li>
-<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
-<li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
-</ul>
-<p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
-<p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
-<p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
-<p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
-<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
-<p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
-<ul>
-<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
-<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
-<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
-<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
-<li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
-</ul>
+<p>比学校CHTC更大&amp;更不灵活的是UW Grid/ Open Science Grid</p>
+<p>可以跑R, Python, Matlab, …</p>
+<p>学校用的分布系统是HTCondor</p>
+<p>以后如果有自己的项目要申请CHTC，<a href="http://chtc.cs.wisc.edu/form" target="_blank" rel="noopener">http://chtc.cs.wisc.edu/form</a></p>
+<p><strong>Submit&amp;Monitor the job</strong>: condor_submit job.sub condor_q 但是这个命令在lunchbox里面跑不了，因为lunchbox用的是sbatch那一套 </p>
+<h1 id="什么是Shell"><a href="#什么是Shell" class="headerlink" title="什么是Shell"></a>什么是Shell</h1><p>如果提示符的最后一个字符是“#”, 而不是“$”, 那么这个终端会话就有超级用户权限。</p>
+<p>许多 Linux 发行版默认保存最后输入的 500 个命令。（使用向上箭头）</p>
+<p>鼠标左键拖动 = 复制文本</p>
+<p>传统 X 行为是指只要把鼠标移动到一个窗口的上方。 它能接受输入，但是直到你单击窗口之前它都不会成为前端窗口。设置聚焦策略为“聚焦跟随着鼠标”，可以使拷贝和粘贴更方便易用。 你能在窗口管理器的配置程序中找到这个设置。</p>
+<h1 id="文件系统中跳转"><a href="#文件系统中跳转" class="headerlink" title="文件系统中跳转"></a>文件系统中跳转</h1><p>当我们首次登录系统（或者启动终端仿真器会话）后，当前工作目录是我们的家目录（/home）。每个用户都有他自己的家目录，当用户以普通用户的身份操控系统时，家目录是唯一允许用户对文件进行写入的地方。</p>
+<p>相对路径用一个点[.]或者两个点[..]</p>
+<p>cd .. 表示返回上一层</p>
+<p>cd ./xxx 表示进入下一层 当然 [./] 可以被省略</p>
+<p>直接 cd 会回到家目录</p>
+<p>cd - 更改工作目录到先前的工作目录。【类似于返回上一步】</p>
+<p>cd ~user_name 可以回到其他用户的家目录</p>
+<p>ls 无法列出被隐藏的文件（例如用[.]开始的文件）此时可以使用 ls -a 命令</p>
+<p>文件名和命令名是大小写敏感的</p>
+<p>Linux 没有“文件扩展名”的概念，文件内容或用途由其它方法来决定。</p>
+<p>虽然 Linux 支持长文件名，文件名可能包含空格，标点符号，但标点符号仅限 使用“.”，“－”，下划线。最重要的是，不要在文件名中使用空格。如果你想表示词与词间的空格，用<strong>下划线字符来代替</strong>。过些时候，你会感激自己这样做。</p>
+<p>Emacs中要达到撤销效果使用的是 C-/ ，同样还可以使用 C-_ 或者 C-x u ，这三个都对应的是Undo命令。</p>
+<p>上面说的是撤销文本上的操作，还有个比较常用的命令C-g ，这个是用来撤销命令的，当你输了一半命令发现不对就可以用它了。</p>
 ]]></content>
       <categories>
         <category>Study</category>
         <category>Coding</category>
-        <category>SQL</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Matlab心得</title>
+    <url>/2020/07/02/Matlab%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
+<a id="more"></a>
+
+
+
+<h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
+<li>读入文件：load</li>
+<li>numel(A) = prod(size(A)) 返回A中元素个数</li>
+</ul>
+<p>pathtool 添加路径</p>
+<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br>注释用百分号% 代替#<br>「1<del>=2」表示1不等于2 用</del>代替叹号<br>或者|| 和&amp;&amp; 异或xor()<br>a=pi在后面加一个;冒号可以抑制打印<br>disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br>format short/long 可以在打印东西之前写出来 改变打印的位数</p>
+<p>矩阵生成</p>
+<ul>
+<li>用中括号括起来，用分号按行输入</li>
+<li>ones(m,n) 生成一个m*n的矩阵，元素全为1.  zeros同理</li>
+<li>eye(n)  生成n维单位矩阵</li>
+</ul>
+<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br>randn() 生成标准正态</p>
+<p>clc清屏<br>a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br>hist(w,方格数)生成密度图像<br>size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br>length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br>who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br>选择一个向量的前十位：v=priceY(1:10)<br>save hello.mat v: 把数据v存为hello.mat文件<br>a([1 3],:) 矩阵第一行和第三行所有元素<br>A=[A,[1;2;3]]：矩阵A右侧加上一列123<br>A(:)将A元素变成一个列向量输出<br>b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br>a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br>·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
+<p>max()返回最大值，</p>
+<ul>
+<li>可是如果[v,c]=max(a) 那么v是最大值，c是最大值的index</li>
+<li>如果对矩阵作用max，会返回每一列的最大值</li>
+</ul>
+<p>find(a&lt;3) 返回a向量中小于3的index<br>magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br>提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br>prod() 连乘<br>floor&amp;ceil地板和天花板函数<br>max(a,[],1|2) 按列|行来取矩阵a的最大值<br>sum(a,1|2) 按列|行进行求和<br>取整个矩阵的最大值：max(max(A))或者max(A(:))</p>
+<p>可以用逗号连接命令或者函数调用，会逐个运行。用冒号连接则不会显示结果</p>
+<p>循环：for i = 1:10, v(i)=2^i; end. while和if也要和end连用。if也没有括号</p>
+<p>exit和quit都可以退出octave</p>
+<p>addpath()添加新路径</p>
+<ul>
+<li>取出向量的第五位到最后一位：A(5:end) 注意这个end</li>
+</ul>
+<ul>
+<li>rng(512) 等同于R里面的set.seed(512)</li>
+<li>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</li>
+<li><a href="https://cn.mathworks.com/help/matlab/ref/table.html" target="_blank" rel="noopener">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName) </li>
+<li>fminunc 返回函数最小值（维数大于等于2）</li>
+</ul>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
+<li>遍历一个未知大小的矩阵/向量：for i = 1:numel(z)</li>
+</ul>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
+<li>a(2,:)=[] 删除某一行/列</li>
+<li>reshape(data,nrow,ncol) 变形矩阵</li>
+<li>a(: , k:end) end代表最后</li>
+<li>a=sum(A) %列求和<br>b=sum(A,2) %行求和<br>c=sum(A(:)) %矩阵求和</li>
+<li></li>
+</ul>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
+<p>intlinprog - Mixed-integer linear programming (MILP) 混合整数线性规划问题</p>
+<h1 id="画图："><a href="#画图：" class="headerlink" title="画图："></a>画图：</h1><ul>
+<li>figure; open a new figure window</li>
+<li>flipud(a) 将矩阵a上下翻转</li>
+<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。 </li>
+<li>xlabel(‘name’)</li>
+<li>plot(x,y,’r’)红色</li>
+<li>legend(‘1’’2’)加图例</li>
+<li>title(‘标题’)</li>
+<li>print -dpng ‘name.png’</li>
+<li>figure(1);plot();figure(2);plot() 可以同时分别画出来两张图</li>
+<li>subplot(1,2,1);plot() 将图像空间分成1*2，现在去画第一个</li>
+<li>axis([横坐标最小值 横坐标最大值 纵坐标最小值 纵坐标最大值])</li>
+<li>clf清除所有图</li>
+<li>imagesc(a) 将矩阵a用颜色画出来</li>
+<li>colorbar 在右侧添上一个颜色条</li>
+<li>colormap gray将图变成灰色</li>
+</ul>
+<h1 id="操作命令"><a href="#操作命令" class="headerlink" title="操作命令"></a>操作命令</h1><ul>
+<li>ctrl+c : 终止当前程序</li>
+</ul>
+<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
+<li>SVM: liblinear/libsvm</li>
+</ul>
+<h1 id="文档发布"><a href="#文档发布" class="headerlink" title="文档发布"></a>文档发布</h1><p><a href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html" target="_blank" rel="noopener">官方帮助</a></p>
+<ul>
+<li></li>
+</ul>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Matlab</category>
       </categories>
   </entry>
   <entry>
@@ -1431,56 +1361,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Study</category>
         <category>Coding</category>
         <category>Python</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Spark心得</title>
-    <url>/2020/07/02/Spark%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Laioffer学习的，628第三次yelp正好用上了。</p>
-<a id="more"></a>
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>Apache Spark 读作 阿派cheap（没有p）</p>
-<p><a href="https://databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html" target="_blank" rel="noopener">Spark_Optimizer</a></p>
-<p>数据类型RDD：Resilient Distributed Datasets (<strong>RDD</strong>) is a fundamental data structure of Spark. It is an immutable distributed collection of objects. Each dataset in <strong>RDD</strong> is divided into logical partitions, which may be computed on different nodes of the cluster.</p>
-<p>Spark allows two distinct kinds of operations by the user. There are <strong>transformations</strong> and there are <strong>actions</strong>.</p>
-<ul>
-<li><strong>Transformations</strong> are operations that will not be completed at the time you write and execute the code in a cell - they will only get executed once you have called a <strong>action</strong>.</li>
-<li>Examples of Transformations: select, distinct, groupBy, sum, orderBy, filter, limit</li>
-<li><strong>Actions</strong> are commands that are computed by Spark right at the time of their execution.</li>
-<li>Examples of Actions: show, collect, count, save</li>
-</ul>
-<p>%[coding language] 来切换python/R/SQL</p>
-<p>display(xxx) 用来展示一下dataframe</p>
-<ul>
-<li>这个函数厉害的点在于：we can very easily <strong>create some more sophisticated graphs</strong> by clicking the graphing icon that you can see below</li>
-</ul>
-<p>xxx.explain() 来解释transformation背后的physical plan</p>
-<p><code>Xxx.first()</code> 取出header</p>
-<p><code>xxx.take(n)</code> 取出前n行</p>
-<p><a href="https://docs.databricks.com/user-guide/libraries.html" target="_blank" rel="noopener">Databricks倒入外部包</a></p>
-<p>DS/DF 比RDD更快，因为Spark知道了数据的样子</p>
-<p>ReduceByKey 比GroupByKey好处：在shuffle之前做了一步聚合操作，压缩数据传输量。</p>
-<p>Join是最慢的一个操作。</p>
-<p>spark.read.json自动变成DF</p>
-<p>df.show()#画个图</p>
-<p>df.count()#有几行</p>
-<p>df.printSchema()#看看基本信息</p>
-<p>df.createOrReplaceTempView(Name) #可以变成一个table，可以之后用SQL</p>
-<p>spark.sql(“SELECT…”) #SQL语句，用这种方式取出来的格式是Data.frame</p>
-<p>pyspark.sql.row #用来生成DF</p>
-<p>spark.createDataFrame(NAME)</p>
-<p>vector assembler 可以把columns转化成vector</p>
-<h1 id="pyspark"><a href="#pyspark" class="headerlink" title="pyspark"></a>pyspark</h1><p><a href="https://www.analyticsvidhya.com/blog/2016/10/spark-dataframe-and-operations/" target="_blank" rel="noopener">pyspark教程</a></p>
-<p><a href="https://stackoverflow.com/questions/46956026/how-to-convert-column-with-string-type-to-int-form-in-pyspark-data-frame" target="_blank" rel="noopener">如何修改列的type</a>：<code>crimeSunday = crimeSunday.withColumn(&#39;X&#39;, crimeSunday[&#39;X&#39;].cast(&#39;float&#39;))</code></p>
-<h1 id="Databricks-语法"><a href="#Databricks-语法" class="headerlink" title="Databricks 语法"></a>Databricks 语法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dbutils.fs.rm(&#39;FileStore&#x2F;tables&#x2F;628&#x2F;review_100k.json&#39;,True) #删除自己上传的文件</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Spark</category>
       </categories>
   </entry>
   <entry>
@@ -2151,124 +2031,331 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
       </categories>
   </entry>
   <entry>
-    <title>Linux心得</title>
-    <url>/2020/07/02/Linux%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
+    <title>SQL心得</title>
+    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
 <a id="more"></a>
 
 
 
-<h1 id="乱七八糟"><a href="#乱七八糟" class="headerlink" title="乱七八糟"></a>乱七八糟</h1><p>cd /workspace 前面那个slash目的是回到主界面在进入workspace 而不是进入当前目录下的workspace<br>rm -rf 直接删除所有类型的文件<br>ssh <a href="mailto:siyuw@lunchbox.stat.wisc.edu">siyuw@lunchbox.stat.wisc.edu</a><br>ls -l: ①文件夹d其他-②read③write④是否可执行 可执行x ⑨最后三个说的是其他人<br>ls -lt 按修改时间倒序排列<br>cat语句可以连接两个文件<br>clear:清屏<br>shuf —-help 可以从一个文件随机选出几行</p>
-<ul>
-<li>但是MAC没有shuf，只能用gshuf，还得安装一下<code>brew install coreutils</code></li>
+<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
+<li>拿到某一列最大值的那一行数据</li>
 </ul>
-<p>tail -n +2 “$FILE” &gt; “$FILE.tmp” &amp;&amp; mv “$FILE.tmp” “$FILE” 可以删除文本文件第一行<br>cat 1.txt 2.txt &gt; 3.txt 可以把1.2文件行combine到3文件中<br>wc -l &lt; <filename> 返回文件有多少行</p>
-<p>sed ‘2,$d’ ab           #删除第二行到最后一行</p>
-<p>python -V #查看python的版本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># wc -l &#96;find &#x2F;path&#x2F;to&#x2F;directory&#x2F; -type f&#96; #print一个文件夹下所有文件的行数</span><br></pre></td></tr></table></figure>
-
-<h1 id="犯过的错误"><a href="#犯过的错误" class="headerlink" title="犯过的错误"></a>犯过的错误</h1><p>bash没保存 反复运行发现没什么变化，以为电脑坏了</p>
-<p><strong>Slurm 装R包</strong>：</p>
-<ul>
-<li>module load R 才可以把R的版本换成3.5</li>
-<li>装R的时候需要带上dependencies = TRUE</li>
+<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
+<li><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum" target="_blank" rel="noopener">首字母是元音</a><ul>
+<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
+<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
 </ul>
-<p><strong>Slurm报错</strong>：slurmstepd: error: Exceeded step memory limit at some point.</p>
-<ul>
-<li>#SBATCH –mem-per-cpu=10gb </li>
-</ul>
-<p><a href="https://blog.csdn.net/weiguang1017/article/details/80345058" target="_blank" rel="noopener">mac下插入文件到某一行</a></p>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>不要在一个终端窗口里使用 Ctrl-c 和 Ctrl-v 快捷键来执行拷贝和粘贴操作。它们不 起作用。对于 shell 来说，这两个控制代码有着不同的含义，它们在早于 Microsoft Windows （定义复制粘贴的含义）许多年之前就赋予了不同的意义。</p>
-<h1 id="一些简单命令"><a href="#一些简单命令" class="headerlink" title="一些简单命令"></a>一些简单命令</h1><p>date 显示时间</p>
-<p>cal 显示日历</p>
-<p>查看磁盘剩余空间的数量，输入 df</p>
-<p>显示空闲内存的数量，输入命令 free。</p>
-<p>退出 exit</p>
-<p>mv 重命名/剪切  rm删除</p>
-<p>如何获取ubuntu管理员权限？<br>①sudo passwd root  （创建root的密码）<br>②su命令进入管理员权限</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">wc -l &lt; file.txt <span class="comment">#可以不显示文件名直接显示行数</span></span><br></pre></td></tr></table></figure>
-
-<p>=~ 来匹配正则式</p>
-<p>下载Kaggle数据需要权限：传递cookie <a href="https://wdeback.gitlab.io/post/2018-03-08-how-to-download-kaggle-dataset-from-command-line/" target="_blank" rel="noopener">https://wdeback.gitlab.io/post/2018-03-08-how-to-download-kaggle-dataset-from-command-line/</a></p>
-<p><strong>Linux下，删除大于固定大小的文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find .&#x2F; -size +50M1</span><br></pre></td></tr></table></figure>
-
-<p>显示当前路径下，大于50M的文件。（包含子文件夹内的文件）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find .&#x2F; -size +50M -exec rm &#123;&#125; \;1</span><br></pre></td></tr></table></figure>
-
-<p>删除当前路径下，大于50M的文件。（包含子文件夹内的文件）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">find shakespeare -type f -exec cat &#123;&#125; \; &gt; file</span><br></pre></td></tr></table></figure>
-
-<p>找到所有文件并把他们合在一起</p>
-<p>M-x erase-buffer 删除所有内容</p>
-<p>Counting Files in the Current Directory: <code>ls -l | wc -l</code></p>
-<p><a href="https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html" target="_blank" rel="noopener">ARRAY 操作</a></p>
-<h1 id="一些操作上的快捷键"><a href="#一些操作上的快捷键" class="headerlink" title="一些操作上的快捷键"></a>一些操作上的快捷键</h1><p>C-L 可以将命令行移动到屏幕的上/中/下</p>
-<h1 id="HTCondor"><a href="#HTCondor" class="headerlink" title="HTCondor"></a>HTCondor</h1><p>proc=$$([$(Process)+3586]) 来调节命令序号</p>
-<h1 id="Slurm"><a href="#Slurm" class="headerlink" title="Slurm"></a>Slurm</h1><p>操作指南：<a href="https://slurm.schedmd.com/sbatch.html" target="_blank" rel="noopener">https://slurm.schedmd.com/sbatch.html</a></p>
-<h1 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h1><p>新建窗口 emacs -nw</p>
-<p>退出 C-x C-c</p>
-<p>查找文件：C-x C-f</p>
-<p>删除一行 C-k</p>
-<p>删除当前C-d</p>
-<p>拷贝 M-w</p>
-<p>去掉一些空白换行符 tab</p>
-<p>去掉一些空白区域 M-p</p>
-<p>自动合并段落 M-q</p>
-<p>list buffers: C-x C-b </p>
-<ul>
-<li>按space进入选中的buffer </li>
-<li>在bufferlist里面关掉buffer 直接用 k 选中多个 然后enter来删除</li>
-</ul>
-<p>唤起shell : M-x shell / C-z</p>
-<p>删掉输入一般的错误/不想要命令</p>
-<p>撤销：C-/</p>
-<p>字体： C-_ 缩小    C-shift-+ 放大    C-0 回到原来样子</p>
-<p>C-x d 进入文件管理界面</p>
-<ul>
-<li>按+可以创建新文件夹 </li>
-<li>按d可以添加删除标记最后按x执行删除命令 </li>
-<li>g刷新</li>
-<li>u取消标记</li>
-<li><a href="http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html" target="_blank" rel="noopener">http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html</a> 里面提到了很多dired的操作</li>
-<li><a href="http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作" target="_blank" rel="noopener">http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作</a></li>
-</ul>
-<p>M-p 重复上一命令</p>
-<p>M-x replace-string C-q C-j 可以插入回车</p>
-<p>C-v 向下翻页 M-v 向上翻页</p>
-<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>跑R程序可以直接 Rscript xxx.R</p>
-<h2 id="学校CHTC介绍"><a href="#学校CHTC介绍" class="headerlink" title="学校CHTC介绍"></a>学校CHTC介绍</h2><p>HTC(高吞吐量计算)与HPC(高性能计算)：</p>
-<ol>
-<li>HTC分成的若干个部分之间不需要交流信息，而HPC需要</li>
-<li>HTC更感兴趣的是可以在很长一段时间内完成多少工作而不是多快。</li>
+</li>
 </ol>
-<p>比学校CHTC更大&amp;更不灵活的是UW Grid/ Open Science Grid</p>
-<p>可以跑R, Python, Matlab, …</p>
-<p>学校用的分布系统是HTCondor</p>
-<p>以后如果有自己的项目要申请CHTC，<a href="http://chtc.cs.wisc.edu/form" target="_blank" rel="noopener">http://chtc.cs.wisc.edu/form</a></p>
-<p><strong>Submit&amp;Monitor the job</strong>: condor_submit job.sub condor_q 但是这个命令在lunchbox里面跑不了，因为lunchbox用的是sbatch那一套 </p>
-<h1 id="什么是Shell"><a href="#什么是Shell" class="headerlink" title="什么是Shell"></a>什么是Shell</h1><p>如果提示符的最后一个字符是“#”, 而不是“$”, 那么这个终端会话就有超级用户权限。</p>
-<p>许多 Linux 发行版默认保存最后输入的 500 个命令。（使用向上箭头）</p>
-<p>鼠标左键拖动 = 复制文本</p>
-<p>传统 X 行为是指只要把鼠标移动到一个窗口的上方。 它能接受输入，但是直到你单击窗口之前它都不会成为前端窗口。设置聚焦策略为“聚焦跟随着鼠标”，可以使拷贝和粘贴更方便易用。 你能在窗口管理器的配置程序中找到这个设置。</p>
-<h1 id="文件系统中跳转"><a href="#文件系统中跳转" class="headerlink" title="文件系统中跳转"></a>文件系统中跳转</h1><p>当我们首次登录系统（或者启动终端仿真器会话）后，当前工作目录是我们的家目录（/home）。每个用户都有他自己的家目录，当用户以普通用户的身份操控系统时，家目录是唯一允许用户对文件进行写入的地方。</p>
-<p>相对路径用一个点[.]或者两个点[..]</p>
-<p>cd .. 表示返回上一层</p>
-<p>cd ./xxx 表示进入下一层 当然 [./] 可以被省略</p>
-<p>直接 cd 会回到家目录</p>
-<p>cd - 更改工作目录到先前的工作目录。【类似于返回上一步】</p>
-<p>cd ~user_name 可以回到其他用户的家目录</p>
-<p>ls 无法列出被隐藏的文件（例如用[.]开始的文件）此时可以使用 ls -a 命令</p>
-<p>文件名和命令名是大小写敏感的</p>
-<p>Linux 没有“文件扩展名”的概念，文件内容或用途由其它方法来决定。</p>
-<p>虽然 Linux 支持长文件名，文件名可能包含空格，标点符号，但标点符号仅限 使用“.”，“－”，下划线。最重要的是，不要在文件名中使用空格。如果你想表示词与词间的空格，用<strong>下划线字符来代替</strong>。过些时候，你会感激自己这样做。</p>
-<p>Emacs中要达到撤销效果使用的是 C-/ ，同样还可以使用 C-_ 或者 C-x u ，这三个都对应的是Undo命令。</p>
-<p>上面说的是撤销文本上的操作，还有个比较常用的命令C-g ，这个是用来撤销命令的，当你输了一半命令发现不对就可以用它了。</p>
+<p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-1/problem" target="_blank" rel="noopener">打印小星星</a></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="built_in">number</span> = <span class="number">21</span>; <span class="comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">repeat</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span> - <span class="number">1</span>) <span class="keyword">from</span> information_schema.tables<span class="comment">/*内置table可供遍历*/</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @COUNTER <span class="built_in">INT</span> = <span class="number">20</span>;</span><br><span class="line">WHILE @COUNTER &gt;= 0</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    PRINT <span class="keyword">REPLICATE</span>(<span class="string">'* '</span>, @COUNTER)</span><br><span class="line">    <span class="keyword">SET</span> @COUNTER = @COUNTER - <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<li>Statement always end in a semi-colon;</li>
+<li>注释一般用/**/</li>
+<li>Command 一般都用大写来表示</li>
+<li>character在这里面被称为TEXT：（四种常见格式：INTEGER, TEXT, DATE, REAL）</li>
+<li>missing value 用 NULL 表示</li>
+<li>Line breaks don’t mean anything specific in SQL. We could write this entire query in one line, and it would run just fine.</li>
+<li><code>AS</code> is a keyword in SQL that allows you to <em>rename</em> a column or table using an alias. 跟sas的label一样，只改变输出不改变原数据</li>
+<li><code>DISTINCT</code> is used to return unique values in the output. It filters out all duplicate values in the specified column(s).</li>
+<li>判断等号的方式就是一个等于号</li>
+<li>FROM some_table a 可以用a来指代这个table</li>
+<li>如果没有数据的时候要返回NULL 可以用双重SELECT 也可以把UNION SELECT NULL放在语句中</li>
+<li>DROP TABLE xxx 彻底删除数据库</li>
+<li>IN/NOT IN 判断属于情况</li>
+<li>DELETE可以直接删除某一行观测值</li>
+<li>关于时间的函数：<strong>TO_DAYS(wt1.DATE)</strong> return the number of days between from year 0 to date DATE, <strong>subdate</strong>(w1.Date, k)可以把日期往前调k天</li>
+<li>mod(id,2)=0 偶数 还可以用id % 2 =0</li>
+</ul>
+<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
+<ul>
+<li>任意两行都不具有相同的主键值；</li>
+<li>每一行都必须具有一个主键值（主键列不允许NULL值）；</li>
+<li>主键列中的值不允许修改或更新；</li>
+<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）。</li>
+</ul>
+<p>注释用#或者/**/</p>
+<p>不等于可以用&lt;&gt;</p>
+<p>Between and 是包含一个闭集</p>
+<p>在SELECT语句中，子查询总是从内向外处理。在处理上面的SELECT语句时，DBMS实际上执行了两个操作。</p>
+<p>作为子查询的SELECT语句只能查询单个列。企图检索多个列将返回错误。</p>
+<p>if(判断，如果真，如果假)</p>
+<p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
+<p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
+<p>information_schema.tables 是内置的一个table，有61行</p>
+<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
+<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
+age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
+<li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
+<li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
+<li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
+<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
+<li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
+<li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
+<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
+<li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
+<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
+<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
+<li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
+<li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
+<li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
+</ul>
+<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
+<ul>
+<li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
+<li>唯一约束列可包含NULL值。 </li>
+<li>唯一约束列可修改或更新。 </li>
+<li>唯一约束列的值可重复使用。 </li>
+<li>与主键不一样，唯一约束不能用来定义外键。</li>
+</ul>
+<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
+<ul>
+<li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
+<li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
+<li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
+<li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
+<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
+<li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
+<li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
+<li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
+<li>可以用AND/OR 来连接多个condition</li>
+<li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
+<li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
+<li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
+<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
+<li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
+<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
+<li>COUNT(1) 可以辅助分组计数</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> Country <span class="keyword">IN</span> (<span class="string">'Germany'</span>,<span class="string">'UK'</span>); <span class="comment">#IN 可以从多个元素中找东西</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
+<p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
+<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
+<p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">50</span> <span class="keyword">PERCENT</span> * <span class="keyword">FROM</span> Customers; <span class="comment">#可以选出前50%的数据</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
+<p>‘+’ 或者|| 可以用来拼接字符</p>
+<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
+<p>LEFT/RIGHT 返回最左（右）面的字符</p>
+<p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
+<p>PI()返回圆周率</p>
+<p>GRESTEST 返回最大值</p>
+<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
+<li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
+<li>SUM/MAX/MIN/AVG/ROUND</li>
+<li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
+<li>在用于文本数据时，MAX()返回按该列排序后的最后一行。MAX()函数忽略列值为NULL的行。</li>
+<li>如果指定列名，则DISTINCT只能用于COUNT()。DISTINCT不能用于COUNT(*)。类似地，DISTINCT必须使用列名，不能用于计算或表达式。</li>
+<li>GROUP BY 按照某一指标分类。后面可以接数字，表示按照SELECT语句中第几个column来分组</li>
+<li>When we want to limit the results of a query based on an aggregate property, use <code>HAVING</code>. <code>HAVING</code> statement always comes after <code>GROUP BY</code>, but before <code>ORDER BY</code> and <code>LIMIT</code>. 事实上，目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是，WHERE过滤行，而HAVING过滤分组。</li>
+<li>在指定别名以包含某个聚集函数的结果时，不应该使用表中实际的列名。虽然这样做也算合法，但许多SQL实现不支持，可能会产生模糊的 错误消息。</li>
+</ul>
+<p>GROUP BY子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组。</p>
+<p>GROUP BY子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在GROUP BY子 句中指定相同的表达式。不能使用别名。</p>
+<p>大多数SQL实现不允许GROUP BY列带有长度可变的数据类型</p>
+<p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
+<p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
+<p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
+<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
+<p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
+<p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
+<p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
+<p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
+<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
+<p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
+<p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
+<p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
+<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
+<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
+<li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
+<li>CROSS JOIN 返回所有可能种排列组合</li>
+<li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
+<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
+</ul>
+<p>##Constrains</p>
+<p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
+<ul>
+<li><p>CREATE TABLE celebs (</p>
+<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
+</li>
+<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
+</li>
+<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
+</li>
+<li><p><code>NOT NULL</code> columns must have a value. </p>
+</li>
+<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
+</li>
+<li></li>
+</ul>
+<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
+<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
+<ul>
+<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
+<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
+AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
+       dep_day_of_week,
+        dep_date,
+        SUM(distance) AS flight_distance
+   FROM flights
+  GROUP BY 1,2,3
+) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
+</ul>
+<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
+<ol>
+<li>A row is processed in the outer query. </li>
+<li>Then, for that particular row in the outer query, the subquery is executed.</li>
+</ol>
+<ul>
+<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
+</ul>
+<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
+<ul>
+<li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
+<li>INTERSECT 连接两个SELECT，只包含相同的行</li>
+<li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
+</ul>
+<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
+<li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
+<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
+</ul>
+<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
+<ol>
+<li>Date: YYYY-MM-DD</li>
+<li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
+</ol>
+<ul>
+<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
+</li>
+<li><p>YEAR(xxx)来返回年份</p>
+</li>
+<li><p>获取系统日期：CURRENT_DATE()</p>
+</li>
+</ul>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>SELECT (number1 + number2) 直接四则运算</li>
+<li>SELECT CAST(number1 AS REAL) 转换格式</li>
+<li>SELECT ROUND(number, precision) 取整</li>
+<li>MAX/MIN</li>
+</ul>
+<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
+<li>A || ‘ ’ || B 用空格连接A和B</li>
+<li>REPLACE(string,from_string,to_string) 字符串替换</li>
+</ul>
+<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
+<p>为什么要用视图：</p>
+<ul>
+<li>重用SQL语句。</li>
+<li>简化复杂的SQL操作。</li>
+<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
+<li>使用表的一部分而不是整个表。 </li>
+<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
+<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
+</ul>
+<p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
+<p>视图常见用途：</p>
+<ol>
+<li>利用视图简化复杂的联结</li>
+<li>用视图重新格式化检索出的数据</li>
+<li>用视图过滤不想要的数据</li>
+<li>使用视图与计算字段</li>
+</ol>
+<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
+<p>有点难 不知道这个具体是干嘛的</p>
+<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
+<p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
+<ul>
+<li>事务（transaction）指一组SQL语句； </li>
+<li>回退（rollback）指撤销指定SQL语句的过程； </li>
+<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
+<li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
+</ul>
+<p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
+<p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
+<p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
+<p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
+<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
+<p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
+<ul>
+<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
+<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
+<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
+<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
+<li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
+</ul>
 ]]></content>
       <categories>
         <category>Study</category>
         <category>Coding</category>
-        <category>Linux</category>
+        <category>SQL</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Spark心得</title>
+    <url>/2020/07/02/Spark%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Laioffer学习的，628第三次yelp正好用上了。</p>
+<a id="more"></a>
+
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>Apache Spark 读作 阿派cheap（没有p）</p>
+<p><a href="https://databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html" target="_blank" rel="noopener">Spark_Optimizer</a></p>
+<p>数据类型RDD：Resilient Distributed Datasets (<strong>RDD</strong>) is a fundamental data structure of Spark. It is an immutable distributed collection of objects. Each dataset in <strong>RDD</strong> is divided into logical partitions, which may be computed on different nodes of the cluster.</p>
+<p>Spark allows two distinct kinds of operations by the user. There are <strong>transformations</strong> and there are <strong>actions</strong>.</p>
+<ul>
+<li><strong>Transformations</strong> are operations that will not be completed at the time you write and execute the code in a cell - they will only get executed once you have called a <strong>action</strong>.</li>
+<li>Examples of Transformations: select, distinct, groupBy, sum, orderBy, filter, limit</li>
+<li><strong>Actions</strong> are commands that are computed by Spark right at the time of their execution.</li>
+<li>Examples of Actions: show, collect, count, save</li>
+</ul>
+<p>%[coding language] 来切换python/R/SQL</p>
+<p>display(xxx) 用来展示一下dataframe</p>
+<ul>
+<li>这个函数厉害的点在于：we can very easily <strong>create some more sophisticated graphs</strong> by clicking the graphing icon that you can see below</li>
+</ul>
+<p>xxx.explain() 来解释transformation背后的physical plan</p>
+<p><code>Xxx.first()</code> 取出header</p>
+<p><code>xxx.take(n)</code> 取出前n行</p>
+<p><a href="https://docs.databricks.com/user-guide/libraries.html" target="_blank" rel="noopener">Databricks倒入外部包</a></p>
+<p>DS/DF 比RDD更快，因为Spark知道了数据的样子</p>
+<p>ReduceByKey 比GroupByKey好处：在shuffle之前做了一步聚合操作，压缩数据传输量。</p>
+<p>Join是最慢的一个操作。</p>
+<p>spark.read.json自动变成DF</p>
+<p>df.show()#画个图</p>
+<p>df.count()#有几行</p>
+<p>df.printSchema()#看看基本信息</p>
+<p>df.createOrReplaceTempView(Name) #可以变成一个table，可以之后用SQL</p>
+<p>spark.sql(“SELECT…”) #SQL语句，用这种方式取出来的格式是Data.frame</p>
+<p>pyspark.sql.row #用来生成DF</p>
+<p>spark.createDataFrame(NAME)</p>
+<p>vector assembler 可以把columns转化成vector</p>
+<h1 id="pyspark"><a href="#pyspark" class="headerlink" title="pyspark"></a>pyspark</h1><p><a href="https://www.analyticsvidhya.com/blog/2016/10/spark-dataframe-and-operations/" target="_blank" rel="noopener">pyspark教程</a></p>
+<p><a href="https://stackoverflow.com/questions/46956026/how-to-convert-column-with-string-type-to-int-form-in-pyspark-data-frame" target="_blank" rel="noopener">如何修改列的type</a>：<code>crimeSunday = crimeSunday.withColumn(&#39;X&#39;, crimeSunday[&#39;X&#39;].cast(&#39;float&#39;))</code></p>
+<h1 id="Databricks-语法"><a href="#Databricks-语法" class="headerlink" title="Databricks 语法"></a>Databricks 语法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dbutils.fs.rm(&#39;FileStore&#x2F;tables&#x2F;628&#x2F;review_100k.json&#39;,True) #删除自己上传的文件</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Spark</category>
       </categories>
   </entry>
   <entry>
@@ -2288,99 +2375,20 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
       </categories>
   </entry>
   <entry>
-    <title>Matlab心得</title>
-    <url>/2020/07/02/Matlab%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
-<a id="more"></a>
-
-
-
-<h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
-<li>读入文件：load</li>
-<li>numel(A) = prod(size(A)) 返回A中元素个数</li>
-</ul>
-<p>pathtool 添加路径</p>
-<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br>注释用百分号% 代替#<br>「1<del>=2」表示1不等于2 用</del>代替叹号<br>或者|| 和&amp;&amp; 异或xor()<br>a=pi在后面加一个;冒号可以抑制打印<br>disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br>format short/long 可以在打印东西之前写出来 改变打印的位数</p>
-<p>矩阵生成</p>
-<ul>
-<li>用中括号括起来，用分号按行输入</li>
-<li>ones(m,n) 生成一个m*n的矩阵，元素全为1.  zeros同理</li>
-<li>eye(n)  生成n维单位矩阵</li>
-</ul>
-<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br>randn() 生成标准正态</p>
-<p>clc清屏<br>a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br>hist(w,方格数)生成密度图像<br>size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br>length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br>who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br>选择一个向量的前十位：v=priceY(1:10)<br>save hello.mat v: 把数据v存为hello.mat文件<br>a([1 3],:) 矩阵第一行和第三行所有元素<br>A=[A,[1;2;3]]：矩阵A右侧加上一列123<br>A(:)将A元素变成一个列向量输出<br>b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br>a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br>·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
-<p>max()返回最大值，</p>
-<ul>
-<li>可是如果[v,c]=max(a) 那么v是最大值，c是最大值的index</li>
-<li>如果对矩阵作用max，会返回每一列的最大值</li>
-</ul>
-<p>find(a&lt;3) 返回a向量中小于3的index<br>magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br>提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br>prod() 连乘<br>floor&amp;ceil地板和天花板函数<br>max(a,[],1|2) 按列|行来取矩阵a的最大值<br>sum(a,1|2) 按列|行进行求和<br>取整个矩阵的最大值：max(max(A))或者max(A(:))</p>
-<p>可以用逗号连接命令或者函数调用，会逐个运行。用冒号连接则不会显示结果</p>
-<p>循环：for i = 1:10, v(i)=2^i; end. while和if也要和end连用。if也没有括号</p>
-<p>exit和quit都可以退出octave</p>
-<p>addpath()添加新路径</p>
-<ul>
-<li>取出向量的第五位到最后一位：A(5:end) 注意这个end</li>
-</ul>
-<ul>
-<li>rng(512) 等同于R里面的set.seed(512)</li>
-<li>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</li>
-<li><a href="https://cn.mathworks.com/help/matlab/ref/table.html" target="_blank" rel="noopener">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName) </li>
-<li>fminunc 返回函数最小值（维数大于等于2）</li>
-</ul>
-<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
-<li>遍历一个未知大小的矩阵/向量：for i = 1:numel(z)</li>
-</ul>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
-<li>a(2,:)=[] 删除某一行/列</li>
-<li>reshape(data,nrow,ncol) 变形矩阵</li>
-<li>a(: , k:end) end代表最后</li>
-<li>a=sum(A) %列求和<br>b=sum(A,2) %行求和<br>c=sum(A(:)) %矩阵求和</li>
-<li></li>
-</ul>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
-<p>intlinprog - Mixed-integer linear programming (MILP) 混合整数线性规划问题</p>
-<h1 id="画图："><a href="#画图：" class="headerlink" title="画图："></a>画图：</h1><ul>
-<li>figure; open a new figure window</li>
-<li>flipud(a) 将矩阵a上下翻转</li>
-<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。 </li>
-<li>xlabel(‘name’)</li>
-<li>plot(x,y,’r’)红色</li>
-<li>legend(‘1’’2’)加图例</li>
-<li>title(‘标题’)</li>
-<li>print -dpng ‘name.png’</li>
-<li>figure(1);plot();figure(2);plot() 可以同时分别画出来两张图</li>
-<li>subplot(1,2,1);plot() 将图像空间分成1*2，现在去画第一个</li>
-<li>axis([横坐标最小值 横坐标最大值 纵坐标最小值 纵坐标最大值])</li>
-<li>clf清除所有图</li>
-<li>imagesc(a) 将矩阵a用颜色画出来</li>
-<li>colorbar 在右侧添上一个颜色条</li>
-<li>colormap gray将图变成灰色</li>
-</ul>
-<h1 id="操作命令"><a href="#操作命令" class="headerlink" title="操作命令"></a>操作命令</h1><ul>
-<li>ctrl+c : 终止当前程序</li>
-</ul>
-<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
-<li>SVM: liblinear/libsvm</li>
-</ul>
-<h1 id="文档发布"><a href="#文档发布" class="headerlink" title="文档发布"></a>文档发布</h1><p><a href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html" target="_blank" rel="noopener">官方帮助</a></p>
-<ul>
-<li></li>
-</ul>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Matlab</category>
-      </categories>
-  </entry>
-  <entry>
     <title>The Reason for God</title>
     <url>/2020/07/02/The-Reason-for-God/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>《The Reason for God》，中文版《为何是他》是提摩太·凯勒（Timothy Keller）写的一本<strong>信仰答疑解惑书</strong>。其中涉及到了很多“敏感问题”，比如：“为什么上帝会允许苦难”、“为什么充满爱的上帝会送人去地狱” 等等。初读时惊讶的合不拢嘴，连连拍手。中期时开始觉得理性的思考与感性的信心相违背，开始抵制这本书。最后决定把它读完，作为知识来收获，而不是信仰来全盘接受。</p>
 <a id="more"></a>
 
-<h1 id="前五章"><a href="#前五章" class="headerlink" title="前五章"></a>前五章</h1><p>2020/5/10 周二<br>基督徒被接受不是因为做的比其他人好，而是耶稣担当了我们的罪过。其他宗教提倡道德提升，就会天然的对那些不信/不做的人，产生自己更高级的感觉。所以成为基督徒之后，我们正常来说不会觉得自己越来越好，而是越来越知道自己的不足，产生优越感也就无从谈起了。</p>
+<h1 id="前五章"><a href="#前五章" class="headerlink" title="前五章"></a>前五章</h1><ul>
+<li>If morality is relative, why isn’t social justice as well?</li>
+<li>A faith without some doubts is like a human body without any antibodies. 我们需要对抗来自外界的病毒，比如说他人的质疑，否则我们的信仰可能会在一夜之间崩塌</li>
+<li>Believers should learn to look for reasons behind their faith.</li>
+<li>All doubts, however skeptical or cynical they may seen, are really a set of alternate belief.</li>
+<li>Leap of faith. 尽管对事情的后果无把握，但还是以最大的信念去进行</li>
+<li>People should have doubts about their doubts.</li>
+</ul>
+<p>2020/5/10 周二<br>基督徒被接受不是因为做的比其他人好，而是耶稣担当了我们的罪过。其他宗教提倡道德提升，就会天然的对那些不信/不做的人，产生自己更高级的感觉。所以成为基督徒之后，我们正常来说不会觉得自己越来越好，而是越来越知道自己的不足，产生优越感也就无从谈起了。</p>
 <p>2020/5/12 周二<br>未来的新天新地不仅是一个什么都有的美好世界，而是把我们所有过去的上海，痛苦全部翻转，并且变成更大的喜悦。更像是把水变成酒而不是直接给你一杯好喝的酒。</p>
 <p>2020年5月14日</p>
 <ul>
@@ -2547,225 +2555,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Study</category>
         <category>Courses</category>
         <category>博弈论</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>算法心得</title>
-    <url>/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>以下知识来自于：</p>
-<ul>
-<li>普林斯顿在Coursera上面的algorithm网课</li>
-<li>python算法书</li>
-<li>算法导论</li>
-</ul>
-<p>希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档</p>
-<a id="more"></a>
-
-
-
-<h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
-<p>“回溯”的具体意思就是<strong>将不可能解或者部分解的候选尽早的舍弃掉</strong></p>
-<p>深度优先算法DFS就是一种Backtracking的实例。</p>
-<p>回溯算法说白了就是穷举法。不过回溯算法使用<strong>剪枝函数</strong>，剪去一些不可能到达最终状态（即答案状态）的节点，从而减少状态空间树节点的生成。</p>
-<p>遍历过当前节点后，为了回溯到上一步，要去掉已经加入到结果list中的当前节点。</p>
-<ul>
-<li>这一步有时候可以用list的append和pop实现</li>
-</ul>
-<p>回溯法是一个既带有<strong>系统性</strong>又带有<strong>跳跃性</strong>的的搜索算法。它在包含问题的所有解的解空间树中，按照深度优先的策略，从根结点出发搜索解空间树。算法搜索至解空间树的任一结点时，<u>总是先判断该结点是否肯定不包含问题的解。如果肯定不包含，则跳过对以该结点为根的子树的系统搜索</u>，逐层向其祖先结点回溯。否则，进入该子树，继续按深度优先的策略进行搜索。</p>
-<ul>
-<li>回溯法在用来求问题的所有解时，要回溯到根，且根结点的所有子树都已被搜索遍才结束。</li>
-<li>而回溯法在用来求问题的任一解时，只要搜索到问题的一个解就可以结束。</li>
-</ul>
-<p>这种以深度优先的方式系统地搜索问题的解的算法称为回溯法，它适用于解一些组合数较大的问题。</p>
-<p><a href="https://blog.csdn.net/crystal6918/article/details/51924665" target="_blank" rel="noopener">https://blog.csdn.net/crystal6918/article/details/51924665</a></p>
-<p>待做的题：</p>
-<ol start="51">
-<li>N-Queens</li>
-<li>N-Queens II</li>
-<li>Combination Sum</li>
-<li>Combination Sum II</li>
-<li>Combination Sum III</li>
-<li>Permutations</li>
-<li>Permutations II</li>
-<li>Subsets</li>
-<li>Subsets II</li>
-<li>Palindrome Partitioning</li>
-</ol>
-<h1 id="Union-Find"><a href="#Union-Find" class="headerlink" title="Union Find"></a>Union Find</h1><p>Union Find 是用来解决动态连通性（Dynamic Connectivity）问题的算法，是并查集的一种数据结构。</p>
-<p>现在学的知识只能告诉我们是否联通，算法第二部分则会给出具体的联通路径。</p>
-<p>API：Application Programming Interface 应用程序编程接口</p>
-<p>等价性（Equivalence Relation）:</p>
-<ol>
-<li>Reflexive: 自反性</li>
-<li>Symmetric：对称性</li>
-<li>Transitive：传递性</li>
-</ol>
-<p>Dynamic Connectivity包含两部分：</p>
-<ol>
-<li>Find Query: 给定两个点，判断他们是否联通</li>
-<li>Union Command: 给定两个点，将他们联通（属于生成过程）</li>
-</ol>
-<h2 id="Quick-Find"><a href="#Quick-Find" class="headerlink" title="Quick Find"></a>Quick Find</h2><p>建立一个长度为n的列表，连通的点在列表中有着相同的元素。</p>
-<p>Find: 当我们想知道p和q是否相通的时候我们只需要判断列表的第q和p位是否具有相同的数字即可。</p>
-<p>Union: 将其中一个数字全部变为另一个。具体变的时候Union(a,b)我们将a位置的数字变为b位置的数字</p>
-<p>Quick-Find 太慢啦！初始化需要跑完n, union操作需要跑完n, find操作需要1。</p>
-<p>复杂度是$n^2$，我们不能接受这样的算法</p>
-<p>Quadratic algorithm does not scale with technology.</p>
-<h2 id="Quick-Union"><a href="#Quick-Union" class="headerlink" title="Quick Union"></a>Quick Union</h2><p>建立一个树结构。还是一个长度为n的列表。每个位置对应的数值表示他的父亲节点是谁。</p>
-<p>Find：只要p和q有相同的根节点就可以了</p>
-<p>Union：将其中一个数字的根节点变成另一个数字的根节点的孩子节点。</p>
-<p>Quick-Union 也不快！初始化需要跑完n, union操作需要跑完n, find操作需要n。</p>
-<h3 id="Weighted-Quick-Union"><a href="#Weighted-Quick-Union" class="headerlink" title="Weighted Quick Union"></a>Weighted Quick Union</h3><p>我们记录树的size，确保每次都将小树连接到大树的上面</p>
-<p>每个根节点的深度不超过logn.初始化需要跑完n, union操作需要跑完logn, find操作需要logn。</p>
-<h3 id="Path-Compression"><a href="#Path-Compression" class="headerlink" title="Path Compression"></a>Path Compression</h3><p>在我们从一个节点回溯找根节点的时候，只要当前停留的节点不是根节点，我们就将这个节点指向根节点。压缩整个树的深度，因为就是深度才带来了时间的长度。</p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>给定N个点，M个Union。在最极端的情况下：</p>
-<table>
-<thead>
-<tr>
-<th>Quick-Find</th>
-<th>Quick-Union</th>
-<th>Weighted QU</th>
-<th>QU+Path CP</th>
-<th>WQU+Path CP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MN</td>
-<td>MN</td>
-<td>N + M*logN</td>
-<td>N + M*logN</td>
-<td>N + M*log*N</td>
-</tr>
-<tr>
-<td>Log* 是迭代对数函数</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Applications——Percolation"><a href="#Applications——Percolation" class="headerlink" title="Applications——Percolation"></a>Applications——Percolation</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" alt=""></p>
-<p>很明显，概率越小越不容易渗透。</p>
-<p>Phase Transition: 在能不能渗透的某个临界值p，图像会变得十分陡峭。</p>
-<p>用蒙特卡洛模拟来找出临界值p：先给一个黑色方块。将其中的黑块一个一个的变成白块，直至渗透。</p>
-<p>将每一个方块用一个点来表示。每次一个点亮的白块会call function 0~4次。<br>在第一行上面建立一个虚拟点，连接了第一行的每一个点。在最后一行下面建立一个虚拟点，连接最后一行的每一个点。反复判断这两个创建的虚拟点之间是否存在通路即可。</p>
-<p>最后答案是0.592746</p>
-<h1 id="Analysis-of-Algorithms"><a href="#Analysis-of-Algorithms" class="headerlink" title="Analysis of Algorithms"></a>Analysis of Algorithms</h1><h2 id="观察法"><a href="#观察法" class="headerlink" title="观察法"></a>观察法</h2><p>Example: 3-Sum: Given N integers, how many triples sum to exactly zero?<br>Brute Force：三层for循环</p>
-<p>很常见的一种画时间T和数据量N的图是log-log图。$T = aN^b$</p>
-<p>满足指数时间增长的算法可以通过一种方法检验：Doubling Hypothesis<br>用2N的时间除于N的时间来获得一个Ratio。如果这个Ratio趋近于一个常数，就说明差不多是指数增长（log(Ratio) = b），也可以画出log-log图然后进行拟合。</p>
-<h2 id="数学法"><a href="#数学法" class="headerlink" title="数学法"></a>数学法</h2><p>我们首先要记住一些基本操作的耗时。比如说分配一个长度为n的向量时间是O(n)，连接两个字符串的时间也是O(n)</p>
-<p>我们一般只算最耗时的那些步骤都被重复了多少次</p>
-<p>所以在k-sum的例子中，最耗时的一步是$C_N^k$这一步，O($n^k$)</p>
-<p>但是这种获得explcit的方式有点太难了，所以一般也不采用这种方法</p>
-<h2 id="Order-Of-Growth"><a href="#Order-Of-Growth" class="headerlink" title="Order Of Growth"></a>Order Of Growth</h2><p>1, log(N), N, Nlog(N), N^2, N^3, 2^N…</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" alt=""></p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" alt=""></p>
-<h3 id="四种记号"><a href="#四种记号" class="headerlink" title="四种记号"></a>四种记号</h3><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" alt=""></p>
-<p><strong>Common mistake：</strong> Interpreting big-Oh as an approximate model. </p>
-<h2 id="内存使用"><a href="#内存使用" class="headerlink" title="内存使用"></a>内存使用</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" alt=""></p>
-<h1 id="Stack-amp-Queue"><a href="#Stack-amp-Queue" class="headerlink" title="Stack &amp; Queue"></a>Stack &amp; Queue</h1><p>Stack: LIFO 后进先出<br>Queue: FIFO 先进先出<br>这两个都可以用linked-list / array来实现</p>
-<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><h3 id="Resizing-Array"><a href="#Resizing-Array" class="headerlink" title="Resizing Array"></a>Resizing Array</h3><p>在Java实现中，我们需要用户给出array的默认长度。所以更灵活的，我们可以用resizing array。但是可变长度的array会有一个问题，那就是我们每向array末尾添加一个元素的时候，我们需要把之前所有元素都复制一遍，连同最新的元素放到一起。这样的话需要的操作为：$1+2+3+…+N = N(N+1)/2$. 所以我们需要一个更简单的方法来做这个事情。</p>
-<h4 id="Repeated-Doubling"><a href="#Repeated-Doubling" class="headerlink" title="Repeated Doubling"></a>Repeated Doubling</h4><p>Q. How to grow array?</p>
-<p>A. If array is full, create a new array of <u>twice the size</u>, and copy items.</p>
-<p>Cost of inserting first N items: $N + (2^1 + 2^2 + 2^3 + … + N) \sim 3N$.</p>
-<p>Q. How to shrink array?</p>
-<p>A. halve size of array s[] when array is one-quarter full.</p>
-<h3 id="Stack-considerations"><a href="#Stack-considerations" class="headerlink" title="Stack considerations"></a>Stack considerations</h3><p>Overflow and underflow: </p>
-<ul>
-<li>Underflow: <u>throw exception</u> if pop from an empty stack.</li>
-<li>Overflow: use <u>resizing array</u> for array implementation.</li>
-</ul>
-<p>Null items:</p>
-<ul>
-<li>We allow null items to be inserted.</li>
-</ul>
-<p>Loitering:</p>
-<ul>
-<li>Holding a reference to an object when it is no longer needed.</li>
-<li>解决方法是每次在pop之后，将不用的元素设为NULL</li>
-</ul>
-<h3 id="Linked-List-or-Resizing-Array"><a href="#Linked-List-or-Resizing-Array" class="headerlink" title="Linked-List or Resizing Array"></a>Linked-List or Resizing Array</h3><p>如果我们希望总时间变少而不在乎单个插入/删除的操作时间的话，选择Resizing-Array。如果我们想避免某一个添加/删除很慢很慢的情况，选择Linked-List，因为每一步操作耗时基本是相同的。</p>
-<h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>Stack里面的push和pop在Queue里面被称为enqueue和dequeue</p>
-<h2 id="Generic"><a href="#Generic" class="headerlink" title="Generic"></a>Generic</h2><p>有时候元素不是数字或字符这么好操作的东西（Generic Type），就有点麻烦。在各个语言里面实现的时候，Liknked-List比Array更容易实现</p>
-<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>在Python里面是用dict来实现</p>
-<p>The <u>MutableMapping</u> abstract base class, from Python’s <strong>collections</strong> module and discussed in the preceding pages, is a valuable tool when implementing a map.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" alt=""></p>
-<h2 id="Hash-Table"><a href="#Hash-Table" class="headerlink" title="Hash Table"></a>Hash Table</h2><p>Python的dict功能是用Hash Table实现的，因此查找才辣么快。</p>
-<p>The novel concept for a hash table is the use of a <u>hash function to map general keys to corresponding indices</u> in a table.</p>
-<p>The <strong>goal</strong> of a hash function, h, is to <u>map each key k to an integer in the range [0,N − 1]</u>, where N is the capacity of the bucket array for a hash table.</p>
-<p>If there are two or more keys with the same hash value, then two different items will be mapped to the same bucket in A. In this case, we say that a collision has occurred.</p>
-<p>We say that a hash function is “good” if it maps the keys in our map so as to sufﬁciently minimize collisions. For practical reasons, we also would like a hash function to be fast and easy to compute.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" alt=""></p>
-<p>The advantage of separating the hash function into two such components is that the hash code portion of that computation is independent of a speciﬁc hash table size. This allows the development of a general hash code for each object that can be used for a hash table of any size; only the compression function depends upon the table size. This is particularly convenient, <u>because the underlying bucket array for a hash table may be dynamically resized</u>, depending on the number of items currently stored in the map.</p>
-<h3 id="几种常见Hash编码方法"><a href="#几种常见Hash编码方法" class="headerlink" title="几种常见Hash编码方法"></a>几种常见Hash编码方法</h3><h4 id="Treating-the-Bit-Representation-as-an-Integer"><a href="#Treating-the-Bit-Representation-as-an-Integer" class="headerlink" title="Treating the Bit Representation as an Integer"></a>Treating the Bit Representation as an Integer</h4><p>Python relies on 32-bit hash codes. If a ﬂoating-point number uses a 64-bit representation, its bits cannot be viewed directly as a hash code.（如果当前信息不超过32-bit，那么他本身就是编码后的hash-code）如果是64-bit可以用32+32/去掉其中一个32/两个32做异或</p>
-<h4 id="Polynomial-Hash-Codes"><a href="#Polynomial-Hash-Codes" class="headerlink" title="Polynomial Hash Codes"></a>Polynomial Hash Codes</h4><p>用Bit-representaion会出现的问题：The summation and exclusive-or hash codes, described above, are not good choices for character strings or other variable-length objects that can be viewed as tuples of the form $(x_0,x_1,…,x_{n-1})$, where <strong>the order of the x i ’s is signiﬁcant</strong>.</p>
-<p>An alternative hash code, which does exactly this, is to choose a nonzero constant, a = 1, and use as a hash code the value:<br>$$<br>x_0a^{n-1}+x_1a^{n-2}+…+x_{n-2}a+x_{n-1}<br>$$<br>By Horner’s rule (see Exercise C-3.50), this polynomial can be computed as:<br>$$<br>x_{n-1}+a(x_{n-2}+a(x_{n-3}+…+a(x_2+a(x_1+ax_0))))<br>$$<br>We have done some experimental studies that suggest that <u>33, 37, 39, and 41</u> are particularly good choices for a when working with character strings that are English words.</p>
-<h4 id="Cyclic-Shift-Hash-Codes"><a href="#Cyclic-Shift-Hash-Codes" class="headerlink" title="Cyclic-Shift Hash Codes"></a>Cyclic-Shift Hash Codes</h4><p>A variant of the polynomial hash code replaces multiplication by a with a cyclic shift of a partial sum by a certain number of bits.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" alt=""></p>
-<p>python里面的hash(x)可以计算一个x的hash值，However, only <u>immutable data types</u> are deemed hashable in Python. This restriction is meant to ensure that a particular object’s hash code remains constant during that object’s lifespan. Among Python’s built-in data types, <u>the immutable int, ﬂoat, str, tuple, and frozenset</u> classes produce robust hash codes via the hash function. Instances of <u>user-deﬁned classes</u> are treated as unhashable by default, with a TypeError raised by the hash function.</p>
-<p>An important rule to obey is that if x == y, then hash(x) == hash(y).</p>
-<h3 id="Compression-Functions"><a href="#Compression-Functions" class="headerlink" title="Compression Functions"></a>Compression Functions</h3><p>mapping the hash code integer into the range [0,N −1]. A good compression function is one that <u>minimizes the number of collisions for a given set of distinct hash codes.</u></p>
-<h1 id="动态规划DP"><a href="#动态规划DP" class="headerlink" title="动态规划DP"></a>动态规划DP</h1><p>分治方法将问题划为互不相交的子问题，递归的求解子问题，再将他们的解组合起来，求出原问题的解。与之相反，动态规划应用于子问题重叠的情况，即不同的子问题有公共的子子问题。在这种情况下，DP对每个子子问题只会求解一次，将其<u>保存在一个表格</u>中。动态规划常用来解决<strong>最优化问题</strong></p>
-<p>动态规划的四个步骤：</p>
-<ol>
-<li>刻画一个最优解的结构特征</li>
-<li>递归的定义最优解的值</li>
-<li>计算最优解的值，通常采用自底向上的方法</li>
-<li>利用计算出的信息构造最优解</li>
-</ol>
-<p>计算一个p*q矩阵和一个q*r矩阵的成绩，需要计算p*q*r个标量乘法</p>
-<p>钢条切割中每一个分段都是相同的，所有长度为k的钢条都属于一个子问题。但是矩阵链乘法每一个长度为k的子链都不相同，不属于一个子问题。</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" alt=""></p>
-<h1 id="Numeric-Optimization"><a href="#Numeric-Optimization" class="headerlink" title="Numeric Optimization"></a>Numeric Optimization</h1><h3 id="Newton’s-Method"><a href="#Newton’s-Method" class="headerlink" title="Newton’s Method"></a>Newton’s Method</h3><p>算法</p>
-<p>优点</p>
-<ul>
-<li>fast convergence (under some condition)</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>Need second order derivative （二阶连续可导，为了防止出现切线斜率为0从而与x轴没有交点，如果此时找到了二阶导数为0的点，就是一个极值点）</li>
-<li>Only 1-D</li>
-</ul>
-<h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><p>算法</p>
-<p>优点</p>
-<ul>
-<li>n-D</li>
-<li>only need first order derivative</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>Speed depends</li>
-<li>Rosenbrock函数效果不太好，出现锯齿状（jag）</li>
-</ul>
-<h3 id="Golden-Section"><a href="#Golden-Section" class="headerlink" title="Golden Section"></a>Golden Section</h3><p>算法</p>
-<p>用secant line (割线) 代替 tangent line（切线）</p>
-<p>优点</p>
-<ul>
-<li>No derivative required</li>
-<li>Fast</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>Only works on U-shape function. (可以考虑将一个大的函数切成几个小的U-shape部分)</li>
-<li>1-D</li>
-</ul>
-<h3 id="Nelder-Mead"><a href="#Nelder-Mead" class="headerlink" title="Nelder-Mead"></a>Nelder-Mead</h3><p>算法</p>
-<p>用一个三角形来估计切线</p>
-<p>优点</p>
-<ul>
-<li>n-D</li>
-</ul>
-<p>缺点</p>
-<ul>
-<li>converge slowly</li>
-</ul>
-<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" alt=""></p>
-<h1 id="数学基础知识"><a href="#数学基础知识" class="headerlink" title="数学基础知识"></a>数学基础知识</h1><p>对称性+传递性无法推出自反性的例子：平行关系</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Others</category>
-        <category>算法</category>
       </categories>
   </entry>
   <entry>
@@ -3265,6 +3054,276 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
       </categories>
   </entry>
   <entry>
+    <title>耶稣说</title>
+    <url>/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/</url>
+    <content><![CDATA[<h1 id="07-03-2020"><a href="#07-03-2020" class="headerlink" title="07/03/2020"></a>07/03/2020</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=O_G5bN5rEEc" target="_blank" rel="noopener">逆境中的抉择——寇紹涵牧師</a></p>
+<p><strong>非尼哈的例子</strong></p>
+<p>巴兰行诡计，让以色列人和米甸人行奸淫。非尼哈在别人都犯错的时候，勇敢的杀死了一个即将行奸淫的人，上帝悦纳这样的行为。</p>
+<p>对一个家庭来说，父亲要如何带领这个家？拒绝婚外情。基督徒的家庭要活在神的圣洁里面。</p>
+<p><strong>喇合的例子</strong></p>
+<p>耶利哥城的喇合。拯救了以利亚的探子，决定救那两个人。庙妓是有地位的，因为有一些宗教的意义。为何她要放弃这种既得利益？</p>
+<p><strong>路得的例子</strong></p>
+<p>跟随他的婆婆，走向神。</p>
+<p><strong>俄巴底的例子</strong></p>
+<p>亚哈的家宰。当耶洗别杀耶和华的先知时，他冒着生命危险，救了100先知。敬畏耶和华——能做出正确的事情。我们也不是跟随潮流走，要顺服圣经的原则。</p>
+<p><strong>小使女的例子</strong></p>
+<p>没有因为自己被掳，就失去了对神的信心。在逆境中持守了信心。他的主人乃缦得了大麻风，建议去找以利沙（撒玛利亚的先知）治疗。不要让处境动摇我们的信心。</p>
+<blockquote>
+<p>使你与人不同的是谁呢？你有什么不是领受的呢？若是领受的，为何自夸，仿佛不是领受的呢？《哥林多前書 4:7》</p>
+</blockquote>
+<p>有几分力，出几分力。</p>
+<p><strong>玛利亚的例子</strong></p>
+<p>莫大的福分，极大的挑战。我心尊主为大，我灵以神我的救主为乐。</p>
+<p><strong>另一个玛利亚的例子</strong></p>
+<p>用极贵重的一整瓶香膏抹耶稣。价格 $\neq$ 价值，抹在耶稣身上之后的价值就体现出来了。在这个时代中，什么都以价格为标签。但很多有价值的事情是无法用价格来衡量。</p>
+<p><strong>不畏工会强权的使徒</strong></p>
+<p>你们见证的人就是我们钉死的人。彼得约翰奉主之名治好了人，但是被人命令闭口不谈。他们能够胜过这个势力。他们被打之后喜乐，活在光中。</p>
+<p>不要害怕付代价，这代价的背后有耶稣为你背书。</p>
+<p><strong>对抗宗教领袖的该犹</strong></p>
+<p>丢特腓，只接待自己想接待的人。</p>
+<blockquote>
+<p>牧师跟着神走，我们跟着牧师走。</p>
+</blockquote>
+<ul>
+<li>这是不对的，我们应该和牧师一起跟神走。</li>
+</ul>
+<blockquote>
+<p>牧师成为弟兄罪恶的遮盖</p>
+</blockquote>
+<ul>
+<li>这是不对的，你的血有啥能力？</li>
+</ul>
+<p>圣经有几卷书是写给个人的，说明这几卷书也有普世教导原则。</p>
+<p><strong>安提帕的例子</strong></p>
+<p>在那个有撒旦座位的教会（皇帝庙）里面，坚守主的道。用自己的生命作见证。作为父亲，要有原则顶在那里，为孩子们做榜样。</p>
+<hr>
+<p>希望以上的这些例子，可以成为我们在世上的榜样。这个世界有什么比耶稣还大，让我们不舍得放下呢？</p>
+]]></content>
+      <categories>
+        <category>Holy</category>
+        <category>耶稣说</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法心得</title>
+    <url>/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>以下知识来自于：</p>
+<ul>
+<li>普林斯顿在Coursera上面的algorithm网课</li>
+<li>python算法书</li>
+<li>算法导论</li>
+</ul>
+<p>希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档</p>
+<a id="more"></a>
+
+
+
+<h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
+<p>“回溯”的具体意思就是<strong>将不可能解或者部分解的候选尽早的舍弃掉</strong></p>
+<p>深度优先算法DFS就是一种Backtracking的实例。</p>
+<p>回溯算法说白了就是穷举法。不过回溯算法使用<strong>剪枝函数</strong>，剪去一些不可能到达最终状态（即答案状态）的节点，从而减少状态空间树节点的生成。</p>
+<p>遍历过当前节点后，为了回溯到上一步，要去掉已经加入到结果list中的当前节点。</p>
+<ul>
+<li>这一步有时候可以用list的append和pop实现</li>
+</ul>
+<p>回溯法是一个既带有<strong>系统性</strong>又带有<strong>跳跃性</strong>的的搜索算法。它在包含问题的所有解的解空间树中，按照深度优先的策略，从根结点出发搜索解空间树。算法搜索至解空间树的任一结点时，<u>总是先判断该结点是否肯定不包含问题的解。如果肯定不包含，则跳过对以该结点为根的子树的系统搜索</u>，逐层向其祖先结点回溯。否则，进入该子树，继续按深度优先的策略进行搜索。</p>
+<ul>
+<li>回溯法在用来求问题的所有解时，要回溯到根，且根结点的所有子树都已被搜索遍才结束。</li>
+<li>而回溯法在用来求问题的任一解时，只要搜索到问题的一个解就可以结束。</li>
+</ul>
+<p>这种以深度优先的方式系统地搜索问题的解的算法称为回溯法，它适用于解一些组合数较大的问题。</p>
+<p><a href="https://blog.csdn.net/crystal6918/article/details/51924665" target="_blank" rel="noopener">https://blog.csdn.net/crystal6918/article/details/51924665</a></p>
+<p>待做的题：</p>
+<ol start="51">
+<li>N-Queens</li>
+<li>N-Queens II</li>
+<li>Combination Sum</li>
+<li>Combination Sum II</li>
+<li>Combination Sum III</li>
+<li>Permutations</li>
+<li>Permutations II</li>
+<li>Subsets</li>
+<li>Subsets II</li>
+<li>Palindrome Partitioning</li>
+</ol>
+<h1 id="Union-Find"><a href="#Union-Find" class="headerlink" title="Union Find"></a>Union Find</h1><p>Union Find 是用来解决动态连通性（Dynamic Connectivity）问题的算法，是并查集的一种数据结构。</p>
+<p>现在学的知识只能告诉我们是否联通，算法第二部分则会给出具体的联通路径。</p>
+<p>API：Application Programming Interface 应用程序编程接口</p>
+<p>等价性（Equivalence Relation）:</p>
+<ol>
+<li>Reflexive: 自反性</li>
+<li>Symmetric：对称性</li>
+<li>Transitive：传递性</li>
+</ol>
+<p>Dynamic Connectivity包含两部分：</p>
+<ol>
+<li>Find Query: 给定两个点，判断他们是否联通</li>
+<li>Union Command: 给定两个点，将他们联通（属于生成过程）</li>
+</ol>
+<h2 id="Quick-Find"><a href="#Quick-Find" class="headerlink" title="Quick Find"></a>Quick Find</h2><p>建立一个长度为n的列表，连通的点在列表中有着相同的元素。</p>
+<p>Find: 当我们想知道p和q是否相通的时候我们只需要判断列表的第q和p位是否具有相同的数字即可。</p>
+<p>Union: 将其中一个数字全部变为另一个。具体变的时候Union(a,b)我们将a位置的数字变为b位置的数字</p>
+<p>Quick-Find 太慢啦！初始化需要跑完n, union操作需要跑完n, find操作需要1。</p>
+<p>复杂度是$n^2$，我们不能接受这样的算法</p>
+<p>Quadratic algorithm does not scale with technology.</p>
+<h2 id="Quick-Union"><a href="#Quick-Union" class="headerlink" title="Quick Union"></a>Quick Union</h2><p>建立一个树结构。还是一个长度为n的列表。每个位置对应的数值表示他的父亲节点是谁。</p>
+<p>Find：只要p和q有相同的根节点就可以了</p>
+<p>Union：将其中一个数字的根节点变成另一个数字的根节点的孩子节点。</p>
+<p>Quick-Union 也不快！初始化需要跑完n, union操作需要跑完n, find操作需要n。</p>
+<h3 id="Weighted-Quick-Union"><a href="#Weighted-Quick-Union" class="headerlink" title="Weighted Quick Union"></a>Weighted Quick Union</h3><p>我们记录树的size，确保每次都将小树连接到大树的上面</p>
+<p>每个根节点的深度不超过logn.初始化需要跑完n, union操作需要跑完logn, find操作需要logn。</p>
+<h3 id="Path-Compression"><a href="#Path-Compression" class="headerlink" title="Path Compression"></a>Path Compression</h3><p>在我们从一个节点回溯找根节点的时候，只要当前停留的节点不是根节点，我们就将这个节点指向根节点。压缩整个树的深度，因为就是深度才带来了时间的长度。</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>给定N个点，M个Union。在最极端的情况下：</p>
+<table>
+<thead>
+<tr>
+<th>Quick-Find</th>
+<th>Quick-Union</th>
+<th>Weighted QU</th>
+<th>QU+Path CP</th>
+<th>WQU+Path CP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MN</td>
+<td>MN</td>
+<td>N + M*logN</td>
+<td>N + M*logN</td>
+<td>N + M*log*N</td>
+</tr>
+<tr>
+<td>Log* 是迭代对数函数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Applications——Percolation"><a href="#Applications——Percolation" class="headerlink" title="Applications——Percolation"></a>Applications——Percolation</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" alt=""></p>
+<p>很明显，概率越小越不容易渗透。</p>
+<p>Phase Transition: 在能不能渗透的某个临界值p，图像会变得十分陡峭。</p>
+<p>用蒙特卡洛模拟来找出临界值p：先给一个黑色方块。将其中的黑块一个一个的变成白块，直至渗透。</p>
+<p>将每一个方块用一个点来表示。每次一个点亮的白块会call function 0~4次。<br>在第一行上面建立一个虚拟点，连接了第一行的每一个点。在最后一行下面建立一个虚拟点，连接最后一行的每一个点。反复判断这两个创建的虚拟点之间是否存在通路即可。</p>
+<p>最后答案是0.592746</p>
+<h1 id="Analysis-of-Algorithms"><a href="#Analysis-of-Algorithms" class="headerlink" title="Analysis of Algorithms"></a>Analysis of Algorithms</h1><h2 id="观察法"><a href="#观察法" class="headerlink" title="观察法"></a>观察法</h2><p>Example: 3-Sum: Given N integers, how many triples sum to exactly zero?<br>Brute Force：三层for循环</p>
+<p>很常见的一种画时间T和数据量N的图是log-log图。$T = aN^b$</p>
+<p>满足指数时间增长的算法可以通过一种方法检验：Doubling Hypothesis<br>用2N的时间除于N的时间来获得一个Ratio。如果这个Ratio趋近于一个常数，就说明差不多是指数增长（log(Ratio) = b），也可以画出log-log图然后进行拟合。</p>
+<h2 id="数学法"><a href="#数学法" class="headerlink" title="数学法"></a>数学法</h2><p>我们首先要记住一些基本操作的耗时。比如说分配一个长度为n的向量时间是O(n)，连接两个字符串的时间也是O(n)</p>
+<p>我们一般只算最耗时的那些步骤都被重复了多少次</p>
+<p>所以在k-sum的例子中，最耗时的一步是$C_N^k$这一步，O($n^k$)</p>
+<p>但是这种获得explcit的方式有点太难了，所以一般也不采用这种方法</p>
+<h2 id="Order-Of-Growth"><a href="#Order-Of-Growth" class="headerlink" title="Order Of Growth"></a>Order Of Growth</h2><p>1, log(N), N, Nlog(N), N^2, N^3, 2^N…</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" alt=""></p>
+<h3 id="四种记号"><a href="#四种记号" class="headerlink" title="四种记号"></a>四种记号</h3><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" alt=""></p>
+<p><strong>Common mistake：</strong> Interpreting big-Oh as an approximate model. </p>
+<h2 id="内存使用"><a href="#内存使用" class="headerlink" title="内存使用"></a>内存使用</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" alt=""></p>
+<h1 id="Stack-amp-Queue"><a href="#Stack-amp-Queue" class="headerlink" title="Stack &amp; Queue"></a>Stack &amp; Queue</h1><p>Stack: LIFO 后进先出<br>Queue: FIFO 先进先出<br>这两个都可以用linked-list / array来实现</p>
+<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><h3 id="Resizing-Array"><a href="#Resizing-Array" class="headerlink" title="Resizing Array"></a>Resizing Array</h3><p>在Java实现中，我们需要用户给出array的默认长度。所以更灵活的，我们可以用resizing array。但是可变长度的array会有一个问题，那就是我们每向array末尾添加一个元素的时候，我们需要把之前所有元素都复制一遍，连同最新的元素放到一起。这样的话需要的操作为：$1+2+3+…+N = N(N+1)/2$. 所以我们需要一个更简单的方法来做这个事情。</p>
+<h4 id="Repeated-Doubling"><a href="#Repeated-Doubling" class="headerlink" title="Repeated Doubling"></a>Repeated Doubling</h4><p>Q. How to grow array?</p>
+<p>A. If array is full, create a new array of <u>twice the size</u>, and copy items.</p>
+<p>Cost of inserting first N items: $N + (2^1 + 2^2 + 2^3 + … + N) \sim 3N$.</p>
+<p>Q. How to shrink array?</p>
+<p>A. halve size of array s[] when array is one-quarter full.</p>
+<h3 id="Stack-considerations"><a href="#Stack-considerations" class="headerlink" title="Stack considerations"></a>Stack considerations</h3><p>Overflow and underflow: </p>
+<ul>
+<li>Underflow: <u>throw exception</u> if pop from an empty stack.</li>
+<li>Overflow: use <u>resizing array</u> for array implementation.</li>
+</ul>
+<p>Null items:</p>
+<ul>
+<li>We allow null items to be inserted.</li>
+</ul>
+<p>Loitering:</p>
+<ul>
+<li>Holding a reference to an object when it is no longer needed.</li>
+<li>解决方法是每次在pop之后，将不用的元素设为NULL</li>
+</ul>
+<h3 id="Linked-List-or-Resizing-Array"><a href="#Linked-List-or-Resizing-Array" class="headerlink" title="Linked-List or Resizing Array"></a>Linked-List or Resizing Array</h3><p>如果我们希望总时间变少而不在乎单个插入/删除的操作时间的话，选择Resizing-Array。如果我们想避免某一个添加/删除很慢很慢的情况，选择Linked-List，因为每一步操作耗时基本是相同的。</p>
+<h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>Stack里面的push和pop在Queue里面被称为enqueue和dequeue</p>
+<h2 id="Generic"><a href="#Generic" class="headerlink" title="Generic"></a>Generic</h2><p>有时候元素不是数字或字符这么好操作的东西（Generic Type），就有点麻烦。在各个语言里面实现的时候，Liknked-List比Array更容易实现</p>
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>在Python里面是用dict来实现</p>
+<p>The <u>MutableMapping</u> abstract base class, from Python’s <strong>collections</strong> module and discussed in the preceding pages, is a valuable tool when implementing a map.</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" alt=""></p>
+<h2 id="Hash-Table"><a href="#Hash-Table" class="headerlink" title="Hash Table"></a>Hash Table</h2><p>Python的dict功能是用Hash Table实现的，因此查找才辣么快。</p>
+<p>The novel concept for a hash table is the use of a <u>hash function to map general keys to corresponding indices</u> in a table.</p>
+<p>The <strong>goal</strong> of a hash function, h, is to <u>map each key k to an integer in the range [0,N − 1]</u>, where N is the capacity of the bucket array for a hash table.</p>
+<p>If there are two or more keys with the same hash value, then two different items will be mapped to the same bucket in A. In this case, we say that a collision has occurred.</p>
+<p>We say that a hash function is “good” if it maps the keys in our map so as to sufﬁciently minimize collisions. For practical reasons, we also would like a hash function to be fast and easy to compute.</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" alt=""></p>
+<p>The advantage of separating the hash function into two such components is that the hash code portion of that computation is independent of a speciﬁc hash table size. This allows the development of a general hash code for each object that can be used for a hash table of any size; only the compression function depends upon the table size. This is particularly convenient, <u>because the underlying bucket array for a hash table may be dynamically resized</u>, depending on the number of items currently stored in the map.</p>
+<h3 id="几种常见Hash编码方法"><a href="#几种常见Hash编码方法" class="headerlink" title="几种常见Hash编码方法"></a>几种常见Hash编码方法</h3><h4 id="Treating-the-Bit-Representation-as-an-Integer"><a href="#Treating-the-Bit-Representation-as-an-Integer" class="headerlink" title="Treating the Bit Representation as an Integer"></a>Treating the Bit Representation as an Integer</h4><p>Python relies on 32-bit hash codes. If a ﬂoating-point number uses a 64-bit representation, its bits cannot be viewed directly as a hash code.（如果当前信息不超过32-bit，那么他本身就是编码后的hash-code）如果是64-bit可以用32+32/去掉其中一个32/两个32做异或</p>
+<h4 id="Polynomial-Hash-Codes"><a href="#Polynomial-Hash-Codes" class="headerlink" title="Polynomial Hash Codes"></a>Polynomial Hash Codes</h4><p>用Bit-representaion会出现的问题：The summation and exclusive-or hash codes, described above, are not good choices for character strings or other variable-length objects that can be viewed as tuples of the form $(x_0,x_1,…,x_{n-1})$, where <strong>the order of the x i ’s is signiﬁcant</strong>.</p>
+<p>An alternative hash code, which does exactly this, is to choose a nonzero constant, a = 1, and use as a hash code the value:<br>$$<br>x_0a^{n-1}+x_1a^{n-2}+…+x_{n-2}a+x_{n-1}<br>$$<br>By Horner’s rule (see Exercise C-3.50), this polynomial can be computed as:<br>$$<br>x_{n-1}+a(x_{n-2}+a(x_{n-3}+…+a(x_2+a(x_1+ax_0))))<br>$$<br>We have done some experimental studies that suggest that <u>33, 37, 39, and 41</u> are particularly good choices for a when working with character strings that are English words.</p>
+<h4 id="Cyclic-Shift-Hash-Codes"><a href="#Cyclic-Shift-Hash-Codes" class="headerlink" title="Cyclic-Shift Hash Codes"></a>Cyclic-Shift Hash Codes</h4><p>A variant of the polynomial hash code replaces multiplication by a with a cyclic shift of a partial sum by a certain number of bits.</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" alt=""></p>
+<p>python里面的hash(x)可以计算一个x的hash值，However, only <u>immutable data types</u> are deemed hashable in Python. This restriction is meant to ensure that a particular object’s hash code remains constant during that object’s lifespan. Among Python’s built-in data types, <u>the immutable int, ﬂoat, str, tuple, and frozenset</u> classes produce robust hash codes via the hash function. Instances of <u>user-deﬁned classes</u> are treated as unhashable by default, with a TypeError raised by the hash function.</p>
+<p>An important rule to obey is that if x == y, then hash(x) == hash(y).</p>
+<h3 id="Compression-Functions"><a href="#Compression-Functions" class="headerlink" title="Compression Functions"></a>Compression Functions</h3><p>mapping the hash code integer into the range [0,N −1]. A good compression function is one that <u>minimizes the number of collisions for a given set of distinct hash codes.</u></p>
+<h1 id="动态规划DP"><a href="#动态规划DP" class="headerlink" title="动态规划DP"></a>动态规划DP</h1><p>分治方法将问题划为互不相交的子问题，递归的求解子问题，再将他们的解组合起来，求出原问题的解。与之相反，动态规划应用于子问题重叠的情况，即不同的子问题有公共的子子问题。在这种情况下，DP对每个子子问题只会求解一次，将其<u>保存在一个表格</u>中。动态规划常用来解决<strong>最优化问题</strong></p>
+<p>动态规划的四个步骤：</p>
+<ol>
+<li>刻画一个最优解的结构特征</li>
+<li>递归的定义最优解的值</li>
+<li>计算最优解的值，通常采用自底向上的方法</li>
+<li>利用计算出的信息构造最优解</li>
+</ol>
+<p>计算一个p*q矩阵和一个q*r矩阵的成绩，需要计算p*q*r个标量乘法</p>
+<p>钢条切割中每一个分段都是相同的，所有长度为k的钢条都属于一个子问题。但是矩阵链乘法每一个长度为k的子链都不相同，不属于一个子问题。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" alt=""></p>
+<h1 id="Numeric-Optimization"><a href="#Numeric-Optimization" class="headerlink" title="Numeric Optimization"></a>Numeric Optimization</h1><h3 id="Newton’s-Method"><a href="#Newton’s-Method" class="headerlink" title="Newton’s Method"></a>Newton’s Method</h3><p>算法</p>
+<p>优点</p>
+<ul>
+<li>fast convergence (under some condition)</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>Need second order derivative （二阶连续可导，为了防止出现切线斜率为0从而与x轴没有交点，如果此时找到了二阶导数为0的点，就是一个极值点）</li>
+<li>Only 1-D</li>
+</ul>
+<h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><p>算法</p>
+<p>优点</p>
+<ul>
+<li>n-D</li>
+<li>only need first order derivative</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>Speed depends</li>
+<li>Rosenbrock函数效果不太好，出现锯齿状（jag）</li>
+</ul>
+<h3 id="Golden-Section"><a href="#Golden-Section" class="headerlink" title="Golden Section"></a>Golden Section</h3><p>算法</p>
+<p>用secant line (割线) 代替 tangent line（切线）</p>
+<p>优点</p>
+<ul>
+<li>No derivative required</li>
+<li>Fast</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>Only works on U-shape function. (可以考虑将一个大的函数切成几个小的U-shape部分)</li>
+<li>1-D</li>
+</ul>
+<h3 id="Nelder-Mead"><a href="#Nelder-Mead" class="headerlink" title="Nelder-Mead"></a>Nelder-Mead</h3><p>算法</p>
+<p>用一个三角形来估计切线</p>
+<p>优点</p>
+<ul>
+<li>n-D</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>converge slowly</li>
+</ul>
+<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" alt=""></p>
+<h1 id="数学基础知识"><a href="#数学基础知识" class="headerlink" title="数学基础知识"></a>数学基础知识</h1><p>对称性+传递性无法推出自反性的例子：平行关系</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Others</category>
+        <category>算法</category>
+      </categories>
+  </entry>
+  <entry>
     <title>统计学习笔记</title>
     <url>/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>记录一下学统计的时候遇到的一些问题</p>
@@ -3358,140 +3417,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Study</category>
         <category>Statistics</category>
         <category>统计学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>聆听音乐答案(第五版)</title>
-    <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己再做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
-<ol>
-<li><a href="https://book.douban.com/review/6404967/" target="_blank" rel="noopener">豆瓣网友(自由民)贡献</a></li>
-<li><a href="http://college.cengage.com/site_engine/#1439083533" target="_blank" rel="noopener">出版社的官方网站</a>（题目不全，但是准）</li>
-</ol>
-<p>音乐部分是来自于喜马拉雅的专辑，大家可以自行搜索。</p>
-<p>下面<strong>含标题的是自己做过并检查一遍的</strong>，不含标题的是直接复制黏贴，属于【没有灵魂的答案】</p>
-<ul>
-<li>有点忧伤…做到练习18的时候才想起来要好好记笔记…</li>
-</ul>
-<a id="more"></a>
-
-<h1 id="答案部分"><a href="#答案部分" class="headerlink" title="答案部分"></a>答案部分</h1><p>1 bbacbaa bacabb bbcbbab</p>
-<p>2 3/4, 2/4, 2/4, 3/4, 2/4, 3/4, 3/4, 2/4, 3/4, 2/4</p>
-<p>3 ccabcacaab</p>
-<p>4 大小小小大 大大小大小</p>
-<p>5 1:14 1:30 1:48 1:56 2:04 2:21 2:37 2:45 2:53 3:10</p>
-<p>6 16,8,8,16,16,8,8,16,16,16</p>
-<p>7 ccaaa adbcb</p>
-<p>8 0:09, 0:12, 0:20, 0:34, 0:39, 0:44, 0:58, 1:02, 1:09, b</p>
-<h3 id="聆听练习9"><a href="#聆听练习9" class="headerlink" title="聆听练习9"></a>聆听练习9</h3><h5 id="关于音色的整理"><a href="#关于音色的整理" class="headerlink" title="关于音色的整理"></a>关于音色的整理</h5><blockquote>
-<p>小号：听了想打人那种。</p>
-<p>法国号：有一种金属共鸣，音域比长号高一点</p>
-<p>长号：音域低一点的小号，音色脏脏的。</p>
-<p>大号：最低音域的铜管。</p>
-<p>大管：最低音域的木管。木管按起来会有咔咔的按键音。大管的共鸣比大号更好，有亮亮的音色。</p>
-<p>长号和法国号的关系有点像单簧管和双簧管。后者音色亮一点/共鸣更好，而前者比较闷。</p>
-<p>有人说单簧管声音更诡异/吓人，双簧管声音像鸭子/鹅。</p>
-<p>长笛——音域宽</p>
-<p>大提琴——音域不高不低，本来想选中提琴，发现没有</p>
-</blockquote>
-<p>【单簧管】—— 开始选了法国号，仔细一听确实沉闷，并且有按键声。</p>
-<p>低音提琴——音域过低</p>
-<p>双簧管——比较刺耳的木管</p>
-<p>【大管】——开始选了单簧管，错在了音域/以及单簧管开始没选</p>
-<p>长号 —— 铜管 &amp; 音域</p>
-<p>【法国号】—— 开始选了大管/排除法选的</p>
-<p>小提琴</p>
-<p>大号—— 沉闷 &amp; 音色</p>
-<h3 id="聆听练习10"><a href="#聆听练习10" class="headerlink" title="聆听练习10"></a>聆听练习10</h3><p>小号 小号 </p>
-<p>低音提琴 单簧管 单簧管</p>
-<p>大管 单簧管</p>
-<p>长笛 长笛</p>
-<p>法国号 长笛 长笛</p>
-<p>双簧管 双簧管</p>
-<p>大提琴 双簧管 双簧管</p>
-<p>小提琴 中提琴 小提琴</p>
-<blockquote>
-<p>2 6 开始搞混了单双簧管… 感觉还是沉闷和清亮的区别</p>
-<p>7 8 搞混了大中提琴 还是不知道咋区分</p>
-</blockquote>
-<h3 id="聆听练习11"><a href="#聆听练习11" class="headerlink" title="聆听练习11"></a>聆听练习11</h3><p>大管 长笛</p>
-<p>大号 法国号 小号</p>
-<p>长笛 单簧管</p>
-<p>小号 长号</p>
-<p>小提琴 中提琴 大提琴</p>
-<blockquote>
-<p>2 4 搞混了大号和长号，仔细一听还是音域的区别，2更低一点</p>
-</blockquote>
-<p>长笛 大管</p>
-<p>长笛 大管 </p>
-<p>小号 大号</p>
-<p>小提琴 大提琴</p>
-<p>12 单，复，单，主，单，复，复，单，复，主。</p>
-<p>13 A,B,C,B,A 曲式结构为：ABCBA<br>     A,B 曲式结构为：AB<br>     A,B,A 曲式结构为：ABA<br>     A,B,A 曲式结构为：ABA<br>     A,B 曲式结构为：AB</p>
-<p>14 复，圣，复，圣，复，圣，复，圣，复</p>
-<p>15 0:46， 1:09， 1:33， 1:40， bbabcc</p>
-<p>16 bcaca ccaab</p>
-<p>17 bcaaa bcaab</p>
-<h3 id="聆听练习18"><a href="#聆听练习18" class="headerlink" title="聆听练习18"></a>聆听练习18</h3><p>斯特罗齐《我想死》BBAAB BABBB</p>
-<blockquote>
-<p>1 应该是1765的走势</p>
-<p>2 我觉得有三个，1-5-6-5 但是没这个选项，所以只好选了四个。</p>
-<ul>
-<li>喔！原来是中途出现了一个4</li>
-</ul>
-<p>5 出现了一个 17645的走势（为啥多了一拍）</p>
-</blockquote>
-<h3 id="聆听练习19"><a href="#聆听练习19" class="headerlink" title="聆听练习19"></a>聆听练习19</h3><p>珀塞尔《当我命丧黄泉》BAAAB DDBCB</p>
-<blockquote>
-<p>6 这题开始蒙了，怎么也没听出来是几遍，女声一出来确实听不见低音了。后来往上翻了翻才发现原来有固定低音的乐谱。走势应该是先从6逐个半音降到3然后一个123结束。因为前面那一通降感觉不是规律的速度，所以只听123就好了。每听到一个123，就相当于走了一遍</p>
-<p>7 我认为唱了三次那一段旋律…可惜没有这个答案。固定低音部分，听到了四个123。</p>
-<p>10 </p>
-<ul>
-<li>Bessie Smith <a href="https://www.youtube.com/watch?v=dYsGYWQT690" target="_blank" rel="noopener">《Lost Your Head Blues》</a> 没听出来有固定低音….</li>
-<li>Eminem <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w" target="_blank" rel="noopener">《The Real Slim Shady》</a> 走势应该是 (6)712 21 17 36</li>
-</ul>
-</blockquote>
-<h3 id="聆听练习20"><a href="#聆听练习20" class="headerlink" title="聆听练习20"></a>聆听练习20</h3><p>维瓦尔第《春》CAABB ABCBC</p>
-<h3 id="聆听练习21"><a href="#聆听练习21" class="headerlink" title="聆听练习21"></a>聆听练习21</h3><p>巴赫 《G小调管风琴赋格曲》 BAAAB CABDA</p>
-<blockquote>
-<p>中间主题陈述的时候有一段从小调变成大调，难以听出</p>
-</blockquote>
-<h3 id="聆听练习22"><a href="#聆听练习22" class="headerlink" title="聆听练习22"></a>聆听练习22</h3><p>巴赫 《醒来吧，一个声音在召唤》 BBDCA ABABD</p>
-<blockquote>
-<p>感觉有的部分确实加了木管？但是听不太清楚，感觉没有一个完整的声部</p>
-<p>这个歌Spotify上没找到一模一样的。很多弦乐版的拖拖拉拉，根本不想醒来。</p>
-<p>两个名字：Awake, a voice is calling / Sleepers, awake</p>
-</blockquote>
-<h3 id="聆听练习23"><a href="#聆听练习23" class="headerlink" title="聆听练习23"></a>聆听练习23</h3><p>亨德尔 《弥赛亚》“哈利路亚”合唱  BACCC CBBBD</p>
-<p><strong>下一个该做这里了</strong></p>
-<p>24 bcada bbaad</p>
-<p>25 acbab acabc</p>
-<p>26 babac acccd</p>
-<p>27 cbbac abcaa</p>
-<p>28 dcbbc abbab</p>
-<p>29 cacab aabcb</p>
-<p>30 cbbbc caabd</p>
-<p>31 MBBMBMMMBB</p>
-<p>32 baaaa babca</p>
-<p>33 ccaaa bbaaa</p>
-<p>34 aadbc abbca</p>
-<p>35 abcaa cbcbb</p>
-<p>36 bbdbb bcaba</p>
-<p>37 caaaa bbbdd</p>
-<p>38 cbbab dcaaa</p>
-<p>39 ccabb cabaa</p>
-<p>40 bbbab bbcbb</p>
-<p>41 bbbaa cdaba</p>
-<p>42 是是是否否否是否是 更多</p>
-<p>43 ehbgaffdac</p>
-<p>44 dabbb cbaca</p>
-<p>45 caaac abbab</p>
-<p>46 abbca abcab</p>
-<p>47 bbaba bbaaa</p>
-]]></content>
-      <categories>
-        <category>古典音乐</category>
-        <category>聆听音乐</category>
       </categories>
   </entry>
   <entry>
@@ -3627,6 +3552,140 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Holy</category>
         <category>References</category>
         <category>郭振游门徒训练</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>聆听音乐答案(第五版)</title>
+    <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己再做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
+<ol>
+<li><a href="https://book.douban.com/review/6404967/" target="_blank" rel="noopener">豆瓣网友(自由民)贡献</a></li>
+<li><a href="http://college.cengage.com/site_engine/#1439083533" target="_blank" rel="noopener">出版社的官方网站</a>（题目不全，但是准）</li>
+</ol>
+<p>音乐部分是来自于喜马拉雅的专辑，大家可以自行搜索。</p>
+<p>下面<strong>含标题的是自己做过并检查一遍的</strong>，不含标题的是直接复制黏贴，属于【没有灵魂的答案】</p>
+<ul>
+<li>有点忧伤…做到练习18的时候才想起来要好好记笔记…</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="答案部分"><a href="#答案部分" class="headerlink" title="答案部分"></a>答案部分</h1><p>1 bbacbaa bacabb bbcbbab</p>
+<p>2 3/4, 2/4, 2/4, 3/4, 2/4, 3/4, 3/4, 2/4, 3/4, 2/4</p>
+<p>3 ccabcacaab</p>
+<p>4 大小小小大 大大小大小</p>
+<p>5 1:14 1:30 1:48 1:56 2:04 2:21 2:37 2:45 2:53 3:10</p>
+<p>6 16,8,8,16,16,8,8,16,16,16</p>
+<p>7 ccaaa adbcb</p>
+<p>8 0:09, 0:12, 0:20, 0:34, 0:39, 0:44, 0:58, 1:02, 1:09, b</p>
+<h3 id="聆听练习9"><a href="#聆听练习9" class="headerlink" title="聆听练习9"></a>聆听练习9</h3><h5 id="关于音色的整理"><a href="#关于音色的整理" class="headerlink" title="关于音色的整理"></a>关于音色的整理</h5><blockquote>
+<p>小号：听了想打人那种。</p>
+<p>法国号：有一种金属共鸣，音域比长号高一点</p>
+<p>长号：音域低一点的小号，音色脏脏的。</p>
+<p>大号：最低音域的铜管。</p>
+<p>大管：最低音域的木管。木管按起来会有咔咔的按键音。大管的共鸣比大号更好，有亮亮的音色。</p>
+<p>长号和法国号的关系有点像单簧管和双簧管。后者音色亮一点/共鸣更好，而前者比较闷。</p>
+<p>有人说单簧管声音更诡异/吓人，双簧管声音像鸭子/鹅。</p>
+<p>长笛——音域宽</p>
+<p>大提琴——音域不高不低，本来想选中提琴，发现没有</p>
+</blockquote>
+<p>【单簧管】—— 开始选了法国号，仔细一听确实沉闷，并且有按键声。</p>
+<p>低音提琴——音域过低</p>
+<p>双簧管——比较刺耳的木管</p>
+<p>【大管】——开始选了单簧管，错在了音域/以及单簧管开始没选</p>
+<p>长号 —— 铜管 &amp; 音域</p>
+<p>【法国号】—— 开始选了大管/排除法选的</p>
+<p>小提琴</p>
+<p>大号—— 沉闷 &amp; 音色</p>
+<h3 id="聆听练习10"><a href="#聆听练习10" class="headerlink" title="聆听练习10"></a>聆听练习10</h3><p>小号 小号 </p>
+<p>低音提琴 单簧管 单簧管</p>
+<p>大管 单簧管</p>
+<p>长笛 长笛</p>
+<p>法国号 长笛 长笛</p>
+<p>双簧管 双簧管</p>
+<p>大提琴 双簧管 双簧管</p>
+<p>小提琴 中提琴 小提琴</p>
+<blockquote>
+<p>2 6 开始搞混了单双簧管… 感觉还是沉闷和清亮的区别</p>
+<p>7 8 搞混了大中提琴 还是不知道咋区分</p>
+</blockquote>
+<h3 id="聆听练习11"><a href="#聆听练习11" class="headerlink" title="聆听练习11"></a>聆听练习11</h3><p>大管 长笛</p>
+<p>大号 法国号 小号</p>
+<p>长笛 单簧管</p>
+<p>小号 长号</p>
+<p>小提琴 中提琴 大提琴</p>
+<blockquote>
+<p>2 4 搞混了大号和长号，仔细一听还是音域的区别，2更低一点</p>
+</blockquote>
+<p>长笛 大管</p>
+<p>长笛 大管 </p>
+<p>小号 大号</p>
+<p>小提琴 大提琴</p>
+<p>12 单，复，单，主，单，复，复，单，复，主。</p>
+<p>13 A,B,C,B,A 曲式结构为：ABCBA<br>     A,B 曲式结构为：AB<br>     A,B,A 曲式结构为：ABA<br>     A,B,A 曲式结构为：ABA<br>     A,B 曲式结构为：AB</p>
+<p>14 复，圣，复，圣，复，圣，复，圣，复</p>
+<p>15 0:46， 1:09， 1:33， 1:40， bbabcc</p>
+<p>16 bcaca ccaab</p>
+<p>17 bcaaa bcaab</p>
+<h3 id="聆听练习18"><a href="#聆听练习18" class="headerlink" title="聆听练习18"></a>聆听练习18</h3><p>斯特罗齐《我想死》BBAAB BABBB</p>
+<blockquote>
+<p>1 应该是1765的走势</p>
+<p>2 我觉得有三个，1-5-6-5 但是没这个选项，所以只好选了四个。</p>
+<ul>
+<li>喔！原来是中途出现了一个4</li>
+</ul>
+<p>5 出现了一个 17645的走势（为啥多了一拍）</p>
+</blockquote>
+<h3 id="聆听练习19"><a href="#聆听练习19" class="headerlink" title="聆听练习19"></a>聆听练习19</h3><p>珀塞尔《当我命丧黄泉》BAAAB DDBCB</p>
+<blockquote>
+<p>6 这题开始蒙了，怎么也没听出来是几遍，女声一出来确实听不见低音了。后来往上翻了翻才发现原来有固定低音的乐谱。走势应该是先从6逐个半音降到3然后一个123结束。因为前面那一通降感觉不是规律的速度，所以只听123就好了。每听到一个123，就相当于走了一遍</p>
+<p>7 我认为唱了三次那一段旋律…可惜没有这个答案。固定低音部分，听到了四个123。</p>
+<p>10 </p>
+<ul>
+<li>Bessie Smith <a href="https://www.youtube.com/watch?v=dYsGYWQT690" target="_blank" rel="noopener">《Lost Your Head Blues》</a> 没听出来有固定低音….</li>
+<li>Eminem <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w" target="_blank" rel="noopener">《The Real Slim Shady》</a> 走势应该是 (6)712 21 17 36</li>
+</ul>
+</blockquote>
+<h3 id="聆听练习20"><a href="#聆听练习20" class="headerlink" title="聆听练习20"></a>聆听练习20</h3><p>维瓦尔第《春》CAABB ABCBC</p>
+<h3 id="聆听练习21"><a href="#聆听练习21" class="headerlink" title="聆听练习21"></a>聆听练习21</h3><p>巴赫 《G小调管风琴赋格曲》 BAAAB CABDA</p>
+<blockquote>
+<p>中间主题陈述的时候有一段从小调变成大调，难以听出</p>
+</blockquote>
+<h3 id="聆听练习22"><a href="#聆听练习22" class="headerlink" title="聆听练习22"></a>聆听练习22</h3><p>巴赫 《醒来吧，一个声音在召唤》 BBDCA ABABD</p>
+<blockquote>
+<p>感觉有的部分确实加了木管？但是听不太清楚，感觉没有一个完整的声部</p>
+<p>这个歌Spotify上没找到一模一样的。很多弦乐版的拖拖拉拉，根本不想醒来。</p>
+<p>两个名字：Awake, a voice is calling / Sleepers, awake</p>
+</blockquote>
+<h3 id="聆听练习23"><a href="#聆听练习23" class="headerlink" title="聆听练习23"></a>聆听练习23</h3><p>亨德尔 《弥赛亚》“哈利路亚”合唱  BACCC CBBBD</p>
+<p><strong>下一个该做这里了</strong></p>
+<p>24 bcada bbaad</p>
+<p>25 acbab acabc</p>
+<p>26 babac acccd</p>
+<p>27 cbbac abcaa</p>
+<p>28 dcbbc abbab</p>
+<p>29 cacab aabcb</p>
+<p>30 cbbbc caabd</p>
+<p>31 MBBMBMMMBB</p>
+<p>32 baaaa babca</p>
+<p>33 ccaaa bbaaa</p>
+<p>34 aadbc abbca</p>
+<p>35 abcaa cbcbb</p>
+<p>36 bbdbb bcaba</p>
+<p>37 caaaa bbbdd</p>
+<p>38 cbbab dcaaa</p>
+<p>39 ccabb cabaa</p>
+<p>40 bbbab bbcbb</p>
+<p>41 bbbaa cdaba</p>
+<p>42 是是是否否否是否是 更多</p>
+<p>43 ehbgaffdac</p>
+<p>44 dabbb cbaca</p>
+<p>45 caaac abbab</p>
+<p>46 abbca abcab</p>
+<p>47 bbaba bbaaa</p>
+]]></content>
+      <categories>
+        <category>古典音乐</category>
+        <category>聆听音乐</category>
       </categories>
   </entry>
 </search>
