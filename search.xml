@@ -688,93 +688,6 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
       </categories>
   </entry>
   <entry>
-    <title>Matlab心得</title>
-    <url>/2020/07/02/Matlab%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
-<a id="more"></a>
-
-
-
-<h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
-<li>读入文件：load</li>
-<li>numel(A) = prod(size(A)) 返回A中元素个数</li>
-</ul>
-<p>pathtool 添加路径</p>
-<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br>注释用百分号% 代替#<br>「1<del>=2」表示1不等于2 用</del>代替叹号<br>或者|| 和&amp;&amp; 异或xor()<br>a=pi在后面加一个;冒号可以抑制打印<br>disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br>format short/long 可以在打印东西之前写出来 改变打印的位数</p>
-<p>矩阵生成</p>
-<ul>
-<li>用中括号括起来，用分号按行输入</li>
-<li>ones(m,n) 生成一个m*n的矩阵，元素全为1.  zeros同理</li>
-<li>eye(n)  生成n维单位矩阵</li>
-</ul>
-<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br>randn() 生成标准正态</p>
-<p>clc清屏<br>a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br>hist(w,方格数)生成密度图像<br>size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br>length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br>who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br>选择一个向量的前十位：v=priceY(1:10)<br>save hello.mat v: 把数据v存为hello.mat文件<br>a([1 3],:) 矩阵第一行和第三行所有元素<br>A=[A,[1;2;3]]：矩阵A右侧加上一列123<br>A(:)将A元素变成一个列向量输出<br>b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br>a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br>·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
-<p>max()返回最大值，</p>
-<ul>
-<li>可是如果[v,c]=max(a) 那么v是最大值，c是最大值的index</li>
-<li>如果对矩阵作用max，会返回每一列的最大值</li>
-</ul>
-<p>find(a&lt;3) 返回a向量中小于3的index<br>magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br>提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br>prod() 连乘<br>floor&amp;ceil地板和天花板函数<br>max(a,[],1|2) 按列|行来取矩阵a的最大值<br>sum(a,1|2) 按列|行进行求和<br>取整个矩阵的最大值：max(max(A))或者max(A(:))</p>
-<p>可以用逗号连接命令或者函数调用，会逐个运行。用冒号连接则不会显示结果</p>
-<p>循环：for i = 1:10, v(i)=2^i; end. while和if也要和end连用。if也没有括号</p>
-<p>exit和quit都可以退出octave</p>
-<p>addpath()添加新路径</p>
-<ul>
-<li>取出向量的第五位到最后一位：A(5:end) 注意这个end</li>
-</ul>
-<ul>
-<li>rng(512) 等同于R里面的set.seed(512)</li>
-<li>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</li>
-<li><a href="https://cn.mathworks.com/help/matlab/ref/table.html" target="_blank" rel="noopener">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName) </li>
-<li>fminunc 返回函数最小值（维数大于等于2）</li>
-</ul>
-<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
-<li>遍历一个未知大小的矩阵/向量：for i = 1:numel(z)</li>
-</ul>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
-<li>a(2,:)=[] 删除某一行/列</li>
-<li>reshape(data,nrow,ncol) 变形矩阵</li>
-<li>a(: , k:end) end代表最后</li>
-<li>a=sum(A) %列求和<br>b=sum(A,2) %行求和<br>c=sum(A(:)) %矩阵求和</li>
-<li></li>
-</ul>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
-<p>intlinprog - Mixed-integer linear programming (MILP) 混合整数线性规划问题</p>
-<h1 id="画图："><a href="#画图：" class="headerlink" title="画图："></a>画图：</h1><ul>
-<li>figure; open a new figure window</li>
-<li>flipud(a) 将矩阵a上下翻转</li>
-<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。 </li>
-<li>xlabel(‘name’)</li>
-<li>plot(x,y,’r’)红色</li>
-<li>legend(‘1’’2’)加图例</li>
-<li>title(‘标题’)</li>
-<li>print -dpng ‘name.png’</li>
-<li>figure(1);plot();figure(2);plot() 可以同时分别画出来两张图</li>
-<li>subplot(1,2,1);plot() 将图像空间分成1*2，现在去画第一个</li>
-<li>axis([横坐标最小值 横坐标最大值 纵坐标最小值 纵坐标最大值])</li>
-<li>clf清除所有图</li>
-<li>imagesc(a) 将矩阵a用颜色画出来</li>
-<li>colorbar 在右侧添上一个颜色条</li>
-<li>colormap gray将图变成灰色</li>
-</ul>
-<h1 id="操作命令"><a href="#操作命令" class="headerlink" title="操作命令"></a>操作命令</h1><ul>
-<li>ctrl+c : 终止当前程序</li>
-</ul>
-<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
-<li>SVM: liblinear/libsvm</li>
-</ul>
-<h1 id="文档发布"><a href="#文档发布" class="headerlink" title="文档发布"></a>文档发布</h1><p><a href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html" target="_blank" rel="noopener">官方帮助</a></p>
-<ul>
-<li></li>
-</ul>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Matlab</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Linux心得</title>
     <url>/2020/07/02/Linux%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
@@ -893,6 +806,93 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
         <category>Study</category>
         <category>Coding</category>
         <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Matlab心得</title>
+    <url>/2020/07/02/Matlab%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
+<a id="more"></a>
+
+
+
+<h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
+<li>读入文件：load</li>
+<li>numel(A) = prod(size(A)) 返回A中元素个数</li>
+</ul>
+<p>pathtool 添加路径</p>
+<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br>注释用百分号% 代替#<br>「1<del>=2」表示1不等于2 用</del>代替叹号<br>或者|| 和&amp;&amp; 异或xor()<br>a=pi在后面加一个;冒号可以抑制打印<br>disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br>format short/long 可以在打印东西之前写出来 改变打印的位数</p>
+<p>矩阵生成</p>
+<ul>
+<li>用中括号括起来，用分号按行输入</li>
+<li>ones(m,n) 生成一个m*n的矩阵，元素全为1.  zeros同理</li>
+<li>eye(n)  生成n维单位矩阵</li>
+</ul>
+<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br>randn() 生成标准正态</p>
+<p>clc清屏<br>a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br>hist(w,方格数)生成密度图像<br>size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br>length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br>who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br>选择一个向量的前十位：v=priceY(1:10)<br>save hello.mat v: 把数据v存为hello.mat文件<br>a([1 3],:) 矩阵第一行和第三行所有元素<br>A=[A,[1;2;3]]：矩阵A右侧加上一列123<br>A(:)将A元素变成一个列向量输出<br>b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br>a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br>·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
+<p>max()返回最大值，</p>
+<ul>
+<li>可是如果[v,c]=max(a) 那么v是最大值，c是最大值的index</li>
+<li>如果对矩阵作用max，会返回每一列的最大值</li>
+</ul>
+<p>find(a&lt;3) 返回a向量中小于3的index<br>magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br>提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br>prod() 连乘<br>floor&amp;ceil地板和天花板函数<br>max(a,[],1|2) 按列|行来取矩阵a的最大值<br>sum(a,1|2) 按列|行进行求和<br>取整个矩阵的最大值：max(max(A))或者max(A(:))</p>
+<p>可以用逗号连接命令或者函数调用，会逐个运行。用冒号连接则不会显示结果</p>
+<p>循环：for i = 1:10, v(i)=2^i; end. while和if也要和end连用。if也没有括号</p>
+<p>exit和quit都可以退出octave</p>
+<p>addpath()添加新路径</p>
+<ul>
+<li>取出向量的第五位到最后一位：A(5:end) 注意这个end</li>
+</ul>
+<ul>
+<li>rng(512) 等同于R里面的set.seed(512)</li>
+<li>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</li>
+<li><a href="https://cn.mathworks.com/help/matlab/ref/table.html" target="_blank" rel="noopener">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName) </li>
+<li>fminunc 返回函数最小值（维数大于等于2）</li>
+</ul>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
+<li>遍历一个未知大小的矩阵/向量：for i = 1:numel(z)</li>
+</ul>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
+<li>a(2,:)=[] 删除某一行/列</li>
+<li>reshape(data,nrow,ncol) 变形矩阵</li>
+<li>a(: , k:end) end代表最后</li>
+<li>a=sum(A) %列求和<br>b=sum(A,2) %行求和<br>c=sum(A(:)) %矩阵求和</li>
+<li></li>
+</ul>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
+<p>intlinprog - Mixed-integer linear programming (MILP) 混合整数线性规划问题</p>
+<h1 id="画图："><a href="#画图：" class="headerlink" title="画图："></a>画图：</h1><ul>
+<li>figure; open a new figure window</li>
+<li>flipud(a) 将矩阵a上下翻转</li>
+<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。 </li>
+<li>xlabel(‘name’)</li>
+<li>plot(x,y,’r’)红色</li>
+<li>legend(‘1’’2’)加图例</li>
+<li>title(‘标题’)</li>
+<li>print -dpng ‘name.png’</li>
+<li>figure(1);plot();figure(2);plot() 可以同时分别画出来两张图</li>
+<li>subplot(1,2,1);plot() 将图像空间分成1*2，现在去画第一个</li>
+<li>axis([横坐标最小值 横坐标最大值 纵坐标最小值 纵坐标最大值])</li>
+<li>clf清除所有图</li>
+<li>imagesc(a) 将矩阵a用颜色画出来</li>
+<li>colorbar 在右侧添上一个颜色条</li>
+<li>colormap gray将图变成灰色</li>
+</ul>
+<h1 id="操作命令"><a href="#操作命令" class="headerlink" title="操作命令"></a>操作命令</h1><ul>
+<li>ctrl+c : 终止当前程序</li>
+</ul>
+<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
+<li>SVM: liblinear/libsvm</li>
+</ul>
+<h1 id="文档发布"><a href="#文档发布" class="headerlink" title="文档发布"></a>文档发布</h1><p><a href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html" target="_blank" rel="noopener">官方帮助</a></p>
+<ul>
+<li></li>
+</ul>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Matlab</category>
       </categories>
   </entry>
   <entry>
@@ -1361,6 +1361,284 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
         <category>Study</category>
         <category>Coding</category>
         <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>SQL心得</title>
+    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
+<a id="more"></a>
+
+
+
+<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
+<li>拿到某一列最大值的那一行数据</li>
+</ul>
+<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
+<li><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum" target="_blank" rel="noopener">首字母是元音</a><ul>
+<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
+<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
+</ul>
+</li>
+</ol>
+<p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-1/problem" target="_blank" rel="noopener">打印小星星</a></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="built_in">number</span> = <span class="number">21</span>; <span class="comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">repeat</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span> - <span class="number">1</span>) <span class="keyword">from</span> information_schema.tables<span class="comment">/*内置table可供遍历*/</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @COUNTER <span class="built_in">INT</span> = <span class="number">20</span>;</span><br><span class="line">WHILE @COUNTER &gt;= 0</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    PRINT <span class="keyword">REPLICATE</span>(<span class="string">'* '</span>, @COUNTER)</span><br><span class="line">    <span class="keyword">SET</span> @COUNTER = @COUNTER - <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<li>Statement always end in a semi-colon;</li>
+<li>注释一般用/**/</li>
+<li>Command 一般都用大写来表示</li>
+<li>character在这里面被称为TEXT：（四种常见格式：INTEGER, TEXT, DATE, REAL）</li>
+<li>missing value 用 NULL 表示</li>
+<li>Line breaks don’t mean anything specific in SQL. We could write this entire query in one line, and it would run just fine.</li>
+<li><code>AS</code> is a keyword in SQL that allows you to <em>rename</em> a column or table using an alias. 跟sas的label一样，只改变输出不改变原数据</li>
+<li><code>DISTINCT</code> is used to return unique values in the output. It filters out all duplicate values in the specified column(s).</li>
+<li>判断等号的方式就是一个等于号</li>
+<li>FROM some_table a 可以用a来指代这个table</li>
+<li>如果没有数据的时候要返回NULL 可以用双重SELECT 也可以把UNION SELECT NULL放在语句中</li>
+<li>DROP TABLE xxx 彻底删除数据库</li>
+<li>IN/NOT IN 判断属于情况</li>
+<li>DELETE可以直接删除某一行观测值</li>
+<li>关于时间的函数：<strong>TO_DAYS(wt1.DATE)</strong> return the number of days between from year 0 to date DATE, <strong>subdate</strong>(w1.Date, k)可以把日期往前调k天</li>
+<li>mod(id,2)=0 偶数 还可以用id % 2 =0</li>
+</ul>
+<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
+<ul>
+<li>任意两行都不具有相同的主键值；</li>
+<li>每一行都必须具有一个主键值（主键列不允许NULL值）；</li>
+<li>主键列中的值不允许修改或更新；</li>
+<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）。</li>
+</ul>
+<p>注释用#或者/**/</p>
+<p>不等于可以用&lt;&gt;</p>
+<p>Between and 是包含一个闭集</p>
+<p>在SELECT语句中，子查询总是从内向外处理。在处理上面的SELECT语句时，DBMS实际上执行了两个操作。</p>
+<p>作为子查询的SELECT语句只能查询单个列。企图检索多个列将返回错误。</p>
+<p>if(判断，如果真，如果假)</p>
+<p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
+<p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
+<p>information_schema.tables 是内置的一个table，有61行</p>
+<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
+<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
+age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
+<li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
+<li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
+<li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
+<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
+<li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
+<li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
+<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
+<li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
+<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
+<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
+<li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
+<li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
+<li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
+</ul>
+<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
+<ul>
+<li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
+<li>唯一约束列可包含NULL值。 </li>
+<li>唯一约束列可修改或更新。 </li>
+<li>唯一约束列的值可重复使用。 </li>
+<li>与主键不一样，唯一约束不能用来定义外键。</li>
+</ul>
+<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
+<ul>
+<li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
+<li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
+<li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
+<li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
+<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
+<li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
+<li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
+<li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
+<li>可以用AND/OR 来连接多个condition</li>
+<li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
+<li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
+<li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
+<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
+<li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
+<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
+<li>COUNT(1) 可以辅助分组计数</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> Country <span class="keyword">IN</span> (<span class="string">'Germany'</span>,<span class="string">'UK'</span>); <span class="comment">#IN 可以从多个元素中找东西</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
+<p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
+<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
+<p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">50</span> <span class="keyword">PERCENT</span> * <span class="keyword">FROM</span> Customers; <span class="comment">#可以选出前50%的数据</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
+<p>‘+’ 或者|| 可以用来拼接字符</p>
+<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
+<p>LEFT/RIGHT 返回最左（右）面的字符</p>
+<p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
+<p>PI()返回圆周率</p>
+<p>GRESTEST 返回最大值</p>
+<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
+<li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
+<li>SUM/MAX/MIN/AVG/ROUND</li>
+<li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
+<li>在用于文本数据时，MAX()返回按该列排序后的最后一行。MAX()函数忽略列值为NULL的行。</li>
+<li>如果指定列名，则DISTINCT只能用于COUNT()。DISTINCT不能用于COUNT(*)。类似地，DISTINCT必须使用列名，不能用于计算或表达式。</li>
+<li>GROUP BY 按照某一指标分类。后面可以接数字，表示按照SELECT语句中第几个column来分组</li>
+<li>When we want to limit the results of a query based on an aggregate property, use <code>HAVING</code>. <code>HAVING</code> statement always comes after <code>GROUP BY</code>, but before <code>ORDER BY</code> and <code>LIMIT</code>. 事实上，目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是，WHERE过滤行，而HAVING过滤分组。</li>
+<li>在指定别名以包含某个聚集函数的结果时，不应该使用表中实际的列名。虽然这样做也算合法，但许多SQL实现不支持，可能会产生模糊的 错误消息。</li>
+</ul>
+<p>GROUP BY子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组。</p>
+<p>GROUP BY子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在GROUP BY子 句中指定相同的表达式。不能使用别名。</p>
+<p>大多数SQL实现不允许GROUP BY列带有长度可变的数据类型</p>
+<p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
+<p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
+<p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
+<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
+<p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
+<p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
+<p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
+<p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
+<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
+<p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
+<p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
+<p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
+<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
+<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
+<li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
+<li>CROSS JOIN 返回所有可能种排列组合</li>
+<li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
+<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
+</ul>
+<p>##Constrains</p>
+<p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
+<ul>
+<li><p>CREATE TABLE celebs (</p>
+<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
+</li>
+<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
+</li>
+<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
+</li>
+<li><p><code>NOT NULL</code> columns must have a value. </p>
+</li>
+<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
+</li>
+<li></li>
+</ul>
+<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
+<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
+<ul>
+<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
+<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
+AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
+       dep_day_of_week,
+        dep_date,
+        SUM(distance) AS flight_distance
+   FROM flights
+  GROUP BY 1,2,3
+) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
+</ul>
+<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
+<ol>
+<li>A row is processed in the outer query. </li>
+<li>Then, for that particular row in the outer query, the subquery is executed.</li>
+</ol>
+<ul>
+<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
+</ul>
+<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
+<ul>
+<li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
+<li>INTERSECT 连接两个SELECT，只包含相同的行</li>
+<li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
+</ul>
+<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
+<li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
+<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
+</ul>
+<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
+<ol>
+<li>Date: YYYY-MM-DD</li>
+<li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
+</ol>
+<ul>
+<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
+</li>
+<li><p>YEAR(xxx)来返回年份</p>
+</li>
+<li><p>获取系统日期：CURRENT_DATE()</p>
+</li>
+</ul>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>SELECT (number1 + number2) 直接四则运算</li>
+<li>SELECT CAST(number1 AS REAL) 转换格式</li>
+<li>SELECT ROUND(number, precision) 取整</li>
+<li>MAX/MIN</li>
+</ul>
+<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
+<li>A || ‘ ’ || B 用空格连接A和B</li>
+<li>REPLACE(string,from_string,to_string) 字符串替换</li>
+</ul>
+<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
+<p>为什么要用视图：</p>
+<ul>
+<li>重用SQL语句。</li>
+<li>简化复杂的SQL操作。</li>
+<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
+<li>使用表的一部分而不是整个表。 </li>
+<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
+<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
+</ul>
+<p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
+<p>视图常见用途：</p>
+<ol>
+<li>利用视图简化复杂的联结</li>
+<li>用视图重新格式化检索出的数据</li>
+<li>用视图过滤不想要的数据</li>
+<li>使用视图与计算字段</li>
+</ol>
+<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
+<p>有点难 不知道这个具体是干嘛的</p>
+<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
+<p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
+<ul>
+<li>事务（transaction）指一组SQL语句； </li>
+<li>回退（rollback）指撤销指定SQL语句的过程； </li>
+<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
+<li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
+</ul>
+<p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
+<p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
+<p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
+<p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
+<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
+<p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
+<ul>
+<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
+<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
+<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
+<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
+<li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>SQL</category>
       </categories>
   </entry>
   <entry>
@@ -2031,22 +2309,6 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
       </categories>
   </entry>
   <entry>
-    <title>Tableau心得</title>
-    <url>/2020/07/02/Tableau%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为了628的presentation，后来741的report也用了。简单画个小图还是挺美观的。教育版免费。</p>
-<a id="more"></a>
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>添加WMS server地图（类似于谷歌地图）：<a href="http://ows.terrestris.de/osm/service" target="_blank" rel="noopener">http://ows.terrestris.de/osm/service</a>?</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Tableau</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Spark心得</title>
     <url>/2020/07/02/Spark%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Laioffer学习的，628第三次yelp正好用上了。</p>
@@ -2097,281 +2359,19 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
       </categories>
   </entry>
   <entry>
-    <title>SQL心得</title>
-    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
+    <title>Tableau心得</title>
+    <url>/2020/07/02/Tableau%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为了628的presentation，后来741的report也用了。简单画个小图还是挺美观的。教育版免费。</p>
 <a id="more"></a>
 
 
 
-<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
-<li>拿到某一列最大值的那一行数据</li>
-</ul>
-<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
-<li><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum" target="_blank" rel="noopener">首字母是元音</a><ul>
-<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
-<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
-</ul>
-</li>
-</ol>
-<p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-1/problem" target="_blank" rel="noopener">打印小星星</a></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="built_in">number</span> = <span class="number">21</span>; <span class="comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">repeat</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span> - <span class="number">1</span>) <span class="keyword">from</span> information_schema.tables<span class="comment">/*内置table可供遍历*/</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @COUNTER <span class="built_in">INT</span> = <span class="number">20</span>;</span><br><span class="line">WHILE @COUNTER &gt;= 0</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    PRINT <span class="keyword">REPLICATE</span>(<span class="string">'* '</span>, @COUNTER)</span><br><span class="line">    <span class="keyword">SET</span> @COUNTER = @COUNTER - <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
-<li>Statement always end in a semi-colon;</li>
-<li>注释一般用/**/</li>
-<li>Command 一般都用大写来表示</li>
-<li>character在这里面被称为TEXT：（四种常见格式：INTEGER, TEXT, DATE, REAL）</li>
-<li>missing value 用 NULL 表示</li>
-<li>Line breaks don’t mean anything specific in SQL. We could write this entire query in one line, and it would run just fine.</li>
-<li><code>AS</code> is a keyword in SQL that allows you to <em>rename</em> a column or table using an alias. 跟sas的label一样，只改变输出不改变原数据</li>
-<li><code>DISTINCT</code> is used to return unique values in the output. It filters out all duplicate values in the specified column(s).</li>
-<li>判断等号的方式就是一个等于号</li>
-<li>FROM some_table a 可以用a来指代这个table</li>
-<li>如果没有数据的时候要返回NULL 可以用双重SELECT 也可以把UNION SELECT NULL放在语句中</li>
-<li>DROP TABLE xxx 彻底删除数据库</li>
-<li>IN/NOT IN 判断属于情况</li>
-<li>DELETE可以直接删除某一行观测值</li>
-<li>关于时间的函数：<strong>TO_DAYS(wt1.DATE)</strong> return the number of days between from year 0 to date DATE, <strong>subdate</strong>(w1.Date, k)可以把日期往前调k天</li>
-<li>mod(id,2)=0 偶数 还可以用id % 2 =0</li>
-</ul>
-<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
-<ul>
-<li>任意两行都不具有相同的主键值；</li>
-<li>每一行都必须具有一个主键值（主键列不允许NULL值）；</li>
-<li>主键列中的值不允许修改或更新；</li>
-<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）。</li>
-</ul>
-<p>注释用#或者/**/</p>
-<p>不等于可以用&lt;&gt;</p>
-<p>Between and 是包含一个闭集</p>
-<p>在SELECT语句中，子查询总是从内向外处理。在处理上面的SELECT语句时，DBMS实际上执行了两个操作。</p>
-<p>作为子查询的SELECT语句只能查询单个列。企图检索多个列将返回错误。</p>
-<p>if(判断，如果真，如果假)</p>
-<p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
-<p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
-<p>information_schema.tables 是内置的一个table，有61行</p>
-<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
-<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
-age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
-<li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
-<li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
-<li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
-<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
-<li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
-<li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
-<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
-<li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
-<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
-<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
-<li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
-<li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
-<li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
-</ul>
-<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
-<ul>
-<li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
-<li>唯一约束列可包含NULL值。 </li>
-<li>唯一约束列可修改或更新。 </li>
-<li>唯一约束列的值可重复使用。 </li>
-<li>与主键不一样，唯一约束不能用来定义外键。</li>
-</ul>
-<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
-<ul>
-<li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
-<li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
-<li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
-<li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
-<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
-<li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
-<li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
-<li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
-<li>可以用AND/OR 来连接多个condition</li>
-<li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
-<li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
-<li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
-<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
-<li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
-<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
-<li>COUNT(1) 可以辅助分组计数</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> Country <span class="keyword">IN</span> (<span class="string">'Germany'</span>,<span class="string">'UK'</span>); <span class="comment">#IN 可以从多个元素中找东西</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
-<p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
-<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
-<p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">50</span> <span class="keyword">PERCENT</span> * <span class="keyword">FROM</span> Customers; <span class="comment">#可以选出前50%的数据</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
-<p>‘+’ 或者|| 可以用来拼接字符</p>
-<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
-<p>LEFT/RIGHT 返回最左（右）面的字符</p>
-<p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
-<p>PI()返回圆周率</p>
-<p>GRESTEST 返回最大值</p>
-<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
-<li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
-<li>SUM/MAX/MIN/AVG/ROUND</li>
-<li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
-<li>在用于文本数据时，MAX()返回按该列排序后的最后一行。MAX()函数忽略列值为NULL的行。</li>
-<li>如果指定列名，则DISTINCT只能用于COUNT()。DISTINCT不能用于COUNT(*)。类似地，DISTINCT必须使用列名，不能用于计算或表达式。</li>
-<li>GROUP BY 按照某一指标分类。后面可以接数字，表示按照SELECT语句中第几个column来分组</li>
-<li>When we want to limit the results of a query based on an aggregate property, use <code>HAVING</code>. <code>HAVING</code> statement always comes after <code>GROUP BY</code>, but before <code>ORDER BY</code> and <code>LIMIT</code>. 事实上，目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是，WHERE过滤行，而HAVING过滤分组。</li>
-<li>在指定别名以包含某个聚集函数的结果时，不应该使用表中实际的列名。虽然这样做也算合法，但许多SQL实现不支持，可能会产生模糊的 错误消息。</li>
-</ul>
-<p>GROUP BY子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组。</p>
-<p>GROUP BY子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在GROUP BY子 句中指定相同的表达式。不能使用别名。</p>
-<p>大多数SQL实现不允许GROUP BY列带有长度可变的数据类型</p>
-<p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
-<p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
-<p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
-<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
-<p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
-<p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
-<p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
-<p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
-<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
-<p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
-<p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
-<p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
-<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
-<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
-<li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
-<li>CROSS JOIN 返回所有可能种排列组合</li>
-<li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
-<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
-</ul>
-<p>##Constrains</p>
-<p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
-<ul>
-<li><p>CREATE TABLE celebs (</p>
-<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
-</li>
-<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
-</li>
-<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
-</li>
-<li><p><code>NOT NULL</code> columns must have a value. </p>
-</li>
-<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
-</li>
-<li></li>
-</ul>
-<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
-<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
-<ul>
-<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
-<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
-AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
-       dep_day_of_week,
-        dep_date,
-        SUM(distance) AS flight_distance
-   FROM flights
-  GROUP BY 1,2,3
-) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
-</ul>
-<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
-<ol>
-<li>A row is processed in the outer query. </li>
-<li>Then, for that particular row in the outer query, the subquery is executed.</li>
-</ol>
-<ul>
-<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
-</ul>
-<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
-<ul>
-<li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
-<li>INTERSECT 连接两个SELECT，只包含相同的行</li>
-<li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
-</ul>
-<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
-<li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
-<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
-</ul>
-<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
-<ol>
-<li>Date: YYYY-MM-DD</li>
-<li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
-</ol>
-<ul>
-<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
-</li>
-<li><p>YEAR(xxx)来返回年份</p>
-</li>
-<li><p>获取系统日期：CURRENT_DATE()</p>
-</li>
-</ul>
-<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
-<li>SELECT (number1 + number2) 直接四则运算</li>
-<li>SELECT CAST(number1 AS REAL) 转换格式</li>
-<li>SELECT ROUND(number, precision) 取整</li>
-<li>MAX/MIN</li>
-</ul>
-<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
-<li>A || ‘ ’ || B 用空格连接A和B</li>
-<li>REPLACE(string,from_string,to_string) 字符串替换</li>
-</ul>
-<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
-<p>为什么要用视图：</p>
-<ul>
-<li>重用SQL语句。</li>
-<li>简化复杂的SQL操作。</li>
-<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
-<li>使用表的一部分而不是整个表。 </li>
-<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
-<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
-</ul>
-<p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
-<p>视图常见用途：</p>
-<ol>
-<li>利用视图简化复杂的联结</li>
-<li>用视图重新格式化检索出的数据</li>
-<li>用视图过滤不想要的数据</li>
-<li>使用视图与计算字段</li>
-</ol>
-<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
-<p>有点难 不知道这个具体是干嘛的</p>
-<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
-<p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
-<ul>
-<li>事务（transaction）指一组SQL语句； </li>
-<li>回退（rollback）指撤销指定SQL语句的过程； </li>
-<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
-<li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
-</ul>
-<p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
-<p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
-<p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
-<p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
-<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
-<p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
-<ul>
-<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
-<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
-<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
-<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
-<li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
-</ul>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>添加WMS server地图（类似于谷歌地图）：<a href="http://ows.terrestris.de/osm/service" target="_blank" rel="noopener">http://ows.terrestris.de/osm/service</a>?</p>
 ]]></content>
       <categories>
         <category>Study</category>
         <category>Coding</category>
-        <category>SQL</category>
+        <category>Tableau</category>
       </categories>
   </entry>
   <entry>
@@ -2434,6 +2434,127 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Holy</category>
         <category>References</category>
         <category>The Reason for God</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>博弈论笔记</title>
+    <url>/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>来自于Coursera的斯坦福公开课Game Theory。学的虎头蛇尾，兴趣全无。</p>
+<a id="more"></a>
+
+
+
+<p>博弈有三部分构成：玩家，行为，收益<br>博弈论分为两种基本形式：</p>
+<ul>
+<li>范式博弈（Normal）：假定所有玩家同时采取行动，</li>
+<li>展开博弈（Extensive）：设计不同玩家之间的Timing&amp;Information，一般用树模型。</li>
+</ul>
+<p>n人的范式博弈：&lt;N,A,μ&gt;</p>
+<ul>
+<li>N：1~n 表示了参与人数</li>
+<li>Ai：Action Set行为集合</li>
+<li>μi：效用函数utility/payoff Function</li>
+</ul>
+<p>常用矩阵来描绘博弈：如果两个玩家的话，行是一个玩家，列是一个玩家，矩阵的元素是一个二维的向量，表示他们各自的收益</p>
+<p>反抗政府的那个例子中我们发现，如果其他人的决策对个体的决策有影响的话，就不能用矩阵形式来表示了。</p>
+<p>一个简单的常和博弈的例子——匹配硬币:pure competition 效用函数之和是0或是个常数</p>
+<ul>
+<li><p>两个人正反面相同：A给B一块钱</p>
+</li>
+<li><p>两个人正反面不同：B给A一块钱</p>
+</li>
+</ul>
+<p>Pure cooperation：每个人的效用函数相同</p>
+<p>夫妻两人看电影的例子：可以同时存在竞争和合作</p>
+<p>纳什均衡考虑的步骤：</p>
+<ol>
+<li>其他人会怎么做</li>
+<li>我要如何来应对</li>
+</ol>
+<p>纳什均衡就是每个人都作出最优解所形成的局面<br>纳什均衡是稳定的，因为不是纳什均衡的情况是不稳定的。（随着人们对问题的了解深入，他们会改变他们的主意）</p>
+<p>凯恩斯的选美比赛（keynes’s beauty contest game）：英国的报纸上，在几幅美女图片中，选出来你认为最受其他人欢迎的美女。这就是一种要考虑其他人行为而不是单单考虑自己行为的博弈。</p>
+<p>又一个game：每个人说出一个1-100的数字，然后最接近大家平均数的2/3的那个人获胜，下面开始解题：</p>
+<ol>
+<li>每个人猜平均是X，所以会出0.66X,但因为X&lt;=100,所以每个人的数字不会超过67</li>
+<li>所以平均会是67及以下，所以会出0.66*67，所以无限循环下去</li>
+<li>纳什均衡告诉我们，每个人该出1！</li>
+<li>最后结果第一轮是23胜出，又做了一遍是4，结果向着纳什均衡（1）在发展</li>
+</ol>
+<p>我们将a(-i)定义为除了自己其他人的策略集，a<em>定义为自己的最优策略，最优策略可以不唯一，但一定是出自最优对策集BR(Best response)。最优对策集的假设是其他所有人都会使用策略a(-i),那么BR的定义：<br>ai</em> ∈ BR(a(-i)) iff 对任意ai∈Ai,Ui(ai*,a(-i))&gt;=Ui(ai,a(-i))<br>Best response 不一定只有一个</p>
+<p>&lt;a1,…,an&gt; is called a pure strategy Nash equilibrium iff 任意i,ai ∈ BR(a(-i))</p>
+<p>Si Strictlly dominate/Very weakly dominate Si’: 对于其他人的任何行为S-i,U(Si,S-i) &gt;(=) U(Si’,S-i)  如果有一个策略比任何其他策略都好，那么他叫dominant</p>
+<p>纳什均衡：每个人都出自己的dominant</p>
+<p>帕累托最优pareto optimality：</p>
+<ul>
+<li>因为在衡量全局好坏的时候，你不知道每个个体的效用函数是什么样子的，所以这就像你想提高你的回报，但是这回报是以一种你不知道汇率的不同外汇来分给每一个人。</li>
+<li>如果一个outcome O at least as good as O’ 并且对于某些agent，他们strictly prefer O。这时我们就可以说O pareto-dominates O’ 如果一个outcome O 不能再被其他 O’pareto-dominates,那么就称他为帕累托最优。</li>
+</ul>
+<p>帕累托最优结果可能不唯一：可能有两个outcome谁也不比谁好<br>每个游戏至少有一个帕累托最优</p>
+<p>mixed strategy：</p>
+<ul>
+<li>idea：confuse the opponent by play randomly</li>
+<li>与pure strategy的区别就在于，同样是关于行动的分布，pure是只有一个行动的概率是1，其他都是零，而mixed则是有多个可能性大于0的行动</li>
+<li>此时效用函数变成了多个小部分效用函数的加权均值</li>
+</ul>
+<p>纳什定律：Every Finite game has a Nash equilibrium. 有限的意思是总情况空间是有限的。有限的玩家*每人有着有限的行动集</p>
+<p>mixed strategy equilibrium: 一个稳态，不过此时参与者并不是只选一种，而是按照某种概率选择多种方案。计算的方式是，先定其中一个人的概率，使得另一个人无论选哪种方案，都会得到一样的回报。（因为如果不一样的话，另一个人就没必要random，直接全部投入最优的解即可）解方程出来之后。再对剩下的人依次求解。最后获得一个平衡。</p>
+<p>两个寻找纳什均衡的算法：</p>
+<ol>
+<li>LCP(Linear Complementarity) formulation(By Lemke-Howson)</li>
+<li>Support Enumeration Method</li>
+</ol>
+<p>PPAD：Polynomial Parity Arguments on Directed graphs.<br>复杂度排序：P&lt;PPAD&lt;NP&lt;NP-complete</p>
+<p>开始对支撑集做假设的时候，我们假设两个选手的可能取值差不多。而不是一人有两个方案，一个人有十七个方案。</p>
+<p>correlated equilibrium</p>
+<p>Rationality: A basic premise: Players maximize their payoffs</p>
+<p>如何检查纳什均衡：看看两个玩家在当前条件下有没有动力改变自己的决策。纳什均衡=每个人都没有profitable deviation</p>
+<h2 id="Iterative-Removal："><a href="#Iterative-Removal：" class="headerlink" title="Iterative Removal："></a>Iterative Removal：</h2><p>删去被最好行动压制的其他行动</p>
+<p>A strictly dominated（被动） strategy can never be a best play, so we can remove it.</p>
+<p>但是删掉一个被dominate之后，剩下的里面会再出来一个新的dominated，所以我们要不断的iterate。</p>
+<p>不仅可以被pure strategy打败 被mixed打败也可以。所以在没有单纯的strictly dominant的时候，我们可以用组合策略来删除</p>
+<p>dominant solvability：可以被最小迭代变成一个pure</p>
+<p>对于strictly dominant来说 删除的order并不重要</p>
+<p>但如果是weak的话，可能会在删的过程中也删掉一些纳什均衡，这时候order重要，但至少有一个纳什均衡会被保留下来。</p>
+<p>两只猪的游戏：用来论证事实上猪也会博弈论</p>
+<p>maxmin strategy: maximize worst-case payoff. </p>
+<p>Maxmin value(safety level): the minimum payoff guarenteed by maxmin strategy.</p>
+<p>minmax strategy: minimize enemy’s best-case payoff. 在零和游戏中，损人=利己</p>
+<p>correlated equilibrium：A randomized assignments of (potential related) action ecommandations to agents, such that nobody wants to deviate.</p>
+<h2 id="Extensive-Form"><a href="#Extensive-Form" class="headerlink" title="Extensive-Form"></a>Extensive-Form</h2><p>有时，时间也影响着决策。Game Tree:人们轮流采取行动，最后会终结在树的某一个节点上。</p>
+<h3 id="Perfect-Information"><a href="#Perfect-Information" class="headerlink" title="Perfect Information"></a>Perfect Information</h3><ul>
+<li>参数：N、A、H、Z、chi、rho、sigma、u</li>
+<li>N：players。</li>
+<li>A: Actions（这时每个人能采取的行动是一样的）</li>
+<li>H：choice nodes:  non-terminal</li>
+<li>chi: Action-function 将H映射到2^A assign actions to each node</li>
+<li>rho: Player-function: assign player to non-terminal node</li>
+<li>Z: terminal nodes</li>
+<li>sigma: sucessor function 将H*A 映射到H并Z</li>
+<li>u: utility function. 对每一个Z映射一个得分</li>
+</ul>
+<p>注意这棵树是单射。不存在多个节点或者一个节点的多个行为指向到同一个结果</p>
+<p>在计算pure strategy 个数的时候，就连那些肯定到不了的节点也要算进去。因为博弈论认为到不了的A和到不了的B也是不一样的</p>
+<p>定理：Every perfect information game in extensive form has a PSNE(Pure Strategy Nash Equilibrium)</p>
+<h4 id="Induced-Normal-Form"><a href="#Induced-Normal-Form" class="headerlink" title="Induced Normal Form"></a>Induced Normal Form</h4><ul>
+<li>将A与B的pure strategy做一个笛卡尔积。树的很多根节点被重复了多次，在树很大的时候会造成指数的数据上涨，不好</li>
+<li>并且我们一般不能把一个Normal Form Game变成一个Extensive Form Game。因为有时候Game就是需要两个人同时发出动作，但是Extensive是有先后顺序的</li>
+</ul>
+<h4 id="Subgame-perfection"><a href="#Subgame-perfection" class="headerlink" title="Subgame perfection"></a>Subgame perfection</h4><ul>
+<li>在一个perfect information game 的某个纳什均衡决策中，所有的子决策族都没有profitable deviation。</li>
+<li>Backward Induction: 在零和游戏中又被称为minimax。在每个节点处以自己孩子点中最大值作为自己的值</li>
+<li>Ultimate Bargaining：举得例子是10份东西两个人分。A提出一个分法，B同意的话就按照这个方法分，B不同意的话两个人都是0。这种情况下A的最好策略应该是9/1 但事实上很多人选择了5/5。有可能是因为总体太小了。当研究人员把总体调的越来越大的时候，人们倾向于给对方更小的比例，并且对方也倾向于接受更小的比例</li>
+</ul>
+<h3 id="Imperfect-Information"><a href="#Imperfect-Information" class="headerlink" title="Imperfect Information"></a>Imperfect Information</h3><p>玩家不知道对手的全部行动</p>
+<ul>
+<li>equivalence class：将不同的node分成几个类，这样虽然不知道具体是来自哪一个node，但是我们知道它们不来自于哪些nodes</li>
+<li>可以将IIEF-NF-IIEF：开始的IIEF可能会很深，但是变成Normal-Form在变回IIEF的时候，IIEF只有两层了。虽然两个IIEF可能长得不同，但是它们的行动空间是一样的。</li>
+</ul>
+<h4 id="Imperfect-Recall"><a href="#Imperfect-Recall" class="headerlink" title="Imperfect Recall"></a>Imperfect Recall</h4><p>玩家无法回忆自己曾经选择的node具体是哪一个</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Courses</category>
+        <category>博弈论</category>
       </categories>
   </entry>
   <entry>
@@ -3152,127 +3273,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
       </categories>
   </entry>
   <entry>
-    <title>博弈论笔记</title>
-    <url>/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>来自于Coursera的斯坦福公开课Game Theory。学的虎头蛇尾，兴趣全无。</p>
-<a id="more"></a>
-
-
-
-<p>博弈有三部分构成：玩家，行为，收益<br>博弈论分为两种基本形式：</p>
-<ul>
-<li>范式博弈（Normal）：假定所有玩家同时采取行动，</li>
-<li>展开博弈（Extensive）：设计不同玩家之间的Timing&amp;Information，一般用树模型。</li>
-</ul>
-<p>n人的范式博弈：&lt;N,A,μ&gt;</p>
-<ul>
-<li>N：1~n 表示了参与人数</li>
-<li>Ai：Action Set行为集合</li>
-<li>μi：效用函数utility/payoff Function</li>
-</ul>
-<p>常用矩阵来描绘博弈：如果两个玩家的话，行是一个玩家，列是一个玩家，矩阵的元素是一个二维的向量，表示他们各自的收益</p>
-<p>反抗政府的那个例子中我们发现，如果其他人的决策对个体的决策有影响的话，就不能用矩阵形式来表示了。</p>
-<p>一个简单的常和博弈的例子——匹配硬币:pure competition 效用函数之和是0或是个常数</p>
-<ul>
-<li><p>两个人正反面相同：A给B一块钱</p>
-</li>
-<li><p>两个人正反面不同：B给A一块钱</p>
-</li>
-</ul>
-<p>Pure cooperation：每个人的效用函数相同</p>
-<p>夫妻两人看电影的例子：可以同时存在竞争和合作</p>
-<p>纳什均衡考虑的步骤：</p>
-<ol>
-<li>其他人会怎么做</li>
-<li>我要如何来应对</li>
-</ol>
-<p>纳什均衡就是每个人都作出最优解所形成的局面<br>纳什均衡是稳定的，因为不是纳什均衡的情况是不稳定的。（随着人们对问题的了解深入，他们会改变他们的主意）</p>
-<p>凯恩斯的选美比赛（keynes’s beauty contest game）：英国的报纸上，在几幅美女图片中，选出来你认为最受其他人欢迎的美女。这就是一种要考虑其他人行为而不是单单考虑自己行为的博弈。</p>
-<p>又一个game：每个人说出一个1-100的数字，然后最接近大家平均数的2/3的那个人获胜，下面开始解题：</p>
-<ol>
-<li>每个人猜平均是X，所以会出0.66X,但因为X&lt;=100,所以每个人的数字不会超过67</li>
-<li>所以平均会是67及以下，所以会出0.66*67，所以无限循环下去</li>
-<li>纳什均衡告诉我们，每个人该出1！</li>
-<li>最后结果第一轮是23胜出，又做了一遍是4，结果向着纳什均衡（1）在发展</li>
-</ol>
-<p>我们将a(-i)定义为除了自己其他人的策略集，a<em>定义为自己的最优策略，最优策略可以不唯一，但一定是出自最优对策集BR(Best response)。最优对策集的假设是其他所有人都会使用策略a(-i),那么BR的定义：<br>ai</em> ∈ BR(a(-i)) iff 对任意ai∈Ai,Ui(ai*,a(-i))&gt;=Ui(ai,a(-i))<br>Best response 不一定只有一个</p>
-<p>&lt;a1,…,an&gt; is called a pure strategy Nash equilibrium iff 任意i,ai ∈ BR(a(-i))</p>
-<p>Si Strictlly dominate/Very weakly dominate Si’: 对于其他人的任何行为S-i,U(Si,S-i) &gt;(=) U(Si’,S-i)  如果有一个策略比任何其他策略都好，那么他叫dominant</p>
-<p>纳什均衡：每个人都出自己的dominant</p>
-<p>帕累托最优pareto optimality：</p>
-<ul>
-<li>因为在衡量全局好坏的时候，你不知道每个个体的效用函数是什么样子的，所以这就像你想提高你的回报，但是这回报是以一种你不知道汇率的不同外汇来分给每一个人。</li>
-<li>如果一个outcome O at least as good as O’ 并且对于某些agent，他们strictly prefer O。这时我们就可以说O pareto-dominates O’ 如果一个outcome O 不能再被其他 O’pareto-dominates,那么就称他为帕累托最优。</li>
-</ul>
-<p>帕累托最优结果可能不唯一：可能有两个outcome谁也不比谁好<br>每个游戏至少有一个帕累托最优</p>
-<p>mixed strategy：</p>
-<ul>
-<li>idea：confuse the opponent by play randomly</li>
-<li>与pure strategy的区别就在于，同样是关于行动的分布，pure是只有一个行动的概率是1，其他都是零，而mixed则是有多个可能性大于0的行动</li>
-<li>此时效用函数变成了多个小部分效用函数的加权均值</li>
-</ul>
-<p>纳什定律：Every Finite game has a Nash equilibrium. 有限的意思是总情况空间是有限的。有限的玩家*每人有着有限的行动集</p>
-<p>mixed strategy equilibrium: 一个稳态，不过此时参与者并不是只选一种，而是按照某种概率选择多种方案。计算的方式是，先定其中一个人的概率，使得另一个人无论选哪种方案，都会得到一样的回报。（因为如果不一样的话，另一个人就没必要random，直接全部投入最优的解即可）解方程出来之后。再对剩下的人依次求解。最后获得一个平衡。</p>
-<p>两个寻找纳什均衡的算法：</p>
-<ol>
-<li>LCP(Linear Complementarity) formulation(By Lemke-Howson)</li>
-<li>Support Enumeration Method</li>
-</ol>
-<p>PPAD：Polynomial Parity Arguments on Directed graphs.<br>复杂度排序：P&lt;PPAD&lt;NP&lt;NP-complete</p>
-<p>开始对支撑集做假设的时候，我们假设两个选手的可能取值差不多。而不是一人有两个方案，一个人有十七个方案。</p>
-<p>correlated equilibrium</p>
-<p>Rationality: A basic premise: Players maximize their payoffs</p>
-<p>如何检查纳什均衡：看看两个玩家在当前条件下有没有动力改变自己的决策。纳什均衡=每个人都没有profitable deviation</p>
-<h2 id="Iterative-Removal："><a href="#Iterative-Removal：" class="headerlink" title="Iterative Removal："></a>Iterative Removal：</h2><p>删去被最好行动压制的其他行动</p>
-<p>A strictly dominated（被动） strategy can never be a best play, so we can remove it.</p>
-<p>但是删掉一个被dominate之后，剩下的里面会再出来一个新的dominated，所以我们要不断的iterate。</p>
-<p>不仅可以被pure strategy打败 被mixed打败也可以。所以在没有单纯的strictly dominant的时候，我们可以用组合策略来删除</p>
-<p>dominant solvability：可以被最小迭代变成一个pure</p>
-<p>对于strictly dominant来说 删除的order并不重要</p>
-<p>但如果是weak的话，可能会在删的过程中也删掉一些纳什均衡，这时候order重要，但至少有一个纳什均衡会被保留下来。</p>
-<p>两只猪的游戏：用来论证事实上猪也会博弈论</p>
-<p>maxmin strategy: maximize worst-case payoff. </p>
-<p>Maxmin value(safety level): the minimum payoff guarenteed by maxmin strategy.</p>
-<p>minmax strategy: minimize enemy’s best-case payoff. 在零和游戏中，损人=利己</p>
-<p>correlated equilibrium：A randomized assignments of (potential related) action ecommandations to agents, such that nobody wants to deviate.</p>
-<h2 id="Extensive-Form"><a href="#Extensive-Form" class="headerlink" title="Extensive-Form"></a>Extensive-Form</h2><p>有时，时间也影响着决策。Game Tree:人们轮流采取行动，最后会终结在树的某一个节点上。</p>
-<h3 id="Perfect-Information"><a href="#Perfect-Information" class="headerlink" title="Perfect Information"></a>Perfect Information</h3><ul>
-<li>参数：N、A、H、Z、chi、rho、sigma、u</li>
-<li>N：players。</li>
-<li>A: Actions（这时每个人能采取的行动是一样的）</li>
-<li>H：choice nodes:  non-terminal</li>
-<li>chi: Action-function 将H映射到2^A assign actions to each node</li>
-<li>rho: Player-function: assign player to non-terminal node</li>
-<li>Z: terminal nodes</li>
-<li>sigma: sucessor function 将H*A 映射到H并Z</li>
-<li>u: utility function. 对每一个Z映射一个得分</li>
-</ul>
-<p>注意这棵树是单射。不存在多个节点或者一个节点的多个行为指向到同一个结果</p>
-<p>在计算pure strategy 个数的时候，就连那些肯定到不了的节点也要算进去。因为博弈论认为到不了的A和到不了的B也是不一样的</p>
-<p>定理：Every perfect information game in extensive form has a PSNE(Pure Strategy Nash Equilibrium)</p>
-<h4 id="Induced-Normal-Form"><a href="#Induced-Normal-Form" class="headerlink" title="Induced Normal Form"></a>Induced Normal Form</h4><ul>
-<li>将A与B的pure strategy做一个笛卡尔积。树的很多根节点被重复了多次，在树很大的时候会造成指数的数据上涨，不好</li>
-<li>并且我们一般不能把一个Normal Form Game变成一个Extensive Form Game。因为有时候Game就是需要两个人同时发出动作，但是Extensive是有先后顺序的</li>
-</ul>
-<h4 id="Subgame-perfection"><a href="#Subgame-perfection" class="headerlink" title="Subgame perfection"></a>Subgame perfection</h4><ul>
-<li>在一个perfect information game 的某个纳什均衡决策中，所有的子决策族都没有profitable deviation。</li>
-<li>Backward Induction: 在零和游戏中又被称为minimax。在每个节点处以自己孩子点中最大值作为自己的值</li>
-<li>Ultimate Bargaining：举得例子是10份东西两个人分。A提出一个分法，B同意的话就按照这个方法分，B不同意的话两个人都是0。这种情况下A的最好策略应该是9/1 但事实上很多人选择了5/5。有可能是因为总体太小了。当研究人员把总体调的越来越大的时候，人们倾向于给对方更小的比例，并且对方也倾向于接受更小的比例</li>
-</ul>
-<h3 id="Imperfect-Information"><a href="#Imperfect-Information" class="headerlink" title="Imperfect Information"></a>Imperfect Information</h3><p>玩家不知道对手的全部行动</p>
-<ul>
-<li>equivalence class：将不同的node分成几个类，这样虽然不知道具体是来自哪一个node，但是我们知道它们不来自于哪些nodes</li>
-<li>可以将IIEF-NF-IIEF：开始的IIEF可能会很深，但是变成Normal-Form在变回IIEF的时候，IIEF只有两层了。虽然两个IIEF可能长得不同，但是它们的行动空间是一样的。</li>
-</ul>
-<h4 id="Imperfect-Recall"><a href="#Imperfect-Recall" class="headerlink" title="Imperfect Recall"></a>Imperfect Recall</h4><p>玩家无法回忆自己曾经选择的node具体是哪一个</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Courses</category>
-        <category>博弈论</category>
-      </categories>
-  </entry>
-  <entry>
     <title>统计学习笔记</title>
     <url>/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>记录一下学统计的时候遇到的一些问题</p>
@@ -3412,6 +3412,205 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
       <categories>
         <category>Holy</category>
         <category>耶稣说</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>聆听音乐答案(第五版)</title>
+    <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己再做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
+<ol>
+<li><a href="https://book.douban.com/review/6404967/" target="_blank" rel="noopener">豆瓣网友(自由民)贡献</a></li>
+<li><a href="http://college.cengage.com/site_engine/#1439083533" target="_blank" rel="noopener">出版社的官方网站</a>（题目不全，但是准）</li>
+</ol>
+<p>音乐部分是来自于喜马拉雅的专辑，大家可以自行搜索。</p>
+<p>下面<strong>含标题的是自己做过并检查一遍的</strong>，不含标题的是直接复制黏贴，属于【没有灵魂的答案】</p>
+<ul>
+<li>有点忧伤…做到练习18的时候才想起来要好好记笔记…</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="答案部分"><a href="#答案部分" class="headerlink" title="答案部分"></a>答案部分</h1><p>1 bbacbaa bacabb bbcbbab</p>
+<p>2 3/4, 2/4, 2/4, 3/4, 2/4, 3/4, 3/4, 2/4, 3/4, 2/4</p>
+<p>3 ccabcacaab</p>
+<p>4 大小小小大 大大小大小</p>
+<p>5 1:14 1:30 1:48 1:56 2:04 2:21 2:37 2:45 2:53 3:10</p>
+<p>6 16,8,8,16,16,8,8,16,16,16</p>
+<p>7 ccaaa adbcb</p>
+<p>8 0:09, 0:12, 0:20, 0:34, 0:39, 0:44, 0:58, 1:02, 1:09, b</p>
+<h3 id="聆听练习9"><a href="#聆听练习9" class="headerlink" title="聆听练习9"></a>聆听练习9</h3><h5 id="关于音色的整理"><a href="#关于音色的整理" class="headerlink" title="关于音色的整理"></a>关于音色的整理</h5><blockquote>
+<p>小号：听了想打人那种。</p>
+<p>法国号：有一种金属共鸣，音域比长号高一点</p>
+<p>长号：音域低一点的小号，音色脏脏的。</p>
+<p>大号：最低音域的铜管。</p>
+<p>大管：最低音域的木管。木管按起来会有咔咔的按键音。大管的共鸣比大号更好，有亮亮的音色。</p>
+<p>长号和法国号的关系有点像单簧管和双簧管。后者音色亮一点/共鸣更好，而前者比较闷。</p>
+<p>有人说单簧管声音更诡异/吓人，双簧管声音像鸭子/鹅。</p>
+<p>长笛——音域宽</p>
+<p>大提琴——音域不高不低，本来想选中提琴，发现没有</p>
+</blockquote>
+<p>【单簧管】—— 开始选了法国号，仔细一听确实沉闷，并且有按键声。</p>
+<p>低音提琴——音域过低</p>
+<p>双簧管——比较刺耳的木管</p>
+<p>【大管】——开始选了单簧管，错在了音域/以及单簧管开始没选</p>
+<p>长号 —— 铜管 &amp; 音域</p>
+<p>【法国号】—— 开始选了大管/排除法选的</p>
+<p>小提琴</p>
+<p>大号—— 沉闷 &amp; 音色</p>
+<h3 id="聆听练习10"><a href="#聆听练习10" class="headerlink" title="聆听练习10"></a>聆听练习10</h3><p>小号 小号 </p>
+<p>低音提琴 单簧管 单簧管</p>
+<p>大管 单簧管</p>
+<p>长笛 长笛</p>
+<p>法国号 长笛 长笛</p>
+<p>双簧管 双簧管</p>
+<p>大提琴 双簧管 双簧管</p>
+<p>小提琴 中提琴 小提琴</p>
+<blockquote>
+<p>2 6 开始搞混了单双簧管… 感觉还是沉闷和清亮的区别</p>
+<p>7 8 搞混了大中提琴 还是不知道咋区分</p>
+</blockquote>
+<h3 id="聆听练习11"><a href="#聆听练习11" class="headerlink" title="聆听练习11"></a>聆听练习11</h3><p>大管 长笛</p>
+<p>大号 法国号 小号</p>
+<p>长笛 单簧管</p>
+<p>小号 长号</p>
+<p>小提琴 中提琴 大提琴</p>
+<blockquote>
+<p>2 4 搞混了大号和长号，仔细一听还是音域的区别，2更低一点</p>
+</blockquote>
+<p>长笛 大管</p>
+<p>长笛 大管 </p>
+<p>小号 大号</p>
+<p>小提琴 大提琴</p>
+<p>12 单，复，单，主，单，复，复，单，复，主。</p>
+<p>13 A,B,C,B,A 曲式结构为：ABCBA<br>     A,B 曲式结构为：AB<br>     A,B,A 曲式结构为：ABA<br>     A,B,A 曲式结构为：ABA<br>     A,B 曲式结构为：AB</p>
+<p>14 复，圣，复，圣，复，圣，复，圣，复</p>
+<p>15 0:46， 1:09， 1:33， 1:40， bbabcc</p>
+<p>16 bcaca ccaab</p>
+<p>17 bcaaa bcaab</p>
+<h3 id="聆听练习18"><a href="#聆听练习18" class="headerlink" title="聆听练习18"></a>聆听练习18</h3><p>斯特罗齐《我想死》BBAAB BABBB</p>
+<blockquote>
+<p>1 应该是1765的走势</p>
+<p>2 我觉得有三个，1-5-6-5 但是没这个选项，所以只好选了四个。</p>
+<ul>
+<li>喔！原来是中途出现了一个4</li>
+</ul>
+<p>5 出现了一个 17645的走势（为啥多了一拍）</p>
+</blockquote>
+<h3 id="聆听练习19"><a href="#聆听练习19" class="headerlink" title="聆听练习19"></a>聆听练习19</h3><p>珀塞尔《当我命丧黄泉》BAAAB DDBCB</p>
+<blockquote>
+<p>6 这题开始蒙了，怎么也没听出来是几遍，女声一出来确实听不见低音了。后来往上翻了翻才发现原来有固定低音的乐谱。走势应该是先从6逐个半音降到3然后一个123结束。因为前面那一通降感觉不是规律的速度，所以只听123就好了。每听到一个123，就相当于走了一遍</p>
+<p>7 我认为唱了三次那一段旋律…可惜没有这个答案。固定低音部分，听到了四个123。</p>
+<p>10 </p>
+<ul>
+<li>Bessie Smith <a href="https://www.youtube.com/watch?v=dYsGYWQT690" target="_blank" rel="noopener">《Lost Your Head Blues》</a> 没听出来有固定低音….</li>
+<li>Eminem <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w" target="_blank" rel="noopener">《The Real Slim Shady》</a> 走势应该是 (6)712 21 17 36</li>
+</ul>
+</blockquote>
+<h3 id="聆听练习20"><a href="#聆听练习20" class="headerlink" title="聆听练习20"></a>聆听练习20</h3><p>维瓦尔第《春》CAABB ABCBC</p>
+<h3 id="聆听练习21"><a href="#聆听练习21" class="headerlink" title="聆听练习21"></a>聆听练习21</h3><p>巴赫 《G小调管风琴赋格曲》 BAAAB CABDA</p>
+<blockquote>
+<p>中间主题陈述的时候有一段从小调变成大调，难以听出</p>
+</blockquote>
+<h3 id="聆听练习22"><a href="#聆听练习22" class="headerlink" title="聆听练习22"></a>聆听练习22</h3><p>巴赫 《醒来吧，一个声音在召唤》 BBDCA ABABD</p>
+<blockquote>
+<p>感觉有的部分确实加了木管？但是听不太清楚，感觉没有一个完整的声部</p>
+<p>这个歌Spotify上没找到一模一样的。很多弦乐版的拖拖拉拉，根本不想醒来。</p>
+<p>两个名字：Awake, a voice is calling / Sleepers, awake</p>
+</blockquote>
+<h3 id="聆听练习23"><a href="#聆听练习23" class="headerlink" title="聆听练习23"></a>聆听练习23</h3><p>亨德尔 《弥赛亚》“哈利路亚”合唱  BACCC CBBBD</p>
+<h3 id="聆听练习24"><a href="#聆听练习24" class="headerlink" title="聆听练习24"></a>聆听练习24</h3><p>莫扎特 《费加罗的婚礼》“如果你想跳舞”  BCADA ABAAE</p>
+<blockquote>
+<p>9 上下乐句的对称结构（Antecedent - Consequent Phrase）指的是一句提问&amp;一句回答的对照形式。先制造不太和谐的张力，然后消解变为和谐。如果这么理解的话，最后收尾的和弦进行是4-5-1，应该算是。</p>
+</blockquote>
+<h3 id="聆听练习25"><a href="#聆听练习25" class="headerlink" title="聆听练习25"></a>聆听练习25</h3><p>莫扎特 《唐璜》序曲  BCAAB BBBBC</p>
+<blockquote>
+<p>这个练习的核心在于背住/写下来每个部分的主要旋律，方便辨认。</p>
+<p>主部：24326 …4321 这个24326是主部的特点</p>
+<p>副部：56655 51555 <strong>54321 32176</strong> 这里的阶梯五连降是副部的特点</p>
+<p>结束部： 321 …. 321</p>
+<p>连接部 21765432… 阶梯八连降是连接部的特点</p>
+</blockquote>
+<p><strong>下一个该做这里了</strong></p>
+<p>26 babac acccd</p>
+<p>27 cbbac abcaa</p>
+<p>28 dcbbc abbab</p>
+<p>29 cacab aabcb</p>
+<p>30 cbbbc caabd</p>
+<p>31 MBBMBMMMBB</p>
+<p>32 baaaa babca</p>
+<p>33 ccaaa bbaaa</p>
+<p>34 aadbc abbca</p>
+<p>35 abcaa cbcbb</p>
+<p>36 bbdbb bcaba</p>
+<p>37 caaaa bbbdd</p>
+<p>38 cbbab dcaaa</p>
+<p>39 ccabb cabaa</p>
+<p>40 bbbab bbcbb</p>
+<p>41 bbbaa cdaba</p>
+<p>42 是是是否否否是否是 更多</p>
+<p>43 ehbgaffdac</p>
+<p>44 dabbb cbaca</p>
+<p>45 caaac abbab</p>
+<p>46 abbca abcab</p>
+<p>47 bbaba bbaaa</p>
+]]></content>
+      <categories>
+        <category>古典音乐</category>
+        <category>聆听音乐</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>随手记</title>
+    <url>/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>平时看到比较有意义的视频/推文，会把笔记整理在此处供未来查阅。</p>
+<a id="more"></a>
+
+
+
+<h1 id="2020-07-08"><a href="#2020-07-08" class="headerlink" title="2020/07/08"></a>2020/07/08</h1><h2 id="【半佛】应届生求职利益最大化指南"><a href="#【半佛】应届生求职利益最大化指南" class="headerlink" title="【半佛】应届生求职利益最大化指南"></a><a href="https://www.bilibili.com/video/BV1st4y197pq" target="_blank" rel="noopener">【半佛】应届生求职利益最大化指南</a></h2><p><img src="https://i.imgur.com/tVHJ6SX.jpg" alt="tVHJ6SX"></p>
+<h3 id="行业"><a href="#行业" class="headerlink" title="行业"></a>行业</h3><p>如果想体现个人的价值，尽量要去<strong>朝阳行业</strong>，和<strong>竞争充分的行业</strong>。</p>
+<ul>
+<li>充分竞争：这个行业的薪酬是存在较大变数的。对人才的渴求高，猎头活跃，跳槽有的跳。（互联网/金融）</li>
+<li>不充分竞争：这个行业大家差不多，没啥好跳的，入门也没什么好选的，一个萝卜一个坑。（国企公务员）</li>
+</ul>
+<p>在选择行业的时候，忽视自己的梦想，只选风口，因为大多数人的努力未必会产生什么结果。</p>
+<h3 id="城市"><a href="#城市" class="headerlink" title="城市"></a>城市</h3><p>交通便利降低了城市的重要性，大城市能玩的/看的/知道的，小城市也差不多。</p>
+<p>城市的选择影响生活品质。</p>
+<ul>
+<li>要选择<strong>高速发展，人口高速流入</strong>的城市（机会会越来越多）。</li>
+<li>小城市的一个问题：过于关系社会</li>
+</ul>
+<h3 id="公司地位"><a href="#公司地位" class="headerlink" title="公司地位"></a>公司地位</h3><p>第一份工作，厂越大越好。行业地位越高越好。核心点是：<strong>让自己变得更加值钱，稳妥落地</strong>。</p>
+<ul>
+<li>小公司的问题：随时为生存奔波，不稳定。<ul>
+<li>螺丝钉：不是哪里适合往哪拧，是哪里缺人往哪里拧。</li>
+<li>大佬可以去小厂享受红利，应届生不行。</li>
+</ul>
+</li>
+</ul>
+<p>每个人的价格定义：公司背书 + 项目履历 + 职位类型。</p>
+<h3 id="岗位性质"><a href="#岗位性质" class="headerlink" title="岗位性质"></a>岗位性质</h3><p>岗位的选择：<strong>越核心，门槛越高</strong>越好。</p>
+<ul>
+<li>技术 &gt; 产品 &gt; 运营 &gt; 行政 &gt; 销售</li>
+</ul>
+<p>岗位要和公司加在一起选择。如果从事直播，那么斗鱼&gt;&gt;百度。</p>
+<h3 id="直属领导的SB程度"><a href="#直属领导的SB程度" class="headerlink" title="直属领导的SB程度"></a>直属领导的SB程度</h3><p>老板跟你的利益是冲突的。只有榨取你的价值，才能铸就他晋升的阶梯。</p>
+<p>核心两个点（老板是否值得追随）：</p>
+<ol>
+<li>许下的承诺能否兑现</li>
+<li>有没有经常用梦想和荣誉给你洗脑（但是不给钱）<ul>
+<li>谁的梦想是上班？简直是脑子有病。</li>
+</ul>
+</li>
+</ol>
+<p>没有你，公司一样转。但是没有你，家庭就会面临很大的问题。</p>
+<h3 id="薪酬"><a href="#薪酬" class="headerlink" title="薪酬"></a>薪酬</h3><p>问一下公司对于应届生的培养有什么样子的规划。</p>
+<ul>
+<li>最好能够给出一个具体的案例。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>没有议价权，就没有主动权。</p>
+]]></content>
+      <categories>
+        <category>随手记</category>
       </categories>
   </entry>
   <entry>
@@ -3647,150 +3846,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Holy</category>
         <category>References</category>
         <category>郭振游门徒训练</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>聆听音乐答案(第五版)</title>
-    <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己再做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
-<ol>
-<li><a href="https://book.douban.com/review/6404967/" target="_blank" rel="noopener">豆瓣网友(自由民)贡献</a></li>
-<li><a href="http://college.cengage.com/site_engine/#1439083533" target="_blank" rel="noopener">出版社的官方网站</a>（题目不全，但是准）</li>
-</ol>
-<p>音乐部分是来自于喜马拉雅的专辑，大家可以自行搜索。</p>
-<p>下面<strong>含标题的是自己做过并检查一遍的</strong>，不含标题的是直接复制黏贴，属于【没有灵魂的答案】</p>
-<ul>
-<li>有点忧伤…做到练习18的时候才想起来要好好记笔记…</li>
-</ul>
-<a id="more"></a>
-
-<h1 id="答案部分"><a href="#答案部分" class="headerlink" title="答案部分"></a>答案部分</h1><p>1 bbacbaa bacabb bbcbbab</p>
-<p>2 3/4, 2/4, 2/4, 3/4, 2/4, 3/4, 3/4, 2/4, 3/4, 2/4</p>
-<p>3 ccabcacaab</p>
-<p>4 大小小小大 大大小大小</p>
-<p>5 1:14 1:30 1:48 1:56 2:04 2:21 2:37 2:45 2:53 3:10</p>
-<p>6 16,8,8,16,16,8,8,16,16,16</p>
-<p>7 ccaaa adbcb</p>
-<p>8 0:09, 0:12, 0:20, 0:34, 0:39, 0:44, 0:58, 1:02, 1:09, b</p>
-<h3 id="聆听练习9"><a href="#聆听练习9" class="headerlink" title="聆听练习9"></a>聆听练习9</h3><h5 id="关于音色的整理"><a href="#关于音色的整理" class="headerlink" title="关于音色的整理"></a>关于音色的整理</h5><blockquote>
-<p>小号：听了想打人那种。</p>
-<p>法国号：有一种金属共鸣，音域比长号高一点</p>
-<p>长号：音域低一点的小号，音色脏脏的。</p>
-<p>大号：最低音域的铜管。</p>
-<p>大管：最低音域的木管。木管按起来会有咔咔的按键音。大管的共鸣比大号更好，有亮亮的音色。</p>
-<p>长号和法国号的关系有点像单簧管和双簧管。后者音色亮一点/共鸣更好，而前者比较闷。</p>
-<p>有人说单簧管声音更诡异/吓人，双簧管声音像鸭子/鹅。</p>
-<p>长笛——音域宽</p>
-<p>大提琴——音域不高不低，本来想选中提琴，发现没有</p>
-</blockquote>
-<p>【单簧管】—— 开始选了法国号，仔细一听确实沉闷，并且有按键声。</p>
-<p>低音提琴——音域过低</p>
-<p>双簧管——比较刺耳的木管</p>
-<p>【大管】——开始选了单簧管，错在了音域/以及单簧管开始没选</p>
-<p>长号 —— 铜管 &amp; 音域</p>
-<p>【法国号】—— 开始选了大管/排除法选的</p>
-<p>小提琴</p>
-<p>大号—— 沉闷 &amp; 音色</p>
-<h3 id="聆听练习10"><a href="#聆听练习10" class="headerlink" title="聆听练习10"></a>聆听练习10</h3><p>小号 小号 </p>
-<p>低音提琴 单簧管 单簧管</p>
-<p>大管 单簧管</p>
-<p>长笛 长笛</p>
-<p>法国号 长笛 长笛</p>
-<p>双簧管 双簧管</p>
-<p>大提琴 双簧管 双簧管</p>
-<p>小提琴 中提琴 小提琴</p>
-<blockquote>
-<p>2 6 开始搞混了单双簧管… 感觉还是沉闷和清亮的区别</p>
-<p>7 8 搞混了大中提琴 还是不知道咋区分</p>
-</blockquote>
-<h3 id="聆听练习11"><a href="#聆听练习11" class="headerlink" title="聆听练习11"></a>聆听练习11</h3><p>大管 长笛</p>
-<p>大号 法国号 小号</p>
-<p>长笛 单簧管</p>
-<p>小号 长号</p>
-<p>小提琴 中提琴 大提琴</p>
-<blockquote>
-<p>2 4 搞混了大号和长号，仔细一听还是音域的区别，2更低一点</p>
-</blockquote>
-<p>长笛 大管</p>
-<p>长笛 大管 </p>
-<p>小号 大号</p>
-<p>小提琴 大提琴</p>
-<p>12 单，复，单，主，单，复，复，单，复，主。</p>
-<p>13 A,B,C,B,A 曲式结构为：ABCBA<br>     A,B 曲式结构为：AB<br>     A,B,A 曲式结构为：ABA<br>     A,B,A 曲式结构为：ABA<br>     A,B 曲式结构为：AB</p>
-<p>14 复，圣，复，圣，复，圣，复，圣，复</p>
-<p>15 0:46， 1:09， 1:33， 1:40， bbabcc</p>
-<p>16 bcaca ccaab</p>
-<p>17 bcaaa bcaab</p>
-<h3 id="聆听练习18"><a href="#聆听练习18" class="headerlink" title="聆听练习18"></a>聆听练习18</h3><p>斯特罗齐《我想死》BBAAB BABBB</p>
-<blockquote>
-<p>1 应该是1765的走势</p>
-<p>2 我觉得有三个，1-5-6-5 但是没这个选项，所以只好选了四个。</p>
-<ul>
-<li>喔！原来是中途出现了一个4</li>
-</ul>
-<p>5 出现了一个 17645的走势（为啥多了一拍）</p>
-</blockquote>
-<h3 id="聆听练习19"><a href="#聆听练习19" class="headerlink" title="聆听练习19"></a>聆听练习19</h3><p>珀塞尔《当我命丧黄泉》BAAAB DDBCB</p>
-<blockquote>
-<p>6 这题开始蒙了，怎么也没听出来是几遍，女声一出来确实听不见低音了。后来往上翻了翻才发现原来有固定低音的乐谱。走势应该是先从6逐个半音降到3然后一个123结束。因为前面那一通降感觉不是规律的速度，所以只听123就好了。每听到一个123，就相当于走了一遍</p>
-<p>7 我认为唱了三次那一段旋律…可惜没有这个答案。固定低音部分，听到了四个123。</p>
-<p>10 </p>
-<ul>
-<li>Bessie Smith <a href="https://www.youtube.com/watch?v=dYsGYWQT690" target="_blank" rel="noopener">《Lost Your Head Blues》</a> 没听出来有固定低音….</li>
-<li>Eminem <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w" target="_blank" rel="noopener">《The Real Slim Shady》</a> 走势应该是 (6)712 21 17 36</li>
-</ul>
-</blockquote>
-<h3 id="聆听练习20"><a href="#聆听练习20" class="headerlink" title="聆听练习20"></a>聆听练习20</h3><p>维瓦尔第《春》CAABB ABCBC</p>
-<h3 id="聆听练习21"><a href="#聆听练习21" class="headerlink" title="聆听练习21"></a>聆听练习21</h3><p>巴赫 《G小调管风琴赋格曲》 BAAAB CABDA</p>
-<blockquote>
-<p>中间主题陈述的时候有一段从小调变成大调，难以听出</p>
-</blockquote>
-<h3 id="聆听练习22"><a href="#聆听练习22" class="headerlink" title="聆听练习22"></a>聆听练习22</h3><p>巴赫 《醒来吧，一个声音在召唤》 BBDCA ABABD</p>
-<blockquote>
-<p>感觉有的部分确实加了木管？但是听不太清楚，感觉没有一个完整的声部</p>
-<p>这个歌Spotify上没找到一模一样的。很多弦乐版的拖拖拉拉，根本不想醒来。</p>
-<p>两个名字：Awake, a voice is calling / Sleepers, awake</p>
-</blockquote>
-<h3 id="聆听练习23"><a href="#聆听练习23" class="headerlink" title="聆听练习23"></a>聆听练习23</h3><p>亨德尔 《弥赛亚》“哈利路亚”合唱  BACCC CBBBD</p>
-<h3 id="聆听练习24"><a href="#聆听练习24" class="headerlink" title="聆听练习24"></a>聆听练习24</h3><p>莫扎特 《费加罗的婚礼》“如果你想跳舞”  BCADA ABAAE</p>
-<blockquote>
-<p>9 上下乐句的对称结构（Antecedent - Consequent Phrase）指的是一句提问&amp;一句回答的对照形式。先制造不太和谐的张力，然后消解变为和谐。如果这么理解的话，最后收尾的和弦进行是4-5-1，应该算是。</p>
-</blockquote>
-<h3 id="聆听练习25"><a href="#聆听练习25" class="headerlink" title="聆听练习25"></a>聆听练习25</h3><p>莫扎特 《唐璜》序曲  BCAAB BBBBC</p>
-<blockquote>
-<p>这个练习的核心在于背住/写下来每个部分的主要旋律，方便辨认。</p>
-<p>主部：24326 …4321 这个24326是主部的特点</p>
-<p>副部：56655 51555 <strong>54321 32176</strong> 这里的阶梯五连降是副部的特点</p>
-<p>结束部： 321 …. 321</p>
-<p>连接部 21765432… 阶梯八连降是连接部的特点</p>
-</blockquote>
-<p><strong>下一个该做这里了</strong></p>
-<p>26 babac acccd</p>
-<p>27 cbbac abcaa</p>
-<p>28 dcbbc abbab</p>
-<p>29 cacab aabcb</p>
-<p>30 cbbbc caabd</p>
-<p>31 MBBMBMMMBB</p>
-<p>32 baaaa babca</p>
-<p>33 ccaaa bbaaa</p>
-<p>34 aadbc abbca</p>
-<p>35 abcaa cbcbb</p>
-<p>36 bbdbb bcaba</p>
-<p>37 caaaa bbbdd</p>
-<p>38 cbbab dcaaa</p>
-<p>39 ccabb cabaa</p>
-<p>40 bbbab bbcbb</p>
-<p>41 bbbaa cdaba</p>
-<p>42 是是是否否否是否是 更多</p>
-<p>43 ehbgaffdac</p>
-<p>44 dabbb cbaca</p>
-<p>45 caaac abbab</p>
-<p>46 abbca abcab</p>
-<p>47 bbaba bbaaa</p>
-]]></content>
-      <categories>
-        <category>古典音乐</category>
-        <category>聆听音乐</category>
       </categories>
   </entry>
 </search>
