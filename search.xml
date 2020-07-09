@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo心得体会</title>
+    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
+<a id="more"></a>
+
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
+<p>部署Hexo + GithubPages</p>
+</blockquote>
+<ul>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">参考1</a></li>
+<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/" target="_blank" rel="noopener">参考2</a></li>
+</ul>
+<blockquote>
+<p>如何只显示缩略内容？</p>
+</blockquote>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">在md文件中加入<span class="xml"><span class="comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Bugs解决"><a href="#Bugs解决" class="headerlink" title="Bugs解决"></a>Bugs解决</h1><p><strong>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</strong></p>
+<p>最后的解决方法是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ rm -rf .deploy</span><br><span class="line">$$ hexo generate</span><br><span class="line">$$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>关于博文发布</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ hexo clean</span><br><span class="line">$$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</strong></p>
+<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
+<p><strong>搜索引擎无法搜索到我的博客</strong></p>
+<ul>
+<li>Google：<a href="https://liwengo.top/2019/10/11/google-search-console/" target="_blank" rel="noopener">李子园的解决方法</a></li>
+<li>百度：<a href="https://zpjiang.me/2020/01/15/let-baidu-index-github-page/" target="_blank" rel="noopener">zpjiang的解决办法</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java心得</title>
     <url>/2020/07/02/Java%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>开始学这个是因为普林斯顿的算法，第一课我看了半天，结果也没学写出来。气馁并放弃。</p>
@@ -1372,6 +1417,300 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
       </categories>
   </entry>
   <entry>
+    <title>SQL心得</title>
+    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
+<a id="more"></a>
+
+
+
+<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
+<li>拿到某一列最大值的那一行数据</li>
+</ul>
+<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
+<li><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum" target="_blank" rel="noopener">首字母是元音</a><ul>
+<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
+<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
+</ul>
+</li>
+</ol>
+<p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-1/problem" target="_blank" rel="noopener">打印小星星</a></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="built_in">number</span> = <span class="number">21</span>; <span class="comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">repeat</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span> - <span class="number">1</span>) <span class="keyword">from</span> information_schema.tables<span class="comment">/*内置table可供遍历*/</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @COUNTER <span class="built_in">INT</span> = <span class="number">20</span>;</span><br><span class="line">WHILE @COUNTER &gt;= 0</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    PRINT <span class="keyword">REPLICATE</span>(<span class="string">'* '</span>, @COUNTER)</span><br><span class="line">    <span class="keyword">SET</span> @COUNTER = @COUNTER - <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<li>Statement always end in a semi-colon;</li>
+<li>注释一般用/**/</li>
+<li>Command 一般都用大写来表示</li>
+<li>character在这里面被称为TEXT：（四种常见格式：INTEGER, TEXT, DATE, REAL）</li>
+<li>missing value 用 NULL 表示</li>
+<li>Line breaks don’t mean anything specific in SQL. We could write this entire query in one line, and it would run just fine.</li>
+<li><code>AS</code> is a keyword in SQL that allows you to <em>rename</em> a column or table using an alias. 跟sas的label一样，只改变输出不改变原数据</li>
+<li><code>DISTINCT</code> is used to return unique values in the output. It filters out all duplicate values in the specified column(s).</li>
+<li>判断等号的方式就是一个等于号</li>
+<li>FROM some_table a 可以用a来指代这个table</li>
+<li>如果没有数据的时候要返回NULL 可以用双重SELECT 也可以把UNION SELECT NULL放在语句中</li>
+<li>DROP TABLE xxx 彻底删除数据库</li>
+<li>IN/NOT IN 判断属于情况</li>
+<li>DELETE可以直接删除某一行观测值</li>
+<li>关于时间的函数：<strong>TO_DAYS(wt1.DATE)</strong> return the number of days between from year 0 to date DATE, <strong>subdate</strong>(w1.Date, k)可以把日期往前调k天</li>
+<li>mod(id,2)=0 偶数 还可以用id % 2 =0</li>
+</ul>
+<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
+<ul>
+<li>任意两行都不具有相同的主键值；</li>
+<li>每一行都必须具有一个主键值（主键列不允许NULL值）；</li>
+<li>主键列中的值不允许修改或更新；</li>
+<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）。</li>
+</ul>
+<p>注释用#或者/**/</p>
+<p>不等于可以用&lt;&gt;</p>
+<p>Between and 是包含一个闭集</p>
+<p>在SELECT语句中，子查询总是从内向外处理。在处理上面的SELECT语句时，DBMS实际上执行了两个操作。</p>
+<p>作为子查询的SELECT语句只能查询单个列。企图检索多个列将返回错误。</p>
+<p>if(判断，如果真，如果假)</p>
+<p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
+<p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
+<p>information_schema.tables 是内置的一个table，有61行</p>
+<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
+<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
+age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
+<li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
+<li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
+<li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
+<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
+<li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
+<li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
+<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
+<li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
+<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
+<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
+<li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
+<li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
+<li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
+</ul>
+<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
+<ul>
+<li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
+<li>唯一约束列可包含NULL值。 </li>
+<li>唯一约束列可修改或更新。 </li>
+<li>唯一约束列的值可重复使用。 </li>
+<li>与主键不一样，唯一约束不能用来定义外键。</li>
+</ul>
+<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
+<ul>
+<li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
+<li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
+<li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
+<li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
+<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
+<li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
+<li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
+<li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
+<li>可以用AND/OR 来连接多个condition</li>
+<li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
+<li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
+<li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
+<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
+<li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
+<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
+<li>COUNT(1) 可以辅助分组计数</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> Country <span class="keyword">IN</span> (<span class="string">'Germany'</span>,<span class="string">'UK'</span>); <span class="comment">#IN 可以从多个元素中找东西</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
+<p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
+<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
+<p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">50</span> <span class="keyword">PERCENT</span> * <span class="keyword">FROM</span> Customers; <span class="comment">#可以选出前50%的数据</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
+<p>‘+’ 或者|| 可以用来拼接字符</p>
+<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
+<p>LEFT/RIGHT 返回最左（右）面的字符</p>
+<p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
+<p>PI()返回圆周率</p>
+<p>GRESTEST 返回最大值</p>
+<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
+<li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
+<li>SUM/MAX/MIN/AVG/ROUND</li>
+<li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
+<li>在用于文本数据时，MAX()返回按该列排序后的最后一行。MAX()函数忽略列值为NULL的行。</li>
+<li>如果指定列名，则DISTINCT只能用于COUNT()。DISTINCT不能用于COUNT(*)。类似地，DISTINCT必须使用列名，不能用于计算或表达式。</li>
+<li>GROUP BY 按照某一指标分类。后面可以接数字，表示按照SELECT语句中第几个column来分组</li>
+<li>When we want to limit the results of a query based on an aggregate property, use <code>HAVING</code>. <code>HAVING</code> statement always comes after <code>GROUP BY</code>, but before <code>ORDER BY</code> and <code>LIMIT</code>. 事实上，目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是，WHERE过滤行，而HAVING过滤分组。</li>
+<li>在指定别名以包含某个聚集函数的结果时，不应该使用表中实际的列名。虽然这样做也算合法，但许多SQL实现不支持，可能会产生模糊的 错误消息。</li>
+</ul>
+<p>GROUP BY子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组。</p>
+<p>GROUP BY子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在GROUP BY子 句中指定相同的表达式。不能使用别名。</p>
+<p>大多数SQL实现不允许GROUP BY列带有长度可变的数据类型</p>
+<p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
+<p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
+<p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
+<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
+<p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
+<p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
+<p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
+<p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
+<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
+<p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
+<p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
+<p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
+<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
+<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
+<li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
+<li>CROSS JOIN 返回所有可能种排列组合</li>
+<li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
+<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
+</ul>
+<p>##Constrains</p>
+<p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
+<ul>
+<li><p>CREATE TABLE celebs (</p>
+<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
+</li>
+<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
+</li>
+<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
+</li>
+<li><p><code>NOT NULL</code> columns must have a value. </p>
+</li>
+<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
+</li>
+<li></li>
+</ul>
+<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
+<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
+<ul>
+<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
+<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
+AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
+       dep_day_of_week,
+        dep_date,
+        SUM(distance) AS flight_distance
+   FROM flights
+  GROUP BY 1,2,3
+) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
+</ul>
+<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
+<ol>
+<li>A row is processed in the outer query. </li>
+<li>Then, for that particular row in the outer query, the subquery is executed.</li>
+</ol>
+<ul>
+<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
+</ul>
+<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
+<ul>
+<li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
+<li>INTERSECT 连接两个SELECT，只包含相同的行</li>
+<li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
+</ul>
+<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
+<li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
+<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
+</ul>
+<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
+<ol>
+<li>Date: YYYY-MM-DD</li>
+<li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
+</ol>
+<ul>
+<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
+</li>
+<li><p>YEAR(xxx)来返回年份</p>
+</li>
+<li><p>获取系统日期：CURRENT_DATE()</p>
+</li>
+</ul>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>SELECT (number1 + number2) 直接四则运算</li>
+<li>SELECT CAST(number1 AS REAL) 转换格式</li>
+<li>SELECT ROUND(number, precision) 取整</li>
+<li>MAX/MIN</li>
+</ul>
+<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
+<li>A || ‘ ’ || B 用空格连接A和B</li>
+<li>REPLACE(string,from_string,to_string) 字符串替换</li>
+</ul>
+<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
+<p>为什么要用视图：</p>
+<ul>
+<li>重用SQL语句。</li>
+<li>简化复杂的SQL操作。</li>
+<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
+<li>使用表的一部分而不是整个表。 </li>
+<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
+<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
+</ul>
+<p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
+<p>视图常见用途：</p>
+<ol>
+<li>利用视图简化复杂的联结</li>
+<li>用视图重新格式化检索出的数据</li>
+<li>用视图过滤不想要的数据</li>
+<li>使用视图与计算字段</li>
+</ol>
+<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
+<p>有点难 不知道这个具体是干嘛的</p>
+<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
+<p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
+<ul>
+<li>事务（transaction）指一组SQL语句； </li>
+<li>回退（rollback）指撤销指定SQL语句的过程； </li>
+<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
+<li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
+</ul>
+<p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
+<p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
+<p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
+<p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
+<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
+<p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
+<ul>
+<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
+<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
+<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
+<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
+<li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>SQL</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Tableau心得</title>
+    <url>/2020/07/02/Tableau%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为了628的presentation，后来741的report也用了。简单画个小图还是挺美观的。教育版免费。</p>
+<a id="more"></a>
+
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>添加WMS server地图（类似于谷歌地图）：<a href="http://ows.terrestris.de/osm/service" target="_blank" rel="noopener">http://ows.terrestris.de/osm/service</a>?</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Tableau</category>
+      </categories>
+  </entry>
+  <entry>
     <title>R心得</title>
     <url>/2020/07/02/R%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>老本行，学。</p>
@@ -2039,297 +2378,65 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
       </categories>
   </entry>
   <entry>
-    <title>Tableau心得</title>
-    <url>/2020/07/02/Tableau%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>为了628的presentation，后来741的report也用了。简单画个小图还是挺美观的。教育版免费。</p>
+    <title>The Reason for God</title>
+    <url>/2020/07/02/The-Reason-for-God/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>《The Reason for God》，中文版《为何是他》是提摩太·凯勒（Timothy Keller）写的一本<strong>信仰答疑解惑书</strong>。其中涉及到了很多“敏感问题”，比如：“为什么上帝会允许苦难”、“为什么充满爱的上帝会送人去地狱” 等等。初读时惊讶的合不拢嘴，连连拍手。中期时开始觉得理性的思考与感性的信心相违背，开始抵制这本书。最后决定把它读完，作为知识来收获，而不是信仰来全盘接受。</p>
 <a id="more"></a>
 
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>添加WMS server地图（类似于谷歌地图）：<a href="http://ows.terrestris.de/osm/service" target="_blank" rel="noopener">http://ows.terrestris.de/osm/service</a>?</p>
+<h1 id="前五章"><a href="#前五章" class="headerlink" title="前五章"></a>前五章</h1><ul>
+<li>If morality is relative, why isn’t social justice as well?</li>
+<li>A faith without some doubts is like a human body without any antibodies. 我们需要对抗来自外界的病毒，比如说他人的质疑，否则我们的信仰可能会在一夜之间崩塌</li>
+<li>Believers should learn to look for reasons behind their faith.</li>
+<li>All doubts, however skeptical or cynical they may seen, are really a set of alternate belief.</li>
+<li>Leap of faith. 尽管对事情的后果无把握，但还是以最大的信念去进行</li>
+<li>People should have doubts about their doubts.</li>
+</ul>
+<p>2020/5/10 周二<br>基督徒被接受不是因为做的比其他人好，而是耶稣担当了我们的罪过。其他宗教提倡道德提升，就会天然的对那些不信/不做的人，产生自己更高级的感觉。所以成为基督徒之后，我们正常来说不会觉得自己越来越好，而是越来越知道自己的不足，产生优越感也就无从谈起了。</p>
+<p>2020/5/12 周二<br>未来的新天新地不仅是一个什么都有的美好世界，而是把我们所有过去的上海，痛苦全部翻转，并且变成更大的喜悦。更像是把水变成酒而不是直接给你一杯好喝的酒。</p>
+<p>2020年5月14日</p>
+<ul>
+<li>“You cannot go on ‘seeing through’ things for ever. The whole point of seeing through something is to see something through it. It is good that the window should be transparent, because the street or garden beyond it is opaque. How if you saw through the garden too? It is no use trying to ‘see through’ first principles. If you see through everything, then everything is transparent. But a wholly transparent world is an invisible world. To ‘see through’ all things is the same as not to see.”</li>
+<li>不存在一种文化能够包容所有文化，多元文化支持所有其他的文化，但他本身也是一种文化。如果我的文化有所支持而有所不支持，那我的文化就不同于多元文化，从而不存在一种文化能够包容所有文化。</li>
+<li>想象一下LGBT的主席突然说：我认为LGBT是有罪的。同时，一个反对同性恋组织的主席突然觉得LGBT也不错。两个人的结局应该会很类似。所以没有不是什么inclusive/exclusive的问题。</li>
+<li>我们既然不能用exclusive/inclusive来判断组织的好坏，怎么判断？我们应该看他们是如何对待不信的群体的。是以慈爱，谦卑来爱他们，还是攻击对抗他们？（难以想象LGBT的人会真的爱双性恋的人，并抱有一个谦卑的心）</li>
+</ul>
+<p>2020年5月15日</p>
+<ul>
+<li>Christianity helped Africans to become renewed Africans, not re-made Europeans. 相反的，现在的世俗生活，个人主义与不相信超自然的文化对非洲人来说是deconstructive的。</li>
+<li>这里不存在一个什么基督文化，像伊斯兰文化那样。基督文化可以融入到我们自己的文化中，补全和理解我们自己的文化。</li>
+</ul>
+<p>2020年5月16日</p>
+<ul>
+<li>The church is a hospital for sinners, not a museum for saints. 所以如果你看到一个基督徒做的不好，比非信徒差劲，很可能他一开始更差。毕竟医院里的病人身体状况还是比正常人差。</li>
+<li>他把法利赛人等追求道德提升的人称为fanatics</li>
+<li>It was the Bible-believing religious establishment who put Jesus to death. It was the church, not the world, who crucified Christ.</li>
+<li>法利赛人的问题在于，渴望通过很高的道德要求，来获得权利//能力，从而比别人优秀，甚至可以和基督比肩。这会导致他们越来越在乎外表。</li>
+<li>不抢钱包，可能是因为如果抢钱包的事被别人知道了之后名誉损失很大（honor-shame society），也可能是因为想到了被抢钱包带来的伤害。</li>
+<li>Christianity changed those honor-based cultures in which pride was valued rather than humility, dominance rather than service, courage rather than peaceableness, glory rather than modesty, loyalty to one’s own tribe rather than equal respect for all.</li>
+<li>Instead of trying to shape our desires to fit reality, we now seek to control and shape reality to fit our desires. 古人和现在人的区别。</li>
+<li>It seems to our mind unfair, therefore, that we should determine that it is all right to have sex outside of marriage and later discovered that there is a God who is going to punish us for that.</li>
+<li>In one of my after-service discussions a woman told me that the very idea of a judging God was offensive. I said, why aren’t you offended by the idea of a forgiving God ? She looked puzzled.</li>
+<li>For the sake of argument, let’s imagine that Christianity is not a product of any one culture but is actually transcultural truth of God. if that were the case we would expect that it would contradict and offend every human culture at some point, because human cultures are ever-changing and imperfect. if Christianity were the truth it would have to be offending and correcting your thinking at some place.</li>
+<li>If you love a person and you see someone ruining them—even they themselves—you get angry.</li>
+<li>Anger is not the opposite of love, hate is. And the final form of hate is indifference</li>
+<li>If I don’t believe that there is a God who will eventually put all things right, I will take up the word and will be sucked into the endless vortex of retaliation. only if I am sure that there is a God who will right all wrongs and settle all accounts perfectly do I have the power to refrain.</li>
+<li>Hell begins with a gambling mood, always complaining, always blaming others… but you are still distinct from it. you may even criticize it in yourself and wish you could stop it. but there may come a day when you can no longer. then they will be no YOU left to criticize the mood or even to enjoy it, but just the grumble itself going on forever like a machine. it is not a question of God sending us to hell. In each of us, there is something growing, which will BE HELL unless it is nipped in the bud.</li>
+</ul>
+<h1 id="第六章-Science-Has-Disproved-Christianity"><a href="#第六章-Science-Has-Disproved-Christianity" class="headerlink" title="第六章 Science Has Disproved Christianity"></a>第六章 Science Has Disproved Christianity</h1><p>他提到了不同的章节我们读的时候要考虑体裁。比如路加福音（eyewitnesses）就可以100%当成历史来读，而诗篇就要当成诗歌来读。当我们面对创世纪1&amp;2章的时候，就像士师记4&amp;5、出埃及记14&amp;15那样，一章是历史而一章是赞歌。他认为创世纪1是赞歌而2是历史。</p>
+<blockquote>
+<p>他们见了耶稣就拜他。然而还有人疑惑。《马太福音28:17》</p>
+</blockquote>
+<p>那些门徒，亲眼看到了耶稣的复活，甚至还触摸到了身体，有的人还存留疑惑。这让我想起了拉撒路的故事，亚伯拉罕对那个富人说，如果你的弟兄们是不信的人，那么即使看到了神迹也不会相信</p>
+<p>关于神迹miracle，他举了个例子。比如耶稣不会做这种magic tricks：</p>
+<blockquote>
+<p>See that tree over there? Watch me make it burst into flames!</p>
+</blockquote>
+<p>相反，他用他的能力去救病人，喂饱肚子饿的人，让死人复活。现如今的人们认为的神迹大多属于上面的magic tricks，是对抗Nature Order。但是耶稣行的神迹是恢复Nature Order。</p>
 ]]></content>
       <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Tableau</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SQL心得</title>
-    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
-<a id="more"></a>
-
-
-
-<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
-<li>拿到某一列最大值的那一行数据</li>
-</ul>
-<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
-<li><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum" target="_blank" rel="noopener">首字母是元音</a><ul>
-<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
-<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
-</ul>
-</li>
-</ol>
-<p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-1/problem" target="_blank" rel="noopener">打印小星星</a></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="built_in">number</span> = <span class="number">21</span>; <span class="comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">repeat</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span> - <span class="number">1</span>) <span class="keyword">from</span> information_schema.tables<span class="comment">/*内置table可供遍历*/</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @COUNTER <span class="built_in">INT</span> = <span class="number">20</span>;</span><br><span class="line">WHILE @COUNTER &gt;= 0</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    PRINT <span class="keyword">REPLICATE</span>(<span class="string">'* '</span>, @COUNTER)</span><br><span class="line">    <span class="keyword">SET</span> @COUNTER = @COUNTER - <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
-<li>Statement always end in a semi-colon;</li>
-<li>注释一般用/**/</li>
-<li>Command 一般都用大写来表示</li>
-<li>character在这里面被称为TEXT：（四种常见格式：INTEGER, TEXT, DATE, REAL）</li>
-<li>missing value 用 NULL 表示</li>
-<li>Line breaks don’t mean anything specific in SQL. We could write this entire query in one line, and it would run just fine.</li>
-<li><code>AS</code> is a keyword in SQL that allows you to <em>rename</em> a column or table using an alias. 跟sas的label一样，只改变输出不改变原数据</li>
-<li><code>DISTINCT</code> is used to return unique values in the output. It filters out all duplicate values in the specified column(s).</li>
-<li>判断等号的方式就是一个等于号</li>
-<li>FROM some_table a 可以用a来指代这个table</li>
-<li>如果没有数据的时候要返回NULL 可以用双重SELECT 也可以把UNION SELECT NULL放在语句中</li>
-<li>DROP TABLE xxx 彻底删除数据库</li>
-<li>IN/NOT IN 判断属于情况</li>
-<li>DELETE可以直接删除某一行观测值</li>
-<li>关于时间的函数：<strong>TO_DAYS(wt1.DATE)</strong> return the number of days between from year 0 to date DATE, <strong>subdate</strong>(w1.Date, k)可以把日期往前调k天</li>
-<li>mod(id,2)=0 偶数 还可以用id % 2 =0</li>
-</ul>
-<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
-<ul>
-<li>任意两行都不具有相同的主键值；</li>
-<li>每一行都必须具有一个主键值（主键列不允许NULL值）；</li>
-<li>主键列中的值不允许修改或更新；</li>
-<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）。</li>
-</ul>
-<p>注释用#或者/**/</p>
-<p>不等于可以用&lt;&gt;</p>
-<p>Between and 是包含一个闭集</p>
-<p>在SELECT语句中，子查询总是从内向外处理。在处理上面的SELECT语句时，DBMS实际上执行了两个操作。</p>
-<p>作为子查询的SELECT语句只能查询单个列。企图检索多个列将返回错误。</p>
-<p>if(判断，如果真，如果假)</p>
-<p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
-<p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
-<p>information_schema.tables 是内置的一个table，有61行</p>
-<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
-<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
-age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
-<li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
-<li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
-<li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
-<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
-<li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
-<li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
-<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
-<li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
-<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
-<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
-<li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
-<li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
-<li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
-</ul>
-<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
-<ul>
-<li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
-<li>唯一约束列可包含NULL值。 </li>
-<li>唯一约束列可修改或更新。 </li>
-<li>唯一约束列的值可重复使用。 </li>
-<li>与主键不一样，唯一约束不能用来定义外键。</li>
-</ul>
-<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
-<ul>
-<li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
-<li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
-<li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
-<li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
-<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
-<li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
-<li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
-<li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
-<li>可以用AND/OR 来连接多个condition</li>
-<li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
-<li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
-<li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
-<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
-<li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
-<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
-<li>COUNT(1) 可以辅助分组计数</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> Country <span class="keyword">IN</span> (<span class="string">'Germany'</span>,<span class="string">'UK'</span>); <span class="comment">#IN 可以从多个元素中找东西</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
-<p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
-<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
-<p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">50</span> <span class="keyword">PERCENT</span> * <span class="keyword">FROM</span> Customers; <span class="comment">#可以选出前50%的数据</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
-<p>‘+’ 或者|| 可以用来拼接字符</p>
-<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
-<p>LEFT/RIGHT 返回最左（右）面的字符</p>
-<p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
-<p>PI()返回圆周率</p>
-<p>GRESTEST 返回最大值</p>
-<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
-<li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
-<li>SUM/MAX/MIN/AVG/ROUND</li>
-<li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
-<li>在用于文本数据时，MAX()返回按该列排序后的最后一行。MAX()函数忽略列值为NULL的行。</li>
-<li>如果指定列名，则DISTINCT只能用于COUNT()。DISTINCT不能用于COUNT(*)。类似地，DISTINCT必须使用列名，不能用于计算或表达式。</li>
-<li>GROUP BY 按照某一指标分类。后面可以接数字，表示按照SELECT语句中第几个column来分组</li>
-<li>When we want to limit the results of a query based on an aggregate property, use <code>HAVING</code>. <code>HAVING</code> statement always comes after <code>GROUP BY</code>, but before <code>ORDER BY</code> and <code>LIMIT</code>. 事实上，目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是，WHERE过滤行，而HAVING过滤分组。</li>
-<li>在指定别名以包含某个聚集函数的结果时，不应该使用表中实际的列名。虽然这样做也算合法，但许多SQL实现不支持，可能会产生模糊的 错误消息。</li>
-</ul>
-<p>GROUP BY子句可以包含任意数目的列，因而可以对分组进行嵌套，更细致地进行数据分组。</p>
-<p>GROUP BY子句中列出的每一列都必须是检索列或有效的表达式（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在GROUP BY子 句中指定相同的表达式。不能使用别名。</p>
-<p>大多数SQL实现不允许GROUP BY列带有长度可变的数据类型</p>
-<p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
-<p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
-<p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
-<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
-<p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
-<p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
-<p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
-<p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
-<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
-<p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
-<p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
-<p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
-<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
-<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
-<li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
-<li>CROSS JOIN 返回所有可能种排列组合</li>
-<li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
-<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
-</ul>
-<p>##Constrains</p>
-<p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
-<ul>
-<li><p>CREATE TABLE celebs (</p>
-<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
-</li>
-<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
-</li>
-<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
-</li>
-<li><p><code>NOT NULL</code> columns must have a value. </p>
-</li>
-<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
-</li>
-<li></li>
-</ul>
-<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
-<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
-<ul>
-<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
-<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
-AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
-       dep_day_of_week,
-        dep_date,
-        SUM(distance) AS flight_distance
-   FROM flights
-  GROUP BY 1,2,3
-) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
-</ul>
-<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
-<ol>
-<li>A row is processed in the outer query. </li>
-<li>Then, for that particular row in the outer query, the subquery is executed.</li>
-</ol>
-<ul>
-<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
-</ul>
-<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
-<ul>
-<li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
-<li>INTERSECT 连接两个SELECT，只包含相同的行</li>
-<li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
-</ul>
-<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
-<li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
-<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
-</ul>
-<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
-<ol>
-<li>Date: YYYY-MM-DD</li>
-<li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
-</ol>
-<ul>
-<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
-</li>
-<li><p>YEAR(xxx)来返回年份</p>
-</li>
-<li><p>获取系统日期：CURRENT_DATE()</p>
-</li>
-</ul>
-<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
-<li>SELECT (number1 + number2) 直接四则运算</li>
-<li>SELECT CAST(number1 AS REAL) 转换格式</li>
-<li>SELECT ROUND(number, precision) 取整</li>
-<li>MAX/MIN</li>
-</ul>
-<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
-<li>A || ‘ ’ || B 用空格连接A和B</li>
-<li>REPLACE(string,from_string,to_string) 字符串替换</li>
-</ul>
-<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
-<p>为什么要用视图：</p>
-<ul>
-<li>重用SQL语句。</li>
-<li>简化复杂的SQL操作。</li>
-<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
-<li>使用表的一部分而不是整个表。 </li>
-<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
-<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
-</ul>
-<p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
-<p>视图常见用途：</p>
-<ol>
-<li>利用视图简化复杂的联结</li>
-<li>用视图重新格式化检索出的数据</li>
-<li>用视图过滤不想要的数据</li>
-<li>使用视图与计算字段</li>
-</ol>
-<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
-<p>有点难 不知道这个具体是干嘛的</p>
-<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
-<p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
-<ul>
-<li>事务（transaction）指一组SQL语句； </li>
-<li>回退（rollback）指撤销指定SQL语句的过程； </li>
-<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
-<li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
-</ul>
-<p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
-<p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
-<p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
-<p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
-<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
-<p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
-<ul>
-<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
-<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
-<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
-<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
-<li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>SQL</category>
+        <category>Holy</category>
+        <category>References</category>
+        <category>The Reason for God</category>
       </categories>
   </entry>
   <entry>
@@ -2451,118 +2558,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
         <category>Study</category>
         <category>Courses</category>
         <category>博弈论</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hexo心得体会</title>
-    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
-<a id="more"></a>
-
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
-<p>部署Hexo + GithubPages</p>
-</blockquote>
-<ul>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">参考1</a></li>
-<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/" target="_blank" rel="noopener">参考2</a></li>
-</ul>
-<blockquote>
-<p>如何只显示缩略内容？</p>
-</blockquote>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">在md文件中加入<span class="xml"><span class="comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Bugs解决"><a href="#Bugs解决" class="headerlink" title="Bugs解决"></a>Bugs解决</h1><blockquote>
-<p>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</p>
-</blockquote>
-<p>最后的解决方法是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ rm -rf .deploy</span><br><span class="line">$$ hexo generate</span><br><span class="line">$$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>关于博文发布</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$ hexo clean</span><br><span class="line">$$ hexo deploy -g</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</p>
-</blockquote>
-<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
-<blockquote>
-<p>Google无法搜索到我的博客</p>
-</blockquote>
-<p><a href="https://liwengo.top/2019/10/11/google-search-console/" target="_blank" rel="noopener">李子园的解决方法</a></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>The Reason for God</title>
-    <url>/2020/07/02/The-Reason-for-God/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>《The Reason for God》，中文版《为何是他》是提摩太·凯勒（Timothy Keller）写的一本<strong>信仰答疑解惑书</strong>。其中涉及到了很多“敏感问题”，比如：“为什么上帝会允许苦难”、“为什么充满爱的上帝会送人去地狱” 等等。初读时惊讶的合不拢嘴，连连拍手。中期时开始觉得理性的思考与感性的信心相违背，开始抵制这本书。最后决定把它读完，作为知识来收获，而不是信仰来全盘接受。</p>
-<a id="more"></a>
-
-<h1 id="前五章"><a href="#前五章" class="headerlink" title="前五章"></a>前五章</h1><ul>
-<li>If morality is relative, why isn’t social justice as well?</li>
-<li>A faith without some doubts is like a human body without any antibodies. 我们需要对抗来自外界的病毒，比如说他人的质疑，否则我们的信仰可能会在一夜之间崩塌</li>
-<li>Believers should learn to look for reasons behind their faith.</li>
-<li>All doubts, however skeptical or cynical they may seen, are really a set of alternate belief.</li>
-<li>Leap of faith. 尽管对事情的后果无把握，但还是以最大的信念去进行</li>
-<li>People should have doubts about their doubts.</li>
-</ul>
-<p>2020/5/10 周二<br>基督徒被接受不是因为做的比其他人好，而是耶稣担当了我们的罪过。其他宗教提倡道德提升，就会天然的对那些不信/不做的人，产生自己更高级的感觉。所以成为基督徒之后，我们正常来说不会觉得自己越来越好，而是越来越知道自己的不足，产生优越感也就无从谈起了。</p>
-<p>2020/5/12 周二<br>未来的新天新地不仅是一个什么都有的美好世界，而是把我们所有过去的上海，痛苦全部翻转，并且变成更大的喜悦。更像是把水变成酒而不是直接给你一杯好喝的酒。</p>
-<p>2020年5月14日</p>
-<ul>
-<li>“You cannot go on ‘seeing through’ things for ever. The whole point of seeing through something is to see something through it. It is good that the window should be transparent, because the street or garden beyond it is opaque. How if you saw through the garden too? It is no use trying to ‘see through’ first principles. If you see through everything, then everything is transparent. But a wholly transparent world is an invisible world. To ‘see through’ all things is the same as not to see.”</li>
-<li>不存在一种文化能够包容所有文化，多元文化支持所有其他的文化，但他本身也是一种文化。如果我的文化有所支持而有所不支持，那我的文化就不同于多元文化，从而不存在一种文化能够包容所有文化。</li>
-<li>想象一下LGBT的主席突然说：我认为LGBT是有罪的。同时，一个反对同性恋组织的主席突然觉得LGBT也不错。两个人的结局应该会很类似。所以没有不是什么inclusive/exclusive的问题。</li>
-<li>我们既然不能用exclusive/inclusive来判断组织的好坏，怎么判断？我们应该看他们是如何对待不信的群体的。是以慈爱，谦卑来爱他们，还是攻击对抗他们？（难以想象LGBT的人会真的爱双性恋的人，并抱有一个谦卑的心）</li>
-</ul>
-<p>2020年5月15日</p>
-<ul>
-<li>Christianity helped Africans to become renewed Africans, not re-made Europeans. 相反的，现在的世俗生活，个人主义与不相信超自然的文化对非洲人来说是deconstructive的。</li>
-<li>这里不存在一个什么基督文化，像伊斯兰文化那样。基督文化可以融入到我们自己的文化中，补全和理解我们自己的文化。</li>
-</ul>
-<p>2020年5月16日</p>
-<ul>
-<li>The church is a hospital for sinners, not a museum for saints. 所以如果你看到一个基督徒做的不好，比非信徒差劲，很可能他一开始更差。毕竟医院里的病人身体状况还是比正常人差。</li>
-<li>他把法利赛人等追求道德提升的人称为fanatics</li>
-<li>It was the Bible-believing religious establishment who put Jesus to death. It was the church, not the world, who crucified Christ.</li>
-<li>法利赛人的问题在于，渴望通过很高的道德要求，来获得权利//能力，从而比别人优秀，甚至可以和基督比肩。这会导致他们越来越在乎外表。</li>
-<li>不抢钱包，可能是因为如果抢钱包的事被别人知道了之后名誉损失很大（honor-shame society），也可能是因为想到了被抢钱包带来的伤害。</li>
-<li>Christianity changed those honor-based cultures in which pride was valued rather than humility, dominance rather than service, courage rather than peaceableness, glory rather than modesty, loyalty to one’s own tribe rather than equal respect for all.</li>
-<li>Instead of trying to shape our desires to fit reality, we now seek to control and shape reality to fit our desires. 古人和现在人的区别。</li>
-<li>It seems to our mind unfair, therefore, that we should determine that it is all right to have sex outside of marriage and later discovered that there is a God who is going to punish us for that.</li>
-<li>In one of my after-service discussions a woman told me that the very idea of a judging God was offensive. I said, why aren’t you offended by the idea of a forgiving God ? She looked puzzled.</li>
-<li>For the sake of argument, let’s imagine that Christianity is not a product of any one culture but is actually transcultural truth of God. if that were the case we would expect that it would contradict and offend every human culture at some point, because human cultures are ever-changing and imperfect. if Christianity were the truth it would have to be offending and correcting your thinking at some place.</li>
-<li>If you love a person and you see someone ruining them—even they themselves—you get angry.</li>
-<li>Anger is not the opposite of love, hate is. And the final form of hate is indifference</li>
-<li>If I don’t believe that there is a God who will eventually put all things right, I will take up the word and will be sucked into the endless vortex of retaliation. only if I am sure that there is a God who will right all wrongs and settle all accounts perfectly do I have the power to refrain.</li>
-<li>Hell begins with a gambling mood, always complaining, always blaming others… but you are still distinct from it. you may even criticize it in yourself and wish you could stop it. but there may come a day when you can no longer. then they will be no YOU left to criticize the mood or even to enjoy it, but just the grumble itself going on forever like a machine. it is not a question of God sending us to hell. In each of us, there is something growing, which will BE HELL unless it is nipped in the bud.</li>
-</ul>
-<h1 id="第六章-Science-Has-Disproved-Christianity"><a href="#第六章-Science-Has-Disproved-Christianity" class="headerlink" title="第六章 Science Has Disproved Christianity"></a>第六章 Science Has Disproved Christianity</h1><p>他提到了不同的章节我们读的时候要考虑体裁。比如路加福音（eyewitnesses）就可以100%当成历史来读，而诗篇就要当成诗歌来读。当我们面对创世纪1&amp;2章的时候，就像士师记4&amp;5、出埃及记14&amp;15那样，一章是历史而一章是赞歌。他认为创世纪1是赞歌而2是历史。</p>
-<blockquote>
-<p>他们见了耶稣就拜他。然而还有人疑惑。《马太福音28:17》</p>
-</blockquote>
-<p>那些门徒，亲眼看到了耶稣的复活，甚至还触摸到了身体，有的人还存留疑惑。这让我想起了拉撒路的故事，亚伯拉罕对那个富人说，如果你的弟兄们是不信的人，那么即使看到了神迹也不会相信</p>
-<p>关于神迹miracle，他举了个例子。比如耶稣不会做这种magic tricks：</p>
-<blockquote>
-<p>See that tree over there? Watch me make it burst into flames!</p>
-</blockquote>
-<p>相反，他用他的能力去救病人，喂饱肚子饿的人，让死人复活。现如今的人们认为的神迹大多属于上面的magic tricks，是对抗Nature Order。但是耶稣行的神迹是恢复Nature Order。</p>
-]]></content>
-      <categories>
-        <category>Holy</category>
-        <category>References</category>
-        <category>The Reason for God</category>
       </categories>
   </entry>
   <entry>
@@ -3693,7 +3688,6 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <p>人若不常在我里面，就像枝子丢在外面枯干，人拾起来，扔在火里烧了。</p>
 </blockquote>
 <p>这无论是不是基督徒，只要不常在主里面，就会失去了功效，从有生命的树枝变成了无生命的柴火。</p>
-<p>有一个小伙伴迟到了，不过当他代祷的时候，他真的摸到了我的需要。我不敢相信他居然准确地说出了我的想法。反而是我祷告的时候磕磕绊绊。上帝这样的安排令我羞愧，愿我有更多的爱心。</p>
 <hr>
 <h1 id="第二课-祷告"><a href="#第二课-祷告" class="headerlink" title="第二课 祷告"></a>第二课 祷告</h1><h2 id="如何祷告"><a href="#如何祷告" class="headerlink" title="如何祷告"></a>如何祷告</h2><p>耶稣教导我们如何祷告，几个关键字：</p>
 <ul>
