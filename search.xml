@@ -3958,12 +3958,67 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
   <entry>
     <title>随手记</title>
     <url>/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>平时看到比较有意义的视频/推文，会把笔记整理在此处供未来查阅。</p>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
+<li>平时看到比较有意义的视频/推文，会把笔记整理在此处供未来查阅。</li>
+<li>那些无处安放的小技巧</li>
+</ul>
 <a id="more"></a>
 
 
 
-<h1 id="2020-07-08"><a href="#2020-07-08" class="headerlink" title="2020/07/08"></a>2020/07/08</h1><h2 id="【半佛】应届生求职利益最大化指南"><a href="#【半佛】应届生求职利益最大化指南" class="headerlink" title="【半佛】应届生求职利益最大化指南"></a><a href="https://www.bilibili.com/video/BV1st4y197pq" target="_blank" rel="noopener">【半佛】应届生求职利益最大化指南</a></h2><p><img src="https://i.imgur.com/tVHJ6SX.jpg" alt="tVHJ6SX"></p>
+<h1 id="数独"><a href="#数独" class="headerlink" title="数独"></a>数独</h1><p><strong>Unique Rectangle (Type1)</strong>：一个正方形中是2+2+2+3的形式，那么多出的那一个必是不同的，否则多解。【方块三带一】</p>
+<img src="https://i.imgur.com/LLEalZE.jpg" alt="LLEalZE" style="zoom:25%;" />
+
+
+
+<p><strong>Locked Candidates (pointing)</strong>: 九宫格里出现某个数字连成一条线时，可以把那条线上的其他candidates去掉。【九宫格狙神】</p>
+<img src="https://i.imgur.com/Qm2nE7l.jpg" alt="Qm2nE7l" style="zoom:25%;" />
+
+
+
+<p><strong>Locked Candidates (claiming)</strong>: 一条线上出现某个数字只落在一个九宫格内，那个九宫格其他位置都不可能是这个数字了。【爆竹开花】</p>
+<img src="https://i.imgur.com/1uijFvS.jpg" alt="1uijFvS" style="zoom:25%;" />
+
+
+
+<p><strong>Finned X-Wing</strong>: 找到两行中的一个方（一行是鱼鳍，那一行在九宫格A里的可以有candidate，另一行不能存在其他的candidate），那么无论鱼鳍是否是candidate，九宫格A里的方块线都不会是candidate。【鱼鳍方块】</p>
+<img src="https://i.imgur.com/goZukdS.jpg" alt="goZukdS" style="zoom:25%;" />
+
+
+
+<p><strong>W-Wing</strong>: 有两块AB/AB彼此交错，卡住了一个九宫格并且其中一个数字必在被卡的里面（1），则剩下的数字必不在红色公共区域（2）【犬牙差互】</p>
+<img src="https://i.imgur.com/z9zQHVS.jpg" alt="z9zQHVS" style="zoom:25%;" />
+
+
+
+<p><strong>利用填色法</strong>：Conjugate pairs共轭对，就是你若黑我必白的那种排除法，一对一对的能连起来。分别给涂色黄绿黄绿，那么黄绿的交错点上必没有那个candidate【黄绿涂色法】</p>
+<img src="https://i.imgur.com/HWv95yJ.jpg" alt="HWv95yJ" style="zoom:25%;" />
+
+
+
+<p><strong>XY-Chain：</strong> 疯狂链条，只要数字能连上，并且在同一宫。最后使得出发点和终止点相同candidate，则交汇处必没有那个candidate。【首尾相连法】</p>
+<img src="https://i.imgur.com/X4Glrav.jpg" alt="X4Glrav" style="zoom:25%;" />
+
+
+
+<p><strong>BUG+1法</strong>：所有都是两个数字，只有一个是三个数字。这时候走一遍那三个数字，看行列宫，如果有奇数个候选位置那就是对的。三个数字中，只有一个candidate是奇数个候选。【奇数bug法】</p>
+<img src="https://i.imgur.com/zbcrHrE.jpg" alt="zbcrHrE" style="zoom:25%;" />
+
+
+
+<p><strong>Unique Rectangle 4：</strong> 找个小方，外面的两块（绿色48）必是AB/AB，选定一个数字A，且这个数字A必须在那一列只有里面的两块有（黄色）。这时，可以把另一个B从两块黄色中删掉。【方块情侣砍单法】</p>
+<img src="https://i.imgur.com/irJfkwG.jpg" alt="irJfkwG" style="zoom:25%;" />
+
+
+
+<p><strong>Remote Pair：</strong> 属于特殊的首尾相连法。</p>
+<img src="https://i.imgur.com/0msz7mc.jpg" alt="0msz7mc" style="zoom:25%;" />
+
+
+
+
+
+<h1 id="视频记录"><a href="#视频记录" class="headerlink" title="视频记录"></a>视频记录</h1><h2 id="2020-07-08"><a href="#2020-07-08" class="headerlink" title="2020/07/08"></a>2020/07/08</h2><h2 id="【半佛】应届生求职利益最大化指南"><a href="#【半佛】应届生求职利益最大化指南" class="headerlink" title="【半佛】应届生求职利益最大化指南"></a><a href="https://www.bilibili.com/video/BV1st4y197pq" target="_blank" rel="noopener">【半佛】应届生求职利益最大化指南</a></h2><p><img src="https://i.imgur.com/tVHJ6SX.jpg" alt="tVHJ6SX"></p>
 <h3 id="行业"><a href="#行业" class="headerlink" title="行业"></a>行业</h3><p>如果想体现个人的价值，尽量要去<strong>朝阳行业</strong>，和<strong>竞争充分的行业</strong>。</p>
 <ul>
 <li>充分竞争：这个行业的薪酬是存在较大变数的。对人才的渴求高，猎头活跃，跳槽有的跳。（互联网/金融）</li>
