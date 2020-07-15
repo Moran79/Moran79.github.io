@@ -3960,14 +3960,35 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
     <url>/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
 <li>平时看到比较有意义的视频/推文，会把笔记整理在此处供未来查阅。</li>
-<li>那些无处安放的小技巧</li>
+<li>数独技巧</li>
 </ul>
 <a id="more"></a>
 
 
 
-<h1 id="数独"><a href="#数独" class="headerlink" title="数独"></a>数独</h1><p><strong>Unique Rectangle (Type1)</strong>：一个正方形中是2+2+2+3的形式，那么多出的那一个必是不同的，否则多解。【方块三带一】</p>
+<h1 id="数独"><a href="#数独" class="headerlink" title="数独"></a>数独</h1><p>本文的技巧都建立在以下两点的基础上：</p>
+<ol>
+<li>auto-pencil（自动补全所有铅笔+智能消除铅笔）</li>
+<li>auto-single（自动补全hidden-single）</li>
+</ol>
+<p><strong>推荐这个app</strong>：<a href="https://apps.apple.com/us/app/sudoku/id285994151" target="_blank" rel="noopener">:) sudoku +</a> 。它提供标准数独的各种功能（自动铅笔等），Hint的时候还有推理教程。下面的截图就是出自于这个软件。</p>
+<h2 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h2><p><strong>Unique Rectangle (Type1)</strong>：一个正方形中是2+2+2+3的形式，那么多出的那一个必是不同的，否则多解。【方块三带一】【注意！小方块必须在两个九宫格里面，不能属于四个不同的九宫格！】</p>
 <img src="https://i.imgur.com/LLEalZE.jpg" alt="LLEalZE" style="zoom:25%;" />
+
+
+
+<p><strong>Unique Rectangle (Type2)</strong>：因黄色格子必至少有一个包含3，所以其他红色部分不包含3。</p>
+<img src="https://i.imgur.com/mHiEbyx.jpg" alt="mHiEbyx" style="zoom:25%;" />
+
+
+
+<p><strong>Unique Rectangle (Type3)</strong>：中间的黄色必包含3/4 这样就和外面的34构成了naked。所以其他的红色不包含naked中的candidates</p>
+<img src="https://i.imgur.com/Zdh8Vce.jpg" alt="Zdh8Vce" style="zoom:25%;" />
+
+
+
+<p><strong>Unique Rectangle 4：</strong> 找个小方，外面的两块（绿色48）必是AB/AB，选定一个数字A，且这个数字A必须在那一列只有里面的两块有（黄色）。这时，可以把另一个B从两块黄色中删掉。【方块情侣砍单法】【注意！小方块必须在两个九宫格里面，不能属于四个不同的九宫格！】</p>
+<img src="https://i.imgur.com/irJfkwG.jpg" alt="irJfkwG" style="zoom:25%;" />
 
 
 
@@ -3981,12 +4002,33 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 
 
 
-<p><strong>Finned X-Wing</strong>: 找到两行中的一个方（一行是鱼鳍，那一行在九宫格A里的可以有candidate，另一行不能存在其他的candidate），那么无论鱼鳍是否是candidate，九宫格A里的方块线都不会是candidate。【鱼鳍方块】</p>
+<p><strong>BUG+1法</strong>：所有都是两个数字，只有一个是三个数字。这时候走一遍那三个数字，看行列宫，如果有奇数个候选位置那就是对的。三个数字中，只有一个candidate是奇数个候选。【奇数bug法】</p>
+<img src="https://i.imgur.com/zbcrHrE.jpg" alt="zbcrHrE" style="zoom:25%;" />
+
+
+
+<p><strong>Remote Pair：</strong> 属于特殊的首尾相连法。</p>
+<img src="https://i.imgur.com/0msz7mc.jpg" alt="0msz7mc" style="zoom:25%;" />
+
+
+
+<p><strong>Hidden Pair：</strong> Naked pair的隐藏版，用法一样。</p>
+<img src="https://i.imgur.com/352f3sI.jpg" alt="352f3sI" style="zoom:25%;" />
+
+
+
+
+<h2 id="进阶篇"><a href="#进阶篇" class="headerlink" title="进阶篇"></a>进阶篇</h2><p><strong>Swordfish：</strong> X-Wing的升级版，四阶的被称作jellyfish。</p>
+<img src="https://i.imgur.com/vyOc6h4.jpg" alt="vyOc6h4" style="zoom:25%;" />
+
+
+
+<p><strong>Finned X-Wing</strong>: 找到两行中的一个方（一行是鱼鳍，那一行在九宫格A里的可以有candidate，另一行不能存在其他的candidate），那么无论鱼鳍是否是candidate，九宫格A里的方块线都不会是candidate。【鱼鳍方块】【扩展版本有swordfish和jellyfish】</p>
 <img src="https://i.imgur.com/goZukdS.jpg" alt="goZukdS" style="zoom:25%;" />
 
 
 
-<p><strong>W-Wing</strong>: 有两块AB/AB彼此交错，卡住了一个九宫格并且其中一个数字必在被卡的里面（1），则剩下的数字必不在红色公共区域（2）【犬牙差互】</p>
+<p><strong>W-Wing</strong>: 有两块AB/AB彼此交错，卡住了一个九宫格并且其中一个数字必在被卡的里面（1），则剩下的数字（2）必不在红色公共区域【犬牙差互】</p>
 <img src="https://i.imgur.com/z9zQHVS.jpg" alt="z9zQHVS" style="zoom:25%;" />
 
 
@@ -3996,24 +4038,28 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 
 
 
-<p><strong>XY-Chain：</strong> 疯狂链条，只要数字能连上，并且在同一宫。最后使得出发点和终止点相同candidate，则交汇处必没有那个candidate。【首尾相连法】</p>
+<p><strong>XY-Chain：</strong> 疯狂链条，只要数字能连上，并且在同一宫。最后使得出发点和终止点相同candidate，则交汇处必没有那个candidate。【首尾相连法】【常用】</p>
 <img src="https://i.imgur.com/X4Glrav.jpg" alt="X4Glrav" style="zoom:25%;" />
 
 
 
-<p><strong>BUG+1法</strong>：所有都是两个数字，只有一个是三个数字。这时候走一遍那三个数字，看行列宫，如果有奇数个候选位置那就是对的。三个数字中，只有一个candidate是奇数个候选。【奇数bug法】</p>
-<img src="https://i.imgur.com/zbcrHrE.jpg" alt="zbcrHrE" style="zoom:25%;" />
+<p><strong>Sashimi X-Wing：</strong> 【个人感觉这个很好用】需要有两行有两个candidates，一对在同一列，另一对有重合的九宫格部分。这样可以构成两个X-Wings（上下）. 【刺身法】【扩展版本有swordfish和jellyfish】</p>
+<img src="https://i.imgur.com/78uHQem.jpg" alt="78uHQem" style="zoom:25%;" />
 
 
 
-<p><strong>Unique Rectangle 4：</strong> 找个小方，外面的两块（绿色48）必是AB/AB，选定一个数字A，且这个数字A必须在那一列只有里面的两块有（黄色）。这时，可以把另一个B从两块黄色中删掉。【方块情侣砍单法】</p>
-<img src="https://i.imgur.com/irJfkwG.jpg" alt="irJfkwG" style="zoom:25%;" />
+<p><strong>XYZ-Wing：</strong> 三个数字首尾相连。AB-BC-ABC。其中AB和BC都与ABC有重合宫。则AB和BC的重合部分没有B。【AC装B法】</p>
+<img src="https://i.imgur.com/AMZPeLf.jpg" alt="AMZPeLf" style="zoom:25%;" />
 
 
 
-<p><strong>Remote Pair：</strong> 属于特殊的首尾相连法。</p>
-<img src="https://i.imgur.com/0msz7mc.jpg" alt="0msz7mc" style="zoom:25%;" />
+<p><strong>ALS:</strong> ALS指的是在N个格子里有N+1个数字。再多一点信息就可以确定了。如下图所示。这个蓝色框里必有一个1/2，但是右下角的黄色也是必有1/2，这样的话红色区域就不可能有1/2。</p>
+<img src="https://i.imgur.com/eWSWRAy.jpg" alt="eWSWRAy" style="zoom:25%;" />
 
+
+
+<p><strong>Hidden Unique Rectangle:</strong> 思路是若交叉线上有2的话，那么左下右上必为1，那么左上必为2，就构成了多解。</p>
+<img src="https://i.imgur.com/FfwmPlf.jpg" alt="FfwmPlf" style="zoom:25%;" />
 
 
 
