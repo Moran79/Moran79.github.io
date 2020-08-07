@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://moran79.github.io/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</loc>
+    <loc>https://moran79.github.io/music/index.html</loc>
     
-    <lastmod>2020-08-07T17:04:18.746Z</lastmod>
+    <lastmod>2020-08-07T18:28:21.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://moran79.github.io/life/index.html</loc>
+    
+    <lastmod>2020-08-07T18:27:55.560Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://moran79.github.io/book/index.html</loc>
+    
+    <lastmod>2020-08-07T18:26:32.942Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://moran79.github.io/belief/index.html</loc>
     
-    <lastmod>2020-08-07T17:03:07.003Z</lastmod>
+    <lastmod>2020-08-07T17:07:03.543Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://moran79.github.io/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</loc>
+    
+    <lastmod>2020-08-07T17:04:18.746Z</lastmod>
     
   </url>
   
