@@ -1032,8 +1032,13 @@ followup：如果有一个class有非常多的值，还可以做one-hot-encoding
 <li>在python3 里面可以用 nonlocal 来修改</li>
 </ul>
 <h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><ul>
-<li>continue和break只针对外面的一层，想跳出多层循环的话只能用boolean flag</li>
-<li>如果只是用于循环而不需要一个序列的话，用xrange要比range更好。xrange本质上是一个生成器</li>
+<li><p>continue和break只针对外面的一层，想跳出多层循环的话只能用boolean flag</p>
+</li>
+<li><p>如果只是用于循环而不需要一个序列的话，用xrange要比range更好。xrange本质上是一个生成器</p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/04/tail-call.html" target="_blank" rel="noopener">关于尾递归</a></p>
+<p><img src="https://i.imgur.com/gU4JRow.jpg" alt=""></p>
+</li>
 </ul>
 <h3 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h3><ul>
 <li>字符叫char(character) 字符串叫str(string)</li>
@@ -3065,12 +3070,74 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>普林斯顿在Coursera上面的algorithm网课</li>
 <li>python算法书</li>
 <li>算法导论</li>
+<li>算法图解【一本书】</li>
 </ul>
 <p>希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档</p>
 <a id="more"></a>
 
 
 
+<h1 id="算法图解"><a href="#算法图解" class="headerlink" title="算法图解"></a>算法图解</h1><h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>作为一个好的算法工程师，在对具体问题进行优化的时候，甚至要考虑使用插入排序还是堆排序…</p>
+<p>二分查找居然是O(logn)时间…天哪，在我使用bisect的时候我一直以为是O(n)，以为要走一遍。</p>
+<p><strong>大O表示法：</strong></p>
+<ul>
+<li>表示的是「<strong>操作数</strong>」</li>
+<li>用来描述的是「<strong>增速</strong>」<ul>
+<li>增速：算法的操作数，随着数据量增加的<strong>时间上升斜率</strong>。</li>
+</ul>
+</li>
+<li>防备的是「<strong>最差情况</strong>」<ul>
+<li>很多时候我们也要评估一下<strong>平均时间</strong></li>
+</ul>
+</li>
+</ul>
+<p>一个O(n!)的例子：旅行商问题。</p>
+<ul>
+<li>给定五个城市，以什么样的顺序走一遍，所用的路程最短？ </li>
+</ul>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>数组因为元素都是挨在一起的，所以如果知道大小的话，最好事先安排好空间。</p>
+<p><strong>比较数组和链表：</strong></p>
+<ol>
+<li>数组的存储位置是连续的，链表没有要求</li>
+<li>读取数据：数组支持「<strong>随机访问</strong>」，链表必须跑一遍。O(1) v.s. O(n)</li>
+<li>插入数据：数组必须要移动插入位置之后的所有数据（如果地方不够还要把所有数据都挪一遍）链表只需要改地址。 O(n) v.s. O(1)</li>
+<li>删除数据：数组必须要移动插入位置之后的所有数据，链表只需要改地址。 O(n) v.s. O(1)</li>
+<li>所以如果是频繁插入，很少读取，那么应该用链表。</li>
+<li>数组内部的元素类型必须都相同。</li>
+</ol>
+<p>大O表示法一般会忽略前面的常数。</p>
+<p><strong>新的数据结构，关于Facebook如何存储用户名：</strong></p>
+<ul>
+<li>有一个功能是判断当前用户名是否被注册。可以用二分法来寻找，这就需要支持随机访问。可以使用数组</li>
+<li>但是使用数组会带来一个问题，那就是当新用户注册完之后，需要把当前用户名插入进去，这一步就要挪动O(n)个数据，听起来太恐怖了。</li>
+<li>作者提出了个新想法：将A-Z分成24个不同的链表。而每个链表的头放在一个数组里</li>
+<li>这个方法告诉我们，<strong>其实数据结构并不是那几个定式，很多时候可以自由组合</strong>，特殊情况特殊对待。</li>
+</ul>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归的一种替代法是将要执行的东西放入一个list中，一个挨一个的去执行，就像维持一个栈。</p>
+<blockquote>
+<p>如果使用循环，<strong>程序的性能可能更高</strong>。如果使用递归，程序可能更容易理解。如何选择要看什么对你来说更重要。</p>
+</blockquote>
+<p>递归函数包含两部分：base case基线条件和recursive case递归条件。前者是针对的是什么时候函数不在调用自己。</p>
+<p>栈的一个使用场景：讲一个栈顶的任务弹出，把其分为好多个小人物，重新压入栈顶。</p>
+<p><strong>调用栈</strong>：函数的调用使用的是调用栈</p>
+<ul>
+<li>调用另一个函数的时候，当前函数暂停并处于未完成状态。</li>
+<li>书中提到的盒子堆（栈）代替法其实是把递归函数的调用栈具象化了。</li>
+<li>当递<strong>归层数过多的时候</strong>，可以考虑尾递归优化。Python不支持尾递归优化，不过可以用知乎老哥的next和Trampline模拟出类似结果。</li>
+</ul>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p><strong>分而治之的思路：</strong> Divide and Conquor</p>
+<ol>
+<li>找到基线情况</li>
+<li>如何将问题规模缩小，直到基线情况</li>
+</ol>
+<p>快速排序（找pivot） v.s. 合并排序（两两分组 -&gt; 四四分组 -&gt; …）：</p>
+<ul>
+<li>快速排序的最糟情况是O(n^2)，但合并排序最糟情况也是O(nlogn)，为何我们还用快排？<ul>
+<li>因为其实运行时间是O(c * nlogn) 在n的函数不同的时候，常量一般影响不大。但是n的函数相近的时候，c这个常量就显得很重要了。而快排的c比合并的c小。所以平均情况下快排更好。</li>
+</ul>
+</li>
+<li>快排每层操作都是n个元素，如果分的得当，一共会有logn层。</li>
+</ul>
 <h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
 <p>“回溯”的具体意思就是<strong>将不可能解或者部分解的候选尽早的舍弃掉</strong></p>
 <p>深度优先算法DFS就是一种Backtracking的实例。</p>
@@ -3380,10 +3447,135 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 
 
 
-<h1 id="2020-07-26"><a href="#2020-07-26" class="headerlink" title="2020/07/26"></a>2020/07/26</h1><p>周日团契资料：<a href="https://www.youtube.com/watch?v=J4ayCy28uSI&list=PL9HSDtAszxDr1JMCmOB90irnIHVMaswLP&index=3" target="_blank" rel="noopener">帖撒罗尼迦前书2</a></p>
+<h1 id="2020-08-09-Why-is-sex-such-a-big-deal"><a href="#2020-08-09-Why-is-sex-such-a-big-deal" class="headerlink" title="2020/08/09 Why is sex such a big deal?"></a>2020/08/09 Why is sex such a big deal?</h1><p><a href="http://www.blackhawkchurch.org/sundaymessages/?enmse=1&enmse_sid=9005&enmse_mid=9277" target="_blank" rel="noopener">Why is sex such a big deal? — Blackhawk</a></p>
+<p>几点：</p>
+<ol>
+<li><p>现在的社会在性方面很混乱（55%的美国女性和22%的美国男性曾有过被性骚扰的经历…）</p>
+</li>
+<li><p>现在的社会，已经距离原来的正统的性很远了。（限制在男女的婚姻中）</p>
+</li>
+<li><p>Sexual immorality确实不好，但也不是圣经中说的「最糟糕的罪」。这个牧师认为或许「拜偶像」是最糟糕的罪。</p>
+<blockquote>
+<p>《马可福音》7:20-23</p>
+<p>20 又说，从人里面出来的，那才能污秽人。<br>21 因为从里面，就是从人心里，发出恶念，苟合，<br>22 偷盗，凶杀，奸淫，贪婪，邪恶，诡诈，淫荡，嫉妒，谤？？，骄傲，狂妄。<br>23 这一切的恶，都是从里面出来，且能污秽人。</p>
+</blockquote>
+</li>
+</ol>
+<p>Sex is <strong>far from a simple pleasure</strong>. The emotional pain that linger after poor sexual decision-making, at any age, suggests a complex morality inherent to human sexuality.</p>
+<blockquote>
+<p>《罗马书》13：13</p>
+<p>行事为人要端正，好像行在白昼。不可荒宴醉酒。不可好色邪荡。不可争竞嫉妒。</p>
+</blockquote>
+<p>为什么我们要对性有这么多的限制？正是因为它很重要。</p>
+<ul>
+<li>就像著名的蒙娜丽莎，为什么被护栏围住，用防弹玻璃包装？很多的限制保护，正是因为它很宝贵。</li>
+</ul>
+<p>Naked = Vulnerable / Intimate</p>
+<p>假设当你第一次做爱的时候，你还没结婚。在结束之后不仅有身体上的愉悦，还有一种精神上的向往，我想和这个人永远在一起。如果此时没有婚姻，<strong>这种感情就没有保护</strong>。因为那个和你上床的人很可能会离开你，然后和其他人上床。这时你的心就会很受伤，但是社会会告诉你，别这么严肃嘛，要把爱和身体分开。于是为了不让这种伤害的感觉重来一遍，你把自己的心封闭了。这时候，性就变成了一种满足身体的需要，而没有了与人联结的伟大意义。</p>
+<p>关于同性恋：It must be two genders for life to take bless. 圣经中提到同性恋的时候，都是负面词汇。</p>
+<p>单身的榜样：耶稣、保罗。</p>
+<p>Cohabitation：同居生活</p>
+<ul>
+<li>It’s about risk-management. It’s inheritly unstable.</li>
+<li>很多人说你看我朋友谁谁谁同居了之后结婚了。但是你是不是也有朋友同居了之后没结婚呢？</li>
+</ul>
+<p>Shame &amp; Guilt：</p>
+<ul>
+<li>Guilt：I did something bad. Shame: I am bad.</li>
+</ul>
+<h1 id="2020-08-07-正心诚意侍奉神"><a href="#2020-08-07-正心诚意侍奉神" class="headerlink" title="2020/08/07 正心诚意侍奉神"></a>2020/08/07 正心诚意侍奉神</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=jBb1AaDl29c" target="_blank" rel="noopener">正心诚意侍奉神——寇绍涵</a></p>
+<blockquote>
+<p>《罗马书》12:1 所以弟兄们，我以神的慈悲劝你们，将身体献上，当作活祭，是圣洁的，是神所喜悦的。你们如此事奉，乃是理所当然的。</p>
+</blockquote>
+<p>与神互动的方式，不是交换。恩典是白白得来的，为何服侍？</p>
+<ul>
+<li>服侍是自己成长的过程，反而是一个加倍的恩典。</li>
+<li>没有服侍，领受恩典却活在老我，或许会失去恩典。（以色列人的例子）</li>
+</ul>
+<blockquote>
+<p>《历代志》22：4</p>
+<p>大卫说，我儿子所罗门还年幼娇嫩，要为耶和华建造的殿宇必须高大辉煌，使名誉荣耀传遍万国。所以我要为殿预备材料。于是，大卫在未死之先预备的材料甚多。</p>
+</blockquote>
+<ul>
+<li>大卫提出建殿请求，<u>被上帝拒绝后</u>，大卫仍然欢喜的为所罗门准备材料。【正确感恩的心态】<ul>
+<li>有时候会想，我做了半天，名字都挂在别人名下，我不做算了。其实，别人是否知道，后世如何纪念，都不重要。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>《路加福音》17: 14-18</p>
+<p>14 耶稣看见，就对他们说，你们去把身体给祭司察看。他们去的时候就洁净了。<br>15 内中有一个见自己已经好了，就回来大声归荣耀与神。<br>16 又俯伏在耶稣脚前感谢他。这人是撒玛利亚人。<br>17 耶稣说，洁净了的不是十个人吗？那九个在哪里呢？<br>18 除了这外族人，再没有别人回来归荣耀与神吗？</p>
+</blockquote>
+<ul>
+<li>不感恩的反例</li>
+</ul>
+<blockquote>
+<p>《民数记》11：24 - 29</p>
+<p>24 摩西出去，将耶和华的话告诉百姓，又招聚百姓的长老中七十个人来，使他们站在会幕的四围。<br>25 耶和华在云中降临，对摩西说话，把降与他身上的灵分赐那七十个长老。灵停在他们身上的时候，他们就受感说话，以后却没有再说。<br>26 但有两个人仍在营里，一个名叫伊利达，一个名叫米达。他们本是在那些被录的人中，却没有到会幕那里去。灵停在他们身上，他们就在营里说预言。<br>27 有个少年人跑来告诉摩西说，伊利达，米达在营里说预言。<br>28 摩西的帮手，嫩的儿子约书亚，就是摩西所拣选的一个人，说，请我主摩西禁止他们。<br>29 摩西对他说，你为我的缘故嫉妒人吗？惟愿耶和华的百姓都受感说话。愿耶和华把他的灵降在他们身上。</p>
+</blockquote>
+<ul>
+<li>对神主权的尊重。摩西认识很清楚，神愿意把这个灵分给谁就分给谁。（想起了有基督徒嫉妒莫扎特的才华）</li>
+</ul>
+<blockquote>
+<p>《马可福音》9：38-40</p>
+<p>38 约翰对耶稣说，夫子，我们看见一个人，奉你的名赶鬼，我们就禁止他，因为他不跟从我们。<br>39 耶稣说，不要禁止他。因为没有人奉我名行异能，反倒轻易毁谤我。<br>40 不敌挡我们的，就是帮助我们的。</p>
+</blockquote>
+<ul>
+<li>神可以用任何人成就他的美意。约翰这边眼光窄了。</li>
+<li>教会里没有「我的人」，我们都是神的人。</li>
+<li>关于「合一」，我们要在真道上站稳，在小事情上，可以有不同（前两个例子）。如果我们只是追求「表面的和平」，我们甚至可以和其他宗教合一。</li>
+</ul>
+<blockquote>
+<p>《使徒行传》14：15-18</p>
+<p>15 诸君，为什么作这事呢？我们也是人，性情和你们一样。我们传福音给你们，是叫你们离弃这些虚妄，归向那创造天，地，海，和其中万物的永生神。<br>16 他在从前的世代，任凭万国各行其道。<br>17 然而为自己未尝不显出证据来，就如常施恩惠，从天降雨，赏赐丰年，叫你们饮食饱足，满心喜乐。<br>18 二人说了这些话，仅仅地拦住众人不献祭与他们。</p>
+</blockquote>
+<ul>
+<li>保罗和巴拿巴行了一件神迹，被众人当做神人来崇拜，他们二人疯狂拒绝、劝诫。</li>
+<li>有的时候神的仆人把自己捧得太高，也有时候我们把神的仆人捧得太高。</li>
+</ul>
+<blockquote>
+<p>《使徒行传》8：20-21</p>
+<p>20 彼得说，你的银子，和你一同灭亡吧。因你想神的恩赐，是可以用钱买的。<br>21 你在这道上，无分无关。因为在神面前，你的心不正。</p>
+</blockquote>
+<ul>
+<li>西门想要花钱来买到这种保罗行异能的能力。</li>
+<li>我们想要「神的恩赐」，不想要「赐恩的神」</li>
+<li>我们要把神带到神的面前，不要把人带到我们面前。（想到了统计学，老罗把大家带到统计面前，而不是把大家带到他的面前）</li>
+</ul>
+<blockquote>
+<p>《耶利米书》40：4-6</p>
+<p>4 现在我解开你手上的链子，你若看与我同往巴比伦去好，就可以去，我必厚待你。你若看与我同往巴比伦去不好，就不必去。看哪，全地在你面前，你以为哪里美好，哪里合宜，只管上哪里去吧。<br>5 耶利米还没有回去，护卫长说，你可以回到沙番的孙子亚希甘的儿子基大利那里去。现在巴比伦王立他作犹大城邑的省长。你可以在他那里住在民中，不然，你看哪里合宜就可以上哪里去。于是护卫长送他粮食和礼物，释放他去了。<br>6 耶利米就到米斯巴见亚希甘的儿子基大利，在他那里住在境内剩下的民中。</p>
+</blockquote>
+<ul>
+<li>耶利米让大家投降，否则灭亡（命定的结果），结果大家不听，还把耶利米丢在牢里。</li>
+<li>耶利米用动作证明他的心思意念——留下来，不求外邦的荣华富贵。</li>
+</ul>
+<blockquote>
+<p>《路加福音》7：19</p>
+<p>19 他便叫了两个门徒来，打发他们到主那里去，说，那将要来的是你吗？还是我们等候别人呢？</p>
+</blockquote>
+<ul>
+<li>做了正确的事情，被投到了牢里。没看到神拯救他，施洗约翰也动摇了。</li>
+</ul>
+<blockquote>
+<p>《约翰福音》4：28-29</p>
+<p>28 那妇人就留下水罐子，往城里去，对众人说，<br>29 你们来看，有一个人将我素来所行的一切事，都给我说出来了，莫非这就是基督吗？</p>
+</blockquote>
+<ul>
+<li>撒玛利亚妇人对待福音的回应，向众人传讲，不惜说出自己的黑历史，只要自己的这种软弱能见证弥赛亚。</li>
+<li>我们不是一定要很成功，有学问，地位高的人才能为神作见证——替上帝乱开空头支票。</li>
+</ul>
+<blockquote>
+<p>《马太福音》8：33-34</p>
+<p>33 放猪的就逃跑进城，将这一切事，和被鬼附的人所遭遇的，都告诉人。<br>34 合城的人，都出来迎见耶稣。既见了，就央求他离开他们的境界。</p>
+</blockquote>
+<ul>
+<li>看见了福音，请耶稣走。为了救一个人，死了两千头猪。只看到了猪的价格，没看到一个人得洁净的价值。</li>
+</ul>
+<h1 id="2020-07-26-帖撒罗尼迦前书"><a href="#2020-07-26-帖撒罗尼迦前书" class="headerlink" title="2020/07/26 帖撒罗尼迦前书"></a>2020/07/26 帖撒罗尼迦前书</h1><p>周日团契资料：<a href="https://www.youtube.com/watch?v=J4ayCy28uSI&list=PL9HSDtAszxDr1JMCmOB90irnIHVMaswLP&index=3" target="_blank" rel="noopener">帖撒罗尼迦前书2</a></p>
 <p>要在爱里教导。像母亲一样的爱，像父亲一样的教导。</p>
 <p>服侍/侍奉的目标：若是我们侍奉的人都不知道方向，我们要将人带到哪里去呢？</p>
-<h1 id="2020-07-24"><a href="#2020-07-24" class="headerlink" title="2020/07/24"></a>2020/07/24</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=nN19QDuISK4" target="_blank" rel="noopener">『基督的所是(4) ：「最大的先知」(上)』——于宏洁</a></p>
+<h1 id="2020-07-24-基督的所是-4-：「最大的先知」-上"><a href="#2020-07-24-基督的所是-4-：「最大的先知」-上" class="headerlink" title="2020/07/24 基督的所是(4) ：「最大的先知」(上)"></a>2020/07/24 基督的所是(4) ：「最大的先知」(上)</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=nN19QDuISK4" target="_blank" rel="noopener">『基督的所是(4) ：「最大的先知」(上)』——于宏洁</a></p>
 <p><strong>先知是祭司先知君王中最难的角色：</strong></p>
 <ul>
 <li>大多是神家很混乱的时候被兴起</li>
@@ -3401,7 +3593,7 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <ul>
 <li>完全从神而来：责备/警告/预言/安慰/应许</li>
 </ul>
-<h1 id="2020-07-10"><a href="#2020-07-10" class="headerlink" title="2020/07/10"></a>2020/07/10</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=e8gI-UqugSw" target="_blank" rel="noopener">靠著主，做更大的事——于宏洁</a></p>
+<h1 id="2020-07-10-靠著主，做更大的事"><a href="#2020-07-10-靠著主，做更大的事" class="headerlink" title="2020/07/10 靠著主，做更大的事"></a>2020/07/10 靠著主，做更大的事</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=e8gI-UqugSw" target="_blank" rel="noopener">靠著主，做更大的事——于宏洁</a></p>
 <ol>
 <li>圣灵来帮助我们：</li>
 </ol>
@@ -3421,7 +3613,7 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <p>《加拉太书》2:20: 我已经与基督同钉十字架。现在活着的，不再是我，乃是基督在我里面活着。并且我如今在肉身活着，是因信神的儿子而活，他是爱我，为我舍己。</p>
 </blockquote>
 <p>不能带这地来祝福，就像没有雨的云。要做，就不要白做。</p>
-<h1 id="2020-07-03"><a href="#2020-07-03" class="headerlink" title="2020/07/03"></a>2020/07/03</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=O_G5bN5rEEc" target="_blank" rel="noopener">逆境中的抉择——寇紹涵牧師</a></p>
+<h1 id="2020-07-03-逆境中的抉择"><a href="#2020-07-03-逆境中的抉择" class="headerlink" title="2020/07/03 逆境中的抉择"></a>2020/07/03 逆境中的抉择</h1><p>周五团契资料：<a href="https://www.youtube.com/watch?v=O_G5bN5rEEc" target="_blank" rel="noopener">逆境中的抉择——寇紹涵牧師</a></p>
 <h3 id="非尼哈的例子"><a href="#非尼哈的例子" class="headerlink" title="非尼哈的例子"></a>非尼哈的例子</h3><p>巴兰行诡计，让以色列人和米甸人行奸淫。非尼哈在别人都犯错的时候，勇敢的杀死了一个即将行奸淫的人，上帝悦纳这样的行为。</p>
 <p>对一个家庭来说，父亲要如何带领这个家？拒绝婚外情。基督徒的家庭要活在神的圣洁里面。</p>
 <h3 id="喇合的例子"><a href="#喇合的例子" class="headerlink" title="喇合的例子"></a>喇合的例子</h3><p>耶利哥城的喇合。拯救了以利亚的探子，决定救那两个人。庙妓是有地位的，因为有一些宗教的意义。为何她要放弃这种既得利益？</p>

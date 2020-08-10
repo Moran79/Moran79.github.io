@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"moran79.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="介绍以下知识来自于：  普林斯顿在Coursera上面的algorithm网课 python算法书 算法导论  希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档">
+  <meta name="description" content="介绍以下知识来自于：  普林斯顿在Coursera上面的algorithm网课 python算法书 算法导论 算法图解【一本书】  希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法心得">
 <meta property="og:url" content="https://moran79.github.io/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/index.html">
 <meta property="og:site_name" content="大家一起来">
-<meta property="og:description" content="介绍以下知识来自于：  普林斯顿在Coursera上面的algorithm网课 python算法书 算法导论  希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档">
+<meta property="og:description" content="介绍以下知识来自于：  普林斯顿在Coursera上面的algorithm网课 python算法书 算法导论 算法图解【一本书】  希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg">
@@ -37,8 +37,8 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg">
-<meta property="article:published_time" content="2020-07-02T15:18:27.000Z">
-<meta property="article:modified_time" content="2020-07-02T16:56:00.218Z">
+<meta property="article:published_time" content="2020-07-02T16:18:27.000Z">
+<meta property="article:modified_time" content="2020-08-10T01:50:08.641Z">
 <meta property="article:author" content="大连铁板王">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg">
@@ -231,10 +231,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-07-02 10:18:27 / 修改时间：11:56:00" itemprop="dateCreated datePublished" datetime="2020-07-02T10:18:27-05:00">2020-07-02</time>
+              <time title="创建时间：2020-07-02 11:18:27" itemprop="dateCreated datePublished" datetime="2020-07-02T11:18:27-05:00">2020-07-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-09 20:50:08" itemprop="dateModified" datetime="2020-08-09T20:50:08-05:00">2020-08-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -259,7 +265,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.2k</span>
+              <span>8.5k</span>
             </span>
 
         </div>
@@ -276,12 +282,74 @@
 <li>普林斯顿在Coursera上面的algorithm网课</li>
 <li>python算法书</li>
 <li>算法导论</li>
+<li>算法图解【一本书】</li>
 </ul>
 <p>希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档</p>
 <a id="more"></a>
 
 
 
+<h1 id="算法图解"><a href="#算法图解" class="headerlink" title="算法图解"></a>算法图解</h1><h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>作为一个好的算法工程师，在对具体问题进行优化的时候，甚至要考虑使用插入排序还是堆排序…</p>
+<p>二分查找居然是O(logn)时间…天哪，在我使用bisect的时候我一直以为是O(n)，以为要走一遍。</p>
+<p><strong>大O表示法：</strong></p>
+<ul>
+<li>表示的是「<strong>操作数</strong>」</li>
+<li>用来描述的是「<strong>增速</strong>」<ul>
+<li>增速：算法的操作数，随着数据量增加的<strong>时间上升斜率</strong>。</li>
+</ul>
+</li>
+<li>防备的是「<strong>最差情况</strong>」<ul>
+<li>很多时候我们也要评估一下<strong>平均时间</strong></li>
+</ul>
+</li>
+</ul>
+<p>一个O(n!)的例子：旅行商问题。</p>
+<ul>
+<li>给定五个城市，以什么样的顺序走一遍，所用的路程最短？ </li>
+</ul>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>数组因为元素都是挨在一起的，所以如果知道大小的话，最好事先安排好空间。</p>
+<p><strong>比较数组和链表：</strong></p>
+<ol>
+<li>数组的存储位置是连续的，链表没有要求</li>
+<li>读取数据：数组支持「<strong>随机访问</strong>」，链表必须跑一遍。O(1) v.s. O(n)</li>
+<li>插入数据：数组必须要移动插入位置之后的所有数据（如果地方不够还要把所有数据都挪一遍）链表只需要改地址。 O(n) v.s. O(1)</li>
+<li>删除数据：数组必须要移动插入位置之后的所有数据，链表只需要改地址。 O(n) v.s. O(1)</li>
+<li>所以如果是频繁插入，很少读取，那么应该用链表。</li>
+<li>数组内部的元素类型必须都相同。</li>
+</ol>
+<p>大O表示法一般会忽略前面的常数。</p>
+<p><strong>新的数据结构，关于Facebook如何存储用户名：</strong></p>
+<ul>
+<li>有一个功能是判断当前用户名是否被注册。可以用二分法来寻找，这就需要支持随机访问。可以使用数组</li>
+<li>但是使用数组会带来一个问题，那就是当新用户注册完之后，需要把当前用户名插入进去，这一步就要挪动O(n)个数据，听起来太恐怖了。</li>
+<li>作者提出了个新想法：将A-Z分成24个不同的链表。而每个链表的头放在一个数组里</li>
+<li>这个方法告诉我们，<strong>其实数据结构并不是那几个定式，很多时候可以自由组合</strong>，特殊情况特殊对待。</li>
+</ul>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归的一种替代法是将要执行的东西放入一个list中，一个挨一个的去执行，就像维持一个栈。</p>
+<blockquote>
+<p>如果使用循环，<strong>程序的性能可能更高</strong>。如果使用递归，程序可能更容易理解。如何选择要看什么对你来说更重要。</p>
+</blockquote>
+<p>递归函数包含两部分：base case基线条件和recursive case递归条件。前者是针对的是什么时候函数不在调用自己。</p>
+<p>栈的一个使用场景：讲一个栈顶的任务弹出，把其分为好多个小人物，重新压入栈顶。</p>
+<p><strong>调用栈</strong>：函数的调用使用的是调用栈</p>
+<ul>
+<li>调用另一个函数的时候，当前函数暂停并处于未完成状态。</li>
+<li>书中提到的盒子堆（栈）代替法其实是把递归函数的调用栈具象化了。</li>
+<li>当递<strong>归层数过多的时候</strong>，可以考虑尾递归优化。Python不支持尾递归优化，不过可以用知乎老哥的next和Trampline模拟出类似结果。</li>
+</ul>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p><strong>分而治之的思路：</strong> Divide and Conquor</p>
+<ol>
+<li>找到基线情况</li>
+<li>如何将问题规模缩小，直到基线情况</li>
+</ol>
+<p>快速排序（找pivot） v.s. 合并排序（两两分组 -&gt; 四四分组 -&gt; …）：</p>
+<ul>
+<li>快速排序的最糟情况是O(n^2)，但合并排序最糟情况也是O(nlogn)，为何我们还用快排？<ul>
+<li>因为其实运行时间是O(c * nlogn) 在n的函数不同的时候，常量一般影响不大。但是n的函数相近的时候，c这个常量就显得很重要了。而快排的c比合并的c小。所以平均情况下快排更好。</li>
+</ul>
+</li>
+<li>快排每层操作都是n个元素，如果分的得当，一共会有logn层。</li>
+</ul>
 <h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
 <p>“回溯”的具体意思就是<strong>将不可能解或者部分解的候选尽早的舍弃掉</strong></p>
 <p>深度优先算法DFS就是一种Backtracking的实例。</p>
@@ -495,12 +563,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/02/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%AC%94%E8%AE%B0/" rel="prev" title="博弈论笔记">
-      <i class="fa fa-chevron-left"></i> 博弈论笔记
+    <a href="/2020/07/02/Tableau%E5%BF%83%E5%BE%97/" rel="prev" title="Tableau心得">
+      <i class="fa fa-chevron-left"></i> Tableau心得
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="统计学习笔记">
-      统计学习笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/07/02/Python%E5%BF%83%E5%BE%97/" rel="next" title="Python心得">
+      Python心得 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -567,7 +635,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backtracking-放弃法"><span class="nav-text">Backtracking 放弃法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union-Find"><span class="nav-text">Union Find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Find"><span class="nav-text">Quick Find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union"><span class="nav-text">Quick Union</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Weighted-Quick-Union"><span class="nav-text">Weighted Quick Union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Path-Compression"><span class="nav-text">Path Compression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications——Percolation"><span class="nav-text">Applications——Percolation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Analysis-of-Algorithms"><span class="nav-text">Analysis of Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#观察法"><span class="nav-text">观察法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学法"><span class="nav-text">数学法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Order-Of-Growth"><span class="nav-text">Order Of Growth</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种记号"><span class="nav-text">四种记号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存使用"><span class="nav-text">内存使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack-amp-Queue"><span class="nav-text">Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-text">Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resizing-Array"><span class="nav-text">Resizing Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Repeated-Doubling"><span class="nav-text">Repeated Doubling</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-considerations"><span class="nav-text">Stack considerations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List-or-Resizing-Array"><span class="nav-text">Linked-List or Resizing Array</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generic"><span class="nav-text">Generic</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-Table"><span class="nav-text">Hash Table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几种常见Hash编码方法"><span class="nav-text">几种常见Hash编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Treating-the-Bit-Representation-as-an-Integer"><span class="nav-text">Treating the Bit Representation as an Integer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Polynomial-Hash-Codes"><span class="nav-text">Polynomial Hash Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cyclic-Shift-Hash-Codes"><span class="nav-text">Cyclic-Shift Hash Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compression-Functions"><span class="nav-text">Compression Functions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态规划DP"><span class="nav-text">动态规划DP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Numeric-Optimization"><span class="nav-text">Numeric Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Newton’s-Method"><span class="nav-text">Newton’s Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Golden-Section"><span class="nav-text">Golden Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nelder-Mead"><span class="nav-text">Nelder-Mead</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法"><span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学基础知识"><span class="nav-text">数学基础知识</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法图解"><span class="nav-text">算法图解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法简介"><span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-text">快速排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backtracking-放弃法"><span class="nav-text">Backtracking 放弃法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union-Find"><span class="nav-text">Union Find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Find"><span class="nav-text">Quick Find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union"><span class="nav-text">Quick Union</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Weighted-Quick-Union"><span class="nav-text">Weighted Quick Union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Path-Compression"><span class="nav-text">Path Compression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications——Percolation"><span class="nav-text">Applications——Percolation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Analysis-of-Algorithms"><span class="nav-text">Analysis of Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#观察法"><span class="nav-text">观察法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学法"><span class="nav-text">数学法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Order-Of-Growth"><span class="nav-text">Order Of Growth</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种记号"><span class="nav-text">四种记号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存使用"><span class="nav-text">内存使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack-amp-Queue"><span class="nav-text">Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-text">Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resizing-Array"><span class="nav-text">Resizing Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Repeated-Doubling"><span class="nav-text">Repeated Doubling</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-considerations"><span class="nav-text">Stack considerations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List-or-Resizing-Array"><span class="nav-text">Linked-List or Resizing Array</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generic"><span class="nav-text">Generic</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-Table"><span class="nav-text">Hash Table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几种常见Hash编码方法"><span class="nav-text">几种常见Hash编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Treating-the-Bit-Representation-as-an-Integer"><span class="nav-text">Treating the Bit Representation as an Integer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Polynomial-Hash-Codes"><span class="nav-text">Polynomial Hash Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cyclic-Shift-Hash-Codes"><span class="nav-text">Cyclic-Shift Hash Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compression-Functions"><span class="nav-text">Compression Functions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态规划DP"><span class="nav-text">动态规划DP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Numeric-Optimization"><span class="nav-text">Numeric Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Newton’s-Method"><span class="nav-text">Newton’s Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Golden-Section"><span class="nav-text">Golden Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nelder-Mead"><span class="nav-text">Nelder-Mead</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法"><span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学基础知识"><span class="nav-text">数学基础知识</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -644,7 +712,7 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">194k</span>
+    <span title="站点总字数">198k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
