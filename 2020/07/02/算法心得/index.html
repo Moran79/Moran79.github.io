@@ -38,7 +38,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg">
 <meta property="article:published_time" content="2020-07-02T16:18:27.000Z">
-<meta property="article:modified_time" content="2020-08-13T23:24:26.973Z">
+<meta property="article:modified_time" content="2020-08-18T18:49:46.485Z">
 <meta property="article:author" content="大连铁板王">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg">
@@ -239,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-13 18:24:26" itemprop="dateModified" datetime="2020-08-13T18:24:26-05:00">2020-08-13</time>
+                <time title="修改时间：2020-08-18 13:49:46" itemprop="dateModified" datetime="2020-08-18T13:49:46-05:00">2020-08-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>9.6k</span>
+              <span>10k</span>
             </span>
 
         </div>
@@ -411,7 +411,52 @@
 <li>涉及集合（集合覆盖）</li>
 <li>如果问题可以转化成已知的NP问题（旅行商、集合覆盖）</li>
 </ul>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>每次求解都可以画出一个表格：</p>
+<ul>
+<li>列从左到右分别是限制条件的越来越大</li>
+<li>行从上到下分别是增添进不同的元素</li>
+<li>方格里的元素就是要优化的对象</li>
+<li>有时答案出现在最后一列，有时候也可能是表中的极值</li>
+<li>当前方格的值常常取决于上一行的值（子问题可能是上面的行）</li>
+<li>各行的排列顺序与结果无关</li>
+</ul>
+<p>动态规划不能处理的问题：</p>
+<ul>
+<li>比如说偷盗例子中，不能偷一个商品的一部分。背包剩40g地方，有100g的大米，动态规划只能处理0g/100g，无法处理只偷40g大米。可以考虑使用贪婪算法。</li>
+<li>处理的子问题无法相互依赖，也被称为离散子问题。</li>
+</ul>
+<p>著名的费曼算法：</p>
+<ol>
+<li>把问题写下来</li>
+<li>仔细思考</li>
+<li>把答案写下来</li>
+</ol>
+<p>常见动态规划问题：</p>
+<ul>
+<li>最长公共子串</li>
+<li>最长公共子序列</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>二叉搜索树的优点：插入删除元素需要的时间都是<code>O(log(N))</code><br>其他的数据结构：B树、红黑树、堆、伸展树</p>
+<p>并行算法的开销：</p>
+<ol>
+<li>并行管理开销</li>
+<li>负载均衡：不能一个机器忙得要命，一个机器闲着</li>
+</ol>
+<p>布隆过滤器 &amp; HyperLoglog：</p>
+<ul>
+<li>一种概率型数据结构。给出的答案有可能不对，但是很有可能是对的。很适合用于不要求答案绝对准确的情况。</li>
+</ul>
+<p>SHA散列算法：</p>
+<ul>
+<li>默认局部不敏感（原文动一点，密文动好多），也可以用Simhash这种局部敏感的散列算法。</li>
+<li>Diffie-Hellman密钥交换，优雅、不难理解并被广泛使用</li>
+</ul>
+<p>线性规划：</p>
+<ul>
+<li>一个很宽泛的框架，图问题只是其中的一个子集</li>
+<li>使用复杂的Simplex算法</li>
+</ul>
+<h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
 <p>“回溯”的具体意思就是<strong>将不可能解或者部分解的候选尽早的舍弃掉</strong></p>
 <p>深度优先算法DFS就是一种Backtracking的实例。</p>
 <p>回溯算法说白了就是穷举法。不过回溯算法使用<strong>剪枝函数</strong>，剪去一些不可能到达最终状态（即答案状态）的节点，从而减少状态空间树节点的生成。</p>
@@ -696,7 +741,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3"><span class="nav-text">算法图解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B"><span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%A3%E5%88%97%E8%A1%A8-Hash-Table"><span class="nav-text">散列表 Hash Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-text">广度优先搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95"><span class="nav-text">狄克斯特拉算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95"><span class="nav-text">贪婪算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="nav-text">动态规划</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backtracking-%E6%94%BE%E5%BC%83%E6%B3%95"><span class="nav-text">Backtracking 放弃法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union-Find"><span class="nav-text">Union Find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Find"><span class="nav-text">Quick Find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union"><span class="nav-text">Quick Union</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Weighted-Quick-Union"><span class="nav-text">Weighted Quick Union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Path-Compression"><span class="nav-text">Path Compression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications%E2%80%94%E2%80%94Percolation"><span class="nav-text">Applications——Percolation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Analysis-of-Algorithms"><span class="nav-text">Analysis of Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E6%B3%95"><span class="nav-text">观察法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E6%B3%95"><span class="nav-text">数学法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Order-Of-Growth"><span class="nav-text">Order Of Growth</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E8%AE%B0%E5%8F%B7"><span class="nav-text">四种记号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8"><span class="nav-text">内存使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack-amp-Queue"><span class="nav-text">Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-text">Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resizing-Array"><span class="nav-text">Resizing Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Repeated-Doubling"><span class="nav-text">Repeated Doubling</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-considerations"><span class="nav-text">Stack considerations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List-or-Resizing-Array"><span class="nav-text">Linked-List or Resizing Array</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generic"><span class="nav-text">Generic</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-Table"><span class="nav-text">Hash Table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81Hash%E7%BC%96%E7%A0%81%E6%96%B9%E6%B3%95"><span class="nav-text">几种常见Hash编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Treating-the-Bit-Representation-as-an-Integer"><span class="nav-text">Treating the Bit Representation as an Integer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Polynomial-Hash-Codes"><span class="nav-text">Polynomial Hash Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cyclic-Shift-Hash-Codes"><span class="nav-text">Cyclic-Shift Hash Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compression-Functions"><span class="nav-text">Compression Functions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92DP"><span class="nav-text">动态规划DP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Numeric-Optimization"><span class="nav-text">Numeric Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Newton%E2%80%99s-Method"><span class="nav-text">Newton’s Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Golden-Section"><span class="nav-text">Golden Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nelder-Mead"><span class="nav-text">Nelder-Mead</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">数学基础知识</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3"><span class="nav-text">算法图解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B"><span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%A3%E5%88%97%E8%A1%A8-Hash-Table"><span class="nav-text">散列表 Hash Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-text">广度优先搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95"><span class="nav-text">狄克斯特拉算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95"><span class="nav-text">贪婪算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="nav-text">动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backtracking-%E6%94%BE%E5%BC%83%E6%B3%95"><span class="nav-text">Backtracking 放弃法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union-Find"><span class="nav-text">Union Find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Find"><span class="nav-text">Quick Find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union"><span class="nav-text">Quick Union</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Weighted-Quick-Union"><span class="nav-text">Weighted Quick Union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Path-Compression"><span class="nav-text">Path Compression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications%E2%80%94%E2%80%94Percolation"><span class="nav-text">Applications——Percolation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Analysis-of-Algorithms"><span class="nav-text">Analysis of Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E6%B3%95"><span class="nav-text">观察法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E6%B3%95"><span class="nav-text">数学法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Order-Of-Growth"><span class="nav-text">Order Of Growth</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E8%AE%B0%E5%8F%B7"><span class="nav-text">四种记号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8"><span class="nav-text">内存使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack-amp-Queue"><span class="nav-text">Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-text">Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resizing-Array"><span class="nav-text">Resizing Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Repeated-Doubling"><span class="nav-text">Repeated Doubling</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-considerations"><span class="nav-text">Stack considerations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List-or-Resizing-Array"><span class="nav-text">Linked-List or Resizing Array</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generic"><span class="nav-text">Generic</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-Table"><span class="nav-text">Hash Table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81Hash%E7%BC%96%E7%A0%81%E6%96%B9%E6%B3%95"><span class="nav-text">几种常见Hash编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Treating-the-Bit-Representation-as-an-Integer"><span class="nav-text">Treating the Bit Representation as an Integer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Polynomial-Hash-Codes"><span class="nav-text">Polynomial Hash Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cyclic-Shift-Hash-Codes"><span class="nav-text">Cyclic-Shift Hash Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compression-Functions"><span class="nav-text">Compression Functions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92DP"><span class="nav-text">动态规划DP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Numeric-Optimization"><span class="nav-text">Numeric Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Newton%E2%80%99s-Method"><span class="nav-text">Newton’s Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Golden-Section"><span class="nav-text">Golden Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nelder-Mead"><span class="nav-text">Nelder-Mead</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">数学基础知识</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -711,14 +756,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -773,7 +818,7 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">204k</span>
+    <span title="站点总字数">209k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
