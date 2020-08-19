@@ -4365,6 +4365,10 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>两天的话很密集，可能互动少一点，不过在走路的时候应该也可闲聊。</li>
 <li>三天的话很宽松，互动多一点，晚饭后或许可以宾馆打游戏&amp;聊天？</li>
 </ul>
+<p>注意事项：</p>
+<ul>
+<li>老刘说可能公园没网，建议下好离线地图</li>
+</ul>
 <h3 id="行程安排"><a href="#行程安排" class="headerlink" title="行程安排"></a>行程安排</h3><h4 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h4><ul>
 <li><p>Madison的朋友9点出发，驱车2小时到Maquoketa Caves State Park（Ames的朋友驱车3小时）</p>
 <ul>
@@ -6017,7 +6021,7 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
       </categories>
   </entry>
   <entry>
-    <title>travel</title>
+    <title>旅行</title>
     <url>/2020/08/17/travel/</url>
     <content><![CDATA[<p>这里记录曾旅游过的地方以及评价，按照首字母排序。</p>
 <a id="more"></a>
