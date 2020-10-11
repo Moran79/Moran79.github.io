@@ -5424,11 +5424,23 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
   <entry>
     <title>餐馆</title>
     <url>/2020/07/22/%E9%A4%90%E9%A6%86/</url>
-    <content><![CDATA[<p>这里记录曾吃过的餐馆以及评价。地区和餐厅都是按照首字母排序。</p>
+    <content><![CDATA[<p>这里记录曾吃过的餐馆/零食以及评价。地区和餐厅都是按照首字母排序。</p>
 <a id="more"></a>
 
 
 
+<h1 id="零食篇"><a href="#零食篇" class="headerlink" title="零食篇"></a>零食篇</h1><p>85°C 的东坡酥月饼 8分</p>
+<ul>
+<li>糯米，豆沙，蛋黄，肉松。是今年买到的月饼中最好吃的。</li>
+</ul>
+<p>Costco莲蓉双蛋黄月饼 6分</p>
+<ul>
+<li>分量过足，莲蓉还行，蛋黄也还行。不过过于松散，吃几口感觉饼要散了。散是满天星，聚是渣渣辉。</li>
+</ul>
+<p>7-11 的 Go Smart Cold Pressed Juice 5分</p>
+<ul>
+<li>带去了IOWA，乍一喝真好喝。后来又买了三瓶，觉得太甜了…</li>
+</ul>
 <h1 id="安娜堡"><a href="#安娜堡" class="headerlink" title="安娜堡"></a>安娜堡</h1><h2 id="Asian-Legend-老地方"><a href="#Asian-Legend-老地方" class="headerlink" title="Asian Legend 老地方"></a>Asian Legend 老地方</h2><ul>
 <li>Onion Pancakes 葱油饼 6分<ul>
 <li>外卖，无功无过，不够咸，有点脆。</li>
@@ -6120,7 +6132,8 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <p>择zhai2席：指换一个地方就睡不好觉</p>
 <p>亲狎xia2： 亲近而不庄重 = 狎昵ni4</p>
 <p>超验主义：主张人能超越感觉和理性而直接认识真理</p>
-<h1 id="成语"><a href="#成语" class="headerlink" title="成语"></a>成语</h1><p>狮子搏兔，亦用全力：意思是通过陈述狮子捕杀兔子仍然用全力，比喻对小事情也拿出全部力量认真解决。</p>
+<h1 id="成语"><a href="#成语" class="headerlink" title="成语"></a>成语</h1><p>飞短流长：散布流言蜚语，拨弄是非。</p>
+<p>狮子搏兔，亦用全力：意思是通过陈述狮子捕杀兔子仍然用全力，比喻对小事情也拿出全部力量认真解决。</p>
 <p>心有戚戚焉：出自《齐桓晋文之事章》，意思是我深有感触。</p>
 <blockquote>
 <p>《论语·述而》：“子曰：述而不作，信而好古，窃比于我老彭。”</p>
@@ -6849,6 +6862,13 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>这公园没路没牌子，野草贼高，底下全是有机肥料？</li>
 <li>曾有过隐居山林种地的念头，害，还是太难了。这种狂野让人如何消受？</li>
 </ul>
+<h2 id="Devil’s-Lake"><a href="#Devil’s-Lake" class="headerlink" title="Devil’s Lake"></a>Devil’s Lake</h2><p><img src="https://i.imgur.com/KKt3tC4.png" alt=""></p>
+<ul>
+<li>推荐指数8分</li>
+<li>州立公园，停车费单次$13年卡$28。初次来的时候是社团租了一片场地，组织大家一起破冰，然后爬山结束。当时觉得是个不起眼的小湖。现在经历了很多公园之后再回来看Devil’s Lake，真是不错</li>
+<li>北边停车位少，南边多。但是北边可以租船和PaddleBoard。感觉恶魔湖的特点是很多大石块。建议大家的旅行攻略是停在南边，从East Bluff上山一直往北走。在上图中画出了一个红线的捷径，捷径的入口很好找，出口却不是这样。在谷歌地图上看的话，大概是铁轨部分由细转粗的交接部分。途中有一个梯度很大的坡，其实不下也可，整个路程就是一直往西北走，就会渐渐发现一条路。这样可以merge到铁轨人群，单程路线就可以体会到爬山，探险，铁轨，湖边的四重景色。最后在北边租一个PaddleBoard玩一小时回来即可。</li>
+<li>West Bluff还未探索，我们沿着岸边走的，感觉一般般。如果是南边出发环湖一周+水上运动，会有点累。所以如果是两辆车，建议南北各停一辆，大家从南出发，到北边结束是最好的。</li>
+</ul>
 <h2 id="Governor-Nelson-State-Park"><a href="#Governor-Nelson-State-Park" class="headerlink" title="Governor Nelson State Park"></a>Governor Nelson State Park</h2><p><img src="https://i.imgur.com/bSRjw4j.png" alt=""></p>
 <p><img src="https://i.imgur.com/wsHuebk.jpg" alt=""></p>
 <ul>
@@ -7075,6 +7095,9 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 </blockquote>
 <blockquote>
 <p>虚伪是一个人所能寻求的最困难、最刺激神经的恶习，它需要永不间断的警觉和精神的高度集中。它不像通奸或贪食可以在空闲的时间进行；它是需要付出全部时间从事的工作；它还需要一种玩世不恭的幽默。</p>
+</blockquote>
+<blockquote>
+<p>你知道罗西不是那种会在他人心中激起爱情的女人，她引起的只是一种亲情。对她心怀妒忌是很可笑的。她就好像林中空地上的一个池塘，既清澈又深邃，跳到里面去会觉得很畅快，即使一个流浪汉、一个吉普赛人和一个猎场看守人在你之前曾经跳进去浸泡，这一池清水仍然会同样地清凉，同样地晶莹澄澈。</p>
 </blockquote>
 <blockquote>
 <p>英国货币</p>
