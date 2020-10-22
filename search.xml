@@ -2762,6 +2762,19 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <ul>
 <li>Freely give and freely receive.</li>
 </ul>
+<blockquote>
+<p>“Each spouse’s self-centeredness asserted itself (as it always will), but in response, the other spouse got more impatient, resentful, harsh, and cold. In other words, they responded to the self-centeredness of their partner with their own self-centeredness. ”</p>
+</blockquote>
+<ul>
+<li>自私会带来问题，也是因为我们常用自私来回应自私。</li>
+</ul>
+<blockquote>
+<p>“But the gospel, brought home to your heart by the Spirit, can make you happy enough to be humble, giving you an internal fullness that frees you to be generous with the other even when you are not getting the satisfaction you want out of the relationship.”</p>
+<p>“You can only afford to be generous if you actually have some money in the bank to give.”</p>
+</blockquote>
+<blockquote>
+<p>“It is impossible for us to make major headway against self-centeredness and move into a stance of service without some kind of supernatural help.”</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>Holy</category>
@@ -3655,17 +3668,30 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
   <entry>
     <title>统计学习笔记</title>
     <url>/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>记录一下学统计的时候遇到的一些问题</p>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
+<li><p>记录一下学统计的时候遇到的一些问题</p>
+</li>
+<li><p>《The Seven Pillars of Statistical Wisdom》Stephen M. Stigler -Harvard University Press (2016)</p>
+</li>
+</ul>
 <a id="more"></a>
 
-
-
-<h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
+<h1 id="The-Seven-Pillars-of-Statistical-Wisdom"><a href="#The-Seven-Pillars-of-Statistical-Wisdom" class="headerlink" title="The Seven Pillars of Statistical Wisdom"></a>The Seven Pillars of Statistical Wisdom</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>当他谈到aggregation的时候:</p>
+<p>“By stipulating that, given a number of observations, you can actually gain information by throwing information away!”</p>
+</blockquote>
+<blockquote>
+<p>“but as the name “Likelihood” hints, there is a wealth of associated methods, many related to parametric families or to Fisherian or Bayesian inference.”</p>
+</blockquote>
+<ul>
+<li>霍，原来可以叫Fisherian</li>
+</ul>
+<h2 id="Chap1-Aggregation"><a href="#Chap1-Aggregation" class="headerlink" title="Chap1: Aggregation"></a>Chap1: Aggregation</h2><h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
 <p>The result of this is that there are sums of squares that could be attributed to more than one of the variables. The t-tests are equivalent to ‘type III’ tests of the sums of squares, but other tests are possible. The default ANOVA table uses ‘type I’ sums of squares, which can allow you to make more precise–and more powerful–tests of your hypotheses</p>
 <p>Anova的目的：partition the sums of squares</p>
-<p>###Further understanding of Type 123 test of RSS:<br><a href="https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455</a></p>
+<p>###Further understanding of Type 123 test of RSS:<br><a href="https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455">https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455</a></p>
 <p>Lets imagine that there are just two factors A and B (and we’ll throw in the A*B interaction later to distinguish type II SS). Further, lets imagine that nij不完全一样。<br>Now your two factors are correlated with each other.The problem with your factors being correlated is that there are sums of squares that are associated with both A and B. </p>
 <p>When computing an ANOVA (or any other linear regression), we want to partition the sums of squares. A partition puts all sums of squares into one and only one of several subsets. (For example, we might want to divide the SS up into A, B and error.) However, since your factors (still only A and B here) are not orthogonal there is no unique partition of these SS. In fact, there can be very many partitions, and if you are willing to slice your SS up into fractions (e.g., “I’ll put .5 into this bin and .5 into that one”), there are infinite partitions. A way to visualize this is to imagine the MasterCard symbol: The rectangle represents the total SS, and each of the circles represents the SS that are attributable to that factor, but notice the overlap between the circles in the center, those SS could be given to either circle.</p>
 <p><img src="https://i.stack.imgur.com/Dy8mt.jpg" alt=""></p>
@@ -3685,7 +3711,7 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <p>2017.11.20<br>###Forward and Backward selection 的主要差别：</p>
 <p>Forward selection has drawbacks, including the fact that each addition of a new feature may render one or more of the already included feature non-significant (p-value&gt;0.05). An alternate approach which avoids this is backward selection.The backward method is generally the preferred method, because the forward method produces so-called suppressor effects. These suppressor effects occur when predictors are only significant when another predictor is held constant.</p>
 <p>2017.11.25</p>
-<h3 id="Added-Variable-Plot-Partial-Regression-Plot"><a href="#Added-Variable-Plot-Partial-Regression-Plot" class="headerlink" title="Added Variable Plot (Partial Regression Plot)"></a>Added Variable Plot (Partial Regression Plot)</h3><p><a href="https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple</a></p>
+<h3 id="Added-Variable-Plot-Partial-Regression-Plot"><a href="#Added-Variable-Plot-Partial-Regression-Plot" class="headerlink" title="Added Variable Plot (Partial Regression Plot)"></a>Added Variable Plot (Partial Regression Plot)</h3><p><a href="https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple">https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple</a></p>
 <p>可以告诉我们如果变量之间存在线性相关的话，不能在回归模型中单独对Y和某一个X画图。可能会有Omitted-Variable Bias.</p>
 <p>主要原理：纵坐标画Y对除了我们关心的Xi之外其他的X拟合出来的残差，横坐标画我们所关心的Xi对其他所有X拟合出来的残差。R中car包里的avPlots可以实现这个功能。</p>
 <p>For illustration I will take a less complex regression model Y=β1+β2X2+β3X3+ϵ where the predictor variables X1 and X2 may be correlated. Let’s say the slopes β2 and β3 are both positive so we can say that (i) Y increases as X2 increases, if X3 is held constant, since β2 is positive; (ii) Y increases as X3 increases, if X2 is held constant, since β3 is positive.</p>
@@ -3694,20 +3720,20 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <p>A lot of the value of an added variable plot comes at the regression diagnostic stage, especially since the residuals in the added variable plot are precisely the residuals from the original multiple regression. This means outliers and heteroskedasticity can be identified in a similar way to when looking at the plot of a simple rather than multiple regression model. Influential points can also be seen - this is useful in multiple regression since some influential points are not obvious in the original data before you take the other variables into account. In my example, a moderately large X2 value may not look out of place in the table of data, but if the X3 value is large as well despite X2 and X3 being negatively correlated then the combination is rare. “Accounting for other predictors”, that X2 value is unusually large and will stick out more prominently on your added variable plot.</p>
 <p>∗∗ More technically they would be the residuals from running two other multiple regressions: the residuals from regressing Y against all predictors other than X2 go on the vertical axis, while the residuals from regression X2 against all other predictors go on the horizontal axis. This is really what the legends of “Y given others” and “X2 given others” are telling you. Since the mean residual from both of these regressions is zero, the mean point of (X2 given others, Y given others) will just be (0, 0) which explains why the regression line in the added variable plot always goes through the origin. But I often find that mentioning the axes are just residuals from other regressions confuses people (unsurprising perhaps since we now are talking about four different regressions!) so I have tried not to dwell on the matter. Comprehend them as “X2 given others” and “Y given others” and you should be fine.</p>
 <p>2017.12.3</p>
-<h3 id="Imbalanced-Classification-Problems"><a href="#Imbalanced-Classification-Problems" class="headerlink" title="Imbalanced Classification Problems"></a>Imbalanced Classification Problems</h3><p><a href="https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/" target="_blank" rel="noopener">https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/</a></p>
+<h3 id="Imbalanced-Classification-Problems"><a href="#Imbalanced-Classification-Problems" class="headerlink" title="Imbalanced Classification Problems"></a>Imbalanced Classification Problems</h3><p><a href="https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/">https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/</a></p>
 <p>Definition: An imbalanced classification problem is one in which the dependent variable has imbalanced proportion of classes. In other words, a data set that exhibits an unequal distribution between its classes is considered to be imbalanced.</p>
 <p>Reason: Below are the reasons which leads to reduction in accuracy of ML algorithms on imbalanced data sets:<br>    1.    ML algorithms struggle with accuracy because of the unequal distribution in dependent variable.<br>    2.    This causes the performance of existing classifiers to get biased towards majority class.<br>    3.    The algorithms are accuracy driven i.e. they aim to minimize the overall error to which the minority class contributes very little.<br>    4.    ML algorithms assume that the data set has balanced class distributions.<br>    5.    They also assume that errors obtained from different classes have same cost (explained below in detail).</p>
 <p>Solution：Below are the methods used to treat imbalanced datasets:<br>    1.    Undersampling<br>    2.    Oversampling<br>    3.    Synthetic Data Generation<br>    4.    Cost Sensitive Learning</p>
 <p>2017.12.5</p>
 <h3 id="Advantages-about-Mid-P-Value"><a href="#Advantages-about-Mid-P-Value" class="headerlink" title="Advantages about Mid P-Value"></a>Advantages about Mid P-Value</h3><p>①The mid P is less conservative (that is more powerful)<br>②For larger samples the P value obtained from a χ² test with Yates’ correction will correspond to the conventional approach, and the P value from the uncorrected test will correspond to the mid P value.——应该是说小样本因为离散程度更高，所以需要mid p-value.大样本一般不用mid p-value</p>
-<h3 id="Fisher-Exact-Test"><a href="#Fisher-Exact-Test" class="headerlink" title="Fisher Exact Test"></a>Fisher Exact Test</h3><p><a href="http://www2.fiu.edu/~howellip/Fisher.pdf" target="_blank" rel="noopener">http://www2.fiu.edu/~howellip/Fisher.pdf</a><br>让我重新了解了p值的概念。<br>一下讨论的p-值都建立在原假设H0：π=π0<br>我们往往定义p值的时候，曲线都是随着x的变化，中间高两边低。所以很自然的，就会误以为，p值是对当x等于或者大于（小于）某一特定值的y进行求和。殊不知，其实p值关心的更多是y！如果给出一个中间低两边高的分布。那么<br>①单边p值：算出一个若H0成立时候的均值。若观测值大于均值，那么P值就是大于等于观测值的概率。如果观测值小于均值，那么P值就是小于等于观测值的概率。<br>②双边p值：对于所有小于观测值的情况，进行积分。</p>
+<h3 id="Fisher-Exact-Test"><a href="#Fisher-Exact-Test" class="headerlink" title="Fisher Exact Test"></a>Fisher Exact Test</h3><p><a href="http://www2.fiu.edu/~howellip/Fisher.pdf">http://www2.fiu.edu/~howellip/Fisher.pdf</a><br>让我重新了解了p值的概念。<br>一下讨论的p-值都建立在原假设H0：π=π0<br>我们往往定义p值的时候，曲线都是随着x的变化，中间高两边低。所以很自然的，就会误以为，p值是对当x等于或者大于（小于）某一特定值的y进行求和。殊不知，其实p值关心的更多是y！如果给出一个中间低两边高的分布。那么<br>①单边p值：算出一个若H0成立时候的均值。若观测值大于均值，那么P值就是大于等于观测值的概率。如果观测值小于均值，那么P值就是小于等于观测值的概率。<br>②双边p值：对于所有小于观测值的情况，进行积分。</p>
 <p>2017.12.7</p>
-<h3 id="各种Independence之间的关系"><a href="#各种Independence之间的关系" class="headerlink" title="各种Independence之间的关系"></a>各种Independence之间的关系</h3><p><a href="https://onlinecourses.science.psu.edu/stat504/node/108" target="_blank" rel="noopener">https://onlinecourses.science.psu.edu/stat504/node/108</a><br>    1.    Mutual independence – all variables are independent from each other, denoted (A,B,C)  or A⊥⊥B⊥⊥C .<br>    2.    Joint independence – two variables are jointly independent of the third,  denoted (AB,C)  or AB⊥⊥C .<br>    3.    Marginal independence – two variables are independent while ignoring the third, e.g., θAB=1, denoted (A,B) .<br>    4.    Conditional independence – two variables are independent given the third, e.g., θAB(C=k)=1 for all k=1,2,…,K, denoted (AC,BC)  or A⊥⊥B|C .<br>    5.    Homogeneous associations – conditional (partial) odds-ratios don’t depend on the value of the third variable, denoted (AB,AC,BC) .<br>Before we look at the details, here is a summary of the relationships among these models:<br>    ▪    Mutual independence implies joint independence, i.e., all variables are independent of each other.<br>    ▪    Joint independence implies marginal independence, i.e., one variable is independent of the other two.<br>    ▪    Marginal independence does NOT imply joint independence.<br>    ▪    Marginal independence does NOT imply conditional independence.<br>    ▪    Conditional independence does NOT imply marginal independence.</p>
+<h3 id="各种Independence之间的关系"><a href="#各种Independence之间的关系" class="headerlink" title="各种Independence之间的关系"></a>各种Independence之间的关系</h3><p><a href="https://onlinecourses.science.psu.edu/stat504/node/108">https://onlinecourses.science.psu.edu/stat504/node/108</a><br>    1.    Mutual independence – all variables are independent from each other, denoted (A,B,C)  or A⊥⊥B⊥⊥C .<br>    2.    Joint independence – two variables are jointly independent of the third,  denoted (AB,C)  or AB⊥⊥C .<br>    3.    Marginal independence – two variables are independent while ignoring the third, e.g., θAB=1, denoted (A,B) .<br>    4.    Conditional independence – two variables are independent given the third, e.g., θAB(C=k)=1 for all k=1,2,…,K, denoted (AC,BC)  or A⊥⊥B|C .<br>    5.    Homogeneous associations – conditional (partial) odds-ratios don’t depend on the value of the third variable, denoted (AB,AC,BC) .<br>Before we look at the details, here is a summary of the relationships among these models:<br>    ▪    Mutual independence implies joint independence, i.e., all variables are independent of each other.<br>    ▪    Joint independence implies marginal independence, i.e., one variable is independent of the other two.<br>    ▪    Marginal independence does NOT imply joint independence.<br>    ▪    Marginal independence does NOT imply conditional independence.<br>    ▪    Conditional independence does NOT imply marginal independence.</p>
 <p>2017.12.11<br>在回归分析图中，经常有一道红线。红线是x-y 坐标关系的非参数拟合，并不是均值。 </p>
 <p>2018.1.23</p>
-<h3 id="logistic回归的两种报错原因："><a href="#logistic回归的两种报错原因：" class="headerlink" title="logistic回归的两种报错原因："></a>logistic回归的两种报错原因：</h3><p><a href="http://blog.csdn.net/csqazwsxedc/article/details/52033506" target="_blank" rel="noopener">http://blog.csdn.net/csqazwsxedc/article/details/52033506</a></p>
+<h3 id="logistic回归的两种报错原因："><a href="#logistic回归的两种报错原因：" class="headerlink" title="logistic回归的两种报错原因："></a>logistic回归的两种报错原因：</h3><p><a href="http://blog.csdn.net/csqazwsxedc/article/details/52033506">http://blog.csdn.net/csqazwsxedc/article/details/52033506</a></p>
 <p>2018.1.27</p>
-<h3 id="如何确定Experimental-Unit："><a href="#如何确定Experimental-Unit：" class="headerlink" title="如何确定Experimental Unit："></a>如何确定Experimental Unit：</h3><p><a href="http://www.isogenic.info/html/6__experimental_unit.html#more" target="_blank" rel="noopener">http://www.isogenic.info/html/6__experimental_unit.html#more</a></p>
+<h3 id="如何确定Experimental-Unit："><a href="#如何确定Experimental-Unit：" class="headerlink" title="如何确定Experimental Unit："></a>如何确定Experimental Unit：</h3><p><a href="http://www.isogenic.info/html/6__experimental_unit.html#more">http://www.isogenic.info/html/6__experimental_unit.html#more</a></p>
 <p>帮助区别了一个动物/一群动物，甚至有时候还可以在一个实验中存在多种EU</p>
 <p>2018.1.29<br>今天和Bean聊天：<br>①iid个体中每一个数据点都提供了和前一个一样多的信息。而如果有相关性，比如说ρ=0.99. 那么基本上第一个数据点就代表了全部信息。后面的数据点与第一个相比都没有提供足够多的信息。<br>②当我们说到充分统计量的时候，老师说每一个x向量的Sample-Size都是n。如果我们有多个数据比如说一个做了10次，一个做了20次。如果是iid的话，我们应该把他们放到一起变成30个。这样减少方差，没必要分成两个来考虑。</p>
 <p>2018.1.30<br>Fangfang：在2-sample-t-test中，两个分布可以不用都是Normal。只要他们都是对称的，或者skewed的程度差不多就可。</p>
@@ -6984,6 +7010,14 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>推荐指数7分</li>
 <li>从中间的小路开始，，走了北部环线。刚下车迎面而来的就是屎的味道… 夏天的时候温泉池冒泡泡但是没太大意思。期间我们走了两条很窄的小路，地上还有一只死鸽子…小虫乱飞。用老姚的话说，这公园太野了。爬到山顶，豁然开朗，微风习习，算是今日的亮点</li>
 <li>我感觉或许这才是自然的样子吧…有些公园环境过好，很舒适，不过有些不太真实。我喜欢说自己很热爱亲近自然，或许有些伪善在里面。这个公园就很「自然」，不过当我真正「亲近」的时候却又收回了手。希望会像爱情一样，终有一天，我会爱上她本来的模样。</li>
+</ul>
+<h2 id="Raymer’s-Cove"><a href="#Raymer’s-Cove" class="headerlink" title="Raymer’s Cove"></a>Raymer’s Cove</h2><p><img src="https://i.imgur.com/dvpylUv.png" alt=""></p>
+<p><img src="https://i.imgur.com/tdxvlAn.jpg" alt=""></p>
+<ul>
+<li><p>推荐指数8分</p>
+</li>
+<li><p>探险从一个圆圈型的停车场开始。左手边有一个不知通向何方的小木道。右手边一直通往Picnic Point。秋天时候走在路上，会路过一片金黄色的草地，这感觉像是在梦里。若是你还没有情人，你便会爱上那个迎面走来的女子。</p>
+</li>
 </ul>
 <h2 id="Tiedman-Pond-Nature-Preserve"><a href="#Tiedman-Pond-Nature-Preserve" class="headerlink" title="Tiedman Pond Nature Preserve"></a>Tiedman Pond Nature Preserve</h2><p><img src="https://i.imgur.com/88Tmpb5.png" alt=""></p>
 <p><img src="https://i.imgur.com/04rWzGa.jpg" alt=""></p>
