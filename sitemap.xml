@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moran79.github.io/book/index.html</loc>
+    
+    <lastmod>2020-10-29T19:42:58.321Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://moran79.github.io/2020/10/29/HowToReadABook/</loc>
     
     <lastmod>2020-10-29T19:37:32.842Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>https://moran79.github.io/2020/08/18/%E5%BF%83%E7%90%86%E5%AD%A6/</loc>
     
     <lastmod>2020-08-20T19:25:29.758Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://moran79.github.io/book/index.html</loc>
-    
-    <lastmod>2020-08-19T01:28:30.173Z</lastmod>
     
   </url>
   
