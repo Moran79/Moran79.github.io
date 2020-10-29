@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://moran79.github.io/book/index.html</loc>
+    <loc>https://moran79.github.io/about/index.html</loc>
     
-    <lastmod>2020-10-29T19:42:58.321Z</lastmod>
+    <lastmod>2020-10-29T21:45:31.991Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://moran79.github.io/2020/10/29/HowToReadABook/</loc>
     
-    <lastmod>2020-10-29T19:37:32.842Z</lastmod>
+    <lastmod>2020-10-29T21:27:04.646Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://moran79.github.io/2020/07/13/%E5%90%8D%E4%BA%BA%E4%BC%A0/</loc>
+    
+    <lastmod>2020-10-29T20:16:34.101Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://moran79.github.io/book/index.html</loc>
+    
+    <lastmod>2020-10-29T19:42:58.321Z</lastmod>
     
   </url>
   
@@ -26,6 +40,13 @@
     <loc>https://moran79.github.io/2020/07/25/%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2020-10-27T03:54:27.113Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://moran79.github.io/2020/09/17/Reading/</loc>
+    
+    <lastmod>2020-10-27T02:56:01.333Z</lastmod>
     
   </url>
   
@@ -47,13 +68,6 @@
     <loc>https://moran79.github.io/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/</loc>
     
     <lastmod>2020-10-18T02:24:11.153Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://moran79.github.io/2020/09/17/Reading/</loc>
-    
-    <lastmod>2020-10-09T17:12:00.307Z</lastmod>
     
   </url>
   
@@ -81,7 +95,7 @@
   <url>
     <loc>https://moran79.github.io/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
     
-    <lastmod>2020-09-25T02:59:36.230Z</lastmod>
+    <lastmod>2020-09-25T03:00:22.871Z</lastmod>
     
   </url>
   
@@ -170,16 +184,9 @@
   </url>
   
   <url>
-    <loc>https://moran79.github.io/2020/07/24/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/</loc>
+    <loc>https://moran79.github.io/2020/07/25/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/</loc>
     
     <lastmod>2020-07-28T21:44:13.156Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://moran79.github.io/2020/07/13/%E5%90%8D%E4%BA%BA%E4%BC%A0/</loc>
-    
-    <lastmod>2020-07-14T02:09:21.481Z</lastmod>
     
   </url>
   

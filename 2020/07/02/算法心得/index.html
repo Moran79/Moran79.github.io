@@ -1,283 +1,370 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.0.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="分享笔记——实践费曼学习法">
+  <meta name="author" content="大连铁板王">
+  <meta name="keywords" content="">
+  <title>算法心得 - 大家一起来</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"moran79.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="介绍以下知识来自于：  普林斯顿在Coursera上面的algorithm网课 python算法书 算法导论 算法图解【一本书】  希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档">
-<meta property="og:type" content="article">
-<meta property="og:title" content="算法心得">
-<meta property="og:url" content="https://moran79.github.io/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/index.html">
-<meta property="og:site_name" content="大家一起来">
-<meta property="og:description" content="介绍以下知识来自于：  普林斯顿在Coursera上面的algorithm网课 python算法书 算法导论 算法图解【一本书】  希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg">
-<meta property="article:published_time" content="2020-07-02T16:18:27.000Z">
-<meta property="article:modified_time" content="2020-08-18T18:49:46.485Z">
-<meta property="article:author" content="大连铁板王">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg">
-
-<link rel="canonical" href="https://moran79.github.io/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>算法心得 | 大家一起来</title>
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
-</head>
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2167517_wjpxw66krp.css">
 
-<body itemscope itemtype="http://schema.org/WebPage">
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <div class="headband"></div>
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>大家一起来</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-crossholybible"></i>
+                信仰
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/">
+                    
+                    耶稣说
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
+                    
+                    The Reason For God
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/">
+                    
+                    郭振游门训笔记
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-tree"></i>
+                生活
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/08/17/travel/">
+                    
+                    旅行
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/">
+                    
+                    随手记
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%A4%90%E9%A6%86/">
+                    
+                    餐馆
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%85%92%E5%BA%97/">
+                    
+                    酒店
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-book"></i>
+                读书
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/09/17/Reading/">
+                    
+                    佳句合集
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/Reading/">
+                    
+                    单本书籍
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-music"></i>
+                音乐
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/">
+                    
+                    聆听音乐
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category1-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">大家一起来</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-belief">
-
-    <a href="/belief/" rel="section"><i class="fas fa-cross fa-fw"></i>信仰</a>
-
-  </li>
-        <li class="menu-item menu-item-book">
-
-    <a href="/book/" rel="section"><i class="fas fa-book fa-fw"></i>读书</a>
-
-  </li>
-        <li class="menu-item menu-item-music">
-
-    <a href="/music/" rel="section"><i class="fas fa-music fa-fw"></i>音乐</a>
-
-  </li>
-        <li class="menu-item menu-item-life">
-
-    <a href="/life/" rel="section"><i class="far fa-laugh fa-fw"></i>生活</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
 </nav>
 
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-07-02 11:18" pubdate>
+        2020年7月2日 上午
+      </time>
+    </span>
+  
+</div>
 
+<div class="mt-1">
+  
     
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      67
+       分钟
+    </span>
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://moran79.github.io/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/me.jpg">
-      <meta itemprop="name" content="大连铁板王">
-      <meta itemprop="description" content="分享笔记——实践费曼学习法">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大家一起来">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          算法心得
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-02 11:18:27" itemprop="dateCreated datePublished" datetime="2020-07-02T11:18:27-05:00">2020-07-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-18 13:49:46" itemprop="dateModified" datetime="2020-08-18T13:49:46-05:00">2020-08-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/Others/" itemprop="url" rel="index"><span itemprop="name">Others</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study/Others/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>10k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
+  <main>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>以下知识来自于：</p>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">算法心得</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>以下知识来自于：</p>
 <ul>
 <li>普林斯顿在Coursera上面的algorithm网课</li>
 <li>python算法书</li>
@@ -537,7 +624,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="Applications——Percolation"><a href="#Applications——Percolation" class="headerlink" title="Applications——Percolation"></a>Applications——Percolation</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" alt=""></p>
+<h2 id="Applications——Percolation"><a href="#Applications——Percolation" class="headerlink" title="Applications——Percolation"></a>Applications——Percolation</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" srcset="/img/loading.gif" alt=""></p>
 <p>很明显，概率越小越不容易渗透。</p>
 <p>Phase Transition: 在能不能渗透的某个临界值p，图像会变得十分陡峭。</p>
 <p>用蒙特卡洛模拟来找出临界值p：先给一个黑色方块。将其中的黑块一个一个的变成白块，直至渗透。</p>
@@ -551,11 +638,11 @@
 <p>所以在k-sum的例子中，最耗时的一步是$C_N^k$这一步，O($n^k$)</p>
 <p>但是这种获得explcit的方式有点太难了，所以一般也不采用这种方法</p>
 <h2 id="Order-Of-Growth"><a href="#Order-Of-Growth" class="headerlink" title="Order Of Growth"></a>Order Of Growth</h2><p>1, log(N), N, Nlog(N), N^2, N^3, 2^N…</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" alt=""></p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" alt=""></p>
-<h3 id="四种记号"><a href="#四种记号" class="headerlink" title="四种记号"></a>四种记号</h3><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" srcset="/img/loading.gif" alt=""></p>
+<h3 id="四种记号"><a href="#四种记号" class="headerlink" title="四种记号"></a>四种记号</h3><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" srcset="/img/loading.gif" alt=""></p>
 <p><strong>Common mistake：</strong> Interpreting big-Oh as an approximate model. </p>
-<h2 id="内存使用"><a href="#内存使用" class="headerlink" title="内存使用"></a>内存使用</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" alt=""></p>
+<h2 id="内存使用"><a href="#内存使用" class="headerlink" title="内存使用"></a>内存使用</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" srcset="/img/loading.gif" alt=""></p>
 <h1 id="Stack-amp-Queue"><a href="#Stack-amp-Queue" class="headerlink" title="Stack &amp; Queue"></a>Stack &amp; Queue</h1><p>Stack: LIFO 后进先出<br>Queue: FIFO 先进先出<br>这两个都可以用linked-list / array来实现</p>
 <h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><h3 id="Resizing-Array"><a href="#Resizing-Array" class="headerlink" title="Resizing Array"></a>Resizing Array</h3><p>在Java实现中，我们需要用户给出array的默认长度。所以更灵活的，我们可以用resizing array。但是可变长度的array会有一个问题，那就是我们每向array末尾添加一个元素的时候，我们需要把之前所有元素都复制一遍，连同最新的元素放到一起。这样的话需要的操作为：$1+2+3+…+N = N(N+1)/2$. 所以我们需要一个更简单的方法来做这个事情。</p>
 <h4 id="Repeated-Doubling"><a href="#Repeated-Doubling" class="headerlink" title="Repeated Doubling"></a>Repeated Doubling</h4><p>Q. How to grow array?</p>
@@ -582,19 +669,19 @@
 <h2 id="Generic"><a href="#Generic" class="headerlink" title="Generic"></a>Generic</h2><p>有时候元素不是数字或字符这么好操作的东西（Generic Type），就有点麻烦。在各个语言里面实现的时候，Liknked-List比Array更容易实现</p>
 <h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>在Python里面是用dict来实现</p>
 <p>The <u>MutableMapping</u> abstract base class, from Python’s <strong>collections</strong> module and discussed in the preceding pages, is a valuable tool when implementing a map.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" srcset="/img/loading.gif" alt=""></p>
 <h2 id="Hash-Table"><a href="#Hash-Table" class="headerlink" title="Hash Table"></a>Hash Table</h2><p>Python的dict功能是用Hash Table实现的，因此查找才辣么快。</p>
 <p>The novel concept for a hash table is the use of a <u>hash function to map general keys to corresponding indices</u> in a table.</p>
 <p>The <strong>goal</strong> of a hash function, h, is to <u>map each key k to an integer in the range [0,N − 1]</u>, where N is the capacity of the bucket array for a hash table.</p>
 <p>If there are two or more keys with the same hash value, then two different items will be mapped to the same bucket in A. In this case, we say that a collision has occurred.</p>
 <p>We say that a hash function is “good” if it maps the keys in our map so as to sufﬁciently minimize collisions. For practical reasons, we also would like a hash function to be fast and easy to compute.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" srcset="/img/loading.gif" alt=""></p>
 <p>The advantage of separating the hash function into two such components is that the hash code portion of that computation is independent of a speciﬁc hash table size. This allows the development of a general hash code for each object that can be used for a hash table of any size; only the compression function depends upon the table size. This is particularly convenient, <u>because the underlying bucket array for a hash table may be dynamically resized</u>, depending on the number of items currently stored in the map.</p>
 <h3 id="几种常见Hash编码方法"><a href="#几种常见Hash编码方法" class="headerlink" title="几种常见Hash编码方法"></a>几种常见Hash编码方法</h3><h4 id="Treating-the-Bit-Representation-as-an-Integer"><a href="#Treating-the-Bit-Representation-as-an-Integer" class="headerlink" title="Treating the Bit Representation as an Integer"></a>Treating the Bit Representation as an Integer</h4><p>Python relies on 32-bit hash codes. If a ﬂoating-point number uses a 64-bit representation, its bits cannot be viewed directly as a hash code.（如果当前信息不超过32-bit，那么他本身就是编码后的hash-code）如果是64-bit可以用32+32/去掉其中一个32/两个32做异或</p>
 <h4 id="Polynomial-Hash-Codes"><a href="#Polynomial-Hash-Codes" class="headerlink" title="Polynomial Hash Codes"></a>Polynomial Hash Codes</h4><p>用Bit-representaion会出现的问题：The summation and exclusive-or hash codes, described above, are not good choices for character strings or other variable-length objects that can be viewed as tuples of the form $(x_0,x_1,…,x_{n-1})$, where <strong>the order of the x i ’s is signiﬁcant</strong>.</p>
 <p>An alternative hash code, which does exactly this, is to choose a nonzero constant, a = 1, and use as a hash code the value:<br>$$<br>x_0a^{n-1}+x_1a^{n-2}+…+x_{n-2}a+x_{n-1}<br>$$<br>By Horner’s rule (see Exercise C-3.50), this polynomial can be computed as:<br>$$<br>x_{n-1}+a(x_{n-2}+a(x_{n-3}+…+a(x_2+a(x_1+ax_0))))<br>$$<br>We have done some experimental studies that suggest that <u>33, 37, 39, and 41</u> are particularly good choices for a when working with character strings that are English words.</p>
 <h4 id="Cyclic-Shift-Hash-Codes"><a href="#Cyclic-Shift-Hash-Codes" class="headerlink" title="Cyclic-Shift Hash Codes"></a>Cyclic-Shift Hash Codes</h4><p>A variant of the polynomial hash code replaces multiplication by a with a cyclic shift of a partial sum by a certain number of bits.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" srcset="/img/loading.gif" alt=""></p>
 <p>python里面的hash(x)可以计算一个x的hash值，However, only <u>immutable data types</u> are deemed hashable in Python. This restriction is meant to ensure that a particular object’s hash code remains constant during that object’s lifespan. Among Python’s built-in data types, <u>the immutable int, ﬂoat, str, tuple, and frozenset</u> classes produce robust hash codes via the hash function. Instances of <u>user-deﬁned classes</u> are treated as unhashable by default, with a TypeError raised by the hash function.</p>
 <p>An important rule to obey is that if x == y, then hash(x) == hash(y).</p>
 <h3 id="Compression-Functions"><a href="#Compression-Functions" class="headerlink" title="Compression Functions"></a>Compression Functions</h3><p>mapping the hash code integer into the range [0,N −1]. A good compression function is one that <u>minimizes the number of collisions for a given set of distinct hash codes.</u></p>
@@ -608,7 +695,7 @@
 </ol>
 <p>计算一个p*q矩阵和一个q*r矩阵的成绩，需要计算p*q*r个标量乘法</p>
 <p>钢条切割中每一个分段都是相同的，所有长度为k的钢条都属于一个子问题。但是矩阵链乘法每一个长度为k的子链都不相同，不属于一个子问题。</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" srcset="/img/loading.gif" alt=""></p>
 <h1 id="Numeric-Optimization"><a href="#Numeric-Optimization" class="headerlink" title="Numeric Optimization"></a>Numeric Optimization</h1><h3 id="Newton’s-Method"><a href="#Newton’s-Method" class="headerlink" title="Newton’s Method"></a>Newton’s Method</h3><p>算法</p>
 <p>优点</p>
 <ul>
@@ -652,253 +739,283 @@
 <ul>
 <li>converge slowly</li>
 </ul>
-<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" alt=""></p>
+<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" srcset="/img/loading.gif" alt=""></p>
 <h1 id="数学基础知识"><a href="#数学基础知识" class="headerlink" title="数学基础知识"></a>数学基础知识</h1><p>对称性+传递性无法推出自反性的例子：平行关系</p>
 
-    </div>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/">Study</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/Others/">Others</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/Others/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">统计学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">机器学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/02/The-Reason-for-God/" rel="prev" title="Timothy Keller">
-      <i class="fa fa-chevron-left"></i> Timothy Keller
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="统计学习笔记">
-      统计学习笔记 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://moran79.github.io/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/';
+        this.page.identifier = '/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/';
+      };
+      function loadDisqus() {
+        (function () {
+          var d = document,
+            s = d.createElement('script');
+          s.src = '//' + 'iamwangsiyu# your shortname' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        })();
       }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+      waitElementVisible('disqus_thread', loadDisqus);
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
 
+
+              </article>
+            
+          </article>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3"><span class="nav-text">算法图解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B"><span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%A3%E5%88%97%E8%A1%A8-Hash-Table"><span class="nav-text">散列表 Hash Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-text">广度优先搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95"><span class="nav-text">狄克斯特拉算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95"><span class="nav-text">贪婪算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="nav-text">动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backtracking-%E6%94%BE%E5%BC%83%E6%B3%95"><span class="nav-text">Backtracking 放弃法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union-Find"><span class="nav-text">Union Find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Find"><span class="nav-text">Quick Find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union"><span class="nav-text">Quick Union</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Weighted-Quick-Union"><span class="nav-text">Weighted Quick Union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Path-Compression"><span class="nav-text">Path Compression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications%E2%80%94%E2%80%94Percolation"><span class="nav-text">Applications——Percolation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Analysis-of-Algorithms"><span class="nav-text">Analysis of Algorithms</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E6%B3%95"><span class="nav-text">观察法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E6%B3%95"><span class="nav-text">数学法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Order-Of-Growth"><span class="nav-text">Order Of Growth</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E8%AE%B0%E5%8F%B7"><span class="nav-text">四种记号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8"><span class="nav-text">内存使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack-amp-Queue"><span class="nav-text">Stack &amp; Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-text">Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resizing-Array"><span class="nav-text">Resizing Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Repeated-Doubling"><span class="nav-text">Repeated Doubling</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-considerations"><span class="nav-text">Stack considerations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List-or-Resizing-Array"><span class="nav-text">Linked-List or Resizing Array</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generic"><span class="nav-text">Generic</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-Table"><span class="nav-text">Hash Table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81Hash%E7%BC%96%E7%A0%81%E6%96%B9%E6%B3%95"><span class="nav-text">几种常见Hash编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Treating-the-Bit-Representation-as-an-Integer"><span class="nav-text">Treating the Bit Representation as an Integer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Polynomial-Hash-Codes"><span class="nav-text">Polynomial Hash Codes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cyclic-Shift-Hash-Codes"><span class="nav-text">Cyclic-Shift Hash Codes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compression-Functions"><span class="nav-text">Compression Functions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92DP"><span class="nav-text">动态规划DP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Numeric-Optimization"><span class="nav-text">Numeric Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Newton%E2%80%99s-Method"><span class="nav-text">Newton’s Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Golden-Section"><span class="nav-text">Golden Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nelder-Mead"><span class="nav-text">Nelder-Mead</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">数学基础知识</span></a></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="大连铁板王"
-      src="/images/me.jpg">
-  <p class="site-author-name" itemprop="name">大连铁板王</p>
-  <div class="site-description" itemprop="description">分享笔记——实践费曼学习法</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">31</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">40</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="http://douban.com/people/49183240" title="豆瓣 → http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;49183240" rel="noopener" target="_blank"><i class="fa fa-film fa-fw"></i>豆瓣</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.linkedin.com/in/siyu79" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;siyu79" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      友情链接
     </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://kehuiyao.github.io/" title="https:&#x2F;&#x2F;kehuiyao.github.io&#x2F;" rel="noopener" target="_blank">姚可辉's Blog</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://jerryliu20d.github.io/" title="https:&#x2F;&#x2F;jerryliu20d.github.io&#x2F;" rel="noopener" target="_blank">刘理杰's Blog</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">大连铁板王</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">277k</span>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
 
       </div>
-    </footer>
+    
   </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
 
   
-  <script src="/lib/anime.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
   
 
   
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
   
 
-<script>
-  var disqus_config = function() {
-    this.page.url = "https://moran79.github.io/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/";
-    this.page.identifier = "2020/07/02/算法心得/";
-    this.page.title = "算法心得";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
       });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://iamwangsiyu.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "算法心得&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
     }
-  });
-</script>
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
