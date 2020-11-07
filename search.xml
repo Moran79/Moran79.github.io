@@ -502,23 +502,40 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
     <url>/2020/09/17/Reading/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>各类书籍里面的佳句：</p>
 <ul>
-<li><p>《寻欢作乐》毛姆</p>
-</li>
-<li><p>《红与黑》 斯丹达尔</p>
-</li>
-<li><p>《镜像》刘慈欣</p>
-</li>
-<li><p>《老人与海》 海明威</p>
-</li>
-<li><p>《流浪地球》刘慈欣</p>
-</li>
-<li><p>《人间失格》太宰治</p>
-</li>
-<li><p>《我们仨》杨绛</p>
-</li>
+<li>《中庸》</li>
+<li>《寻欢作乐》毛姆</li>
+<li>《红与黑》 斯丹达尔</li>
+<li>《镜像》刘慈欣</li>
+<li>《老人与海》 海明威</li>
+<li>《流浪地球》刘慈欣</li>
+<li>《人间失格》太宰治</li>
+<li>《我们仨》杨绛</li>
 </ul>
 <a id="more"></a>
 
+<h1 id="《中庸》"><a href="#《中庸》" class="headerlink" title="《中庸》"></a>《中庸》</h1><blockquote>
+<p>道也者，不可须臾离也，可离非道也。</p>
+</blockquote>
+<p>包括《大学》，多次提到一句话：</p>
+<blockquote>
+<p>君子慎其独也。</p>
+</blockquote>
+<ul>
+<li>当我们不需要做给别人看的时候，我们做一件事的原因就因为他本身。</li>
+</ul>
+<blockquote>
+<p>道不远人，人之为道而远人，不可以为道。</p>
+</blockquote>
+<ul>
+<li>好的道理是不会使一个人脱离社会变为理想主义者的。</li>
+</ul>
+<blockquote>
+<p>君子素其位而行，不愿乎其外。</p>
+</blockquote>
+<ul>
+<li>根据自己的地位行事，不羡慕行其地位以外的事。</li>
+<li>该干嘛干嘛，处在学生的地位，就应该学习。处在无产阶级，就不能奢望资产阶级的生活…</li>
+</ul>
 <h1 id="《寻欢作乐》毛姆"><a href="#《寻欢作乐》毛姆" class="headerlink" title="《寻欢作乐》毛姆"></a>《寻欢作乐》毛姆</h1><blockquote>
 <p>我发现要是有人打电话来找你，而你恰巧不在，于是他留下口信，请你一回家就打个电话给他，说他有要紧的事，那么这件事多半是对他要紧，而不是对你要紧。如果是要送你一样礼物，或是帮你什么忙，大多数人都不会急不可耐。</p>
 </blockquote>
@@ -1751,6 +1768,21 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
 </ul>
 </li>
 </ul>
+<h2 id="Glass-Nickel-Pizza-Co"><a href="#Glass-Nickel-Pizza-Co" class="headerlink" title="Glass Nickel Pizza Co"></a>Glass Nickel Pizza Co</h2><p>2020/10/30</p>
+<ul>
+<li>Chicken Alfredo Pizza 8分<ul>
+<li>要选Thin Crust，算是吃过的pizza里面好吃的</li>
+</ul>
+</li>
+<li>Santa Fe Pizza 6分<ul>
+<li>不妙…下次不点了</li>
+</ul>
+</li>
+<li>Bone In Wings 7.5分<ul>
+<li>感觉披萨店的炸鸡翅都有点东西…</li>
+</ul>
+</li>
+</ul>
 <h2 id="Red-Lobster"><a href="#Red-Lobster" class="headerlink" title="Red Lobster"></a>Red Lobster</h2><p>2020/09/17 </p>
 <ul>
 <li><p>Garlic Shrimp Skewers 蒜香虾 6分</p>
@@ -2909,6 +2941,49 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <blockquote>
 <p>“It is impossible for us to make major headway against self-centeredness and move into a stance of service without some kind of supernatural help.”</p>
 </blockquote>
+<blockquote>
+<p>“So what do you do then? There are at least two paths to take. First, you could decide that your woundedness is more fundamental than your self-centeredness and determine that <strong>unless your spouse sees the problems you have and takes care of you, it’s not going to work out.</strong> Of course, your spouse will probably not do this—especially if he or she is thinking almost the exact same thing about you! And so what follows is the <strong>development of emotional distance</strong> and, perhaps, a slowly negotiated kind of détente or ceasefire. <strong>There is an unspoken agreement not to talk about some things.</strong> There are some things your spouse does that you hate, <strong>but you stop talking about them as long as he or she stops bothering you about certain other things</strong>. <strong>No one changes for the other</strong>; there is only tit-for-tat bargaining. Couples who settle for this kind of relationship may look happily married after forty years, but when it’s time for the anniversary photo op, the kiss will be forced.”</p>
+</blockquote>
+<ul>
+<li>看到了关系中的自己。</li>
+</ul>
+<blockquote>
+<p>“The alternative to this truce-marriage is to determine to see your own selfishness as a fundamental problem and to treat it more seriously than you do your spouse’s. Why? Only you have complete access to your own selfishness, and only you have complete responsibility for it. ”</p>
+</blockquote>
+<blockquote>
+<p>“Neither of you may take this course of action, or both of you may do it together. But there is a third possibility: It may be that one of you decides to operate on the basis of verse 21 and one of you does not. In this case, let’s say, you are the only one who decides, “My selfishness is the thing I am going to work on.” What will happen? Usually there is not much immediate response from the other side. But often, over time, your attitude and behavior will begin to soften your partner. He or she can see the pains you are taking. And it will be easier for your spouse to admit his or her faults because you are no longer always talking about them yourself. </p>
+</blockquote>
+<ul>
+<li>主动改变的一方虽然承受了更多，但是换来的结果是好的——也总要有人去迈出这一步</li>
+</ul>
+<blockquote>
+<p>“The Christian principle that needs to be at work is Spirit-generated selflessness—not thinking less of yourself or more of yourself but thinking of yourself less.”</p>
+</blockquote>
+<ul>
+<li>要做的不是低估自己或者高估自己，要做的是在凡事上不仅要看到自己，还要看到更大的图画。</li>
+</ul>
+<blockquote>
+<p>“Those who stop concentrating on how unhappy they are find that their happiness is growing. You must lose yourself to find yourself.”</p>
+</blockquote>
+<blockquote>
+<p>“What is it that most motivates and moves you? Is it the desire for success? The pursuit of some achievement? The need to prove yourself to your parents? The need for respect from your peers? Are you largely driven by anger against someone or some people who have wronged you? Paul says that if any of these things is a greater controlling influence on you than the reality of God’s love for you, you will not be in a position to serve others unselfishly. Only out of the fear of the Lord Jesus will we be liberated to serve one another.”</p>
+</blockquote>
+<ul>
+<li>其他的动力来源并不是不好，也不是不能完成你的目标。只是他们对于「服侍别人」没有帮助。看起来服侍别人是一件很重要的事？</li>
+</ul>
+<blockquote>
+<p>“We come into our marriages driven by all kinds of fears, desires, and needs. If I look to my marriage to fill the God-sized spiritual vacuum in my heart, I will not be in position to serve my spouse. Only God can fill a God-sized hole. Until God has the proper place in my life, I will always be complaining that my spouse is not loving me well enough, not respecting me enough, not supporting me enough.”</p>
+</blockquote>
+<ul>
+<li>我们投入到一段感情中，若是带入了太多的恐惧、期待、需要、欲望，那可能会凉。</li>
+</ul>
+<blockquote>
+<p>“It is possible to feel you are “madly in love” with someone, <strong>when it is really just an attraction to someone who can meet your needs and address the insecurities and doubts you have about yourself</strong>. In that kind of relationship, you will demand and control rather than serve and give. The only way to avoid sacrificing your partner’s joy and freedom on the altar of your need is to <strong>turn to the ultimate lover of your soul.</strong> He voluntarily sacrificed himself on the cross, taking what you deserved for your sins against God and others.”</p>
+</blockquote>
+<ul>
+<li>爱情燃烧起来的原因很现实。</li>
+<li>我的问题是，既然我们要先建立和耶稣的关系，那我们是如何选择我们决定爱的伴侣呢？既然我们明白了我们的爱人只是恰好满足了我的期待和需要，如何选择爱的倾注对象呢？</li>
+</ul>
 ]]></content>
       <categories>
         <category>Holy</category>
@@ -3668,7 +3743,53 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <ul>
 <li>WOW</li>
 </ul>
-<h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
+<blockquote>
+<p>“It was already well known a century earlier that magnetic north and true north differed, and by 1500 it was also well known that the difference between true and magnetic north varied from place to place, often by considerable amounts—10° or more to the east or to the west.”</p>
+</blockquote>
+<ul>
+<li>早期指南针都有一个10°左右的误差。</li>
+</ul>
+<blockquote>
+<p>“Instead he gives the mean of the largest and smallest, what later statisticians would call a <strong>midrange.</strong> ”</p>
+</blockquote>
+<ul>
+<li>最大值最小值的平均数：midrange</li>
+</ul>
+<blockquote>
+<p>“If we collect a man’s urine during 24 hours and mix all his urine to analyze the average, we get an analysis of a urine that simply does not exist;”</p>
+</blockquote>
+<ul>
+<li>人们在担心，我们通过平均值所得到的个体不一定「真实存在」。就比如说linear regression中的样本中心点$(\bar{X},\bar{y})$ 不一定存在于样本之中。</li>
+</ul>
+<h2 id="Chap2-Information"><a href="#Chap2-Information" class="headerlink" title="Chap2: Information"></a>Chap2: Information</h2><p>Root-n Rule: 如果你想获得双倍的精确度，你需要四倍的数据</p>
+<blockquote>
+<p>“The paradox of the accumulation of information, namely, that the last 10 measurements are worth less than the first 10, even though all measurements are equivalently accurate, is heightened by the different (and to a degree misleading) uses of the term information in Statistics and in science.”</p>
+</blockquote>
+<ul>
+<li>后十个数据提供的信息，没有前十个那么多了</li>
+<li>两个反例：<ul>
+<li>FIsher Information.$I_n(\theta) = nI(\theta)$ 这是因为它的衡量与方差是一个量度的。我们在使用时要开方</li>
+<li>香农的信息论【这个不太懂了…】</li>
+</ul>
+</li>
+</ul>
+<p>拉普拉斯将棣莫弗的定律推广，得到了中心极限定理（1810年）</p>
+<ul>
+<li>1824年泊松发现Cauchy不满足</li>
+</ul>
+<blockquote>
+<p>“This was in direct contrast to long mathematical practice: in a sequence of mathematical operations, mathematicians would keep track of the maximum error that could have arisen at each step, a quantity that grew as the series grew, while statisticians would allow for a likely compensation of errors, which would in relative terms shrink as the series grew.”</p>
+</blockquote>
+<ul>
+<li>比如说数分里面的$\epsilon-N$，对比依概率收敛</li>
+</ul>
+<p>有时候扔掉一个数据，比把他加进来然后求平均更好：</p>
+<ul>
+<li>这取决于我们的目标</li>
+<li>outlier</li>
+</ul>
+<p>有时候Correlation也会影响我们获得信心的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
+<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
 <p>The result of this is that there are sums of squares that could be attributed to more than one of the variables. The t-tests are equivalent to ‘type III’ tests of the sums of squares, but other tests are possible. The default ANOVA table uses ‘type I’ sums of squares, which can allow you to make more precise–and more powerful–tests of your hypotheses</p>

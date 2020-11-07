@@ -196,7 +196,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/Reading/">
+                  <a class="dropdown-item" href="/book/">
                     
                     单本书籍
                   </a>
@@ -321,7 +321,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.1k 字
+      4.5k 字
     </span>
   
 
@@ -331,7 +331,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      68
+      75
        分钟
     </span>
   
@@ -388,7 +388,53 @@
 <ul>
 <li>WOW</li>
 </ul>
-<h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
+<blockquote>
+<p>“It was already well known a century earlier that magnetic north and true north differed, and by 1500 it was also well known that the difference between true and magnetic north varied from place to place, often by considerable amounts—10° or more to the east or to the west.”</p>
+</blockquote>
+<ul>
+<li>早期指南针都有一个10°左右的误差。</li>
+</ul>
+<blockquote>
+<p>“Instead he gives the mean of the largest and smallest, what later statisticians would call a <strong>midrange.</strong> ”</p>
+</blockquote>
+<ul>
+<li>最大值最小值的平均数：midrange</li>
+</ul>
+<blockquote>
+<p>“If we collect a man’s urine during 24 hours and mix all his urine to analyze the average, we get an analysis of a urine that simply does not exist;”</p>
+</blockquote>
+<ul>
+<li>人们在担心，我们通过平均值所得到的个体不一定「真实存在」。就比如说linear regression中的样本中心点$(\bar{X},\bar{y})$ 不一定存在于样本之中。</li>
+</ul>
+<h2 id="Chap2-Information"><a href="#Chap2-Information" class="headerlink" title="Chap2: Information"></a>Chap2: Information</h2><p>Root-n Rule: 如果你想获得双倍的精确度，你需要四倍的数据</p>
+<blockquote>
+<p>“The paradox of the accumulation of information, namely, that the last 10 measurements are worth less than the first 10, even though all measurements are equivalently accurate, is heightened by the different (and to a degree misleading) uses of the term information in Statistics and in science.”</p>
+</blockquote>
+<ul>
+<li>后十个数据提供的信息，没有前十个那么多了</li>
+<li>两个反例：<ul>
+<li>FIsher Information.$I_n(\theta) = nI(\theta)$ 这是因为它的衡量与方差是一个量度的。我们在使用时要开方</li>
+<li>香农的信息论【这个不太懂了…】</li>
+</ul>
+</li>
+</ul>
+<p>拉普拉斯将棣莫弗的定律推广，得到了中心极限定理（1810年）</p>
+<ul>
+<li>1824年泊松发现Cauchy不满足</li>
+</ul>
+<blockquote>
+<p>“This was in direct contrast to long mathematical practice: in a sequence of mathematical operations, mathematicians would keep track of the maximum error that could have arisen at each step, a quantity that grew as the series grew, while statisticians would allow for a likely compensation of errors, which would in relative terms shrink as the series grew.”</p>
+</blockquote>
+<ul>
+<li>比如说数分里面的$\epsilon-N$，对比依概率收敛</li>
+</ul>
+<p>有时候扔掉一个数据，比把他加进来然后求平均更好：</p>
+<ul>
+<li>这取决于我们的目标</li>
+<li>outlier</li>
+</ul>
+<p>有时候Correlation也会影响我们获得信心的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
+<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
 <p>The result of this is that there are sums of squares that could be attributed to more than one of the variables. The t-tests are equivalent to ‘type III’ tests of the sums of squares, but other tests are possible. The default ANOVA table uses ‘type I’ sums of squares, which can allow you to make more precise–and more powerful–tests of your hypotheses</p>
@@ -656,7 +702,7 @@
         listClass: 'tocbot-list',
         isCollapsedClass: 'tocbot-is-collapsed',
         collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 0,
+        collapseDepth: 2,
         scrollSmooth: true,
         headingsOffset: -boardTop
       });
