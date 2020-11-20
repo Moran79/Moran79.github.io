@@ -321,7 +321,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.5k 字
+      4.7k 字
     </span>
   
 
@@ -331,7 +331,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      75
+      76
        分钟
     </span>
   
@@ -433,8 +433,17 @@
 <li>这取决于我们的目标</li>
 <li>outlier</li>
 </ul>
-<p>有时候Correlation也会影响我们获得信心的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
-<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
+<p>有时候Correlation也会影响我们获得信息的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
+<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><p>遇到了一个问题，在伯努利分布中，当数据够大的时候，任何一个小格子的概率都太小了。本来对这种小概率事件我们是该拒绝的，但也可能是因为我们的方法错了？</p>
+<p>Fisher提出了MLE的说法。</p>
+<blockquote>
+<p>The associated idea of likelihood as a way to calibrate our inferences</p>
+</blockquote>
+<ul>
+<li>Likelihood变成了我们统计推断的一个尺度。该不该拒绝原假设？都是根据likelihood来判断的。</li>
+<li>Likelihood被Bayes和MLE两大方法所引导？</li>
+</ul>
+<h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
 <p>The result of this is that there are sums of squares that could be attributed to more than one of the variables. The t-tests are equivalent to ‘type III’ tests of the sums of squares, but other tests are possible. The default ANOVA table uses ‘type I’ sums of squares, which can allow you to make more precise–and more powerful–tests of your hypotheses</p>

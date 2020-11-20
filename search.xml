@@ -935,6 +935,52 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
       </categories>
   </entry>
   <entry>
+    <title>老李的日本生活</title>
+    <url>/2020/11/20/zongru/</url>
+    <content><![CDATA[<p>老李是我的好朋友。他留学日本，扎根农村，钻研真理。</p>
+<a id="more"></a>
+
+
+
+<p>东京朝阳 [2020/5/30]</p>
+<p><img src="https://i.imgur.com/9tyIKdo.jpg" alt=""></p>
+<p>大阪朝阳 [2020/9/24]</p>
+<p><img src="https://i.imgur.com/gFd82xu.jpg" alt=""></p>
+<h1 id="田野调查——采茶园-2020-11"><a href="#田野调查——采茶园-2020-11" class="headerlink" title="田野调查——采茶园 [2020/11]"></a>田野调查——采茶园 [2020/11]</h1><p><img src="https://i.imgur.com/XIUrVZ3.jpg" alt=""></p>
+<p><img src="https://i.imgur.com/m8O5uxx.jpg" alt=""></p>
+<p><img src="https://i.imgur.com/ALbxTbk.jpg" alt=""></p>
+<p><img src="https://i.imgur.com/OKV0mNf.jpg" alt=""></p>
+<h1 id="老李厨艺"><a href="#老李厨艺" class="headerlink" title="老李厨艺"></a>老李厨艺</h1><p>蛋饺 [2020/10/10]</p>
+<p><img src="https://i.imgur.com/1w5J5dT.jpg" alt=""></p>
+<p>萝卜汤 [2020/10/11]</p>
+<p><img src="https://i.imgur.com/B3Bi7VL.jpg" alt=""></p>
+<p>水果粥 [2020/10/13]</p>
+<p><img src="https://i.imgur.com/ntZYgWN.jpg" alt=""></p>
+<p>菠菜汤 [2020/10/13]</p>
+<p><img src="https://i.imgur.com/cXi0nBh.jpg" alt=""></p>
+<p>红烧肉 [2020/10/15]</p>
+<p><img src="https://i.imgur.com/ONkclWo.jpg" alt=""></p>
+<p>牛肉饭 [2020/10/21]</p>
+<p><img src="https://i.imgur.com/MJJexf5.jpg" alt=""></p>
+<p>圆葱炒蛋 [2020/10/24]</p>
+<p><img src="https://i.imgur.com/IYJvOs3.jpg" alt=""></p>
+<p>小鸡炖蘑菇 [2020/10/24]</p>
+<p><img src="https://i.imgur.com/d8s3woG.jpg" alt=""></p>
+<p>煎三文鱼 [2020/10/27]</p>
+<p><img src="https://i.imgur.com/x18bOFW.jpg" alt=""></p>
+<p>（该叫什么？）[2020/10/27]</p>
+<p><img src="https://i.imgur.com/B0Ij1Sm.jpg" alt=""></p>
+<p>地三鲜 [2020/10/27]</p>
+<p><img src="https://i.imgur.com/xf8x5HW.jpg" alt=""></p>
+<p>立式火锅（站着吃）[2020/11/5]</p>
+<p><img src="https://i.imgur.com/Zmicdpn.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>老李的日本生活</category>
+      </categories>
+  </entry>
+  <entry>
     <title>名人传</title>
     <url>/2020/07/13/%E5%90%8D%E4%BA%BA%E4%BC%A0/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>《名人传》是法国作家罗曼·罗兰所著《贝多芬传》、《米开朗琪罗传》和《托尔斯泰传》的合称。《名人传》的三位传主都是人类历史上极富天才而创建至伟的人物，他们的人生丰富多彩，他们的作品精深宏博，他们的影响历经世代而不衰，罗曼·罗兰紧紧把握住这三位有着各自领域的艺术家的共同之处，着力刻画他们在扰患困顿的人生征途上历尽苦难与颠踬而不改初衷的心路历程，凸现他们崇高的人格、博爱的情感和广阔的胸襟，从而为我们谱写了另一阕“英雄交响曲”。</p>
@@ -3425,8 +3471,17 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>这取决于我们的目标</li>
 <li>outlier</li>
 </ul>
-<p>有时候Correlation也会影响我们获得信心的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
-<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
+<p>有时候Correlation也会影响我们获得信息的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
+<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><p>遇到了一个问题，在伯努利分布中，当数据够大的时候，任何一个小格子的概率都太小了。本来对这种小概率事件我们是该拒绝的，但也可能是因为我们的方法错了？</p>
+<p>Fisher提出了MLE的说法。</p>
+<blockquote>
+<p>The associated idea of likelihood as a way to calibrate our inferences</p>
+</blockquote>
+<ul>
+<li>Likelihood变成了我们统计推断的一个尺度。该不该拒绝原假设？都是根据likelihood来判断的。</li>
+<li>Likelihood被Bayes和MLE两大方法所引导？</li>
+</ul>
+<h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
 <p>The result of this is that there are sums of squares that could be attributed to more than one of the variables. The t-tests are equivalent to ‘type III’ tests of the sums of squares, but other tests are possible. The default ANOVA table uses ‘type I’ sums of squares, which can allow you to make more precise–and more powerful–tests of your hypotheses</p>
@@ -3522,6 +3577,40 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 
 
 
+<h1 id="2020-11-15-管他的，就是要有盼望-萬力豪牧師"><a href="#2020-11-15-管他的，就是要有盼望-萬力豪牧師" class="headerlink" title="2020/11/15 管他的，就是要有盼望 | 萬力豪牧師"></a>2020/11/15 <a href="https://www.youtube.com/watch?v=JlvzSaVC80M">管他的，就是要有盼望 | 萬力豪牧師</a></h1><blockquote>
+<p>我们有这指望，如同灵魂的锚，又坚固又牢靠，且通入幔内；《希伯來書 》6:19</p>
+</blockquote>
+<ul>
+<li>锚是可以防止一艘船离开港口，但是锚不能停止风浪，停止颠簸。不像是气压避震系统，可以让我们的一路开的平平稳稳。</li>
+</ul>
+<p>你是要相信别人所说的话，还是相信我对你的期待和盼望？你是要相信世人对事情悲观的判断，还是相信我的能力？</p>
+<p>说道建会堂，我想到了于宏洁牧师。我相信每一个教会在关于会堂的建设上，都会经历信心的考验和见证。重要的不是募集到了足够的钱，而是透过这个过程，坚固每一个人的信心。</p>
+<h1 id="2020-11-11-抓不住的未来-万力豪"><a href="#2020-11-11-抓不住的未来-万力豪" class="headerlink" title="2020/11/11 抓不住的未来 万力豪"></a>2020/11/11 <a href="https://www.youtube.com/watch?v=KR0Dc5mlMJg">抓不住的未来 万力豪</a></h1><p>以色列人想回到埃及，不是因为他们喜欢做奴仆，而是他们想要过回确定的生活。</p>
+<p>我们为自己造很多假神，做了A，B就会有C的这种思路，也是追求确定性。确定性使我们感觉安全。</p>
+<blockquote>
+<p>“你当刚强壮胆。不要惧怕，也不要惊惶，因为你无论往那里去，耶和华你的神必与你同在。” (约书亚记1:9)</p>
+</blockquote>
+<p>无论去到哪里，这就是一种不确定性，所以我们要刚强壮胆。因为做我们习惯的事，做我们确定的事是不需要勇气的，不需要刚强壮胆。</p>
+<blockquote>
+<p>亚伦从他们手里接过来，铸了一只牛犊，用雕刻的器具作成。他们就说，以色列阿，这是领你出埃及地的神。—— 《出埃及记》32：4</p>
+</blockquote>
+<blockquote>
+<p>如果你要拜的是毫无疑问的把握，你什么鬼东西都会信。</p>
+<p>人们指着刚造好的金牛犊问亚伦，这就是带我们出埃及的神吗？亚伦说是，大家信了。</p>
+</blockquote>
+<ul>
+<li>你不知道怎么投资？只要你把钱放在我这里，我保证你每年30%的收益。</li>
+</ul>
+<blockquote>
+<p>如果你要拜的是毫无疑问的把握，你将会牺牲掉自己的未来。</p>
+</blockquote>
+<p>为什么以色列人要和邻舍要金器银器？因为奴隶原本是没有产业的，而现在有了。而现在，他们把自己的产业，都交给了亚伦，造了一个金牛犊。</p>
+<blockquote>
+<p>以色列人过了红海之后，上帝把红海关上了。象征着回到过去的那扇门关上了。</p>
+</blockquote>
+<blockquote>
+<p>忧郁症是我对主的见证。有人问我是否忧郁症还会回来，我曾说不会。但是主对我说，如果这样的话，当忧郁症回来的时候，你对我的信心就会崩塌。我们的信心不是建立在忧郁症得医治，而是背后的那位神。</p>
+</blockquote>
 <h1 id="2020-10-16-魂的救恩2-江守道"><a href="#2020-10-16-魂的救恩2-江守道" class="headerlink" title="2020/10/16 魂的救恩2 江守道"></a>2020/10/16 <a href="https://www.youtube.com/watch?v=_uymv3jFU6k">魂的救恩2 江守道</a></h1><p>借着魂的力量改变魂，这是不可能的。</p>
 <p>我们怎么知道魂的存在：We know our soul exists by its function.</p>
 <blockquote>
@@ -5695,446 +5784,6 @@ rng.randn(<span class="hljs-number">10</span>)</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>Timothy Keller</title>
-    <url>/2020/07/02/The-Reason-for-God/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>这里记录一下Timothy Keller的读书笔记</p>
-<ul>
-<li>The Reason for God<ul>
-<li>《The Reason for God》，中文版《为何是他》是提摩太·凯勒（Timothy Keller）写的一本<strong>信仰答疑解惑书</strong>。其中涉及到了很多“敏感问题”，比如：“为什么上帝会允许苦难”、“为什么充满爱的上帝会送人去地狱” 等等。初读时惊讶的合不拢嘴，连连拍手。中期时开始觉得理性的思考与感性的信心相违背，开始抵制这本书。最后决定把它读完，作为知识来收获，而不是信仰来全盘接受。</li>
-<li>读完了，写得真是好…回看中期的抵制，其实还是自己的心态问题，这本书是一本好书。</li>
-</ul>
-</li>
-<li>The Meaning of Marriage</li>
-</ul>
-<a id="more"></a>
-
-
-
-<h1 id="The-Reason-for-God"><a href="#The-Reason-for-God" class="headerlink" title="The Reason for God"></a>The Reason for God</h1><h2 id="前五章"><a href="#前五章" class="headerlink" title="前五章"></a>前五章</h2><ul>
-<li>If morality is relative, why isn’t social justice as well?</li>
-<li>A faith without some doubts is like a human body without any antibodies. 我们需要对抗来自外界的病毒，比如说他人的质疑，否则我们的信仰可能会在一夜之间崩塌</li>
-<li>Believers should learn to look for reasons behind their faith.</li>
-<li>All doubts, however skeptical or cynical they may seen, are really a set of alternate belief.</li>
-<li>Leap of faith. 尽管对事情的后果无把握，但还是以最大的信念去进行</li>
-<li>People should have doubts about their doubts.</li>
-</ul>
-<p>2020/5/10 周二<br>基督徒被接受不是因为做的比其他人好，而是耶稣担当了我们的罪过。其他宗教提倡道德提升，就会天然的对那些不信/不做的人，产生自己更高级的感觉。所以成为基督徒之后，我们正常来说不会觉得自己越来越好，而是越来越知道自己的不足，产生优越感也就无从谈起了。</p>
-<p>2020/5/12 周二<br>未来的新天新地不仅是一个什么都有的美好世界，而是把我们所有过去的上海，痛苦全部翻转，并且变成更大的喜悦。更像是把水变成酒而不是直接给你一杯好喝的酒。</p>
-<p>2020年5月14日</p>
-<ul>
-<li>“You cannot go on ‘seeing through’ things for ever. The whole point of seeing through something is to see something through it. It is good that the window should be transparent, because the street or garden beyond it is opaque. How if you saw through the garden too? It is no use trying to ‘see through’ first principles. If you see through everything, then everything is transparent. But a wholly transparent world is an invisible world. To ‘see through’ all things is the same as not to see.”</li>
-<li>不存在一种文化能够包容所有文化，多元文化支持所有其他的文化，但他本身也是一种文化。如果我的文化有所支持而有所不支持，那我的文化就不同于多元文化，从而不存在一种文化能够包容所有文化。</li>
-<li>想象一下LGBT的主席突然说：我认为LGBT是有罪的。同时，一个反对同性恋组织的主席突然觉得LGBT也不错。两个人的结局应该会很类似。所以没有不是什么inclusive/exclusive的问题。</li>
-<li>我们既然不能用exclusive/inclusive来判断组织的好坏，怎么判断？我们应该看他们是如何对待不信的群体的。是以慈爱，谦卑来爱他们，还是攻击对抗他们？（难以想象LGBT的人会真的爱双性恋的人，并抱有一个谦卑的心）</li>
-</ul>
-<p>2020年5月15日</p>
-<ul>
-<li>Christianity helped Africans to become renewed Africans, not re-made Europeans. 相反的，现在的世俗生活，个人主义与不相信超自然的文化对非洲人来说是deconstructive的。</li>
-<li>这里不存在一个什么基督文化，像伊斯兰文化那样。基督文化可以融入到我们自己的文化中，补全和理解我们自己的文化。</li>
-</ul>
-<p>2020年5月16日</p>
-<ul>
-<li>The church is a hospital for sinners, not a museum for saints. 所以如果你看到一个基督徒做的不好，比非信徒差劲，很可能他一开始更差。毕竟医院里的病人身体状况还是比正常人差。</li>
-<li>他把法利赛人等追求道德提升的人称为fanatics</li>
-<li>It was the Bible-believing religious establishment who put Jesus to death. It was the church, not the world, who crucified Christ.</li>
-<li>法利赛人的问题在于，渴望通过很高的道德要求，来获得权利//能力，从而比别人优秀，甚至可以和基督比肩。这会导致他们越来越在乎外表。</li>
-<li>不抢钱包，可能是因为如果抢钱包的事被别人知道了之后名誉损失很大（honor-shame society），也可能是因为想到了被抢钱包带来的伤害。</li>
-<li>Christianity changed those honor-based cultures in which pride was valued rather than humility, dominance rather than service, courage rather than peaceableness, glory rather than modesty, loyalty to one’s own tribe rather than equal respect for all.</li>
-<li>Instead of trying to shape our desires to fit reality, we now seek to control and shape reality to fit our desires. 古人和现在人的区别。</li>
-<li>It seems to our mind unfair, therefore, that we should determine that it is all right to have sex outside of marriage and later discovered that there is a God who is going to punish us for that.</li>
-<li>In one of my after-service discussions a woman told me that the very idea of a judging God was offensive. I said, why aren’t you offended by the idea of a forgiving God ? She looked puzzled.</li>
-<li>For the sake of argument, let’s imagine that Christianity is not a product of any one culture but is actually transcultural truth of God. if that were the case we would expect that it would contradict and offend every human culture at some point, because human cultures are ever-changing and imperfect. if Christianity were the truth it would have to be offending and correcting your thinking at some place.</li>
-<li>If you love a person and you see someone ruining them—even they themselves—you get angry.</li>
-<li>Anger is not the opposite of love, hate is. And the final form of hate is indifference</li>
-<li>If I don’t believe that there is a God who will eventually put all things right, I will take up the word and will be sucked into the endless vortex of retaliation. only if I am sure that there is a God who will right all wrongs and settle all accounts perfectly do I have the power to refrain.</li>
-<li>Hell begins with a gambling mood, always complaining, always blaming others… but you are still distinct from it. you may even criticize it in yourself and wish you could stop it. but there may come a day when you can no longer. then they will be no YOU left to criticize the mood or even to enjoy it, but just the grumble itself going on forever like a machine. it is not a question of God sending us to hell. In each of us, there is something growing, which will BE HELL unless it is nipped in the bud.</li>
-</ul>
-<h2 id="第六章-Science-Has-Disproved-Christianity"><a href="#第六章-Science-Has-Disproved-Christianity" class="headerlink" title="第六章 Science Has Disproved Christianity"></a>第六章 Science Has Disproved Christianity</h2><p>他提到了不同的章节我们读的时候要考虑体裁。比如路加福音（eyewitnesses）就可以100%当成历史来读，而诗篇就要当成诗歌来读。当我们面对创世纪1&amp;2章的时候，就像士师记4&amp;5、出埃及记14&amp;15那样，一章是历史而一章是赞歌。他认为创世纪1是赞歌而2是历史。</p>
-<blockquote>
-<p>他们见了耶稣就拜他。然而还有人疑惑。《马太福音28:17》</p>
-</blockquote>
-<p>那些门徒，亲眼看到了耶稣的复活，甚至还触摸到了身体，有的人还存留疑惑。这让我想起了拉撒路的故事，亚伯拉罕对那个富人说，如果你的弟兄们是不信的人，那么即使看到了神迹也不会相信</p>
-<p>关于神迹miracle，他举了个例子。比如耶稣不会做这种magic tricks：</p>
-<blockquote>
-<p>See that tree over there? Watch me make it burst into flames!</p>
-</blockquote>
-<p>相反，他用他的能力去救病人，喂饱肚子饿的人，让死人复活。现如今的人们认为的神迹大多属于上面的magic tricks，是对抗Nature Order。但是耶稣行的神迹是恢复Nature Order。</p>
-<h2 id="第九章-The-Knowledge-of-God"><a href="#第九章-The-Knowledge-of-God" class="headerlink" title="第九章 The Knowledge of God"></a>第九章 The Knowledge of God</h2><blockquote>
-<p>It is no answer to say that if individuals have these rights then the community is better off in the long run…because when we say someone has a right to speak his mind freely, we mean he is entitled to do so even if this would not be in the general interest.</p>
-</blockquote>
-<ul>
-<li>我们可以自由地做这件事，而这件事不一定是符合大众意思的</li>
-</ul>
-<blockquote>
-<p>Rights cannot be created—they must be discovered, or they are of no value.</p>
-</blockquote>
-<blockquote>
-<p>If there is no God, then there is no way to say any one action is “moral” and another “immoral” but only “I like this.” If that is the case, who gets the right to put their subjective, arbitrary moral feelings into law? You may say “the majority has the right to make the law,” but do you mean that then the majority has the right to vote to exterminate a minority? If you say “No, that is wrong,” then you are back to square one.</p>
-</blockquote>
-<ul>
-<li>没有一个绝对的真理，人们对绝对的权利感到恐惧。</li>
-</ul>
-<blockquote>
-<p>Without God he can’t justify moral obligation, and yet he can’t not know it exists.</p>
-</blockquote>
-<h2 id="第十章-The-Problem-of-Sin"><a href="#第十章-The-Problem-of-Sin" class="headerlink" title="第十章 The Problem of Sin"></a>第十章 The Problem of Sin</h2><blockquote>
-<p>All sins are attempts to fill voids</p>
-</blockquote>
-<ul>
-<li>霍！</li>
-</ul>
-<blockquote>
-<p>Sin is seeking to become oneself, to get an identity, apart from him.</p>
-</blockquote>
-<blockquote>
-<p>So, according to the Bible, the primary way to define sin is not just the doing of bad things, but the making of good things into ultimate things. It is seeking to establish a sense of self by making something else more central to your significance, purpose, and happiness than your relationship to God.</p>
-</blockquote>
-<blockquote>
-<p><strong>Every person must find some way to “justify their existence,” and to stave off the universal fear that they’re “a bum.”</strong> In more traditional cultures, the sense of worth and identity comes from fulfilling duties to family and giving service to society. In our contemporary individualistic culture, we tend to look to our achievements, our social status, our talents, or our love relationships. There are an infinite variety of identity-bases. Some get their sense of “self” from gaining and wielding power, others from human approval, others from self-discipline and control. But everyone is building their identity on something.</p>
-</blockquote>
-<ul>
-<li>过于真实，我们需要用一种不是神的方式来证明自己的存在。</li>
-</ul>
-<blockquote>
-<p>Identity apart from God is inherently unstable. For example, if I build my identity on being a good parent, I have no true “self”—I am just a parent, nothing more. If something goes wrong with my children or my parenting, there is no “me” left.</p>
-</blockquote>
-<blockquote>
-<p>There is no way to avoid this insecurity outside of God. Even if you say, “I will not build my happiness or significance on anyone or thing,” you will actually be building your identity on your personal freedom and independence. If anything threatens that, you will again be without a self.</p>
-</blockquote>
-<ul>
-<li>不以物喜不以己悲也不太妙？某一天你真的以物喜了，你的自我就崩塌了。</li>
-</ul>
-<blockquote>
-<p>He argues that human society is deeply fragmented when anything but God is our highest love. If our highest goal in life is the good of our family, then, says Edwards, we will tend to care less for other families. If our highest goal is the good of our nation, tribe, or race, then we will tend to be racist or nationalistic. If our ultimate goal in life is our own individual happiness, then we will put our own economic and power interests ahead of those of others. Edwards concludes that only if God is our summum bonum, our ultimate good and life center, will we find our heart drawn out not only to people of all families, races, and classes, but to the whole world in general.</p>
-</blockquote>
-<ul>
-<li>我应该把我和神的关系放在第一位，而不是我的宗教信仰。</li>
-</ul>
-<blockquote>
-<p>You may say, “I see that Christianity might be just the thing for people who have had collapses in their lives. But what if I don’t fail in my career and what if I have a great family?” As Augustine said, if there is a God who created you, then the deepest chambers of your soul simply cannot be filled up by anything less. That is how great the human soul is. If Jesus is the Creator-Lord, then by definition nothing could satisfy you like he can, even if you are successful. Even the most successful careers and families cannot give the significance, security, and affirmation that the author of glory and love can.</p>
-</blockquote>
-<h2 id="第十一章-Religion-and-the-Gospel"><a href="#第十一章-Religion-and-the-Gospel" class="headerlink" title="第十一章 Religion and the Gospel"></a>第十一章 Religion and the Gospel</h2><blockquote>
-<p>All other major faiths have founders who are teachers that show the way to salvation. Only Jesus claimed to actually be the way of salvation himself.</p>
-</blockquote>
-<blockquote>
-<p>Sin and evil are self-centeredness and pride that lead to oppression against others, but there are two forms of this. One form is being very bad and breaking all the rules, and the other form is being very good and keeping all the rules and becoming self-righteous. There are two ways to be your own Savior and Lord. The first is by saying, “I am going to live my life the way I want.” The second is that “he knew that <strong>the best way to avoid Jesus was to avoid sin</strong>.”  If you are avoiding sin and living morally so that God will have to bless and save you, then ironically, you may be <u>looking to Jesus as a teacher, model, and helper but you are avoiding him as Savior</u>. You are trusting in your own goodness rather than in Jesus for your standing with God. You are trying to save yourself by following Jesus.</p>
-</blockquote>
-<h2 id="第十二章-THE-TRUE-STORY-OF-THE-CROSS"><a href="#第十二章-THE-TRUE-STORY-OF-THE-CROSS" class="headerlink" title="第十二章 THE (TRUE) STORY OF THE CROSS"></a>第十二章 THE (TRUE) STORY OF THE CROSS</h2><blockquote>
-<p>Real Forgiveness Is Costly Suffering</p>
-</blockquote>
-<blockquote>
-<p>She went through the suffering of costly forgiveness, which at first always feels far worse than bitterness, into eventual freedom. Forgiveness must be granted before it can be felt, but it does come eventually. It leads to a new peace, a resurrection. It is the only way to stop the spread of the evil.</p>
-</blockquote>
-<ul>
-<li>原谅是个先苦后甜的过程。苦的时候甚至比原先的伤害更痛苦。</li>
-</ul>
-<blockquote>
-<p>Only when you have lost the need to see the other person hurt will you have any chance of <strong>actually bringing about change, reconciliation, and healing.</strong></p>
-</blockquote>
-<blockquote>
-<p>All life-changing love toward people with serious needs is a substitutional sacrifice. If you become personally involved with them, in some way, <strong>their weaknesses flow toward you as your strengths flow toward them</strong>. In The Cross of Christ, John Stott writes that substitution is at the heart of the Christian message:</p>
-<ul>
-<li>The essence of sin is we human beings substituting ourselves for God, while the essence of salvation is God substituting himself for us. We…put ourselves where only God deserves to be; God…puts himself where we deserve to be.</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>As John Stott wrote, “I could never myself believe in God if it were not for the Cross. In the real world of pain, how could one worship a God who was immune to it?”</p>
-</blockquote>
-<ul>
-<li>耶稣的人性也很重要。耶稣知道我正在受的苦难是有多苦。</li>
-</ul>
-<h2 id="第十三章-THE-REALITY-OF-THE-RESURRECTION"><a href="#第十三章-THE-REALITY-OF-THE-RESURRECTION" class="headerlink" title="第十三章 THE REALITY OF THE RESURRECTION"></a>第十三章 THE REALITY OF THE RESURRECTION</h2><blockquote>
-<p>Sometimes people approach me and say, “I really struggle with this aspect of Christian teaching. I like this part of Christian belief, but I don’t think I can accept that part.” I usually respond: <strong>“If Jesus rose from the dead, then you have to accept all he said; if he didn’t rise from the dead, then why worry about any of what he said?</strong> The issue on which everything hangs is not whether or not you like his teaching but whether or not he rose from the dead.” That is how the first hearers felt who heard reports of the resurrection. They knew that if it was true it meant we can’t live our lives any way we want. It also meant we don’t have to be afraid of anything, not Roman swords, not cancer, nothing. If Jesus rose from the dead, it changes everything.</p>
-</blockquote>
-<ul>
-<li>局部的真理不是真理，是你的个人喜好，别往耶稣身上扔。</li>
-</ul>
-<blockquote>
-<p>Each gospel states that the first eyewitnesses to the resurrection were women. Women’s low social status meant that their testimony was not admissible evidence in court. There was no possible advantage to the church to recount that all the first witnesses were women. It could only have undermined the credibility of the testimony. The only possible explanation for why women were depicted as meeting Jesus first is if they really had.</p>
-</blockquote>
-<ul>
-<li>有点意思</li>
-</ul>
-<blockquote>
-<p>In not one single case do we hear the slightest mention of the disappointed followers claiming that their hero had been raised from the dead. They knew better. Resurrection was not a private event. Jewish revolutionaries whose leader had been executed by the authorities, and who managed to escape arrest themselves, had two options: give up the revolution, or find another leader. Claiming that the original leader was alive again was simply not an option. Unless, of course, he was.</p>
-</blockquote>
-<ul>
-<li>之前也有很多假弥赛亚出现，但是被杀死之后都没有说复活的，因为这就不是一个选项？</li>
-</ul>
-<blockquote>
-<p>However, the Christian view of resurrection, absolutely unprecedented in history, sprang up full-blown immediately after the death of Jesus. There was no process or development. His followers said that their beliefs did not come from debating and discussing. They were just telling others what they had seen themselves. No one has come up with any plausible alternative to this claim. Even if you propose the highly unlikely idea that one or two of Jesus’s disciples did get the idea that he was raised from the dead on their own, they would never have gotten a movement of other Jews to believe it unless there were multiple, inexplicable, plausible, repeated encounters with Jesus.</p>
-</blockquote>
-<ul>
-<li>世界变化过快</li>
-</ul>
-<blockquote>
-<p>It is not enough for the skeptic, then, to simply dismiss the Christian teaching about the resurrection of Jesus by saying, “It just couldn’t have happened.” He or she must face and answer all these historical questions: Why did Christianity emerge so rapidly, with such power? No other band of messianic followers in that era concluded their leader was raised from the dead—why did this group do so? No group of Jews ever worshipped a human being as God. What led them to do it? Jews did not believe in divine men or individual resurrections. What changed their worldview virtually overnight? How do you account for the hundreds of eyewitnesses to the resurrection who lived on for decades and publicly maintained their testimony, eventually giving their lives for their belief?</p>
-</blockquote>
-<ul>
-<li>从历史中学习</li>
-</ul>
-<h2 id="第十四章-THE-DANCE-OF-GOD"><a href="#第十四章-THE-DANCE-OF-GOD" class="headerlink" title="第十四章 THE DANCE OF GOD"></a>第十四章 THE DANCE OF GOD</h2><blockquote>
-<p>The Father…Son…and Holy Spirit glorify each other…. At the center of the universe, self-giving love is the dynamic currency of the Trinitarian life of God.</p>
-</blockquote>
-<ul>
-<li>霍，这三个互相荣耀…第一次听说。</li>
-</ul>
-<blockquote>
-<p>If God is unipersonal, then until God created other beings there was no love, since love is something that one person has for another. This means that a unipersonal God was power, sovereignty, and greatness from all eternity, but not love. However, if God is triune, then loving relationships in community are the “great fountain…at the center of reality.</p>
-</blockquote>
-<ul>
-<li>角度很新颖</li>
-</ul>
-<blockquote>
-<p>God did not create us to get the cosmic, infinite joy of mutual love and glorification, but to share it. We were made to join in the dance. If we will center our lives on him, serving him not out of self-interest, but just for the sake of who he is, for the sake of his beauty and glory, we will enter the dance and share in the joy and love he lives in. We were designed, then, not just for belief in God in some general way, nor for a vague kind of inspiration or spirituality. We were made to center our lives upon him, to make the purpose and passion of our lives knowing, serving, delighting, and resembling him. <strong>This growth in happiness will go on eternally, increasing unimaginably</strong> (1 Corinthians 2:7-10).</p>
-</blockquote>
-<blockquote>
-<p>[Biblical] salvation lies not in an escape from this world but in the transformation of this world…. You will not find hope for the world in any of the religious systems or philosophies of humankind…. The Biblical vision is unique. That is why when some say there is salvation in other faiths too, I ask them—“What salvation are you talking about?” No faith holds out a promise of eternal salvation for the world—the ordinary world—that the cross and resurrection of Jesus do</p>
-</blockquote>
-<ul>
-<li>霍！只有基督教关心这个物质世界，并且想恢复这个物质世界。其他宗教想得只是「如何逃离」</li>
-</ul>
-<h2 id="EPILOGUE-WHERE-DO-WE-GO-FROM-HERE"><a href="#EPILOGUE-WHERE-DO-WE-GO-FROM-HERE" class="headerlink" title="EPILOGUE: WHERE DO WE GO FROM HERE?"></a>EPILOGUE: WHERE DO WE GO FROM HERE?</h2><blockquote>
-<p>We usually begin the journey toward God thinking, “What do I have to do to get this or that from him?” but eventually we have to begin thinking, “What do I have to do to get him?” If you don’t make that transition, you will never actually meet the real God, but will only end up believing in some caricature version of him.</p>
-</blockquote>
-<blockquote>
-<p>Christians are people who let the reality of Jesus change everything about who they are, how they see, and how they live.</p>
-</blockquote>
-<blockquote>
-<p>The repentance that really changes your heart and your relationship with God begins when you recognize that your main sin, the sin under the rest of your sins, is your self-salvation project. As we saw in Chapters 9 and 10, in both our bad deeds and in our good deeds we are seeking to be our own Saviors and Lords. We have alternative trusts and “gods,” even though we do not call them that. We try to prove ourselves by our moral goodness or through achievement or family or career. Even diligent involvement in church and religion may need to be repented of once we understand that it was all a way to put God and others in our debt.</p>
-</blockquote>
-<blockquote>
-<p>The faith that changes the life and connects to God is best conveyed by the word “trust.” Imagine you are on a high cliff and you lose your footing and begin to fall. Just beside you as you fall is a branch sticking out of the very edge of the cliff. It is your only hope and it is more than strong enough to support your weight. How can it save you? If your mind is filled with intellectual certainty that the branch can support you, but you don’t actually reach out and grab it, you are lost. If your mind is instead filled with doubts and uncertainty that the branch can hold you, but you reach out and grab it anyway, you will be saved. Why? <strong>It is not the strength of your faith but the object of your faith that actually saves you. Strong faith in a weak branch is fatally inferior to weak faith in a strong branch.</strong></p>
-</blockquote>
-<ul>
-<li>说得太好了！</li>
-</ul>
-<blockquote>
-<p>As far as I know my own heart, today I give it to you, I transfer my trust to you, and ask that you would receive and accept me not for anything I have done but because of everything Christ has done for me.</p>
-</blockquote>
-<ul>
-<li>请你看在耶稣为我做过的事的面子上，饶我一马。</li>
-</ul>
-<blockquote>
-<p>You can’t live the Christian life without a band of Christian friends, without a family of believers in which you find a place.</p>
-</blockquote>
-<ul>
-<li>我自己做，做不通的。</li>
-</ul>
-<h1 id="The-Meaning-of-Marriage"><a href="#The-Meaning-of-Marriage" class="headerlink" title="The Meaning of Marriage"></a>The Meaning of Marriage</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
-<p>“If God invented marriage, then those who enter it should make every effort to understand and submit to his purposes for it. We do this in many other aspects of our lives. Think of buying a car: If you purchase a vehicle, <strong>a machine well beyond your own ability to create</strong>, you will certainly take up the owner’s manual and abide by what the designer says the car needs by way of treatment and maintenance. To ignore it would be to court disaster.”</p>
-</blockquote>
-<blockquote>
-<p>“Unless you’re able to look at marriage through the lens of Scripture instead of through your own fears or romanticism, through your particular experience, or through your culture’s narrow perspectives, you won’t be able to make intelligent decisions about your own marital future.”</p>
-</blockquote>
-<ul>
-<li>啊…真是要在凡事上以主的喜乐为喜乐。</li>
-</ul>
-<h2 id="Chap1-THE-SECRET-OF-MARRIAGE"><a href="#Chap1-THE-SECRET-OF-MARRIAGE" class="headerlink" title="Chap1 THE SECRET OF MARRIAGE"></a>Chap1 THE SECRET OF MARRIAGE</h2><blockquote>
-<p>“While marriage is many things, it is anything but sentimental. ”</p>
-</blockquote>
-<blockquote>
-<p>“No marriage I know more than a few weeks old could be described as a fairy tale come true.”</p>
-</blockquote>
-<blockquote>
-<p>“They believe their chances of having a good marriage are not great, and, even if a marriage is stable, there is in their view the horrifying prospect that it will become sexually boring. ”</p>
-</blockquote>
-<ul>
-<li>没错…柯立芝效应啊？</li>
-</ul>
-<blockquote>
-<p>“As comedian Chris Rock has asked, “Do you want to be single and lonely or married and bored?” Many young adults believe that these are indeed the two main options. That is why many aim for <strong>something in the middle between</strong> marriage and mere sexual encounters—cohabitation with a sexual partner.”</p>
-</blockquote>
-<ul>
-<li>同居性生活：单身的快乐 + 婚姻的快乐</li>
-</ul>
-<blockquote>
-<p>“Today more than half of all people live together before getting married. In 1960, virtually no one did.”</p>
-</blockquote>
-<blockquote>
-<p>“While it is true that some 45 percent of marriages end in divorce, by far the greatest percentage of divorces happen to those who marry before the age of eighteen, who have dropped out of high school, and who have had a baby together before marrying. “So if you are a reasonably well-educated person with a decent income, come from an intact family and are religious, and marry after twenty-five without having a baby first, your chances of divorce are low indeed.”</p>
-</blockquote>
-<ul>
-<li>这个Subgroup我确实没考虑到</li>
-</ul>
-<blockquote>
-<p>“Studies show that spouses hold one another to greater levels of personal responsibility and self-discipline than friends or other family members can.”</p>
-<p>“Nothing can mature character like marriage.”</p>
-</blockquote>
-<ul>
-<li>霍</li>
-</ul>
-<blockquote>
-<p>Delayed gratification 延迟满足</p>
-</blockquote>
-<blockquote>
-<p>“Most striking of all, longitudinal studies demonstrate that two-thirds of those unhappy marriages out there will become happy within five years if people stay married and do not get divorced.”</p>
-</blockquote>
-<ul>
-<li>。。。</li>
-</ul>
-<blockquote>
-<p>“Instead of finding meaning through self-denial, through giving up one’s freedoms, and binding oneself to the duties of marriage and family, marriage was redefined as finding emotional and sexual fulfillment and self-actualization.”</p>
-<p>“In this view, married persons married for themselves, not to fulfill responsibilities to God or society.”</p>
-<p>“Slowly but surely, this newer understanding of the meaning of marriage has displaced the older ones in Western culture.”</p>
-<p>“Marriage used to be about us, but now it is about me.”</p>
-</blockquote>
-<ul>
-<li>所以婚姻本来的意义是… </li>
-</ul>
-<blockquote>
-<p>“Never before in history has there been a society filled with people so idealistic in what they are seeking in a spouse.”</p>
-</blockquote>
-<p>让结婚变成选美：色情行业影响男人，消费主义影响女人。</p>
-<blockquote>
-<p>“To conduct a Me-Marriage requires two completely well-adjusted, happy individuals, with very little in the way of emotional neediness of their own or character flaws that need a lot of work.”</p>
-</blockquote>
-<blockquote>
-<p>“After all, our culture makes individual freedom, autonomy, and fulfillment the very highest values, and thoughtful people know deep down that any love relationship at all means the loss of all three.”</p>
-</blockquote>
-<blockquote>
-<p>“You can say, “I want someone who will accept me just as I am,” but in your heart of hearts you know that you are not perfect, that there are plenty of things about you that need to be changed, and that anyone who gets to know you up close and personal will want to change them. And you also know that the other person will have needs, deep needs, and flaws. That all sounds painful, and it is, and so you don’t want all that. Yet it is hard to admit to the world or to yourself that you don’t want to be married.”</p>
-</blockquote>
-<ul>
-<li>一套组合拳</li>
-</ul>
-<blockquote>
-<p>“Over the years you will go through seasons in which you have to learn to love a person who you didn’t marry, who is something of a stranger.”</p>
-</blockquote>
-<blockquote>
-<p>「Husbands, love your wives, just as Christ loved the church and gave himself up for her」——以弗所书5：25</p>
-</blockquote>
-<ul>
-<li>或许找一个伴侣的目的不是让他爱我，是我要爱她。所谓单身的赏赐，便是没有了爱的羁绊。不过若是爱上一个人，便如所说的那样，爱她。</li>
-<li>所谓寻找合适的，无非是没有那么爱了。不过既然有选择的权力，那我们要善加利用。</li>
-</ul>
-<blockquote>
-<p>“In marriage, do for your spouse what God did for you in Jesus…the rest will follow.”</p>
-</blockquote>
-<ul>
-<li>这勇气…</li>
-</ul>
-<blockquote>
-<p>“The reason that marriage is so painful and yet wonderful is because it is a reflection of the gospel, which is painful and wonderful at once.”</p>
-</blockquote>
-<ul>
-<li>霍…</li>
-</ul>
-<blockquote>
-<p>“Love without truth is sentimentality; it supports and affirms us but keeps us in denial about our flaws. Truth without love is harshness; it gives us information but in such a way that we cannot really hear it.”</p>
-</blockquote>
-<h2 id="Chap2-THE-POWER-FOR-MARRIAGE"><a href="#Chap2-THE-POWER-FOR-MARRIAGE" class="headerlink" title="Chap2 THE POWER FOR MARRIAGE"></a>Chap2 THE POWER FOR MARRIAGE</h2><blockquote>
-<p>“Only if you have learned to serve others by the power of the Holy Spirit will you have the power to face the challenges of marriage.”</p>
-</blockquote>
-<ul>
-<li>WOW，原来我需要靠圣灵才能服侍别人</li>
-</ul>
-<blockquote>
-<p>“First, the picture of marriage given here is not of two needy people, unsure of their own value and purpose, finding their significance and meaning in one another’s arms. If you add two vacuums to each other, you only get a bigger and stronger vacuum, a giant sucking sound.”</p>
-</blockquote>
-<ul>
-<li>哈哈，有趣的小例子。</li>
-</ul>
-<blockquote>
-<p>“Finally I began to see. I wanted to serve, yes, because that made me feel in control. Then I would always have the high moral ground. But that kind of “service” isn’t service at all, only manipulation.”</p>
-</blockquote>
-<ul>
-<li>不仅要在生活中服务别人，还是要以他想被服务的方式服务，而不是我们想服务他的方式。</li>
-</ul>
-<blockquote>
-<p>“I wanted to earn everything. I wanted no one to give me any favors. I wanted to give undeserved gifts to others—so I could have satisfaction of thinking of myself as a magnanimous person—but I did not want to receive someone else’s service myself.”</p>
-</blockquote>
-<ul>
-<li>我们也要让他人感觉良好，在接纳中让别人感受到给予的快乐</li>
-</ul>
-<blockquote>
-<p>“It means we don’t need to earn our self-worth through incessant service and work. It means also that we don’t mind so much when we are deprived of some comfort, compliment, or reward. We don’t have to keep records and accounts anymore. We can freely give and freely receive.”</p>
-</blockquote>
-<ul>
-<li>Freely give and freely receive.</li>
-</ul>
-<blockquote>
-<p>“Each spouse’s self-centeredness asserted itself (as it always will), but in response, the other spouse got more impatient, resentful, harsh, and cold. In other words, they responded to the self-centeredness of their partner with their own self-centeredness. ”</p>
-</blockquote>
-<ul>
-<li>自私会带来问题，也是因为我们常用自私来回应自私。</li>
-</ul>
-<blockquote>
-<p>“But the gospel, brought home to your heart by the Spirit, can make you happy enough to be humble, giving you an internal fullness that frees you to be generous with the other even when you are not getting the satisfaction you want out of the relationship.”</p>
-<p>“You can only afford to be generous if you actually have some money in the bank to give.”</p>
-</blockquote>
-<blockquote>
-<p>“It is impossible for us to make major headway against self-centeredness and move into a stance of service without some kind of supernatural help.”</p>
-</blockquote>
-<blockquote>
-<p>“So what do you do then? There are at least two paths to take. First, you could decide that your woundedness is more fundamental than your self-centeredness and determine that <strong>unless your spouse sees the problems you have and takes care of you, it’s not going to work out.</strong> Of course, your spouse will probably not do this—especially if he or she is thinking almost the exact same thing about you! And so what follows is the <strong>development of emotional distance</strong> and, perhaps, a slowly negotiated kind of détente or ceasefire. <strong>There is an unspoken agreement not to talk about some things.</strong> There are some things your spouse does that you hate, <strong>but you stop talking about them as long as he or she stops bothering you about certain other things</strong>. <strong>No one changes for the other</strong>; there is only tit-for-tat bargaining. Couples who settle for this kind of relationship may look happily married after forty years, but when it’s time for the anniversary photo op, the kiss will be forced.”</p>
-</blockquote>
-<ul>
-<li>看到了关系中的自己。</li>
-</ul>
-<blockquote>
-<p>“The alternative to this truce-marriage is to determine to see your own selfishness as a fundamental problem and to treat it more seriously than you do your spouse’s. Why? Only you have complete access to your own selfishness, and only you have complete responsibility for it. ”</p>
-</blockquote>
-<blockquote>
-<p>“Neither of you may take this course of action, or both of you may do it together. But there is a third possibility: It may be that one of you decides to operate on the basis of verse 21 and one of you does not. In this case, let’s say, you are the only one who decides, “My selfishness is the thing I am going to work on.” What will happen? Usually there is not much immediate response from the other side. But often, over time, your attitude and behavior will begin to soften your partner. He or she can see the pains you are taking. And it will be easier for your spouse to admit his or her faults because you are no longer always talking about them yourself. </p>
-</blockquote>
-<ul>
-<li>主动改变的一方虽然承受了更多，但是换来的结果是好的——也总要有人去迈出这一步</li>
-</ul>
-<blockquote>
-<p>“The Christian principle that needs to be at work is Spirit-generated selflessness—not thinking less of yourself or more of yourself but thinking of yourself less.”</p>
-</blockquote>
-<ul>
-<li>要做的不是低估自己或者高估自己，要做的是在凡事上不仅要看到自己，还要看到更大的图画。</li>
-</ul>
-<blockquote>
-<p>“Those who stop concentrating on how unhappy they are find that their happiness is growing. You must lose yourself to find yourself.”</p>
-</blockquote>
-<blockquote>
-<p>“What is it that most motivates and moves you? Is it the desire for success? The pursuit of some achievement? The need to prove yourself to your parents? The need for respect from your peers? Are you largely driven by anger against someone or some people who have wronged you? Paul says that if any of these things is a greater controlling influence on you than the reality of God’s love for you, you will not be in a position to serve others unselfishly. Only out of the fear of the Lord Jesus will we be liberated to serve one another.”</p>
-</blockquote>
-<ul>
-<li>其他的动力来源并不是不好，也不是不能完成你的目标。只是他们对于「服侍别人」没有帮助。看起来服侍别人是一件很重要的事？</li>
-</ul>
-<blockquote>
-<p>“We come into our marriages driven by all kinds of fears, desires, and needs. If I look to my marriage to fill the God-sized spiritual vacuum in my heart, I will not be in position to serve my spouse. Only God can fill a God-sized hole. Until God has the proper place in my life, I will always be complaining that my spouse is not loving me well enough, not respecting me enough, not supporting me enough.”</p>
-</blockquote>
-<ul>
-<li>我们投入到一段感情中，若是带入了太多的恐惧、期待、需要、欲望，那可能会凉。</li>
-</ul>
-<blockquote>
-<p>“It is possible to feel you are “madly in love” with someone, <strong>when it is really just an attraction to someone who can meet your needs and address the insecurities and doubts you have about yourself</strong>. In that kind of relationship, you will demand and control rather than serve and give. The only way to avoid sacrificing your partner’s joy and freedom on the altar of your need is to <strong>turn to the ultimate lover of your soul.</strong> He voluntarily sacrificed himself on the cross, taking what you deserved for your sins against God and others.”</p>
-</blockquote>
-<ul>
-<li>爱情燃烧起来的原因很现实。</li>
-<li>我的问题是，既然我们要先建立和耶稣的关系，那我们是如何选择我们决定爱的伴侣呢？既然我们明白了我们的爱人只是恰好满足了我的期待和需要，如何选择爱的倾注对象呢？</li>
-</ul>
-<h2 id="Chap3-THE-ESSENCE-FOR-MARRIAGE"><a href="#Chap3-THE-ESSENCE-FOR-MARRIAGE" class="headerlink" title="Chap3 THE ESSENCE FOR MARRIAGE"></a>Chap3 THE ESSENCE FOR MARRIAGE</h2><blockquote>
-<p>“There is another way in which the legality of marriage augments its personal nature. When dating or living together, you have to prove your value daily by impressing and enticing. You have to show that the chemistry is there and the relationship is fun and fulfilling or it will be over. We are still basically in a consumer relationship, and that means constant promotion and marketing. The legal bond of marriage, however, creates a space of security where we can open up and reveal our true selves. We can be vulnerable, no longer having to keep up facades. We don’t have to keep selling ourselves. We can lay the last layer of our defenses down and be completely naked, both physically and in every other way.”</p>
-</blockquote>
-<ul>
-<li>表演的成分在里面，有点真实。这是浪漫的组成部分，但是可能距离婚姻有点距离/不同。而如果恋爱中没有一点这样的真实在里面，其实也不行。</li>
-</ul>
-<blockquote>
-<p>“As we observed before, longitudinal studies reveal that two-thirds of unhappy marriages will become happy within five years if people stay married and do not get divorced.”</p>
-</blockquote>
-<ul>
-<li>挺一挺就过去了</li>
-</ul>
-<blockquote>
-<p>He goes on to say that these serious conditions do exist, because of “the hardness of your hearts.” That means that sometimes <strong>human hearts become so hard</strong> because of sin that it leads a spouse into a <strong>severe violation of the covenant</strong>, <strong>without prospects of repentance and healing</strong>, and in such cases divorce is permitted.</p>
-</blockquote>
-<ul>
-<li>当你觉得契约被毁掉，没有悔改和医治的希望时，可以离婚。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Holy</category>
-        <category>References</category>
-        <category>The Reason for God</category>
-      </categories>
-  </entry>
-  <entry>
     <title>机器学习笔记</title>
     <url>/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="关于这门MOOC"><a href="#关于这门MOOC" class="headerlink" title="关于这门MOOC"></a>关于这门MOOC</h1><p>Coursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。</p>
@@ -8148,6 +7797,630 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
         <category>Study</category>
         <category>Coding</category>
         <category>R</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Timothy Keller</title>
+    <url>/2020/07/02/The-Reason-for-God/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>这里记录一下Timothy Keller的读书笔记</p>
+<ul>
+<li>The Reason for God<ul>
+<li>《The Reason for God》，中文版《为何是他》是提摩太·凯勒（Timothy Keller）写的一本<strong>信仰答疑解惑书</strong>。其中涉及到了很多“敏感问题”，比如：“为什么上帝会允许苦难”、“为什么充满爱的上帝会送人去地狱” 等等。初读时惊讶的合不拢嘴，连连拍手。中期时开始觉得理性的思考与感性的信心相违背，开始抵制这本书。最后决定把它读完，作为知识来收获，而不是信仰来全盘接受。</li>
+<li>读完了，写得真是好…回看中期的抵制，其实还是自己的心态问题，这本书是一本好书。</li>
+</ul>
+</li>
+<li>The Meaning of Marriage</li>
+</ul>
+<a id="more"></a>
+
+
+
+<h1 id="The-Reason-for-God"><a href="#The-Reason-for-God" class="headerlink" title="The Reason for God"></a>The Reason for God</h1><h2 id="前五章"><a href="#前五章" class="headerlink" title="前五章"></a>前五章</h2><ul>
+<li>If morality is relative, why isn’t social justice as well?</li>
+<li>A faith without some doubts is like a human body without any antibodies. 我们需要对抗来自外界的病毒，比如说他人的质疑，否则我们的信仰可能会在一夜之间崩塌</li>
+<li>Believers should learn to look for reasons behind their faith.</li>
+<li>All doubts, however skeptical or cynical they may seen, are really a set of alternate belief.</li>
+<li>Leap of faith. 尽管对事情的后果无把握，但还是以最大的信念去进行</li>
+<li>People should have doubts about their doubts.</li>
+</ul>
+<p>2020/5/10 周二<br>基督徒被接受不是因为做的比其他人好，而是耶稣担当了我们的罪过。其他宗教提倡道德提升，就会天然的对那些不信/不做的人，产生自己更高级的感觉。所以成为基督徒之后，我们正常来说不会觉得自己越来越好，而是越来越知道自己的不足，产生优越感也就无从谈起了。</p>
+<p>2020/5/12 周二<br>未来的新天新地不仅是一个什么都有的美好世界，而是把我们所有过去的上海，痛苦全部翻转，并且变成更大的喜悦。更像是把水变成酒而不是直接给你一杯好喝的酒。</p>
+<p>2020年5月14日</p>
+<ul>
+<li>“You cannot go on ‘seeing through’ things for ever. The whole point of seeing through something is to see something through it. It is good that the window should be transparent, because the street or garden beyond it is opaque. How if you saw through the garden too? It is no use trying to ‘see through’ first principles. If you see through everything, then everything is transparent. But a wholly transparent world is an invisible world. To ‘see through’ all things is the same as not to see.”</li>
+<li>不存在一种文化能够包容所有文化，多元文化支持所有其他的文化，但他本身也是一种文化。如果我的文化有所支持而有所不支持，那我的文化就不同于多元文化，从而不存在一种文化能够包容所有文化。</li>
+<li>想象一下LGBT的主席突然说：我认为LGBT是有罪的。同时，一个反对同性恋组织的主席突然觉得LGBT也不错。两个人的结局应该会很类似。所以没有不是什么inclusive/exclusive的问题。</li>
+<li>我们既然不能用exclusive/inclusive来判断组织的好坏，怎么判断？我们应该看他们是如何对待不信的群体的。是以慈爱，谦卑来爱他们，还是攻击对抗他们？（难以想象LGBT的人会真的爱双性恋的人，并抱有一个谦卑的心）</li>
+</ul>
+<p>2020年5月15日</p>
+<ul>
+<li>Christianity helped Africans to become renewed Africans, not re-made Europeans. 相反的，现在的世俗生活，个人主义与不相信超自然的文化对非洲人来说是deconstructive的。</li>
+<li>这里不存在一个什么基督文化，像伊斯兰文化那样。基督文化可以融入到我们自己的文化中，补全和理解我们自己的文化。</li>
+</ul>
+<p>2020年5月16日</p>
+<ul>
+<li>The church is a hospital for sinners, not a museum for saints. 所以如果你看到一个基督徒做的不好，比非信徒差劲，很可能他一开始更差。毕竟医院里的病人身体状况还是比正常人差。</li>
+<li>他把法利赛人等追求道德提升的人称为fanatics</li>
+<li>It was the Bible-believing religious establishment who put Jesus to death. It was the church, not the world, who crucified Christ.</li>
+<li>法利赛人的问题在于，渴望通过很高的道德要求，来获得权利//能力，从而比别人优秀，甚至可以和基督比肩。这会导致他们越来越在乎外表。</li>
+<li>不抢钱包，可能是因为如果抢钱包的事被别人知道了之后名誉损失很大（honor-shame society），也可能是因为想到了被抢钱包带来的伤害。</li>
+<li>Christianity changed those honor-based cultures in which pride was valued rather than humility, dominance rather than service, courage rather than peaceableness, glory rather than modesty, loyalty to one’s own tribe rather than equal respect for all.</li>
+<li>Instead of trying to shape our desires to fit reality, we now seek to control and shape reality to fit our desires. 古人和现在人的区别。</li>
+<li>It seems to our mind unfair, therefore, that we should determine that it is all right to have sex outside of marriage and later discovered that there is a God who is going to punish us for that.</li>
+<li>In one of my after-service discussions a woman told me that the very idea of a judging God was offensive. I said, why aren’t you offended by the idea of a forgiving God ? She looked puzzled.</li>
+<li>For the sake of argument, let’s imagine that Christianity is not a product of any one culture but is actually transcultural truth of God. if that were the case we would expect that it would contradict and offend every human culture at some point, because human cultures are ever-changing and imperfect. if Christianity were the truth it would have to be offending and correcting your thinking at some place.</li>
+<li>If you love a person and you see someone ruining them—even they themselves—you get angry.</li>
+<li>Anger is not the opposite of love, hate is. And the final form of hate is indifference</li>
+<li>If I don’t believe that there is a God who will eventually put all things right, I will take up the word and will be sucked into the endless vortex of retaliation. only if I am sure that there is a God who will right all wrongs and settle all accounts perfectly do I have the power to refrain.</li>
+<li>Hell begins with a gambling mood, always complaining, always blaming others… but you are still distinct from it. you may even criticize it in yourself and wish you could stop it. but there may come a day when you can no longer. then they will be no YOU left to criticize the mood or even to enjoy it, but just the grumble itself going on forever like a machine. it is not a question of God sending us to hell. In each of us, there is something growing, which will BE HELL unless it is nipped in the bud.</li>
+</ul>
+<h2 id="第六章-Science-Has-Disproved-Christianity"><a href="#第六章-Science-Has-Disproved-Christianity" class="headerlink" title="第六章 Science Has Disproved Christianity"></a>第六章 Science Has Disproved Christianity</h2><p>他提到了不同的章节我们读的时候要考虑体裁。比如路加福音（eyewitnesses）就可以100%当成历史来读，而诗篇就要当成诗歌来读。当我们面对创世纪1&amp;2章的时候，就像士师记4&amp;5、出埃及记14&amp;15那样，一章是历史而一章是赞歌。他认为创世纪1是赞歌而2是历史。</p>
+<blockquote>
+<p>他们见了耶稣就拜他。然而还有人疑惑。《马太福音28:17》</p>
+</blockquote>
+<p>那些门徒，亲眼看到了耶稣的复活，甚至还触摸到了身体，有的人还存留疑惑。这让我想起了拉撒路的故事，亚伯拉罕对那个富人说，如果你的弟兄们是不信的人，那么即使看到了神迹也不会相信</p>
+<p>关于神迹miracle，他举了个例子。比如耶稣不会做这种magic tricks：</p>
+<blockquote>
+<p>See that tree over there? Watch me make it burst into flames!</p>
+</blockquote>
+<p>相反，他用他的能力去救病人，喂饱肚子饿的人，让死人复活。现如今的人们认为的神迹大多属于上面的magic tricks，是对抗Nature Order。但是耶稣行的神迹是恢复Nature Order。</p>
+<h2 id="第九章-The-Knowledge-of-God"><a href="#第九章-The-Knowledge-of-God" class="headerlink" title="第九章 The Knowledge of God"></a>第九章 The Knowledge of God</h2><blockquote>
+<p>It is no answer to say that if individuals have these rights then the community is better off in the long run…because when we say someone has a right to speak his mind freely, we mean he is entitled to do so even if this would not be in the general interest.</p>
+</blockquote>
+<ul>
+<li>我们可以自由地做这件事，而这件事不一定是符合大众意思的</li>
+</ul>
+<blockquote>
+<p>Rights cannot be created—they must be discovered, or they are of no value.</p>
+</blockquote>
+<blockquote>
+<p>If there is no God, then there is no way to say any one action is “moral” and another “immoral” but only “I like this.” If that is the case, who gets the right to put their subjective, arbitrary moral feelings into law? You may say “the majority has the right to make the law,” but do you mean that then the majority has the right to vote to exterminate a minority? If you say “No, that is wrong,” then you are back to square one.</p>
+</blockquote>
+<ul>
+<li>没有一个绝对的真理，人们对绝对的权利感到恐惧。</li>
+</ul>
+<blockquote>
+<p>Without God he can’t justify moral obligation, and yet he can’t not know it exists.</p>
+</blockquote>
+<h2 id="第十章-The-Problem-of-Sin"><a href="#第十章-The-Problem-of-Sin" class="headerlink" title="第十章 The Problem of Sin"></a>第十章 The Problem of Sin</h2><blockquote>
+<p>All sins are attempts to fill voids</p>
+</blockquote>
+<ul>
+<li>霍！</li>
+</ul>
+<blockquote>
+<p>Sin is seeking to become oneself, to get an identity, apart from him.</p>
+</blockquote>
+<blockquote>
+<p>So, according to the Bible, the primary way to define sin is not just the doing of bad things, but the making of good things into ultimate things. It is seeking to establish a sense of self by making something else more central to your significance, purpose, and happiness than your relationship to God.</p>
+</blockquote>
+<blockquote>
+<p><strong>Every person must find some way to “justify their existence,” and to stave off the universal fear that they’re “a bum.”</strong> In more traditional cultures, the sense of worth and identity comes from fulfilling duties to family and giving service to society. In our contemporary individualistic culture, we tend to look to our achievements, our social status, our talents, or our love relationships. There are an infinite variety of identity-bases. Some get their sense of “self” from gaining and wielding power, others from human approval, others from self-discipline and control. But everyone is building their identity on something.</p>
+</blockquote>
+<ul>
+<li>过于真实，我们需要用一种不是神的方式来证明自己的存在。</li>
+</ul>
+<blockquote>
+<p>Identity apart from God is inherently unstable. For example, if I build my identity on being a good parent, I have no true “self”—I am just a parent, nothing more. If something goes wrong with my children or my parenting, there is no “me” left.</p>
+</blockquote>
+<blockquote>
+<p>There is no way to avoid this insecurity outside of God. Even if you say, “I will not build my happiness or significance on anyone or thing,” you will actually be building your identity on your personal freedom and independence. If anything threatens that, you will again be without a self.</p>
+</blockquote>
+<ul>
+<li>不以物喜不以己悲也不太妙？某一天你真的以物喜了，你的自我就崩塌了。</li>
+</ul>
+<blockquote>
+<p>He argues that human society is deeply fragmented when anything but God is our highest love. If our highest goal in life is the good of our family, then, says Edwards, we will tend to care less for other families. If our highest goal is the good of our nation, tribe, or race, then we will tend to be racist or nationalistic. If our ultimate goal in life is our own individual happiness, then we will put our own economic and power interests ahead of those of others. Edwards concludes that only if God is our summum bonum, our ultimate good and life center, will we find our heart drawn out not only to people of all families, races, and classes, but to the whole world in general.</p>
+</blockquote>
+<ul>
+<li>我应该把我和神的关系放在第一位，而不是我的宗教信仰。</li>
+</ul>
+<blockquote>
+<p>You may say, “I see that Christianity might be just the thing for people who have had collapses in their lives. But what if I don’t fail in my career and what if I have a great family?” As Augustine said, if there is a God who created you, then the deepest chambers of your soul simply cannot be filled up by anything less. That is how great the human soul is. If Jesus is the Creator-Lord, then by definition nothing could satisfy you like he can, even if you are successful. Even the most successful careers and families cannot give the significance, security, and affirmation that the author of glory and love can.</p>
+</blockquote>
+<h2 id="第十一章-Religion-and-the-Gospel"><a href="#第十一章-Religion-and-the-Gospel" class="headerlink" title="第十一章 Religion and the Gospel"></a>第十一章 Religion and the Gospel</h2><blockquote>
+<p>All other major faiths have founders who are teachers that show the way to salvation. Only Jesus claimed to actually be the way of salvation himself.</p>
+</blockquote>
+<blockquote>
+<p>Sin and evil are self-centeredness and pride that lead to oppression against others, but there are two forms of this. One form is being very bad and breaking all the rules, and the other form is being very good and keeping all the rules and becoming self-righteous. There are two ways to be your own Savior and Lord. The first is by saying, “I am going to live my life the way I want.” The second is that “he knew that <strong>the best way to avoid Jesus was to avoid sin</strong>.”  If you are avoiding sin and living morally so that God will have to bless and save you, then ironically, you may be <u>looking to Jesus as a teacher, model, and helper but you are avoiding him as Savior</u>. You are trusting in your own goodness rather than in Jesus for your standing with God. You are trying to save yourself by following Jesus.</p>
+</blockquote>
+<h2 id="第十二章-THE-TRUE-STORY-OF-THE-CROSS"><a href="#第十二章-THE-TRUE-STORY-OF-THE-CROSS" class="headerlink" title="第十二章 THE (TRUE) STORY OF THE CROSS"></a>第十二章 THE (TRUE) STORY OF THE CROSS</h2><blockquote>
+<p>Real Forgiveness Is Costly Suffering</p>
+</blockquote>
+<blockquote>
+<p>She went through the suffering of costly forgiveness, which at first always feels far worse than bitterness, into eventual freedom. Forgiveness must be granted before it can be felt, but it does come eventually. It leads to a new peace, a resurrection. It is the only way to stop the spread of the evil.</p>
+</blockquote>
+<ul>
+<li>原谅是个先苦后甜的过程。苦的时候甚至比原先的伤害更痛苦。</li>
+</ul>
+<blockquote>
+<p>Only when you have lost the need to see the other person hurt will you have any chance of <strong>actually bringing about change, reconciliation, and healing.</strong></p>
+</blockquote>
+<blockquote>
+<p>All life-changing love toward people with serious needs is a substitutional sacrifice. If you become personally involved with them, in some way, <strong>their weaknesses flow toward you as your strengths flow toward them</strong>. In The Cross of Christ, John Stott writes that substitution is at the heart of the Christian message:</p>
+<ul>
+<li>The essence of sin is we human beings substituting ourselves for God, while the essence of salvation is God substituting himself for us. We…put ourselves where only God deserves to be; God…puts himself where we deserve to be.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>As John Stott wrote, “I could never myself believe in God if it were not for the Cross. In the real world of pain, how could one worship a God who was immune to it?”</p>
+</blockquote>
+<ul>
+<li>耶稣的人性也很重要。耶稣知道我正在受的苦难是有多苦。</li>
+</ul>
+<h2 id="第十三章-THE-REALITY-OF-THE-RESURRECTION"><a href="#第十三章-THE-REALITY-OF-THE-RESURRECTION" class="headerlink" title="第十三章 THE REALITY OF THE RESURRECTION"></a>第十三章 THE REALITY OF THE RESURRECTION</h2><blockquote>
+<p>Sometimes people approach me and say, “I really struggle with this aspect of Christian teaching. I like this part of Christian belief, but I don’t think I can accept that part.” I usually respond: <strong>“If Jesus rose from the dead, then you have to accept all he said; if he didn’t rise from the dead, then why worry about any of what he said?</strong> The issue on which everything hangs is not whether or not you like his teaching but whether or not he rose from the dead.” That is how the first hearers felt who heard reports of the resurrection. They knew that if it was true it meant we can’t live our lives any way we want. It also meant we don’t have to be afraid of anything, not Roman swords, not cancer, nothing. If Jesus rose from the dead, it changes everything.</p>
+</blockquote>
+<ul>
+<li>局部的真理不是真理，是你的个人喜好，别往耶稣身上扔。</li>
+</ul>
+<blockquote>
+<p>Each gospel states that the first eyewitnesses to the resurrection were women. Women’s low social status meant that their testimony was not admissible evidence in court. There was no possible advantage to the church to recount that all the first witnesses were women. It could only have undermined the credibility of the testimony. The only possible explanation for why women were depicted as meeting Jesus first is if they really had.</p>
+</blockquote>
+<ul>
+<li>有点意思</li>
+</ul>
+<blockquote>
+<p>In not one single case do we hear the slightest mention of the disappointed followers claiming that their hero had been raised from the dead. They knew better. Resurrection was not a private event. Jewish revolutionaries whose leader had been executed by the authorities, and who managed to escape arrest themselves, had two options: give up the revolution, or find another leader. Claiming that the original leader was alive again was simply not an option. Unless, of course, he was.</p>
+</blockquote>
+<ul>
+<li>之前也有很多假弥赛亚出现，但是被杀死之后都没有说复活的，因为这就不是一个选项？</li>
+</ul>
+<blockquote>
+<p>However, the Christian view of resurrection, absolutely unprecedented in history, sprang up full-blown immediately after the death of Jesus. There was no process or development. His followers said that their beliefs did not come from debating and discussing. They were just telling others what they had seen themselves. No one has come up with any plausible alternative to this claim. Even if you propose the highly unlikely idea that one or two of Jesus’s disciples did get the idea that he was raised from the dead on their own, they would never have gotten a movement of other Jews to believe it unless there were multiple, inexplicable, plausible, repeated encounters with Jesus.</p>
+</blockquote>
+<ul>
+<li>世界变化过快</li>
+</ul>
+<blockquote>
+<p>It is not enough for the skeptic, then, to simply dismiss the Christian teaching about the resurrection of Jesus by saying, “It just couldn’t have happened.” He or she must face and answer all these historical questions: Why did Christianity emerge so rapidly, with such power? No other band of messianic followers in that era concluded their leader was raised from the dead—why did this group do so? No group of Jews ever worshipped a human being as God. What led them to do it? Jews did not believe in divine men or individual resurrections. What changed their worldview virtually overnight? How do you account for the hundreds of eyewitnesses to the resurrection who lived on for decades and publicly maintained their testimony, eventually giving their lives for their belief?</p>
+</blockquote>
+<ul>
+<li>从历史中学习</li>
+</ul>
+<h2 id="第十四章-THE-DANCE-OF-GOD"><a href="#第十四章-THE-DANCE-OF-GOD" class="headerlink" title="第十四章 THE DANCE OF GOD"></a>第十四章 THE DANCE OF GOD</h2><blockquote>
+<p>The Father…Son…and Holy Spirit glorify each other…. At the center of the universe, self-giving love is the dynamic currency of the Trinitarian life of God.</p>
+</blockquote>
+<ul>
+<li>霍，这三个互相荣耀…第一次听说。</li>
+</ul>
+<blockquote>
+<p>If God is unipersonal, then until God created other beings there was no love, since love is something that one person has for another. This means that a unipersonal God was power, sovereignty, and greatness from all eternity, but not love. However, if God is triune, then loving relationships in community are the “great fountain…at the center of reality.</p>
+</blockquote>
+<ul>
+<li>角度很新颖</li>
+</ul>
+<blockquote>
+<p>God did not create us to get the cosmic, infinite joy of mutual love and glorification, but to share it. We were made to join in the dance. If we will center our lives on him, serving him not out of self-interest, but just for the sake of who he is, for the sake of his beauty and glory, we will enter the dance and share in the joy and love he lives in. We were designed, then, not just for belief in God in some general way, nor for a vague kind of inspiration or spirituality. We were made to center our lives upon him, to make the purpose and passion of our lives knowing, serving, delighting, and resembling him. <strong>This growth in happiness will go on eternally, increasing unimaginably</strong> (1 Corinthians 2:7-10).</p>
+</blockquote>
+<blockquote>
+<p>[Biblical] salvation lies not in an escape from this world but in the transformation of this world…. You will not find hope for the world in any of the religious systems or philosophies of humankind…. The Biblical vision is unique. That is why when some say there is salvation in other faiths too, I ask them—“What salvation are you talking about?” No faith holds out a promise of eternal salvation for the world—the ordinary world—that the cross and resurrection of Jesus do</p>
+</blockquote>
+<ul>
+<li>霍！只有基督教关心这个物质世界，并且想恢复这个物质世界。其他宗教想得只是「如何逃离」</li>
+</ul>
+<h2 id="EPILOGUE-WHERE-DO-WE-GO-FROM-HERE"><a href="#EPILOGUE-WHERE-DO-WE-GO-FROM-HERE" class="headerlink" title="EPILOGUE: WHERE DO WE GO FROM HERE?"></a>EPILOGUE: WHERE DO WE GO FROM HERE?</h2><blockquote>
+<p>We usually begin the journey toward God thinking, “What do I have to do to get this or that from him?” but eventually we have to begin thinking, “What do I have to do to get him?” If you don’t make that transition, you will never actually meet the real God, but will only end up believing in some caricature version of him.</p>
+</blockquote>
+<blockquote>
+<p>Christians are people who let the reality of Jesus change everything about who they are, how they see, and how they live.</p>
+</blockquote>
+<blockquote>
+<p>The repentance that really changes your heart and your relationship with God begins when you recognize that your main sin, the sin under the rest of your sins, is your self-salvation project. As we saw in Chapters 9 and 10, in both our bad deeds and in our good deeds we are seeking to be our own Saviors and Lords. We have alternative trusts and “gods,” even though we do not call them that. We try to prove ourselves by our moral goodness or through achievement or family or career. Even diligent involvement in church and religion may need to be repented of once we understand that it was all a way to put God and others in our debt.</p>
+</blockquote>
+<blockquote>
+<p>The faith that changes the life and connects to God is best conveyed by the word “trust.” Imagine you are on a high cliff and you lose your footing and begin to fall. Just beside you as you fall is a branch sticking out of the very edge of the cliff. It is your only hope and it is more than strong enough to support your weight. How can it save you? If your mind is filled with intellectual certainty that the branch can support you, but you don’t actually reach out and grab it, you are lost. If your mind is instead filled with doubts and uncertainty that the branch can hold you, but you reach out and grab it anyway, you will be saved. Why? <strong>It is not the strength of your faith but the object of your faith that actually saves you. Strong faith in a weak branch is fatally inferior to weak faith in a strong branch.</strong></p>
+</blockquote>
+<ul>
+<li>说得太好了！</li>
+</ul>
+<blockquote>
+<p>As far as I know my own heart, today I give it to you, I transfer my trust to you, and ask that you would receive and accept me not for anything I have done but because of everything Christ has done for me.</p>
+</blockquote>
+<ul>
+<li>请你看在耶稣为我做过的事的面子上，饶我一马。</li>
+</ul>
+<blockquote>
+<p>You can’t live the Christian life without a band of Christian friends, without a family of believers in which you find a place.</p>
+</blockquote>
+<ul>
+<li>我自己做，做不通的。</li>
+</ul>
+<h1 id="The-Meaning-of-Marriage"><a href="#The-Meaning-of-Marriage" class="headerlink" title="The Meaning of Marriage"></a>The Meaning of Marriage</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>“If God invented marriage, then those who enter it should make every effort to understand and submit to his purposes for it. We do this in many other aspects of our lives. Think of buying a car: If you purchase a vehicle, <strong>a machine well beyond your own ability to create</strong>, you will certainly take up the owner’s manual and abide by what the designer says the car needs by way of treatment and maintenance. To ignore it would be to court disaster.”</p>
+</blockquote>
+<blockquote>
+<p>“Unless you’re able to look at marriage through the lens of Scripture instead of through your own fears or romanticism, through your particular experience, or through your culture’s narrow perspectives, you won’t be able to make intelligent decisions about your own marital future.”</p>
+</blockquote>
+<ul>
+<li>啊…真是要在凡事上以主的喜乐为喜乐。</li>
+</ul>
+<h2 id="Chap1-THE-SECRET-OF-MARRIAGE"><a href="#Chap1-THE-SECRET-OF-MARRIAGE" class="headerlink" title="Chap1 THE SECRET OF MARRIAGE"></a>Chap1 THE SECRET OF MARRIAGE</h2><blockquote>
+<p>“While marriage is many things, it is anything but sentimental. ”</p>
+</blockquote>
+<blockquote>
+<p>“No marriage I know more than a few weeks old could be described as a fairy tale come true.”</p>
+</blockquote>
+<blockquote>
+<p>“They believe their chances of having a good marriage are not great, and, even if a marriage is stable, there is in their view the horrifying prospect that it will become sexually boring. ”</p>
+</blockquote>
+<ul>
+<li>没错…柯立芝效应啊？</li>
+</ul>
+<blockquote>
+<p>“As comedian Chris Rock has asked, “Do you want to be single and lonely or married and bored?” Many young adults believe that these are indeed the two main options. That is why many aim for <strong>something in the middle between</strong> marriage and mere sexual encounters—cohabitation with a sexual partner.”</p>
+</blockquote>
+<ul>
+<li>同居性生活：单身的快乐 + 婚姻的快乐</li>
+</ul>
+<blockquote>
+<p>“Today more than half of all people live together before getting married. In 1960, virtually no one did.”</p>
+</blockquote>
+<blockquote>
+<p>“While it is true that some 45 percent of marriages end in divorce, by far the greatest percentage of divorces happen to those who marry before the age of eighteen, who have dropped out of high school, and who have had a baby together before marrying. “So if you are a reasonably well-educated person with a decent income, come from an intact family and are religious, and marry after twenty-five without having a baby first, your chances of divorce are low indeed.”</p>
+</blockquote>
+<ul>
+<li>这个Subgroup我确实没考虑到</li>
+</ul>
+<blockquote>
+<p>“Studies show that spouses hold one another to greater levels of personal responsibility and self-discipline than friends or other family members can.”</p>
+<p>“Nothing can mature character like marriage.”</p>
+</blockquote>
+<ul>
+<li>霍</li>
+</ul>
+<blockquote>
+<p>Delayed gratification 延迟满足</p>
+</blockquote>
+<blockquote>
+<p>“Most striking of all, longitudinal studies demonstrate that two-thirds of those unhappy marriages out there will become happy within five years if people stay married and do not get divorced.”</p>
+</blockquote>
+<ul>
+<li>。。。</li>
+</ul>
+<blockquote>
+<p>“Instead of finding meaning through self-denial, through giving up one’s freedoms, and binding oneself to the duties of marriage and family, marriage was redefined as finding emotional and sexual fulfillment and self-actualization.”</p>
+<p>“In this view, married persons married for themselves, not to fulfill responsibilities to God or society.”</p>
+<p>“Slowly but surely, this newer understanding of the meaning of marriage has displaced the older ones in Western culture.”</p>
+<p>“Marriage used to be about us, but now it is about me.”</p>
+</blockquote>
+<ul>
+<li>所以婚姻本来的意义是… </li>
+</ul>
+<blockquote>
+<p>“Never before in history has there been a society filled with people so idealistic in what they are seeking in a spouse.”</p>
+</blockquote>
+<p>让结婚变成选美：色情行业影响男人，消费主义影响女人。</p>
+<blockquote>
+<p>“To conduct a Me-Marriage requires two completely well-adjusted, happy individuals, with very little in the way of emotional neediness of their own or character flaws that need a lot of work.”</p>
+</blockquote>
+<blockquote>
+<p>“After all, our culture makes individual freedom, autonomy, and fulfillment the very highest values, and thoughtful people know deep down that any love relationship at all means the loss of all three.”</p>
+</blockquote>
+<blockquote>
+<p>“You can say, “I want someone who will accept me just as I am,” but in your heart of hearts you know that you are not perfect, that there are plenty of things about you that need to be changed, and that anyone who gets to know you up close and personal will want to change them. And you also know that the other person will have needs, deep needs, and flaws. That all sounds painful, and it is, and so you don’t want all that. Yet it is hard to admit to the world or to yourself that you don’t want to be married.”</p>
+</blockquote>
+<ul>
+<li>一套组合拳</li>
+</ul>
+<blockquote>
+<p>“Over the years you will go through seasons in which you have to learn to love a person who you didn’t marry, who is something of a stranger.”</p>
+</blockquote>
+<blockquote>
+<p>「Husbands, love your wives, just as Christ loved the church and gave himself up for her」——以弗所书5：25</p>
+</blockquote>
+<ul>
+<li>或许找一个伴侣的目的不是让他爱我，是我要爱她。所谓单身的赏赐，便是没有了爱的羁绊。不过若是爱上一个人，便如所说的那样，爱她。</li>
+<li>所谓寻找合适的，无非是没有那么爱了。不过既然有选择的权力，那我们要善加利用。</li>
+</ul>
+<blockquote>
+<p>“In marriage, do for your spouse what God did for you in Jesus…the rest will follow.”</p>
+</blockquote>
+<ul>
+<li>这勇气…</li>
+</ul>
+<blockquote>
+<p>“The reason that marriage is so painful and yet wonderful is because it is a reflection of the gospel, which is painful and wonderful at once.”</p>
+</blockquote>
+<ul>
+<li>霍…</li>
+</ul>
+<blockquote>
+<p>“Love without truth is sentimentality; it supports and affirms us but keeps us in denial about our flaws. Truth without love is harshness; it gives us information but in such a way that we cannot really hear it.”</p>
+</blockquote>
+<h2 id="Chap2-THE-POWER-FOR-MARRIAGE"><a href="#Chap2-THE-POWER-FOR-MARRIAGE" class="headerlink" title="Chap2 THE POWER FOR MARRIAGE"></a>Chap2 THE POWER FOR MARRIAGE</h2><blockquote>
+<p>“Only if you have learned to serve others by the power of the Holy Spirit will you have the power to face the challenges of marriage.”</p>
+</blockquote>
+<ul>
+<li>WOW，原来我需要靠圣灵才能服侍别人</li>
+</ul>
+<blockquote>
+<p>“First, the picture of marriage given here is not of two needy people, unsure of their own value and purpose, finding their significance and meaning in one another’s arms. If you add two vacuums to each other, you only get a bigger and stronger vacuum, a giant sucking sound.”</p>
+</blockquote>
+<ul>
+<li>哈哈，有趣的小例子。</li>
+</ul>
+<blockquote>
+<p>“Finally I began to see. I wanted to serve, yes, because that made me feel in control. Then I would always have the high moral ground. But that kind of “service” isn’t service at all, only manipulation.”</p>
+</blockquote>
+<ul>
+<li>不仅要在生活中服务别人，还是要以他想被服务的方式服务，而不是我们想服务他的方式。</li>
+</ul>
+<blockquote>
+<p>“I wanted to earn everything. I wanted no one to give me any favors. I wanted to give undeserved gifts to others—so I could have satisfaction of thinking of myself as a magnanimous person—but I did not want to receive someone else’s service myself.”</p>
+</blockquote>
+<ul>
+<li>我们也要让他人感觉良好，在接纳中让别人感受到给予的快乐</li>
+</ul>
+<blockquote>
+<p>“It means we don’t need to earn our self-worth through incessant service and work. It means also that we don’t mind so much when we are deprived of some comfort, compliment, or reward. We don’t have to keep records and accounts anymore. We can freely give and freely receive.”</p>
+</blockquote>
+<ul>
+<li>Freely give and freely receive.</li>
+</ul>
+<blockquote>
+<p>“Each spouse’s self-centeredness asserted itself (as it always will), but in response, the other spouse got more impatient, resentful, harsh, and cold. In other words, they responded to the self-centeredness of their partner with their own self-centeredness. ”</p>
+</blockquote>
+<ul>
+<li>自私会带来问题，也是因为我们常用自私来回应自私。</li>
+</ul>
+<blockquote>
+<p>“But the gospel, brought home to your heart by the Spirit, can make you happy enough to be humble, giving you an internal fullness that frees you to be generous with the other even when you are not getting the satisfaction you want out of the relationship.”</p>
+<p>“You can only afford to be generous if you actually have some money in the bank to give.”</p>
+</blockquote>
+<blockquote>
+<p>“It is impossible for us to make major headway against self-centeredness and move into a stance of service without some kind of supernatural help.”</p>
+</blockquote>
+<blockquote>
+<p>“So what do you do then? There are at least two paths to take. First, you could decide that your woundedness is more fundamental than your self-centeredness and determine that <strong>unless your spouse sees the problems you have and takes care of you, it’s not going to work out.</strong> Of course, your spouse will probably not do this—especially if he or she is thinking almost the exact same thing about you! And so what follows is the <strong>development of emotional distance</strong> and, perhaps, a slowly negotiated kind of détente or ceasefire. <strong>There is an unspoken agreement not to talk about some things.</strong> There are some things your spouse does that you hate, <strong>but you stop talking about them as long as he or she stops bothering you about certain other things</strong>. <strong>No one changes for the other</strong>; there is only tit-for-tat bargaining. Couples who settle for this kind of relationship may look happily married after forty years, but when it’s time for the anniversary photo op, the kiss will be forced.”</p>
+</blockquote>
+<ul>
+<li>看到了关系中的自己。</li>
+</ul>
+<blockquote>
+<p>“The alternative to this truce-marriage is to determine to see your own selfishness as a fundamental problem and to treat it more seriously than you do your spouse’s. Why? Only you have complete access to your own selfishness, and only you have complete responsibility for it. ”</p>
+</blockquote>
+<blockquote>
+<p>“Neither of you may take this course of action, or both of you may do it together. But there is a third possibility: It may be that one of you decides to operate on the basis of verse 21 and one of you does not. In this case, let’s say, you are the only one who decides, “My selfishness is the thing I am going to work on.” What will happen? Usually there is not much immediate response from the other side. But often, over time, your attitude and behavior will begin to soften your partner. He or she can see the pains you are taking. And it will be easier for your spouse to admit his or her faults because you are no longer always talking about them yourself. </p>
+</blockquote>
+<ul>
+<li>主动改变的一方虽然承受了更多，但是换来的结果是好的——也总要有人去迈出这一步</li>
+</ul>
+<blockquote>
+<p>“The Christian principle that needs to be at work is Spirit-generated selflessness—not thinking less of yourself or more of yourself but thinking of yourself less.”</p>
+</blockquote>
+<ul>
+<li>要做的不是低估自己或者高估自己，要做的是在凡事上不仅要看到自己，还要看到更大的图画。</li>
+</ul>
+<blockquote>
+<p>“Those who stop concentrating on how unhappy they are find that their happiness is growing. You must lose yourself to find yourself.”</p>
+</blockquote>
+<blockquote>
+<p>“What is it that most motivates and moves you? Is it the desire for success? The pursuit of some achievement? The need to prove yourself to your parents? The need for respect from your peers? Are you largely driven by anger against someone or some people who have wronged you? Paul says that if any of these things is a greater controlling influence on you than the reality of God’s love for you, you will not be in a position to serve others unselfishly. Only out of the fear of the Lord Jesus will we be liberated to serve one another.”</p>
+</blockquote>
+<ul>
+<li>其他的动力来源并不是不好，也不是不能完成你的目标。只是他们对于「服侍别人」没有帮助。看起来服侍别人是一件很重要的事？</li>
+</ul>
+<blockquote>
+<p>“We come into our marriages driven by all kinds of fears, desires, and needs. If I look to my marriage to fill the God-sized spiritual vacuum in my heart, I will not be in position to serve my spouse. Only God can fill a God-sized hole. Until God has the proper place in my life, I will always be complaining that my spouse is not loving me well enough, not respecting me enough, not supporting me enough.”</p>
+</blockquote>
+<ul>
+<li>我们投入到一段感情中，若是带入了太多的恐惧、期待、需要、欲望，那可能会凉。</li>
+</ul>
+<blockquote>
+<p>“It is possible to feel you are “madly in love” with someone, <strong>when it is really just an attraction to someone who can meet your needs and address the insecurities and doubts you have about yourself</strong>. In that kind of relationship, you will demand and control rather than serve and give. The only way to avoid sacrificing your partner’s joy and freedom on the altar of your need is to <strong>turn to the ultimate lover of your soul.</strong> He voluntarily sacrificed himself on the cross, taking what you deserved for your sins against God and others.”</p>
+</blockquote>
+<ul>
+<li>爱情燃烧起来的原因很现实。</li>
+<li>我的问题是，既然我们要先建立和耶稣的关系，那我们是如何选择我们决定爱的伴侣呢？既然我们明白了我们的爱人只是恰好满足了我的期待和需要，如何选择爱的倾注对象呢？</li>
+</ul>
+<h2 id="Chap3-THE-ESSENCE-FOR-MARRIAGE"><a href="#Chap3-THE-ESSENCE-FOR-MARRIAGE" class="headerlink" title="Chap3 THE ESSENCE FOR MARRIAGE"></a>Chap3 THE ESSENCE FOR MARRIAGE</h2><blockquote>
+<p>“There is another way in which the legality of marriage augments its personal nature. When dating or living together, you have to prove your value daily by impressing and enticing. You have to show that the chemistry is there and the relationship is fun and fulfilling or it will be over. We are still basically in a consumer relationship, and that means constant promotion and marketing. The legal bond of marriage, however, creates a space of security where we can open up and reveal our true selves. We can be vulnerable, no longer having to keep up facades. We don’t have to keep selling ourselves. We can lay the last layer of our defenses down and be completely naked, both physically and in every other way.”</p>
+</blockquote>
+<ul>
+<li>表演的成分在里面，有点真实。这是浪漫的组成部分，但是可能距离婚姻有点距离/不同。而如果恋爱中没有一点这样的真实在里面，其实也不行。</li>
+</ul>
+<blockquote>
+<p>“As we observed before, longitudinal studies reveal that two-thirds of unhappy marriages will become happy within five years if people stay married and do not get divorced.”</p>
+</blockquote>
+<ul>
+<li>挺一挺就过去了</li>
+</ul>
+<blockquote>
+<p>He goes on to say that these serious conditions do exist, because of “the hardness of your hearts.” That means that sometimes <strong>human hearts become so hard</strong> because of sin that it leads a spouse into a <strong>severe violation of the covenant</strong>, <strong>without prospects of repentance and healing</strong>, and in such cases divorce is permitted.</p>
+</blockquote>
+<ul>
+<li>当你觉得契约被毁掉，没有悔改和医治的希望时，可以离婚。</li>
+</ul>
+<blockquote>
+<p>Some people ask who they are and expect their feelings to tell them. But feelings are flickering flames that fade after every fitful stimulus. Some people ask who they are and expect their achievements to tell them. But the things we accomplish always leave a core of character unrevealed. Some people ask who they are and expect visions of their ideal self to tell them. But our visions can only tell us what we want to be, not what we are.</p>
+<p>Who are we? Smedes answers that <strong>we are largely who we become through making wise promises and keeping them.</strong></p>
+</blockquote>
+<ul>
+<li>我们定下承诺，并且遵守他们，这就是我们。</li>
+</ul>
+<blockquote>
+<p>“But Smedes argues eloquently that promising is the means to freedom. <strong>In promising, you limit options now, in order to have wonderful, fuller options later.</strong> You curb your freedom now, so that you can be free to be there in the future for people who trust you. When you make a promise to someone, both of you know that you are going to be there with and for them. “You have created a small sanctuary of trust within the jungle of unpredictability,”</p>
+</blockquote>
+<ul>
+<li>现在好好学习，不准玩，是为了以后可以有能力花式的玩。</li>
+</ul>
+<blockquote>
+<p>“To be loved but not known is comforting but superficial. To be known and not loved is our greatest fear. But to be fully known and truly loved is, well, a lot like being loved by God. It is what we need more than anything. It liberates us from pretense, humbles us out of our self-righteousness, and fortifies us for any difficulty life can throw at us.”</p>
+</blockquote>
+<blockquote>
+<p>“Kierkegaard writes of three possible outlooks on life—what he calls the aesthetic, the ethical, and the religious. He says that all of us are born aesthetes, and we only can become ethical or religious through our choices. So what is the aesthete? <strong>The aesthete doesn’t really ask whether something is good or bad but only whether it is interesting.</strong> Everything is judged as to whether it is fascinating, thrilling, exciting, and entertaining.”</p>
+<p>“An aesthetic aspect is important to any life lived well and happily, but when the aesthetic dominates a life, it creates huge problems.”</p>
+<p>“Kierkegaard says that this is a very mistaken idea of what freedom is. The person living the aesthetic life is not master of himself at all; in fact, he is leading an accidental life. His temperament, tastes, feelings, and impulses completely drive him.”</p>
+</blockquote>
+<ul>
+<li>再次重提自由：我们被我们被创造的感觉所支配。</li>
+</ul>
+<blockquote>
+<p>“Looked at another way, the person dominated by the aesthetic sensibility is controlled by circumstances. If a wife loses her beautiful skin and countenance or a husband puts on the pounds, the aesthete begins to look around for someone more beautiful. If a spouse develops a debilitating illness, the aesthete begins to feel that life is pointless. But, says Kierkegaard, <strong>such a person is being completely controlled by external circumstances</strong>.”</p>
+</blockquote>
+<ul>
+<li>我们完全被外部环境控制了？</li>
+</ul>
+<blockquote>
+<p>The only way for you to be truly free is to link your feeling to an obligation. Only if you commit yourself to loving in action, day in and day out, even when feelings and circumstances are in flux, can you truly be a free individual and not a pawn of outside forces. Also, only if you maintain your love for someone when it is not thrilling can you be said to be actually loving a person. The aesthete does not really love the person; he or she loves the feelings, thrills, ego rush, and experiences that the other person brings. The proof of that is that when those things are gone, the aesthete has no abiding care or concern for the other.</p>
+</blockquote>
+<ul>
+<li>比如说老倪进入我的生活，完全是因为他很酷。如果这个人无趣，确实可能我们就没机会认识。现在你讲说看似坚固的友情其实是因为aesthete的关系，并不是真实的「友情」。这很令人沮丧，并且这消解了一切因为一面之缘产生的感情。</li>
+<li>所以我现在的想法是，随遇而安。如果有这种开心快乐的感觉，那就让它自然地出现，我们也自然的拥抱。如果时机成熟了，变成了一种爱情/友情，那我们也接受这种情况。我们需要知道「好朋友」的分量，那在我们下次说出这个词的时候就会更有底气。若是「好朋友」只是玩得好的朋友，aesthete就起到了dominant的作用。</li>
+</ul>
+<blockquote>
+<p>这一章（还是前一章）提到了一个观点，如果性爱是还有两个人状态都好的时候才会进行的事，那么进行的次数就会越来越少。进行的次数越少，或许会导致状态逐渐变差，更不想做，陷入恶性循环。所以我现在比较认同，在一个人想另一个人不想的情况下，若是我不想，那么我有和对方继续的义务。若是对方不想，我也应当理解。</p>
+</blockquote>
+<blockquote>
+<p>“Nearly everyone thinks that the Bible’s directive to “love your neighbor” is wise, right, and good. But notice that it is a command, and emotions cannot be commanded. The Bible does not call us to like our neighbor, to have affection and warm feelings toward him or her. No, the call is to love your neighbor, and that must primarily mean displaying a set of behaviors.”</p>
+</blockquote>
+<ul>
+<li>霍！醍醐灌顶的新想法。要爱你的邻居，并不是对你的邻居产生「爱意」，而是要做出<strong>爱的行动</strong>，尽管我们可能没那么「爱」对方。</li>
+</ul>
+<blockquote>
+<p>When you feel great delight in someone, meeting their needs and getting their gratitude and affection in return is extremely rewarding to your ego. At those times you may be acting more out of the desire to get that love and satisfaction yourself, rather than out of a desire to seek the good of the other person.</p>
+<p>We are afraid that he or she will be angry and say harsh things, and we cannot bear that. This only affirms that we don’t really love the person and his or her best interest. <strong>We love the affection and esteem we are getting from that person.</strong> All this means that you can indeed love, and love truly and wisely, when you lack the feelings of love.</p>
+</blockquote>
+<blockquote>
+<p><strong>Do not waste time bothering whether you “love” your neighbor; act as if you did.</strong> As soon as we do this we find one of the great secrets. When you are behaving as if you loved someone, you will presently come to love him. If you injure someone you dislike, you will find yourself disliking him more. If you do him a good turn, you will find yourself disliking him less</p>
+</blockquote>
+<ul>
+<li><p>小时候我们就知道「喜欢」和「爱」是有区别的。我曾以为区别只是喜欢的程度不同，太喜欢了就变成了爱。其实还是太年轻了。爱原来是如此沉重，爱原来需要做出很多行为。</p>
+</li>
+<li><p>想起了《小王子》。我们在一件事上投入时间与精力，我们就会越来越喜爱它。这种爱并非不纯粹，也并非自恋，这恰恰是爱的最好方式。用爱的行动，换来真正的爱。</p>
+</li>
+</ul>
+<blockquote>
+<p>“I had been loving them even when I didn’t like them, and the result was that, slowly but surely, my emotions were catching up with my behavior. <strong>If you do not give up</strong>, but proceed to love the unlovely in a sustained way, they will eventually become lovely to you.”</p>
+</blockquote>
+<ul>
+<li>别放弃，挺一挺。</li>
+</ul>
+<blockquote>
+<p>“<strong>Our culture says that feelings of love are the basis for actions of love</strong>. And of course that can be true. But it is truer to say that actions of love can lead consistently to feelings of love. Love between two people must not, in the end, be identified <strong>simply with emotion or merely with dutiful action.</strong> Married love is a symbiotic, complex mixture of both. Having said this, it is important to observe that of the two—emotion and action—<strong>it is the latter that we have the most control over. It is the action of love that we can promise to maintain every day.”</strong></p>
+</blockquote>
+<ul>
+<li>只有体会过爱的感觉，才能爱别人。这确实不错。但是爱别人，会增进爱的感觉。对别人实施爱的行为，就像为自己的爱火添加燃料。</li>
+<li>也提醒我们不仅是责任感。女友曾说我不够爱她，脑子里只有责任。我当时误会了爱的意思，我只想到了passion的爱。</li>
+</ul>
+<blockquote>
+<p>“In Ephesians 5:28, Paul says, “Husbands ought to love their wives.” He had already urged them to love their wives in verse 25, but here, just to be clear, Paul uses a verb that stresses obligation. There is no doubt about what Paul is saying. He commands husbands—they ought to love their wives. <strong>Emotions can’t be commanded, only actions, and so it is actions that Paul is demanding.</strong> He doesn’t care how they feel on a given day or at a given moment—they must love their wives.”</p>
+</blockquote>
+<ul>
+<li>我突然意识到，我们注定无法控制我们的感情和想法，我们唯一能控制的只有行为。灵魂体中，魂确实需要救赎，体是我们需要下手的部分，而灵则是我们的力量来源。我不能因为自己想犯错的想法而责备自己，只要在行动上多下点功夫。而我最想控制的想法，其实是最不可控的。</li>
+</ul>
+<blockquote>
+<p>“This is, I think, one little part of what Christ meant by saying that a thing will not really live unless it first dies. It is simply no good trying to keep any thrill: that is the very worst thing you can do. <strong>Let the thrill go</strong>—let it die away—go on through that period of death into the quieter interest and happiness that follow—and you will find you are living in a world of new thrills all the time. . . .”</p>
+</blockquote>
+<ul>
+<li>这解读我真是惊了…不死就不生，让激情的欲火燃尽，才有机会看到爱情的本质。</li>
+</ul>
+<blockquote>
+<p>“Sadly, many people never let this happen, <strong>because they have accepted the culture’s definition of marriage</strong>, and when the thrill wears off, they feel it is time for a change. This view of things leaves married people very vulnerable to affairs, since it is quite natural that you will meet others who are attractive and who will hold out the promise of getting the thrill back that was there in the beginning of your relationship with your spouse.”</p>
+</blockquote>
+<ul>
+<li>今天是单身节，林志炫去了东北师大附中。学校婉拒了他的团队，可他执意要来。我开始有点惊讶，后来一想，这学校还是有点意思。学校是教书育人的地方，而林志炫是一名艺人。大家在朋友圈疯狂转发一位艺人要去学校唱歌，这像极了爱情初期的Thrill。我们是不是可以拥抱并且接受呢？也确实不错。不过当我们想到婚姻的时候，就是另一回事了。</li>
+<li>联系上面的文字，我们不能被社会上广泛所接受的看法所引导。还是要有自己的想法，并且有自己的思想基础。</li>
+<li>有时候我们会说「我不再爱他了」。这可能是因为，我们只会一种爱，就是很火热的那种。</li>
+<li>我现在明白了，为什么很多老夫妻也很恩爱了。我时常认为不够关系，不够体谅，互相埋怨是不合适的象征，不是好的伴侣关系，就算结婚了也会分开。可是我现在明白了。就算有那些大事小事，他们还是坚持让彼此在婚姻之中，那就势必会有爱的行为。这样的次数变多了，两个人在对方眼中也就也来越可爱。曾经不互相关心的两个人也会慢慢的互相关心。只要给多一点时间就好，再忍耐一下。</li>
+</ul>
+<blockquote>
+<p>“After eighteen years of this, even if your child is an unattractive person to everyone else, you can’t help but love her dearly. Why? Because you’ve been forced to operate on the Biblical pattern. You have had to do the actions of love regardless of your feelings and therefore now you have deep feelings of love for your child, however loveable she is or not.”</p>
+</blockquote>
+<ul>
+<li>天哪！逻辑链串上了。我曾以为父母对孩子的爱是天生的，原来不一定是这样。可能有些父母从小就没在孩子身上投入太多爱的行为，所以长大了之后和孩子的联结也不是那么多，感情也就没有那么深。而一般的父母之所以很爱孩子，是因为他们亲自陪伴着孩子一同成长，在这个过程中投入了大量的难以想象的爱。在孩子最不可爱的时候，还是选择了爱自己的孩子。就这样，父母真的践行了神对世人的爱。所以我们才会认为父母的爱很是伟大。我们可以从中学习到的经验，就是当自己的爱人不那么可爱的时候，也要爱她。她在你眼中就会越来越可爱。</li>
+</ul>
+<blockquote>
+<p>“Well, when Jesus looked down from the cross, he didn’t think, ‘I am giving myself to you because you are so attractive to me.’ No, he was in agony, and he looked down at us—denying him, abandoning him, and betraying him—and in the greatest act of love in history, he stayed. He said, ‘Father, forgive them, they don’t know what they are doing.’ He loved us, not because we were lovely to him, but to make us lovely. That is why I am going to love my spouse.” Speak to your heart like that, and then fulfill the promises you made on your wedding day.</p>
+</blockquote>
+<h2 id="Chap4-THE-MISSION-OF-MARRIAGE"><a href="#Chap4-THE-MISSION-OF-MARRIAGE" class="headerlink" title="Chap4 THE MISSION OF MARRIAGE"></a>Chap4 THE MISSION OF MARRIAGE</h2><blockquote>
+<p>That is why those pathetic people who simply “want friends” can never make any. <strong>The very condition of having friends is that we should want something else besides friends.</strong> Where the truthful answer to the question “Do you see the same truth?” would be “I don’t care about the truth—I only want [you to be my] friend,” no friendship can arise. Friendship must be about something, even if it were only an enthusiasm for dominoes or white mice. Those who have nothing can share nothing; those who are going nowhere can have no fellow-travelers</p>
+</blockquote>
+<ul>
+<li>友情意味着两个人有同样的地方，或者同样的爱好，或者同样的性格，或者同样的理想。通俗地讲，你需要有一些吸引人的地方，才能交到朋友。</li>
+</ul>
+<blockquote>
+<p>In each story, a disparate group of people are brought together. They may come from different races and classes and may hate one another, but because some common goal and mission is thrust on them, they become a team, a unit. They rescue each other, push, provoke, and exhort each other and win through because their common mission turns them into friends and their differences become their strengths.</p>
+</blockquote>
+<ul>
+<li>好朋友走在同一条路上，互相鼓励，为了最后的目标。</li>
+</ul>
+<blockquote>
+<p>“In tribal societies, romance doesn’t matter as much as social status, and in individualistic Western societies, romance and great sex matter far more than anything else. The Bible, however, without ignoring responsibility to the community or the importance of romance, puts great emphasis on marriage as companionship.”</p>
+</blockquote>
+<ul>
+<li>好的婚姻需要陪伴，对方愿意介入你的生活，也愿意让你介入他的生活。Constancy and transparency.</li>
+</ul>
+<blockquote>
+<p>“We see it in our text, Ephesians 5. Here Paul is speaking to people from pagan backgrounds and to their view that marriage is mainly a social transaction. In that time, you had to marry as well as you could for the sake of your family’s social status. Your wife’s job was to link your family to another good family and then bear children. That was what marriage was supposed to accomplish.”</p>
+</blockquote>
+<ul>
+<li>现在可能保罗的话听起来比较正常，可是在那个妻子是个工具人的时代，这样的一番话很令人不解。</li>
+</ul>
+<blockquote>
+<p>“When looking for a marriage partner, each must be able to look inside the other and see what God is doing and be excited about being part of the process of liberating the emerging “new you.”</p>
+</blockquote>
+<ul>
+<li>我们要在对方的身上看到神对于他的计划。</li>
+</ul>
+<blockquote>
+<p>“If you don’t see your mate’s deep flaws and weaknesses and dependencies, <strong>you’re not even in the game</strong>. But if you don’t get excited about the person your spouse has already grown into and will become, you aren’t tapping into the power of marriage as spiritual friendship.”</p>
+</blockquote>
+<ul>
+<li>虽然我们必会看到对方身上的问题，但不要忘了更大的目标。</li>
+</ul>
+<blockquote>
+<p>“<strong>It’s a paradox but not a contradiction</strong>. The simple fact is that only if I love Jesus more than my wife will I be able to serve her needs ahead of my own. Only if my emotional tank is filled with love from God will I be able to be patient, faithful, tender, and open with my wife when things are not going well in life or in the relationship. And the more joy I get from my relationship with Christ, the more I can share that joy with my wife and family.”</p>
+</blockquote>
+<ul>
+<li>Paradox，似非而是的观点。</li>
+</ul>
+<blockquote>
+<p>If singles accepted this principle, it would drastically change the way people seek a marriage partner in our day. It is typical for a single person to walk into a room and see a number of people of the opposite sex and immediately begin to screen them, not for companionship but for attractiveness. Let’s say three out of the ten look appealing. The next step is to approach those three to see what rapport there may be. If one of them will agree to go out on a date, and you get romantically involved, perhaps you’ll see if you can turn that person into a friend as well. The problem is many of your best prospects for friendship were likely among those you ruled out <strong>because they were too tall or too short, too fat or too skinny.</strong></p>
+<p>We think of a prospective spouse as primarily a lover (or a provider), and if he or she can be a friend on top of that, well isn’t that nice! We should be going at it the other way around. Screen first for friendship. Look for someone who understands you better than you do yourself, who makes you a better person just by being around them. And then explore whether that friendship could become a romance and a marriage.</p>
+</blockquote>
+<ul>
+<li>我们应该先成为好朋友，然后看其中是否有对自己很有吸引力的。而不是先选择对自己很有吸引力的，在去发展成为好朋友。</li>
+</ul>
+<blockquote>
+<p>“When you marry, you commit to becoming a new decision-making unit and to developing new patterns and ways of doing things. If you rigidly impose the patterns that you saw in your own family rather than working together with your spouse to create new ones that fit both of you, you haven’t “left home” yet.”</p>
+</blockquote>
+<ul>
+<li>简单来讲就是实事求是，不要照搬别人的方法，即使是父母的方法很好用，也work，但是在你们的小家庭里也说不准。</li>
+</ul>
+<blockquote>
+<p>“In other words, Jesus asks for nothing that any spouse doesn’t ask for. “Put me first,” he says, “have no other pseudo-gods before me.” It is the same with marriage. Marriage won’t work unless you put your marriage and your spouse first, and you don’t turn good things, like parents, children, career, and hobbies, into pseudo-spouses.”</p>
+</blockquote>
+<ul>
+<li>耶稣向你索求的，不会多过一个伴侣要向你索求的。</li>
+</ul>
+<blockquote>
+<p>“The reason it must have priority is because of the power of marriage. Marriage has the power to set the course of your life as a whole. If your marriage is strong, even if all the circumstances in your life around you are filled with trouble and weakness, it won’t matter. You will be able to move out into the world in strength. However, if your marriage is weak, even if all the circumstances in your life around you are marked by success and strength, it won’t matter. You will move out into the world in weakness. Marriage has that kind of power—the power to set the course of your whole life. It has that power because it was instituted by God. And because it has that unequalled power, it must have an unequalled, supreme priority.”</p>
+</blockquote>
+<ul>
+<li>就像一个大招，冷却时间也很长。</li>
+</ul>
+<h2 id="Chap5-LOVING-THE-STRANGER"><a href="#Chap5-LOVING-THE-STRANGER" class="headerlink" title="Chap5 LOVING THE STRANGER"></a>Chap5 LOVING THE STRANGER</h2><blockquote>
+<p>“As a divine institution, marriage has several inherent powers that we must accept and use—the power of truth, the power of love, and the power of grace. ”</p>
+</blockquote>
+<ul>
+<li>婚姻中的三种力量</li>
+</ul>
+<blockquote>
+<p>“You may be a highly independent person, who does not like to be responsible for the needs of others, who dislikes having to make joint decisions, and who most definitely hates to ask for any help yourself.”</p>
+</blockquote>
+<ul>
+<li>有点像我了…</li>
+</ul>
+<blockquote>
+<p>“Counselors will tell you that the only flaws that can enslave you are the ones that you are blind to. If you are in denial about some feature of your character, that feature will control you. But marriage blows the lid off, turns the lights on. Now there is hope. Finally you can begin dealing with the real you.”</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Holy</category>
+        <category>References</category>
+        <category>The Reason for God</category>
       </categories>
   </entry>
   <entry>
