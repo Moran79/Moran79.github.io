@@ -944,7 +944,7 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
 
 <p>东京朝阳 [2020/5/30]</p>
 <p><img src="https://i.imgur.com/9tyIKdo.jpg" alt=""></p>
-<p>大阪朝阳 [2020/9/24]</p>
+<p>大阪夕阳 [2020/9/24]</p>
 <p><img src="https://i.imgur.com/gFd82xu.jpg" alt=""></p>
 <h1 id="田野调查——采茶园-2020-11"><a href="#田野调查——采茶园-2020-11" class="headerlink" title="田野调查——采茶园 [2020/11]"></a>田野调查——采茶园 [2020/11]</h1><p><img src="https://i.imgur.com/XIUrVZ3.jpg" alt=""></p>
 <p><img src="https://i.imgur.com/m8O5uxx.jpg" alt=""></p>
@@ -8416,6 +8416,27 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
 <blockquote>
 <p>“Counselors will tell you that the only flaws that can enslave you are the ones that you are blind to. If you are in denial about some feature of your character, that feature will control you. But marriage blows the lid off, turns the lights on. Now there is hope. Finally you can begin dealing with the real you.”</p>
 </blockquote>
+<blockquote>
+<p>“To be highly esteemed by someone you highly esteem is the greatest thing in the world.”</p>
+</blockquote>
+<blockquote>
+<p>“It is not enough to simply say, “I love you.” Nor is it enough to give love to your spouse in the way to which you feel most accustomed. If you want to give a person $100, there are many ways to do so. You can give it in cash or by check or in gold or in kind. You can give it in different currencies. So you ask, “In which form do you want the hundred dollars?” In the same way you learn to give your spouse love in the way he or she finds most emotionally valuable and powerful. That is the only way to bring the remaking and healing power of love into your spouse’s life.”</p>
+</blockquote>
+<ul>
+<li>以对方想要被爱的方式去爱她</li>
+</ul>
+<blockquote>
+<p>“First, realize you have a “filter” on. You tend to only “hear” certain kinds of love language. For example, your spouse may be working hard to provide you with material things, but you wish he were more verbal. There is a tendency to say, “He doesn’t love me!” because he is not communicating love in your most valuable language. Take off your filter and recognize the love your spouse is giving you.”</p>
+</blockquote>
+<ul>
+<li>同时，要意识到你的伴侣可能正在爱着你，以她的方式。</li>
+</ul>
+<blockquote>
+<p>“Learn the primary languages of your spouse and send love over those channels, not over the channels you prefer for yourself. We tend to give love through the channels in which we like to receive it.”</p>
+</blockquote>
+<ul>
+<li>我们喜欢按照我们愿意被接受的方式提供爱。</li>
+</ul>
 ]]></content>
       <categories>
         <category>Holy</category>
