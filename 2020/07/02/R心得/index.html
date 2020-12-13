@@ -329,7 +329,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      13.7k 字
+      13.8k 字
     </span>
   
 
@@ -339,7 +339,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      167
+      168
        分钟
     </span>
   
@@ -380,7 +380,13 @@
 <h1 id="一些疑问"><a href="#一些疑问" class="headerlink" title="一些疑问"></a>一些疑问</h1><ul>
 <li>如何画出线性分割图PDA？用R语言我是没整明白</li>
 </ul>
+<h1 id="进阶版知识："><a href="#进阶版知识：" class="headerlink" title="进阶版知识："></a>进阶版知识：</h1><p><a target="_blank" rel="noopener" href="https://www.zsccy.xyz/post/2019-05-02-nonstandard-calculation/">非标准计算</a>：</p>
+<ul>
+<li><code>quote</code>是用来把后面的东西变成一个call或者一个symbol，可以日后用<code>eval.parent</code>进行运算</li>
+</ul>
 <h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
+<li><p>“&amp;”和“|”作用在对象中的每一个元素上并且返回和比较次数相等长度的逻辑值；“&amp;&amp;”和“||”只作用在对象的第一个元素上。 </p>
+</li>
 <li><p>args(mean)—快速查看mean的参数有哪些</p>
 </li>
 <li><p>example(mean)—看一个mean的实例</p>
@@ -739,6 +745,9 @@ ggplot(df)+
 </li>
 </ul>
 <p>tally 统计group mean</p>
+<ul>
+<li>psych::describe 是一个比summary更详细的方法</li>
+</ul>
 <h2 id="tidyr"><a href="#tidyr" class="headerlink" title="tidyr"></a>tidyr</h2><ul>
 <li>gather(xxx, key = ‘a’, value = ‘b’): 如果在tibble的第一行存在一些数据而非数据名（就像2*2联表中的列那样），那么我们就把这些数据放在xxx的位置，为他们产生一个新变量叫做a，而原本的数据框里面的数据也有了一个新的名字叫做b，这样就把这些数据所在的列变成了两列，a和b。可以添加na.rm=T参数</li>
 <li>spread(data, key = ‘a’, value = ‘b’): 针对有些时候某一列a中包含的都是变量名，而b列分别存了这些变量的值，所以我们只用这两个参数就可以把数据清洗干净。</li>

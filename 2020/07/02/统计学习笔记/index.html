@@ -329,7 +329,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.7k 字
+      4.9k 字
     </span>
   
 
@@ -339,7 +339,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      76
+      79
        分钟
     </span>
   
@@ -451,6 +451,15 @@
 <li>Likelihood变成了我们统计推断的一个尺度。该不该拒绝原假设？都是根据likelihood来判断的。</li>
 <li>Likelihood被Bayes和MLE两大方法所引导？</li>
 </ul>
+<h2 id="Chap4-Intercomparison"><a href="#Chap4-Intercomparison" class="headerlink" title="Chap4: Intercomparison"></a>Chap4: Intercomparison</h2><p>这一章表示的是，如何不借助外界的信息，而从数据本身发现规律。</p>
+<blockquote>
+<p>“In 1904–1905, he wrote a pair of internal memoranda (really in-house instruction texts) summarizing the uses of error theory and the correlation coefficient, based upon his reading of recent work from Karl Pearson’s laboratory at University College London. ”</p>
+</blockquote>
+<ul>
+<li>Gosset作为一个数学/化学家，阅读同时代统计学家的成果，给自己带来了insights。</li>
+</ul>
+<p>人们开始使用的是正态的median error，后来使用了正态的error，之后Gosset发现了t-分布，发表在了Pearson的杂志Biometrika上。文章的结果一直没人用，直到被Fisher读到了。Fisher发现没人证明这个结论，于是把自己的证明寄给了Gosset，Gosset没看懂，于是转发给了Pearson，不过Pearson也没看懂。</p>
+<p>Fisher后来一己之力，创造出了t-test，发展出了回归分析理论，以及ANOVA的全部。</p>
 <h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>

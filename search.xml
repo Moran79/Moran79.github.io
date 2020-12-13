@@ -976,6 +976,8 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
 <p><img src="https://i.imgur.com/Zmicdpn.jpg" alt=""></p>
 <p>汤泡饭 [2020/11/21]</p>
 <p><img src="https://i.imgur.com/wgODv6N.jpg" alt=""></p>
+<p>番茄炒蛋 [2020/11/24]</p>
+<p><img src="https://i.imgur.com/n59yhO3.jpg" alt=""></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -2937,6 +2939,12 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <ul>
 <li>探险从一个圆圈型的停车场开始。左手边有一个不知通向何方的小木道。右手边一直通往Picnic Point。秋天时候走在路上，会路过一片金黄色的草地，这感觉像是在梦里。若是你还没有情人，你便会爱上那个迎面走来的女子。</li>
 </ul>
+<p>2020/12/12</p>
+<ul>
+<li><p>今天下雪了，在215窝着看《棋魂》好不过瘾。在老姚的坚持下我们还是出门了。雪后的Raymer别有风味，但我们认为不如平时绿色的时候好看。有趣的是树干上的雪被风刮的造型，像剪了一个火箭头发型。</p>
+<p><img src="https://i.imgur.com/AcR1Vut.jpg" alt=""></p>
+</li>
+</ul>
 <h2 id="双子湖"><a href="#双子湖" class="headerlink" title="双子湖"></a>双子湖</h2><p><img src="https://i.imgur.com/88Tmpb5.png" alt=""></p>
 <ul>
 <li>双子湖包括两个湖：<ul>
@@ -3483,6 +3491,15 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>Likelihood变成了我们统计推断的一个尺度。该不该拒绝原假设？都是根据likelihood来判断的。</li>
 <li>Likelihood被Bayes和MLE两大方法所引导？</li>
 </ul>
+<h2 id="Chap4-Intercomparison"><a href="#Chap4-Intercomparison" class="headerlink" title="Chap4: Intercomparison"></a>Chap4: Intercomparison</h2><p>这一章表示的是，如何不借助外界的信息，而从数据本身发现规律。</p>
+<blockquote>
+<p>“In 1904–1905, he wrote a pair of internal memoranda (really in-house instruction texts) summarizing the uses of error theory and the correlation coefficient, based upon his reading of recent work from Karl Pearson’s laboratory at University College London. ”</p>
+</blockquote>
+<ul>
+<li>Gosset作为一个数学/化学家，阅读同时代统计学家的成果，给自己带来了insights。</li>
+</ul>
+<p>人们开始使用的是正态的median error，后来使用了正态的error，之后Gosset发现了t-分布，发表在了Pearson的杂志Biometrika上。文章的结果一直没人用，直到被Fisher读到了。Fisher发现没人证明这个结论，于是把自己的证明寄给了Gosset，Gosset没看懂，于是转发给了Pearson，不过Pearson也没看懂。</p>
+<p>Fisher后来一己之力，创造出了t-test，发展出了回归分析理论，以及ANOVA的全部。</p>
 <h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
 <p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
@@ -5908,11 +5925,18 @@ rng.randn(<span class="hljs-number">10</span>)</code></pre>
 
 
 
+<h1 id="2020-12-3"><a href="#2020-12-3" class="headerlink" title="2020/12/3"></a>2020/12/3</h1><p><a href="https://www.youtube.com/watch?v=b1vUmhxDUBg">大衛鮑森新約縱覽 - 以弗所書</a></p>
+<p>我们不是因为行善而得救，但是我们得救是为了行善。</p>
+<p>听到「被释放」、「锁链既脱」，想起了一个小象栓到木桩的故事。或许我们早已被拿掉了那条链子，但是我们仍在原地踏步。</p>
 <h1 id="2020-11-21-谁该下地狱"><a href="#2020-11-21-谁该下地狱" class="headerlink" title="2020/11/21 谁该下地狱"></a>2020/11/21 <a href="https://www.youtube.com/watch?v=89wMAAvuhO0">谁该下地狱</a></h1><p>最近听了大卫鲍森讲的地狱主题，很令人耳目一新，感谢Youtube的自动推荐。</p>
 <p>地狱原来是垃圾场，丢进去的都是「没有用」的人和天使。天使是不会死的，所以上帝既不能把他们杀死，也不能任他们胡作非为，所以只能找一个地方，给他们关起来。所以地狱本来是为了堕落天使设计的。</p>
 <p>四本福音书，只有马太提到了地狱。不应该和不信的人以及罪人讨论地狱，却要和信徒讲地狱。四本福音书，两本给信徒，两本给不信的人。马太和约翰是给信徒的，所以用约翰福音传福音是不太妙的。马太福音中提到的登山宝训，其实都是对门徒的教导。</p>
 <p>目前世人缺少对上帝的敬畏，人们听到关于地狱的事情也越来越少。而地狱却是很关键的。</p>
 <p>他是道路：耶稣之所以会再回来，是因为他是我们的道路，要指引我们的道路，接我们回去。牧师举了一个老太太问路的例子，告诉他路的人担心她会找不到，于是亲自带她去了。这就是「我是道路」的意思。</p>
+<p><a href="https://www.youtube.com/watch?v=auxCOK2yIgY">末日真相(6)天堂的賞賜</a></p>
+<ul>
+<li>这篇讲道15分钟左右有关于新耶路撒冷的描述，很有趣</li>
+</ul>
 <h1 id="2020-11-15-管他的，就是要有盼望-萬力豪牧師"><a href="#2020-11-15-管他的，就是要有盼望-萬力豪牧師" class="headerlink" title="2020/11/15 管他的，就是要有盼望 | 萬力豪牧師"></a>2020/11/15 <a href="https://www.youtube.com/watch?v=JlvzSaVC80M">管他的，就是要有盼望 | 萬力豪牧師</a></h1><blockquote>
 <p>我们有这指望，如同灵魂的锚，又坚固又牢靠，且通入幔内；《希伯來書 》6:19</p>
 </blockquote>
@@ -7134,7 +7158,13 @@ p_numerator, p_denominator = <span class="hljs-number">1</span>, <span class="hl
 <h1 id="一些疑问"><a href="#一些疑问" class="headerlink" title="一些疑问"></a>一些疑问</h1><ul>
 <li>如何画出线性分割图PDA？用R语言我是没整明白</li>
 </ul>
+<h1 id="进阶版知识："><a href="#进阶版知识：" class="headerlink" title="进阶版知识："></a>进阶版知识：</h1><p><a href="https://www.zsccy.xyz/post/2019-05-02-nonstandard-calculation/">非标准计算</a>：</p>
+<ul>
+<li><code>quote</code>是用来把后面的东西变成一个call或者一个symbol，可以日后用<code>eval.parent</code>进行运算</li>
+</ul>
 <h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
+<li><p>“&amp;”和“|”作用在对象中的每一个元素上并且返回和比较次数相等长度的逻辑值；“&amp;&amp;”和“||”只作用在对象的第一个元素上。 </p>
+</li>
 <li><p>args(mean)—快速查看mean的参数有哪些</p>
 </li>
 <li><p>example(mean)—看一个mean的实例</p>
@@ -7493,6 +7523,9 @@ ggplot(df)+
 </li>
 </ul>
 <p>tally 统计group mean</p>
+<ul>
+<li>psych::describe 是一个比summary更详细的方法</li>
+</ul>
 <h2 id="tidyr"><a href="#tidyr" class="headerlink" title="tidyr"></a>tidyr</h2><ul>
 <li>gather(xxx, key = ‘a’, value = ‘b’): 如果在tibble的第一行存在一些数据而非数据名（就像2*2联表中的列那样），那么我们就把这些数据放在xxx的位置，为他们产生一个新变量叫做a，而原本的数据框里面的数据也有了一个新的名字叫做b，这样就把这些数据所在的列变成了两列，a和b。可以添加na.rm=T参数</li>
 <li>spread(data, key = ‘a’, value = ‘b’): 针对有些时候某一列a中包含的都是变量名，而b列分别存了这些变量的值，所以我们只用这两个参数就可以把数据清洗干净。</li>
@@ -8446,6 +8479,110 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
 </ul>
 <blockquote>
 <p>Love is a deliberate choice.</p>
+</blockquote>
+<blockquote>
+<p>“When we see how devastating truth-telling in marriage can be, it can push us into the opposite error. We may then decide that our job is to just affirm. We avoid telling our spouses how disappointed we are. We shut up. We stuff and hide what we really think and feel. We exercise the power of love, but not the power of truth.<br>But then marriage’s enormous potential for spiritual growth is lost. If I come to realize that my spouse is not really being truthful with me, then her loving affirmations become less powerful in my life. Only when I know that my spouse regularly tells me the truth will her loving affirmations really change me.”</p>
+<p>“Your marriage will go either into a truth-without-love mode, with constant fighting, or a shallow love-without-truth mode, in which both partners simply avoid the underlying problems.”</p>
+</blockquote>
+<ul>
+<li>如果只有love而没有truth，慢慢的爱的话语也变得没那么有力量了，因为你知道你的爱人越来越少「实事求是」了。</li>
+<li>如果没有love而只有truth的话，我们很可能会用truth当做我们的武器来攻击别人。用最恶毒的话说出最真实的问题。</li>
+<li>如果把love和truth的力量合理的结合在一起，要靠恩典。再用truth指出错误之后，用love来化解情绪危机。而我们之所以在收到对方伤害之后还有力量来给予对方爱，是因为耶稣先爱了我们。</li>
+</ul>
+<blockquote>
+<p>“If you have trouble forgiving someone, it is at least partly because deep in your heart you are thinking, “I would never do anything like that!” As long as you feel superior to someone, feel like you are a much better kind of person, you will find it very hard if not impossible to forgive.”</p>
+</blockquote>
+<ul>
+<li>不能原谅别人的原因之一：「我自己一定不会这么做」</li>
+</ul>
+<blockquote>
+<p>“If you see Jesus dying on the cross for others, forgiving the people who killed him, that can be just a crushing example of forgiving love that you will never be able to live up to. But if instead you see Jesus dying on the cross for you, forgiving you, putting away your sin, that changes everything.”</p>
+</blockquote>
+<ul>
+<li>说得很好…我一直以为是耶稣在世时的那些犹太人把耶稣送上了十字架，他们是凶手，我是无罪的。殊不知我也是凶手之一，而耶稣在十字架上也赦免了我的罪，为我而死。</li>
+</ul>
+<h2 id="Chap6-EMBRACING-THE-OTHER"><a href="#Chap6-EMBRACING-THE-OTHER" class="headerlink" title="Chap6 EMBRACING THE OTHER"></a>Chap6 EMBRACING THE OTHER</h2><p>很神奇，这一章是Kathy写的</p>
+<blockquote>
+<p>“<strong>No wise person rejects a gift from someone who loves them without at least giving it a look.</strong> So we hope that even if you are not comfortable with the idea of distinct, divinely ordained gender roles within marriage, that you will suspend judgment just for the space of this chapter and consider how God may have intended them for our good.”</p>
+</blockquote>
+<ul>
+<li>性别是上帝给我们的礼物。</li>
+</ul>
+<blockquote>
+<p>“Every cell in our body is stamped as XX or XY. This means I cannot understand myself if I try to ignore the way God has designed me or if I despise the gifts he may have given to help me fulfill my calling. ”</p>
+</blockquote>
+<ul>
+<li>性别不是开始大家相同，后来慢慢分化出来的一个概念。从创世起初，就有性别的概念。</li>
+<li>性别并不是一个社会性的概念，反对所谓自我认同的性别。</li>
+</ul>
+<p>Kathy写的这部分生词好多，我隐约觉得Kathy是个说教派而不是实践派。</p>
+<blockquote>
+<p>“The English word “helper” is not the best translation for the Hebrew word ’ezer. “Helper” connotes merely assisting someone who could do the task almost as well without help. But ’ezer is almost always used in the Bible to describe God himself. Other times it is used to describe military help, such as reinforcements, without which a battle would be lost. To “help” someone, then, is to make up what is lacking in him with your strength.6 Woman was made to be a “strong helper.”</p>
+</blockquote>
+<ul>
+<li>女人是不可或缺的帮手，而不是可有可无的帮手。</li>
+</ul>
+<blockquote>
+<p>The word “suitable” is just as unhelpful a translation. This translates a compound phrase that is literally “like opposite him.</p>
+<p>Male and female are “like opposite” to one another. They are like two pieces of a puzzle that fit together because they are not exactly alike <strong>nor randomly different</strong>, but they are differentiated such that together they can create a complete whole. Each sex is gifted for different steps in the same Great Dance.</p>
+</blockquote>
+<ul>
+<li>男人女人并不是被随机造的不一样，而是特意造的不同。</li>
+</ul>
+<blockquote>
+<p>“In Philippians 2:5–11,11 we have one of the earliest hymns to Jesus sung by the church, which celebrates that although Jesus was equal with God, he emptied himself of his glory and took on the role of a servant. Jesus shed his divine privileges without becoming any less divine, and he took on the most submissive role—that of a servant who dies in his master’s service. In this passage we see taught both the essential equality of the First and Second Persons of the Godhead, and yet the voluntary submission of the Son to the Father to secure our salvation. Let me emphasize that Jesus’s willing acceptance of this role was wholly voluntary, a gift to his Father. I discovered here that my submission in marriage was a gift I offered, not a duty coerced from me.”</p>
+</blockquote>
+<ul>
+<li>耶稣也承担起了仆人的角色，不过这丝毫没有影响他的神圣。</li>
+<li>他为了父神而献出自己的生命，这是一个他主动提供的礼物，而不是一种被迫的要求。</li>
+</ul>
+<blockquote>
+<p>“If it was not an assault on the dignity and divinity (but rather led to the greater glory) of the Second Person of the Godhead to submit himself, and assume the role of a servant, then how could it possibly injure me to be asked to play out the “Jesus role” in my marriage?”</p>
+</blockquote>
+<ul>
+<li>如果我们像耶稣一样做仆人做的事，我们的尊严也不会因此有任何的缺少。（别人可能不会这么看，重要的是我们自己的想法）</li>
+<li>想到了胯下之辱，转念一想不对，韩信并没有做仆人。</li>
+</ul>
+<blockquote>
+<p>“The Son defers to his Father, taking the subordinate role. The Father accepts the gift, but then exalts the Son to the highest place. Each wishes to please the other; each wishes to exalt the other. Love and honor are given, accepted, and given again.”</p>
+<p>“In 1 Corinthians 11:3, Paul says directly what is implied in Philippians 2—namely, that the relationship of the Father and the Son is a pattern for the relationship of husband to wife.12 The Son submits to the Father’s headship with free, voluntary, and joyful eagerness, not out of coercion or inferiority. The Father’s headship is acknowledged in reciprocal delight, respect, and love. There is no inequality of ability or dignity. We are differently gendered to reflect this life within the Trinity.”</p>
+</blockquote>
+<ul>
+<li>霍，信息量很大…夫妻的关系竟然是圣父圣子的关系？目前我认为这对女性的要求太高了…</li>
+</ul>
+<blockquote>
+<p>“In our world, we are accustomed to seeing the perks and the privileges accrue to those who have higher status—Platinum mileage flyers receive free upgrades to first class and, along with that, free food and drink and free baggage checking. Those with bigger bank accounts than the rest of us are ushered into the (shorter and faster) premium banking line at the bank.</p>
+<p>But in the dance of the Trinity, the greatest is the one who is most self-effacing, most sacrificial, most devoted to the good of the Other. Jesus redefined—or, more truly, defined properly—headship and authority, thus taking the toxicity of it away, at least for those who live by his definition rather than by the world’s understanding.”</p>
+</blockquote>
+<ul>
+<li>厉害的不是头等舱的大佬，航空公司的高级会员。Headship要求无私，做众人的仆人。</li>
+</ul>
+<blockquote>
+<p>“Jesus redefined all authority as servant-authority. <strong>Any exercise of power can only be done in service to the Other, not to please oneself.</strong> Jesus is the one who did not come to be served, as the world’s authority figures expect to be, but to serve, to the point of giving his life.”</p>
+</blockquote>
+<ul>
+<li>我是不是有一个powerful的人？我会打压别人，占便宜来展示自己的权力吗？还是我会为别人服务来展示自己的power。</li>
+<li>可以，我现在觉得这圣经对男性的要求也很高…</li>
+<li>耶稣一方面是女性的榜样，因为他对于父神来说是submission，是一个顺服的helper。耶稣一方面也是男性的榜样，做门徒的头，教会的头，却做成了仆人。</li>
+</ul>
+<blockquote>
+<p>“But some women might chafe under the idea of male headship: “I agree that men and women are profoundly different according to their sex, but why does the man get to lead? If men and women are equal in dignity but different, why is the husband the head?” <strong>I think the truest answer is that we simply don’t know.</strong> Why was Jesus, the Son, the one who submitted and served (Philippians 2:4ff)? Why wasn’t it the Father? We don’t know, but we do know that it was a sign of his greatness, not his weakness.</p>
+</blockquote>
+<ul>
+<li>为什么男人要是头？为什么不是父神来救我们而是耶稣？</li>
+</ul>
+<blockquote>
+<p>“One of the pillars of wise counseling is the statement, “The only person over whom you have control is yourself.” You can change no one’s behavior but your own. If a man or a woman wishes to bring him- or herself more fully into the biblically defined gender roles, it does not actually require assent from the other person. Since both the headship role of a husband and the submission role as a wife are servant roles, <strong>one can always begin to serve without waiting for permission</strong>.”</p>
+</blockquote>
+<h2 id="Chap7-SINGLENESS-AND-MARRIAGE"><a href="#Chap7-SINGLENESS-AND-MARRIAGE" class="headerlink" title="Chap7 SINGLENESS AND MARRIAGE"></a>Chap7 SINGLENESS AND MARRIAGE</h2><blockquote>
+<p>Paige Benton Brown, in her classic article “Singled Out by God for Good,” lists a number of common ways that Christian churches try to “explain” singleness:</p>
+<ul>
+<li>“As soon as you’re satisfied with God alone, he’ll bring someone special into your life”—as though God’s blessings are ever earned by our contentment.</li>
+<li>“You’re too picky”—as though God is frustrated by our fickle whims and needs broader parameters in which to work.</li>
+<li>“As a single you can commit yourself wholeheartedly to the Lord’s work”—as though God requires emotional martyrs to do his work, of which marriage must be no part.</li>
+<li>“Before you can marry someone wonderful, the Lord has to make you someone wonderful”—as though God grants marriage as a second blessing to the satisfactorily sanctified.</li>
+</ul>
+<p>Beneath these statements is the premise that single life is a state of deprivation for people who are not yet fully formed enough for marriage. Brown responds along the lines of Paul’s 1 Corinthians passage: “I am not single because I am too spiritually unstable to possibly deserve a husband, nor because I am too spiritually mature to possibly need one. I am single because God is so abundantly good to me, because this is his best for me.” That fits perfectly with the reasoning and attitude of St Paul. Christianity affirmed the goodness of single life as no other faith or worldview ever has.</p>
 </blockquote>
 ]]></content>
       <categories>
