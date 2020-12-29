@@ -498,201 +498,6 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
       </categories>
   </entry>
   <entry>
-    <title>书中佳句</title>
-    <url>/2020/09/17/Reading/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>各类书籍里面的佳句：</p>
-<ul>
-<li>《中庸》</li>
-<li>《寻欢作乐》毛姆</li>
-<li>《红与黑》 斯丹达尔</li>
-<li>《镜像》刘慈欣</li>
-<li>《老人与海》 海明威</li>
-<li>《流浪地球》刘慈欣</li>
-<li>《人间失格》太宰治</li>
-<li>《我们仨》杨绛</li>
-</ul>
-<a id="more"></a>
-
-<h1 id="《中庸》"><a href="#《中庸》" class="headerlink" title="《中庸》"></a>《中庸》</h1><blockquote>
-<p>道也者，不可须臾离也，可离非道也。</p>
-</blockquote>
-<p>包括《大学》，多次提到一句话：</p>
-<blockquote>
-<p>君子慎其独也。</p>
-</blockquote>
-<ul>
-<li>当我们不需要做给别人看的时候，我们做一件事的原因就因为他本身。</li>
-</ul>
-<blockquote>
-<p>道不远人，人之为道而远人，不可以为道。</p>
-</blockquote>
-<ul>
-<li>好的道理是不会使一个人脱离社会变为理想主义者的。</li>
-</ul>
-<blockquote>
-<p>君子素其位而行，不愿乎其外。</p>
-</blockquote>
-<ul>
-<li>根据自己的地位行事，不羡慕行其地位以外的事。</li>
-<li>该干嘛干嘛，处在学生的地位，就应该学习。处在无产阶级，就不能奢望资产阶级的生活…</li>
-</ul>
-<h1 id="《寻欢作乐》毛姆"><a href="#《寻欢作乐》毛姆" class="headerlink" title="《寻欢作乐》毛姆"></a>《寻欢作乐》毛姆</h1><blockquote>
-<p>我发现要是有人打电话来找你，而你恰巧不在，于是他留下口信，请你一回家就打个电话给他，说他有要紧的事，那么这件事多半是对他要紧，而不是对你要紧。如果是要送你一样礼物，或是帮你什么忙，大多数人都不会急不可耐。</p>
-</blockquote>
-<blockquote>
-<p>查尔斯·狄更斯曾说天才来自无穷无尽的刻苦努力。</p>
-</blockquote>
-<blockquote>
-<p>虚伪是一个人所能寻求的最困难、最刺激神经的恶习，它需要永不间断的警觉和精神的高度集中。它不像通奸或贪食可以在空闲的时间进行；它是需要付出全部时间从事的工作；它还需要一种玩世不恭的幽默。</p>
-</blockquote>
-<blockquote>
-<p>你知道罗西不是那种会在他人心中激起爱情的女人，她引起的只是一种亲情。对她心怀妒忌是很可笑的。她就好像林中空地上的一个池塘，既清澈又深邃，跳到里面去会觉得很畅快，即使一个流浪汉、一个吉普赛人和一个猎场看守人在你之前曾经跳进去浸泡，这一池清水仍然会同样地清凉，同样地晶莹澄澈。</p>
-</blockquote>
-<blockquote>
-<p>英国货币</p>
-<p>金币：<br>皇家玫瑰 Rose Royal，1皇家玫瑰=2英镑=40先令<br>君主 Sovereign，1君主=1.5英镑=30先令<br>几尼 Guine，1几尼=1.05英镑=21先令，最初是用几内亚的黄金铸造的，因此得名。又称畿尼</p>
-<p>银币：<br>英镑 Pound Sovereign，1英镑=20先令 最初一英镑等于一磅白银，因此得名，但是只是征税用的货币单位，老百姓日常交易用不到如此大额的支付手段，因此没有具体货币。后来才铸造金币。<br>半镑 Half Sovereign，等于0.5英镑或10先令<br>两克郎 Double Crown，等于0.5英镑或10先令，又名Angel<br>克郎 Crown，1克郎=5先令<br>弗罗林 Florin，1弗罗林=2先令<br>先令 Shilling，1先令=20便士<br>四便士 Groat 等于4便士<br>侏儒 Dandyprat 等于2便士</p>
-<p>铜币：<br>便士 Penny<br>半便士 Hapenny，等于1/2便士<br>1/4便士 Farthing，等于1/4便士</p>
-<p>1英镑=20法郎≈1000元RMB</p>
-<p>1先令=1法郎≈50~60元RMB</p>
-<p>1便士=1/12先令，约等于5元左右RMB</p>
-<p>半便士=1/2便士，约等于2元RMB（比1苏稍微少一些）</p>
-</blockquote>
-<h1 id="《红与黑》-斯丹达尔"><a href="#《红与黑》-斯丹达尔" class="headerlink" title="《红与黑》 斯丹达尔"></a>《红与黑》 斯丹达尔</h1><blockquote>
-<p>一个旅行的人，刚爬上一座陡峭的山，在山顶坐下来休息一会儿，觉得其中有无限的乐趣。不过，如果有人强迫他永远休息下去，他会觉得幸福吗？</p>
-</blockquote>
-<p><a href="https://bbs.northdy.com/thread-100583-2-1.html">法国货币参考</a>：</p>
-<blockquote>
-<p>二、法国</p>
-<p>金币：<br>金路易 Louis d’ors，1路易=12~20里佛尔，18世纪因大量美洲白银流入，银币贬值，1路易=24里佛尔<br>大埃居 Gros Ecu，1大埃居=6里佛尔12苏</p>
-<p>银币：<br>小埃居 Petit Ecu，1小埃居=3里佛尔6苏<br>里佛尔 Livre，1里佛尔=1法郎=20苏，1795年法国铸造新银币，1里佛尔=1.0125法郎<br>法郎 Franc，1法郎=20苏<br>皮斯托尔 Pistole，1皮斯托尔=16苏</p>
-<p>1苏=5生丁</p>
-<p>铜币：<br>苏 Sols，1苏=12丹尼尔<br>里阿尔 Liard，1里阿尔=3丹尼尔<br>丹尼尔 Denier</p>
-</blockquote>
-<blockquote>
-<p>悲惨世界中记载的物价：</p>
-<p>1条法棍面包 = 1苏  （法国法棍相当于我们这边的馒头，我们国内的法棍价格虚高）</p>
-<p>在纸盒厂干14个钟头的薪水 = 4苏     （只能买4个法棍？十九世纪万恶的资本主义）</p>
-<p>1条羊排 = 6或7苏    （和法棍比较，和现在物价差不多）</p>
-<p>17小时的缝纫工（缝制士兵穿的大衬衫）薪水 = 12苏  （有技术的工人收入高一些）</p>
-<p>一天的装卸活 = 30苏   （体力活收入更高一些）</p>
-<p>租一辆马车一个钟头 = 40苏      （马车，比骆驼祥子的洋车贵）</p>
-<p>每日饮食 = 18~20苏</p>
-<p>午餐 = 蛋 + 面包</p>
-<p>蛋 = 1~3 苏</p>
-<p>面包 = 1 苏 （0.25 磅）</p>
-<p>晚餐 = 肉 + 蔬菜 + 甜品 + 面包 + 小费 + 水</p>
-<p>肉 = 6 苏 （0.5 磅重，220克左右肉，不到半斤）</p>
-<p>蔬菜 = 3 苏</p>
-<p>甜品 = 3 苏</p>
-<p>面包 = 3 苏 （0.75 磅重）</p>
-<p>小费 = 1 苏</p>
-<p>置装</p>
-<p>外装 = 100 法郎/年</p>
-<p>内衣 = 50 法郎/年</p>
-<p>洗衣 = 50法郎/年</p>
-<p>而在当时，日收入30个苏在巴黎生存，是比较艰难的，但是也不是不可能的</p>
-<p>如果以当今的物价来衡量，购买类似的东西</p>
-<p>差不多1苏相当于2.5~3元左右的人民币购买力</p>
-<p>因此，1枚5法郎的银币，差不多相当于250<del>300块左右RMB，对比同时期中国银两，一两白银也差不多是250</del>300元RMB的购买力（这就是外国人为何用银元换银两，每换一两，外国人就多拿走28%的白银）</p>
-<p>1法郎相当于现在50~60元RMB</p>
-<p>1金路易相当于1000~1200RMB</p>
-<p>大概这样的换算也是比较可靠的</p>
-<p>而且，当时</p>
-<p>1美元=5法郎≈250元RMB</p>
-<p>1英镑=20法郎≈1000元RMB</p>
-<p>1先令=1法郎≈50~60元RMB</p>
-<p>1便士=1/12先令，约等于5元左右RMB</p>
-<p>半便士=1/2便士，约等于2元RMB（比1苏稍微少一些）</p>
-<p>按照这个换算率，可以将19世纪书中各国的货币和物价和当今做对比，得到的收入大致是差不太多的</p>
-<p>作者：力挽雕弓射天狼<br>链接：<a href="https://www.zhihu.com/question/29978593/answer/542401365">https://www.zhihu.com/question/29978593/answer/542401365</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-<p>我想，朱利安和马蒂尔德的一夜，和他与德雷马尔夫人的一夜有显著的区别：</p>
-<ul>
-<li>马蒂尔德在挑选一个符合她心中的理想情人，恰好朱利安目前为止的举动比较符合+马蒂尔德自己的脑补。德雷马尔夫人开始就没想着谈恋爱，是被很多个小瞬间吸引，从而产生的感情。</li>
-<li>马蒂尔德的那一夜或许所有事情都是她选择好的，甚至是可控的。在执行的时候，也像是计划一样精准，没有感情的波动，只有缜密的思考。德雷马尔夫人在第二天清晨所做的可不是这样，慌慌张张，却充满了爱情的喜悦，甚至出了不少的纰漏，导致最后朱利安的落荒而逃。</li>
-<li>马蒂尔德没太注意看朱利安的缺点，而德雷马尔夫人爱的是全部的朱利安，甚至为他的前途考虑。</li>
-<li>最后，我想朱利安和马蒂尔德应该是棋逢对手，但他亏欠于德雷马尔夫人。</li>
-</ul>
-<p>我第一次感觉到这种小说的心理描写没有太过细腻/夸张，这大概就是本来的样子。我刚才在刷牙，回想我和杨琪雅对话中我的情绪波动，「我有点生气，告诉自己要忍耐，这是一件小事」，可大概我还是没有想明白，所以刷牙时还念念不忘。在一瞬间内，我意识到，我的情绪居然带我走了这么远，我都没意识到。先感觉到了这种细腻情绪其实无处不在，其次感受到作家能捕捉到这细节的变化真是厉害！</p>
-<p>感觉朱利安最后的醒悟，确实很伟大。比《漂亮朋友》里的杜洛瓦好太多了，同样是情人，朱利安的爱情也显得伟大了起来。</p>
-<p>闻家驷的翻译版感觉括号过多，补充知识多到影响了阅读体验。</p>
-<h2 id="【名著拆解】《红与黑》：献给少数幸福的人"><a href="#【名著拆解】《红与黑》：献给少数幸福的人" class="headerlink" title="【名著拆解】《红与黑》：献给少数幸福的人"></a><a href="https://www.youtube.com/watch?v=tcfsMPylLzk">【名著拆解】《红与黑》：献给少数幸福的人</a></h2><p>于连首先想要的是一种声誉，一种自由，一种平等。其次才是财富与享受。</p>
-<ul>
-<li>不和富凯做生意，关心和主人一起吃饭还是和仆人一起吃饭。</li>
-<li>所以于连是一个追求个人幸福，而不幸走上歧途的年轻人。</li>
-</ul>
-<p>整个小说就写了于连的19-23岁。</p>
-<p>司汤达不是在悟上，而是在迷失上，花了很大的功夫。</p>
-<ul>
-<li>于连真的和杜洛瓦一样吗？他想征服德雷纳尔夫人，应当是出于一种自尊/胜利，和他的未来是一种象征关系。所以还是比杜洛瓦要浪漫主义一点。</li>
-</ul>
-<p>于连为了达到目的，把真实的自我隐藏起来。</p>
-<ul>
-<li>回想其他人在我做了一件事情之后夸我，我是不是会为了再次得到夸奖，从而继续做这件事呢？会不会为了夸奖，而掩藏了我真实的喜好呢？所以我感觉应该把情绪和说话的内容分离，你们夸我，是因为爱我等一列原因。可以把情绪收下，把内容剔除掉。</li>
-<li>于连喜欢拿破仑，而走上了主教之路。</li>
-</ul>
-<p>于连快乐的时刻：</p>
-<ul>
-<li>读书的快乐</li>
-<li>摆脱了父兄的欺负</li>
-<li>履行了某种责任之后，报复的快乐</li>
-<li>远离男人的目光，和德雷纳尔夫人在一起的时候</li>
-</ul>
-<p>于连如果还保持着要达成心里的某个目标，那他在狱中之后就会后悔自己开的那两枪，从而想出狱。</p>
-<p>司汤达所推崇的，平凡的幸福：</p>
-<blockquote>
-<p>人能够获得的幸福，乃是一种免除一切后顾之忧的状态。——司汤达</p>
-</blockquote>
-<p>狱中的于连终于从社会角色的束缚中解放出来，获得了自由，恢复了真正的自我。</p>
-<blockquote>
-<p>一个人的幸福，不取决于智者眼中的事物的样子，而取决于他自己眼中的事物的样子。——司汤达</p>
-</blockquote>
-<blockquote>
-<p>几乎所有的人生不幸，都源于我们对所发生的事情有错误的认识。深入的了解人，健康的判断事物，我们就朝幸福迈了一大步。——22岁的司汤达</p>
-</blockquote>
-<blockquote>
-<p>少数幸福的人，在1817年在35岁以下的一部分人中，年金超过2000法郎（10W），但要少于两万法郎（100W）。——35岁的司汤达</p>
-</blockquote>
-<h1 id="《镜像》刘慈欣"><a href="#《镜像》刘慈欣" class="headerlink" title="《镜像》刘慈欣"></a>《镜像》刘慈欣</h1><blockquote>
-<p>   “设想一下，如果DNA从来不出错，永远精确地复制和遗传，现在地球上的生命世界会是什么样子？”<br>　　在宋诚思考之际，白冰替他回答了：“那样的话现在的地球上根本没有生命，生命进化的基础─变异，正是由DNA的错误产生的。”<br>　　首长对白冰点点头：“社会也是这样，它的进化和活力，是以种种偏离道德主线的冲动和欲望为基础的，水清则无鱼，<em>一个在道德上永不出错的社会，其实已经死了。</em>”</p>
-</blockquote>
-<h1 id="《老人与海》-海明威"><a href="#《老人与海》-海明威" class="headerlink" title="《老人与海》 海明威"></a>《老人与海》 海明威</h1><p><em>以下来自王小波的书评</em></p>
-<blockquote>
-<p>什么叫失败？也许可以说，人去做一件事情，没有达到预期得目的，这就是失败。 但是，那些与命运斗争的人，那些做接近自己限度的斗争的人，却天生地接近这种失败。老人到海上去，不能期望天天有鱼来咬他的钩，于是他常常失败。一个常常在进行着接近自己限度的斗争的人总是会常常失败的，一个想探索自然奥秘的人也常常会失败，一个想改革社会的人更是会常常失败。只有那些安于自己限度之内的生活的人才总是“胜利”，这种“胜利者”之所以常胜不败，只是因为他的对手是早已降伏的，或者说，他根本没有投入斗争。 </p>
-</blockquote>
-<blockquote>
-<p>那么，什么也没有得到的老人竟是胜利的么？我确是这样看的。我认为，胜利就是战斗到最后的时刻。老人总怀着无比的勇气走向莫测的大海，他的信心是不可战胜的。 </p>
-</blockquote>
-<blockquote>
-<p>他和其他许多人一样，是强悍的人类的一员。我喜欢这样的人，也喜欢这样的人性。我发现，人们常常把这样的事情当作人性最可贵的表露：七尺男子汉坐在厨房里和三姑六婆磨嘴皮子，或者衣装笔挺的男女们坐在海滨，谈论着高尚的、别人不能理解的感情。我不喜欢人们像这样沉溺在人性软弱的部分之中，更不喜欢人们总是这样描写人性。 </p>
-</blockquote>
-<blockquote>
-<p>在人类前进的道路上，强者与弱者的命运是不同的。弱者不羡慕强者的命运，强者也讨厌弱者的命运。强者带有人性中强悍的一面，弱者带有人性中软弱的一面。强者为弱者开辟道路，但是强者往往为弱者所奴役，就像老人是为大腹便便的游客打鱼一样。</p>
-</blockquote>
-<h1 id="《流浪地球》刘慈欣"><a href="#《流浪地球》刘慈欣" class="headerlink" title="《流浪地球》刘慈欣"></a>《流浪地球》刘慈欣</h1><blockquote>
-<p>   爸爸突然想起了一件事，“呵，忘了告诉你们，我爱上了黎星，我要离开你们和她在一起。”<br>　　“她是谁？”妈妈平静地问。<br>　　“我的小学老师。”我替爸爸回答。我升入中学已两年，不知道爸爸和小星老师是怎么认识的，也许是在两年前那个毕业仪式上？<br>　　“那你去吧。”妈妈说。<br>　　“过一阵我肯定会厌倦，那时我就回来，你看呢？”<br>　　“你要愿意当然行。”妈妈的声音像冰冻的海面一样平稳，但很快激动起来， “啊，这一颗真漂亮，里面一定有全息散射体！”她指着刚在空中开放的一朵焰火，真诚地赞美着。<br>　　在这个时代，人们在看四个世纪以前的电影和小说时都莫名其妙，他们不明白，前太阳时代的人怎么会在不关生死的事情上倾注那么多的感情。当看到男女主人公为爱情而痛苦或哭泣时，他们的惊奇是难以言表的。<em>在这个时代，死亡的威胁和逃生的欲望压倒了一切，除了当前太阳的状态和地球的位置，没有什么能真正引起他们的注意并打动他们了。</em>这种注意力高度集中的关注，渐渐从本质上改变了人类的心理状态和精神生活，对于爱情这类东西，他们只是用余光瞥一下而已，就像赌徒在盯着轮盘的间隙抓住几秒钟喝口水一样。<br>　　过了两个月，爸爸真从小星老师那儿回来了，妈妈没有高兴，也没有不高兴。<br>　　爸爸对我说：“黎星对你印象很好，她说你是一个有创造力的学生。”<br>　　妈妈一脸茫然：“她是谁？”<br>　　“小星老师嘛，我的小学老师，爸爸这两个月就是同她在一起的！”</p>
-<p>　　“哦，想起来了！”妈妈摇头笑了，<em>“我还不到四十，记忆力就成了这个样子。”</em></p>
-</blockquote>
-<blockquote>
-<p>“你听着亲爱的，我们必须抱有希望，这并不是因为希望真的存在，而是因为我们要做高贵的人。<em>在前太阳时代，做一个高贵的人必须拥有金钱、权力或才能，而在今天只要拥有希望，希望是这个时代的黄金和宝石</em>，不管活多长，我们都要拥有它！明天把这话告诉孩子。”</p>
-</blockquote>
-<h1 id="《人间失格》太宰治"><a href="#《人间失格》太宰治" class="headerlink" title="《人间失格》太宰治"></a>《人间失格》太宰治</h1><blockquote>
-<p>不过唯一有一点是我要依靠幼时的经验而明白：女人像那样哭诉起来时，只要递给她什么好吃的东西她就会吃起来，并因此而改变心境。</p>
-</blockquote>
-<blockquote>
-<p>“对不起，你能不能去电车附近的药店，给我买点安眠药呢？我太累了，脸上发烫，反而睡不着。对不起，钱嘛……”<br>“行啊，钱好说。”<br>她愉快地起身走了。我深谙，打发女人去干活是不会惹她讨厌的。就是说，男人拜托女人做事，她会高兴的。</p>
-</blockquote>
-<h1 id="《我们仨》杨绛"><a href="#《我们仨》杨绛" class="headerlink" title="《我们仨》杨绛"></a>《我们仨》杨绛</h1><blockquote>
-<p>他曾和我说：“有名气就是多些不相知的人”</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Books</category>
-        <category>书中佳句</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Spark心得</title>
     <url>/2020/07/02/Spark%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Laioffer学习的，628第三次yelp正好用上了。</p>
@@ -835,6 +640,82 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
       </categories>
   </entry>
   <entry>
+    <title>刷论文</title>
+    <url>/2020/12/27/paper-review/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>用来记录看过的论文，以发表时间倒序排列。</p>
+<p>采用的记录方法【最新】：</p>
+<ul>
+<li>文章内容</li>
+<li>文章结论</li>
+<li>复习点</li>
+<li>待看的点</li>
+<li>想法</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="论文列表"><a href="#论文列表" class="headerlink" title="论文列表"></a>论文列表</h1><ul>
+<li>2019 Classification and regression trees and forests for incomplete data from sample surveys</li>
+</ul>
+<h1 id="2019-Classification-and-regression-trees-and-forests-for-incomplete-data-from-sample-surveys"><a href="#2019-Classification-and-regression-trees-and-forests-for-incomplete-data-from-sample-surveys" class="headerlink" title="2019 Classification and regression trees and forests for incomplete data from sample surveys"></a>2019 Classification and regression trees and forests for incomplete data from sample surveys</h1><p>文章内容：在<code>问卷调查</code>中估计<code>均值</code>。</p>
+<p>文章结论：如果参数方法的assumption不正确，CRTF (Classification and Regression Trees and Forests) 算的比参数方法又快又准。如果参数方法的assumption完全正确，则efficiency会低10%~25。</p>
+<p>复习的点：</p>
+<ul>
+<li><p>比较预测表现的时候，使用bias和MSE这两个工具。</p>
+</li>
+<li><p>传统方法采用两个模型的混合使用。使用Logistic Regression来得到Propensity Score，再用IPW + Linear Regression来计算均值。</p>
+</li>
+<li><p>如果我们的预测值y出现了缺失值，该怎么预测均值？</p>
+<ul>
+<li>IPW在计算的时候要乘两项，第一项是<code>有多大概率会NA</code>，第二项是<code>这个数据代表的总体占比多少</code>。我们会得到下面的公式：</li>
+</ul>
+<p>$$<br>\left(\sum_{i \in S_{1}} \hat{\pi}<em>{i}^{-1} w</em>{i}\right)^{-1} \sum_{i \in S_{1}} \hat{\pi}<em>{i}^{-1}  w</em>{i} y_{i}<br>$$</p>
+<ul>
+<li>还可以对NA的y进行linear regression填充，公式：</li>
+</ul>
+<p>$$<br>\left(\sum_{k \in S} w_{k}\right)^{-1}\left(\sum_{i \in S_{1}} w_{i} y_{i}+\sum_{j \in S_{2}} w_{j} \hat{y}_{j}\right)<br>$$</p>
+<ul>
+<li>最简单的方式是直接用不NA的数据去预测y。这可以看成是IPW中的大家有着同样的<code>有多大概率会NA</code>。也可以看成采用了方法2，对于NA的y，全部由不NA的均值来填充。</li>
+<li>邵老师研究了用Nearest-Neighbor来填充，发现会是asymptotic unbiased的。但是如果X有NA的话，方法不可用。</li>
+</ul>
+</li>
+<li><p>Simulation的时候可以有trivial experiment。使用 $Y = \epsilon$ 来验证当X没啥用的时候，我们会不会得出来「没啥用」这个结论。</p>
+</li>
+</ul>
+<p>待看的点：</p>
+<ul>
+<li><p>Hot Deck：另一种NA填充法，构造了一些<code>Adjustment Cells</code>。</p>
+<blockquote>
+<p>Little, R. J. A. and Rubin, D. B. (2002). Statistical Analysis With Missing Data, 2nd Edition. Wiley: New York.</p>
+</blockquote>
+</li>
+<li><p>老邵的NA那本书【放在992文件夹里面】</p>
+</li>
+<li><p>Fixed Effect and Random Effect 【总是遇到，再不看有点顶】</p>
+</li>
+<li><p>Doubly Robust Estimator 【Paper里使用了这个方法，已经学过两次，又忘记了…】</p>
+</li>
+<li><p>Surrogate splits in CART 【不知道出现多少次了，必须得看了】</p>
+</li>
+<li><p>BRR (balanced repeated replication) </p>
+<blockquote>
+<p>Krewski and Rao (1981), Shao (1996), Wolter (2007)</p>
+</blockquote>
+</li>
+</ul>
+<p>一些想法：</p>
+<ul>
+<li>我们是不是可以先把GUIDE当成是一个imputation的R-package？那些AMELIA和MICE获得了那么多引用，虽然方法尚可，但归根结底是在对比的时候很方便。应该尽早把GUIDE放入大家的对比库。</li>
+<li>关于树的产生过程中，变量的复用。我们到底是100%的时候都在复用，还是有一些情况是不能复用的？</li>
+<li>在最后Simulation对比那里，发现大家都underestimated。正常情况下是不是应该左面也有右面也有？虽然这些方法之间是Highly correlated, 但是都under-estimated是不是也不太正常？会不会可能是因为在我们第一步那里$P_1 \not\approx D$ ，这样会不会导致其实算出来的对比结果不对？</li>
+<li>关于树预测结果的Variance计算，Loh说这<code>conditional on a specific tree</code>。会不会有一天我们能把Variance写成一个公式？等于节点数 + level数量 + …</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>刷论文</category>
+      </categories>
+  </entry>
+  <entry>
     <title>scripture</title>
     <url>/2020/09/18/scripture/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>愿有一天，引用时不需要再Google经文</p>
@@ -932,6 +813,18 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
       <categories>
         <category>Holy</category>
         <category>经文记忆之路</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>刷书</title>
+    <url>/2020/12/28/textbook/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>用来记录看过的教科书，以阅读时间倒序排列。</p>
+<a id="more"></a>
+
+<h1 id="教材列表"><a href="#教材列表" class="headerlink" title="教材列表"></a>教材列表</h1>]]></content>
+      <categories>
+        <category>Study</category>
+        <category>刷书</category>
       </categories>
   </entry>
   <entry>
@@ -2334,6 +2227,217 @@ s.add(<span class="hljs-number">5</span>) <span class="hljs-comment">#打印出�
       </categories>
   </entry>
   <entry>
+    <title>书中佳句</title>
+    <url>/2020/09/17/Reading/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>各类书籍里面的佳句：</p>
+<ul>
+<li>《心灵成长那点事儿》孙洋</li>
+<li>《中庸》</li>
+<li>《寻欢作乐》毛姆</li>
+<li>《红与黑》 斯丹达尔</li>
+<li>《镜像》刘慈欣</li>
+<li>《老人与海》 海明威</li>
+<li>《流浪地球》刘慈欣</li>
+<li>《人间失格》太宰治</li>
+<li>《我们仨》杨绛</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="《心灵成长那点事儿》孙洋"><a href="#《心灵成长那点事儿》孙洋" class="headerlink" title="《心灵成长那点事儿》孙洋"></a>《心灵成长那点事儿》孙洋</h1><blockquote>
+<p>情况就是这么个情况，那也得好啊，咋好咋整！</p>
+</blockquote>
+<blockquote>
+<p>我高兴了事儿才好，不是事儿好才高兴。</p>
+</blockquote>
+<blockquote>
+<p>有人说：「幸福不是拥有的太少，而是想要的太多」。其实，想要的太多并不会让我们不幸福，只要我们愿意赞叹已经拥有的，并带着感恩、喜悦的心去创造更多美好，一定会越来越幸福，越来越快乐的！</p>
+</blockquote>
+<blockquote>
+<p>检验标准很简单：如果你看了很多书，上了很多课，自我感觉越来越好，但你的亲密关系并没有改善反而变得越来越糟，<strong>连家人朋友都在反对你所学的</strong>，请你一定要及时察觉。</p>
+</blockquote>
+<blockquote>
+<p>如果自己都不能真正开心，是无法让其他人真正开心的，因为你永远给不了别人你没有的东西。</p>
+</blockquote>
+<h1 id="《中庸》"><a href="#《中庸》" class="headerlink" title="《中庸》"></a>《中庸》</h1><blockquote>
+<p>道也者，不可须臾离也，可离非道也。</p>
+</blockquote>
+<p>包括《大学》，多次提到一句话：</p>
+<blockquote>
+<p>君子慎其独也。</p>
+</blockquote>
+<ul>
+<li>当我们不需要做给别人看的时候，我们做一件事的原因就因为他本身。</li>
+</ul>
+<blockquote>
+<p>道不远人，人之为道而远人，不可以为道。</p>
+</blockquote>
+<ul>
+<li>好的道理是不会使一个人脱离社会变为理想主义者的。</li>
+</ul>
+<blockquote>
+<p>君子素其位而行，不愿乎其外。</p>
+</blockquote>
+<ul>
+<li>根据自己的地位行事，不羡慕行其地位以外的事。</li>
+<li>该干嘛干嘛，处在学生的地位，就应该学习。处在无产阶级，就不能奢望资产阶级的生活…</li>
+</ul>
+<h1 id="《寻欢作乐》毛姆"><a href="#《寻欢作乐》毛姆" class="headerlink" title="《寻欢作乐》毛姆"></a>《寻欢作乐》毛姆</h1><blockquote>
+<p>我发现要是有人打电话来找你，而你恰巧不在，于是他留下口信，请你一回家就打个电话给他，说他有要紧的事，那么这件事多半是对他要紧，而不是对你要紧。如果是要送你一样礼物，或是帮你什么忙，大多数人都不会急不可耐。</p>
+</blockquote>
+<blockquote>
+<p>查尔斯·狄更斯曾说天才来自无穷无尽的刻苦努力。</p>
+</blockquote>
+<blockquote>
+<p>虚伪是一个人所能寻求的最困难、最刺激神经的恶习，它需要永不间断的警觉和精神的高度集中。它不像通奸或贪食可以在空闲的时间进行；它是需要付出全部时间从事的工作；它还需要一种玩世不恭的幽默。</p>
+</blockquote>
+<blockquote>
+<p>你知道罗西不是那种会在他人心中激起爱情的女人，她引起的只是一种亲情。对她心怀妒忌是很可笑的。她就好像林中空地上的一个池塘，既清澈又深邃，跳到里面去会觉得很畅快，即使一个流浪汉、一个吉普赛人和一个猎场看守人在你之前曾经跳进去浸泡，这一池清水仍然会同样地清凉，同样地晶莹澄澈。</p>
+</blockquote>
+<blockquote>
+<p>英国货币</p>
+<p>金币：<br>皇家玫瑰 Rose Royal，1皇家玫瑰=2英镑=40先令<br>君主 Sovereign，1君主=1.5英镑=30先令<br>几尼 Guine，1几尼=1.05英镑=21先令，最初是用几内亚的黄金铸造的，因此得名。又称畿尼</p>
+<p>银币：<br>英镑 Pound Sovereign，1英镑=20先令 最初一英镑等于一磅白银，因此得名，但是只是征税用的货币单位，老百姓日常交易用不到如此大额的支付手段，因此没有具体货币。后来才铸造金币。<br>半镑 Half Sovereign，等于0.5英镑或10先令<br>两克郎 Double Crown，等于0.5英镑或10先令，又名Angel<br>克郎 Crown，1克郎=5先令<br>弗罗林 Florin，1弗罗林=2先令<br>先令 Shilling，1先令=20便士<br>四便士 Groat 等于4便士<br>侏儒 Dandyprat 等于2便士</p>
+<p>铜币：<br>便士 Penny<br>半便士 Hapenny，等于1/2便士<br>1/4便士 Farthing，等于1/4便士</p>
+<p>1英镑=20法郎≈1000元RMB</p>
+<p>1先令=1法郎≈50~60元RMB</p>
+<p>1便士=1/12先令，约等于5元左右RMB</p>
+<p>半便士=1/2便士，约等于2元RMB（比1苏稍微少一些）</p>
+</blockquote>
+<h1 id="《红与黑》-斯丹达尔"><a href="#《红与黑》-斯丹达尔" class="headerlink" title="《红与黑》 斯丹达尔"></a>《红与黑》 斯丹达尔</h1><blockquote>
+<p>一个旅行的人，刚爬上一座陡峭的山，在山顶坐下来休息一会儿，觉得其中有无限的乐趣。不过，如果有人强迫他永远休息下去，他会觉得幸福吗？</p>
+</blockquote>
+<p><a href="https://bbs.northdy.com/thread-100583-2-1.html">法国货币参考</a>：</p>
+<blockquote>
+<p>二、法国</p>
+<p>金币：<br>金路易 Louis d’ors，1路易=12~20里佛尔，18世纪因大量美洲白银流入，银币贬值，1路易=24里佛尔<br>大埃居 Gros Ecu，1大埃居=6里佛尔12苏</p>
+<p>银币：<br>小埃居 Petit Ecu，1小埃居=3里佛尔6苏<br>里佛尔 Livre，1里佛尔=1法郎=20苏，1795年法国铸造新银币，1里佛尔=1.0125法郎<br>法郎 Franc，1法郎=20苏<br>皮斯托尔 Pistole，1皮斯托尔=16苏</p>
+<p>1苏=5生丁</p>
+<p>铜币：<br>苏 Sols，1苏=12丹尼尔<br>里阿尔 Liard，1里阿尔=3丹尼尔<br>丹尼尔 Denier</p>
+</blockquote>
+<blockquote>
+<p>悲惨世界中记载的物价：</p>
+<p>1条法棍面包 = 1苏  （法国法棍相当于我们这边的馒头，我们国内的法棍价格虚高）</p>
+<p>在纸盒厂干14个钟头的薪水 = 4苏     （只能买4个法棍？十九世纪万恶的资本主义）</p>
+<p>1条羊排 = 6或7苏    （和法棍比较，和现在物价差不多）</p>
+<p>17小时的缝纫工（缝制士兵穿的大衬衫）薪水 = 12苏  （有技术的工人收入高一些）</p>
+<p>一天的装卸活 = 30苏   （体力活收入更高一些）</p>
+<p>租一辆马车一个钟头 = 40苏      （马车，比骆驼祥子的洋车贵）</p>
+<p>每日饮食 = 18~20苏</p>
+<p>午餐 = 蛋 + 面包</p>
+<p>蛋 = 1~3 苏</p>
+<p>面包 = 1 苏 （0.25 磅）</p>
+<p>晚餐 = 肉 + 蔬菜 + 甜品 + 面包 + 小费 + 水</p>
+<p>肉 = 6 苏 （0.5 磅重，220克左右肉，不到半斤）</p>
+<p>蔬菜 = 3 苏</p>
+<p>甜品 = 3 苏</p>
+<p>面包 = 3 苏 （0.75 磅重）</p>
+<p>小费 = 1 苏</p>
+<p>置装</p>
+<p>外装 = 100 法郎/年</p>
+<p>内衣 = 50 法郎/年</p>
+<p>洗衣 = 50法郎/年</p>
+<p>而在当时，日收入30个苏在巴黎生存，是比较艰难的，但是也不是不可能的</p>
+<p>如果以当今的物价来衡量，购买类似的东西</p>
+<p>差不多1苏相当于2.5~3元左右的人民币购买力</p>
+<p>因此，1枚5法郎的银币，差不多相当于250<del>300块左右RMB，对比同时期中国银两，一两白银也差不多是250</del>300元RMB的购买力（这就是外国人为何用银元换银两，每换一两，外国人就多拿走28%的白银）</p>
+<p>1法郎相当于现在50~60元RMB</p>
+<p>1金路易相当于1000~1200RMB</p>
+<p>大概这样的换算也是比较可靠的</p>
+<p>而且，当时</p>
+<p>1美元=5法郎≈250元RMB</p>
+<p>1英镑=20法郎≈1000元RMB</p>
+<p>1先令=1法郎≈50~60元RMB</p>
+<p>1便士=1/12先令，约等于5元左右RMB</p>
+<p>半便士=1/2便士，约等于2元RMB（比1苏稍微少一些）</p>
+<p>按照这个换算率，可以将19世纪书中各国的货币和物价和当今做对比，得到的收入大致是差不太多的</p>
+<p>作者：力挽雕弓射天狼<br>链接：<a href="https://www.zhihu.com/question/29978593/answer/542401365">https://www.zhihu.com/question/29978593/answer/542401365</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>我想，朱利安和马蒂尔德的一夜，和他与德雷马尔夫人的一夜有显著的区别：</p>
+<ul>
+<li>马蒂尔德在挑选一个符合她心中的理想情人，恰好朱利安目前为止的举动比较符合+马蒂尔德自己的脑补。德雷马尔夫人开始就没想着谈恋爱，是被很多个小瞬间吸引，从而产生的感情。</li>
+<li>马蒂尔德的那一夜或许所有事情都是她选择好的，甚至是可控的。在执行的时候，也像是计划一样精准，没有感情的波动，只有缜密的思考。德雷马尔夫人在第二天清晨所做的可不是这样，慌慌张张，却充满了爱情的喜悦，甚至出了不少的纰漏，导致最后朱利安的落荒而逃。</li>
+<li>马蒂尔德没太注意看朱利安的缺点，而德雷马尔夫人爱的是全部的朱利安，甚至为他的前途考虑。</li>
+<li>最后，我想朱利安和马蒂尔德应该是棋逢对手，但他亏欠于德雷马尔夫人。</li>
+</ul>
+<p>我第一次感觉到这种小说的心理描写没有太过细腻/夸张，这大概就是本来的样子。我刚才在刷牙，回想我和杨琪雅对话中我的情绪波动，「我有点生气，告诉自己要忍耐，这是一件小事」，可大概我还是没有想明白，所以刷牙时还念念不忘。在一瞬间内，我意识到，我的情绪居然带我走了这么远，我都没意识到。先感觉到了这种细腻情绪其实无处不在，其次感受到作家能捕捉到这细节的变化真是厉害！</p>
+<p>感觉朱利安最后的醒悟，确实很伟大。比《漂亮朋友》里的杜洛瓦好太多了，同样是情人，朱利安的爱情也显得伟大了起来。</p>
+<p>闻家驷的翻译版感觉括号过多，补充知识多到影响了阅读体验。</p>
+<h2 id="【名著拆解】《红与黑》：献给少数幸福的人"><a href="#【名著拆解】《红与黑》：献给少数幸福的人" class="headerlink" title="【名著拆解】《红与黑》：献给少数幸福的人"></a><a href="https://www.youtube.com/watch?v=tcfsMPylLzk">【名著拆解】《红与黑》：献给少数幸福的人</a></h2><p>于连首先想要的是一种声誉，一种自由，一种平等。其次才是财富与享受。</p>
+<ul>
+<li>不和富凯做生意，关心和主人一起吃饭还是和仆人一起吃饭。</li>
+<li>所以于连是一个追求个人幸福，而不幸走上歧途的年轻人。</li>
+</ul>
+<p>整个小说就写了于连的19-23岁。</p>
+<p>司汤达不是在悟上，而是在迷失上，花了很大的功夫。</p>
+<ul>
+<li>于连真的和杜洛瓦一样吗？他想征服德雷纳尔夫人，应当是出于一种自尊/胜利，和他的未来是一种象征关系。所以还是比杜洛瓦要浪漫主义一点。</li>
+</ul>
+<p>于连为了达到目的，把真实的自我隐藏起来。</p>
+<ul>
+<li>回想其他人在我做了一件事情之后夸我，我是不是会为了再次得到夸奖，从而继续做这件事呢？会不会为了夸奖，而掩藏了我真实的喜好呢？所以我感觉应该把情绪和说话的内容分离，你们夸我，是因为爱我等一列原因。可以把情绪收下，把内容剔除掉。</li>
+<li>于连喜欢拿破仑，而走上了主教之路。</li>
+</ul>
+<p>于连快乐的时刻：</p>
+<ul>
+<li>读书的快乐</li>
+<li>摆脱了父兄的欺负</li>
+<li>履行了某种责任之后，报复的快乐</li>
+<li>远离男人的目光，和德雷纳尔夫人在一起的时候</li>
+</ul>
+<p>于连如果还保持着要达成心里的某个目标，那他在狱中之后就会后悔自己开的那两枪，从而想出狱。</p>
+<p>司汤达所推崇的，平凡的幸福：</p>
+<blockquote>
+<p>人能够获得的幸福，乃是一种免除一切后顾之忧的状态。——司汤达</p>
+</blockquote>
+<p>狱中的于连终于从社会角色的束缚中解放出来，获得了自由，恢复了真正的自我。</p>
+<blockquote>
+<p>一个人的幸福，不取决于智者眼中的事物的样子，而取决于他自己眼中的事物的样子。——司汤达</p>
+</blockquote>
+<blockquote>
+<p>几乎所有的人生不幸，都源于我们对所发生的事情有错误的认识。深入的了解人，健康的判断事物，我们就朝幸福迈了一大步。——22岁的司汤达</p>
+</blockquote>
+<blockquote>
+<p>少数幸福的人，在1817年在35岁以下的一部分人中，年金超过2000法郎（10W），但要少于两万法郎（100W）。——35岁的司汤达</p>
+</blockquote>
+<h1 id="《镜像》刘慈欣"><a href="#《镜像》刘慈欣" class="headerlink" title="《镜像》刘慈欣"></a>《镜像》刘慈欣</h1><blockquote>
+<p>   “设想一下，如果DNA从来不出错，永远精确地复制和遗传，现在地球上的生命世界会是什么样子？”<br>　　在宋诚思考之际，白冰替他回答了：“那样的话现在的地球上根本没有生命，生命进化的基础─变异，正是由DNA的错误产生的。”<br>　　首长对白冰点点头：“社会也是这样，它的进化和活力，是以种种偏离道德主线的冲动和欲望为基础的，水清则无鱼，<em>一个在道德上永不出错的社会，其实已经死了。</em>”</p>
+</blockquote>
+<h1 id="《老人与海》-海明威"><a href="#《老人与海》-海明威" class="headerlink" title="《老人与海》 海明威"></a>《老人与海》 海明威</h1><p><em>以下来自王小波的书评</em></p>
+<blockquote>
+<p>什么叫失败？也许可以说，人去做一件事情，没有达到预期得目的，这就是失败。 但是，那些与命运斗争的人，那些做接近自己限度的斗争的人，却天生地接近这种失败。老人到海上去，不能期望天天有鱼来咬他的钩，于是他常常失败。一个常常在进行着接近自己限度的斗争的人总是会常常失败的，一个想探索自然奥秘的人也常常会失败，一个想改革社会的人更是会常常失败。只有那些安于自己限度之内的生活的人才总是“胜利”，这种“胜利者”之所以常胜不败，只是因为他的对手是早已降伏的，或者说，他根本没有投入斗争。 </p>
+</blockquote>
+<blockquote>
+<p>那么，什么也没有得到的老人竟是胜利的么？我确是这样看的。我认为，胜利就是战斗到最后的时刻。老人总怀着无比的勇气走向莫测的大海，他的信心是不可战胜的。 </p>
+</blockquote>
+<blockquote>
+<p>他和其他许多人一样，是强悍的人类的一员。我喜欢这样的人，也喜欢这样的人性。我发现，人们常常把这样的事情当作人性最可贵的表露：七尺男子汉坐在厨房里和三姑六婆磨嘴皮子，或者衣装笔挺的男女们坐在海滨，谈论着高尚的、别人不能理解的感情。我不喜欢人们像这样沉溺在人性软弱的部分之中，更不喜欢人们总是这样描写人性。 </p>
+</blockquote>
+<blockquote>
+<p>在人类前进的道路上，强者与弱者的命运是不同的。弱者不羡慕强者的命运，强者也讨厌弱者的命运。强者带有人性中强悍的一面，弱者带有人性中软弱的一面。强者为弱者开辟道路，但是强者往往为弱者所奴役，就像老人是为大腹便便的游客打鱼一样。</p>
+</blockquote>
+<h1 id="《流浪地球》刘慈欣"><a href="#《流浪地球》刘慈欣" class="headerlink" title="《流浪地球》刘慈欣"></a>《流浪地球》刘慈欣</h1><blockquote>
+<p>   爸爸突然想起了一件事，“呵，忘了告诉你们，我爱上了黎星，我要离开你们和她在一起。”<br>　　“她是谁？”妈妈平静地问。<br>　　“我的小学老师。”我替爸爸回答。我升入中学已两年，不知道爸爸和小星老师是怎么认识的，也许是在两年前那个毕业仪式上？<br>　　“那你去吧。”妈妈说。<br>　　“过一阵我肯定会厌倦，那时我就回来，你看呢？”<br>　　“你要愿意当然行。”妈妈的声音像冰冻的海面一样平稳，但很快激动起来， “啊，这一颗真漂亮，里面一定有全息散射体！”她指着刚在空中开放的一朵焰火，真诚地赞美着。<br>　　在这个时代，人们在看四个世纪以前的电影和小说时都莫名其妙，他们不明白，前太阳时代的人怎么会在不关生死的事情上倾注那么多的感情。当看到男女主人公为爱情而痛苦或哭泣时，他们的惊奇是难以言表的。<em>在这个时代，死亡的威胁和逃生的欲望压倒了一切，除了当前太阳的状态和地球的位置，没有什么能真正引起他们的注意并打动他们了。</em>这种注意力高度集中的关注，渐渐从本质上改变了人类的心理状态和精神生活，对于爱情这类东西，他们只是用余光瞥一下而已，就像赌徒在盯着轮盘的间隙抓住几秒钟喝口水一样。<br>　　过了两个月，爸爸真从小星老师那儿回来了，妈妈没有高兴，也没有不高兴。<br>　　爸爸对我说：“黎星对你印象很好，她说你是一个有创造力的学生。”<br>　　妈妈一脸茫然：“她是谁？”<br>　　“小星老师嘛，我的小学老师，爸爸这两个月就是同她在一起的！”</p>
+<p>　　“哦，想起来了！”妈妈摇头笑了，<em>“我还不到四十，记忆力就成了这个样子。”</em></p>
+</blockquote>
+<blockquote>
+<p>“你听着亲爱的，我们必须抱有希望，这并不是因为希望真的存在，而是因为我们要做高贵的人。<em>在前太阳时代，做一个高贵的人必须拥有金钱、权力或才能，而在今天只要拥有希望，希望是这个时代的黄金和宝石</em>，不管活多长，我们都要拥有它！明天把这话告诉孩子。”</p>
+</blockquote>
+<h1 id="《人间失格》太宰治"><a href="#《人间失格》太宰治" class="headerlink" title="《人间失格》太宰治"></a>《人间失格》太宰治</h1><blockquote>
+<p>不过唯一有一点是我要依靠幼时的经验而明白：女人像那样哭诉起来时，只要递给她什么好吃的东西她就会吃起来，并因此而改变心境。</p>
+</blockquote>
+<blockquote>
+<p>“对不起，你能不能去电车附近的药店，给我买点安眠药呢？我太累了，脸上发烫，反而睡不着。对不起，钱嘛……”<br>“行啊，钱好说。”<br>她愉快地起身走了。我深谙，打发女人去干活是不会惹她讨厌的。就是说，男人拜托女人做事，她会高兴的。</p>
+</blockquote>
+<h1 id="《我们仨》杨绛"><a href="#《我们仨》杨绛" class="headerlink" title="《我们仨》杨绛"></a>《我们仨》杨绛</h1><blockquote>
+<p>他曾和我说：“有名气就是多些不相知的人”</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Books</category>
+        <category>书中佳句</category>
+      </categories>
+  </entry>
+  <entry>
     <title>SQL心得</title>
     <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
@@ -3413,10 +3517,8 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
     <title>统计学习笔记</title>
     <url>/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
-<li><p>记录一下学统计的时候遇到的一些问题</p>
-</li>
-<li><p>《The Seven Pillars of Statistical Wisdom》Stephen M. Stigler -Harvard University Press (2016)</p>
-</li>
+<li>记录一下学统计的时候遇到的一些问题</li>
+<li>《The Seven Pillars of Statistical Wisdom》Stephen M. Stigler -Harvard University Press (2016)</li>
 </ul>
 <a id="more"></a>
 
@@ -7813,7 +7915,100 @@ knitr::include_graphics(&quot;path&#x2F;to&#x2F;image.png&quot;) #调整插入�
 <p><a href="https://d.cosx.org/d/419420-r-markdown-pdf/2">rmarkdown: Unicode char \u8:骞?not set up for use with LaTeX.</a></p>
 <p><a href="https://stats.stackexchange.com/questions/11109/how-to-deal-with-perfect-separation-in-logistic-regression">logistic出现perfect separation</a></p>
 <p>有的github包装不上，需要先加载remote包：<a href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a></p>
-<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
+<h1 id="Advanced-R"><a href="#Advanced-R" class="headerlink" title="Advanced R"></a>Advanced R</h1><p>这个作者Hadley Wickham好强，我唯一看过的R书《R For Data Science》就是他写的。他写过很多著名的包，我用过的有：ggplot2, dplyr, stringr, lubridate, readr, haven, devtools, roxygen2, testthat… tidyverse像是一个他的工作合集。</p>
+<p><img src="https://i.imgur.com/mg2hgeP.png" alt="https://i.imgur.com/mg2hgeP.png"></p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
+<li>一些R的特性：</li>
+</ul>
+<blockquote>
+<p>阅读源代码之所以重要是因为他可以帮助你写出更好的代码。开始培养这种技能的一种好方法就是<strong>查看你经常使用的函数和package的源代码</strong>。</p>
+</blockquote>
+<ul>
+<li>推荐阅读：<ul>
+<li>《计算机程序的构造和解释》（英語：Structure and Interpretation of Computer Programs，SICP）简明又深奥，理解R的对象系统</li>
+<li>Concepts, Techniques, and Models of Computer Programming. 理解R相对于其他编程语言的优缺点</li>
+<li>程序员修炼之道: 从小工到专家 (The Pragmatic Programmer) 让你成为一个更好的程序员</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>本书的网站使用jekyll构建，使用bootstrap样式，并通过travis-ci自动推送的Amazon的S3</p>
+</blockquote>
+<ul>
+<li><p>array可以用来存放n维的数组</p>
+<p><img src="https://i.imgur.com/QS2mHvK.png" alt="https://i.imgur.com/QS2mHvK.png"></p>
+</li>
+</ul>
+<p>R没有0维数据（Really? What about <code>numeric(0)</code> 我的理解是这个东西是一个一维但长度为0的数据），也没有标量类型。单独的数字或字符串都是向量。可以使用代码 <code>str</code> 给出结构，比typeof复杂。</p>
+<p>不要使用<code>is.vector()</code>来判断是否是向量，只有当x没有任何其他属性的时候才会返回<code>True</code>。要使用 <code>is.atomic()</code> 或者 <code>is.list()</code> 来判断。1维的数据 (vector)，只要不是list就一定是atomic。List <strong>也属于</strong> vector。</p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><ul>
+<li>Atomic的六种类型<ol>
+<li>logical<ul>
+<li>NA 默认是逻辑向量，如果在c()中使用就会被转成正确的类型，也可以直接使用：NA_integer_ , NA_real_ , NA_character_ 。<ul>
+<li><code>c(FALSE, NA_character_)</code> 的输出是 <code>#[1] &quot;FALSE&quot; NA</code> 。所以 <code>NA</code> 默认是逻辑向量，因为他的<strong>等级最低</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>integer （<code>x = 1L</code> 而不是 x = 1 ）</li>
+<li>double (numeric)<ul>
+<li><code>is.numeric()</code> 也可以用来检查 <code>integer</code></li>
+</ul>
+</li>
+<li>character</li>
+<li>complex (略过)</li>
+<li>raw (略过)</li>
+</ol>
+</li>
+</ul>
+<p>Atomic总是被展开，即使用嵌套来创建。<code>x = c(1,c(2))</code> 等同于 <code>x = c(1,2)</code> 。</p>
+<p>使用<code>c()</code>来进行合并：Atomic类型的强制转换，服从顺序：logical → integer → double → character。不过有时也会反着来，比如使用逻辑运算符 <code>&amp;，|</code> 等。当 list 和 atomic 结合在一起的时候，atomic 会被强制转换成 list 。将 list 转变成 atomic 需要用 <code>unlist()</code> 。</p>
+<p><code>1 == c(&quot;1&quot;)</code> 会返回 <code>True</code> 。</p>
+<h3 id="Attribute"><a href="#Attribute" class="headerlink" title="Attribute"></a>Attribute</h3><p>基本操作：</p>
+<ul>
+<li><p><code>attr(x, &#39;class&#39;)</code> 可以访问某一个特定的属性，<code>attributes(x)</code> 可以一次获得全部的属性。</p>
+</li>
+<li><p>structure 可以创建数据并同时赋予属性</p>
+<p> 可以创建数据并同时赋予属性</p>
+<ul>
+<li>难怪我会经常在 <code>dput()</code> 里面看到这个函数，比如：<code>structure(c(1L, 2L), .Label = c(&quot;A&quot;, &quot;B&quot;), class = &quot;factor&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<p>默认情况下，当向量被修改 / 变换之后他的大多数属性都会丢失，但是三个最重要的属性不会：</p>
+<ol>
+<li><p>Name：给每个元素一个名字的字符向量，使用 </p>
+<pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">names</span><span class="hljs-params">(x)</span></span></code></pre>
+
+<ul>
+<li><code>unnames(x)</code> 可以创建没有名字的新向量，或是使用 <code>names = NULL</code> 来去掉名字。</li>
+</ul>
+</li>
+<li><p>Dimension：将向量转换为矩阵和数组，使用 <code>dim(x)</code></p>
+</li>
+<li><p>Class：用于实现S3对象系统, 使用 <code>class(x)</code></p>
+</li>
+</ol>
+<p>factor 只能包含<strong>预先定义</strong>的值，虽然看上去很像character，但<strong>其实是integer</strong>。</p>
+<p>有时一列数值型变量会因为非标准编码NA而被读成factor，转换的办法：</p>
+<ol>
+<li>先 <code>as.character</code> 再 <code>as.double</code> .</li>
+<li>在用 <code>read.csv</code> 读入的时候，使用参数 <code>na.strings =</code> 来提前做好预防。</li>
+</ol>
+<p>不推荐修改全局选项， 比如 <code>options(stringAssFactors = FALSE)</code> 。因为与其他代码联合使用的时候会造成无法预知的后果，也使代码变得难以理解。</p>
+<p><code>x = structure(1:5, name = &#39;my attribute&#39;)</code> R对待comment属性很特殊，它不会被打印。</p>
+<pre><code class="hljs r"><span class="hljs-comment"># 这段代码有点意思，展示了四种情况</span>
+f1 = factor(letters) <span class="hljs-comment"># 数据是正序abcd level的order也是正序</span>
+levels(f1) = rev(levels(f1)) <span class="hljs-comment"># 数据逆序，level逆序</span>
+f2 = rev(factor(letters)) <span class="hljs-comment"># 数据逆序， level正序</span>
+f3 = factor(letters, levels = rev(letters)) <span class="hljs-comment"># 数据正序，level逆序</span></code></pre>
+
+<p>对于data.frame来说，<code>length()</code> 和 <code>ncol()</code> 的结果是一样的。</p>
+<p><code>plyr::rbind.fill()</code> 可以解决 <code>rbind</code> 找不到同样名字的列会报错的问题，默认填成 NA .</p>
+<p><code>cbind()</code> 默认变成矩阵，如果想变成 data.frame 可以直接用 <code>data.frame()</code> 。在使用 <code>cbind()</code> 的时候最好保证所有输入都是同一类型来避免错误。</p>
+<p><code>data.frame(x = 1:3, y = I(list(1:2,1:3,1:4)))</code> 函数 <code>I()</code> 可以修复这个本来报错的代码。</p>
+<p>data.frame 虽然支持把列表 / 数组变成他的列，不过要注意，很多处理 data.frame 的函数都假设所有的列都是 atomic 的。</p>
+<h2 id="第三章-Subset"><a href="#第三章-Subset" class="headerlink" title="第三章 Subset"></a>第三章 Subset</h2><h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
 <li>mc2d::rtrunc:  truncate distribution generator</li>
 <li>if(!require(“astro”)) install.packages(“astro”) 来检测包</li>
 </ul>

@@ -329,7 +329,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      13.8k 字
+      15k 字
     </span>
   
 
@@ -339,7 +339,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      168
+      182
        分钟
     </span>
   
@@ -1035,7 +1035,100 @@ knitr::include_graphics(&quot;path&#x2F;to&#x2F;image.png&quot;) #调整插入�
 <p><a target="_blank" rel="noopener" href="https://d.cosx.org/d/419420-r-markdown-pdf/2">rmarkdown: Unicode char \u8:骞?not set up for use with LaTeX.</a></p>
 <p><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/11109/how-to-deal-with-perfect-separation-in-logistic-regression">logistic出现perfect separation</a></p>
 <p>有的github包装不上，需要先加载remote包：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a></p>
-<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
+<h1 id="Advanced-R"><a href="#Advanced-R" class="headerlink" title="Advanced R"></a>Advanced R</h1><p>这个作者Hadley Wickham好强，我唯一看过的R书《R For Data Science》就是他写的。他写过很多著名的包，我用过的有：ggplot2, dplyr, stringr, lubridate, readr, haven, devtools, roxygen2, testthat… tidyverse像是一个他的工作合集。</p>
+<p><img src="https://i.imgur.com/mg2hgeP.png" srcset="/img/loading.gif" alt="https://i.imgur.com/mg2hgeP.png"></p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
+<li>一些R的特性：</li>
+</ul>
+<blockquote>
+<p>阅读源代码之所以重要是因为他可以帮助你写出更好的代码。开始培养这种技能的一种好方法就是<strong>查看你经常使用的函数和package的源代码</strong>。</p>
+</blockquote>
+<ul>
+<li>推荐阅读：<ul>
+<li>《计算机程序的构造和解释》（英語：Structure and Interpretation of Computer Programs，SICP）简明又深奥，理解R的对象系统</li>
+<li>Concepts, Techniques, and Models of Computer Programming. 理解R相对于其他编程语言的优缺点</li>
+<li>程序员修炼之道: 从小工到专家 (The Pragmatic Programmer) 让你成为一个更好的程序员</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>本书的网站使用jekyll构建，使用bootstrap样式，并通过travis-ci自动推送的Amazon的S3</p>
+</blockquote>
+<ul>
+<li><p>array可以用来存放n维的数组</p>
+<p><img src="https://i.imgur.com/QS2mHvK.png" srcset="/img/loading.gif" alt="https://i.imgur.com/QS2mHvK.png"></p>
+</li>
+</ul>
+<p>R没有0维数据（Really? What about <code>numeric(0)</code> 我的理解是这个东西是一个一维但长度为0的数据），也没有标量类型。单独的数字或字符串都是向量。可以使用代码 <code>str</code> 给出结构，比typeof复杂。</p>
+<p>不要使用<code>is.vector()</code>来判断是否是向量，只有当x没有任何其他属性的时候才会返回<code>True</code>。要使用 <code>is.atomic()</code> 或者 <code>is.list()</code> 来判断。1维的数据 (vector)，只要不是list就一定是atomic。List <strong>也属于</strong> vector。</p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><ul>
+<li>Atomic的六种类型<ol>
+<li>logical<ul>
+<li>NA 默认是逻辑向量，如果在c()中使用就会被转成正确的类型，也可以直接使用：NA_integer_ , NA_real_ , NA_character_ 。<ul>
+<li><code>c(FALSE, NA_character_)</code> 的输出是 <code>#[1] &quot;FALSE&quot; NA</code> 。所以 <code>NA</code> 默认是逻辑向量，因为他的<strong>等级最低</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>integer （<code>x = 1L</code> 而不是 x = 1 ）</li>
+<li>double (numeric)<ul>
+<li><code>is.numeric()</code> 也可以用来检查 <code>integer</code></li>
+</ul>
+</li>
+<li>character</li>
+<li>complex (略过)</li>
+<li>raw (略过)</li>
+</ol>
+</li>
+</ul>
+<p>Atomic总是被展开，即使用嵌套来创建。<code>x = c(1,c(2))</code> 等同于 <code>x = c(1,2)</code> 。</p>
+<p>使用<code>c()</code>来进行合并：Atomic类型的强制转换，服从顺序：logical → integer → double → character。不过有时也会反着来，比如使用逻辑运算符 <code>&amp;，|</code> 等。当 list 和 atomic 结合在一起的时候，atomic 会被强制转换成 list 。将 list 转变成 atomic 需要用 <code>unlist()</code> 。</p>
+<p><code>1 == c(&quot;1&quot;)</code> 会返回 <code>True</code> 。</p>
+<h3 id="Attribute"><a href="#Attribute" class="headerlink" title="Attribute"></a>Attribute</h3><p>基本操作：</p>
+<ul>
+<li><p><code>attr(x, &#39;class&#39;)</code> 可以访问某一个特定的属性，<code>attributes(x)</code> 可以一次获得全部的属性。</p>
+</li>
+<li><p>structure 可以创建数据并同时赋予属性</p>
+<p> 可以创建数据并同时赋予属性</p>
+<ul>
+<li>难怪我会经常在 <code>dput()</code> 里面看到这个函数，比如：<code>structure(c(1L, 2L), .Label = c(&quot;A&quot;, &quot;B&quot;), class = &quot;factor&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<p>默认情况下，当向量被修改 / 变换之后他的大多数属性都会丢失，但是三个最重要的属性不会：</p>
+<ol>
+<li><p>Name：给每个元素一个名字的字符向量，使用 </p>
+<pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">names</span><span class="hljs-params">(x)</span></span></code></pre>
+
+<ul>
+<li><code>unnames(x)</code> 可以创建没有名字的新向量，或是使用 <code>names = NULL</code> 来去掉名字。</li>
+</ul>
+</li>
+<li><p>Dimension：将向量转换为矩阵和数组，使用 <code>dim(x)</code></p>
+</li>
+<li><p>Class：用于实现S3对象系统, 使用 <code>class(x)</code></p>
+</li>
+</ol>
+<p>factor 只能包含<strong>预先定义</strong>的值，虽然看上去很像character，但<strong>其实是integer</strong>。</p>
+<p>有时一列数值型变量会因为非标准编码NA而被读成factor，转换的办法：</p>
+<ol>
+<li>先 <code>as.character</code> 再 <code>as.double</code> .</li>
+<li>在用 <code>read.csv</code> 读入的时候，使用参数 <code>na.strings =</code> 来提前做好预防。</li>
+</ol>
+<p>不推荐修改全局选项， 比如 <code>options(stringAssFactors = FALSE)</code> 。因为与其他代码联合使用的时候会造成无法预知的后果，也使代码变得难以理解。</p>
+<p><code>x = structure(1:5, name = &#39;my attribute&#39;)</code> R对待comment属性很特殊，它不会被打印。</p>
+<pre><code class="hljs r"><span class="hljs-comment"># 这段代码有点意思，展示了四种情况</span>
+f1 = factor(letters) <span class="hljs-comment"># 数据是正序abcd level的order也是正序</span>
+levels(f1) = rev(levels(f1)) <span class="hljs-comment"># 数据逆序，level逆序</span>
+f2 = rev(factor(letters)) <span class="hljs-comment"># 数据逆序， level正序</span>
+f3 = factor(letters, levels = rev(letters)) <span class="hljs-comment"># 数据正序，level逆序</span></code></pre>
+
+<p>对于data.frame来说，<code>length()</code> 和 <code>ncol()</code> 的结果是一样的。</p>
+<p><code>plyr::rbind.fill()</code> 可以解决 <code>rbind</code> 找不到同样名字的列会报错的问题，默认填成 NA .</p>
+<p><code>cbind()</code> 默认变成矩阵，如果想变成 data.frame 可以直接用 <code>data.frame()</code> 。在使用 <code>cbind()</code> 的时候最好保证所有输入都是同一类型来避免错误。</p>
+<p><code>data.frame(x = 1:3, y = I(list(1:2,1:3,1:4)))</code> 函数 <code>I()</code> 可以修复这个本来报错的代码。</p>
+<p>data.frame 虽然支持把列表 / 数组变成他的列，不过要注意，很多处理 data.frame 的函数都假设所有的列都是 atomic 的。</p>
+<h2 id="第三章-Subset"><a href="#第三章-Subset" class="headerlink" title="第三章 Subset"></a>第三章 Subset</h2><h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
 <li>mc2d::rtrunc:  truncate distribution generator</li>
 <li>if(!require(“astro”)) install.packages(“astro”) 来检测包</li>
 </ul>
