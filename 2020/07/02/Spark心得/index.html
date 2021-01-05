@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -329,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      406 字
+      401 字
     </span>
   
 
@@ -372,12 +384,11 @@
             <h1 style="display: none">Spark心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Laioffer学习的，628第三次yelp正好用上了。</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>Laioffer学习的，628第三次yelp正好用上了。</p>
 <a id="more"></a>
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>Apache Spark 读作 阿派cheap（没有p）</p>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h1>
+<p>Apache Spark 读作 阿派cheap（没有p）</p>
 <p><a target="_blank" rel="noopener" href="https://databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html">Spark_Optimizer</a></p>
 <p>数据类型RDD：Resilient Distributed Datasets (<strong>RDD</strong>) is a fundamental data structure of Spark. It is an immutable distributed collection of objects. Each dataset in <strong>RDD</strong> is divided into logical partitions, which may be computed on different nodes of the cluster.</p>
 <p>Spark allows two distinct kinds of operations by the user. There are <strong>transformations</strong> and there are <strong>actions</strong>.</p>
@@ -408,10 +419,11 @@
 <p>pyspark.sql.row #用来生成DF</p>
 <p>spark.createDataFrame(NAME)</p>
 <p>vector assembler 可以把columns转化成vector</p>
-<h1 id="pyspark"><a href="#pyspark" class="headerlink" title="pyspark"></a>pyspark</h1><p><a target="_blank" rel="noopener" href="https://www.analyticsvidhya.com/blog/2016/10/spark-dataframe-and-operations/">pyspark教程</a></p>
-<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46956026/how-to-convert-column-with-string-type-to-int-form-in-pyspark-data-frame">如何修改列的type</a>：<code>crimeSunday = crimeSunday.withColumn(&#39;X&#39;, crimeSunday[&#39;X&#39;].cast(&#39;float&#39;))</code></p>
-<h1 id="Databricks-语法"><a href="#Databricks-语法" class="headerlink" title="Databricks 语法"></a>Databricks 语法</h1><pre><code class="hljs autoit">dbutils.fs.rm(<span class="hljs-string">&#x27;FileStore/tables/628/review_100k.json&#x27;</span>,<span class="hljs-literal">True</span>) <span class="hljs-meta">#删除自己上传的文件</span></code></pre>
-
+<h1 id="pyspark"><a class="markdownIt-Anchor" href="#pyspark"></a> pyspark</h1>
+<p><a target="_blank" rel="noopener" href="https://www.analyticsvidhya.com/blog/2016/10/spark-dataframe-and-operations/">pyspark教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46956026/how-to-convert-column-with-string-type-to-int-form-in-pyspark-data-frame">如何修改列的type</a>：<code>crimeSunday = crimeSunday.withColumn('X', crimeSunday['X'].cast('float'))</code></p>
+<h1 id="databricks-语法"><a class="markdownIt-Anchor" href="#databricks-语法"></a> Databricks 语法</h1>
+<pre><code class="hljs autoit">dbutils.fs.rm(<span class="hljs-string">&#x27;FileStore/tables/628/review_100k.json&#x27;</span>,<span class="hljs-literal">True</span>) <span class="hljs-meta">#删除自己上传的文件</span></code></pre>
 
             </div>
             <hr>

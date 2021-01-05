@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -329,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.9k 字
+      5k 字
     </span>
   
 
@@ -339,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      79
+      81
        分钟
     </span>
   
@@ -372,13 +384,15 @@
             <h1 style="display: none">统计学习笔记</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<ul>
 <li>记录一下学统计的时候遇到的一些问题</li>
 <li>《The Seven Pillars of Statistical Wisdom》Stephen M. Stigler -Harvard University Press (2016)</li>
 </ul>
 <a id="more"></a>
-
-<h1 id="The-Seven-Pillars-of-Statistical-Wisdom"><a href="#The-Seven-Pillars-of-Statistical-Wisdom" class="headerlink" title="The Seven Pillars of Statistical Wisdom"></a>The Seven Pillars of Statistical Wisdom</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<h1 id="the-seven-pillars-of-statistical-wisdom"><a class="markdownIt-Anchor" href="#the-seven-pillars-of-statistical-wisdom"></a> The Seven Pillars of Statistical Wisdom</h1>
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
+<blockquote>
 <p>当他谈到aggregation的时候:</p>
 <p>“By stipulating that, given a number of observations, you can actually gain information by throwing information away!”</p>
 </blockquote>
@@ -388,7 +402,8 @@
 <ul>
 <li>霍，原来可以叫Fisherian</li>
 </ul>
-<h2 id="Chap1-Aggregation"><a href="#Chap1-Aggregation" class="headerlink" title="Chap1: Aggregation"></a>Chap1: Aggregation</h2><blockquote>
+<h2 id="chap1-aggregation"><a class="markdownIt-Anchor" href="#chap1-aggregation"></a> Chap1: Aggregation</h2>
+<blockquote>
 <p>“Jorge Luis Borges understood this. In a fantasy short story published in 1942, “Funes the Memorious,” he described a man, Ireneo Funes, who found after an accident that he could remember absolutely everything. He could reconstruct every day in the smallest detail, and he could even later reconstruct the reconstruction, but he was incapable of understanding. Borges wrote, “<strong>To think is to forget details, generalize, make abstractions.</strong> In the teeming world of Funes there were only details.” Aggregation can yield great gains above the individual components. <strong>Funes was big data without Statistics.</strong>”</p>
 </blockquote>
 <ul>
@@ -410,16 +425,18 @@
 <p>“If we collect a man’s urine during 24 hours and mix all his urine to analyze the average, we get an analysis of a urine that simply does not exist;”</p>
 </blockquote>
 <ul>
-<li>人们在担心，我们通过平均值所得到的个体不一定「真实存在」。就比如说linear regression中的样本中心点$(\bar{X},\bar{y})$ 不一定存在于样本之中。</li>
+<li>人们在担心，我们通过平均值所得到的个体不一定「真实存在」。就比如说linear regression中的样本中心点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>X</mi><mo>ˉ</mo></mover><mo separator="true">,</mo><mover accent="true"><mi>y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\bar{X},\bar{y})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.16666em;">ˉ</span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˉ</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 不一定存在于样本之中。</li>
 </ul>
-<h2 id="Chap2-Information"><a href="#Chap2-Information" class="headerlink" title="Chap2: Information"></a>Chap2: Information</h2><p>Root-n Rule: 如果你想获得双倍的精确度，你需要四倍的数据</p>
+<h2 id="chap2-information"><a class="markdownIt-Anchor" href="#chap2-information"></a> Chap2: Information</h2>
+<p>Root-n Rule: 如果你想获得双倍的精确度，你需要四倍的数据</p>
 <blockquote>
 <p>“The paradox of the accumulation of information, namely, that the last 10 measurements are worth less than the first 10, even though all measurements are equivalently accurate, is heightened by the different (and to a degree misleading) uses of the term information in Statistics and in science.”</p>
 </blockquote>
 <ul>
 <li>后十个数据提供的信息，没有前十个那么多了</li>
-<li>两个反例：<ul>
-<li>FIsher Information.$I_n(\theta) = nI(\theta)$ 这是因为它的衡量与方差是一个量度的。我们在使用时要开方</li>
+<li>两个反例：
+<ul>
+<li>FIsher Information.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi><mi>I</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I_n(\theta) = nI(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span> 这是因为它的衡量与方差是一个量度的。我们在使用时要开方</li>
 <li>香农的信息论【这个不太懂了…】</li>
 </ul>
 </li>
@@ -432,7 +449,7 @@
 <p>“This was in direct contrast to long mathematical practice: in a sequence of mathematical operations, mathematicians would keep track of the maximum error that could have arisen at each step, a quantity that grew as the series grew, while statisticians would allow for a likely compensation of errors, which would in relative terms shrink as the series grew.”</p>
 </blockquote>
 <ul>
-<li>比如说数分里面的$\epsilon-N$，对比依概率收敛</li>
+<li>比如说数分里面的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi><mo>−</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">\epsilon-N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">ϵ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>，对比依概率收敛</li>
 </ul>
 <p>有时候扔掉一个数据，比把他加进来然后求平均更好：</p>
 <ul>
@@ -440,7 +457,8 @@
 <li>outlier</li>
 </ul>
 <p>有时候Correlation也会影响我们获得信息的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
-<h2 id="Chap3-Likelihood"><a href="#Chap3-Likelihood" class="headerlink" title="Chap3: Likelihood"></a>Chap3: Likelihood</h2><p>遇到了一个问题，在伯努利分布中，当数据够大的时候，任何一个小格子的概率都太小了。本来对这种小概率事件我们是该拒绝的，但也可能是因为我们的方法错了？</p>
+<h2 id="chap3-likelihood"><a class="markdownIt-Anchor" href="#chap3-likelihood"></a> Chap3: Likelihood</h2>
+<p>遇到了一个问题，在伯努利分布中，当数据够大的时候，任何一个小格子的概率都太小了。本来对这种小概率事件我们是该拒绝的，但也可能是因为我们的方法错了？</p>
 <p>Fisher提出了MLE的说法。</p>
 <blockquote>
 <p>The associated idea of likelihood as a way to calibrate our inferences</p>
@@ -449,7 +467,8 @@
 <li>Likelihood变成了我们统计推断的一个尺度。该不该拒绝原假设？都是根据likelihood来判断的。</li>
 <li>Likelihood被Bayes和MLE两大方法所引导？</li>
 </ul>
-<h2 id="Chap4-Intercomparison"><a href="#Chap4-Intercomparison" class="headerlink" title="Chap4: Intercomparison"></a>Chap4: Intercomparison</h2><p>这一章表示的是，如何不借助外界的信息，而从数据本身发现规律。</p>
+<h2 id="chap4-intercomparison"><a class="markdownIt-Anchor" href="#chap4-intercomparison"></a> Chap4: Intercomparison</h2>
+<p>这一章表示的是，如何不借助外界的信息，而从数据本身发现规律。</p>
 <blockquote>
 <p>“In 1904–1905, he wrote a pair of internal memoranda (really in-house instruction texts) summarizing the uses of error theory and the correlation coefficient, based upon his reading of recent work from Karl Pearson’s laboratory at University College London. ”</p>
 </blockquote>
@@ -458,32 +477,60 @@
 </ul>
 <p>人们开始使用的是正态的median error，后来使用了正态的error，之后Gosset发现了t-分布，发表在了Pearson的杂志Biometrika上。文章的结果一直没人用，直到被Fisher读到了。Fisher发现没人证明这个结论，于是把自己的证明寄给了Gosset，Gosset没看懂，于是转发给了Pearson，不过Pearson也没看懂。</p>
 <p>Fisher后来一己之力，创造出了t-test，发展出了回归分析理论，以及ANOVA的全部。</p>
-<h1 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h1><p>17.11.13<br>###为什么我们要用R里面的anova函数比较多个模型？<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
+<h1 id="旧版"><a class="markdownIt-Anchor" href="#旧版"></a> 旧版</h1>
+<p>17.11.13<br />
+###为什么我们要用R里面的anova函数比较多个模型？<br />
+<a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input">https://stats.stackexchange.com/questions/115304/interpreting-output-from-anova-when-using-lm-as-input</a></p>
 <p>①First of all, you may be perfectly satisfied with the summary output, and that’s fine. However, the ANOVA table may offer some advantages. First, if you have a categorical / factor variable with more than two levels, the summary output is hard to interpret. It will give you tests of individual levels against the reference level, but won’t give you a test of the factor as a whole</p>
-<p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the $p$-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
+<p>②Another reason you might prefer to look at an ANOVA table is that it allows you to use information about the possible associations between your independent variables and your dependent variable that gets thrown away by the t-tests in the summary output. Consider your own example, you may notice that the p-values from the two don’t match (e.g., for v1, the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-value in the summary output is 0.93732, but in the ANOVA table it’s 0.982400). The reason is that your variables are not perfectly uncorrelated</p>
 <p>The result of this is that there are sums of squares that could be attributed to more than one of the variables. The t-tests are equivalent to ‘type III’ tests of the sums of squares, but other tests are possible. The default ANOVA table uses ‘type I’ sums of squares, which can allow you to make more precise–and more powerful–tests of your hypotheses</p>
 <p>Anova的目的：partition the sums of squares</p>
-<p>###Further understanding of Type 123 test of RSS:<br><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455">https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455</a></p>
-<p>Lets imagine that there are just two factors A and B (and we’ll throw in the A*B interaction later to distinguish type II SS). Further, lets imagine that nij不完全一样。<br>Now your two factors are correlated with each other.The problem with your factors being correlated is that there are sums of squares that are associated with both A and B. </p>
+<p>###Further understanding of Type 123 test of RSS:<br />
+<a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455">https://stats.stackexchange.com/questions/20452/how-to-interpret-type-i-type-ii-and-type-iii-anova-and-manova/20455#20455</a></p>
+<p>Lets imagine that there are just two factors A and B (and we’ll throw in the A*B interaction later to distinguish type II SS). Further, lets imagine that nij不完全一样。<br />
+Now your two factors are correlated with each other.The problem with your factors being correlated is that there are sums of squares that are associated with both A and B.</p>
 <p>When computing an ANOVA (or any other linear regression), we want to partition the sums of squares. A partition puts all sums of squares into one and only one of several subsets. (For example, we might want to divide the SS up into A, B and error.) However, since your factors (still only A and B here) are not orthogonal there is no unique partition of these SS. In fact, there can be very many partitions, and if you are willing to slice your SS up into fractions (e.g., “I’ll put .5 into this bin and .5 into that one”), there are infinite partitions. A way to visualize this is to imagine the MasterCard symbol: The rectangle represents the total SS, and each of the circles represents the SS that are attributable to that factor, but notice the overlap between the circles in the center, those SS could be given to either circle.</p>
-<p><img src="https://i.stack.imgur.com/Dy8mt.jpg" srcset="/img/loading.gif" alt=""></p>
-<p>The question is: How are we to choose the ‘right’ partition out of all of these possibilities? Let’s bring the interaction back in and discuss some possibilities:<br>Type I SS:<br>    •    SS(A)<br>    •    SS(B|A)<br>    •    SS(A<em>B|A,B)<br>Type II SS:<br>    •    SS(A|B)<br>    •    SS(B|A)<br>    •    SS(A</em>B|A,B)<br>Type III SS:<br>    •    SS(A|B,A<em>B)<br>    •    SS(B|A,A</em>B)<br>    •    SS(A*B|A,B)</p>
+<p><img src="https://i.stack.imgur.com/Dy8mt.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p>The question is: How are we to choose the ‘right’ partition out of all of these possibilities? Let’s bring the interaction back in and discuss some possibilities:<br />
+Type I SS:<br />
+•	SS(A)<br />
+•	SS(B|A)<br />
+•	SS(A<em>B|A,B)<br />
+Type II SS:<br />
+•	SS(A|B)<br />
+•	SS(B|A)<br />
+•	SS(A</em>B|A,B)<br />
+Type III SS:<br />
+•	SS(A|B,A<em>B)<br />
+•	SS(B|A,A</em>B)<br />
+•	SS(A*B|A,B)</p>
 <p>Notice how these different possibilities work. Only type I SS actually uses those SS in the overlapping portion between the circles in the MasterCard symbol. That is, the SS that could be attributed to either A or B, are actually attributed to one of them when you use type I SS (specifically, the one you entered into the model first). In both of the other approaches, the overlapping SS are not used at all. Thus, type I SS gives to A all the SS attributable to A (including those that could also have been attributed elsewhere), then gives to B all of the remaining SS that are attributable to B, then gives to the A<em>B interaction all of the remaining SS that are attributable to A</em>B, and leaves the left-overs that couldn’t be attributed to anything to the error term.</p>
 <p>Type III SS only gives A those SS that are uniquely attributable to A, likewise it only gives to B and the interaction those SS that are uniquely attributable to them. The error term only gets those SS that couldn’t be attributed to any of the factors. Thus, those ‘ambiguous’ SS that could be attributed to 2 or more possibilities are not used. If you sum the type III SS in an ANOVA table, you will notice that they do not equal the total SS. In other words, this analysis must be wrong, but errs in a kind of epistemically conservative way. Many statisticians find this approach egregious, however government funding agencies (I believe the FDA) requires their use.</p>
-<p>The type II approach is intended to capture what might be worthwhile about the idea behind type III, but mitigate against its excesses. Specifically, it only adjusts the SS for A and B for each other, not the interaction. However, in practice type II SS is essentially never used. You would need to know about all of this and be savvy enough with your software to get these estimates, and the analysts who are typically think this is bunk.<br>There are more types of SS (I believe IV and V). They were suggested in the late 60’s to deal with certain situations, but it was later shown that they do not do what was thought. Thus, at this point they are just a historical footnote.</p>
-<p>As for what questions these are answering, you basically have that right already in your question:<br>    •    Estimates using type I SS tell you how much of the variability in Y can be explained by A, how much of the residual variability can be explained by B, how much of the remaining residual variability can be explained by the interaction, and so on, in order.<br>    •    Estimates based on type III SS tell you how much of the residual variability in Y can be accounted for by A after having accounted for everything else, and how much of the residual variability in Y can be accounted for by B after having accounted for everything else as well, and so on. (Note that both go both first and last simultaneously; if this makes sense to you, and accurately reflects your research question, then use type III SS.)</p>
-<p>2017.11.14<br>###What does Standardized Residuals mean?</p>
+<p>The type II approach is intended to capture what might be worthwhile about the idea behind type III, but mitigate against its excesses. Specifically, it only adjusts the SS for A and B for each other, not the interaction. However, in practice type II SS is essentially never used. You would need to know about all of this and be savvy enough with your software to get these estimates, and the analysts who are typically think this is bunk.<br />
+There are more types of SS (I believe IV and V). They were suggested in the late 60’s to deal with certain situations, but it was later shown that they do not do what was thought. Thus, at this point they are just a historical footnote.</p>
+<p>As for what questions these are answering, you basically have that right already in your question:<br />
+•	Estimates using type I SS tell you how much of the variability in Y can be explained by A, how much of the residual variability can be explained by B, how much of the remaining residual variability can be explained by the interaction, and so on, in order.<br />
+•	Estimates based on type III SS tell you how much of the residual variability in Y can be accounted for by A after having accounted for everything else, and how much of the residual variability in Y can be accounted for by B after having accounted for everything else as well, and so on. (Note that both go both first and last simultaneously; if this makes sense to you, and accurately reflects your research question, then use type III SS.)</p>
+<p>2017.11.14<br />
+###What does Standardized Residuals mean?</p>
 <p>Intuition:every residual has different variance, so we need to consider standardized residuals.</p>
-<p>When you compare the cells, the standardized residual makes it easy to see which cells are contributing the most to the chi-square value, and which are contributing the least.If your sample is large enough, the standardized residual can be roughly compared to a z-score. Standardization can work even if your variables are not normally distributed.<br>    •    If the residual is less than -2, the cell’s observed frequency is less than the expected frequency.<br>    •    Greater than 2 and the observed frequency is greater than the expected frequency. 之所以用2是因为95%双边正态</p>
+<p>When you compare the cells, the standardized residual makes it easy to see which cells are contributing the most to the chi-square value, and which are contributing the least.If your sample is large enough, the standardized residual can be roughly compared to a z-score. Standardization can work even if your variables are not normally distributed.<br />
+•	If the residual is less than -2, the cell’s observed frequency is less than the expected frequency.<br />
+•	Greater than 2 and the observed frequency is greater than the expected frequency. 之所以用2是因为95%双边正态</p>
 <p>2017.11.15</p>
 <p>###One Sample T-test:</p>
 <p>为了检验所给数据是否来自同一个均值总体。需要给出一个原假设Ho：μ=μ0</p>
-<p>The test statistic is calculated as:<br>R code： t.test(a, mu=120)</p>
-<p>2017.11.19<br>###为什么我们要对数据进行变换（比如log）：<br>有时候我们希望残差能满足高斯马尔科夫假设。</p>
-<p>2017.11.20<br>###Forward and Backward selection 的主要差别：</p>
+<p>The test statistic is calculated as:<br />
+R code： t.test(a, mu=120)</p>
+<p>2017.11.19<br />
+###为什么我们要对数据进行变换（比如log）：<br />
+有时候我们希望残差能满足高斯马尔科夫假设。</p>
+<p>2017.11.20<br />
+###Forward and Backward selection 的主要差别：</p>
 <p>Forward selection has drawbacks, including the fact that each addition of a new feature may render one or more of the already included feature non-significant (p-value&gt;0.05). An alternate approach which avoids this is backward selection.The backward method is generally the preferred method, because the forward method produces so-called suppressor effects. These suppressor effects occur when predictors are only significant when another predictor is held constant.</p>
 <p>2017.11.25</p>
-<h3 id="Added-Variable-Plot-Partial-Regression-Plot"><a href="#Added-Variable-Plot-Partial-Regression-Plot" class="headerlink" title="Added Variable Plot (Partial Regression Plot)"></a>Added Variable Plot (Partial Regression Plot)</h3><p><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple">https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple</a></p>
+<h3 id="added-variable-plot-partial-regression-plot"><a class="markdownIt-Anchor" href="#added-variable-plot-partial-regression-plot"></a> Added Variable Plot (Partial Regression Plot)</h3>
+<p><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple">https://stats.stackexchange.com/questions/125561/what-does-an-added-variable-plot-partial-regression-plot-explain-in-a-multiple</a></p>
 <p>可以告诉我们如果变量之间存在线性相关的话，不能在回归模型中单独对Y和某一个X画图。可能会有Omitted-Variable Bias.</p>
 <p>主要原理：纵坐标画Y对除了我们关心的Xi之外其他的X拟合出来的残差，横坐标画我们所关心的Xi对其他所有X拟合出来的残差。R中car包里的avPlots可以实现这个功能。</p>
 <p>For illustration I will take a less complex regression model Y=β1+β2X2+β3X3+ϵ where the predictor variables X1 and X2 may be correlated. Let’s say the slopes β2 and β3 are both positive so we can say that (i) Y increases as X2 increases, if X3 is held constant, since β2 is positive; (ii) Y increases as X3 increases, if X2 is held constant, since β3 is positive.</p>
@@ -492,42 +539,99 @@
 <p>A lot of the value of an added variable plot comes at the regression diagnostic stage, especially since the residuals in the added variable plot are precisely the residuals from the original multiple regression. This means outliers and heteroskedasticity can be identified in a similar way to when looking at the plot of a simple rather than multiple regression model. Influential points can also be seen - this is useful in multiple regression since some influential points are not obvious in the original data before you take the other variables into account. In my example, a moderately large X2 value may not look out of place in the table of data, but if the X3 value is large as well despite X2 and X3 being negatively correlated then the combination is rare. “Accounting for other predictors”, that X2 value is unusually large and will stick out more prominently on your added variable plot.</p>
 <p>∗∗ More technically they would be the residuals from running two other multiple regressions: the residuals from regressing Y against all predictors other than X2 go on the vertical axis, while the residuals from regression X2 against all other predictors go on the horizontal axis. This is really what the legends of “Y given others” and “X2 given others” are telling you. Since the mean residual from both of these regressions is zero, the mean point of (X2 given others, Y given others) will just be (0, 0) which explains why the regression line in the added variable plot always goes through the origin. But I often find that mentioning the axes are just residuals from other regressions confuses people (unsurprising perhaps since we now are talking about four different regressions!) so I have tried not to dwell on the matter. Comprehend them as “X2 given others” and “Y given others” and you should be fine.</p>
 <p>2017.12.3</p>
-<h3 id="Imbalanced-Classification-Problems"><a href="#Imbalanced-Classification-Problems" class="headerlink" title="Imbalanced Classification Problems"></a>Imbalanced Classification Problems</h3><p><a target="_blank" rel="noopener" href="https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/">https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/</a></p>
+<h3 id="imbalanced-classification-problems"><a class="markdownIt-Anchor" href="#imbalanced-classification-problems"></a> Imbalanced Classification Problems</h3>
+<p><a target="_blank" rel="noopener" href="https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/">https://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/</a></p>
 <p>Definition: An imbalanced classification problem is one in which the dependent variable has imbalanced proportion of classes. In other words, a data set that exhibits an unequal distribution between its classes is considered to be imbalanced.</p>
-<p>Reason: Below are the reasons which leads to reduction in accuracy of ML algorithms on imbalanced data sets:<br>    1.    ML algorithms struggle with accuracy because of the unequal distribution in dependent variable.<br>    2.    This causes the performance of existing classifiers to get biased towards majority class.<br>    3.    The algorithms are accuracy driven i.e. they aim to minimize the overall error to which the minority class contributes very little.<br>    4.    ML algorithms assume that the data set has balanced class distributions.<br>    5.    They also assume that errors obtained from different classes have same cost (explained below in detail).</p>
-<p>Solution：Below are the methods used to treat imbalanced datasets:<br>    1.    Undersampling<br>    2.    Oversampling<br>    3.    Synthetic Data Generation<br>    4.    Cost Sensitive Learning</p>
+<p>Reason: Below are the reasons which leads to reduction in accuracy of ML algorithms on imbalanced data sets:<br />
+1.	ML algorithms struggle with accuracy because of the unequal distribution in dependent variable.<br />
+2.	This causes the performance of existing classifiers to get biased towards majority class.<br />
+3.	The algorithms are accuracy driven i.e. they aim to minimize the overall error to which the minority class contributes very little.<br />
+4.	ML algorithms assume that the data set has balanced class distributions.<br />
+5.	They also assume that errors obtained from different classes have same cost (explained below in detail).</p>
+<p>Solution：Below are the methods used to treat imbalanced datasets:<br />
+1.	Undersampling<br />
+2.	Oversampling<br />
+3.	Synthetic Data Generation<br />
+4.	Cost Sensitive Learning</p>
 <p>2017.12.5</p>
-<h3 id="Advantages-about-Mid-P-Value"><a href="#Advantages-about-Mid-P-Value" class="headerlink" title="Advantages about Mid P-Value"></a>Advantages about Mid P-Value</h3><p>①The mid P is less conservative (that is more powerful)<br>②For larger samples the P value obtained from a χ² test with Yates’ correction will correspond to the conventional approach, and the P value from the uncorrected test will correspond to the mid P value.——应该是说小样本因为离散程度更高，所以需要mid p-value.大样本一般不用mid p-value</p>
-<h3 id="Fisher-Exact-Test"><a href="#Fisher-Exact-Test" class="headerlink" title="Fisher Exact Test"></a>Fisher Exact Test</h3><p><a target="_blank" rel="noopener" href="http://www2.fiu.edu/~howellip/Fisher.pdf">http://www2.fiu.edu/~howellip/Fisher.pdf</a><br>让我重新了解了p值的概念。<br>一下讨论的p-值都建立在原假设H0：π=π0<br>我们往往定义p值的时候，曲线都是随着x的变化，中间高两边低。所以很自然的，就会误以为，p值是对当x等于或者大于（小于）某一特定值的y进行求和。殊不知，其实p值关心的更多是y！如果给出一个中间低两边高的分布。那么<br>①单边p值：算出一个若H0成立时候的均值。若观测值大于均值，那么P值就是大于等于观测值的概率。如果观测值小于均值，那么P值就是小于等于观测值的概率。<br>②双边p值：对于所有小于观测值的情况，进行积分。</p>
+<h3 id="advantages-about-mid-p-value"><a class="markdownIt-Anchor" href="#advantages-about-mid-p-value"></a> Advantages about Mid P-Value</h3>
+<p>①The mid P is less conservative (that is more powerful)<br />
+②For larger samples the P value obtained from a χ² test with Yates’ correction will correspond to the conventional approach, and the P value from the uncorrected test will correspond to the mid P value.——应该是说小样本因为离散程度更高，所以需要mid p-value.大样本一般不用mid p-value</p>
+<h3 id="fisher-exact-test"><a class="markdownIt-Anchor" href="#fisher-exact-test"></a> Fisher Exact Test</h3>
+<p><a target="_blank" rel="noopener" href="http://www2.fiu.edu/~howellip/Fisher.pdf">http://www2.fiu.edu/~howellip/Fisher.pdf</a><br />
+让我重新了解了p值的概念。<br />
+一下讨论的p-值都建立在原假设H0：π=π0<br />
+我们往往定义p值的时候，曲线都是随着x的变化，中间高两边低。所以很自然的，就会误以为，p值是对当x等于或者大于（小于）某一特定值的y进行求和。殊不知，其实p值关心的更多是y！如果给出一个中间低两边高的分布。那么<br />
+①单边p值：算出一个若H0成立时候的均值。若观测值大于均值，那么P值就是大于等于观测值的概率。如果观测值小于均值，那么P值就是小于等于观测值的概率。<br />
+②双边p值：对于所有小于观测值的情况，进行积分。</p>
 <p>2017.12.7</p>
-<h3 id="各种Independence之间的关系"><a href="#各种Independence之间的关系" class="headerlink" title="各种Independence之间的关系"></a>各种Independence之间的关系</h3><p><a target="_blank" rel="noopener" href="https://onlinecourses.science.psu.edu/stat504/node/108">https://onlinecourses.science.psu.edu/stat504/node/108</a><br>    1.    Mutual independence – all variables are independent from each other, denoted (A,B,C)  or A⊥⊥B⊥⊥C .<br>    2.    Joint independence – two variables are jointly independent of the third,  denoted (AB,C)  or AB⊥⊥C .<br>    3.    Marginal independence – two variables are independent while ignoring the third, e.g., θAB=1, denoted (A,B) .<br>    4.    Conditional independence – two variables are independent given the third, e.g., θAB(C=k)=1 for all k=1,2,…,K, denoted (AC,BC)  or A⊥⊥B|C .<br>    5.    Homogeneous associations – conditional (partial) odds-ratios don’t depend on the value of the third variable, denoted (AB,AC,BC) .<br>Before we look at the details, here is a summary of the relationships among these models:<br>    ▪    Mutual independence implies joint independence, i.e., all variables are independent of each other.<br>    ▪    Joint independence implies marginal independence, i.e., one variable is independent of the other two.<br>    ▪    Marginal independence does NOT imply joint independence.<br>    ▪    Marginal independence does NOT imply conditional independence.<br>    ▪    Conditional independence does NOT imply marginal independence.</p>
-<p>2017.12.11<br>在回归分析图中，经常有一道红线。红线是x-y 坐标关系的非参数拟合，并不是均值。 </p>
+<h3 id="各种independence之间的关系"><a class="markdownIt-Anchor" href="#各种independence之间的关系"></a> 各种Independence之间的关系</h3>
+<p><a target="_blank" rel="noopener" href="https://onlinecourses.science.psu.edu/stat504/node/108">https://onlinecourses.science.psu.edu/stat504/node/108</a><br />
+1.	Mutual independence – all variables are independent from each other, denoted (A,B,C)<br />
+or A⊥⊥B⊥⊥C<br />
+.<br />
+2.	Joint independence – two variables are jointly independent of the third,  denoted (AB,C)<br />
+or AB⊥⊥C<br />
+.<br />
+3.	Marginal independence – two variables are independent while ignoring the third, e.g., θAB=1, denoted (A,B)<br />
+.<br />
+4.	Conditional independence – two variables are independent given the third, e.g., θAB(C=k)=1 for all k=1,2,…,K, denoted (AC,BC)<br />
+or A⊥⊥B|C<br />
+.<br />
+5.	Homogeneous associations – conditional (partial) odds-ratios don’t depend on the value of the third variable, denoted (AB,AC,BC)<br />
+.<br />
+Before we look at the details, here is a summary of the relationships among these models:<br />
+▪	Mutual independence implies joint independence, i.e., all variables are independent of each other.<br />
+▪	Joint independence implies marginal independence, i.e., one variable is independent of the other two.<br />
+▪	Marginal independence does NOT imply joint independence.<br />
+▪	Marginal independence does NOT imply conditional independence.<br />
+▪	Conditional independence does NOT imply marginal independence.</p>
+<p>2017.12.11<br />
+在回归分析图中，经常有一道红线。红线是x-y 坐标关系的非参数拟合，并不是均值。</p>
 <p>2018.1.23</p>
-<h3 id="logistic回归的两种报错原因："><a href="#logistic回归的两种报错原因：" class="headerlink" title="logistic回归的两种报错原因："></a>logistic回归的两种报错原因：</h3><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/csqazwsxedc/article/details/52033506">http://blog.csdn.net/csqazwsxedc/article/details/52033506</a></p>
+<h3 id="logistic回归的两种报错原因"><a class="markdownIt-Anchor" href="#logistic回归的两种报错原因"></a> logistic回归的两种报错原因：</h3>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/csqazwsxedc/article/details/52033506">http://blog.csdn.net/csqazwsxedc/article/details/52033506</a></p>
 <p>2018.1.27</p>
-<h3 id="如何确定Experimental-Unit："><a href="#如何确定Experimental-Unit：" class="headerlink" title="如何确定Experimental Unit："></a>如何确定Experimental Unit：</h3><p><a target="_blank" rel="noopener" href="http://www.isogenic.info/html/6__experimental_unit.html#more">http://www.isogenic.info/html/6__experimental_unit.html#more</a></p>
+<h3 id="如何确定experimental-unit"><a class="markdownIt-Anchor" href="#如何确定experimental-unit"></a> 如何确定Experimental Unit：</h3>
+<p><a target="_blank" rel="noopener" href="http://www.isogenic.info/html/6__experimental_unit.html#more">http://www.isogenic.info/html/6__experimental_unit.html#more</a></p>
 <p>帮助区别了一个动物/一群动物，甚至有时候还可以在一个实验中存在多种EU</p>
-<p>2018.1.29<br>今天和Bean聊天：<br>①iid个体中每一个数据点都提供了和前一个一样多的信息。而如果有相关性，比如说ρ=0.99. 那么基本上第一个数据点就代表了全部信息。后面的数据点与第一个相比都没有提供足够多的信息。<br>②当我们说到充分统计量的时候，老师说每一个x向量的Sample-Size都是n。如果我们有多个数据比如说一个做了10次，一个做了20次。如果是iid的话，我们应该把他们放到一起变成30个。这样减少方差，没必要分成两个来考虑。</p>
-<p>2018.1.30<br>Fangfang：在2-sample-t-test中，两个分布可以不用都是Normal。只要他们都是对称的，或者skewed的程度差不多就可。</p>
-<h1 id="新版"><a href="#新版" class="headerlink" title="新版"></a>新版</h1><ul>
-<li>Gamma 函数不是单调递增的<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gamma_plot.svg/650px-Gamma_plot.svg.png" srcset="/img/loading.gif" alt=""></li>
+<p>2018.1.29<br />
+今天和Bean聊天：<br />
+①iid个体中每一个数据点都提供了和前一个一样多的信息。而如果有相关性，比如说ρ=0.99. 那么基本上第一个数据点就代表了全部信息。后面的数据点与第一个相比都没有提供足够多的信息。<br />
+②当我们说到充分统计量的时候，老师说每一个x向量的Sample-Size都是n。如果我们有多个数据比如说一个做了10次，一个做了20次。如果是iid的话，我们应该把他们放到一起变成30个。这样减少方差，没必要分成两个来考虑。</p>
+<p>2018.1.30<br />
+Fangfang：在2-sample-t-test中，两个分布可以不用都是Normal。只要他们都是对称的，或者skewed的程度差不多就可。</p>
+<h1 id="新版"><a class="markdownIt-Anchor" href="#新版"></a> 新版</h1>
+<ul>
+<li>Gamma 函数不是单调递增的<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gamma_plot.svg/650px-Gamma_plot.svg.png" srcset="/img/loading.gif" alt="" /></li>
 <li></li>
 <li>检验同方差：Bartlett’s test（采用均值和MSE。不是很robust, 最好没有outlier，很需要正态假设）, the Levene’s test（采用中位数和MAE，更robust）</li>
-<li>One-way-anova中计算test-power的方式还可以用OC Curves（operating characteristic）$\Phi^2=\frac{n\delta^2}{2a\sigma^2}$其中$\delta$指的是组间最大差值:$max(t_i)-min(t_i)$</li>
+<li>One-way-anova中计算test-power的方式还可以用OC Curves（operating characteristic）<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi mathvariant="normal">Φ</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>n</mi><msup><mi>δ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>a</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\Phi^2=\frac{n\delta^2}{2a\sigma^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.36292em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01792em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathdefault mtight">a</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03785em;">δ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03785em;">δ</span></span></span></span>指的是组间最大差值:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>−</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">max(t_i)-min(t_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
 <li>在计算线性回归的方差时，RSS=残差平方和/n而不是除n-1，因为原假设下残差均值为0</li>
 </ul>
-<p>为什么在公式 $y=\beta_0+\beta_1x$ 中，$\hat{\beta_0} \ne \bar{y}$ ?<br>答：因为首先我们知道拟合的直线肯定会经过$(\bar{x},\bar{y})$ . 所以不一定有$\bar{x} = 0$ .除非列正交，导致$\mathbb{1}_nx = 0$.</p>
-<p>在所有缺失x但是不缺y的数据中，将x填成$\bar{x}$ ，只会改变拟合直线的截距而不改变斜率。 </p>
-<p><img src="https://pic4.zhimg.com/80/v2-85090cf884b42c46ed50148ede175def_hd.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>为什么在公式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">y=\beta_0+\beta_1x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">x</span></span></span></span> 中，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><msub><mi>β</mi><mn>0</mn></msub><mo>^</mo></mover><mi mathvariant="normal">≠</mi><mover accent="true"><mi>y</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\hat{\beta_0} \ne \bar{y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1523199999999998em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9578799999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">^</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7622199999999999em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˉ</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span> ?<br />
+答：因为首先我们知道拟合的直线肯定会经过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>ˉ</mo></mover><mo separator="true">,</mo><mover accent="true"><mi>y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\bar{x},\bar{y})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.22222em;">ˉ</span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˉ</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span> . 所以不一定有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>x</mi><mo>ˉ</mo></mover><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\bar{x} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.56778em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.22222em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> .除非列正交，导致<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mn>1</mn><mi>n</mi></msub><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbb{1}_nx = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord">1</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>.</p>
+<p>在所有缺失x但是不缺y的数据中，将x填成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>x</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.56778em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.22222em;">ˉ</span></span></span></span></span></span></span></span></span> ，只会改变拟合直线的截距而不改变斜率。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-85090cf884b42c46ed50148ede175def_hd.jpg" srcset="/img/loading.gif" alt="" /></p>
 <ul>
-<li><p>one sample t-test 分母为什么是$\sqrt{n}$ ? 因为$\bar{X}$ 的方差是$\sigma^2 / n$ </p>
+<li>
+<p>one sample t-test 分母为什么是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span> ? 因为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>X</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\bar{X}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8201099999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.16666em;">ˉ</span></span></span></span></span></span></span></span></span> 的方差是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mi mathvariant="normal">/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\sigma^2 / n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathdefault">n</span></span></span></span></p>
 </li>
-<li><p>Boxplot上下的线应该是1.5IQR，但是会停在1.5IQR以内最大值/最小值（所以有时候那条线可能会比1.5IQR短）</p>
+<li>
+<p>Boxplot上下的线应该是1.5IQR，但是会停在1.5IQR以内最大值/最小值（所以有时候那条线可能会比1.5IQR短）</p>
 </li>
-<li><p>E(X1 + X2) = E(X1) + E(X2) 即使X1, X2不是独立的。因为在double integral的时候$\int X_1f(X_1, X_2) dX_1dX_2$ 会把X2积掉，从而只剩下X1的边缘分布。</p>
+<li>
+<p>E(X1 + X2) = E(X1) + E(X2) 即使X1, X2不是独立的。因为在double integral的时候<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∫</mo><msub><mi>X</mi><mn>1</mn></msub><mi>f</mi><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>X</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mi>d</mi><msub><mi>X</mi><mn>1</mn></msub><mi>d</mi><msub><mi>X</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\int X_1f(X_1, X_2) dX_1dX_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.11112em;vertical-align:-0.30612em;"></span><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 会把X2积掉，从而只剩下X1的边缘分布。</p>
 </li>
 </ul>
-<p>对于二维数据，什么时候PCA跟Linear-Regression重合？<br>因为两条线都过X_mean, Y_mean，所以只需要斜率</p>
+<p>对于二维数据，什么时候PCA跟Linear-Regression重合？<br />
+因为两条线都过X_mean, Y_mean，所以只需要斜率</p>
 <ul>
 <li>PCA1的斜率：loading_y / loading_x</li>
 <li>lm的斜率：cov(X,Y) / var(X)</li>

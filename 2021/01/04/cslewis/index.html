@@ -1,0 +1,813 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="分享笔记——实践费曼学习法">
+  <meta name="author" content="大连铁板王">
+  <meta name="keywords" content="">
+  <title>C.S.Lewis - 大家一起来</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2167517_wjpxw66krp.css">
+
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>大家一起来</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-crossholybible"></i>
+                信仰
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/">
+                    
+                    耶稣说
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
+                    
+                    Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/">
+                    
+                    郭振游门训笔记
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-tree"></i>
+                生活
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/08/17/travel/">
+                    
+                    旅行
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/">
+                    
+                    随手记
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%A4%90%E9%A6%86/">
+                    
+                    餐馆
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%85%92%E5%BA%97/">
+                    
+                    酒店
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/11/20/zongru/">
+                    
+                    老李的日本生活
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-book"></i>
+                读书
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/09/17/Reading/">
+                    
+                    佳句合集
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/book/">
+                    
+                    单本书籍
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-music"></i>
+                音乐
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/">
+                    
+                    聆听音乐
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category1-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://static01.nyt.com/images/2013/11/23/arts/23LEWIS/23LEWIS-superJumbo.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-04 14:51" pubdate>
+        2021年1月4日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      94
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">C.S.Lewis</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>这里记录一下 C.S.Lewis 的读书笔记</p>
+<ul>
+<li>魔鬼家书</li>
+</ul>
+<a id="more"></a>
+<h1 id="魔鬼家书"><a class="markdownIt-Anchor" href="#魔鬼家书"></a> 魔鬼家书</h1>
+<p>1</p>
+<blockquote>
+<p>你去引发辩论，倒正好提醒病人去思辨。一旦思辨这部分苏醒过来，谁知道会怎样？哪怕有某条思路得以扭转到我们这边，你会发现自己已经让他越来越习惯于把注意力从当下感官体验的急流中抽回，并将心思转移到思考人类共同的那些问题上去，这种习惯可是致命的。你的工作就是要把他的注意力锁定在那<strong>感官体验的急流</strong>中。教他把那急流称为“现实生活”，却别让他去问自己所说的“现实”是什么意思。</p>
+</blockquote>
+<blockquote>
+<p>记住，他和你不一样，他不完全是一个灵。你没有当过人（哼，仇敌这一优势真可恶！），你不知道他们多么地受制于日常琐事的压力。我以前有个病人，是一位可靠的无神论者，过去常常在大英博物馆读书。一天，他坐在那儿阅读，我看到他脑子中有一串思绪开始要误人歧途了。当然，仇敌那会儿就在他身边。我还没有反应过来是怎么一回事，就发现自己二十年来的工作成果开始摇摇欲坠。如果我失去理智，开始试图用辩论来防守，那就全完了。但我可没那么傻。我马上旁敲侧击那人最受我控制的部分，<strong>暗示他午饭时间快到了。</strong></p>
+</blockquote>
+<p>2</p>
+<blockquote>
+<p>接下来，要在失望或兴致大减上面下足功夫，病人在成为教会一员后的几周里肯定会感到失望。<strong>每当人类要开始努力有所成就的时候，都会遭遇这种失望，而仇敌允许这失望滋生。<strong>一个男孩在幼儿园里为《奥德赛故事集》而着迷，于是下定决心要开始学希腊文，这时他会失望。相爱的人结了婚，开始学习在生活中相处这一艰巨任务时，他们会失望。在生活的各个领域中，这种失望标志着梦想抱负正朝着艰苦实干过渡。仇敌愿意冒这个险，原因在于牠有一个古怪而不切实际的构想，要用冥顽不化的爱把这伙猥琐可恶的人类造就成祂所谓的“有自由意志的”爱人和仆人一一“儿女”是祂用的字眼。祂要和人类这种两条腿的动物有不正常的私通，这简直把整个灵界的脸都丢尽了。这就是我们的机会所在。但要记住，这也是我们的危险所在。这种最初的枯燥乏味一旦成功度过，他们就</strong>不那么依赖于感觉</strong>，因此引诱难度会大很多。</p>
+</blockquote>
+<blockquote>
+<p>他和仇敌相交的时间还不够长，<strong>连一丁点儿真正的谦卑都没有</strong>。他说自己有罪，这类话全都是鹦鹉学舌，哪怕是跪着祷告也一样。在内心深处，他还是相信，自己皈依信仰这一举动就已经让他在仇敌的账簿里有了一笔非常可观的存款，因此，他认为自己到教会和这群平庸而又“自以为是”的人坐在一起，本身就是降尊纡贵，已经表现出了极大的谦卑。你要尽力让他的思想保持在这样的状态中，时间越长越好。</p>
+</blockquote>
+<p>3</p>
+<blockquote>
+<ol>
+<li>你应该鼓励他只看到自己思想洁净的那一面。引导他关注最艰深、最属灵的职责，从而使他对那些最起码的义务视而不见。让他哪怕做上一个小时的自我反省，也无法发现那些和他同住或共事的人一眼就可以看出的毛病，你一定要把他带人这个境界。</li>
+<li>毫无疑问，我们无法阻止病人为自己母亲祷告。但我们却有法子使这些祷告变得没有害处。一定要确保这些祷告全都很“属灵”，务必让他关心她的灵魂状况，却从不注意母亲身患风湿。</li>
+</ol>
+</blockquote>
+<p>4</p>
+<blockquote>
+<p>任自己沉浸在“一种祈祷的感觉”中。这正是我们想要的那种祷告；它很像那些事奉仇敌的高手们所做的默祷，因此，那些聪明伶俐、喜欢偷懒的病人们就可以被这种祷告蒙蔽好一阵子。最不济，也要让他们认为身体姿势对祷告没有丝毫影响。他们常常会忘记一件事，你却一定要把这件事牢记在心，即：**他们是动物，无论身体做什么事，都会对其灵魂有影响。**人类一直以为我们在不断地往他们脑子里灌输思想，这真可笑，其实啊，我们最出色的工作是通过让他们忘记一些事情而完成的。</p>
+</blockquote>
+<blockquote>
+<p>要让他们一直关注自己的心，并按着自己的意思，<strong>努力在心里制造出各种感觉</strong>。如果他们想求仇敌赐下仁爱，就让他们在不知不觉间开始为自己努力制造仁爱的感觉。如果他们想求仇敌赐下勇气，就让他们努力去营造勇敢的感觉。当他们祈求仇敌赐下宽恕时，让他们努力去感觉自己罪得赦免。要教导他们用是否成功地营造出了所需感觉来衡量每个祷告的价值；永远不要让他们怀疑，酝酿感觉的成败多多少少取决于在那一刻他们是健康还是生病，是神清气爽，还是疲惫不堪。</p>
+</blockquote>
+<blockquote>
+<p>这里面还会夹杂一些病人自己对神圣事物那已经被物化了的崇敬之情（以及随之而来的各种感官感觉）。据我所知，在一些案例中，病人口里所说的那位“上帝”，其实只坐落在卧室天花板的左上角，只在他自己脑子里，或只在墙上那尊耶稣受难像那里。不管那个大杂烩性质如何，**你必须要让他向它祷告——就是向他自己所造之物祷告，而不是向创造了他自己的那位祷告。**你甚至可以鼓励他煞有其事地去修正和改进这一大杂烩，并在整个祷告中把它一直牢牢钉在他的想象之中。一旦他能区分这两者，自觉地向「神自己而不是自己心目中的神」祷告，我们就陷人了绝境。</p>
+</blockquote>
+<p>6</p>
+<blockquote>
+<p>当然，你的病人届时将会知道，他必须要以忍耐之心顺服仇敌的旨意。仇敌讲这话的意思，主要是说<strong>他应该以忍耐之心承受当前的那些焦灼和忧虑，这才是实际分派到他身上的磨难</strong>。他要对着这个实际的磨难说“愿你的旨意成全”，供应灵命日粮的目的就是为了让他能够完成忍受实际的磨难这一日常任务。你的工作是要确保病人永远不把当前的惧怕心理看成是要背的十字架，而只关心他所怕的那些事情。就让他把那些事情视为自己的十字架：让他忘记，既然它们互不相容，就不可能全部落到他头上，你要让他努力地对着这些臆想出来的事情提前操练毅力和忍耐。其实，同时对几十种想象出来的命运真心顺服，那简直是不可能做到的事，因此，仇敌不会特别帮助那些妄想做到这点的人，相形之下，<strong>默默承受当前实际的痛苦就容易多了，即便痛苦中夹杂着恐惧，仇敌通常也会采取直接行动进行支援。</strong></p>
+</blockquote>
+<blockquote>
+<p>在你那病人的灵魂中，将会有一些爱心，也会有一些怨恨。最好把这些怨恨引到他周围离他最近的人那里去，让他把怨恨发泄到那些他天天都会碰面的人身上，却把爱心投射到遥不可及的圈子里去，对他素未谋面的人充满爱心。<strong>由此，这怨恨开始变得全然真实起来，而其爱心则很大程度上只存在于想象之中。</strong></p>
+</blockquote>
+<ul>
+<li>爱身边的人，爱在实处。</li>
+</ul>
+<p>7</p>
+<blockquote>
+<p>不管他采取哪种立场，你的主要任务都一样。就是要让他开始把爱国主义或和平主义当作是他信仰的一部分；接着让他在党派精神的影响下，将其视为信仰最重要的部分；然后，你可以暗地里持续不断地慢慢调教他，让他进人<strong>把宗教变成只是“崇高事业”一个组成部分</strong>这种境界。这时，基督教义之所以有价值，主要是因为该教义可以为英国参战或和平主义做绝佳辩护。你千万不要让病人<strong>把现世之事主要看成是操练顺服的材料</strong>。一旦你让他<strong>把世界当成终极目标，把信仰看成是达到目标的手段</strong>，那个人几乎就归你了，至于他追求的是哪种世俗目标，倒并没有太大差别。</p>
+</blockquote>
+<p>8</p>
+<blockquote>
+<p>人类是两栖动物—— 一半是灵，另一半是动物（当年我们的父下决心不再拥护仇敌，原因之一便是仇敌执意要制造出这种讨厌的杂种）。作为灵，他们属于永恒世界；作为动物，他们栖息在时间里。这就意味着，尽管他们的灵可以指向一个永恒的目标，他们的肉体、激情和想象却在不断变化中，因为身处时间之中就意味着要不断变化。<strong>因此，他们要达到恒定境界的最短路径就是进行波浪式运动</strong>——上升到一个层次，然后跌落下来，反反复复地上升下降，形成一连串的低潮和高潮。要是你曾仔细观察过这病人，早该看到这种波动存在于他生活的方方面面——他对自己工作的兴趣，他对朋友的情谊，他肉身的欲望，全都上下起伏着。只要他生活在地上，情绪和身体上的充沛活泼期就会与麻木贫乏期交替出现。目前你的病人正经历的那种干枯晦暗，并不像你傻想的那样全是你的功劳。这纯粹是一种自然现象，你若不好好利用，就根本不会对我们有任何好处。</p>
+</blockquote>
+<blockquote>
+<p>仇敌试图永久占有一个灵魂的时候，他更多依赖那些低潮，甚至多过运用高潮。对我们而言，一个人的本质是食物；我们的目标是把它的意志吞并到我们的意志中去，通过牺牲这个人来扩张我们自己以自我为中心的地盘。而仇敌要求人具备的顺服则完全是另一码事。所有那些关于他对人的爱、人在事奉中将会得到完美自由的言论并非（如我们所乐意相信的那样）纯属鼓吹宣传，而是一个触目惊心的真理，这是我们不得不面对的一个事实“的确真想把整个宇宙塞满自己那些可恶的复制品——就是那些在比例上微缩，生命品质上和祂自己相似的被造物，与祂相似不是因为祂把他们吞了下去，而是因为他们的自由意志降服于祂的意旨。我们要的是最终可以变为食物的牲畜，祂要的是最终可以变为儿女的仆人。我们想吸进来，想给出去。我们是空的，需要填满，祂是满的，所以会满溢泛滥。我们争战的目标是为了建立起一个世界，让我们地下的父把所有其他生灵山都吸进它里面。仇敌则想要一个塞满了生灵的世界，这些生灵与祂合一，却仍旧保持其独立性。</p>
+<p>就在这里，低潮派上了用场。你一定常常不解，为何仇敌不多动用些自己的权力去使人类灵魂感觉得到祂的同在，深浅程度和时间可以任由祂选择。但现在你应该明白了，恰恰是因为祂计划的性质，祂才禁止自己使用“无法抗拒”和“不可反驳”这两种武器。单单压制一个人的意志（因为祂感到除了在最微弱缓和程度上的临在之外，其他任何动作都将会践踏人的意志）对祂毫无用处。祂不能强奸，只能追求。因为祂有一个卑鄙龌龊的想法，想要鱼与熊掌兼得．这些人会与祂合为一体，却仍会保持自己本色。单纯把他们的自我除掉或者把他们吞下去都行不通。祂准备在开始的时候稍微强势一点．祂会在他们起步的时候发出祂自己同在的信号，尽管微弱，但是对他们而言则是非同小可，同时，他们会感觉到心里甘甜，能够轻易征服诱惑。但是祂不会让这种暧昧状态持续很长时间。他迟早都会收回所有那些支持和激励，即便没有实际收回，至少也是从他们意识体验里抽走。祂让这些被造物用自己的腿站立——单单凭着意志去履行那些己经没有丝毫吸引力的义务。恰恰就是在这样的低潮期，它开始成长为那种祂想要它成为的那种被造物，这里成长比在高潮期要多得多。因此，<strong>在干枯状态下所做的祷告是最讨祂欢心的</strong>。我们能够通过持续不断的诱惑牵着我们那些病人们的鼻子走，因为我们只是把他们当成餐桌上的食物而己，他们意志受干涉越多越好。袍不能像我们诱惑人们犯罪那样“诱惑”他们有德性。祂想让他们学会走路，因此必须要放开自己的手；而他们只要有去行走的意向，哪怕跌跌撞撞，祂也会满意得很。瘟木鬼，不要上当。<strong>当一个人不再向往却仍旧有心去完成我们仇敌的旨意，当一个人仰望茫茫宇宙，似乎所有痕迹都消失殆尽，于是问自己为何被离弃，却仍旧遵行祂的命令，那时候，我们的事业就会陷人最大的危机。</strong></p>
+</blockquote>
+<p>9</p>
+<blockquote>
+<p>首先，我发现人类波动起伏中的低潮期为所有的感官诱感，特别是性诱惑，提供了绝佳机会。这可能会让你有点吃惊，当然啦，在高潮期精力更充沛，因此潜在的欲望更亢奋；但你必须记住，那些时候人对诱惑的克制力也处于巅峰状态。你想用健康和兴致来制造贪淫，唉，这些东西很容易被用于工作、娱乐、思考或无伤大雅的嬉戏。这种攻击在人整个内心世界单调、冷酷、空虚的时候，成功率则要高得多。值得一提的是，低潮期性欲与高潮期相比有质的区别——<strong>这种性欲更少引起人类称之为“坠人爱河”的那种水乳交融现象，更容易被拉向性变态</strong>。性有可能让人变得慷慨、激发想象力，甚至还会触动心灵，这些伴随着性而来的东西常把人类性欲变得让我们大失所望，低潮期的性欲却不会被这些东西玷污。肉体的其他欲望也是一样的。在你那病人沮丧和厌倦时，你逼他把喝酒当作一种镇定剂，把他造就成一个彻头彻尾酒鬼的可能性远远大于鼓励他在快乐开心时与朋友喝酒助兴。永远不要忘记，在安排处理健康、正常和令人满足的快乐时，从某种程度上说，我们是站在了仇敌的地盘上。我知道我们通过享乐虏获了很多灵魂。但这仍旧是祂发明的，而不是我们。<strong>祂创造了各样快乐：迄今为止，我们所有研究都无法使自己具备制造能力，连一个快乐也造不出来。我们唯一能做的就是鼓励人类在仇敌所禁止的时间、以祂禁止的方式或程度来享受祂所创造的快乐。因此，我们一直夜以继日地工作，要把所有快乐从自然状态转化为最不自然、最不可能联想到其创造者、愉悦程度最低的状态。公式就是让他们对一种不断递减的快乐产生越来越强烈的渴望</strong>。这招更可靠；且格调更高。得到了一个人的灵魂却什么也不回馈给他一一这深合我们父的心意。那些低潮正是启用这一方法的绝佳时机。</p>
+</blockquote>
+<p>10</p>
+<blockquote>
+<p>你可以让他去积极地享受自己生活中的这种两面性。利用他的虚荣心就能做到这一点。他可以学会喜欢上在星期天的时候屈膝在那个杂货店主旁边，这只不过是因为他知道，那个杂货店主根本不可能理解自己星期六晚上惯于进出的那个文雅而极尽嘲讽之能事的世界；另一方面，他可以更享受和这些风流人士边喝咖啡边说淫秽和亵渎宗教的话，这是因为他知道自己内心里有一个“更加深邃&quot;而“属灵”的世界，超出他们的理解范围。你明白这招了吧——那些世故的朋友们触及到他生活的一面，那个杂货店主看到的则是另外一面，<strong>而他才是可以把这些人全都看透的那个平衡而复杂的完全人</strong>。因此，尽管他一直至少对着两群人当面一套背一套，却不会感到羞愧，反而不断有自得的感觉暗暗涌上心头。</p>
+</blockquote>
+<p>11</p>
+<blockquote>
+<p>残忍是可耻的——而一个残忍的人若能将之呈现为一个好笑的笑话，残忍也会变得无伤大雅。<strong>一个人只要能够让别人把自己的行为当成是一个笑话，几乎就可以任意妄为，不仅不会招致非难，同伴们反而会赞赏有加</strong>，你只要让这个人发现这个为所欲为的窍门，那就比使他讲一千个黄色笑话或亵渎宗教的笑话还要好，这将更有助于他被判人地狱。而且英国人对幽默的看重几乎可以完全把这种诱惑掩饰住，让你的病人没有丝毫戒心。对于任何“这可能有点过火了”的念头，你都可以扣上“清教徒派头”或“缺乏幽默”的帽子。</p>
+</blockquote>
+<blockquote>
+<p>嘲谑才是最佳手段。首先，它非常经济。只有聪明人才说得出一个关于德性的真笑话，或者关于任何其他事情的真笑话，而所有人经过培训之后，都能够把德性当作滑稽的事情来讲。一群轻浮戏谑的人总是假装笑话已经讲到位了。其实没有人真的在讲笑话，他们只是在以讥笑的口气来谈论一切严肃主题，好像自己已经发现它们荒谬可笑的一面似的。久而久之，<strong>嘲谑的习惯就会在一个人周围镀上一层隔开仇敌的防护层</strong>，据我所知，这是最佳防护层，而且其他大笑的来源所具有的危险它一概全无。嘲谑离喜乐有十万八千里；它使智力枯干，而非使之更敏锐；而且它也不会在那些嘲谑成性的人之间激发出任何感情。</p>
+</blockquote>
+<ul>
+<li>减少嘲笑和戏谑</li>
+</ul>
+<p>12</p>
+<blockquote>
+<p>只要他外在还维持着一个基督徒的行为习惯，你就能让他仍然以为自己只不过结交了几个新朋友，有了一些新乐子而已，以为自己的灵性状态和6周前没有太大差别。只要他仍旧这么想，就不会彻底而清楚地认罪并毫不含糊地悔改，他虽然有些不安，却只是隐约感觉到自己最近有些不对劲，这样一来，<strong>我们就用不着和悔改做斗争，只要对抗那种感觉就好了</strong>。</p>
+</blockquote>
+<blockquote>
+<p>这种状况稳固下来之后，你就可以逐步从用快乐诱惑病人的苦工中解脱出来了。到那时候，他内心不安．却不愿意面对这种感觉，这样就会与所有的真快乐越来越绝缘，与此同时，虚荣心、兴奋以及轻率讥讽的快感在习以为常之后就会变得不像以前那样享受，而习惯却让他对这些东西更加欲罢不能（习惯会使一种快乐变成家常便饭，这是很值得庆幸的一点），这时你会发现，没有任何事情能够吸引他那些涣散的注意力。<strong>你不再需要用一本他自己真正喜欢的好书来迷住他，使他不祷告、不工作、废寝忘食，昨天报纸上面的广告栏就足够了</strong>。你可以让他在闲谈中浪费时间，不仅是和那些他自己喜欢的人一起谈天聊以自娱，而且还和那些他根本不在乎的人聊一些极为沉闷的话题。你可以让他很长一段时间都无所事事。你可以让他晚上不睡觉，不是跑出去花天酒地，而是在一个冰冷的房间里呆呆地看着一堆熄灭的柴火。<strong>我们希望他能避开一切健康向上的活动，现在这些都能被抑制住，而且不用给他任何补偿</strong>。</p>
+</blockquote>
+<blockquote>
+<p>如果打牌能得到一个人的灵魂，那打牌就不比谋杀差到哪里去。通往地狱的那条最安全的路其实并不陡峭——它坡度缓和，地面平坦，没有急转弯，没有里程碑，也没有路标。</p>
+</blockquote>
+<p>13</p>
+<blockquote>
+<p><strong>病人认罪悔改，敌方称为“恩典”的那东西死灰复燃</strong>，按着你所描述的悔改和“恩典”的程度来看，我们简直就是一败涂地。这相当于第二次归信——而且可能比第一次归信更为深刻。</p>
+</blockquote>
+<blockquote>
+<p>在病人从老磨坊往回走的路上，阻止你攻击他的那个窒息性云团是一种众所周知的现象，你本该认得出才对。它是仇敌最野蛮的武器，当祂以某种莫名其妙的方式直接与病人同在的时候，就会出现这样的云团。有些人永远被这种云团裹着，我们连靠近他们的机会都没有。</p>
+</blockquote>
+<blockquote>
+<p>痛苦和快乐的特点就在于它们绝对是真实的。所以，<strong>你若是想让你的病人沉溺于想象出来的痛苦，想采用罗曼蒂克法来毁掉他，那你就要不惜一切代价，保护他不经历任何真正的痛苦，原因很简单，五分钟真正的牙疼就可以揭示出罗曼蒂克式悲哀其实只不过是在无病呻吟而已，你的通盘计划就会露馅</strong>。难道你就料想不到，你一直以来辛辛苦苦教会他珍视的那些赝品一旦摆在真快乐旁边，就会因为相形见绌而被抛在一边？难道你不知道书和散步给他带来的喜悦是最危险的一种快乐？这种快乐会剥掉你在他感性上面渐渐结成的硬壳，并让他有一种回到家里、寻回自我的感觉，你连这个也不知道吗？你曾想过要让他迷失本性，由脱离自我过渡到脱离仇敌，在这方面你本来已頗有一些进展。现在，所有功夫都白费了。</p>
+</blockquote>
+<ul>
+<li>我原来是被想象出来的痛苦所打败</li>
+</ul>
+<blockquote>
+<p>当祂说要他们放弃自我的时候，祂指的仅仅是要他们摆脱自我意志的搅扰。一旦他们做到了这一点，祂就把所有的个性又全都归还给他们，并且夸口（恐怕是当真的）说<strong>当他们完全属于祂之后，他们就会活得更加本色，远胜于从前</strong>。因此，祂一方面乐于见到他们把自己那无辜的意志全部献给祂为祭，另一方面却痛恨看见他们出于任何其他原因而偏离他们自己的天性。</p>
+<p>我们应该一直鼓励他们做仇敌痛恨之事。每个人的最深的喜好和冲动是仇敌当初给这个人的原材料，是起点。因此，<strong>我们只要让他离开这些喜好和冲动，就可以夺得一些优势；哪怕在那些无关紧要的事情上，也要用世界、习俗或者时尚的标准来取代这个人自己真正的好恶</strong>。我自己就把这点做得很到位。我立下一条规矩，一定要让我的病人戒除一切除了罪以外的强烈个人嗜好，类似打板球、集邮或者喝可乐这样微不足道的嗜好也要务必根除净尽。一个人若真心喜欢上了世界上任何一样东西，既不计较利害得失，也不关心别人怎么看，只是为了这个东西本身的缘故而喜欢它，那么他就会因为这一事实，对我们最巧妙的攻击有了免疫力。你应该千方百计地让病人离开他真正喜欢的人、真正喜欢吃的东西和真正喜欢读的书，让他去结交“最优秀”的人、吃“正确”的食物、读“重要”的书。我就认识一个这样的人，他抵制住了在社交上的雄心抱负的强烈诱惑，原因是他更嗜吃猪肚和洋葱。</p>
+</blockquote>
+<blockquote>
+<p>重要的是不要让他采取任何行动。不管他对这次悔改有多么重视，<strong>只要他不把这次悔改转化成行动，就没有什么大碍</strong>。就让这小畜生沉溺于悔改中吧。他如果喜欢写书，那就让他写一本关于这次悔改的书好了。这往往是打压仇敌在人类灵魂里所播种子的绝佳手段。他做什么都可以，只要不把悔改付诸行动就行。我们若能把敬虔排除在他的意志之外，那他想象和感情当中的敬虔就不会对我们有任何害处。有一个人曾说过，重复可以增强主动习惯，削弱被动习惯。<strong>他若经常心有所感却不采取任何行动，那么他采取行动的能力就会越变越弱，长此以往，他的感觉也会变得越发迟钝起来</strong>。</p>
+</blockquote>
+<p>14</p>
+<blockquote>
+<p>我看目前只有一件事好做。你有没有让你的病人注意到，他自己已经变得谦卑起来了？一旦一个人意识到自己具备何种品德，对我们而言，那种品德就没那么可怕了，一切品德概莫能外，不过，这招对谦卑特别管用。在他真正虚心起来的那一刻，要把他一把抓住，并在他脑子里偷偷塞入“哎呀！我变得谦卑起来了”这样欣慰的念头，而骄傲——对于自己谦卑的骄傲——几乎立刻就会出现。如果对此危险他有所警觉，企图压抑这种新型的骄傲，那就让他对自己这种压抑骄傲之感的企图感到骄傲好了，如此这般，你尽可以一直这样与他缠斗下去。<strong>但是这招不要用太久，免得唤起了他的幽默感和分寸感，那样一来，他就只会把你嘲笑一番，然后上床睡觉去了</strong>。</p>
+</blockquote>
+<ul>
+<li>「第二滴眼泪」的终极解决办法：嘲笑魔鬼的操作。</li>
+</ul>
+<blockquote>
+<p>因为我们绝不该忘记仇敌那最讨厌、最不可理喻的特点；祂真的爱自己造出来的那些身上无毛的两足动物，对于从他们身上拿走的东西，祂总是左手取右手还。</p>
+</blockquote>
+<blockquote>
+<p>连病人的罪，仇敌都不希望他想得太多；<strong>一个人在悔罪之后，越早把注意力转向外部世界，仇敌就越高兴</strong>。</p>
+</blockquote>
+<p>15</p>
+<blockquote>
+<p>人类生活在时间里，而我们的仇敌却命定他们进人永恒。我推想，因此<strong>祂希望他们主要专注于两件事情，一是永恒本身，二是他们称为现在的那个时间点</strong>。因为现在是时间触及永恒的那一瞬间。人类对现在这一刻的感受，有些类似于我们仇敌对整个真实的体会，也只有当下的感受能瞥见整体的真实；唯有在当下，他们才能得到自由和现实。因此，祂使他们连续不断地关注永生（这就意味着关注祂）或现在——也就是说，他们要么沉思于自己和袍之间永远的合一或隔绝，要么听从良心现在的声音，背起现在的十字架，接受现在的恩典，为着现在的快乐而感恩.</p>
+</blockquote>
+<blockquote>
+<p>更好的做法是使他们活在未来。基于生理需要，人类所有的热情都早已指向那个方向，所以对未来的憧憬会激发出希望和恐惧。此外，未来对他们来说是个未知数，所以我们可以利用他们对未来的憧憬来让他们去想那些不着边际的事情。总之，<strong>在一切事物中，和永生最不相像的就是未来</strong>。它是最捉摸不定的一段时间——因为过去已经冻结，不再流转移动，现在则有永恒之光照亮。</p>
+</blockquote>
+<blockquote>
+<p>祂的理想是，<strong>一个人在为了子孙谋福利（若这是他的职业）而工作了一整天之后，把所有工作上的问题都抛开，把忧虑交托给上天，然后马上回转到他现在所需的忍耐或感恩中去</strong>。而我们却希望一个人被未来压得喘不过气来，他幻想着天堂或地狱很快就将出现在地上，并饱受这一幻想的折磨；我们希望他做好准备去违背仇敌现在的命令，并且让他以为自己只要这样做，就可以进天国或免于下地狱；我们希望他把信心建立在一些计划的成败上面，而这些计划的结局是他有生之年根本无法看到的。</p>
+</blockquote>
+<p>16</p>
+<blockquote>
+<p>难道你不知道，除非他觉得去哪个教会都无所谓，否则对教会忠心是一件极为严重的事情？你想必知道，如果一个人去教会这毛病无法根治，那就该退而求其次，打发他在附近四处寻找“适合”他的教会，直到他成为一个教会的品尝师和鉴赏家为止。道理很简单。首先，教区是按照地域而非个人喜好把那些阶层、性格洄异的人按照仇敌的心意团结了起来。相反，公理会原则，<strong>把各个教会变得有点像俱乐部一样，如果一切顺利，它最后就可以把各教会变成个小宗派或是一个排外的小圈子</strong>。其次，仇敌希望人在教会里做小学生，而寻找一个“合适”的教会使这个人变得对教会挑三拣四起来。</p>
+</blockquote>
+<p>17</p>
+<blockquote>
+<p>这个老妇人的肚腹现在已经完全控制了她的生活，咕剥鬼长年以来在这老妇人身上默默地做着不起眼的工作，其真正价值可见一斑。这个妇人现在处于一种可以称为“我只是想要……而已”的精神状态中。她只是想要一杯泡得恰到好处的茶而已，或者只是想要一个煮得恰到好处的鸡蛋而已、或者只是想要一片烤得恰到好处的面包而已。但是她从来没有发现任何一个佣人或朋友能够把这些简单的事情做得“恰到好处”——<strong>因为在她的“恰到好处”当中隐藏着一种贪得无厌的需要</strong>，要求得到她想象当中自己过去记忆里那种精准且几乎无法满足的味觉快乐；她把过去那段时间称为“你可以找到好佣人的日子”，但我们知道，她的感官在那段时间更容易取悦，<strong>在那些日子里，她还有其他的快乐，这使她不那么依赖餐桌上的享受</strong>。如今，日积月累的失望使得她每天脾气都很糟：厨娘辞职不干，朋友日渐疏远。如果仇敌让她怀疑自己对食物的兴趣是否有些过分，咕剥鬼就会打消这一丝疑虑，暗示她说，其实她并不在乎自己吃什么，但的确想让她的儿子吃得好。当然，多年以来，她对食物的过度要求其实一直是他在家里感到不自在的主要原因之一。</p>
+</blockquote>
+<p>18</p>
+<blockquote>
+<p>实际上，一个男人只要和一个女人上床，不管他们喜不喜欢，在他们之间就会建立起一种超验关系，他们要么永远享受这种关系，要么永远忍耐这种关系。这种超验关系本来是用来制造感情和家庭的，而且人若听命顺服地进人这种关系，往往也会产生感情并建立起家室，你可以让人类从这个真命题出发，推出错误结论，让他们把感情、恐惧和欲望的混合体称为“恋爱”，认为只有“恋爱”才能让婚姻幸福或者圣洁。</p>
+</blockquote>
+<blockquote>
+<p>换句话说，仇敌其实是把“恋爱”作为婚姻的结果应许给人类，而你则要把“恋爱”涂上浓墨重彩并加以扭曲，鼓励人类将之视为婚姻的基础。这样会有两个好处。首先，<strong>可以使那些没有禁欲恩赐的人因为自己还没有“恋爱”的感觉，就怯于以婚姻作为满足性欲的解决之道，而且多亏了我们，他们才会认为除了恋爱之外，为任何其他动机结婚的想法似乎都是卑鄙而自私的</strong>。是的，他们就是那么想的。若一种伴侣关系是出于相互扶持、持守贞洁、传承生命而缔结的，<strong>他们就会认为忠于这样的关系是低俗的，不如出于一阵短暂的激情而结成的伴侣关系来得高贵</strong>。</p>
+</blockquote>
+<p>19</p>
+<blockquote>
+<p>那些穿着游泳衣或紧身衣的真人其实是被勒紧、支撑起来的，这能使她们看上去既苗条又有男孩子气，而一个自然而然发育完全的女人根本不可能瘦到那个地步。同时，我们却教导现代人相信，这才是“率真”、“健康”、回归自然。结果，<strong>我们一步一步让男人的欲望指向某种根本不存在的东西——让眼睛在性欲里扮演越来越重要的角色，而与此同时，使眼睛所渴求的越来越难以在现实中找到</strong>。你很容易就能预见到结果会怎样！</p>
+</blockquote>
+<p>20</p>
+<blockquote>
+<p>如果你认真仔细地研究过男人的心思，就会发现他至少被两种想象中的女人吸引——贤妻良母型的维纳斯和地狱型的维纳斯，而且他的情欲根据其对象的不同在性质上也有差别。第一种类型的女人会使他的欲望自然而然地依顺仇敌心意——<strong>那种女人很容易搅和上仁爱，随随便便就听命完婚，披戴着我们唾弃的那种敬虔和自然的金色光环</strong>；还有另外一种类型的女人，他如野兽一般地渴望得到她，而且渴望满足这种兽性肉欲，这种类型的女人的最佳用途是吸引他彻底远离婚姻，但即便结了婚，他也会把这种女人当成一个奴隶、一个偶像或一个帮凶来对待。</p>
+</blockquote>
+<p>21</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Holy/">Holy</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Holy/References/">References</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Holy/References/C-S-Lewis/">C.S.Lewis</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/28/textbook/">
+                        <span class="hidden-mobile">刷书</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://moran79.github.io/2021/01/04/cslewis/';
+        this.page.identifier = '/2021/01/04/cslewis/';
+      };
+      function loadDisqus() {
+        (function () {
+          var d = document,
+            s = d.createElement('script');
+          s.src = '//' + 'iamwangsiyu' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      }
+      waitElementVisible('disqus_thread', loadDisqus);
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "C.S.Lewis&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

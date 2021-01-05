@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -372,12 +384,11 @@
             <h1 style="display: none">Latex心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
 <a id="more"></a>
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h1>
+<ul>
 <li>\docunmentclass{book/report/letter/article} 确定文件类型</li>
 <li>\begin{document}文章开始</li>
 <li>\end{document} 文章结束</li>
@@ -393,7 +404,7 @@
 </ul>
 <p>换行 \\</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://www.latex-tutorial.com/tutorials/figures/">添加图片</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.latex-tutorial.com/tutorials/figures/">添加图片</a></li>
 </ul>
 <pre><code class="hljs latex"><span class="hljs-tag">\<span class="hljs-name">begin</span><span class="hljs-string">&#123;enumerate&#125;</span></span> 
 <span class="hljs-tag">\<span class="hljs-name">item</span></span> 带编号的列表
@@ -402,46 +413,49 @@
 <span class="hljs-tag">\<span class="hljs-name">begin</span><span class="hljs-string">&#123;itemize&#125;</span></span> 
 <span class="hljs-tag">\<span class="hljs-name">item</span></span> 不带编号的列表
 <span class="hljs-tag">\<span class="hljs-name">end</span><span class="hljs-string">&#123;itemize&#125;</span></span></code></pre>
-
-
-
-
-
-
-
-
 <p>##环境：</p>
-<p>  \begin{环境名}[可选参数]{参数}。document可以被看成最大的环境。</p>
+<p>\begin{环境名}[可选参数]{参数}。document可以被看成最大的环境。</p>
 <p>常用环境：</p>
 <ul>
 <li>居中：center</li>
 <li>左对齐/右对齐：flushleft/flushright</li>
 <li>verbatim：抄录环境内的字符，忽视tex命令。verbatim* 将空格以␣␣的形式标注出来。行内抄录\verb+内容+和\verb*+内容+</li>
-<li>定理类环境：<br>\newtheorem{Theorem}{ 定 理 }[section]<br>\newtheorem{Proposition}[Theorem]{命题}<br>\newtheorem{Lemma}[Theorem]{引理}<br>\newtheorem{Definition}[Theorem]{定义}<br>最后加上：<br>\begin{Theorem} \label{thm:math}<br>定理内容。<br>\end{Theorem}</li>
+<li>定理类环境：<br />
+\newtheorem{Theorem}{ 定 理 }[section]<br />
+\newtheorem{Proposition}[Theorem]{命题}<br />
+\newtheorem{Lemma}[Theorem]{引理}<br />
+\newtheorem{Definition}[Theorem]{定义}<br />
+最后加上：<br />
+\begin{Theorem} \label{thm:math}<br />
+定理内容。<br />
+\end{Theorem}</li>
 </ul>
-<h2 id="间距："><a href="#间距：" class="headerlink" title="间距："></a>间距：</h2><ul>
+<h2 id="间距"><a class="markdownIt-Anchor" href="#间距"></a> 间距：</h2>
+<ul>
 <li>.\\表示一行的结束 相当于换行符</li>
 <li>\hskip(vskip) 长度 或 \hspace{长度} 或 hspace*{长度}</li>
 <li>长度单位sp&lt;&lt;pt&lt;=bp&lt;mm&lt;cm&lt;in 还有em表示字母m的宽度，ex表示字母x的高度</li>
 <li>不可换行的水平间距：\enspace =0.5em   , =1/6em    \!=-1/6em  ~=空格</li>
-<li>可换行的水平间距：\quad=1em  \qquad=2em  \enskip=0.5em \空格=空格 </li>
+<li>可换行的水平间距：\quad=1em  \qquad=2em  \enskip=0.5em \空格=空格</li>
 </ul>
-<h2 id="段落："><a href="#段落：" class="headerlink" title="段落："></a>段落：</h2><ul>
+<h2 id="段落"><a class="markdownIt-Anchor" href="#段落"></a> 段落：</h2>
+<ul>
 <li>\section{} \subsection … 可以在中括号前面加个星号，避免自动标号</li>
 </ul>
-<h2 id="数学："><a href="#数学：" class="headerlink" title="数学："></a>数学：</h2><ul>
-<li>行内公式用$…$连接</li>
+<h2 id="数学"><a class="markdownIt-Anchor" href="#数学"></a> 数学：</h2>
+<ul>
+<li>行内公式用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.10556em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span>连接</li>
 <li>行间公式：\[…\] 连接 \mbox添加有空格的文字。\mathrm添加没空格的文字</li>
 <li>为数字a戴上帽子：hat{a}或者hat a 其他符号：\tilde波浪线，\bar一条横线，\vec向量</li>
 <li>三种矩阵：中括号bmatrix，圆括号pmatrix，竖线vmatrix。行间公式—\begin{bmatrix}—a_ {1,1}&amp;\dots&amp;a_ {1,n}\\</li>
 <li>带编号的表达式：\begin{equation}\label{eq:ex1}</li>
 <li>不带编号的多行表达式：\begin{eqnarray*}  都是用\\换行</li>
 <li>带编号多行表达式：\begin{eqnarray} 没有标号的行用\nonumber \\换行 最后一行\label{eq:a2}</li>
-<li>大算子号：迭代指标写在求和号上下的情况用行间公式括起来。迭代指标写在求和号右侧的用行间公式连接起来。如$\sum_{i=1}^n a_i^2$</li>
+<li>大算子号：迭代指标写在求和号上下的情况用行间公式括起来。迭代指标写在求和号右侧的用行间公式连接起来。如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>a</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sum_{i=1}^n a_i^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.113818em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span></span></span></span></li>
 <li>其他大算子：连乘\prod 积分\int 环路积分\oint 交集\bigcap 并集\bigcup</li>
 <li>圆括号和大括号大小：\Bigg( &gt;bigg &gt;Big &gt;big&gt;什么都不加就是一个(</li>
 <li>像分段函数之类的东西，要用\left\{\begin{array}{ll} 配合 \right</li>
-<li>不等号 \not=  或者 \ne </li>
+<li>不等号 \not=  或者 \ne</li>
 <li>元素不属于\not\in 集合不属于 \not\subset</li>
 <li>不小于等于 \not\le  不大于等于\not\ge</li>
 <li>^上标 _下标</li>
@@ -451,7 +465,9 @@
 <li>hat如果不够大的话还有widehat reallywidehat….</li>
 <li>二项式系数：\binom 或者直接 C_3^2</li>
 </ul>
-<h2 id="字体与字号："><a href="#字体与字号：" class="headerlink" title="字体与字号："></a>字体与字号：</h2><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>影响字形的参数有：fontencoding-fontfamily-fontseries-fontshape 用花括号括起来</p>
+<h2 id="字体与字号"><a class="markdownIt-Anchor" href="#字体与字号"></a> 字体与字号：</h2>
+<h3 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h3>
+<p>影响字形的参数有：fontencoding-fontfamily-fontseries-fontshape 用花括号括起来</p>
 <p>常用的有:</p>
 <ul>
 <li>缺省\rmfamily  打印机字体\ttfamily 无衬线字体\sffamily</li>
@@ -461,22 +477,28 @@
 <p>还可以通过{\fontspec{Times New Roman} 文本}来特定某一种字体</p>
 <p>还可以通过\textbf \textsf \textit{文本}…的方式</p>
 <p>\mathcal{花体字} 、mathbb{实数集R}</p>
-<h3 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h3><p>格式：{\tiny 文本}</p>
+<h3 id="字号"><a class="markdownIt-Anchor" href="#字号"></a> 字号</h3>
+<p>格式：{\tiny 文本}</p>
 <p>从小到大：tiny-footnotesize-small-normalsize-large-Large-LARGE-huge=Huge</p>
 <ul>
 <li>还可以固定宽度高度{\fontsize{120}{160} \selectfont 文本}</li>
 <li>不过一般来说，TEX文件正文中不需要设置字体/字号</li>
 </ul>
-<h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a>表格：</h2><p>\begin{tabular}[pos]{table spec}<br>…<br>\end{tabular}</p>
+<h2 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格：</h2>
+<p>\begin{tabular}[pos]{table spec}<br />
+…<br />
+\end{tabular}</p>
 <ul>
 <li>table spec定义了表格的格式:| l | c | rcl | 竖线就是竖线，lrc分别是左/右对齐和居中，还可以用p{width}来创建一个段落单元格</li>
 <li>tabular环境中，用&amp;分隔列，\\开始新的一行</li>
 <li>\hline 添加一个水平线 \cline{i-j}添加一个第i列到第j列的水平线</li>
 </ul>
-<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul>
+<h1 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h1>
+<ul>
 <li>alt+delete 迅速删除一行t</li>
 </ul>
-<h1 id="犯过的错误"><a href="#犯过的错误" class="headerlink" title="犯过的错误"></a>犯过的错误</h1><p>使用\\来进行换行操作的时候报错，解决方法：<a target="_blank" rel="noopener" href="https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end">https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end</a></p>
+<h1 id="犯过的错误"><a class="markdownIt-Anchor" href="#犯过的错误"></a> 犯过的错误</h1>
+<p>使用\\来进行换行操作的时候报错，解决方法：<a target="_blank" rel="noopener" href="https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end">https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end</a></p>
 <pre><code class="hljs latex">~<span class="hljs-tag">\<span class="hljs-name">\</span></span> 使用它来代替 <span class="hljs-tag">\<span class="hljs-name">\</span></span></code></pre>
             </div>
             <hr>

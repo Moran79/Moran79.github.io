@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -339,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      63
+      62
        分钟
     </span>
   
@@ -372,18 +384,19 @@
             <h1 style="display: none">SQL心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
 <a id="more"></a>
-
-
-
-<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ul>
+<h1 id="待解决"><a class="markdownIt-Anchor" href="#待解决"></a> 待解决</h1>
+<ul>
 <li>拿到某一列最大值的那一行数据</li>
 </ul>
-<h1 id="例题解答"><a href="#例题解答" class="headerlink" title="例题解答"></a>例题解答</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum">首字母是元音</a><ul>
-<li><code>WHERE LEFT(CITY,1) IN (&#39;a&#39;,&#39;e&#39;,&#39;i&#39;,&#39;o&#39;,&#39;u&#39;);</code></li>
-<li><code>WHERE CITY REGEXP &#39;^[AEIOU]&#39;</code></li>
+<h1 id="例题解答"><a class="markdownIt-Anchor" href="#例题解答"></a> 例题解答</h1>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/weather-observation-station-6/forum">首字母是元音</a>
+<ul>
+<li><code>WHERE LEFT(CITY,1) IN ('a','e','i','o','u');</code></li>
+<li><code>WHERE CITY REGEXP '^[AEIOU]'</code></li>
 </ul>
 </li>
 </ol>
@@ -391,21 +404,14 @@
 <pre><code class="hljs SQL"><span class="hljs-keyword">set</span> @<span class="hljs-built_in">number</span> = <span class="hljs-number">21</span>; <span class="hljs-comment">/*这一步应该是设定变量？为什么不用Declare，省事！*/</span>
 <span class="hljs-keyword">select</span> <span class="hljs-keyword">repeat</span>(<span class="hljs-string">&#x27;* &#x27;</span>, @<span class="hljs-built_in">number</span> := @<span class="hljs-built_in">number</span> - <span class="hljs-number">1</span>) <span class="hljs-keyword">from</span> information_schema.tables<span class="hljs-comment">/*内置table可供遍历*/</span>
 <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">20</span>;</code></pre>
-
 <pre><code class="hljs SQL"><span class="hljs-keyword">DECLARE</span> @COUNTER <span class="hljs-built_in">INT</span> = <span class="hljs-number">20</span>;
 WHILE @COUNTER &gt;= 0
 <span class="hljs-keyword">BEGIN</span>
     PRINT <span class="hljs-keyword">REPLICATE</span>(<span class="hljs-string">&#x27;* &#x27;</span>, @COUNTER)
     <span class="hljs-keyword">SET</span> @COUNTER = @COUNTER - <span class="hljs-number">1</span>
 <span class="hljs-keyword">END</span></code></pre>
-
-
-
-
-
-
-
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h1>
+<ul>
 <li>Statement always end in a semi-colon;</li>
 <li>注释一般用/**/</li>
 <li>Command 一般都用大写来表示</li>
@@ -439,38 +445,48 @@ WHILE @COUNTER &gt;= 0
 <p><code>ORDER BY RIGHT(NAME,3),ID;</code> 可以根据NAME的最后三个字符来排序</p>
 <p>定义一个变量 <code>DECLARE @variable_name variable_type = xxx</code>，赋值可以单独用<code>SET @variable_name = xxx</code> 来操作。不过我发现有时候不DECLARE直接SET也可以。</p>
 <p>information_schema.tables 是内置的一个table，有61行</p>
-<h1 id="Manipulation"><a href="#Manipulation" class="headerlink" title="Manipulation"></a>Manipulation</h1><ul>
-<li>CREATE TABLE celebs(<br> id INTEGER,<pre><code> name TEXT,
-age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
+<h1 id="manipulation"><a class="markdownIt-Anchor" href="#manipulation"></a> Manipulation</h1>
+<ul>
+<li>CREATE TABLE celebs(<br />
+id INTEGER,<br />
+name TEXT,<br />
+age INTEGER<br />
+);  创建table 可以在数据类型后面跟上NULL/NOT NULL 来要求是否允许缺失值，默认为NULL。可在接着在后面给出 DEFAULT xxx 来给出默认值。可以直接标注primary key</li>
 <li>ALTER TABLE Vendors ADD CONSTRAINT PRIMARY KEY (vend_id); 也可以增添主键</li>
 <li>外键是表中的一列，其值必须列在另一表的主键中。外键是保证引用完整性的极其重要部分。</li>
 <li>只有不允许NULL值的列可作为主键，允许NULL值的列不能作为唯一标识。</li>
-<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br> 插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
+<li>INSERT INTO celebs (id, name, age) VALUES (2, ‘Beyonce Knowles’, 33);<br />
+插入新数据。insert后面没有分号，每插入一行数据就要用一个insert？并且还可以在括号中列出来想插入哪些列的变量，没被填写的那些除非是auto-increment否则会被NULL代替。</li>
 <li>如果表的定义允许，则可以在INSERT操作中省略某些列。省略的列必须满足以下某个条件。1. 该列定义为允许NULL值（无值或空值）。2. 在表定义中给出默认值。这表示如果不给出值，将使用默认值。如果对表中不允许NULL值且没有默认值的列不给出值，DBMS将产生错误消息，并且相应的行插入不成功。</li>
 <li>SELECT * INTO CustCopy FROM Customers; 可以实现复制表的功能。不过不管从多少个表中检索数据，数据都只能插入到一个表中。</li>
-<li>UPDATE celebs<br>SET age = 22<br>WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
+<li>UPDATE celebs<br />
+SET age = 22<br />
+WHERE id = 1; 将celebs数据中id=1的数据，age改为22 这个WHERE很关键，如果没有的话，【所有数据都会被改变】</li>
 <li>要删除某个列的值，可用UPDATE设置它为NULL（假如表定义允许NULL值）。</li>
-<li>ALTER TABLE celebs ADD COLUMN<br>twitter_handle TEXT; 增加新的一列</li>
-<li>DELETE FROM celebs WHERE<br>twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
+<li>ALTER TABLE celebs ADD COLUMN<br />
+twitter_handle TEXT; 增加新的一列</li>
+<li>DELETE FROM celebs WHERE<br />
+twitter_handle IS NULL;  删除推特账号是missing的数据。删除一行/多行</li>
 <li>如果要从Products表中删除一个产品，而这个产品用在OrderItems的已有订单中，那么DELETE语句将抛出错误并中止。这是总要定义外键的另一个理由。</li>
 <li>在UPDATE或DELETE语句使用WHERE子句前，应该先用SELECT进行测试，保证它过滤的是正确的记录，以防编写的WHERE子句不正确。</li>
 <li>DROP TABLE 彻底删除一个表，而不只是删除其内容</li>
 </ul>
-<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。 </p>
+<p>唯一约束用来保证一列（或一组列）中的数据是唯一的。它们类似于主键，但存在以下重要区别。</p>
 <ul>
 <li>表可包含多个唯一约束，但每个表只允许一个主键。</li>
-<li>唯一约束列可包含NULL值。 </li>
-<li>唯一约束列可修改或更新。 </li>
-<li>唯一约束列的值可重复使用。 </li>
+<li>唯一约束列可包含NULL值。</li>
+<li>唯一约束列可修改或更新。</li>
+<li>唯一约束列的值可重复使用。</li>
 <li>与主键不一样，唯一约束不能用来定义外键。</li>
 </ul>
-<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
+<h2 id="select"><a class="markdownIt-Anchor" href="#select"></a> Select</h2>
+<p>SELECT * FROM celebs;  select会生成一个新的 result table</p>
 <ul>
 <li>SELECT column1,column2, … FROM table; 【用逗号连接】</li>
 <li><code>WHERE</code> clause filters the result set to only include rows where the following <em>condition</em> is true.</li>
 <li>IN操作符一般比一组OR操作符执行得更快。IN的最大优点是可以包含其他SELECT语句，能够更动态地建立WHERE子句。</li>
 <li><code>LIKE</code> is a special operator used with the <code>WHERE</code> clause to search for a specific pattern in a column. 像是在按照模式匹配字符串，<strong>不分大小写</strong>。用_下划线来指代任何单个字符，%代表任何单/多个字符</li>
-<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE ‘%’不会匹配产品名称为NULL的行。</li>
+<li>通配符%看起来像是可以匹配任何东西，<strong>但有个例外，这就是NULL</strong>。子句WHERE prod_name LIKE '%'不会匹配产品名称为NULL的行。</li>
 <li>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。此通配符可以用前缀字符^（脱字号）来否定。</li>
 <li>通过IS NULL/IS NOT NULL 来判断是否为缺失值(大于小于等于号之类的不行)</li>
 <li>BETWEEN 如果是两个字符的话不包含第二个字符，如果是两个数字则包含第二个数字</li>
@@ -478,34 +494,34 @@ age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/
 <li>ORDER BY … DESC/ASC 降序或者升序排列（注意DESC放在列名的后面，DESCENDING也可以）。在指定一条ORDER BY子句时，应该保证它是SELECT语句中最后一条子句。如果它不是最后的子句，将会出现错误消息。通常，ORDER BY子句中使用的列将是为显示而选择的列。但是，实际上并不一定要这样，用非检索的列排序数据是完全合法的。</li>
 <li>如果有必要，可以混合匹配使用实际列名和相对列位置（1,2,3,…）。</li>
 <li>在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后，否则将会产生错误</li>
-<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases. </li>
+<li><code>LIMIT</code> is a clause that lets you specify the maximum number of rows the result set will have. This saves space on our screen and makes our queries run faster.<code>LIMIT</code> always goes at the very end of the query. Also, it is not supported in all SQL databases.</li>
 <li>Limit x,y = limit y offset x 表示的是从第x+1行开始，返回y个数据</li>
-<li>SELECT name,<br> CASE<br>  WHEN imdb_rating &gt; 7 THEN ‘Good’<br>  WHEN imdb_rating &gt; 5 THEN ‘Okay’<br>  ELSE ‘Bad’<br> END AS ‘Rating’ #重命名<br>  FROM movies;  CASE-END判断语句</li>
+<li>SELECT name,<br />
+CASE<br />
+WHEN imdb_rating &gt; 7 THEN ‘Good’<br />
+WHEN imdb_rating &gt; 5 THEN ‘Okay’<br />
+ELSE ‘Bad’<br />
+END AS ‘Rating’ #重命名<br />
+FROM movies;  CASE-END判断语句</li>
 <li>COUNT(1) 可以辅助分组计数</li>
 </ul>
 <pre><code class="hljs SQL"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Customers
 <span class="hljs-keyword">WHERE</span> Country <span class="hljs-keyword">IN</span> (<span class="hljs-string">&#x27;Germany&#x27;</span>,<span class="hljs-string">&#x27;UK&#x27;</span>); <span class="hljs-comment">#IN 可以从多个元素中找东西</span></code></pre>
-
-
-
 <p>要想从一个表中检索多个列，列名之间必须以逗号分隔，但最后一个列名后不加。</p>
 <p>使用通配符有一个大优点。由于不明确指定列名（因为星号检索每一列），所以能检索出名字未知的列。</p>
-<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。 </p>
+<p>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。</p>
 <p>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。把通配符置于开始处，搜索起来是最慢的。</p>
 <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> TOP <span class="hljs-number">50</span> <span class="hljs-keyword">PERCENT</span> * <span class="hljs-keyword">FROM</span> Customers; <span class="hljs-comment">#可以选出前50%的数据</span></code></pre>
-
-
-
-
-
-<h2 id="计算字段-amp-常用函数"><a href="#计算字段-amp-常用函数" class="headerlink" title="计算字段&amp;常用函数"></a>计算字段&amp;常用函数</h2><p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
+<h2 id="计算字段常用函数"><a class="markdownIt-Anchor" href="#计算字段常用函数"></a> 计算字段&amp;常用函数</h2>
+<p>TRIM/RTRIM/LTRIM 去掉左右的空格</p>
 <p>‘+’ 或者|| 可以用来拼接字符</p>
-<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(‘ abc ‘);将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
+<p>虽然SELECT通常用于从表中检索数据，但是省略了FROM子句后就是简单地访问和处 理表达式，例如SELECT 3 * 2;将返回6，SELECT Trim(’ abc ');将返回abc，SELECT Now();使用Now()函数返回当前日期和时间。现在你明 白了，可以根据需要使用SELECT语句进行检验。</p>
 <p>LEFT/RIGHT 返回最左（右）面的字符</p>
 <p>SOUNDEX 返回字符串的SOUNDEX值，匹配发音</p>
 <p>PI()返回圆周率</p>
 <p>GRESTEST 返回最大值</p>
-<h2 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h2><ul>
+<h2 id="aggregate-functions"><a class="markdownIt-Anchor" href="#aggregate-functions"></a> Aggregate Functions</h2>
+<ul>
 <li>SELECT COUNT(*) FROM Table; 返回一共有多少行</li>
 <li>SUM/MAX/MIN/AVG/ROUND</li>
 <li>AVG()只能用来确定特定数值列的平均值，而且列名必须作为函数参数给出。为了获得多个列的平均值，必须使用多个AVG()函数。AVG()函数忽略列值为NULL的行。</li>
@@ -521,100 +537,155 @@ age INTEGER</code></pre>  );  创建table 可以在数据类型后面跟上NULL/
 <p>如果分组列中包含具有NULL值的行，则NULL将作为一个分组返回。如果列中有多行NULL值，它们将分为一组。</p>
 <p>GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</p>
 <p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法。千万不要仅依赖GROUP BY排序数据。</p>
-<h1 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h1><p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
+<h1 id="联结"><a class="markdownIt-Anchor" href="#联结"></a> 联结</h1>
+<p>由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。（直接SELECT FROM x1, x2, x3;）有时，返回笛卡儿积的联结，也称叉联结（cross join）。</p>
 <p>目前为止使用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内联结（inner join）。</p>
 <p>SQL允许对表起别名，来允许在一条SELECT语句中多次使用相同的表。（自联结）</p>
 <p>OUTER JOIN 允许左边的表的数据在右边的表中没有出现过（这是 LEFT OUTER JOIN的定义，如果是RIGHT OUTER JOIN 就反过来）</p>
 <p>还存在另一种外联结，就是全外联结（full outer join），它检索两个表中的所有行并关联那些可以关联的行。与左外联结或右外联结包含一个表 的不关联的行不同，全外联结包含两个表的不关联的行。（MySQL不支持）</p>
-<h1 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h1><p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
+<h1 id="组合查询"><a class="markdownIt-Anchor" href="#组合查询"></a> 组合查询</h1>
+<p>使用UNION很简单，所要做的只是给出每条SELECT语句，在各条语句之间放上关键字UNION。如果组合四条SELECT语句，将要使用三个UNION关键字</p>
 <p>UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过，各个列不需要以相同的次序列出）。</p>
 <p>列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含转换的类型（例如，不同的数值类型或不同的日期类型）。</p>
 <p>UNION从查询结果集中自动去除了重复的行；换句话说，它的行为与一条SELECT语句中使用多个WHERE子句条件一样。因为Indiana州有一个 Fun4All单位，所以两条SELECT语句都返回该行。使用UNION时，重复的行会被自动取消。这是UNION的默认行为，如果愿意也可以改变它。事实上，如果想返回所有的匹配行，可使用UNION ALL而不是UNION。</p>
-<h2 id="Multiple-Tables"><a href="#Multiple-Tables" class="headerlink" title="Multiple Tables"></a>Multiple Tables</h2><ul>
-<li>Combining Tables:<br>SELECT orders.order_id,<pre><code>customers.customer_name</code></pre>FROM orders<br>JOIN customers<pre><code>ON orders.customer_id = customers.customer_id</code></pre></li>
+<h2 id="multiple-tables"><a class="markdownIt-Anchor" href="#multiple-tables"></a> Multiple Tables</h2>
+<ul>
+<li>Combining Tables:<br />
+SELECT orders.order_id,<br />
+customers.customer_name<br />
+FROM orders<br />
+JOIN customers<br />
+ON orders.customer_id = customers.customer_id</li>
 <li>默认的join是 inner-join，如果某一行对应的行数据不匹配的话，就把它删掉。left-join 保全先select的table中所有的信息，将后select中没有的信息用missing来填</li>
 <li>CROSS JOIN 返回所有可能种排列组合</li>
 <li>UNION 相当于r里面的rbind，直接将两个column一样的table上下组合起来</li>
-<li>WITH previous_results AS (<pre><code>SELECT ...</code></pre>   )<br>   SELECT *<br>   FROM previous_results<br>   JOIN other_table<br>  ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
+<li>WITH previous_results AS (<br />
+SELECT …<br />
+)<br />
+SELECT *<br />
+FROM previous_results<br />
+JOIN other_table<br />
+ON … = …; WITH可以将运算中生成的新table一起绑起来</li>
 </ul>
 <p>##Constrains</p>
 <p>They can be used to tell the database to reject inserted data that does not adhere to a certain restriction.</p>
 <ul>
-<li><p>CREATE TABLE celebs (</p>
-<p>  id INTEGER PRIMARY KEY,<br>  name TEXT UNIQUE,<br>  date_of_birth TEXT NOT NULL,<br>  date_of_death TEXT DEFAULT ‘Not Applicable’,<br>);</p>
+<li>
+<p>CREATE TABLE celebs (</p>
+<p>id INTEGER PRIMARY KEY,<br />
+name TEXT UNIQUE,<br />
+date_of_birth TEXT NOT NULL,<br />
+date_of_death TEXT DEFAULT ‘Not Applicable’,<br />
+);</p>
 </li>
-<li><p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
+<li>
+<p><code>PRIMARY KEY</code>: columns can be used to uniquely identify the row.</p>
 </li>
-<li><p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
+<li>
+<p><code>UNIQUE</code> columns have a different value for every row. This is similar to <code>PRIMARY KEY</code> except a table can have many different <code>UNIQUE</code> columns</p>
 </li>
-<li><p><code>NOT NULL</code> columns must have a value. </p>
+<li>
+<p><code>NOT NULL</code> columns must have a value.</p>
 </li>
-<li><p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
+<li>
+<p><code>DEFAULT</code> columns take an additional argument that will be the assumed value for an inserted row if the new row does not specify a value for that column.</p>
 </li>
 <li></li>
 </ul>
-<h1 id="Table-Transformation"><a href="#Table-Transformation" class="headerlink" title="Table Transformation"></a>Table Transformation</h1><p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
-<h2 id="Subqueries"><a href="#Subqueries" class="headerlink" title="Subqueries"></a>Subqueries</h2><p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
+<h1 id="table-transformation"><a class="markdownIt-Anchor" href="#table-transformation"></a> Table Transformation</h1>
+<p>While working with databases, we often need to transform data from one format to achieve a desired result</p>
+<h2 id="subqueries"><a class="markdownIt-Anchor" href="#subqueries"></a> Subqueries</h2>
+<p>A <strong>non-correlated subquery</strong> is a subquery that can be run independently of the outer query and can be used to complete a multi-step transformation. 选择部分只出现在FROM里面</p>
 <ul>
-<li>SELECT * FROM flights<br>WHERE origin in (<br>SELECT code<br>  FROM airports<br>  WHERE elevation &lt; 2000<br>); 在一个table中以另一个table为选择条件，找出子表</li>
-<li>SELECT a.dep_month,<pre><code>a.dep_day_of_week,
-AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELECT dep_month,
-       dep_day_of_week,
-        dep_date,
-        SUM(distance) AS flight_distance
-   FROM flights
-  GROUP BY 1,2,3
-) a</code></pre> GROUP BY 1,2<br> ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
+<li>SELECT * FROM flights<br />
+WHERE origin in (<br />
+SELECT code<br />
+FROM airports<br />
+WHERE elevation &lt; 2000<br />
+); 在一个table中以另一个table为选择条件，找出子表</li>
+<li>SELECT a.dep_month,<br />
+a.dep_day_of_week,<br />
+AVG(a.flight_distance) AS average_distance<br />
+FROM (<br />
+SELECT dep_month,<br />
+dep_day_of_week,<br />
+dep_date,<br />
+SUM(distance) AS flight_distance<br />
+FROM flights<br />
+GROUP BY 1,2,3<br />
+) a<br />
+GROUP BY 1,2<br />
+ORDER BY 1,2; 在一个表内做一些选择与统计量计算</li>
 </ul>
-<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery: </p>
+<p>In a <strong>correlated subquery</strong>, the subquery can not be run independently of the outer query（选择部分出现在SELECT里面）. The order of operations is important in a correlated subquery:</p>
 <ol>
-<li>A row is processed in the outer query. </li>
+<li>A row is processed in the outer query.</li>
 <li>Then, for that particular row in the outer query, the subquery is executed.</li>
 </ol>
 <ul>
-<li>SELECT id FROM flights AS f<br>WHERE distance&lt;(<br>  SELECT AVG(distance)<br>  FROM flights<br>  WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
+<li>SELECT id FROM flights AS f<br />
+WHERE distance&lt;(<br />
+SELECT AVG(distance)<br />
+FROM flights<br />
+WHERE carrier = f.carrier); 这个AS f 很关键，要不然无法和下面这个select的flights区分开来</li>
 </ul>
-<h2 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h2><p>Merge 2 rows called a join, merge 2 columns called a union.</p>
+<h2 id="set-operation"><a class="markdownIt-Anchor" href="#set-operation"></a> Set Operation</h2>
+<p>Merge 2 rows called a join, merge 2 columns called a union.</p>
 <ul>
 <li>若是想让UNION包含重复的元素，需要在后面加上关键词 ALL</li>
 <li>INTERSECT 连接两个SELECT，只包含相同的行</li>
 <li>EXCEPT 连接两个SELECT，只包含第一个有第二个没有的行</li>
 </ul>
-<h2 id="Conditional-Aggregates"><a href="#Conditional-Aggregates" class="headerlink" title="Conditional Aggregates"></a>Conditional Aggregates</h2><ul>
+<h2 id="conditional-aggregates"><a class="markdownIt-Anchor" href="#conditional-aggregates"></a> Conditional Aggregates</h2>
+<ul>
 <li>COUNT(CASE WHEN ) 可以返回特定的求和</li>
-<li>SELECT    origin,<br>SUM(a.distance) AS total_flight_distance, <pre><code>SUM(CASE WHEN carrier = &apos;DL&apos; THEN distance ELSE 0 END) as total_delta_flight_distance </code></pre>FROM flights AS a<br>GROUP BY origin; SUM的求和要放在Then后面</li>
+<li>SELECT    origin,<br />
+SUM(a.distance) AS total_flight_distance,<br />
+SUM(CASE WHEN carrier = ‘DL’ THEN distance ELSE 0 END) as total_delta_flight_distance<br />
+FROM flights AS a<br />
+GROUP BY origin; SUM的求和要放在Then后面</li>
 </ul>
-<h1 id="Date-Time-and-String"><a href="#Date-Time-and-String" class="headerlink" title="Date, Time and String"></a>Date, Time and String</h1><h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>Dates are often written in the following format(同时也是函数名)</p>
+<h1 id="date-time-and-string"><a class="markdownIt-Anchor" href="#date-time-and-string"></a> Date, Time and String</h1>
+<h2 id="date"><a class="markdownIt-Anchor" href="#date"></a> Date</h2>
+<p>Dates are often written in the following format(同时也是函数名)</p>
 <ol>
 <li>Date: YYYY-MM-DD</li>
 <li>Datetime or Timestamp: YYYY-MM-DD hh:mm:ss</li>
 </ol>
 <ul>
-<li><pre><code>DATETIME(time1, &apos;+3 hours&apos;, &apos;40 minutes&apos;, &apos;2 days&apos;);</code></pre><p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
+<li>
+<pre class="highlight"><code class="">DATETIME(time1, '+3 hours', '40 minutes', '2 days');
+</code></pre>
+<p>Would return a time 3 hours, 20 minutes, and 2 days after <code>time1</code>.</p>
 </li>
-<li><p>YEAR(xxx)来返回年份</p>
+<li>
+<p>YEAR(xxx)来返回年份</p>
 </li>
-<li><p>获取系统日期：CURRENT_DATE()</p>
+<li>
+<p>获取系统日期：CURRENT_DATE()</p>
 </li>
 </ul>
-<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<h2 id="number"><a class="markdownIt-Anchor" href="#number"></a> Number</h2>
+<ul>
 <li>SELECT (number1 + number2) 直接四则运算</li>
 <li>SELECT CAST(number1 AS REAL) 转换格式</li>
 <li>SELECT ROUND(number, precision) 取整</li>
 <li>MAX/MIN</li>
 </ul>
-<h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><ul>
+<h2 id="strings"><a class="markdownIt-Anchor" href="#strings"></a> Strings</h2>
+<ul>
 <li>A || ‘ ’ || B 用空格连接A和B</li>
 <li>REPLACE(string,from_string,to_string) 字符串替换</li>
 </ul>
-<h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
+<h1 id="视图"><a class="markdownIt-Anchor" href="#视图"></a> 视图</h1>
+<p>视图仅仅是用来查看存储在别处数据的一种设施。视图本身不包含数据，因此返回的数据是从其他表中检索出来的。在添加 或更改这些表中的数据时，视图将返回改变过的数据。</p>
 <p>为什么要用视图：</p>
 <ul>
 <li>重用SQL语句。</li>
 <li>简化复杂的SQL操作。</li>
-<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。 </li>
-<li>使用表的一部分而不是整个表。 </li>
-<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。 </li>
+<li>在编写查询后，可以方便地重用它而不必知道其基本查询细节。</li>
+<li>使用表的一部分而不是整个表。</li>
+<li>保护数据。可以授予用户访问表的特定部分的权限，而不是整个表的访问权限。</li>
 <li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据。</li>
 </ul>
 <p>视图用CREATE VIEW语句来创建。利用视图，可一次性编写基础的SQL，然后根据需要多次使用。</p>
@@ -625,27 +696,30 @@ AVG(a.flight_distance) AS average_distance</code></pre>  FROM (<pre><code> SELEC
 <li>用视图过滤不想要的数据</li>
 <li>使用视图与计算字段</li>
 </ol>
-<h1 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h1><p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
+<h1 id="存储过程"><a class="markdownIt-Anchor" href="#存储过程"></a> 存储过程</h1>
+<p>存储过程就是为以后使用而保存的一条或多条SQL语句。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
 <p>有点难 不知道这个具体是干嘛的</p>
-<h1 id="管理事务处理"><a href="#管理事务处理" class="headerlink" title="管理事务处理"></a>管理事务处理</h1><p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
+<h1 id="管理事务处理"><a class="markdownIt-Anchor" href="#管理事务处理"></a> 管理事务处理</h1>
+<p>使用事务处理（transaction processing），通过确保成批的SQL操作要么完全执行，要么完全不执行，来维护数据库的完整性。如果没有错误发生，整组语句提交给（写到）数据库表；如果发生错误，则进行回退（撤销），将数据库恢复到某个已知且安全的状态。</p>
 <p>在使用事务处理时，有几个反复出现的关键词。下面是关于事务处理需要知道的几个术语：</p>
 <ul>
-<li>事务（transaction）指一组SQL语句； </li>
-<li>回退（rollback）指撤销指定SQL语句的过程； </li>
-<li>提交（commit）指将未存储的SQL语句结果写入数据库表； </li>
+<li>事务（transaction）指一组SQL语句；</li>
+<li>回退（rollback）指撤销指定SQL语句的过程；</li>
+<li>提交（commit）指将未存储的SQL语句结果写入数据库表；</li>
 <li>保留点（savepoint）指事务处理中设置的临时占位符（placeholder），可以对它发布回退（与回退整个事务处理不同）。</li>
 </ul>
 <p>事务处理用来管理INSERT、UPDATE和DELETE语句。不能回退SELECT语句（回退SELECT语句也没有必要），也不能回退CREATE或DROP操作。事 务处理中可以使用这些语句，但进行回退时，这些操作也不撤销。</p>
 <p>SQL的ROLLBACK命令用来回退（撤销）SQL语句</p>
 <p>一般的SQL语句都是针对数据库表直接执行和编写的。这就是所谓的隐式提交（implicit commit），即提交（写或保存）操作是自动进行的。 在事务处理块中，提交不会隐式进行。不过，不同DBMS的做法有所不同。有的DBMS按隐式提交处理事务端，有的则不这样。 进行明确的提交，使用<strong>COMMIT</strong>语句。</p>
 <p>要支持回退部分事务，必须在事务处理块中的合适位置放置占位符。这样，如果需要回退，可以回退到某个占位符。 在SQL中，这些占位符称为保留点。在MariaDB、MySQL和Oracle中创建占位符，可使用<strong>SAVEPOINT</strong>语句：</p>
-<h1 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h1><p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
+<h1 id="游标"><a class="markdownIt-Anchor" href="#游标"></a> 游标</h1>
+<p>有时，需要在检索出来的行中前进或后退一行或多行，这就是游标的用途所在。游标（cursor）是一个存储在DBMS服务器上的数据库查询， 它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。</p>
 <p>不同的DBMS支持不同的游标选项和特性。常见的一些选项和特性如下。</p>
 <ul>
-<li>能够标记游标为只读，使数据能读取，但不能更新和删除。 </li>
-<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。 </li>
-<li>能标记某些列为可编辑的，某些列为不可编辑的。 </li>
-<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。 </li>
+<li>能够标记游标为只读，使数据能读取，但不能更新和删除。</li>
+<li>能控制可以执行的定向操作（向前、向后、第一、最后、绝对位置、相对位置等）。</li>
+<li>能标记某些列为可编辑的，某些列为不可编辑的。</li>
+<li>规定范围，使游标对创建它的特定请求（如存储过程）或对所有请求可访问。</li>
 <li>指示DBMS对检索出的数据（而不是指出表中活动数据）进行复制，使数据在游标打开和访问期间不变化。</li>
 </ul>
 

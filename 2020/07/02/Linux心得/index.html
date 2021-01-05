@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -339,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      21
        分钟
     </span>
   
@@ -372,21 +384,29 @@
             <h1 style="display: none">Linux心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
 <a id="more"></a>
-
-
-
-<h1 id="乱七八糟"><a href="#乱七八糟" class="headerlink" title="乱七八糟"></a>乱七八糟</h1><p>cd /workspace 前面那个slash目的是回到主界面在进入workspace 而不是进入当前目录下的workspace<br>rm -rf 直接删除所有类型的文件<br>ssh <a href="mailto:siyuw@lunchbox.stat.wisc.edu">siyuw@lunchbox.stat.wisc.edu</a><br>ls -l: ①文件夹d其他-②read③write④是否可执行 可执行x ⑨最后三个说的是其他人<br>ls -lt 按修改时间倒序排列<br>cat语句可以连接两个文件<br>clear:清屏<br>shuf —-help 可以从一个文件随机选出几行</p>
+<h1 id="乱七八糟"><a class="markdownIt-Anchor" href="#乱七八糟"></a> 乱七八糟</h1>
+<p>cd /workspace 前面那个slash目的是回到主界面在进入workspace 而不是进入当前目录下的workspace<br />
+rm -rf 直接删除所有类型的文件<br />
+ssh <a href="mailto:siyuw@lunchbox.stat.wisc.edu">siyuw@lunchbox.stat.wisc.edu</a><br />
+ls -l: ①文件夹d其他-②read③write④是否可执行 可执行x ⑨最后三个说的是其他人<br />
+ls -lt 按修改时间倒序排列<br />
+cat语句可以连接两个文件<br />
+clear:清屏<br />
+shuf —-help 可以从一个文件随机选出几行</p>
 <ul>
 <li>但是MAC没有shuf，只能用gshuf，还得安装一下<code>brew install coreutils</code></li>
 </ul>
-<p>tail -n +2 “$FILE” &gt; “$FILE.tmp” &amp;&amp; mv “$FILE.tmp” “$FILE” 可以删除文本文件第一行<br>cat 1.txt 2.txt &gt; 3.txt 可以把1.2文件行combine到3文件中<br>wc -l &lt; <filename> 返回文件有多少行</p>
+<p>tail -n +2 “<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mi>I</mi><mi>L</mi><mi>E</mi><mi mathvariant="normal">&quot;</mi><mo>&gt;</mo><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">FILE&quot; &gt; &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">&quot;</span></span></span></span>FILE.tmp” &amp;&amp; mv “<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mi>I</mi><mi>L</mi><mi>E</mi><mi mathvariant="normal">.</mi><mi>t</mi><mi>m</mi><mi>p</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">FILE.tmp&quot; &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord">&quot;</span><span class="mord">&quot;</span></span></span></span>FILE” 可以删除文本文件第一行<br />
+cat 1.txt 2.txt &gt; 3.txt 可以把1.2文件行combine到3文件中<br />
+wc -l &lt; <filename> 返回文件有多少行</p>
 <p>sed ‘2,$d’ ab           #删除第二行到最后一行</p>
 <p>python -V #查看python的版本</p>
 <pre><code class="hljs Linux"># wc -l &#96;find &#x2F;path&#x2F;to&#x2F;directory&#x2F; -type f&#96; #print一个文件夹下所有文件的行数</code></pre>
-
-<h1 id="犯过的错误"><a href="#犯过的错误" class="headerlink" title="犯过的错误"></a>犯过的错误</h1><p>bash没保存 反复运行发现没什么变化，以为电脑坏了</p>
+<h1 id="犯过的错误"><a class="markdownIt-Anchor" href="#犯过的错误"></a> 犯过的错误</h1>
+<p>bash没保存 反复运行发现没什么变化，以为电脑坏了</p>
 <p><strong>Slurm 装R包</strong>：</p>
 <ul>
 <li>module load R 才可以把R的版本换成3.5</li>
@@ -394,38 +414,42 @@
 </ul>
 <p><strong>Slurm报错</strong>：slurmstepd: error: Exceeded step memory limit at some point.</p>
 <ul>
-<li>#SBATCH –mem-per-cpu=10gb </li>
+<li>#SBATCH --mem-per-cpu=10gb</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weiguang1017/article/details/80345058">mac下插入文件到某一行</a></p>
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>不要在一个终端窗口里使用 Ctrl-c 和 Ctrl-v 快捷键来执行拷贝和粘贴操作。它们不 起作用。对于 shell 来说，这两个控制代码有着不同的含义，它们在早于 Microsoft Windows （定义复制粘贴的含义）许多年之前就赋予了不同的意义。</p>
-<h1 id="一些简单命令"><a href="#一些简单命令" class="headerlink" title="一些简单命令"></a>一些简单命令</h1><p>date 显示时间</p>
+<h1 id="注意"><a class="markdownIt-Anchor" href="#注意"></a> 注意</h1>
+<p>不要在一个终端窗口里使用 Ctrl-c 和 Ctrl-v 快捷键来执行拷贝和粘贴操作。它们不 起作用。对于 shell 来说，这两个控制代码有着不同的含义，它们在早于 Microsoft Windows （定义复制粘贴的含义）许多年之前就赋予了不同的意义。</p>
+<h1 id="一些简单命令"><a class="markdownIt-Anchor" href="#一些简单命令"></a> 一些简单命令</h1>
+<p>date 显示时间</p>
 <p>cal 显示日历</p>
 <p>查看磁盘剩余空间的数量，输入 df</p>
 <p>显示空闲内存的数量，输入命令 free。</p>
 <p>退出 exit</p>
 <p>mv 重命名/剪切  rm删除</p>
-<p>如何获取ubuntu管理员权限？<br>①sudo passwd root  （创建root的密码）<br>②su命令进入管理员权限</p>
+<p>如何获取ubuntu管理员权限？<br />
+①sudo passwd root  （创建root的密码）<br />
+②su命令进入管理员权限</p>
 <pre><code class="hljs sh">wc -l &lt; file.txt <span class="hljs-comment">#可以不显示文件名直接显示行数</span></code></pre>
-
 <p>=~ 来匹配正则式</p>
 <p>下载Kaggle数据需要权限：传递cookie <a target="_blank" rel="noopener" href="https://wdeback.gitlab.io/post/2018-03-08-how-to-download-kaggle-dataset-from-command-line/">https://wdeback.gitlab.io/post/2018-03-08-how-to-download-kaggle-dataset-from-command-line/</a></p>
 <p><strong>Linux下，删除大于固定大小的文件</strong></p>
 <pre><code class="hljs apache"><span class="hljs-attribute">find</span> ./ -size +<span class="hljs-number">50</span>M<span class="hljs-number">1</span></code></pre>
-
 <p>显示当前路径下，大于50M的文件。（包含子文件夹内的文件）</p>
 <pre><code class="hljs sqf"><span class="hljs-built_in">find</span> ./ -<span class="hljs-built_in">size</span> +<span class="hljs-number">50</span>M -<span class="hljs-built_in">exec</span> rm &#123;&#125; \;<span class="hljs-number">1</span></code></pre>
-
 <p>删除当前路径下，大于50M的文件。（包含子文件夹内的文件）</p>
 <pre><code class="hljs Linux">find shakespeare -type f -exec cat &#123;&#125; \; &gt; file</code></pre>
-
 <p>找到所有文件并把他们合在一起</p>
 <p>M-x erase-buffer 删除所有内容</p>
 <p>Counting Files in the Current Directory: <code>ls -l | wc -l</code></p>
 <p><a target="_blank" rel="noopener" href="https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html">ARRAY 操作</a></p>
-<h1 id="一些操作上的快捷键"><a href="#一些操作上的快捷键" class="headerlink" title="一些操作上的快捷键"></a>一些操作上的快捷键</h1><p>C-L 可以将命令行移动到屏幕的上/中/下</p>
-<h1 id="HTCondor"><a href="#HTCondor" class="headerlink" title="HTCondor"></a>HTCondor</h1><p>proc=$$([$(Process)+3586]) 来调节命令序号</p>
-<h1 id="Slurm"><a href="#Slurm" class="headerlink" title="Slurm"></a>Slurm</h1><p>操作指南：<a target="_blank" rel="noopener" href="https://slurm.schedmd.com/sbatch.html">https://slurm.schedmd.com/sbatch.html</a></p>
-<h1 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h1><p>新建窗口 emacs -nw</p>
+<h1 id="一些操作上的快捷键"><a class="markdownIt-Anchor" href="#一些操作上的快捷键"></a> 一些操作上的快捷键</h1>
+<p>C-L 可以将命令行移动到屏幕的上/中/下</p>
+<h1 id="htcondor"><a class="markdownIt-Anchor" href="#htcondor"></a> HTCondor</h1>
+<p>proc=$$([$(Process)+3586]) 来调节命令序号</p>
+<h1 id="slurm"><a class="markdownIt-Anchor" href="#slurm"></a> Slurm</h1>
+<p>操作指南：<a target="_blank" rel="noopener" href="https://slurm.schedmd.com/sbatch.html">https://slurm.schedmd.com/sbatch.html</a></p>
+<h1 id="emacs"><a class="markdownIt-Anchor" href="#emacs"></a> Emacs</h1>
+<p>新建窗口 emacs -nw</p>
 <p>退出 C-x C-c</p>
 <p>查找文件：C-x C-f</p>
 <p>删除一行 C-k</p>
@@ -434,29 +458,31 @@
 <p>去掉一些空白换行符 tab</p>
 <p>去掉一些空白区域 M-p</p>
 <p>自动合并段落 M-q</p>
-<p>list buffers: C-x C-b </p>
+<p>list buffers: C-x C-b</p>
 <ul>
-<li>按space进入选中的buffer </li>
+<li>按space进入选中的buffer</li>
 <li>在bufferlist里面关掉buffer 直接用 k 选中多个 然后enter来删除</li>
 </ul>
 <p>唤起shell : M-x shell / C-z</p>
 <p>删掉输入一般的错误/不想要命令</p>
 <p>撤销：C-/</p>
-<p>字体： C-_ 缩小    C-shift-+ 放大    C-0 回到原来样子</p>
+<p>字体： C-_ 缩小	C-shift-+ 放大	C-0 回到原来样子</p>
 <p>C-x d 进入文件管理界面</p>
 <ul>
-<li>按+可以创建新文件夹 </li>
-<li>按d可以添加删除标记最后按x执行删除命令 </li>
+<li>按+可以创建新文件夹</li>
+<li>按d可以添加删除标记最后按x执行删除命令</li>
 <li>g刷新</li>
 <li>u取消标记</li>
 <li><a target="_blank" rel="noopener" href="http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html">http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html</a> 里面提到了很多dired的操作</li>
-<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作">http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html%E9%87%8C%E9%9D%A2%E6%8F%90%E5%88%B0%E4%BA%86%E5%BE%88%E5%A4%9Adired%E7%9A%84%E6%93%8D%E4%BD%9C">http://www.cnblogs.com/beanmoon/archive/2012/09/22/2697723.html里面提到了很多dired的操作</a></li>
 </ul>
 <p>M-p 重复上一命令</p>
 <p>M-x replace-string C-q C-j 可以插入回车</p>
 <p>C-v 向下翻页 M-v 向上翻页</p>
-<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>跑R程序可以直接 Rscript xxx.R</p>
-<h2 id="学校CHTC介绍"><a href="#学校CHTC介绍" class="headerlink" title="学校CHTC介绍"></a>学校CHTC介绍</h2><p>HTC(高吞吐量计算)与HPC(高性能计算)：</p>
+<h1 id="server"><a class="markdownIt-Anchor" href="#server"></a> Server</h1>
+<p>跑R程序可以直接 Rscript xxx.R</p>
+<h2 id="学校chtc介绍"><a class="markdownIt-Anchor" href="#学校chtc介绍"></a> 学校CHTC介绍</h2>
+<p>HTC(高吞吐量计算)与HPC(高性能计算)：</p>
 <ol>
 <li>HTC分成的若干个部分之间不需要交流信息，而HPC需要</li>
 <li>HTC更感兴趣的是可以在很长一段时间内完成多少工作而不是多快。</li>
@@ -465,14 +491,16 @@
 <p>可以跑R, Python, Matlab, …</p>
 <p>学校用的分布系统是HTCondor</p>
 <p>以后如果有自己的项目要申请CHTC，<a target="_blank" rel="noopener" href="http://chtc.cs.wisc.edu/form">http://chtc.cs.wisc.edu/form</a></p>
-<p><strong>Submit&amp;Monitor the job</strong>: condor_submit job.sub condor_q 但是这个命令在lunchbox里面跑不了，因为lunchbox用的是sbatch那一套 </p>
-<h1 id="什么是Shell"><a href="#什么是Shell" class="headerlink" title="什么是Shell"></a>什么是Shell</h1><p>如果提示符的最后一个字符是“#”, 而不是“$”, 那么这个终端会话就有超级用户权限。</p>
+<p><strong>Submit&amp;Monitor the job</strong>: condor_submit job.sub condor_q 但是这个命令在lunchbox里面跑不了，因为lunchbox用的是sbatch那一套</p>
+<h1 id="什么是shell"><a class="markdownIt-Anchor" href="#什么是shell"></a> 什么是Shell</h1>
+<p>如果提示符的最后一个字符是“#”, 而不是“$”, 那么这个终端会话就有超级用户权限。</p>
 <p>许多 Linux 发行版默认保存最后输入的 500 个命令。（使用向上箭头）</p>
 <p>鼠标左键拖动 = 复制文本</p>
 <p>传统 X 行为是指只要把鼠标移动到一个窗口的上方。 它能接受输入，但是直到你单击窗口之前它都不会成为前端窗口。设置聚焦策略为“聚焦跟随着鼠标”，可以使拷贝和粘贴更方便易用。 你能在窗口管理器的配置程序中找到这个设置。</p>
-<h1 id="文件系统中跳转"><a href="#文件系统中跳转" class="headerlink" title="文件系统中跳转"></a>文件系统中跳转</h1><p>当我们首次登录系统（或者启动终端仿真器会话）后，当前工作目录是我们的家目录（/home）。每个用户都有他自己的家目录，当用户以普通用户的身份操控系统时，家目录是唯一允许用户对文件进行写入的地方。</p>
-<p>相对路径用一个点[.]或者两个点[..]</p>
-<p>cd .. 表示返回上一层</p>
+<h1 id="文件系统中跳转"><a class="markdownIt-Anchor" href="#文件系统中跳转"></a> 文件系统中跳转</h1>
+<p>当我们首次登录系统（或者启动终端仿真器会话）后，当前工作目录是我们的家目录（/home）。每个用户都有他自己的家目录，当用户以普通用户的身份操控系统时，家目录是唯一允许用户对文件进行写入的地方。</p>
+<p>相对路径用一个点[.]或者两个点[…]</p>
+<p>cd … 表示返回上一层</p>
 <p>cd ./xxx 表示进入下一层 当然 [./] 可以被省略</p>
 <p>直接 cd 会回到家目录</p>
 <p>cd - 更改工作目录到先前的工作目录。【类似于返回上一步】</p>

@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -372,13 +384,12 @@
             <h1 style="display: none">Java心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>开始学这个是因为普林斯顿的算法，第一课我看了半天，结果也没学写出来。气馁并放弃。</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>开始学这个是因为普林斯顿的算法，第一课我看了半天，结果也没学写出来。气馁并放弃。</p>
 <p>2020/08/23 再次鼓起勇气出发，参考了网友的建议，拿出Head First Java。</p>
 <a id="more"></a>
-
-
-
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>所以要怎样学习呢？首先，你必须能够理解，然后要确保不会忘记。</p>
+<h1 id="基本概念"><a class="markdownIt-Anchor" href="#基本概念"></a> 基本概念</h1>
+<p>所以要怎样学习呢？首先，你必须能够理解，然后要确保不会忘记。</p>
 <p>Java具有跨平台可移植性，写一次就可以在所有地方执行。</p>
 <ul>
 <li>可能是要借助于JVM（虚拟机）来实现？因为所有地方都有JVM</li>
@@ -394,10 +405,8 @@
 <li>因为jvm启动时，直接去找static的，参数为String数组的main方法。</li>
 </ul>
 <pre><code class="hljs java">Math.random() <span class="hljs-comment">// 可以产生一个0~1的随机数</span></code></pre>
-
-
-
-<h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>A sequence of instructions that solves a problem is called an <strong>algorithm</strong>.</p>
+<h3 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h3>
+<p>A sequence of instructions that solves a problem is called an <strong>algorithm</strong>.</p>
 <p>A simple Java program contains:</p>
 <ul>
 <li>A program starts in main(), executing the statements within main’s braces { }, one at a time.</li>
@@ -413,27 +422,25 @@
 <span class="hljs-comment">/* </span>
 <span class="hljs-comment">Java supports a third type of comment, known as a JavaDoc comment (discussed elsewhere), which is a specially formatted multi-line comment that can be converted to program documentation in HTML.</span>
 <span class="hljs-comment">*/</span></code></pre>
-
 <p>关于输入空格使得代码美观：</p>
 <pre><code class="hljs java">yetAnotherVar = myFirstVar;        <span class="hljs-comment">// Aligned = operators</span>
 thirdVar      = yetAnotherVar + <span class="hljs-number">1</span>; <span class="hljs-comment">//相关联的语句等号也要对齐</span></code></pre>
-
 <p>如果编译器在第五行报错，那么错误肯定会发生在第五行/<u>第五行以前</u></p>
-<p>Some errors create an upsettingly long list of error messages. <u>Good practice</u> is to focus on fixing <u>just the first error</u> reported by the compiler, and then re-compiling.</p>
-<p><u>A logic error, also called a bug/runtime error</u>, is an error that occurs while a program runs.</p>
-<p>In fact, many programmers recommend the good practice of configuring compilers to print even more warnings. For example, javac can be run as <code>javac -Xlint yourfile.java</code></p>
+<p>Some errors create an upsettingly long list of error messages. <u>Good practice</u> is to focus on fixing <u>just the first error</u> reported by the compiler, and then re-compiling.</p>
+<p><u>A logic error, also called a bug/runtime error</u>, is an error that occurs while a program runs.</p>
+<p>In fact, many programmers recommend the good practice of configuring compilers to print even more warnings. For example, javac can be run as <code>javac -Xlint yourfile.java</code></p>
 <p>A bit can only have the value of 0 or 1.</p>
 <p>Some programmers <u>warn against using floating-point for money</u>, as in 14.53 representing 14 dollars and 53 cents, because money is a countable item</p>
 <p>NaN: Not a number</p>
-<p><u>public</u> indicates the method may be called from any class in the program, and <u>static</u> indicates the method only uses values that are passed to the method; </p>
-<h3 id="输入数据"><a href="#输入数据" class="headerlink" title="输入数据"></a>输入数据</h3><p>A <u>Scanner</u> is a text parser that can get numbers, words, or phrases from an input source such as the keyboard. Getting input is achieved by first creating a Scanner object via the statement:</p>
+<p><u>public</u> indicates the method may be called from any class in the program, and <u>static</u> indicates the method only uses values that are passed to the method;</p>
+<h3 id="输入数据"><a class="markdownIt-Anchor" href="#输入数据"></a> 输入数据</h3>
+<p>A <u>Scanner</u> is a text parser that can get numbers, words, or phrases from an input source such as the keyboard. Getting input is achieved by first creating a Scanner object via the statement:</p>
 <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code></pre>
-
-<p>System.in corresponds to <u>keyboard input</u>. Then, given Scanner object scnr, the following statement gets an input value and assigns x with that value:</p>
-<pre><code class="hljs java">x = scnr.nextInt();</code></pre>
-
-<h3 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h3><p><u>System.out.print</u> 正常打印. <u>System.out.println</u> (note the ln at the end, short for “line”)在打印结束之后自动开始新的一行。Outputting a blank line is achieved by: System.out.println().</p>
+<p><a target="_blank" rel="noopener" href="http://System.in">System.in</a> corresponds to <u>keyboard input</u>. Then, given Scanner object scnr, the following statement gets an input value and assigns x with that value:</p>
+<pre><code class="hljs java">x = scnr.nextInt();</code></pre>
+<h3 id="打印"><a class="markdownIt-Anchor" href="#打印"></a> 打印</h3>
+<p><u>System.out.print</u> 正常打印. <u>System.out.println</u> (note the ln at the end, short for “line”)在打印结束之后自动开始新的一行。Outputting a blank line is achieved by: System.out.println().</p>
 <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">KeepCalm</span> </span>&#123;
    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">(String [] args)</span> </span>&#123;
       System.out.println(<span class="hljs-string">&quot;Keep calm&quot;</span>);<span class="hljs-comment">// println starts new line after output</span>
@@ -441,12 +448,11 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
       System.out.println(<span class="hljs-string">&quot;carry on&quot;</span>); <span class="hljs-comment">//字符要用双引号括起来，单引号不行</span>
    &#125;
 &#125;</code></pre>
-
 <p>如果想用一个print打印多个数据，可以用加号连接(默认没有空格直接连接)。</p>
 <p>可以采用“\n”来创建新的一行，但是更好的操作是 to use println to output a newline when possible, as println has some technical advantages not mentioned here.</p>
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>变量类型和变量赋值可以放到同一行。</p>
+<h1 id="变量"><a class="markdownIt-Anchor" href="#变量"></a> 变量</h1>
+<p>变量类型和变量赋值可以放到同一行。</p>
 <pre><code class="hljs java"><span class="hljs-keyword">int</span> abc = <span class="hljs-number">10</span>;</code></pre>
-
 <p><u>变量名identifier</u>:</p>
 <ul>
 <li>must be a sequence of letters (a-z, A-Z), underscore (_), dollar signs ($), and digits (0-9)</li>
@@ -458,35 +464,28 @@ Scanner scnr = <span class="hljs-keyword">new</span> Scanner(System.in);</code><
 <li>Lower camel case，除了第一个单词之外其他的首字母大写：numApples or peopleOnBus</li>
 <li>Underscore separated，用下划线连接：num_apples or people_on_bus</li>
 </ol>
-<p><u>A good practice</u> followed by many Java programmers is to not use _ or $ in programmer-created identifiers.</p>
-<p>变量类型有: int, double, </p>
-<p>定义不会更改的变量（Constant/final Variable）：A common convention, or <u>good practice</u>, is to name constant variables using upper case letters with words separated by underscores, to make constant variables clearly visible in code.</p>
+<p><u>A good practice</u> followed by many Java programmers is to not use _ or $ in programmer-created identifiers.</p>
+<p>变量类型有: int, double,</p>
+<p>定义不会更改的变量（Constant/final Variable）：A common convention, or <u>good practice</u>, is to name constant variables using upper case letters with words separated by underscores, to make constant variables clearly visible in code.</p>
 <pre><code class="hljs java"><span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> SPEED_OF_SOUND   = <span class="hljs-number">761.207</span>;</code></pre>
-
-<p>Because of implicit conversion, statements like </p>
+<p>Because of implicit conversion, statements like</p>
 <pre><code class="hljs ebnf"><span class="hljs-attribute">double someDoubleVar</span> = 0;
 <span class="hljs-attribute">someDoubleVar</span> = 5;</code></pre>
 <p>are allowed, but discouraged. Using 0.0 or 5.0 is preferable.</p>
-<p>变量类型转换：A programmer can precede an expression with <code>(type)</code> to convert the expression’s value to the indicated type.</p>
+<p>变量类型转换：A programmer can precede an expression with <code>(type)</code> to convert the expression’s value to the indicated type.</p>
 <pre><code class="hljs java">avgKidsPerFamily = (<span class="hljs-keyword">double</span>)(kidsInFamily1 / kidsInFamily2)
 <span class="hljs-comment">//但是这样的问题在于没啥子用，应该把double加在两个数字中的一个，而不是加在最外面。</span></code></pre>
-
-<p>整数类型：8-16-32-64 bits对应着byte-short-int-long<br>浮点类型：32-64 bits对应着float-double. Overflow with floating-point results in infinity.</p>
-<h1 id="函数-Method"><a href="#函数-Method" class="headerlink" title="函数-Method"></a>函数-Method</h1><p>函数里面的变量在定义的时候被称为参数parameter，在调用时被称为argument</p>
-<p>A method can only return one item, not two or more.<br>A void return type means the method returns no value. </p>
-<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><p><strong>Math:</strong> Sqrt(x), pow(x,y), abs(x), import java.lang.Math; </p>
-<h1 id="错误总结"><a href="#错误总结" class="headerlink" title="错误总结"></a>错误总结</h1><p>If a program needs a floating-point result from dividing two integers, then <u>at least one of the integers needs to be converted</u> to double so floating-point division is performed.</p>
+<p>整数类型：8-16-32-64 bits对应着byte-short-int-long<br />
+浮点类型：32-64 bits对应着float-double. Overflow with floating-point results in infinity.</p>
+<h1 id="函数-method"><a class="markdownIt-Anchor" href="#函数-method"></a> 函数-Method</h1>
+<p>函数里面的变量在定义的时候被称为参数parameter，在调用时被称为argument</p>
+<p>A method can only return one item, not two or more.<br />
+A void return type means the method returns no value.</p>
+<h1 id="包包"><a class="markdownIt-Anchor" href="#包包"></a> 包包</h1>
+<p><strong>Math:</strong> Sqrt(x), pow(x,y), abs(x), import java.lang.Math;</p>
+<h1 id="错误总结"><a class="markdownIt-Anchor" href="#错误总结"></a> 错误总结</h1>
+<p>If a program needs a floating-point result from dividing two integers, then <u>at least one of the integers needs to be converted</u> to double so floating-point division is performed.</p>
 <pre><code class="hljs java">System.out.println(<span class="hljs-string">&quot;&quot;</span>+...) 以防止将...以数字的形式打印</code></pre>
-
-
-
-
-
-
-
-
-
-
 
             </div>
             <hr>

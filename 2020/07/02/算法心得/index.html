@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -329,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.7k 字
+      5.8k 字
     </span>
   
 
@@ -339,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      67
+      69
        分钟
     </span>
   
@@ -372,7 +384,8 @@
             <h1 style="display: none">算法心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>以下知识来自于：</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>以下知识来自于：</p>
 <ul>
 <li>普林斯顿在Coursera上面的algorithm网课</li>
 <li>python算法书</li>
@@ -381,28 +394,30 @@
 </ul>
 <p>希望有朝一日能够继续学习。在上CS577的时候应该会更新这个文档</p>
 <a id="more"></a>
-
-
-
-<h1 id="算法图解"><a href="#算法图解" class="headerlink" title="算法图解"></a>算法图解</h1><h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>作为一个好的算法工程师，在对具体问题进行优化的时候，甚至要考虑使用插入排序还是堆排序…</p>
+<h1 id="算法图解"><a class="markdownIt-Anchor" href="#算法图解"></a> 算法图解</h1>
+<h2 id="算法简介"><a class="markdownIt-Anchor" href="#算法简介"></a> 算法简介</h2>
+<p>作为一个好的算法工程师，在对具体问题进行优化的时候，甚至要考虑使用插入排序还是堆排序…</p>
 <p>二分查找居然是O(logn)时间…天哪，在我使用bisect的时候我一直以为是O(n)，以为要走一遍。</p>
 <p><strong>大O表示法：</strong></p>
 <ul>
 <li>表示的是「<strong>操作数</strong>」</li>
-<li>用来描述的是「<strong>增速</strong>」<ul>
+<li>用来描述的是「<strong>增速</strong>」
+<ul>
 <li>增速：算法的操作数，随着数据量增加的<strong>时间上升斜率</strong>。</li>
 </ul>
 </li>
-<li>防备的是「<strong>最差情况</strong>」<ul>
+<li>防备的是「<strong>最差情况</strong>」
+<ul>
 <li>很多时候我们也要评估一下<strong>平均时间</strong></li>
 </ul>
 </li>
 </ul>
 <p>一个O(n!)的例子：旅行商问题。</p>
 <ul>
-<li>给定五个城市，以什么样的顺序走一遍，所用的路程最短？ </li>
+<li>给定五个城市，以什么样的顺序走一遍，所用的路程最短？</li>
 </ul>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>数组因为元素都是挨在一起的，所以如果知道大小的话，最好事先安排好空间。</p>
+<h2 id="选择排序"><a class="markdownIt-Anchor" href="#选择排序"></a> 选择排序</h2>
+<p>数组因为元素都是挨在一起的，所以如果知道大小的话，最好事先安排好空间。</p>
 <p><strong>比较数组和链表：</strong></p>
 <ol>
 <li>数组的存储位置是连续的，链表没有要求</li>
@@ -420,7 +435,8 @@
 <li>作者提出了个新想法：将A-Z分成24个不同的链表。而每个链表的头放在一个数组里</li>
 <li>这个方法告诉我们，<strong>其实数据结构并不是那几个定式，很多时候可以自由组合</strong>，特殊情况特殊对待。</li>
 </ul>
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归的一种替代法是将要执行的东西放入一个list中，一个挨一个的去执行，就像维持一个栈。</p>
+<h2 id="递归"><a class="markdownIt-Anchor" href="#递归"></a> 递归</h2>
+<p>递归的一种替代法是将要执行的东西放入一个list中，一个挨一个的去执行，就像维持一个栈。</p>
 <blockquote>
 <p>如果使用循环，<strong>程序的性能可能更高</strong>。如果使用递归，程序可能更容易理解。如何选择要看什么对你来说更重要。</p>
 </blockquote>
@@ -432,20 +448,23 @@
 <li>书中提到的盒子堆（栈）代替法其实是把递归函数的调用栈具象化了。</li>
 <li>当递<strong>归层数过多的时候</strong>，可以考虑尾递归优化。Python不支持尾递归优化，不过可以用知乎老哥的next和Trampline模拟出类似结果。</li>
 </ul>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p><strong>分而治之的思路：</strong> Divide and Conquor</p>
+<h2 id="快速排序"><a class="markdownIt-Anchor" href="#快速排序"></a> 快速排序</h2>
+<p><strong>分而治之的思路：</strong> Divide and Conquor</p>
 <ol>
 <li>找到基线情况</li>
 <li>如何将问题规模缩小，直到基线情况</li>
 </ol>
 <p>快速排序（找pivot） v.s. 合并排序（两两分组 -&gt; 四四分组 -&gt; …）：</p>
 <ul>
-<li>快速排序的最糟情况是O(n^2)，但合并排序最糟情况也是O(nlogn)，为何我们还用快排？<ul>
+<li>快速排序的最糟情况是O(n^2)，但合并排序最糟情况也是O(nlogn)，为何我们还用快排？
+<ul>
 <li>因为其实运行时间是O(c * nlogn) 在n的函数不同的时候，常量一般影响不大。但是n的函数相近的时候，c这个常量就显得很重要了。而快排的c比合并的c小。所以平均情况下快排更好。</li>
 </ul>
 </li>
 <li>快排每层操作都是n个元素，如果分的得当，一共会有logn层。</li>
 </ul>
-<h2 id="散列表-Hash-Table"><a href="#散列表-Hash-Table" class="headerlink" title="散列表 Hash Table"></a>散列表 Hash Table</h2><p>散列表将数据映射成索引——存储数据的列表索引</p>
+<h2 id="散列表-hash-table"><a class="markdownIt-Anchor" href="#散列表-hash-table"></a> 散列表 Hash Table</h2>
+<p>散列表将数据映射成索引——存储数据的列表索引</p>
 <p><strong>散列函数的要求：</strong></p>
 <ul>
 <li>一致性：每次输入一个数据，返回的数字都相同</li>
@@ -463,7 +482,8 @@
 <li>冲突的一个简单的解决办法就是在对应的索引上面开一个新的链表。</li>
 <li>填装因子：总数据/位置总数。当填装因子 &gt; 0.7的时候就要考虑整体迁移到一个更大的空间上了。虽然迁移很慢，但是平均下来速度还是O(1)。</li>
 </ul>
-<h2 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h2><p>在我所知道的算法中，<strong>图算法应该是最有用的。</strong></p>
+<h2 id="广度优先搜索"><a class="markdownIt-Anchor" href="#广度优先搜索"></a> 广度优先搜索</h2>
+<p>在我所知道的算法中，<strong>图算法应该是最有用的。</strong></p>
 <p>一个节点可能与众多节点直接相连，这些节点被称为<strong>邻居</strong>。</p>
 <p><strong>BFS解决两类问题：</strong></p>
 <ol>
@@ -474,11 +494,13 @@
 <p>BFS的运行时间：O(V+E) 每一条边E都要走, 每一个顶点V都会被放入queue一次。</p>
 <p><strong>拓扑排序：</strong> 比如说先刷牙才能吃饭，先打开电视才能看电视。打开电视和刷牙的顺序随意，但是看电视必不能在打开电视之前。【对这种问题，用BFS可以找到一个possible solution？不懂为何把这两个放在一起讲     】</p>
 <p>树是一种特殊的图，没有指向前面的边。</p>
-<h2 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h2><p>加权图中找最短距离。</p>
+<h2 id="狄克斯特拉算法"><a class="markdownIt-Anchor" href="#狄克斯特拉算法"></a> 狄克斯特拉算法</h2>
+<p>加权图中找最短距离。</p>
 <p><strong>基本思路：</strong></p>
 <ol>
 <li>找到目前可达的最短距离的点。</li>
-<li>更新这个点的邻居们的距离。（如果多走一步其实更短的话）<ul>
+<li>更新这个点的邻居们的距离。（如果多走一步其实更短的话）
+<ul>
 <li>如果更新了的话，记得也更新表中的父节点。</li>
 </ul>
 </li>
@@ -492,7 +514,8 @@
 <li>因为出发点到终点，最多只要走n-1条边。所以第n-1步就可以结束了。</li>
 <li>如果途中包含了负环，些许尴尬。更新就无法停止了。</li>
 </ul>
-<h2 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h2><p>对于NP完全问题，只能用近似算法来做。评估近似算法：</p>
+<h2 id="贪婪算法"><a class="markdownIt-Anchor" href="#贪婪算法"></a> 贪婪算法</h2>
+<p>对于NP完全问题，只能用近似算法来做。评估近似算法：</p>
 <ol>
 <li>速度快不快</li>
 <li>得到的近似解和最优解的近似程度</li>
@@ -506,7 +529,8 @@
 <li>涉及集合（集合覆盖）</li>
 <li>如果问题可以转化成已知的NP问题（旅行商、集合覆盖）</li>
 </ul>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>每次求解都可以画出一个表格：</p>
+<h2 id="动态规划"><a class="markdownIt-Anchor" href="#动态规划"></a> 动态规划</h2>
+<p>每次求解都可以画出一个表格：</p>
 <ul>
 <li>列从左到右分别是限制条件的越来越大</li>
 <li>行从上到下分别是增添进不同的元素</li>
@@ -531,7 +555,9 @@
 <li>最长公共子串</li>
 <li>最长公共子序列</li>
 </ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>二叉搜索树的优点：插入删除元素需要的时间都是<code>O(log(N))</code><br>其他的数据结构：B树、红黑树、堆、伸展树</p>
+<h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2>
+<p>二叉搜索树的优点：插入删除元素需要的时间都是<code>O(log(N))</code><br />
+其他的数据结构：B树、红黑树、堆、伸展树</p>
 <p>并行算法的开销：</p>
 <ol>
 <li>并行管理开销</li>
@@ -551,7 +577,8 @@
 <li>一个很宽泛的框架，图问题只是其中的一个子集</li>
 <li>使用复杂的Simplex算法</li>
 </ul>
-<h1 id="Backtracking-放弃法"><a href="#Backtracking-放弃法" class="headerlink" title="Backtracking 放弃法"></a>Backtracking 放弃法</h1><p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
+<h1 id="backtracking-放弃法"><a class="markdownIt-Anchor" href="#backtracking-放弃法"></a> Backtracking 放弃法</h1>
+<p>backtracking（回溯算法）也叫试探法，它是一种系统地<strong>搜索问题的解</strong>的方法。回溯算法的基本思想是：<u>从一条路往前走，能进则进，不能进则退回来，换一条路再试。</u></p>
 <p>“回溯”的具体意思就是<strong>将不可能解或者部分解的候选尽早的舍弃掉</strong></p>
 <p>深度优先算法DFS就是一种Backtracking的实例。</p>
 <p>回溯算法说白了就是穷举法。不过回溯算法使用<strong>剪枝函数</strong>，剪去一些不可能到达最终状态（即答案状态）的节点，从而减少状态空间树节点的生成。</p>
@@ -579,7 +606,8 @@
 <li>Subsets II</li>
 <li>Palindrome Partitioning</li>
 </ol>
-<h1 id="Union-Find"><a href="#Union-Find" class="headerlink" title="Union Find"></a>Union Find</h1><p>Union Find 是用来解决动态连通性（Dynamic Connectivity）问题的算法，是并查集的一种数据结构。</p>
+<h1 id="union-find"><a class="markdownIt-Anchor" href="#union-find"></a> Union Find</h1>
+<p>Union Find 是用来解决动态连通性（Dynamic Connectivity）问题的算法，是并查集的一种数据结构。</p>
 <p>现在学的知识只能告诉我们是否联通，算法第二部分则会给出具体的联通路径。</p>
 <p>API：Application Programming Interface 应用程序编程接口</p>
 <p>等价性（Equivalence Relation）:</p>
@@ -593,20 +621,25 @@
 <li>Find Query: 给定两个点，判断他们是否联通</li>
 <li>Union Command: 给定两个点，将他们联通（属于生成过程）</li>
 </ol>
-<h2 id="Quick-Find"><a href="#Quick-Find" class="headerlink" title="Quick Find"></a>Quick Find</h2><p>建立一个长度为n的列表，连通的点在列表中有着相同的元素。</p>
+<h2 id="quick-find"><a class="markdownIt-Anchor" href="#quick-find"></a> Quick Find</h2>
+<p>建立一个长度为n的列表，连通的点在列表中有着相同的元素。</p>
 <p>Find: 当我们想知道p和q是否相通的时候我们只需要判断列表的第q和p位是否具有相同的数字即可。</p>
 <p>Union: 将其中一个数字全部变为另一个。具体变的时候Union(a,b)我们将a位置的数字变为b位置的数字</p>
 <p>Quick-Find 太慢啦！初始化需要跑完n, union操作需要跑完n, find操作需要1。</p>
-<p>复杂度是$n^2$，我们不能接受这样的算法</p>
+<p>复杂度是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>，我们不能接受这样的算法</p>
 <p>Quadratic algorithm does not scale with technology.</p>
-<h2 id="Quick-Union"><a href="#Quick-Union" class="headerlink" title="Quick Union"></a>Quick Union</h2><p>建立一个树结构。还是一个长度为n的列表。每个位置对应的数值表示他的父亲节点是谁。</p>
+<h2 id="quick-union"><a class="markdownIt-Anchor" href="#quick-union"></a> Quick Union</h2>
+<p>建立一个树结构。还是一个长度为n的列表。每个位置对应的数值表示他的父亲节点是谁。</p>
 <p>Find：只要p和q有相同的根节点就可以了</p>
 <p>Union：将其中一个数字的根节点变成另一个数字的根节点的孩子节点。</p>
 <p>Quick-Union 也不快！初始化需要跑完n, union操作需要跑完n, find操作需要n。</p>
-<h3 id="Weighted-Quick-Union"><a href="#Weighted-Quick-Union" class="headerlink" title="Weighted Quick Union"></a>Weighted Quick Union</h3><p>我们记录树的size，确保每次都将小树连接到大树的上面</p>
+<h3 id="weighted-quick-union"><a class="markdownIt-Anchor" href="#weighted-quick-union"></a> Weighted Quick Union</h3>
+<p>我们记录树的size，确保每次都将小树连接到大树的上面</p>
 <p>每个根节点的深度不超过logn.初始化需要跑完n, union操作需要跑完logn, find操作需要logn。</p>
-<h3 id="Path-Compression"><a href="#Path-Compression" class="headerlink" title="Path Compression"></a>Path Compression</h3><p>在我们从一个节点回溯找根节点的时候，只要当前停留的节点不是根节点，我们就将这个节点指向根节点。压缩整个树的深度，因为就是深度才带来了时间的长度。</p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>给定N个点，M个Union。在最极端的情况下：</p>
+<h3 id="path-compression"><a class="markdownIt-Anchor" href="#path-compression"></a> Path Compression</h3>
+<p>在我们从一个节点回溯找根节点的时候，只要当前停留的节点不是根节点，我们就将这个节点指向根节点。压缩整个树的深度，因为就是深度才带来了时间的长度。</p>
+<h2 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h2>
+<p>给定N个点，M个Union。在最极端的情况下：</p>
 <table>
 <thead>
 <tr>
@@ -617,48 +650,61 @@
 <th>WQU+Path CP</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>MN</td>
 <td>MN</td>
 <td>N + M*logN</td>
 <td>N + M*logN</td>
 <td>N + M*log*N</td>
 </tr>
-<tr>
-<td>Log* 是迭代对数函数</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Applications——Percolation"><a href="#Applications——Percolation" class="headerlink" title="Applications——Percolation"></a>Applications——Percolation</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" srcset="/img/loading.gif" alt=""></p>
+</tbody>
+</table>
+<p>Log* 是迭代对数函数</p>
+<h2 id="applicationspercolation"><a class="markdownIt-Anchor" href="#applicationspercolation"></a> Applications——Percolation</h2>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" srcset="/img/loading.gif" alt="" /></p>
 <p>很明显，概率越小越不容易渗透。</p>
 <p>Phase Transition: 在能不能渗透的某个临界值p，图像会变得十分陡峭。</p>
 <p>用蒙特卡洛模拟来找出临界值p：先给一个黑色方块。将其中的黑块一个一个的变成白块，直至渗透。</p>
-<p>将每一个方块用一个点来表示。每次一个点亮的白块会call function 0~4次。<br>在第一行上面建立一个虚拟点，连接了第一行的每一个点。在最后一行下面建立一个虚拟点，连接最后一行的每一个点。反复判断这两个创建的虚拟点之间是否存在通路即可。</p>
+<p>将每一个方块用一个点来表示。每次一个点亮的白块会call function 0~4次。<br />
+在第一行上面建立一个虚拟点，连接了第一行的每一个点。在最后一行下面建立一个虚拟点，连接最后一行的每一个点。反复判断这两个创建的虚拟点之间是否存在通路即可。</p>
 <p>最后答案是0.592746</p>
-<h1 id="Analysis-of-Algorithms"><a href="#Analysis-of-Algorithms" class="headerlink" title="Analysis of Algorithms"></a>Analysis of Algorithms</h1><h2 id="观察法"><a href="#观察法" class="headerlink" title="观察法"></a>观察法</h2><p>Example: 3-Sum: Given N integers, how many triples sum to exactly zero?<br>Brute Force：三层for循环</p>
-<p>很常见的一种画时间T和数据量N的图是log-log图。$T = aN^b$</p>
-<p>满足指数时间增长的算法可以通过一种方法检验：Doubling Hypothesis<br>用2N的时间除于N的时间来获得一个Ratio。如果这个Ratio趋近于一个常数，就说明差不多是指数增长（log(Ratio) = b），也可以画出log-log图然后进行拟合。</p>
-<h2 id="数学法"><a href="#数学法" class="headerlink" title="数学法"></a>数学法</h2><p>我们首先要记住一些基本操作的耗时。比如说分配一个长度为n的向量时间是O(n)，连接两个字符串的时间也是O(n)</p>
+<h1 id="analysis-of-algorithms"><a class="markdownIt-Anchor" href="#analysis-of-algorithms"></a> Analysis of Algorithms</h1>
+<h2 id="观察法"><a class="markdownIt-Anchor" href="#观察法"></a> 观察法</h2>
+<p>Example: 3-Sum: Given N integers, how many triples sum to exactly zero?<br />
+Brute Force：三层for循环</p>
+<p>很常见的一种画时间T和数据量N的图是log-log图。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo>=</mo><mi>a</mi><msup><mi>N</mi><mi>b</mi></msup></mrow><annotation encoding="application/x-tex">T = aN^b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">b</span></span></span></span></span></span></span></span></span></span></span></p>
+<p>满足指数时间增长的算法可以通过一种方法检验：Doubling Hypothesis<br />
+用2N的时间除于N的时间来获得一个Ratio。如果这个Ratio趋近于一个常数，就说明差不多是指数增长（log(Ratio) = b），也可以画出log-log图然后进行拟合。</p>
+<h2 id="数学法"><a class="markdownIt-Anchor" href="#数学法"></a> 数学法</h2>
+<p>我们首先要记住一些基本操作的耗时。比如说分配一个长度为n的向量时间是O(n)，连接两个字符串的时间也是O(n)</p>
 <p>我们一般只算最耗时的那些步骤都被重复了多少次</p>
-<p>所以在k-sum的例子中，最耗时的一步是$C_N^k$这一步，O($n^k$)</p>
+<p>所以在k-sum的例子中，最耗时的一步是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mi>N</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">C_N^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.124439em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.424669em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span>这一步，O(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">n^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span>)</p>
 <p>但是这种获得explcit的方式有点太难了，所以一般也不采用这种方法</p>
-<h2 id="Order-Of-Growth"><a href="#Order-Of-Growth" class="headerlink" title="Order Of Growth"></a>Order Of Growth</h2><p>1, log(N), N, Nlog(N), N^2, N^3, 2^N…</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" srcset="/img/loading.gif" alt=""></p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" srcset="/img/loading.gif" alt=""></p>
-<h3 id="四种记号"><a href="#四种记号" class="headerlink" title="四种记号"></a>四种记号</h3><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" srcset="/img/loading.gif" alt=""></p>
-<p><strong>Common mistake：</strong> Interpreting big-Oh as an approximate model. </p>
-<h2 id="内存使用"><a href="#内存使用" class="headerlink" title="内存使用"></a>内存使用</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" srcset="/img/loading.gif" alt=""></p>
-<h1 id="Stack-amp-Queue"><a href="#Stack-amp-Queue" class="headerlink" title="Stack &amp; Queue"></a>Stack &amp; Queue</h1><p>Stack: LIFO 后进先出<br>Queue: FIFO 先进先出<br>这两个都可以用linked-list / array来实现</p>
-<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><h3 id="Resizing-Array"><a href="#Resizing-Array" class="headerlink" title="Resizing Array"></a>Resizing Array</h3><p>在Java实现中，我们需要用户给出array的默认长度。所以更灵活的，我们可以用resizing array。但是可变长度的array会有一个问题，那就是我们每向array末尾添加一个元素的时候，我们需要把之前所有元素都复制一遍，连同最新的元素放到一起。这样的话需要的操作为：$1+2+3+…+N = N(N+1)/2$. 所以我们需要一个更简单的方法来做这个事情。</p>
-<h4 id="Repeated-Doubling"><a href="#Repeated-Doubling" class="headerlink" title="Repeated Doubling"></a>Repeated Doubling</h4><p>Q. How to grow array?</p>
+<h2 id="order-of-growth"><a class="markdownIt-Anchor" href="#order-of-growth"></a> Order Of Growth</h2>
+<p>1, log(N), N, Nlog(N), N^2, N^3, 2^N…</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" srcset="/img/loading.gif" alt="" /></p>
+<h3 id="四种记号"><a class="markdownIt-Anchor" href="#四种记号"></a> 四种记号</h3>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><strong>Common mistake：</strong> Interpreting big-Oh as an approximate model.</p>
+<h2 id="内存使用"><a class="markdownIt-Anchor" href="#内存使用"></a> 内存使用</h2>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" srcset="/img/loading.gif" alt="" /></p>
+<h1 id="stack-queue"><a class="markdownIt-Anchor" href="#stack-queue"></a> Stack &amp; Queue</h1>
+<p>Stack: LIFO 后进先出<br />
+Queue: FIFO 先进先出<br />
+这两个都可以用linked-list / array来实现</p>
+<h2 id="stack"><a class="markdownIt-Anchor" href="#stack"></a> Stack</h2>
+<h3 id="resizing-array"><a class="markdownIt-Anchor" href="#resizing-array"></a> Resizing Array</h3>
+<p>在Java实现中，我们需要用户给出array的默认长度。所以更灵活的，我们可以用resizing array。但是可变长度的array会有一个问题，那就是我们每向array末尾添加一个元素的时候，我们需要把之前所有元素都复制一遍，连同最新的元素放到一起。这样的话需要的操作为：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mo>…</mo><mo>+</mo><mi>N</mi><mo>=</mo><mi>N</mi><mo stretchy="false">(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1+2+3+…+N = N(N+1)/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord">/</span><span class="mord">2</span></span></span></span>. 所以我们需要一个更简单的方法来做这个事情。</p>
+<h4 id="repeated-doubling"><a class="markdownIt-Anchor" href="#repeated-doubling"></a> Repeated Doubling</h4>
+<p>Q. How to grow array?</p>
 <p>A. If array is full, create a new array of <u>twice the size</u>, and copy items.</p>
-<p>Cost of inserting first N items: $N + (2^1 + 2^2 + 2^3 + … + N) \sim 3N$.</p>
+<p>Cost of inserting first N items: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>+</mo><mo stretchy="false">(</mo><msup><mn>2</mn><mn>1</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><mo>…</mo><mo>+</mo><mi>N</mi><mo stretchy="false">)</mo><mo>∼</mo><mn>3</mn><mi>N</mi></mrow><annotation encoding="application/x-tex">N + (2^1 + 2^2 + 2^3 + … + N) \sim 3N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>.</p>
 <p>Q. How to shrink array?</p>
 <p>A. halve size of array s[] when array is one-quarter full.</p>
-<h3 id="Stack-considerations"><a href="#Stack-considerations" class="headerlink" title="Stack considerations"></a>Stack considerations</h3><p>Overflow and underflow: </p>
+<h3 id="stack-considerations"><a class="markdownIt-Anchor" href="#stack-considerations"></a> Stack considerations</h3>
+<p>Overflow and underflow:</p>
 <ul>
 <li>Underflow: <u>throw exception</u> if pop from an empty stack.</li>
 <li>Overflow: use <u>resizing array</u> for array implementation.</li>
@@ -672,28 +718,45 @@
 <li>Holding a reference to an object when it is no longer needed.</li>
 <li>解决方法是每次在pop之后，将不用的元素设为NULL</li>
 </ul>
-<h3 id="Linked-List-or-Resizing-Array"><a href="#Linked-List-or-Resizing-Array" class="headerlink" title="Linked-List or Resizing Array"></a>Linked-List or Resizing Array</h3><p>如果我们希望总时间变少而不在乎单个插入/删除的操作时间的话，选择Resizing-Array。如果我们想避免某一个添加/删除很慢很慢的情况，选择Linked-List，因为每一步操作耗时基本是相同的。</p>
-<h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>Stack里面的push和pop在Queue里面被称为enqueue和dequeue</p>
-<h2 id="Generic"><a href="#Generic" class="headerlink" title="Generic"></a>Generic</h2><p>有时候元素不是数字或字符这么好操作的东西（Generic Type），就有点麻烦。在各个语言里面实现的时候，Liknked-List比Array更容易实现</p>
-<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>在Python里面是用dict来实现</p>
+<h3 id="linked-list-or-resizing-array"><a class="markdownIt-Anchor" href="#linked-list-or-resizing-array"></a> Linked-List or Resizing Array</h3>
+<p>如果我们希望总时间变少而不在乎单个插入/删除的操作时间的话，选择Resizing-Array。如果我们想避免某一个添加/删除很慢很慢的情况，选择Linked-List，因为每一步操作耗时基本是相同的。</p>
+<h2 id="queue"><a class="markdownIt-Anchor" href="#queue"></a> Queue</h2>
+<p>Stack里面的push和pop在Queue里面被称为enqueue和dequeue</p>
+<h2 id="generic"><a class="markdownIt-Anchor" href="#generic"></a> Generic</h2>
+<p>有时候元素不是数字或字符这么好操作的东西（Generic Type），就有点麻烦。在各个语言里面实现的时候，Liknked-List比Array更容易实现</p>
+<h1 id="map"><a class="markdownIt-Anchor" href="#map"></a> Map</h1>
+<p>在Python里面是用dict来实现</p>
 <p>The <u>MutableMapping</u> abstract base class, from Python’s <strong>collections</strong> module and discussed in the preceding pages, is a valuable tool when implementing a map.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" srcset="/img/loading.gif" alt=""></p>
-<h2 id="Hash-Table"><a href="#Hash-Table" class="headerlink" title="Hash Table"></a>Hash Table</h2><p>Python的dict功能是用Hash Table实现的，因此查找才辣么快。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" srcset="/img/loading.gif" alt="" /></p>
+<h2 id="hash-table"><a class="markdownIt-Anchor" href="#hash-table"></a> Hash Table</h2>
+<p>Python的dict功能是用Hash Table实现的，因此查找才辣么快。</p>
 <p>The novel concept for a hash table is the use of a <u>hash function to map general keys to corresponding indices</u> in a table.</p>
 <p>The <strong>goal</strong> of a hash function, h, is to <u>map each key k to an integer in the range [0,N − 1]</u>, where N is the capacity of the bucket array for a hash table.</p>
 <p>If there are two or more keys with the same hash value, then two different items will be mapped to the same bucket in A. In this case, we say that a collision has occurred.</p>
 <p>We say that a hash function is “good” if it maps the keys in our map so as to sufﬁciently minimize collisions. For practical reasons, we also would like a hash function to be fast and easy to compute.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" srcset="/img/loading.gif" alt="" /></p>
 <p>The advantage of separating the hash function into two such components is that the hash code portion of that computation is independent of a speciﬁc hash table size. This allows the development of a general hash code for each object that can be used for a hash table of any size; only the compression function depends upon the table size. This is particularly convenient, <u>because the underlying bucket array for a hash table may be dynamically resized</u>, depending on the number of items currently stored in the map.</p>
-<h3 id="几种常见Hash编码方法"><a href="#几种常见Hash编码方法" class="headerlink" title="几种常见Hash编码方法"></a>几种常见Hash编码方法</h3><h4 id="Treating-the-Bit-Representation-as-an-Integer"><a href="#Treating-the-Bit-Representation-as-an-Integer" class="headerlink" title="Treating the Bit Representation as an Integer"></a>Treating the Bit Representation as an Integer</h4><p>Python relies on 32-bit hash codes. If a ﬂoating-point number uses a 64-bit representation, its bits cannot be viewed directly as a hash code.（如果当前信息不超过32-bit，那么他本身就是编码后的hash-code）如果是64-bit可以用32+32/去掉其中一个32/两个32做异或</p>
-<h4 id="Polynomial-Hash-Codes"><a href="#Polynomial-Hash-Codes" class="headerlink" title="Polynomial Hash Codes"></a>Polynomial Hash Codes</h4><p>用Bit-representaion会出现的问题：The summation and exclusive-or hash codes, described above, are not good choices for character strings or other variable-length objects that can be viewed as tuples of the form $(x_0,x_1,…,x_{n-1})$, where <strong>the order of the x i ’s is signiﬁcant</strong>.</p>
-<p>An alternative hash code, which does exactly this, is to choose a nonzero constant, a = 1, and use as a hash code the value:<br>$$<br>x_0a^{n-1}+x_1a^{n-2}+…+x_{n-2}a+x_{n-1}<br>$$<br>By Horner’s rule (see Exercise C-3.50), this polynomial can be computed as:<br>$$<br>x_{n-1}+a(x_{n-2}+a(x_{n-3}+…+a(x_2+a(x_1+ax_0))))<br>$$<br>We have done some experimental studies that suggest that <u>33, 37, 39, and 41</u> are particularly good choices for a when working with character strings that are English words.</p>
-<h4 id="Cyclic-Shift-Hash-Codes"><a href="#Cyclic-Shift-Hash-Codes" class="headerlink" title="Cyclic-Shift Hash Codes"></a>Cyclic-Shift Hash Codes</h4><p>A variant of the polynomial hash code replaces multiplication by a with a cyclic shift of a partial sum by a certain number of bits.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" srcset="/img/loading.gif" alt=""></p>
+<h3 id="几种常见hash编码方法"><a class="markdownIt-Anchor" href="#几种常见hash编码方法"></a> 几种常见Hash编码方法</h3>
+<h4 id="treating-the-bit-representation-as-an-integer"><a class="markdownIt-Anchor" href="#treating-the-bit-representation-as-an-integer"></a> Treating the Bit Representation as an Integer</h4>
+<p>Python relies on 32-bit hash codes. If a ﬂoating-point number uses a 64-bit representation, its bits cannot be viewed directly as a hash code.（如果当前信息不超过32-bit，那么他本身就是编码后的hash-code）如果是64-bit可以用32+32/去掉其中一个32/两个32做异或</p>
+<h4 id="polynomial-hash-codes"><a class="markdownIt-Anchor" href="#polynomial-hash-codes"></a> Polynomial Hash Codes</h4>
+<p>用Bit-representaion会出现的问题：The summation and exclusive-or hash codes, described above, are not good choices for character strings or other variable-length objects that can be viewed as tuples of the form <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_0,x_1,…,x_{n-1})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>, where <strong>the order of the x i ’s is signiﬁcant</strong>.</p>
+<p>An alternative hash code, which does exactly this, is to choose a nonzero constant, a = 1, and use as a hash code the value:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><msup><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><msub><mi>x</mi><mn>1</mn></msub><msup><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup><mo>+</mo><mo>…</mo><mo>+</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mi>a</mi><mo>+</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">x_0a^{n-1}+x_1a^{n-2}+…+x_{n-2}a+x_{n-1}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.014108em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.014108em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.791661em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>By Horner’s rule (see Exercise C-3.50), this polynomial can be computed as:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>−</mo><mn>3</mn></mrow></msub><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mi>a</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>a</mi><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x_{n-1}+a(x_{n-2}+a(x_{n-3}+...+a(x_2+a(x_1+ax_0))))
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.791661em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">)</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></p>
+<p>We have done some experimental studies that suggest that <u>33, 37, 39, and 41</u> are particularly good choices for a when working with character strings that are English words.</p>
+<h4 id="cyclic-shift-hash-codes"><a class="markdownIt-Anchor" href="#cyclic-shift-hash-codes"></a> Cyclic-Shift Hash Codes</h4>
+<p>A variant of the polynomial hash code replaces multiplication by a with a cyclic shift of a partial sum by a certain number of bits.</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" srcset="/img/loading.gif" alt="" /></p>
 <p>python里面的hash(x)可以计算一个x的hash值，However, only <u>immutable data types</u> are deemed hashable in Python. This restriction is meant to ensure that a particular object’s hash code remains constant during that object’s lifespan. Among Python’s built-in data types, <u>the immutable int, ﬂoat, str, tuple, and frozenset</u> classes produce robust hash codes via the hash function. Instances of <u>user-deﬁned classes</u> are treated as unhashable by default, with a TypeError raised by the hash function.</p>
 <p>An important rule to obey is that if x == y, then hash(x) == hash(y).</p>
-<h3 id="Compression-Functions"><a href="#Compression-Functions" class="headerlink" title="Compression Functions"></a>Compression Functions</h3><p>mapping the hash code integer into the range [0,N −1]. A good compression function is one that <u>minimizes the number of collisions for a given set of distinct hash codes.</u></p>
-<h1 id="动态规划DP"><a href="#动态规划DP" class="headerlink" title="动态规划DP"></a>动态规划DP</h1><p>分治方法将问题划为互不相交的子问题，递归的求解子问题，再将他们的解组合起来，求出原问题的解。与之相反，动态规划应用于子问题重叠的情况，即不同的子问题有公共的子子问题。在这种情况下，DP对每个子子问题只会求解一次，将其<u>保存在一个表格</u>中。动态规划常用来解决<strong>最优化问题</strong></p>
+<h3 id="compression-functions"><a class="markdownIt-Anchor" href="#compression-functions"></a> Compression Functions</h3>
+<p>mapping the hash code integer into the range [0,N −1]. A good compression function is one that <u>minimizes the number of collisions for a given set of distinct hash codes.</u></p>
+<h1 id="动态规划dp"><a class="markdownIt-Anchor" href="#动态规划dp"></a> 动态规划DP</h1>
+<p>分治方法将问题划为互不相交的子问题，递归的求解子问题，再将他们的解组合起来，求出原问题的解。与之相反，动态规划应用于子问题重叠的情况，即不同的子问题有公共的子子问题。在这种情况下，DP对每个子子问题只会求解一次，将其<u>保存在一个表格</u>中。动态规划常用来解决<strong>最优化问题</strong></p>
 <p>动态规划的四个步骤：</p>
 <ol>
 <li>刻画一个最优解的结构特征</li>
@@ -703,8 +766,10 @@
 </ol>
 <p>计算一个p*q矩阵和一个q*r矩阵的成绩，需要计算p*q*r个标量乘法</p>
 <p>钢条切割中每一个分段都是相同的，所有长度为k的钢条都属于一个子问题。但是矩阵链乘法每一个长度为k的子链都不相同，不属于一个子问题。</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" srcset="/img/loading.gif" alt=""></p>
-<h1 id="Numeric-Optimization"><a href="#Numeric-Optimization" class="headerlink" title="Numeric Optimization"></a>Numeric Optimization</h1><h3 id="Newton’s-Method"><a href="#Newton’s-Method" class="headerlink" title="Newton’s Method"></a>Newton’s Method</h3><p>算法</p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" srcset="/img/loading.gif" alt="" /></p>
+<h1 id="numeric-optimization"><a class="markdownIt-Anchor" href="#numeric-optimization"></a> Numeric Optimization</h1>
+<h3 id="newtons-method"><a class="markdownIt-Anchor" href="#newtons-method"></a> Newton’s Method</h3>
+<p>算法</p>
 <p>优点</p>
 <ul>
 <li>fast convergence (under some condition)</li>
@@ -714,7 +779,8 @@
 <li>Need second order derivative （二阶连续可导，为了防止出现切线斜率为0从而与x轴没有交点，如果此时找到了二阶导数为0的点，就是一个极值点）</li>
 <li>Only 1-D</li>
 </ul>
-<h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><p>算法</p>
+<h3 id="gradient-descent"><a class="markdownIt-Anchor" href="#gradient-descent"></a> Gradient Descent</h3>
+<p>算法</p>
 <p>优点</p>
 <ul>
 <li>n-D</li>
@@ -725,7 +791,8 @@
 <li>Speed depends</li>
 <li>Rosenbrock函数效果不太好，出现锯齿状（jag）</li>
 </ul>
-<h3 id="Golden-Section"><a href="#Golden-Section" class="headerlink" title="Golden Section"></a>Golden Section</h3><p>算法</p>
+<h3 id="golden-section"><a class="markdownIt-Anchor" href="#golden-section"></a> Golden Section</h3>
+<p>算法</p>
 <p>用secant line (割线) 代替 tangent line（切线）</p>
 <p>优点</p>
 <ul>
@@ -737,7 +804,8 @@
 <li>Only works on U-shape function. (可以考虑将一个大的函数切成几个小的U-shape部分)</li>
 <li>1-D</li>
 </ul>
-<h3 id="Nelder-Mead"><a href="#Nelder-Mead" class="headerlink" title="Nelder-Mead"></a>Nelder-Mead</h3><p>算法</p>
+<h3 id="nelder-mead"><a class="markdownIt-Anchor" href="#nelder-mead"></a> Nelder-Mead</h3>
+<p>算法</p>
 <p>用一个三角形来估计切线</p>
 <p>优点</p>
 <ul>
@@ -747,8 +815,11 @@
 <ul>
 <li>converge slowly</li>
 </ul>
-<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" srcset="/img/loading.gif" alt=""></p>
-<h1 id="数学基础知识"><a href="#数学基础知识" class="headerlink" title="数学基础知识"></a>数学基础知识</h1><p>对称性+传递性无法推出自反性的例子：平行关系</p>
+<h1 id="排序算法"><a class="markdownIt-Anchor" href="#排序算法"></a> 排序算法</h1>
+<h2 id="插入排序"><a class="markdownIt-Anchor" href="#插入排序"></a> 插入排序</h2>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" srcset="/img/loading.gif" alt="" /></p>
+<h1 id="数学基础知识"><a class="markdownIt-Anchor" href="#数学基础知识"></a> 数学基础知识</h1>
+<p>对称性+传递性无法推出自反性的例子：平行关系</p>
 
             </div>
             <hr>

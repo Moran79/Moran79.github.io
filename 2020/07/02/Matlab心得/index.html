@@ -56,7 +56,11 @@
 
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
 
 
 <body>
@@ -113,6 +117,14 @@
                   <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
                     
                     Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
                   </a>
                 
                   
@@ -372,63 +384,103 @@
             <h1 style="display: none">Matlab心得</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
 <a id="more"></a>
-
-
-
-<h1 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h1><ul>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识：</h1>
+<ul>
 <li>读入文件：load</li>
 <li>numel(A) = prod(size(A)) 返回A中元素个数</li>
 </ul>
 <p>pathtool 添加路径</p>
-<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br>注释用百分号% 代替#<br>「1<del>=2」表示1不等于2 用</del>代替叹号<br>或者|| 和&amp;&amp; 异或xor()<br>a=pi在后面加一个;冒号可以抑制打印<br>disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br>format short/long 可以在打印东西之前写出来 改变打印的位数</p>
+<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br />
+注释用百分号% 代替#<br />
+「1~=2」表示1不等于2 用~代替叹号<br />
+或者|| 和&amp;&amp; 异或xor()<br />
+a=pi在后面加一个;冒号可以抑制打印<br />
+disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br />
+format short/long 可以在打印东西之前写出来 改变打印的位数</p>
 <p>矩阵生成</p>
 <ul>
 <li>用中括号括起来，用分号按行输入</li>
 <li>ones(m,n) 生成一个m*n的矩阵，元素全为1.  zeros同理</li>
 <li>eye(n)  生成n维单位矩阵</li>
 </ul>
-<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br>randn() 生成标准正态</p>
-<p>clc清屏<br>a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br>hist(w,方格数)生成密度图像<br>size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br>length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br>who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br>选择一个向量的前十位：v=priceY(1:10)<br>save hello.mat v: 把数据v存为hello.mat文件<br>a([1 3],:) 矩阵第一行和第三行所有元素<br>A=[A,[1;2;3]]：矩阵A右侧加上一列123<br>A(:)将A元素变成一个列向量输出<br>b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br>a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br>·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
+<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br />
+randn() 生成标准正态</p>
+<p>clc清屏<br />
+a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br />
+hist(w,方格数)生成密度图像<br />
+size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br />
+length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br />
+who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br />
+选择一个向量的前十位：v=priceY(1:10)<br />
+save hello.mat v: 把数据v存为hello.mat文件<br />
+a([1 3]😅 矩阵第一行和第三行所有元素<br />
+A=[A,[1;2;3]]：矩阵A右侧加上一列123<br />
+A(:)将A元素变成一个列向量输出<br />
+b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br />
+a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br />
+·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
 <p>max()返回最大值，</p>
 <ul>
 <li>可是如果[v,c]=max(a) 那么v是最大值，c是最大值的index</li>
 <li>如果对矩阵作用max，会返回每一列的最大值</li>
 </ul>
-<p>find(a&lt;3) 返回a向量中小于3的index<br>magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br>提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br>prod() 连乘<br>floor&amp;ceil地板和天花板函数<br>max(a,[],1|2) 按列|行来取矩阵a的最大值<br>sum(a,1|2) 按列|行进行求和<br>取整个矩阵的最大值：max(max(A))或者max(A(:))</p>
+<p>find(a&lt;3) 返回a向量中小于3的index<br />
+magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br />
+提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br />
+prod() 连乘<br />
+floor&amp;ceil地板和天花板函数<br />
+max(a,[],1|2) 按列|行来取矩阵a的最大值<br />
+sum(a,1|2) 按列|行进行求和<br />
+取整个矩阵的最大值：max(max(A))或者max(A(😃)</p>
 <p>可以用逗号连接命令或者函数调用，会逐个运行。用冒号连接则不会显示结果</p>
 <p>循环：for i = 1:10, v(i)=2^i; end. while和if也要和end连用。if也没有括号</p>
 <p>exit和quit都可以退出octave</p>
 <p>addpath()添加新路径</p>
 <ul>
-<li>取出向量的第五位到最后一位：A(5:end) 注意这个end</li>
+<li>
+<p>取出向量的第五位到最后一位：A(5:end) 注意这个end</p>
+</li>
+<li>
+<p>rng(512) 等同于R里面的set.seed(512)</p>
+</li>
+<li>
+<p>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://cn.mathworks.com/help/matlab/ref/table.html">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName)</p>
+</li>
+<li>
+<p>fminunc 返回函数最小值（维数大于等于2）</p>
+</li>
 </ul>
+<h2 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h2>
 <ul>
-<li>rng(512) 等同于R里面的set.seed(512)</li>
-<li>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</li>
-<li><a target="_blank" rel="noopener" href="https://cn.mathworks.com/help/matlab/ref/table.html">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName) </li>
-<li>fminunc 返回函数最小值（维数大于等于2）</li>
-</ul>
-<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
 <li>遍历一个未知大小的矩阵/向量：for i = 1:numel(z)</li>
 </ul>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
+<h1 id="矩阵"><a class="markdownIt-Anchor" href="#矩阵"></a> 矩阵</h1>
+<ul>
 <li>a(2,:)=[] 删除某一行/列</li>
 <li>reshape(data,nrow,ncol) 变形矩阵</li>
 <li>a(: , k:end) end代表最后</li>
-<li>a=sum(A) %列求和<br>b=sum(A,2) %行求和<br>c=sum(A(:)) %矩阵求和</li>
+<li>a=sum(A) %列求和<br />
+b=sum(A,2) %行求和<br />
+c=sum(A(😃) %矩阵求和</li>
 <li></li>
 </ul>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
+<h1 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h1>
+<p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
 <p>intlinprog - Mixed-integer linear programming (MILP) 混合整数线性规划问题</p>
-<h1 id="画图："><a href="#画图：" class="headerlink" title="画图："></a>画图：</h1><ul>
+<h1 id="画图"><a class="markdownIt-Anchor" href="#画图"></a> 画图：</h1>
+<ul>
 <li>figure; open a new figure window</li>
 <li>flipud(a) 将矩阵a上下翻转</li>
-<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。 </li>
+<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。</li>
 <li>xlabel(‘name’)</li>
-<li>plot(x,y,’r’)红色</li>
-<li>legend(‘1’’2’)加图例</li>
+<li>plot(x,y,‘r’)红色</li>
+<li>legend(‘1’‘2’)加图例</li>
 <li>title(‘标题’)</li>
 <li>print -dpng ‘name.png’</li>
 <li>figure(1);plot();figure(2);plot() 可以同时分别画出来两张图</li>
@@ -439,17 +491,21 @@
 <li>colorbar 在右侧添上一个颜色条</li>
 <li>colormap gray将图变成灰色</li>
 </ul>
-<h1 id="操作命令"><a href="#操作命令" class="headerlink" title="操作命令"></a>操作命令</h1><ul>
+<h1 id="操作命令"><a class="markdownIt-Anchor" href="#操作命令"></a> 操作命令</h1>
+<ul>
 <li>ctrl+c : 终止当前程序</li>
 </ul>
-<h1 id="包包"><a href="#包包" class="headerlink" title="包包"></a>包包</h1><ul>
+<h1 id="包包"><a class="markdownIt-Anchor" href="#包包"></a> 包包</h1>
+<ul>
 <li>SVM: liblinear/libsvm</li>
 </ul>
-<h1 id="文档发布"><a href="#文档发布" class="headerlink" title="文档发布"></a>文档发布</h1><p><a target="_blank" rel="noopener" href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html">官方帮助</a></p>
+<h1 id="文档发布"><a class="markdownIt-Anchor" href="#文档发布"></a> 文档发布</h1>
+<p><a target="_blank" rel="noopener" href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html">官方帮助</a></p>
 <ul>
 <li></li>
 </ul>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+<h1 id=""><a class="markdownIt-Anchor" href="#"></a> </h1>
+
             </div>
             <hr>
             <div>
