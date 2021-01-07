@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      888 字
+      1.3k 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      16
        分钟
     </span>
   
@@ -392,12 +392,13 @@
 <li>文章结论</li>
 <li>复习点</li>
 <li>待看的点</li>
-<li>想法</li>
+<li>一些想法</li>
 </ul>
 <a id="more"></a>
 <h1 id="论文列表"><a class="markdownIt-Anchor" href="#论文列表"></a> 论文列表</h1>
 <ul>
 <li>2019 Classification and regression trees and forests for incomplete data from sample surveys</li>
+<li>2019 Subgroup identification for precision medicine- a comparative review of thirteen methods</li>
 </ul>
 <h1 id="2019-classification-and-regression-trees-and-forests-for-incomplete-data-from-sample-surveys"><a class="markdownIt-Anchor" href="#2019-classification-and-regression-trees-and-forests-for-incomplete-data-from-sample-surveys"></a> 2019 Classification and regression trees and forests for incomplete data from sample surveys</h1>
 <p>文章内容：在<code>问卷调查</code>中估计<code>均值</code>。</p>
@@ -464,6 +465,42 @@
 <li>关于树的产生过程中，变量的复用。我们到底是100%的时候都在复用，还是有一些情况是不能复用的？</li>
 <li>在最后Simulation对比那里，发现大家都underestimated。正常情况下是不是应该左面也有右面也有？虽然这些方法之间是Highly correlated, 但是都under-estimated是不是也不太正常？会不会可能是因为在我们第一步那里<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>≉</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">P_1 \not\approx D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.48312em;vertical-align:0em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> ，这样会不会导致其实算出来的对比结果不对？</li>
 <li>关于树预测结果的Variance计算，Loh说这<code>conditional on a specific tree</code>。会不会有一天我们能把Variance写成一个公式？等于节点数 + level数量 + …</li>
+</ul>
+<h1 id="2019-subgroup-identification-for-precision-medicine-a-comparative-review-of-thirteen-methods"><a class="markdownIt-Anchor" href="#2019-subgroup-identification-for-precision-medicine-a-comparative-review-of-thirteen-methods"></a> 2019 Subgroup identification for precision medicine- a comparative review of thirteen methods</h1>
+<p>文章内容：通过Simulation和真实数据，比较精准医学中Subgroup的13种方法。</p>
+<p>文章结论：一些方法比较差劲，可以看文章最后的Table10。</p>
+<p>复习点：</p>
+<ul>
+<li>
+<p>用了七个指标去评价：(a) bias in selection of subgroup variables, (b) probability of false discovery (type-I), © probability of identifying correct predictive variables, (d) bias in estimates of subgroup treatment effects, (e) expected subgroup size, (f) expected true treatment effect of subgroups, and (g) subgroup stability</p>
+</li>
+<li>
+<p><code>Prognostic</code>和<code>predictive</code>的区别：Prognostic直接跟发病率相关，predictive则是和Treatment一起决定了发病率</p>
+<ul>
+<li>所以很多时候要找predictive的变量，实际上是要找<code>什么变量和treatment变量有交互作用</code>。</li>
+<li>因为Prognostic本质上和treatment与否没啥关系，所以我们的subgroup问题主要关注的是predictive的变量。</li>
+</ul>
+</li>
+<li>
+<p>Truncation at <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\pm 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">±</span><span class="mord">1</span></span></span></span> 可以写成：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\min (\max (X,-1), 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mop">max</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">−</span><span class="mord">1</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+</li>
+</ul>
+<p>待看的点：</p>
+<ul>
+<li>关于Simulation的次数，组数，该如何选择？
+<ul>
+<li>可以取决于最后要求的精度，还有吗？</li>
+</ul>
+</li>
+</ul>
+<p>一些想法：</p>
+<ul>
+<li>复用变量来做splitting，可以产生<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>&lt;</mo><mi>X</mi><mo>≤</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{a \lt X \le b \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">}</span></span></span></span> 这样的区间。但是实际上，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>≤</mo><mi>a</mi><mo separator="true">,</mo><mi>X</mi><mo>&gt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">X \le a, X \gt b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 被分到了两个叶子节点而不是一个。我们需要考虑这两个节点的合并问题吗？</li>
+<li>Variable Selection Bias那里为什么使用根节点的划分变量，而不是最终决定Subgroup的变量？
+<ul>
+<li>大概是有一个assumption，第一个划分的最重要吧</li>
+</ul>
+</li>
 </ul>
 
             </div>

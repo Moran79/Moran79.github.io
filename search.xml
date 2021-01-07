@@ -698,12 +698,13 @@ c=sum(A(😃) %矩阵求和</li>
 <li>文章结论</li>
 <li>复习点</li>
 <li>待看的点</li>
-<li>想法</li>
+<li>一些想法</li>
 </ul>
 <a id="more"></a>
 <h1 id="论文列表"><a class="markdownIt-Anchor" href="#论文列表"></a> 论文列表</h1>
 <ul>
 <li>2019 Classification and regression trees and forests for incomplete data from sample surveys</li>
+<li>2019 Subgroup identification for precision medicine- a comparative review of thirteen methods</li>
 </ul>
 <h1 id="2019-classification-and-regression-trees-and-forests-for-incomplete-data-from-sample-surveys"><a class="markdownIt-Anchor" href="#2019-classification-and-regression-trees-and-forests-for-incomplete-data-from-sample-surveys"></a> 2019 Classification and regression trees and forests for incomplete data from sample surveys</h1>
 <p>文章内容：在<code>问卷调查</code>中估计<code>均值</code>。</p>
@@ -770,6 +771,42 @@ c=sum(A(😃) %矩阵求和</li>
 <li>关于树的产生过程中，变量的复用。我们到底是100%的时候都在复用，还是有一些情况是不能复用的？</li>
 <li>在最后Simulation对比那里，发现大家都underestimated。正常情况下是不是应该左面也有右面也有？虽然这些方法之间是Highly correlated, 但是都under-estimated是不是也不太正常？会不会可能是因为在我们第一步那里<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>≉</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">P_1 \not\approx D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.48312em;vertical-align:0em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> ，这样会不会导致其实算出来的对比结果不对？</li>
 <li>关于树预测结果的Variance计算，Loh说这<code>conditional on a specific tree</code>。会不会有一天我们能把Variance写成一个公式？等于节点数 + level数量 + …</li>
+</ul>
+<h1 id="2019-subgroup-identification-for-precision-medicine-a-comparative-review-of-thirteen-methods"><a class="markdownIt-Anchor" href="#2019-subgroup-identification-for-precision-medicine-a-comparative-review-of-thirteen-methods"></a> 2019 Subgroup identification for precision medicine- a comparative review of thirteen methods</h1>
+<p>文章内容：通过Simulation和真实数据，比较精准医学中Subgroup的13种方法。</p>
+<p>文章结论：一些方法比较差劲，可以看文章最后的Table10。</p>
+<p>复习点：</p>
+<ul>
+<li>
+<p>用了七个指标去评价：(a) bias in selection of subgroup variables, (b) probability of false discovery (type-I), © probability of identifying correct predictive variables, (d) bias in estimates of subgroup treatment effects, (e) expected subgroup size, (f) expected true treatment effect of subgroups, and (g) subgroup stability</p>
+</li>
+<li>
+<p><code>Prognostic</code>和<code>predictive</code>的区别：Prognostic直接跟发病率相关，predictive则是和Treatment一起决定了发病率</p>
+<ul>
+<li>所以很多时候要找predictive的变量，实际上是要找<code>什么变量和treatment变量有交互作用</code>。</li>
+<li>因为Prognostic本质上和treatment与否没啥关系，所以我们的subgroup问题主要关注的是predictive的变量。</li>
+</ul>
+</li>
+<li>
+<p>Truncation at <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\pm 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">±</span><span class="mord">1</span></span></span></span> 可以写成：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>min</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\min (\max (X,-1), 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mop">max</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">−</span><span class="mord">1</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+</li>
+</ul>
+<p>待看的点：</p>
+<ul>
+<li>关于Simulation的次数，组数，该如何选择？
+<ul>
+<li>可以取决于最后要求的精度，还有吗？</li>
+</ul>
+</li>
+</ul>
+<p>一些想法：</p>
+<ul>
+<li>复用变量来做splitting，可以产生<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>&lt;</mo><mi>X</mi><mo>≤</mo><mi>b</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{a \lt X \le b \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">}</span></span></span></span> 这样的区间。但是实际上，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>≤</mo><mi>a</mi><mo separator="true">,</mo><mi>X</mi><mo>&gt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">X \le a, X \gt b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 被分到了两个叶子节点而不是一个。我们需要考虑这两个节点的合并问题吗？</li>
+<li>Variable Selection Bias那里为什么使用根节点的划分变量，而不是最终决定Subgroup的变量？
+<ul>
+<li>大概是有一个assumption，第一个划分的最重要吧</li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -908,8 +945,39 @@ and teaching them to obey everything I have commanded you. And surely I am with 
     <url>/2020/12/28/textbook/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用来记录看过的教科书，以阅读时间倒序排列。</p>
+<ul>
+<li>Statistical Principles for the Design of Experiments Applications to Real Experiments</li>
+</ul>
 <a id="more"></a>
-<h1 id="教材列表"><a class="markdownIt-Anchor" href="#教材列表"></a> 教材列表</h1>
+<h2 id="statistical-principles-for-the-design-of-experiments-applications-to-real-experiments"><a class="markdownIt-Anchor" href="#statistical-principles-for-the-design-of-experiments-applications-to-real-experiments"></a> Statistical Principles for the Design of Experiments Applications to Real Experiments</h2>
+<h3 id="chap-1-introduction"><a class="markdownIt-Anchor" href="#chap-1-introduction"></a> Chap 1 Introduction</h3>
+<p>需要统计是因为要从不同中分清是误差还是信号</p>
+<p>当年 R.A. Fisher 创立很多统计方法的时候还没有电脑，现在有了很多设备，许多assumption我们是不是需要重新检验？我们是不是可以发明很多新方法？（GUIDE就是借了这个福利）</p>
+<p>这本书重在实验<code>设计</code>，而不是实验<code>分析</code>。</p>
+<p>我们在设计实验的时候，unit的性质不能决定实验的组数，要分开考虑：</p>
+<ul>
+<li>比如我们有四组老鼠，所以我们就想研究四种老鼠药的表现，这有点愚蠢。不要迁就，除非你真的想研究四种老鼠药。</li>
+</ul>
+<p>The resource equation【自由度等式】：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>E</mi><mo>=</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">T + B + E = N - 1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span></p>
+<ul>
+<li>以前一直不知道叫啥，原来叫这个。</li>
+<li>左右的<code>自由度</code>相同。treatment + block + error = data - mean estimate</li>
+</ul>
+<h3 id="chap-2-elementary-rcbd"><a class="markdownIt-Anchor" href="#chap-2-elementary-rcbd"></a> Chap 2 Elementary RCBD</h3>
+<p>定义了CRD和RCBD</p>
+<ul>
+<li>CRD：除了treatment的分配方式，别的都一样</li>
+<li>RCBD：每个block都包含每种treatment一个且只有一个</li>
+</ul>
+<p>实验的区域叫plot，我猜是因为当年实验设计主要都在农业领域</p>
+<p>简单过了一下ANOVA</p>
+<ul>
+<li>老罗曾问CRD ANOVA的三部分哪两个好算，当时一头雾水，现在明白了。between和total好算，因为都是用一项减去correction factor <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><msubsup><mi>y</mi><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">ny_{..}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.814108em;"><span style="top:-2.4530000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">.</span><span class="mord mtight">.</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<p>注意书中的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Y_{..}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.076108em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">.</span><span class="mord mtight">.</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>表示的是和而不是均值。</p>
+<p>ANOVA只依赖于方差分解，而<code>不依赖于</code>误差的正态假设。</p>
 ]]></content>
       <categories>
         <category>Study</category>
@@ -10177,9 +10245,6 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
 <blockquote>
 <p>“They believe their chances of having a good marriage are not great, and, even if a marriage is stable, there is in their view the horrifying prospect that it will become sexually boring. ”</p>
 </blockquote>
-<ul>
-<li>没错…柯立芝效应啊？</li>
-</ul>
 <blockquote>
 <p>“As comedian Chris Rock has asked, “Do you want to be single and lonely or married and bored?” Many young adults believe that these are indeed the two main options. That is why many aim for <strong>something in the middle between</strong> marriage and mere sexual encounters—cohabitation with a sexual partner.”</p>
 </blockquote>
@@ -10401,7 +10466,6 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
 <p>The only way for you to be truly free is to link your feeling to an obligation. Only if you commit yourself to loving in action, day in and day out, even when feelings and circumstances are in flux, can you truly be a free individual and not a pawn of outside forces. Also, only if you maintain your love for someone when it is not thrilling can you be said to be actually loving a person. The aesthete does not really love the person; he or she loves the feelings, thrills, ego rush, and experiences that the other person brings. The proof of that is that when those things are gone, the aesthete has no abiding care or concern for the other.</p>
 </blockquote>
 <ul>
-<li>比如说老倪进入我的生活，完全是因为他很酷。如果这个人无趣，确实可能我们就没机会认识。现在你讲说看似坚固的友情其实是因为aesthete的关系，并不是真实的「友情」。这很令人沮丧，并且这消解了一切因为一面之缘产生的感情。</li>
 <li>所以我现在的想法是，随遇而安。如果有这种开心快乐的感觉，那就让它自然地出现，我们也自然的拥抱。如果时机成熟了，变成了一种爱情/友情，那我们也接受这种情况。我们需要知道「好朋友」的分量，那在我们下次说出这个词的时候就会更有底气。若是「好朋友」只是玩得好的朋友，aesthete就起到了dominant的作用。</li>
 </ul>
 <blockquote>
@@ -10686,6 +10750,23 @@ But then marriage’s enormous potential for spiritual growth is lost. If I come
 </ul>
 <p>Beneath these statements is the premise that single life is a state of deprivation for people who are not yet fully formed enough for marriage. Brown responds along the lines of Paul’s 1 Corinthians passage: “I am not single because I am too spiritually unstable to possibly deserve a husband, nor because I am too spiritually mature to possibly need one. I am single because God is so abundantly good to me, because this is his best for me.” That fits perfectly with the reasoning and attitude of St Paul. Christianity affirmed the goodness of single life as no other faith or worldview ever has.</p>
 </blockquote>
+<blockquote>
+<p>“One of the ways you can judge whether you have moved past the infatuation stage is to ask a set of questions. Have you been through and solved a few sharp conflicts? Have you been through a cycle of repenting and forgiving? Have each of you shown the other that you can make changes out of love for the other? Two kinds of couples answer no. The first kind are those who never have any conflicts. It may be they are not past infatuation. The second kind of couple has had a stormy relationship and has the same unresolved fights over and over again. They haven’t learned even the rudimentary skills of repentance, forgiveness, and change. Neither of these couples may be ready for marriage.”</p>
+</blockquote>
+<ul>
+<li>判断是否准备好结婚了的几个问题</li>
+</ul>
+<h2 id="chap8-sex-and-marriage"><a class="markdownIt-Anchor" href="#chap8-sex-and-marriage"></a> Chap8 SEX AND MARRIAGE</h2>
+<blockquote>
+<p>“Martin Luther, for example, was reputed to say about sexual desires, “You can’t stop birds from flying over your head, but you can stop them from making nests in your hair.” By that he meant that we can’t stop sexual thoughts from occurring to us—they are natural and unavoidable. However, we are responsible for what we do with those thoughts. We must not entertain and dwell on them.”</p>
+</blockquote>
+<blockquote>
+<p>简爱片段：</p>
+<p>“Laws and principles are not for the times when there is no temptation: they are for such moments as this, when body and soul rise in mutiny against their rigour; stringent are they; inviolate they shall be. If at my individual convenience I might break them, what would be their worth?”</p>
+</blockquote>
+<blockquote>
+<p>“A fundamental rule of marriage is that time marches on, and as Lewis Smedes said, <strong>you don’t marry one woman or one man but many</strong>. Time, children, illness, and age all bring changes that may require creative, disciplined responses to rebuild a sexual intimacy that was easier at an earlier time.”</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>Holy</category>
@@ -10851,6 +10932,96 @@ But then marriage’s enormous potential for spiritual growth is lost. If I come
 <p>如果你认真仔细地研究过男人的心思，就会发现他至少被两种想象中的女人吸引——贤妻良母型的维纳斯和地狱型的维纳斯，而且他的情欲根据其对象的不同在性质上也有差别。第一种类型的女人会使他的欲望自然而然地依顺仇敌心意——<strong>那种女人很容易搅和上仁爱，随随便便就听命完婚，披戴着我们唾弃的那种敬虔和自然的金色光环</strong>；还有另外一种类型的女人，他如野兽一般地渴望得到她，而且渴望满足这种兽性肉欲，这种类型的女人的最佳用途是吸引他彻底远离婚姻，但即便结了婚，他也会把这种女人当成一个奴隶、一个偶像或一个帮凶来对待。</p>
 </blockquote>
 <p>21</p>
+<blockquote>
+<p><strong>人既不能创造，也无法挽留时间的一分一秒。时间完全是白白地馈赠给他的</strong>；他若把时间看成是归自己所有的东西，那还不如把太阳月亮也当成是他的私有财产呢。</p>
+</blockquote>
+<ul>
+<li>很多时候我们为琐事生气，因为这些琐事占据了「我们的」时间。而时间真的是「我们的」吗？</li>
+</ul>
+<p>22</p>
+<blockquote>
+<p><strong>音乐和静默</strong>——我对这两样都恨之人骨！谢天谢地，自从我们的父进人地狱以来——这比人类出现要早上无数年，地狱里没有任何一寸空间、任何一段时间降服于这两种可恶的力量，<strong>喧嚣占领了地狱的所有一切——喧嚣，伟大的活力，是一切狂喜、残忍、精力充沛的生物在声音上的表现——单单喧嚣本身就可以保护我们远离愚蠢的良心不安、绝望的愧疚和无法忍受的希望</strong>。最终，我们要把整个宇宙都变成一片喧嚣。在地球上，我们在这方面已有长足进步。天堂的旋律和静默终将被喊叫声压过。</p>
+</blockquote>
+<p>23</p>
+<blockquote>
+<p>你看出其中破绽了吗？“<strong>相信它，不是因为它是真理，而是因为某个其他的理由而相信</strong>．&quot;这就是诀窍所在。</p>
+</blockquote>
+<p>24</p>
+<blockquote>
+<p>他对自己在这个圈子里的地位也有错觉。在“爱情”的影响下，他可能仍会认为自己配不上那个女孩，但是他很快就不再认为自己和其他人比起来会相形见绌。他根本不知道，他们在很大程度上是出于仁慈才容忍他，是因为他现在已是大家庭中的一员才会欣然接纳他。他自己很多谈话和观点只不过是在模仿他们的谈话和观点罢了，他做梦也不会想到，他们其实对此全都心知肚明。他丝毫不怀疑自己对这些人所抱的好感，其实这很大程度上是因为那丫头对着他施展的情欲魅力挥酒到了她周围一切环境之上。<strong>他以为自己之所以会喜欢他们的交谈内容和生活方式，是因为他的灵性和他们一样有深度，而实际上他们比他深刻得多</strong>；若不是在热恋中，他对自己现在接受的很多东西，就只会有迷惑不解和排斥抵触的感觉。他就像一只狗，出于捕猎本能和对主人的爱，在享受了一整天的狩猎之后，就以为自己已经精通各式火枪了！</p>
+</blockquote>
+<blockquote>
+<p>你一定要教他把那些让他感到愉悦的圈子和让他觉得无聊的圈子之间的区别误以为是基督徒和非基督徒之间的区别。一定要让他觉得（最好不要说出来）“我们基督徒是多么与众不同啊”；一定要让他在不知不觉间，把“我们基督徒”定义为“我那一伙人”；<strong>一定要让他把“我那一伙人”用来指代“我有权结交的那些人”，而不是“那些出于仁爱和谦卑而接纳我的人</strong>。</p>
+</blockquote>
+<p>25</p>
+<blockquote>
+<p>人若真的成了基督徒，我们就要让他们保持一种我称之为“基督教和“……”的心态。诸如基督教和危机、基督教和新心理学、基督教和新秩序、基督教和信仰疗法、基督教和灵媒研究、基督教和素食主义、基督教和简化英语拼写运动等等。<strong>如果他们非做基督徒不可，那至少要让他们做颇有特色的基督徒</strong>。使信仰本身被某种带有基督教色彩的时髦玩艺儿所代替。要在他们喜新厌旧的心理上下功夫。</p>
+</blockquote>
+<blockquote>
+<p>人类生活在时间里，而且要按一定的先后次序来体验真实。因此，为了进一步体验真实，他们就必须经历很多不同的事情；换句话说，他们必须经历变化。既然他们需要变化，仇敌（骨子里是一个享乐主义者）就使变化能愉悦人心，就像祂使吃饭成为一件乐事一样。不过，祂不希望他们为了变化而变化，正如祂不希望他们为了吃饭而吃饭一样，所以，祂就使他们渴望永恒，以此来平衡他们对变化的喜爱。祂挖空心思地在自己所创造的世界里把变化和永恒结合起来，造出一种我们称之为节律的东西，以此来满足这两种喜好。<strong>祂赐给人类四季，每个季节各不相同，但是每年都有同样的四季。这样一来，春季常常令人耳目一新，而同时又是一个古老主题的再现</strong>。</p>
+</blockquote>
+<blockquote>
+<p><strong>只有在我们的不懈努力下，那种对永无止尽、毫无规律之变化的渴望才能得以维持下去</strong>。这种渴求很有价值，体现在不同方面上。首先，<strong>它在削减快乐的同时助长了欲望</strong>。新鲜感所带来的快乐从本质上说，比其他任何事物更易受到收益递减定律的支配．不断花样翻新会耗费大量钱财，因此，这种追逐新奇的渴望会带来贪婪或苦恼，或两者兼而有之。</p>
+</blockquote>
+<blockquote>
+<p>在思想领域，我们运用各种新思潮来分散人们的注意力，使他们对自己真正的危险视而不见。在我们的引导下，每个时代潮流的呼声会鞭挞那些最不危险的罪恶，同时大力提侣某种可以为我们正欲推广的恶俗做铺垫的品德。诀窍就是：在洪水泛滥的时候，要让他们拿着灭火器到处乱跑；在船的一侧船舷己经没人水中之际，要让所有人都挤到将沉的那一侧去。这样，当所有人都开始变得世故和冷漠的时候，我们就使揭示过度感性所带来的种种危害成为思想的新风尚；一个世纪之后，当我们真的已经把所有人都变得浪漫高亢、情绪激动得失去控制以后，就把新潮的呼声引导到反对纯粹“知性”这一论调上。<strong>在人心冷酷的时代，让他们防备感情用事；在漫无目标、浮懒惰的时代，让他们反对尊崇高尚；在放荡纵欲的时代，让他们反对清教主义</strong>；无论何时，只要所有的人都急于成为奴才或暴君，我们就要把自由主义变成头号公敌。</p>
+</blockquote>
+<ul>
+<li>雪上加霜处理法</li>
+</ul>
+<blockquote>
+<p>祂希望人们在考虑那些被提到桌面上的行动方案之时，先去问一些非常简单的问题：这是否符合公义？这是否审慎有智慧？这样可行吗？而我们若能让人不断地问“这是否符合我们这个时代的主要潮流？这是进步还是倒退？这是历史前进的方向吗？”，人们就会忽略那些有价值的问题。当然，他们真正问的这些同题是没有答案的；因为他们不知道未来会怎样，而且，<strong>在很大程度上，未来会怎样恰恰取决于他们现在正要做的决定，可他们倒指望未来能帮助自己做这些决定</strong>。结果，正当他们的思想在这真空中四处乱撞之际，我们就可趁虚而人，以不易察觉的方式使他们朝我们早就决定下来的方向前进。现在我们已经成就斐然。他们以往还知道有些变化趋向好转，有些变化导致情况恶化，还有一些变化是中性的。我们在很大程度上已经铲除了这种认识。<strong>我们用带有感情色彩的形容词“停滞不前”来取代叙述性的形容词“不变”</strong>。我们已经训练他们把未来看成是一片乐土，只有享受特权的英雄们才能踏——其实每个人以每小时60分钟的速度就可以步人未来，无论他做的是什么事，无论他是谁，概莫能外。</p>
+</blockquote>
+<p>26</p>
+<blockquote>
+<p>最重要就是“无私”这个毛病。注意，我们的语言学部队<strong>把仇敌主动的仁爱替换为被动的“无私”</strong>，再次取得绝佳效果。凭着这一点，你在一开始就可以教导<strong>一个人弃自己的利益不顾，不是因为别人得到这些利益后会感到幸福，而是因为舍弃这些利益会让他显得很无私</strong>。</p>
+</blockquote>
+<p>27</p>
+<blockquote>
+<p>当“爱情”或任何一种其他令他分心的事情忽然冒出来的时候，你应该鼓励他单纯用意志力来将之驱散，并继续做常规祷告，就像什么事也没发生过一样，<strong>一旦他把注意力分散看成是自己当前面临的问题，并把这一问题摆在仇敌面前，使之成为祷告的主要内容和自己努力的主要方向，那你就真是弄巧成拙了</strong>。从长远来看，任何使病人更亲近仇敌的事物都是对我们有害的，罪也概莫能外。</p>
+</blockquote>
+<blockquote>
+<p>所有受造之物在时间和空间的每一个点中运行，更确切地说，<strong>他们那种认知状态使他们不得不把整体一致的创造之举看成是一系列相继发生的事件</strong>。仇敌不是预见到人类会在未来自由地做出贡献，而是看见他们在祂那无边无际的现在这样做。显然，在旁边观看一个人做事并不等于强迫他去做那件事。</p>
+</blockquote>
+<blockquote>
+<p>只有学究们才会读古书，而且这些学究已经被我们料理得很好，他们根本不可能通过读古书获得智慧。我们的诀窍就是向他们反复灌输历史观点。<strong>所谓历史观点，简单地说，就是指一个学究在研读古代著作时，永远不去问书中观点是不是真的</strong>。他会问是谁影响了这个古代的作者，作者在该书中的观点与作者其他著作中的说法是否一致，这代表了该作家的成长史或思想史的哪一个阶段，这一对后来的文人有何影响，这一观点受到了多少曲解（特别是被这个学究的同事曲解），过去十年间这一观点受到批评的主要原因是什么，以及“这个问题的现状”如何。任何想要从古人那里学到真知灼见的想法，任何认为古人所言可能会使自己的思想或行为发生改变的想法，都将会被当成是十足愚蠢的想法而遭到拒绝。<strong>我们无法在所有的时候欺骗所有人，所以，切断一个世代与所有其他时代之间的联系是至关重要的</strong>；倘若学问使得一个世代可以与其他时代互通有无，那这一世代的特定错误就会有被另一时代的特定真理纠正的危险。但是感谢我们的父，也要感谢历史观点，现在的大学者们几乎不能从历史中汲取养分，在这一点上，他们和那个认为“历史是一派胡言”的最为无知的机修工并没有多大差别。</p>
+</blockquote>
+<p>28</p>
+<blockquote>
+<p>顺境把一个人紧紧地连于世界。<strong>他觉得自己“在世界上有了一席之地”，其实是世界在他心里有了一席之地</strong>。他名望日渐显赫、交际圈日益广泛、自我感觉越来越好、新鲜有趣的工作使他压力渐增，所有这一切让他在世间渐渐有了一种归属感，这正是我们想要的。你会注意到，和年轻人相比，中老年人更为贪生怕死。</p>
+</blockquote>
+<p>29</p>
+<blockquote>
+<p>在和平年代，我们可以让他们当中很多人彻底忽视善与恶；在危险处境中，善恶问题粉墨登场，逼着他们去正视，连我们也无法使他们对此视而不见。一个残酷的问题摆到了我们面前，让我们进退两难。我们若在人群中倡导公义仁爱，就正中仇敌下怀；而我们若指引他们行奸邪之道，就迟早会导致（因为他允许这样的行为导致）一场战争或一次革命，于是，“是怯懦退缩还是勇敢向前？”这个无法回避的问题就会把成千上万人从道德昏睡中唤醒。</p>
+</blockquote>
+<blockquote>
+<p>但怕就怕你已经让他在仇敌的学校里学得过于深人，以致于他知道，<strong>绝望是一种罪，而且比任何一种引起绝望的罪都要严重</strong>。</p>
+</blockquote>
+<ul>
+<li>霍！绝望是一种罪？大概因为希望是一种美德</li>
+</ul>
+<blockquote>
+<p>要记住，怯懦胆小的<strong>行为</strong>才是关键；害怕的情绪本身不是罪，尽管我们很欣赏，却对我们没有半点好处。</p>
+</blockquote>
+<p>30</p>
+<blockquote>
+<p>困倦疲乏能够让人变得极度温和、心境平和，甚至还会产生出像洞察力这样的东西。<strong>你若常看到人因为疲倦而生气、怨恨和不耐烦，那是因为那些人有能干的魔鬼相伴</strong>。适度的疲倦反而比完全精疲力竭更能滋生出暴躁脾气，这似乎说不通，但事实却正是如此。</p>
+</blockquote>
+<blockquote>
+<p>不管他怎么说，不要让他下定决心默默地忍受发生在自己身上的一切，而是“在一段合理的时间内”逆来顺受——然后让这段合理的时间短于考验可能要持续的时间。不需要短太多；<strong>在痛苦的终结几乎就在眼前的时候（要是他们知道这个，就不会屈服了）使人缴械投降</strong>，是我们在攻击忍耐、仁爱和刚毅时的乐趣所在。</p>
+</blockquote>
+<p>31</p>
+<blockquote>
+<p>与诸灵的交谈：</p>
+<p>那一刻到来之前，他对它们看起来会是什么样子一点概念也没有，有时候甚至怀疑它们的存在。但当他看到它们的时候，他就知道自己一直以来都和它们相熟，同时还意识到每一个灵都曾经在他的生命中很多时刻翩然降临过，而当时他还以为自己是孤单一人呢，所以现在他可以一个一个地对它们说“原来是你啊”，而不会问“你是谁”？在这次会面中，它们和它们所说的一切都是在唤醒记忆。自婴幼儿时代起，他在孤单一人的时候，就隐隐约约感觉到周围有朋友存在，这种感觉一直萦绕于怀，现在，他终于明白是怎么一回事了；那心灵最深处的音乐，散落在每一个纯真体验中，似曾相识，却一直无法忆起，而今终于寻回。他认出了它们，因此，在尸体四肢还未完全僵直之前，他就已经对它们的陪伴感到自在起来。只有你孤零零地在外面受冷落。</p>
+</blockquote>
+<p>祝酒词</p>
+<blockquote>
+<p>你们如果作这些人的试探鬼，那第一要务就是稳扎稳打，透过不断重复，巩固他们这些朝向地狱之路的选择，使之成为习惯。但接下来（这才是至关重要的），<strong>你们就要将此习惯转化为原则</strong>—— 一个受造物随时准备去保护的原则。</p>
+</blockquote>
+<blockquote>
+<p>这是一种好的改变。制作大（而且美味可口的）罪人所用的原料，与制造那些恐怖现象——大圣徒——所用的原料没什么两样。<strong>假如这些材料真地消失了，对我们而言，就意味着淡而无味的饭食；但对“敌人”而言，难道不也是彻底的挫败和饥荒吗</strong>？“敌人”的全部伟大试验正在走向破产，还不止于此。随着大罪人越来越少，以及大部分人彻底丧失独立性，大罪人作为我们的代理，比以前要有效多了。如今，每个独裁者，甚至每个蛊惑民心的政客——以及几乎每个影星或哼哼靡靡之音的歌星——都能吸引好几万的“人羊”尾其后。“人羊”把自己（就是他们里面所有的）交付给大罪人；借着交付大罪人，又交付给我们。<strong>没准儿会有那么一个时代：到那时，除极少数人以外，我们再也不用费神去个别地试探人了。只要抓住领头羊，整群羊都会跟上来</strong>。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>Holy</category>

@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      25 字
+      430 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -386,8 +386,39 @@
             <div class="markdown-body" id="post-body">
               <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用来记录看过的教科书，以阅读时间倒序排列。</p>
+<ul>
+<li>Statistical Principles for the Design of Experiments Applications to Real Experiments</li>
+</ul>
 <a id="more"></a>
-<h1 id="教材列表"><a class="markdownIt-Anchor" href="#教材列表"></a> 教材列表</h1>
+<h2 id="statistical-principles-for-the-design-of-experiments-applications-to-real-experiments"><a class="markdownIt-Anchor" href="#statistical-principles-for-the-design-of-experiments-applications-to-real-experiments"></a> Statistical Principles for the Design of Experiments Applications to Real Experiments</h2>
+<h3 id="chap-1-introduction"><a class="markdownIt-Anchor" href="#chap-1-introduction"></a> Chap 1 Introduction</h3>
+<p>需要统计是因为要从不同中分清是误差还是信号</p>
+<p>当年 R.A. Fisher 创立很多统计方法的时候还没有电脑，现在有了很多设备，许多assumption我们是不是需要重新检验？我们是不是可以发明很多新方法？（GUIDE就是借了这个福利）</p>
+<p>这本书重在实验<code>设计</code>，而不是实验<code>分析</code>。</p>
+<p>我们在设计实验的时候，unit的性质不能决定实验的组数，要分开考虑：</p>
+<ul>
+<li>比如我们有四组老鼠，所以我们就想研究四种老鼠药的表现，这有点愚蠢。不要迁就，除非你真的想研究四种老鼠药。</li>
+</ul>
+<p>The resource equation【自由度等式】：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>E</mi><mo>=</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">T + B + E = N - 1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span></p>
+<ul>
+<li>以前一直不知道叫啥，原来叫这个。</li>
+<li>左右的<code>自由度</code>相同。treatment + block + error = data - mean estimate</li>
+</ul>
+<h3 id="chap-2-elementary-rcbd"><a class="markdownIt-Anchor" href="#chap-2-elementary-rcbd"></a> Chap 2 Elementary RCBD</h3>
+<p>定义了CRD和RCBD</p>
+<ul>
+<li>CRD：除了treatment的分配方式，别的都一样</li>
+<li>RCBD：每个block都包含每种treatment一个且只有一个</li>
+</ul>
+<p>实验的区域叫plot，我猜是因为当年实验设计主要都在农业领域</p>
+<p>简单过了一下ANOVA</p>
+<ul>
+<li>老罗曾问CRD ANOVA的三部分哪两个好算，当时一头雾水，现在明白了。between和total好算，因为都是用一项减去correction factor <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><msubsup><mi>y</mi><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">ny_{..}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.814108em;"><span style="top:-2.4530000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">.</span><span class="mord mtight">.</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<p>注意书中的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Y_{..}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.076108em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">.</span><span class="mord mtight">.</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>表示的是和而不是均值。</p>
+<p>ANOVA只依赖于方差分解，而<code>不依赖于</code>误差的正态假设。</p>
 
             </div>
             <hr>
