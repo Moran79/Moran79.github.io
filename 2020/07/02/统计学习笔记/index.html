@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5k 字
+      3.9k 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      81
+      66
        分钟
     </span>
   
@@ -387,96 +387,8 @@
               <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <ul>
 <li>记录一下学统计的时候遇到的一些问题</li>
-<li>《The Seven Pillars of Statistical Wisdom》Stephen M. Stigler -Harvard University Press (2016)</li>
 </ul>
 <a id="more"></a>
-<h1 id="the-seven-pillars-of-statistical-wisdom"><a class="markdownIt-Anchor" href="#the-seven-pillars-of-statistical-wisdom"></a> The Seven Pillars of Statistical Wisdom</h1>
-<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
-<blockquote>
-<p>当他谈到aggregation的时候:</p>
-<p>“By stipulating that, given a number of observations, you can actually gain information by throwing information away!”</p>
-</blockquote>
-<blockquote>
-<p>“but as the name “Likelihood” hints, there is a wealth of associated methods, many related to parametric families or to Fisherian or Bayesian inference.”</p>
-</blockquote>
-<ul>
-<li>霍，原来可以叫Fisherian</li>
-</ul>
-<h2 id="chap1-aggregation"><a class="markdownIt-Anchor" href="#chap1-aggregation"></a> Chap1: Aggregation</h2>
-<blockquote>
-<p>“Jorge Luis Borges understood this. In a fantasy short story published in 1942, “Funes the Memorious,” he described a man, Ireneo Funes, who found after an accident that he could remember absolutely everything. He could reconstruct every day in the smallest detail, and he could even later reconstruct the reconstruction, but he was incapable of understanding. Borges wrote, “<strong>To think is to forget details, generalize, make abstractions.</strong> In the teeming world of Funes there were only details.” Aggregation can yield great gains above the individual components. <strong>Funes was big data without Statistics.</strong>”</p>
-</blockquote>
-<ul>
-<li>WOW</li>
-</ul>
-<blockquote>
-<p>“It was already well known a century earlier that magnetic north and true north differed, and by 1500 it was also well known that the difference between true and magnetic north varied from place to place, often by considerable amounts—10° or more to the east or to the west.”</p>
-</blockquote>
-<ul>
-<li>早期指南针都有一个10°左右的误差。</li>
-</ul>
-<blockquote>
-<p>“Instead he gives the mean of the largest and smallest, what later statisticians would call a <strong>midrange.</strong> ”</p>
-</blockquote>
-<ul>
-<li>最大值最小值的平均数：midrange</li>
-</ul>
-<blockquote>
-<p>“If we collect a man’s urine during 24 hours and mix all his urine to analyze the average, we get an analysis of a urine that simply does not exist;”</p>
-</blockquote>
-<ul>
-<li>人们在担心，我们通过平均值所得到的个体不一定「真实存在」。就比如说linear regression中的样本中心点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>X</mi><mo>ˉ</mo></mover><mo separator="true">,</mo><mover accent="true"><mi>y</mi><mo>ˉ</mo></mover><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\bar{X},\bar{y})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.07011em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.16666em;">ˉ</span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˉ</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 不一定存在于样本之中。</li>
-</ul>
-<h2 id="chap2-information"><a class="markdownIt-Anchor" href="#chap2-information"></a> Chap2: Information</h2>
-<p>Root-n Rule: 如果你想获得双倍的精确度，你需要四倍的数据</p>
-<blockquote>
-<p>“The paradox of the accumulation of information, namely, that the last 10 measurements are worth less than the first 10, even though all measurements are equivalently accurate, is heightened by the different (and to a degree misleading) uses of the term information in Statistics and in science.”</p>
-</blockquote>
-<ul>
-<li>后十个数据提供的信息，没有前十个那么多了</li>
-<li>两个反例：
-<ul>
-<li>FIsher Information.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi><mi>I</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I_n(\theta) = nI(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span> 这是因为它的衡量与方差是一个量度的。我们在使用时要开方</li>
-<li>香农的信息论【这个不太懂了…】</li>
-</ul>
-</li>
-</ul>
-<p>拉普拉斯将棣莫弗的定律推广，得到了中心极限定理（1810年）</p>
-<ul>
-<li>1824年泊松发现Cauchy不满足</li>
-</ul>
-<blockquote>
-<p>“This was in direct contrast to long mathematical practice: in a sequence of mathematical operations, mathematicians would keep track of the maximum error that could have arisen at each step, a quantity that grew as the series grew, while statisticians would allow for a likely compensation of errors, which would in relative terms shrink as the series grew.”</p>
-</blockquote>
-<ul>
-<li>比如说数分里面的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi><mo>−</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">\epsilon-N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">ϵ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>，对比依概率收敛</li>
-</ul>
-<p>有时候扔掉一个数据，比把他加进来然后求平均更好：</p>
-<ul>
-<li>这取决于我们的目标</li>
-<li>outlier</li>
-</ul>
-<p>有时候Correlation也会影响我们获得信息的速率：时间序列因为有了correlation，从而会出现false-pattern的情况。</p>
-<h2 id="chap3-likelihood"><a class="markdownIt-Anchor" href="#chap3-likelihood"></a> Chap3: Likelihood</h2>
-<p>遇到了一个问题，在伯努利分布中，当数据够大的时候，任何一个小格子的概率都太小了。本来对这种小概率事件我们是该拒绝的，但也可能是因为我们的方法错了？</p>
-<p>Fisher提出了MLE的说法。</p>
-<blockquote>
-<p>The associated idea of likelihood as a way to calibrate our inferences</p>
-</blockquote>
-<ul>
-<li>Likelihood变成了我们统计推断的一个尺度。该不该拒绝原假设？都是根据likelihood来判断的。</li>
-<li>Likelihood被Bayes和MLE两大方法所引导？</li>
-</ul>
-<h2 id="chap4-intercomparison"><a class="markdownIt-Anchor" href="#chap4-intercomparison"></a> Chap4: Intercomparison</h2>
-<p>这一章表示的是，如何不借助外界的信息，而从数据本身发现规律。</p>
-<blockquote>
-<p>“In 1904–1905, he wrote a pair of internal memoranda (really in-house instruction texts) summarizing the uses of error theory and the correlation coefficient, based upon his reading of recent work from Karl Pearson’s laboratory at University College London. ”</p>
-</blockquote>
-<ul>
-<li>Gosset作为一个数学/化学家，阅读同时代统计学家的成果，给自己带来了insights。</li>
-</ul>
-<p>人们开始使用的是正态的median error，后来使用了正态的error，之后Gosset发现了t-分布，发表在了Pearson的杂志Biometrika上。文章的结果一直没人用，直到被Fisher读到了。Fisher发现没人证明这个结论，于是把自己的证明寄给了Gosset，Gosset没看懂，于是转发给了Pearson，不过Pearson也没看懂。</p>
-<p>Fisher后来一己之力，创造出了t-test，发展出了回归分析理论，以及ANOVA的全部。</p>
 <h1 id="旧版"><a class="markdownIt-Anchor" href="#旧版"></a> 旧版</h1>
 <p>17.11.13<br />
 ###为什么我们要用R里面的anova函数比较多个模型？<br />
