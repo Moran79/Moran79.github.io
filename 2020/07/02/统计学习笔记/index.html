@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.9k 字
+      4.1k 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      66
+      67
        分钟
     </span>
   
@@ -389,6 +389,17 @@
 <li>记录一下学统计的时候遇到的一些问题</li>
 </ul>
 <a id="more"></a>
+<h1 id="stat641"><a class="markdownIt-Anchor" href="#stat641"></a> STAT641</h1>
+<p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
+<ul>
+<li>做完随机分组之后，不能再收集任何其他信息了。这大概也是为什么那些变量叫做Baseline，就是告诉你要在base的时候收集。</li>
+</ul>
+<p>如果adjusted for more covariates, 不会使得type-I变化，不过会使得type-II变小，因为控制了方差。</p>
+<p>对于t-test来说：</p>
+<ul>
+<li>不需要假定方差相同，因为只会节省我们两个自由度左右，收益过小。而如果假设错了，会有很大的负收益。所以小亏。</li>
+<li>甚至不需要Normality，因为数据量大的时候可以用CLT顶</li>
+</ul>
 <h1 id="旧版"><a class="markdownIt-Anchor" href="#旧版"></a> 旧版</h1>
 <p>17.11.13<br />
 ###为什么我们要用R里面的anova函数比较多个模型？<br />

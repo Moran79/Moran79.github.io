@@ -2129,6 +2129,44 @@ A,B 曲式结构为：AB</p>
 </ul>
 </li>
 </ul>
+<h2 id="ichiban-一级棒"><a class="markdownIt-Anchor" href="#ichiban-一级棒"></a> Ichiban 一级棒</h2>
+<p>老餐馆了，不过多介绍。</p>
+<ul>
+<li>冒菜 5分
+<ul>
+<li>他们家这冒菜，很不新鲜。那个藕都黑色了，不会再点了。</li>
+</ul>
+</li>
+<li>糖醋排骨 6.5分
+<ul>
+<li>无功无过，感觉不错。</li>
+</ul>
+</li>
+<li>河水豆花鱼 6.5分
+<ul>
+<li>无功无过，感觉尚可。</li>
+</ul>
+</li>
+<li>干煸四季豆 6分
+<ul>
+<li>没有老马做的香。</li>
+</ul>
+</li>
+</ul>
+<h2 id="le-cs-patisserie-tea-house-岩茶"><a class="markdownIt-Anchor" href="#le-cs-patisserie-tea-house-岩茶"></a> Le C’s Patisserie &amp; Tea House 岩茶</h2>
+<p>2021/01/31</p>
+<ul>
+<li>
+<p>肉松面包 7分</p>
+<ul>
+<li>
+<p>老刘推荐老姚，老姚推荐我们。味道不错，是好吃的面包</p>
+<p><img src="https://i.imgur.com/JRxv885.jpg" alt="" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>他们家的奶茶喝了睡不着，珍珠喝了拉肚子。感觉还是算了吧。</p>
 <h2 id="red-lobster"><a class="markdownIt-Anchor" href="#red-lobster"></a> Red Lobster</h2>
 <p>2020/09/17</p>
 <ul>
@@ -3702,6 +3740,12 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <li>中间有很长的小路，路旁有倒下的大树，很自然。</li>
 <li>不过路很难走，基本上90%的时候都在盯着地面看…周围的树木过高，挡住了阳光。属于脚踏实地而不是仰望星空的公园。</li>
 </ul>
+<h2 id="picnic-point"><a class="markdownIt-Anchor" href="#picnic-point"></a> Picnic Point</h2>
+<p>大家对这个地方都很熟了，不过多介绍。</p>
+<p>2021/02/03</p>
+<ul>
+<li>因为要人少 + 散步 + 学校附近，于是我们选择了此地。Mendota整体结冰，很有感觉，我们就讨论是否可以在冰面徒步。本想从Picnic Point走到码头，可惜只出发了一点的时候，脚下冰面慢慢变得不太扎实，心里小慌，于是打起了退堂鼓。害，英雄气短。收益不多，代价过大。</li>
+</ul>
 <h2 id="raymers-cove"><a class="markdownIt-Anchor" href="#raymers-cove"></a> Raymer’s Cove</h2>
 <p><img src="https://i.imgur.com/dvpylUv.png" alt="" /></p>
 <p><img src="https://i.imgur.com/tdxvlAn.jpg" alt="" /></p>
@@ -4262,6 +4306,17 @@ Queue: FIFO 先进先出<br />
 <li>记录一下学统计的时候遇到的一些问题</li>
 </ul>
 <a id="more"></a>
+<h1 id="stat641"><a class="markdownIt-Anchor" href="#stat641"></a> STAT641</h1>
+<p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
+<ul>
+<li>做完随机分组之后，不能再收集任何其他信息了。这大概也是为什么那些变量叫做Baseline，就是告诉你要在base的时候收集。</li>
+</ul>
+<p>如果adjusted for more covariates, 不会使得type-I变化，不过会使得type-II变小，因为控制了方差。</p>
+<p>对于t-test来说：</p>
+<ul>
+<li>不需要假定方差相同，因为只会节省我们两个自由度左右，收益过小。而如果假设错了，会有很大的负收益。所以小亏。</li>
+<li>甚至不需要Normality，因为数据量大的时候可以用CLT顶</li>
+</ul>
 <h1 id="旧版"><a class="markdownIt-Anchor" href="#旧版"></a> 旧版</h1>
 <p>17.11.13<br />
 ###为什么我们要用R里面的anova函数比较多个模型？<br />
@@ -5204,6 +5259,14 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 </blockquote>
 <p>哆啦A梦走了，大雄只能一个人面对生活。在大雄遇到困难的时候，看到身旁的「谎言800」，想到哆啦A梦实则从未离开，无论发生什么事情，自己都会有最好的朋友帮助自己。他应该会充满了勇气吧。</p>
 <p><img src="https://i.imgur.com/4lpwGkS.jpg" alt="" /></p>
+<h3 id="23-不数第几天了"><a class="markdownIt-Anchor" href="#23-不数第几天了"></a> 2/3 不数第几天了</h3>
+<p>真希望能早日回国，隔离完之后，这篇文章就不需要再更新了。很多时候写下来，也是希望以后能有机会翻看。不知道这么想，会不会使得我们在生活中为了创造回忆反而会「用力过猛」。</p>
+<p><img src="https://i.imgur.com/2AnTn7M.jpg" alt="" /></p>
+<p>再次砍下一阴，还是抗体检测比较顶，一阳顶十阴。</p>
+<p>今天和摇奖去了Picnic Point，路上讨论了国内生活（老蒋是不是已经耳朵听出茧了hhh），老姚开始（稍微）认真的规划在国内的生活了，是一个好的信号。</p>
+<p>新的学期开始了，忙中作乐。CS710也很顶，身体状况也有点反复。和疫情抗争的这段时间有个感受，在没有特效药的时候，得靠自身的免疫力。而自身免疫力这个东西很有趣，像是脾气捉摸不定的女朋友。我习惯了输入A，输出B这样效果稳定，立竿见影的事情。所以有特效药的病很难引起我的重视，得病了没事，吃药就行了。而新冠的确是对现代医学的一次挑战。告诉我们无论医学多发达，自然总能给你弄出来一个束手无策的病，最后注意力还是要回归到人身上。</p>
+<p>免疫力是狡猾的。为了一个好的免疫力，你要付出很多。首先花钱搞不定免疫力，就算住最好的医院，你自己不按时休息，肯定也是没用。其次吃几顿好的确实可能会让你感觉好一点，但是你但凡按照现代年轻人作息熬个夜，一周吃的牛排全打了水漂。每天起床的时候，如果状态正常，你可能觉得事情就该如此，而状态如果不好，你就会想，Ohno！今天又被免疫力给搞了。</p>
+<p>我们知道适度的运动是有助于身体健康的时候，可是病人的首要准则不是硬拉卧推，而是充足的休息。这可能也是为什么很多中年人不去健身房而找了马保国。我想如果能善用自身的力量，的确能应对很大一部分的疾病。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -9124,6 +9187,8 @@ ggplot(df)+
 </li>
 </ul>
 <p><a href="https://stackoverflow.com/a/18055838">保存ps半透明图片</a></p>
+<pre><code class="hljs r"><span class="hljs-keyword">library</span>(scales)
+show_col(hue_pal()(<span class="hljs-number">2</span>)) <span class="hljs-comment">#可以查看R默认前两种颜色的16进制表示</span></code></pre>
 <h2 id="ggplot"><a class="markdownIt-Anchor" href="#ggplot"></a> GGplot：</h2>
 <p>分为七个主要部分：dataset, a geom, a set of mappings, a stat, a position adjustment, a coordinate system, and a faceting scheme.</p>
 <ul>
