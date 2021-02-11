@@ -2174,6 +2174,11 @@ A,B 曲式结构为：AB</p>
 <li>热狗肠🌭味道一般，蒜香倒是不错。应该不会再回购了。</li>
 </ul>
 </li>
+<li>菠萝包 6分
+<ul>
+<li>包底因为有黄油的缘故所以有点脆脆的，我猜热了应该会是另一种风味。不过菠萝味道不重。</li>
+</ul>
+</li>
 </ul>
 <h2 id="red-lobster"><a class="markdownIt-Anchor" href="#red-lobster"></a> Red Lobster</h2>
 <p>2020/09/17</p>
@@ -4332,6 +4337,8 @@ Queue: FIFO 先进先出<br />
 <p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
 <ul>
 <li>做完随机分组之后，不能再收集任何其他信息了。这大概也是为什么那些变量叫做Baseline，就是告诉你要在base的时候收集。</li>
+<li>这也是为什么实验做完之后，我们最好不要只观察仍存活的病人组。因为存活也是一个variable。</li>
+<li>Cook拿出了一个COVID的paper，对只选择了打一针疫苗的人群进行观察。这也是post-randomization variable。</li>
 </ul>
 <p>如果adjusted for more covariates, 不会使得type-I变化，不过会使得type-II变小，因为控制了方差。</p>
 <p>对于t-test来说：</p>
@@ -4339,6 +4346,20 @@ Queue: FIFO 先进先出<br />
 <li>不需要假定方差相同，因为只会节省我们两个自由度左右，收益过小。而如果假设错了，会有很大的负收益。所以小亏。</li>
 <li>甚至不需要Normality，因为数据量大的时候可以用CLT顶</li>
 </ul>
+<p>为什么线性模型的lm有一个图是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mrow><mi mathvariant="normal">∣</mi><mtext>Standardized Residuals</mtext><mi mathvariant="normal">∣</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{|\text{Standardized Residuals}|}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.30499999999999994em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.935em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">∣</span><span class="mord text"><span class="mord">Standardized Residuals</span></span><span class="mord">∣</span></span></span><span style="top:-2.8950000000000005em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119c34,79.3,68.167,
+158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120c340,-704.7,510.7,-1060.3,512,-1067
+c4.7,-7.3,11,-11,19,-11H40000v40H1012.3s-271.3,567,-271.3,567c-38.7,80.7,-84,
+175,-136,283c-52,108,-89.167,185.3,-111.5,232c-22.3,46.7,-33.8,70.3,-34.5,71
+c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
+-252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
+s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.30499999999999994em;"><span></span></span></span></span></span></span></span></span> : 为什么要取这个平方根？</p>
+<pre><code class="hljs R">x = rnorm(<span class="hljs-number">100000</span>)
+hist(x,breaks = <span class="hljs-number">30</span>) <span class="hljs-comment"># 这很normal</span>
+y = abs(x)
+hist(y,breaks = <span class="hljs-number">30</span>) <span class="hljs-comment"># 这个趋势不太妙，单调下降</span>
+z = sqrt(y)
+hist(z,breaks = <span class="hljs-number">30</span>) <span class="hljs-comment"># 我们会发现，又有点像normal了。</span>
+<span class="hljs-comment"># 但是这个图本身有问题，要想使这个图表现好，需要同方差 + 正态性。但这个图是用来检测同方差的。所以有时候这个图表现不好，我们以为是异方差，结果其实是因为没有正态性。confounding。</span></code></pre>
 <h1 id="旧版"><a class="markdownIt-Anchor" href="#旧版"></a> 旧版</h1>
 <p>17.11.13<br />
 ###为什么我们要用R里面的anova函数比较多个模型？<br />
@@ -7530,6 +7551,12 @@ CTR: 用户搜索一个信息，我们来预测他会不会点击我们给他提
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用来记录日常的感想，以及周五周日的聚会。</p>
 <a id="more"></a>
+<h1 id="20210210"><a class="markdownIt-Anchor" href="#20210210"></a> 2021/02/10</h1>
+<p>今天看到了本山在郭的秀上面说的一段话：</p>
+<blockquote>
+<p>不是谦虚的讲，就是做艺这个东西，它是一生当中都学不完的。那么只有干到你不能上台的时候，你才感受去总结过去好多的艺术作品，你有一些很不满意的地方。我们是在通过作品来了解人生，通过人生的过程来了解作品里面的人物，不断的成长。算不上成功也算不上失败，还是在这个路上正走的人…</p>
+</blockquote>
+<p>当我听到「正走的人」时，突然有了灵感。周一的时候黄聪放和我简单讨论了关于「信仰的答案」。她问为什么不能得到答案之后就离开/不信呢？其实那一刻我也没有很好的答案，但是人自身很大的一个问题就是想给所有事情一个合理的解释。我想到的是人的一生其实是一个不断犯罪，不断被救赎的一个过程。于是我认为这是一条难以逃脱的路，像是你选了一门永远不会结束的课程。我当时的回答，说这个答案并不是一个知识或者结果，而是一个过程。如果你相信，你就要不断学习并践行。今天在本山大叔的话中也看到了一点相似的痕迹…</p>
 <h1 id="20210129"><a class="markdownIt-Anchor" href="#20210129"></a> 2021/01/29</h1>
 <p>今天在Duke团契听到廖忠信牧师关于「价值观」的分享，之后还有很多讨论，受益匪浅。</p>
 <p>很多事情我们都要付出价钱，但是有很多隐藏的代价我们没有考虑到。比如说货比三家，但是浪费了时间。滕瀚哲提到过<code>寻租</code>的概念，我认为很好。但是对于很多事情，我还是不够敏感。这之中还涉及到相对的价值与绝对的价值。</p>
