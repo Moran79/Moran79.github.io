@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hexo心得体会</title>
-    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
+    <url>/2020/07/02/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
     <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
 <a id="more"></a>
 <h1 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h1>
@@ -43,7 +43,7 @@ $$ hexo deploy -g</code></pre>
   </entry>
   <entry>
     <title>Java心得</title>
-    <url>/2020/07/02/Java%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Java%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>开始学这个是因为普林斯顿的算法，第一课我看了半天，结果也没学写出来。气馁并放弃。</p>
 <p>2020/08/23 再次鼓起勇气出发，参考了网友的建议，拿出Head First Java。</p>
@@ -155,7 +155,7 @@ A void return type means the method returns no value.</p>
   </entry>
   <entry>
     <title>Latex心得</title>
-    <url>/2020/07/02/Latex%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Latex%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
 <a id="more"></a>
@@ -280,7 +280,7 @@ A void return type means the method returns no value.</p>
   </entry>
   <entry>
     <title>Linux心得</title>
-    <url>/2020/07/02/Linux%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Linux%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
 <a id="more"></a>
@@ -417,7 +417,7 @@ wc -l &lt; <filename> 返回文件有多少行</p>
   </entry>
   <entry>
     <title>Matlab心得</title>
-    <url>/2020/07/02/Matlab%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Matlab%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
 <a id="more"></a>
@@ -548,7 +548,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>Spark心得</title>
-    <url>/2020/07/02/Spark%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Spark%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>Laioffer学习的，628第三次yelp正好用上了。</p>
 <a id="more"></a>
@@ -598,7 +598,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>Tableau心得</title>
-    <url>/2020/07/02/Tableau%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Tableau%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>为了628的presentation，后来741的report也用了。简单画个小图还是挺美观的。教育版免费。</p>
 <a id="more"></a>
@@ -613,7 +613,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>八次危机</title>
-    <url>/2020/09/29/eight-crisis/</url>
+    <url>/2020/09/30/eight-crisis/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>《八次危机》是温老的代表作，感兴趣的同学可以去听B站上的公开课《十次危机》</p>
 <a id="more"></a>
@@ -689,7 +689,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>刷论文</title>
-    <url>/2020/12/27/paper-review/</url>
+    <url>/2020/12/28/paper-review/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用来记录看过的论文，以发表时间倒序排列。</p>
 <p>采用的记录方法【最新】：</p>
@@ -816,7 +816,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>经文记忆</title>
-    <url>/2020/09/18/scripture/</url>
+    <url>/2020/09/19/scripture/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>愿有一天，引用时不需要再Google经文</p>
 <a id="more"></a>
@@ -946,7 +946,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>刷书</title>
-    <url>/2020/12/28/textbook/</url>
+    <url>/2020/12/29/textbook/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用来记录看过的教科书，以阅读时间倒序排列。</p>
 <ul>
@@ -1132,7 +1132,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>老李的日本生活</title>
-    <url>/2020/11/20/zongru/</url>
+    <url>/2020/11/21/zongru/</url>
     <content><![CDATA[<p>老李是我的好朋友。他留学日本，扎根农村，钻研真理。</p>
 <a id="more"></a>
 <p>东京朝阳 [2020/5/30]</p>
@@ -1181,7 +1181,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>名人传</title>
-    <url>/2020/07/13/%E5%90%8D%E4%BA%BA%E4%BC%A0/</url>
+    <url>/2020/07/14/%E5%90%8D%E4%BA%BA%E4%BC%A0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>《名人传》是法国作家罗曼·罗兰所著《贝多芬传》、《米开朗琪罗传》和《托尔斯泰传》的合称。《名人传》的三位传主都是人类历史上极富天才而创建至伟的人物，他们的人生丰富多彩，他们的作品精深宏博，他们的影响历经世代而不衰，罗曼·罗兰紧紧把握住这三位有着各自领域的艺术家的共同之处，着力刻画他们在扰患困顿的人生征途上历尽苦难与颠踬而不改初衷的心路历程，凸现他们崇高的人格、博爱的情感和广阔的胸襟，从而为我们谱写了另一阕“英雄交响曲”。</p>
 <a id="more"></a>
@@ -1296,7 +1296,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>心理学</title>
-    <url>/2020/08/18/%E5%BF%83%E7%90%86%E5%AD%A6/</url>
+    <url>/2020/08/19/%E5%BF%83%E7%90%86%E5%AD%A6/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>读书笔记开的过多就有点看不过来了…所以想把读书笔记都放到一起来。我想，若是好好读书，iPad还是不如电脑，电脑还是不如纸质。</p>
 <p><strong>书目名单：</strong></p>
@@ -1429,7 +1429,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>聆听音乐答案(第五版)</title>
-    <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
+    <url>/2020/07/01/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
 <ol>
@@ -1660,7 +1660,7 @@ A,B 曲式结构为：AB</p>
   </entry>
   <entry>
     <title>语文学习</title>
-    <url>/2020/07/25/%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0/</url>
+    <url>/2020/07/26/%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>一个中文学习的积累本</p>
 <a id="more"></a>
@@ -1753,7 +1753,7 @@ A,B 曲式结构为：AB</p>
   </entry>
   <entry>
     <title>酒店</title>
-    <url>/2020/07/22/%E9%85%92%E5%BA%97/</url>
+    <url>/2020/07/23/%E9%85%92%E5%BA%97/</url>
     <content><![CDATA[<p>这里记录曾住过的酒店以及评价。地区和餐厅都是按照首字母排序。</p>
 <a id="more"></a>
 <h1 id="爱荷华"><a class="markdownIt-Anchor" href="#爱荷华"></a> 爱荷华</h1>
@@ -1967,7 +1967,7 @@ A,B 曲式结构为：AB</p>
   </entry>
   <entry>
     <title>餐馆</title>
-    <url>/2020/07/22/%E9%A4%90%E9%A6%86/</url>
+    <url>/2020/07/23/%E9%A4%90%E9%A6%86/</url>
     <content><![CDATA[<p>这里记录曾吃过的餐馆/零食以及评价。地区和餐厅都是按照首字母排序。</p>
 <a id="more"></a>
 <h1 id="零食篇"><a class="markdownIt-Anchor" href="#零食篇"></a> 零食篇</h1>
@@ -2237,7 +2237,7 @@ A,B 曲式结构为：AB</p>
   </entry>
   <entry>
     <title>Laioffer笔记</title>
-    <url>/2020/07/02/Laioffer%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/03/Laioffer%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>参加了Laioffer 2018年底11月的Data班，整理了一下学习笔记。Laioffer学费不菲，但是提供的思路还行。像其他网课一样，我一如既往的虎头蛇尾，兴趣全无。</p>
 <a id="more"></a>
@@ -2785,7 +2785,7 @@ s.add(<span class="hljs-number">5</span>) <span class="hljs-comment">#打印出�
   </entry>
   <entry>
     <title>书中佳句</title>
-    <url>/2020/09/17/Reading/</url>
+    <url>/2020/09/18/Reading/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>各类书籍里面的佳句：</p>
 <ul>
@@ -3046,7 +3046,7 @@ s.add(<span class="hljs-number">5</span>) <span class="hljs-comment">#打印出�
   </entry>
   <entry>
     <title>SQL心得</title>
-    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/SQL%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
 <a id="more"></a>
@@ -3394,7 +3394,7 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
   </entry>
   <entry>
     <title>旅行</title>
-    <url>/2020/08/17/travel/</url>
+    <url>/2020/08/18/travel/</url>
     <content><![CDATA[<p>这里记录曾旅游过的地方以及评价，按照首字母排序。</p>
 <a id="more"></a>
 <h1 id="目前旅行计划"><a class="markdownIt-Anchor" href="#目前旅行计划"></a> 目前旅行计划</h1>
@@ -3881,7 +3881,7 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
   </entry>
   <entry>
     <title>算法心得</title>
-    <url>/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>以下知识来自于：</p>
 <ul>
@@ -4360,6 +4360,8 @@ hist(y,breaks = <span class="hljs-number">30</span>) <span class="hljs-comment">
 z = sqrt(y)
 hist(z,breaks = <span class="hljs-number">30</span>) <span class="hljs-comment"># 我们会发现，又有点像normal了。</span>
 <span class="hljs-comment"># 但是这个图本身有问题，要想使这个图表现好，需要同方差 + 正态性。但这个图是用来检测同方差的。所以有时候这个图表现不好，我们以为是异方差，结果其实是因为没有正态性。confounding。</span></code></pre>
+<p>对于LRT和Score Test来说，一个问题我们使用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span> ，或者使用$，都会得到一样的结果。但是Wald Test对如何parameterization 很敏感。</p>
+<p><img src="https://i.imgur.com/TCZ67WR.png" alt="" /></p>
 <h1 id="旧版"><a class="markdownIt-Anchor" href="#旧版"></a> 旧版</h1>
 <p>17.11.13<br />
 ###为什么我们要用R里面的anova函数比较多个模型？<br />
@@ -4535,7 +4537,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>郭振游门训笔记</title>
-    <url>/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/02/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>最近才了解到，门徒训练是灵命成长的关键一环。郭振游牧师编写了<a href="http://afcresources.org/contents/zh-cn/p3657.html">一套门徒小组研习课程</a>。这篇笔记主要是在听他<a href="https://www.youtube.com/playlist?list=PLr2lsVlkvbYvJMh3KwAXMHEGa203H_9Iq">CD内容</a>的时候整理出来的心得与大家分享。希望大家都能在灵命培养的路上走的更远。</p>
 <blockquote>
@@ -5357,6 +5359,10 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p>老姚最近常说：「我可以早点回来，因为我回家本来的出发点也不是为自己的享受」。我一直没往心里去。</p>
 <p>今天在飞机上，我们要找一下登机牌的信息，老姚打开了微信群&lt;香格里花园(3)&gt;。我一瞬间像是被什么东西打到了一样，我好像开始理解了他说的意思。他会和家里分享机票的信息，对回国这件事有一个清晰的沟通。而我最初根本不打算告诉父母，后来告诉之后，每每他们问起细节，我也没什么耐心，含糊其辞，觉得没必要在这件事上费口舌。最近的这次改签，则是又瞒了父母。或许在我回国的计划中，父母不像是站在自己这边旳同战壕里的战友，更像是我想要证明自己能力的一次机会。我会用「避免父母担心的口吻」讲述这件事，不过我认为背后我的确在躲避着什么。</p>
 <p>我想老姚今天给我上了一课。我晚上就去和父母说这件事。</p>
+<h3 id="217"><a class="markdownIt-Anchor" href="#217"></a> 2/17</h3>
+<p>我曾经设想过，当我坐上回国的航班，我会不会开心到尖叫。我甚至期待过，那可能是我历次回国中最快乐的一次。但是当我真正坐上飞机的时候，我发现自己想错了，我没什么感受。确实有即将回国的喜悦，但是更多的是挑战。隔离的一系列手续，自己复阳以及传染家人的可能性，国内上课的时差和网络问题…这些问题都在我坐上飞机即将起飞的时候浮现出来。这大概就是我们吧。做决定之前先闷着头冲，冲完了再来一个个把问题解决。并且联系上2/14的博客，我认为这次回国的主要目的也不是自己吃喝玩乐。不得不说，这也增加了几分失落。想到昨天听到的《以赛亚书》。以赛亚是那个时代最伟大的先知，甚至可以说旧约所有先知中除了摩西，他也可以排的上前三（我认为的）。以赛亚明白许多真理，能写书，又不像以利亚那样孤单，我原以为他是一个豁达的人。没想到大卫鲍森牧师说，以赛亚常常陷入愁苦之中，为神国的事业，也为以色列民的未来。这一下子让我觉得，人即使再有智慧，也无法摆脱为事情所困的状态。快乐是常态，忧愁也是常态，但能做出之前不曾有勇气做出的举动便不是常态。</p>
+<p>这篇文章大概到这里就要结束了。人已经在国内，就要开始进入新的阶段了。</p>
+<p>感谢你的收看，也感谢催更的朋友。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -5365,7 +5371,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>如何阅读一本书</title>
-    <url>/2020/10/29/HowToReadABook/</url>
+    <url>/2020/10/30/HowToReadABook/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>想读这本书，这是一个想加强自己阅读能力的人必会被推荐的一本书。从本科时期就在关注，最近终于有机会打开。</p>
 <a id="more"></a>
@@ -6170,7 +6176,7 @@ Best response 不一定只有一个</p>
   </entry>
   <entry>
     <title>Python心得</title>
-    <url>/2020/07/02/Python%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/Python%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用力学。</p>
 <a id="more"></a>
@@ -6977,7 +6983,7 @@ https://morvanzhou.github.io/tutorials/python-basic/tkinter/<span class="hljs-nu
   </entry>
   <entry>
     <title>机器学习笔记</title>
-    <url>/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/03/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="关于这门mooc"><a class="markdownIt-Anchor" href="#关于这门mooc"></a> 关于这门MOOC</h1>
 <p>Coursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。</p>
 <p><strong>注意事项：</strong></p>
@@ -7574,7 +7580,7 @@ CTR: 用户搜索一个信息，我们来预测他会不会点击我们给他提
   </entry>
   <entry>
     <title>耶稣说</title>
-    <url>/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/</url>
+    <url>/2020/07/04/%E8%80%B6%E7%A8%A3%E8%AF%B4/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用来记录日常的感想，以及周五周日的聚会。</p>
 <a id="more"></a>
@@ -8088,7 +8094,7 @@ To Titus, my true son in our common faith: Grace and peace from God the Father a
   </entry>
   <entry>
     <title>随手记</title>
-    <url>/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/</url>
+    <url>/2020/07/09/%E9%9A%8F%E6%89%8B%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <ul>
 <li>平时看到比较有意义的视频/推文，会把笔记整理在此处供未来查阅。</li>
@@ -8914,7 +8920,7 @@ p_numerator, p_denominator = <span class="hljs-number">1</span>, <span class="hl
   </entry>
   <entry>
     <title>R心得</title>
-    <url>/2020/07/02/R%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/03/R%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>老本行，学。</p>
 <a id="more"></a>
@@ -9902,7 +9908,7 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
   </entry>
   <entry>
     <title>圆圈正义</title>
-    <url>/2020/07/24/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/</url>
+    <url>/2020/07/25/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>《圆圈正义》一书共收录作者的49篇随笔文章,分为“圆圈正义”“何谓榜样”“道德谴责的打开方式”“身负权力 各自珍重”“法律人的理智和多数人的情感”“生命的尊严”“心怀永恒 活在当下”七大部分，作者在本书中运用特有的坦诚、自省而尖锐的笔调，探讨了法律、正义、道德、权力的理念与现实、分析了如张扣扣案、莫某纵火案等社会热点案件、分享了自身求学经验和对人生的思考。本书不仅启蒙读者法律意识和法治观念，更在于帮助读者理解法律背后更深层次的价值基础。</p>
 <a id="more"></a>
@@ -10488,7 +10494,13 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
 <blockquote>
 <p>在我们奔走天路的旅程当中，慈爱的天父预备了可爱的客栈，让我们的身心得到休憩。不过，他并不愿意我们误把客栈当做真正的家。</p>
 </blockquote>
-<h3 id="第七章地狱"><a class="markdownIt-Anchor" href="#第七章地狱"></a> 第七章：地狱</h3>
+<h3 id="第八章天堂"><a class="markdownIt-Anchor" href="#第八章天堂"></a> 第八章：天堂</h3>
+<blockquote>
+<p>灵魂只是一个等待上帝填充的空壳。</p>
+</blockquote>
+<blockquote>
+<p>自我之所以存在，乃是为了让人脱离他。只有这样，人才能回归真实的自我。</p>
+</blockquote>
 <h1 id="返璞归真"><a class="markdownIt-Anchor" href="#返璞归真"></a> 返璞归真</h1>
 <h3 id="第一章-是与非-发现宇宙意义的线索"><a class="markdownIt-Anchor" href="#第一章-是与非-发现宇宙意义的线索"></a> 第一章 是与非 —— 发现宇宙意义的线索</h3>
 <blockquote>
@@ -11089,7 +11101,7 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
   </entry>
   <entry>
     <title>Timothy Keller</title>
-    <url>/2020/07/02/The-Reason-for-God/</url>
+    <url>/2020/07/03/The-Reason-for-God/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>这里记录一下Timothy Keller的读书笔记</p>
 <ul>
