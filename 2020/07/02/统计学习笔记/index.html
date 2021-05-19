@@ -389,6 +389,11 @@
 <li>记录一下学统计的时候遇到的一些问题</li>
 </ul>
 <a id="more"></a>
+<h1 id="日常"><a class="markdownIt-Anchor" href="#日常"></a> 日常</h1>
+<p>ANVOVA：ANOVA只能处理cat变量的X，regression一般处理continuous的X，ANCOVA介于这两者之间。我们一般会用dummy0-1来处理cat，这就是ANCOVA。在R中，可以用<code>car::Anova(fit_lm, type = 'III')</code> 来运行。</p>
+<ul>
+<li>直接summary(aov)用的是type-I，是不对的。</li>
+</ul>
 <h1 id="stat641"><a class="markdownIt-Anchor" href="#stat641"></a> STAT641</h1>
 <p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
 <ul>
