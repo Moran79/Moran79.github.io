@@ -43,7 +43,7 @@ $$ hexo deploy -g</code></pre>
   </entry>
   <entry>
     <title>Java心得</title>
-    <url>/2020/07/03/Java%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Java%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>开始学这个是因为普林斯顿的算法，第一课我看了半天，结果也没学写出来。气馁并放弃。</p>
 <p>2020/08/23 再次鼓起勇气出发，参考了网友的建议，拿出Head First Java。</p>
@@ -155,7 +155,7 @@ A void return type means the method returns no value.</p>
   </entry>
   <entry>
     <title>Latex心得</title>
-    <url>/2020/07/03/Latex%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Latex%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
 <a id="more"></a>
@@ -280,7 +280,7 @@ A void return type means the method returns no value.</p>
   </entry>
   <entry>
     <title>Linux心得</title>
-    <url>/2020/07/03/Linux%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Linux%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>学679的时候记录的学习笔记。后来我将Mac的一些操作也加了进去。</p>
 <a id="more"></a>
@@ -417,7 +417,7 @@ wc -l &lt; <filename> 返回文件有多少行</p>
   </entry>
   <entry>
     <title>Matlab心得</title>
-    <url>/2020/07/03/Matlab%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Matlab%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
 <a id="more"></a>
@@ -548,7 +548,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>Spark心得</title>
-    <url>/2020/07/03/Spark%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Spark%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>Laioffer学习的，628第三次yelp正好用上了。</p>
 <a id="more"></a>
@@ -598,7 +598,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>Tableau心得</title>
-    <url>/2020/07/03/Tableau%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Tableau%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>为了628的presentation，后来741的report也用了。简单画个小图还是挺美观的。教育版免费。</p>
 <a id="more"></a>
@@ -823,7 +823,7 @@ c=sum(A(😃) %矩阵求和</li>
   </entry>
   <entry>
     <title>经文记忆</title>
-    <url>/2020/09/19/scripture/</url>
+    <url>/2020/09/18/scripture/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>愿有一天，引用时不需要再Google经文</p>
 <a id="more"></a>
@@ -1209,7 +1209,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>名人传</title>
-    <url>/2020/07/14/%E5%90%8D%E4%BA%BA%E4%BC%A0/</url>
+    <url>/2020/07/13/%E5%90%8D%E4%BA%BA%E4%BC%A0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>《名人传》是法国作家罗曼·罗兰所著《贝多芬传》、《米开朗琪罗传》和《托尔斯泰传》的合称。《名人传》的三位传主都是人类历史上极富天才而创建至伟的人物，他们的人生丰富多彩，他们的作品精深宏博，他们的影响历经世代而不衰，罗曼·罗兰紧紧把握住这三位有着各自领域的艺术家的共同之处，着力刻画他们在扰患困顿的人生征途上历尽苦难与颠踬而不改初衷的心路历程，凸现他们崇高的人格、博爱的情感和广阔的胸襟，从而为我们谱写了另一阕“英雄交响曲”。</p>
 <a id="more"></a>
@@ -1324,7 +1324,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>心理学</title>
-    <url>/2020/08/19/%E5%BF%83%E7%90%86%E5%AD%A6/</url>
+    <url>/2020/08/18/%E5%BF%83%E7%90%86%E5%AD%A6/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>读书笔记开的过多就有点看不过来了…所以想把读书笔记都放到一起来。我想，若是好好读书，iPad还是不如电脑，电脑还是不如纸质。</p>
 <p><strong>书目名单：</strong></p>
@@ -1457,7 +1457,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
   </entry>
   <entry>
     <title>聆听音乐答案(第五版)</title>
-    <url>/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
+    <url>/2020/06/29/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>因为在网上找不到标准答案，网友的参考答案不是100%准确的，所以决定自己做一遍，并附上自己的心得体会。这里摘录了《聆听音乐》第五版的答案部分，答案主要参考了两个网站：</p>
 <ol>
@@ -1688,7 +1688,7 @@ A,B 曲式结构为：AB</p>
   </entry>
   <entry>
     <title>语文学习</title>
-    <url>/2020/07/26/%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0/</url>
+    <url>/2020/07/25/%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>一个中文学习的积累本</p>
 <a id="more"></a>
@@ -2762,7 +2762,7 @@ A,B 曲式结构为：AB</p>
   </entry>
   <entry>
     <title>Laioffer笔记</title>
-    <url>/2020/07/03/Laioffer%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/02/Laioffer%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>参加了Laioffer 2018年底11月的Data班，整理了一下学习笔记。Laioffer学费不菲，但是提供的思路还行。像其他网课一样，我一如既往的虎头蛇尾，兴趣全无。</p>
 <a id="more"></a>
@@ -3310,7 +3310,7 @@ s.add(<span class="hljs-number">5</span>) <span class="hljs-comment">#打印出�
   </entry>
   <entry>
     <title>书中佳句</title>
-    <url>/2020/09/17/Reading/</url>
+    <url>/2020/09/16/Reading/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>各类书籍里面的佳句：</p>
 <ul>
@@ -3571,7 +3571,7 @@ s.add(<span class="hljs-number">5</span>) <span class="hljs-comment">#打印出�
   </entry>
   <entry>
     <title>SQL心得</title>
-    <url>/2020/07/03/SQL%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/SQL%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>找工作时出了出汗，还在Hackerank上面刷题。现在估计都忘了…</p>
 <a id="more"></a>
@@ -3968,90 +3968,6 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <p>感觉北威斯康辛和北密都有挺多看的，可以10月中旬搞出一周来，北上的时候路过几个公园。瀑布 + 枫叶。</p>
 <p><a href="https://rootsrated.com/stories/5-places-go-whitewater-rafting-midwest-jb">很多刺激的漂流</a></p>
 <p><a href="https://www.oars.com/blog/best-rafting-trip-by-state/">每个州都有的漂流</a></p>
-<h2 id="国内旅行计划"><a class="markdownIt-Anchor" href="#国内旅行计划"></a> 国内旅行计划</h2>
-<p>想去的城市：</p>
-<ul>
-<li>新疆/西藏/内蒙/宁夏/山西/河北/海南/贵州/港澳 15</li>
-<li>北京：护国寺小吃（店名，京八件）、西四包子铺（西什库）、峨眉酒家（川菜），小肠陈，北新桥卤煮，门框胡同卤煮</li>
-</ul>
-<h3 id="广州"><a class="markdownIt-Anchor" href="#广州"></a> 广州</h3>
-<blockquote>
-<p>Day1：石室圣心大教堂—沙面—陈家祠—上下九步行街</p>
-<p>Day2：越秀公园—中山纪念堂—永庆坊—夜游珠江</p>
-<p>Day3：广州长隆野生动物世界</p>
-<p>其中有点出乎意料的好的地方就是那个珠江夜游吧！体验感挺好的，那边夜景很美，周围的灯光也超级漂亮，微风吹来，特别舒适悠闲，游船古典而文雅，乘着游船还能欣赏珠江两岸三十多个文化历史景点，价格也不贵，在小程序友艇上才几十块钱就可以体验1个多小时的快乐时光，人也不会太多，也不用赶路，就是很放松的去玩，可以去试试！</p>
-</blockquote>
-<blockquote>
-<p>第一天:</p>
-<p>上午 沙面, 中山纪念堂, 越秀公园, 在越秀区找个地方吃午饭;</p>
-<p>下午 东山口 + 东山湖公园+ 二沙岛, 岛上吃了晚饭去珠江新城花城广场.</p>
-<p>第二天:</p>
-<p>上午 白云山 下午黄埔军校, 晚上琶堤</p>
-<p>第三天:</p>
-<p>长隆欢乐世界直接一天（包含长隆欢乐世界、水上乐园、野生动物世界、国际马戏大剧院、飞鸟乐园五大景区）</p>
-<p>第四天*(一般广州玩不到四天):</p>
-<p>上午石室圣心大教堂, 然后去海珠区的大总统府, 再是中大(可能不一定能进去, 进不去的话建议就沿着珠江散步), 到广州塔下拍照, 然后坐三号线去体育西商圈吃饭逛街.</p>
-<p>深圳一日: 深圳南山, 福田市民中心(有好几个展览馆博物馆在此)</p>
-<p>清远一日: 漂流</p>
-<p>作者：陈小龙<br />
-链接：<a href="https://zhuanlan.zhihu.com/p/92728929">https://zhuanlan.zhihu.com/p/92728929</a><br />
-来源：知乎<br />
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><strong>第一次去广州旅游不可错过的景点有哪些？</strong></p>
-</blockquote>
-<ul>
-<li>广州塔</li>
-<li>白云山</li>
-<li>越秀公园</li>
-<li>石室圣心大教堂</li>
-<li>沙面</li>
-<li>广州长隆旅游度假区</li>
-<li>珠江夜游</li>
-<li>广州北京路步行街</li>
-<li>广州上下九步行街</li>
-</ul>
-</blockquote>
-<h3 id="珠海"><a class="markdownIt-Anchor" href="#珠海"></a> 珠海</h3>
-<blockquote>
-<p>第一天打卡情侣路: 圆明新园(宫殿园林，模拟版圆明园，皇宫，长城，湖泊，花一个早上) -富华里(步行街商圈，吃吃喝喝) - 九洲城(有一座宫殿园林，是博物馆。旁边有大商场，很多吃的喝的)- 相思树下(全是集装箱的店铺，有些文艺感) - 海滨泳场(有灯塔，爱情邮局，沙滩，游泳区，满足你对海滩浪漫的幻想) - 珠海渔女(标志性打卡地) - 海滨公园(有露天歌手，放风筝) - 野狸岛(日月贝，有地下商圈，网红娱乐，晚上风景很好)。可以公交，建议部分路段骑行，很多共享单车。还可以共享汽车，比如联动云之类。滴滴也很方便。</p>
-<p>作者：<em>珠海</em>租房<br />
-链接：<a href="https://www.zhihu.com/question/346049949/answer/834973559">https://www.zhihu.com/question/346049949/answer/834973559</a><br />
-来源：知乎<br />
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-<blockquote>
-<p>8.珠海旅游要去情侣路的日月贝、灯塔、爱情邮局。</p>
-<p>珠海长隆海洋王国？</p>
-<p>珠海不大，建议住拱北、香洲区，交通比较便利。</p>
-</blockquote>
-<h3 id="新疆计划"><a class="markdownIt-Anchor" href="#新疆计划"></a> 新疆计划</h3>
-<p>南疆 &gt; 北疆</p>
-<blockquote>
-<p>继云：</p>
-<ul>
-<li>南疆风景好，北疆汉人多</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>新疆wifi怎么办？据说随身的物联网卡无法使用，我在想我的TA该如何顶？</p>
-</blockquote>
-<blockquote>
-<p>除了青岛之外，感觉都可以用Hyatt顶上。青岛还没有什么好的想法</p>
-</blockquote>
-<p>718 大连武汉</p>
-<ul>
-<li>可以买南航直飞，可以买早上的330 8点起飞</li>
-</ul>
-<p>723重庆乌鲁木齐</p>
-<ul>
-<li>只有重庆成都直飞，否则应该是可以天津</li>
-</ul>
-<p>8/4乌鲁木齐到天津</p>
-<p>8/10 青岛回大连</p>
-<p><img src="https://i.imgur.com/IiaecMk.png" alt="" /></p>
 <h1 id="麦迪逊"><a class="markdownIt-Anchor" href="#麦迪逊"></a> 麦迪逊</h1>
 <h2 id="blackhawk-country-club"><a class="markdownIt-Anchor" href="#blackhawk-country-club"></a> Blackhawk Country Club</h2>
 <p><img src="https://i.imgur.com/8BbvlX5.png" alt="" /></p>
@@ -4086,6 +4002,13 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <li>州立公园，停车费单次$13年卡$28。初次来的时候是社团租了一片场地，组织大家一起破冰，然后爬山结束。当时觉得是个不起眼的小湖。现在经历了很多公园之后再回来看Devil’s Lake，真是不错</li>
 <li>北边停车位少，南边多。但是北边可以租船和PaddleBoard。感觉恶魔湖的特点是很多大石块。建议大家的旅行攻略是停在南边，从East Bluff上山一直往北走。在上图中画出了一个红线的捷径，捷径的入口很好找，出口却不是这样。在谷歌地图上看的话，大概是铁轨部分由细转粗的交接部分。途中有一个梯度很大的坡，其实不下也可，整个路程就是一直往西北走，就会渐渐发现一条路。这样可以merge到铁轨人群，单程路线就可以体会到爬山，探险，铁轨，湖边的四重景色。最后在北边租一个PaddleBoard玩一小时回来即可。</li>
 <li>West Bluff还未探索，我们沿着岸边走的，感觉一般般。如果是南边出发环湖一周+水上运动，会有点累。所以如果是两辆车，建议南北各停一辆，大家从南出发，到北边结束是最好的。</li>
+</ul>
+<p><img src="https://i.imgur.com/Ac2806P.png" alt="" /></p>
+<p><img src="https://i.imgur.com/VVfKZys.jpg" alt="" /></p>
+<p>2021/09/05</p>
+<ul>
+<li>复制了上一次的操作，车停在了南面，走了小路，沿着铁轨走到公园的北面。租了三个单人皮艇 + 两个板。平平无奇的划船些许无聊，用手收放无人机就开始有些意思，双人paddle board落水就更加锦上添花 😅</li>
+<li>大家坐在一棵树干上一起拍照，感觉很有趣，很考验平衡。碰到了一棵老朽的树干，在上最后一个人的时候树干直接断了… 哈哈哈</li>
 </ul>
 <h2 id="governor-nelson-state-park"><a class="markdownIt-Anchor" href="#governor-nelson-state-park"></a> Governor Nelson State Park</h2>
 <p><img src="https://i.imgur.com/bSRjw4j.png" alt="" /></p>
@@ -4262,6 +4185,171 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <li>老姚：「野园还是大」* n</li>
 <li>这次我们选择了环园一周，好一通走。我认为还是北部环线好一点。南部环线风景好像不太多。</li>
 </ul>
+<h1 id="国内旅行计划"><a class="markdownIt-Anchor" href="#国内旅行计划"></a> 国内旅行计划</h1>
+<p>想去的城市：</p>
+<ul>
+<li>新疆/西藏/内蒙/宁夏/山西/河北/海南/贵州/港澳 15</li>
+<li>北京：护国寺小吃（店名，京八件）、西四包子铺（西什库）、峨眉酒家（川菜），小肠陈，北新桥卤煮，门框胡同卤煮</li>
+</ul>
+<h3 id="广州"><a class="markdownIt-Anchor" href="#广州"></a> 广州</h3>
+<blockquote>
+<p>Day1：石室圣心大教堂—沙面—陈家祠—上下九步行街</p>
+<p>Day2：越秀公园—中山纪念堂—永庆坊—夜游珠江</p>
+<p>Day3：广州长隆野生动物世界</p>
+<p>其中有点出乎意料的好的地方就是那个珠江夜游吧！体验感挺好的，那边夜景很美，周围的灯光也超级漂亮，微风吹来，特别舒适悠闲，游船古典而文雅，乘着游船还能欣赏珠江两岸三十多个文化历史景点，价格也不贵，在小程序友艇上才几十块钱就可以体验1个多小时的快乐时光，人也不会太多，也不用赶路，就是很放松的去玩，可以去试试！</p>
+</blockquote>
+<blockquote>
+<p>第一天:</p>
+<p>上午 沙面, 中山纪念堂, 越秀公园, 在越秀区找个地方吃午饭;</p>
+<p>下午 东山口 + 东山湖公园+ 二沙岛, 岛上吃了晚饭去珠江新城花城广场.</p>
+<p>第二天:</p>
+<p>上午 白云山 下午黄埔军校, 晚上琶堤</p>
+<p>第三天:</p>
+<p>长隆欢乐世界直接一天（包含长隆欢乐世界、水上乐园、野生动物世界、国际马戏大剧院、飞鸟乐园五大景区）</p>
+<p>第四天*(一般广州玩不到四天):</p>
+<p>上午石室圣心大教堂, 然后去海珠区的大总统府, 再是中大(可能不一定能进去, 进不去的话建议就沿着珠江散步), 到广州塔下拍照, 然后坐三号线去体育西商圈吃饭逛街.</p>
+<p>深圳一日: 深圳南山, 福田市民中心(有好几个展览馆博物馆在此)</p>
+<p>清远一日: 漂流</p>
+<p>作者：陈小龙<br />
+链接：<a href="https://zhuanlan.zhihu.com/p/92728929">https://zhuanlan.zhihu.com/p/92728929</a><br />
+来源：知乎<br />
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>第一次去广州旅游不可错过的景点有哪些？</strong></p>
+</blockquote>
+<ul>
+<li>广州塔</li>
+<li>白云山</li>
+<li>越秀公园</li>
+<li>石室圣心大教堂</li>
+<li>沙面</li>
+<li>广州长隆旅游度假区</li>
+<li>珠江夜游</li>
+<li>广州北京路步行街</li>
+<li>广州上下九步行街</li>
+</ul>
+</blockquote>
+<h3 id="珠海"><a class="markdownIt-Anchor" href="#珠海"></a> 珠海</h3>
+<blockquote>
+<p>第一天打卡情侣路: 圆明新园(宫殿园林，模拟版圆明园，皇宫，长城，湖泊，花一个早上) -富华里(步行街商圈，吃吃喝喝) - 九洲城(有一座宫殿园林，是博物馆。旁边有大商场，很多吃的喝的)- 相思树下(全是集装箱的店铺，有些文艺感) - 海滨泳场(有灯塔，爱情邮局，沙滩，游泳区，满足你对海滩浪漫的幻想) - 珠海渔女(标志性打卡地) - 海滨公园(有露天歌手，放风筝) - 野狸岛(日月贝，有地下商圈，网红娱乐，晚上风景很好)。可以公交，建议部分路段骑行，很多共享单车。还可以共享汽车，比如联动云之类。滴滴也很方便。</p>
+<p>作者：<em>珠海</em>租房<br />
+链接：<a href="https://www.zhihu.com/question/346049949/answer/834973559">https://www.zhihu.com/question/346049949/answer/834973559</a><br />
+来源：知乎<br />
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<blockquote>
+<p>8.珠海旅游要去情侣路的日月贝、灯塔、爱情邮局。</p>
+<p>珠海长隆海洋王国？</p>
+<p>珠海不大，建议住拱北、香洲区，交通比较便利。</p>
+</blockquote>
+<h3 id="新疆计划"><a class="markdownIt-Anchor" href="#新疆计划"></a> 新疆计划</h3>
+<p>南疆 &gt; 北疆</p>
+<blockquote>
+<p>继云：</p>
+<ul>
+<li>南疆风景好，北疆汉人多</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>新疆wifi怎么办？据说随身的物联网卡无法使用，我在想我的TA该如何顶？</p>
+</blockquote>
+<blockquote>
+<p>除了青岛之外，感觉都可以用Hyatt顶上。青岛还没有什么好的想法</p>
+</blockquote>
+<p>718 大连武汉</p>
+<ul>
+<li>可以买南航直飞，可以买早上的330 8点起飞</li>
+</ul>
+<p>723重庆乌鲁木齐</p>
+<ul>
+<li>只有重庆成都直飞，否则应该是可以天津</li>
+</ul>
+<p>8/4乌鲁木齐到天津</p>
+<p>8/10 青岛回大连</p>
+<p><img src="https://i.imgur.com/IiaecMk.png" alt="" /></p>
+<h3 id="高温假计划"><a class="markdownIt-Anchor" href="#高温假计划"></a> 高温假计划</h3>
+<h4 id="青岛计划"><a class="markdownIt-Anchor" href="#青岛计划"></a> 青岛计划</h4>
+<p>青岛</p>
+<ul>
+<li>八大关城区</li>
+<li>回澜阁栈桥</li>
+<li>崂山</li>
+</ul>
+<blockquote>
+<p>第一天上午从日照坐车到青岛中午入住酒店。中午去波罗油子饭馆吃饭。下午去青岛啤酒博物馆、栈桥景区、小青岛景区，晚上去台东夜市。晚上报了一个去哪儿的崂山一日游。</p>
+<p>第二天崂山一日游。走巨峰和太清路线。下午回来去青岛啤酒饭馆，晚上去台东夜市。</p>
+<p>第三天上午去网红街大学路拐角打卡，顺便参观旁边的青岛市美术馆。接着去参观八大关景区，中午去台东夜市附近，有一家台湾小吃，吃饭特别好。好像叫月光传奇，老板都是台湾人。下午去参观总督楼。然后就坐大巴去机场。</p>
+<p>台东夜市松和路一号烤肠、隔壁沙特三明治不错  其他的可以根据你个人喜好尝试一下，卖吃的特别特别特别多，都是小吃摊</p>
+<p>月光传奇（台东店）他家的车轮饼、卤肉饭很好吃   他家的东西都可以买一点，试一试</p>
+</blockquote>
+<p><code>时间</code>: 7/31 - 8/1 周六周日</p>
+<p>待选地点：</p>
+<ul>
+<li>承德避暑山庄
+<ul>
+<li>北京出发高铁不到1小时</li>
+<li>问题是大连-承德得倒火车，时长5小时，车票单程400+</li>
+</ul>
+</li>
+<li>唐山/秦皇岛
+<ul>
+<li>大连出发4h内，单程300</li>
+<li>北京出发1h内，单程100</li>
+<li>问题是不知道该玩点啥…</li>
+</ul>
+</li>
+<li>天津
+<ul>
+<li>北京出发 不说了</li>
+<li>大连出发4h30min 单程350 机票1h 单程400左右</li>
+</ul>
+</li>
+<li>沈阳
+<ul>
+<li>北京出发3h 大连出发90min</li>
+</ul>
+</li>
+</ul>
+<p><code>线路</code>:</p>
+<ul>
+<li>北京 - 南昌 动卧睡一晚400块，上午小转 下午南昌-萍乡，晚上睡在山附近</li>
+<li>萍乡武功山【看草原，感觉很帅】</li>
+<li>萍乡 - 鹰潭高铁 鹰潭龙虎山 【龙虎山我感觉一般，可以不去】</li>
+<li>萍乡/鹰潭 - 武夷山 高铁</li>
+<li>武夷山 - 福州高铁 福州小转</li>
+<li>福州 - 太姥山高铁 太姥山【这个山有很多洞可以钻，感觉有点好玩】</li>
+<li>太姥山 - 杭州 高铁 杭州小转一天</li>
+<li>杭州 - 青岛 动卧睡一晚 500块</li>
+<li>青岛安排两三天</li>
+<li>青岛-北京 完美收官</li>
+</ul>
+<p>山西沂州五台山</p>
+<p>山西云冈石窟</p>
+<p>河南安阳太行山峡谷</p>
+<p>江西婺源</p>
+<p>河南龙潭大峡谷</p>
+<p>甘肃鸣沙山和月牙泉</p>
+<p>湖北恩施大峡谷 + 腾龙洞 + 神龙溪纤夫文化</p>
+<p>湖北神农架</p>
+<p>安徽宏村</p>
+<p>温州 雁荡山</p>
+<p>安徽 九华山</p>
+<p><strong>福建 武夷山</strong>、<strong>太姥山</strong></p>
+<p>江西 <strong>武功山</strong> 龙虎山 井冈山 滕王阁</p>
+<ul>
+<li>云海、高山草原及绝美的日落</li>
+<li><a href="http://www.wugongshan.cn/toWelcome.htm">武功山</a></li>
+<li><a href="http://www.longhushan.com.cn/">龙虎山</a></li>
+</ul>
+<p>山东 沂蒙山</p>
+<p>河南 嵩山</p>
+<p>十堰武当山</p>
+<p>长沙岳麓山</p>
+<p>南岳衡山</p>
+<p>贵州梵净山</p>
+<p><strong>陕西华山</strong></p>
 <h1 id="全国5a景区"><a class="markdownIt-Anchor" href="#全国5a景区"></a> <a href="https://zhuanlan.zhihu.com/p/84875471">全国5A景区</a></h1>
 <blockquote>
 <p>截止2021.01.16 打卡43/301</p>
@@ -4613,7 +4701,7 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
   </entry>
   <entry>
     <title>算法心得</title>
-    <url>/2020/07/03/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/%E7%AE%97%E6%B3%95%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>以下知识来自于：</p>
 <ul>
@@ -5059,7 +5147,7 @@ Queue: FIFO 先进先出<br />
   </entry>
   <entry>
     <title>统计学习笔记</title>
-    <url>/2020/07/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/01/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <ul>
 <li>记录一下学统计的时候遇到的一些问题</li>
@@ -5274,7 +5362,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>郭振游门训笔记</title>
-    <url>/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/06/30/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>最近才了解到，门徒训练是灵命成长的关键一环。郭振游牧师编写了<a href="http://afcresources.org/contents/zh-cn/p3657.html">一套门徒小组研习课程</a>。这篇笔记主要是在听他<a href="https://www.youtube.com/playlist?list=PLr2lsVlkvbYvJMh3KwAXMHEGa203H_9Iq">CD内容</a>的时候整理出来的心得与大家分享。希望大家都能在灵命培养的路上走的更远。</p>
 <blockquote>
@@ -5864,7 +5952,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>如何阅读一本书</title>
-    <url>/2020/10/30/HowToReadABook/</url>
+    <url>/2020/10/29/HowToReadABook/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>想读这本书，这是一个想加强自己阅读能力的人必会被推荐的一本书。从本科时期就在关注，最近终于有机会打开。</p>
 <a id="more"></a>
@@ -6669,7 +6757,7 @@ Best response 不一定只有一个</p>
   </entry>
   <entry>
     <title>Python心得</title>
-    <url>/2020/07/03/Python%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/02/Python%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>用力学。</p>
 <a id="more"></a>
@@ -7476,7 +7564,7 @@ https://morvanzhou.github.io/tutorials/python-basic/tkinter/<span class="hljs-nu
   </entry>
   <entry>
     <title>机器学习笔记</title>
-    <url>/2020/07/03/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="关于这门mooc"><a class="markdownIt-Anchor" href="#关于这门mooc"></a> 关于这门MOOC</h1>
 <p>Coursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。</p>
 <p><strong>注意事项：</strong></p>
@@ -9478,7 +9566,7 @@ p_numerator, p_denominator = <span class="hljs-number">1</span>, <span class="hl
   </entry>
   <entry>
     <title>R心得</title>
-    <url>/2020/07/02/R%E5%BF%83%E5%BE%97/</url>
+    <url>/2020/07/01/R%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>老本行，学。</p>
 <a id="more"></a>
@@ -11665,7 +11753,7 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
   </entry>
   <entry>
     <title>Timothy Keller</title>
-    <url>/2020/07/02/The-Reason-for-God/</url>
+    <url>/2020/07/01/The-Reason-for-God/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>这里记录一下Timothy Keller的读书笔记，目前我心中的排序是：</p>
 <p>The Reason for God &gt; The Prodigal God &gt; Counterfeit Gods &gt; The Meaning of Marriage</p>
@@ -13628,7 +13716,7 @@ Ps：【不老神鸡】（一家店名）重磅安利！！这家店用什么特
   </entry>
   <entry>
     <title>2021·5月 - 四川·常熟行</title>
-    <url>/2021/05/19/sichuanchangshu/</url>
+    <url>/2021/05/18/sichuanchangshu/</url>
     <content><![CDATA[<h1 id="20215月-四川常熟行"><a class="markdownIt-Anchor" href="#20215月-四川常熟行"></a> 2021·5月 四川·常熟行</h1>
 <p><code>时间</code>：2021/05/09 - 05/18</p>
 <p><code>小伙伴</code>：老姚、海豹（乐山 &amp; 峨眉山）</p>
@@ -14005,7 +14093,7 @@ Ps：【不老神鸡】（一家店名）重磅安利！！这家店用什么特
   </entry>
   <entry>
     <title>2020·9月 - 爱荷华州立公园行</title>
-    <url>/2020/09/08/iowapark/</url>
+    <url>/2020/09/07/iowapark/</url>
     <content><![CDATA[<h1 id="20209月-爱荷华州立公园行"><a class="markdownIt-Anchor" href="#20209月-爱荷华州立公园行"></a> <a href="https://www.google.com/maps/d/edit?mid=1kgbni1BGpD5f4LzYne4d6r2dPwpmexrV&amp;usp=sharing">2020·9月 爱荷华州立公园行</a></h1>
 <p><code>时间</code>：2020/09/05 - 2020/09/07</p>
 <p><code>小伙伴</code>：JYJ/YKH/TYT/NZ/LLJ</p>
@@ -14427,6 +14515,54 @@ Ps：【不老神鸡】（一家店名）重磅安利！！这家店用什么特
         <category>生活</category>
         <category>旅行</category>
         <category>长春·哈尔滨·长白山</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>滑板学习心得</title>
+    <url>/2021/09/07/longboard/</url>
+    <content><![CDATA[<h1 id="初学阶段"><a class="markdownIt-Anchor" href="#初学阶段"></a> 初学阶段</h1>
+<p><a href="https://www.bilibili.com/video/av71367498/">WITH CLASS 入门系列 | 与长板工作室 长板入门教学 基础教学</a></p>
+<blockquote>
+<p>蹬板时，<code>重心要放在前脚上</code>。</p>
+</blockquote>
+<ul>
+<li>确实，如果放在后面的话，后脚会急急忙忙的跟上，很狼狈。而放在前脚上，后脚就可以慢慢悠悠的上板，甚至可以搞点花活。</li>
+</ul>
+<blockquote>
+<p>蹬板时，用<code>前脚掌</code>蹬板。</p>
+</blockquote>
+<blockquote>
+<p>双脚上板后，距离大约与肩同宽</p>
+</blockquote>
+<blockquote>
+<p>脚刹时，重心也是放在前脚。如果重心放在了刹车脚，人会直接摔下去。</p>
+</blockquote>
+<blockquote>
+<p>脚刹时，要全脚掌接触地面。</p>
+</blockquote>
+<h1 id="关于刹车"><a class="markdownIt-Anchor" href="#关于刹车"></a> 关于刹车</h1>
+<p><a href="https://www.youtube.com/watch?v=oImcWOUEtw4">滑板教學如何煞車或減速</a></p>
+<ul>
+<li>开始学习脚刹时，可以把手放在前面的膝盖上，这样有助于更好的把重心放过去。
+<ul>
+<li>脚刹时，要<code>逐渐加重</code>力度，不要猛踩。</li>
+</ul>
+</li>
+<li>最后有一个板尾转刹
+<ul>
+<li>需要先学习90°和180°的Kick Turn</li>
+</ul>
+</li>
+</ul>
+<p>横刹：把板子横着踢出去</p>
+<ul>
+<li><code>先下蹲再站起来</code>的同时推出</li>
+</ul>
+<p><a href="https://www.bilibili.com/video/BV1CK41177qQ">【滑板教学】新手必看，简单实用的滑行刹车动作</a></p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>滑板</category>
       </categories>
   </entry>
 </search>

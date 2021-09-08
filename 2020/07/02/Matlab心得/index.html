@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Personal blog in Chinese, to count the blessings in every moment.">
+  <meta name="author" content="大连铁板王">
+  <meta name="keywords" content="">
+  <title>Matlab心得 - Siyu Wang</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2167517_wjpxw66krp.css">
+
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>大家一起来</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-crossholybible"></i>
+                信仰
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/">
+                    
+                    耶稣说
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
+                    
+                    Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/">
+                    
+                    郭振游门训笔记
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-tree"></i>
+                生活
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/08/17/travel/">
+                    
+                    旅行
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/">
+                    
+                    随手记
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%A4%90%E9%A6%86/">
+                    
+                    餐馆
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%85%92%E5%BA%97/">
+                    
+                    酒店
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/11/20/zongru/">
+                    
+                    老李的日本生活
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-book"></i>
+                读书
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/09/17/Reading/">
+                    
+                    佳句合集
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/book/">
+                    
+                    单本书籍
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-music"></i>
+                音乐
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/">
+                    
+                    聆听音乐
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category1-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-07-02 11:19" pubdate>
+        2020年7月2日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Matlab心得</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>在做ME599的时候学习了下。不同语言的Bug还是难de。</p>
+<a id="more"></a>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识：</h1>
+<ul>
+<li>读入文件：load</li>
+<li>numel(A) = prod(size(A)) 返回A中元素个数</li>
+</ul>
+<p>pathtool 添加路径</p>
+<p>运行一行代码 ❎ 只能运行选中代码，然后Fn+Shift+F7<br />
+注释用百分号% 代替#<br />
+「1~=2」表示1不等于2 用~代替叹号<br />
+或者|| 和&amp;&amp; 异或xor()<br />
+a=pi在后面加一个;冒号可以抑制打印<br />
+disp(sprintf(‘6 decimals: %0.6f’,a)) %结果为 ‘6 decimals: 3.141593’<br />
+format short/long 可以在打印东西之前写出来 改变打印的位数</p>
+<p>矩阵生成</p>
+<ul>
+<li>用中括号括起来，用分号按行输入</li>
+<li>ones(m,n) 生成一个m*n的矩阵，元素全为1.  zeros同理</li>
+<li>eye(n)  生成n维单位矩阵</li>
+</ul>
+<p>rand()生成0-1均匀分布的随机数，可以用rand(m,n)来生成随机矩阵<br />
+randn() 生成标准正态</p>
+<p>clc清屏<br />
+a=出发数字：步长：结束数字——生成一个向量，步长默认是1<br />
+hist(w,方格数)生成密度图像<br />
+size返回矩阵的维数 size(a,1|2)返回第一个或第二个维数<br />
+length给出一个矩阵最长的维数，所以对一个向量可以直接返回它的长度<br />
+who 可以显示当前所有变量 whos更详细  clear可以清除一个变量 什么都不加的clear全部清除<br />
+选择一个向量的前十位：v=priceY(1:10)<br />
+save hello.mat v: 把数据v存为hello.mat文件<br />
+a([1 3]😅 矩阵第一行和第三行所有元素<br />
+A=[A,[1;2;3]]：矩阵A右侧加上一列123<br />
+A(:)将A元素变成一个列向量输出<br />
+b1=[a:a]  b2=[a a]/[a,a] b1是上下合并 b2是左右合并<br />
+a.*b 是把两个矩阵对应位置的数字乘起来作为新元素，所以a和b应该是一样大小的<br />
+·点其实代表着element-wise operation；所以 v=[1,2,3]   1./v  %1 0.5 0.33</p>
+<p>max()返回最大值，</p>
+<ul>
+<li>可是如果[v,c]=max(a) 那么v是最大值，c是最大值的index</li>
+<li>如果对矩阵作用max，会返回每一列的最大值</li>
+</ul>
+<p>find(a&lt;3) 返回a向量中小于3的index<br />
+magic(n) 生成一个n阶的矩阵，行和列和对角线和都相同（但是对于每个n只有一种形式）<br />
+提取矩阵元素的时候，如果只用一个数字，那么默认是按照列来数<br />
+prod() 连乘<br />
+floor&amp;ceil地板和天花板函数<br />
+max(a,[],1|2) 按列|行来取矩阵a的最大值<br />
+sum(a,1|2) 按列|行进行求和<br />
+取整个矩阵的最大值：max(max(A))或者max(A(😃)</p>
+<p>可以用逗号连接命令或者函数调用，会逐个运行。用冒号连接则不会显示结果</p>
+<p>循环：for i = 1:10, v(i)=2^i; end. while和if也要和end连用。if也没有括号</p>
+<p>exit和quit都可以退出octave</p>
+<p>addpath()添加新路径</p>
+<ul>
+<li>
+<p>取出向量的第五位到最后一位：A(5:end) 注意这个end</p>
+</li>
+<li>
+<p>rng(512) 等同于R里面的set.seed(512)</p>
+</li>
+<li>
+<p>normrnd = rnorm 不过可以直接在后面加上维数，生成众多随机数</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://cn.mathworks.com/help/matlab/ref/table.html">创建一个表格</a>：T = table(Age,Height,Weight,BloodPressure,…    ‘RowNames’,LastName)</p>
+</li>
+<li>
+<p>fminunc 返回函数最小值（维数大于等于2）</p>
+</li>
+</ul>
+<h2 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h2>
+<ul>
+<li>遍历一个未知大小的矩阵/向量：for i = 1:numel(z)</li>
+</ul>
+<h1 id="矩阵"><a class="markdownIt-Anchor" href="#矩阵"></a> 矩阵</h1>
+<ul>
+<li>a(2,:)=[] 删除某一行/列</li>
+<li>reshape(data,nrow,ncol) 变形矩阵</li>
+<li>a(: , k:end) end代表最后</li>
+<li>a=sum(A) %列求和<br />
+b=sum(A,2) %行求和<br />
+c=sum(A(😃) %矩阵求和</li>
+<li></li>
+</ul>
+<h1 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h1>
+<p>f = @(x) 2 * x ^ 2 + x; 创建symbolic function</p>
+<p>intlinprog - Mixed-integer linear programming (MILP) 混合整数线性规划问题</p>
+<h1 id="画图"><a class="markdownIt-Anchor" href="#画图"></a> 画图：</h1>
+<ul>
+<li>figure; open a new figure window</li>
+<li>flipud(a) 将矩阵a上下翻转</li>
+<li>hold on 可以让当前的图留住，将下一幅图继续画在上面。</li>
+<li>xlabel(‘name’)</li>
+<li>plot(x,y,‘r’)红色</li>
+<li>legend(‘1’‘2’)加图例</li>
+<li>title(‘标题’)</li>
+<li>print -dpng ‘name.png’</li>
+<li>figure(1);plot();figure(2);plot() 可以同时分别画出来两张图</li>
+<li>subplot(1,2,1);plot() 将图像空间分成1*2，现在去画第一个</li>
+<li>axis([横坐标最小值 横坐标最大值 纵坐标最小值 纵坐标最大值])</li>
+<li>clf清除所有图</li>
+<li>imagesc(a) 将矩阵a用颜色画出来</li>
+<li>colorbar 在右侧添上一个颜色条</li>
+<li>colormap gray将图变成灰色</li>
+</ul>
+<h1 id="操作命令"><a class="markdownIt-Anchor" href="#操作命令"></a> 操作命令</h1>
+<ul>
+<li>ctrl+c : 终止当前程序</li>
+</ul>
+<h1 id="包包"><a class="markdownIt-Anchor" href="#包包"></a> 包包</h1>
+<ul>
+<li>SVM: liblinear/libsvm</li>
+</ul>
+<h1 id="文档发布"><a class="markdownIt-Anchor" href="#文档发布"></a> 文档发布</h1>
+<p><a target="_blank" rel="noopener" href="https://cn.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html">官方帮助</a></p>
+<ul>
+<li></li>
+</ul>
+<h1 id=""><a class="markdownIt-Anchor" href="#"></a> </h1>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/">Study</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/Coding/">Coding</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/Coding/Matlab/">Matlab</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/02/Python%E5%BF%83%E5%BE%97/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python心得</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/02/Linux%E5%BF%83%E5%BE%97/">
+                        <span class="hidden-mobile">Linux心得</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://iamwangsiyu.com/2020/07/02/Matlab%E5%BF%83%E5%BE%97/';
+        this.page.identifier = '/2020/07/02/Matlab%E5%BF%83%E5%BE%97/';
+      };
+      function loadDisqus() {
+        (function () {
+          var d = document,
+            s = d.createElement('script');
+          s.src = '//' + 'iamwangsiyu' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      }
+      waitElementVisible('disqus_thread', loadDisqus);
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Matlab心得&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

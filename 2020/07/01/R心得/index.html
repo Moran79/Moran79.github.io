@@ -1,0 +1,1648 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Personal blog in Chinese, to count the blessings in every moment.">
+  <meta name="author" content="大连铁板王">
+  <meta name="keywords" content="">
+  <title>R心得 - Siyu Wang</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2167517_wjpxw66krp.css">
+
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>大家一起来</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-crossholybible"></i>
+                信仰
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/03/%E8%80%B6%E7%A8%A3%E8%AF%B4/">
+                    
+                    耶稣说
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/02/The-Reason-for-God/">
+                    
+                    Timothy Keller
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2021/01/04/cslewis/">
+                    
+                    C.S.Lewis
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/">
+                    
+                    郭振游门训笔记
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-tree"></i>
+                生活
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/08/17/travel/">
+                    
+                    旅行
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/08/%E9%9A%8F%E6%89%8B%E8%AE%B0/">
+                    
+                    随手记
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%A4%90%E9%A6%86/">
+                    
+                    餐馆
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/07/22/%E9%85%92%E5%BA%97/">
+                    
+                    酒店
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/11/20/zongru/">
+                    
+                    老李的日本生活
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-book"></i>
+                读书
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/09/17/Reading/">
+                    
+                    佳句合集
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/book/">
+                    
+                    单本书籍
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-music"></i>
+                音乐
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/2020/06/30/%E8%81%86%E5%90%AC%E9%9F%B3%E4%B9%90%E7%AD%94%E6%A1%88-%E7%AC%AC%E4%BA%94%E7%89%88/">
+                    
+                    聆听音乐
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category1-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://cdn.lynda.com/course/672262/672262-637286236928697129-16x9.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-07-01 22:19" pubdate>
+        2020年7月1日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      15.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      187
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">R心得</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>老本行，学。</p>
+<a id="more"></a>
+<h1 id="一些疑问"><a class="markdownIt-Anchor" href="#一些疑问"></a> 一些疑问</h1>
+<ul>
+<li>如何画出线性分割图PDA？用R语言我是没整明白</li>
+</ul>
+<h1 id="进阶版知识"><a class="markdownIt-Anchor" href="#进阶版知识"></a> 进阶版知识：</h1>
+<p><a target="_blank" rel="noopener" href="https://www.zsccy.xyz/post/2019-05-02-nonstandard-calculation/">非标准计算</a>：</p>
+<ul>
+<li><code>quote</code>是用来把后面的东西变成一个call或者一个symbol，可以日后用<code>eval.parent</code>进行运算</li>
+</ul>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识：</h1>
+<ul>
+<li>
+<p>“&amp;”和“|”作用在对象中的每一个元素上并且返回和比较次数相等长度的逻辑值；“&amp;&amp;”和“||”只作用在对象的第一个元素上。</p>
+</li>
+<li>
+<p>args(mean)—快速查看mean的参数有哪些</p>
+</li>
+<li>
+<p>example(mean)—看一个mean的实例</p>
+</li>
+<li>
+<p>&lt;&lt;- 强制赋值给一个全局变量</p>
+</li>
+<li>
+<p>ls() &amp; ls.str() 可以查看当前工作空间中存在哪些已定义的变量和函数。ls()不会显示以&quot;.&quot;开头的隐藏变量，可通过ls(all.names=T)强制输出所有变量</p>
+</li>
+<li>
+<p>rm(list=ls())来删除全局所有变量———注意编程的道德规范</p>
+</li>
+<li>
+<p>逻辑向量进行比较，any() &amp; all() any中有一个为真则输出真，all中全部为真则输出真, purrr包里还有个some和every</p>
+</li>
+<li>
+<p>想删除向量里面的na/null :  v[!<a target="_blank" rel="noopener" href="http://is.na">is.na</a>(v) &amp; !is.null(v)]</p>
+</li>
+<li>
+<p>names函数可以给向量每个分量起名字</p>
+</li>
+<li>
+<p>欧几里得算法计算两个数的最大公约数：</p>
+<p>gcd &lt;- function(a,b){<br />
+if(b==0) return(a)<br />
+else return(gcd(b,a%%b))<br />
+}</p>
+</li>
+<li>
+<p>卸载软件包: detach(package:MASS)</p>
+</li>
+<li>
+<p>data() 查看都有哪些内置的数据</p>
+</li>
+<li>
+<p>near():用来对比两个近似的数是否相等。near(1/49*49,1)</p>
+</li>
+<li>
+<p>在赋值语句前后加上小括号，可以输出赋值内容</p>
+</li>
+<li>
+<p>xor(): 异或. &amp;&amp;和 || 只比较两个向量的第一位</p>
+</li>
+<li>
+<p>log2(),log10(): 以2和10作为底数。作者推荐用2做底数，因为interpret的时候更有利：答案每少1，变换之前的数就比原来少了一半。</p>
+</li>
+<li>
+<p>lag(), lead(): 将数组向后和向前移动一位。多用于比较 x==lag(x)</p>
+</li>
+<li>
+<p>cumsum, cumprod, cummin, cummax, cummean. 累积函数</p>
+</li>
+<li>
+<p>order依次给出第几小的是第几个，sort将数据从小到大排序，rank给出第一个数是第几小的，会把NA放在最后，同样的数用均值来计算rank。min.rank对同样的数会用最小值来计算rank. 更多选项参见?rank</p>
+</li>
+<li>
+<p>pipe: %&gt;% 相当于「then」 放在一段语句的最后，省去了为中间变量起名的过程，大大缩短了编程时间. Pipe使用的环境不是当前环境而是新创造出来一个临时环境，所以遇到需要当前环境的函数时会产生一些问题。如果pipe的语句超过了10行或者中间有很多的输入输出，那么不建议用pipe</p>
+</li>
+<li>
+<p>pipe的另外三种：%T&gt;% : return the lefthand side not the righthand side. %$%: 快速从data.frame里面选出某几个变量。%&lt;&gt;%赋值，但是作者不建议这么做，他认为赋值作为一个很重要的过程，值得花费点时间多写几步换来更清楚的代码</p>
+</li>
+<li>
+<p>表示离散程度的除了sd&amp;var，还有IQR():0.75分位数与0.25分位数的差。mad(x):1.4826*绝对中位差：用原数据减去中位数后得到的新数据的绝对值的中位数。在数据点包含outlier的时候，后两种效果更好。</p>
+</li>
+<li>
+<p>first(), last(),nth(x,n): 取出向量中特定位置的元素</p>
+</li>
+<li>
+<p>range()里面有一个参数finite = T 表示去掉这个向量里面的无穷再取range</p>
+</li>
+<li>
+<p>identical():判断两个向量是否相等。注意integer和double即使数字一样结果也会返回false。所以这时候改用dplyr::near()</p>
+</li>
+<li>
+<p>switch(status, status1 = … , status2 = …  ): 可以将多个if条件放到一个框里</p>
+</li>
+<li>
+<p>cut(aaa, 3, dig.lab = 2, ordered = TRUE): 将aaa从小到大变成三个类别，每个类别中小数点后不超过两位</p>
+</li>
+<li>
+<p>stop(“错误信息”)：在函数或者循环里加上判断错误信息的语句可以让他变得更robust。内置还有一个函数叫stopifnot()</p>
+</li>
+<li>
+<p>函数里面的变量可以定义成…  ：可以自动match多个无法被其他方式match的输入。</p>
+</li>
+<li>
+<p>pipable function分为两类：transformation &amp; side-effect：第二种类似于画个图或者写个文件之类的，对原文件不产生影响，那么这些函数返回值会是那个源文件。</p>
+</li>
+<li>
+<p>R默认的数字类型是double所以要生成integer需要手动在数字后面加上L</p>
+</li>
+<li>
+<p>is.finite/is.infinite/is.nan/is.na：判断doube类型的四大天王，其中NaN数据会对后两个函数都给出T</p>
+</li>
+<li>
+<p>NA/NA_real/integer/character_: NA有四种类型，分别代表logical,double,integer,character.</p>
+</li>
+<li>
+<p>purrr出了is_logical/…/atomic/list/vector: 用来修正自带is.的问题。vector可分成list和atomic。atomic可以分成numeric,logical和character.numeric可以分成double和integer. is_scalar_atomic还可以顺便检查一下长度是否为1.</p>
+</li>
+<li>
+<p>rep(1:2,3)结果是121212. rep(1:2, each = 3)结果是111222</p>
+</li>
+<li>
+<p>set_names()给向量起名。</p>
+</li>
+<li>
+<p>可以为向量添加attributes：attr(data,‘Name’)&lt;-’…’ attributes(x)输出所有的attributes</p>
+</li>
+<li>
+<p>factors，date-times/times, tibbles都是vector+attributes的结果</p>
+</li>
+<li>
+<p>mean函数里面的trim参数：从排过序的原始数据中，从数据的两端分别删除floor(trim * length)个数据再进行平均值计算</p>
+</li>
+<li>
+<p>keep/discard(logical)：只保留那些True/False</p>
+</li>
+<li>
+<p>detect/detect_index: 返回第一个True的值和第一个True的位置</p>
+</li>
+<li>
+<p>head_while/tail_while: 从开头/结尾开始返回连续的所有True的值，如果开头/结尾就是False则返回0.</p>
+</li>
+<li>
+<p>reduce: Reduce a list to a single value by iteratively applying a binary function</p>
+</li>
+<li>
+<p>accumulate: Accumulate recursive folds across a list</p>
+</li>
+<li>
+<p>broom::glance: 对一个fit作用，给出各种参数指标(精简版summary)。tidy给出系数，augment给出原数据加上残差等一系列统计指标</p>
+</li>
+<li>
+<p>J是矩阵的subsetting   ???</p>
+</li>
+<li>
+<p>多维正态联合分布：mvrnorm</p>
+</li>
+<li>
+<p>多个因子变量进行对比可以用contrasts(z)</p>
+</li>
+<li>
+<p>substr可以取字符的首字母substr(“china”,1,1)</p>
+</li>
+<li>
+<p>typeof比mode更新，但class返回的是当前状态下他是一个什么类型</p>
+</li>
+<li>
+<p>sub(pattern= ‘\,’ ,replacement=’’, y) 表示将字符串y里面所有的&quot;,&quot;去掉第一个，gsub全局去掉。</p>
+</li>
+<li>
+<p>bootstrap产生数据保存到一个list里面：f&lt;-function(m) sapply(1:m,function(o) sample(X,replace = TRUE)) ; b&lt;-f(1000)</p>
+</li>
+<li>
+<p>f&lt;-Vectorize(f) 使一个函数可以进行向量化运算</p>
+</li>
+<li>
+<p>m&lt;-optimize(f,interval=c(1,4),maximum=TRUE)[[2]] 给出一维函数在某段区间的最大或者最小值</p>
+</li>
+<li>
+<p>产生一个异质（元素类型不同）的矩阵：从一个异质的列表开始，赋予它维数。</p>
+</li>
+<li>
+<p>在向量中间插入数据：append(oldvec,newvalues,after=n) 表示在第n个数据后插入新的一个元素</p>
+</li>
+<li>
+<p>合并几组向量形成一个list：list(com1=v1,com2=v2,com3=v3)  可以用stack将全是向量的list变成一个一列的长向量</p>
+</li>
+<li>
+<p>从列表中移除取值为空值的元素： lst[sapply(lst,is.null)] &lt;- NULL 赋予NULL是删除列表元素的一种方法</p>
+</li>
+<li>
+<p>lapply与sapply都可以对列表进行操作，不同点是前者返回一个列表，而后者返回一个向量</p>
+</li>
+<li>
+<p>矩阵可以通过添加参数 byrow=TRUE 来使数据按行排列</p>
+</li>
+<li>
+<p>从矩阵中取出一行/一列矩阵：而不是取出一行数据： row&lt;-matrix[1,drop=FALSE]</p>
+</li>
+<li>
+<p>若obs是一个列表的列表而不是数据框列表：Map(as.data.frame,obs)变成数据框列表. Map是对向量的操作的函数（可能list本质上是一个向量吧）</p>
+</li>
+<li>
+<p>反复调用一个函数用replicate</p>
+</li>
+<li>
+<p>删除一个包detach(‘package: …’)</p>
+</li>
+<li>
+<p>rnorm函数中输入的是sd而不是var</p>
+</li>
+<li>
+<p>sweep 将输入的向量减去一个统计量（可以是mean或者其他…）</p>
+</li>
+<li>
+<p>proc.time()获取代码运行时间</p>
+</li>
+<li>
+<p>factorial(n)返回n的阶乘</p>
+</li>
+<li>
+<p>win.graph可以调整图片大小，但是只能在windows上面用，dev.new不限平台</p>
+</li>
+<li>
+<p>pander 专门用来打印的？</p>
+</li>
+<li>
+<p>seq_along() 产生对应长度的index</p>
+</li>
+<li>
+<p>which(dis==min(dist(dat2)), arr.ind = T) 返回特定元素在矩阵中的index</p>
+</li>
+<li>
+<p>对于一些大数，可以先做log变换再变回去。lgamma(x)可以算log(gamma(x))</p>
+</li>
+<li>
+<p>返回一个向量的最大值位置，用order然后看最后一位</p>
+</li>
+<li>
+<p>dist计算多维距离的时候，对于某一个位置如果有NA的话，会默认用其他位置距离的平均值来impute</p>
+</li>
+<li>
+<p>非参拟合可以用smooth.spline 报错tol的时候一般是因为x只有1个，一般来说至少有四个不同的x才可以正常运行</p>
+</li>
+</ul>
+<p><strong>System.time</strong>: How to interpret the reported times user, system, and elapsed：</p>
+<ul>
+<li>
+<p>Well, clearly <code>elapsed</code> is the <strong>wall clock time</strong> taken to execute the function, plus some benchmarking code wrapping it</p>
+</li>
+<li>
+<p>“User CPU time” gives the CPU time spent by the current process (i.e., the current R session)</p>
+</li>
+<li>
+<p>“system CPU time” gives the CPU time spent by the kernel (the operating system) on behalf of the current process. The operating system is used for things like opening files, doing input or output, starting other processes, and looking at the system clock: operations that involve resources that many processes must share. Different operating systems will have different things done by the operating system.</p>
+</li>
+<li>
+<p>为什么有时候elapsed time远远大于其他两个之和？<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13688840/what-caused-my-elapsed-time-much-longer-than-user-time">https://stackoverflow.com/questions/13688840/what-caused-my-elapsed-time-much-longer-than-user-time</a></p>
+</li>
+<li>
+<p>为什么有的时候<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/18654497/mclapply-user-time-larger-than-elapsed-time">user time larger than elapsed time</a></p>
+</li>
+<li>
+<p>table函数等价于python里面的Counter()</p>
+</li>
+</ul>
+<pre><code class="hljs R">methods(print) <span class="hljs-comment"># print 本身先判断数据类型，再给出不同的print做法</span></code></pre>
+<p>如果想取出特定summary中的某一部分，可以<u>用str先看一下structure</u>，确定好位置之后再直接输出。</p>
+<p><a target="_blank" rel="noopener" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/hexmode.html">10-16 base转换</a></p>
+<pre><code class="hljs R">data %&gt;%
+	`colnames&lt;-`(c(<span class="hljs-string">&quot;Population&quot;</span>, <span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>)) <span class="hljs-comment">#Pipeline 里面改column name</span></code></pre>
+<p>当前的包安装不上的时候：</p>
+<pre><code class="hljs R">install.packages(<span class="hljs-string">&#x27;/Users/moran/Desktop/Epi_2.33.tar.gz&#x27;</span>,repos = <span class="hljs-literal">NULL</span>, type=<span class="hljs-string">&quot;source&quot;</span>)</code></pre>
+<p>tryCatch里面赋值的时候，要用&lt;&lt;-而不是&lt;-</p>
+<h3 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h3>
+<ul>
+<li>
+<p>在使用for循环的时候，<strong>如果给output预先分配好空间的话，那么整体的运行速度会快很多</strong>，这里可以使用vector(mode = ‘logical’, length= 12).</p>
+</li>
+<li>
+<p>可以用函数seq_along(n)来代替 1:n 来规避n=0的时候的错误</p>
+</li>
+<li>
+<p>以后不要在循环里面写出c(当前，新内容)这种效率低的语法，可以先把结果存在一个list里面，然后再使用unlist，list的空间也要先赋好。purrr::flatten_dbl()更严格，如果不是一个double的list会报错。如果是字符型的，用paste(output, collapse = “”)。如果是一堆列向量，用dplyr::bind_rows(output)</p>
+</li>
+<li>
+<p>多多使用while语句（simulation中常用，针对循环次数不确定，但是一个标准确定的时候）。所有for都可以改成while但是不是所有while都可以改成for</p>
+</li>
+<li>
+<p>函数嵌套函数，apply系列的替代函数：map():list. map_lgl/int/dbl/chr 分别对应的不同数据类型</p>
+</li>
+<li>
+<p>map+pipe时，遇到自定义函数可以用map(~lm(mpg ~ wt, data = .))来代替map(function(df) lm(mpg ~ wt, data = df))</p>
+</li>
+<li>
+<p>例子：models %&gt;%   map(summary) %&gt;%   map_dbl(~.$r.squared) 最后一个可以替换成 map_dbl(“r.squared”)</p>
+</li>
+<li>
+<p>有时候一个循环的一部分出了错，但是整个程序中那些正确的值也无法输出，这时候我们用safely()这个函数可以返回一个二维列表，第一列是result，第二列是error。如果最后输出结构太复杂可以用transpose()来修正。</p>
+</li>
+<li>
+<p>在我们不想知道为什么错了的时候可以用possibly(原函数, 「替」)这样的话只要报错，都用「替」来替代</p>
+</li>
+<li>
+<p>还有一个函数叫quietly(): 跟safely差不多，输出的结果更简单清晰。</p>
+</li>
+<li>
+<p>当我们迭代的变量大于一个的时候，用pmap()。两个的时候是map2()</p>
+</li>
+<li>
+<p>当我们迭代的是函数而不是变量的时候：invoke_map(f, parameter)</p>
+</li>
+<li>
+<p>walk/walk2/pwalk：call a function for its side effect rather that its return value.</p>
+</li>
+<li>
+<p>.Last.value  最近的一个计算结果</p>
+</li>
+<li>
+<p>source(&quot;&quot;) 可以读取文本文件(.R后缀的文件)并执行其内容  可选参数：echo=TRUE ——在执行的同时显示源代码</p>
+</li>
+<li>
+<p>print(pi,digits=4) / cat(format(pi,digits=4),&quot;\n&quot;) 可以改变输出数据的位数，format是用来设定数据的格式</p>
+</li>
+<li>
+<p>cat(&quot;…&quot;,file=“filename”)  来使输出结果到filename的文件里，不过如果反复使用，要加append=TRUE。改进则要使用到文件的链接，且无需append=TRUE： con&lt;-file(&quot;…&quot;,“w”)  cat(data,file=con)</p>
+</li>
+<li>
+<p>list.files()  显示当前工作目录里面的文件</p>
+</li>
+<li>
+<p>save(data,file=“filename”) 存为一个二进制文件</p>
+</li>
+<li>
+<p>dput(data,file=“filename”)  存为一个ASCII码文件，操作是将该数据以structure函数的方式打印，直接拷贝再赋值给其他变量即可，reproduce the data。</p>
+</li>
+<li>
+<p>dump(“data”,file=“filename”) 与dput效果一样，只是多了一组引号</p>
+</li>
+<li>
+<p>next = continue break = break</p>
+</li>
+</ul>
+<h1 id="画图"><a class="markdownIt-Anchor" href="#画图"></a> 画图：</h1>
+<ul>
+<li>plot(cex=0.2) 调整数据点大小</li>
+<li>一个例子：curve(sin(x),from=-10,to=10,ylim=c(-2,2),main=“函数sin(x)”,col=“red”,lty=3,lwd=2,ylab=“y轴sin(x)”)<br />
+abline(h=1);abline(h=-1)</li>
+<li>hist(freq=F)输出density密度 freq=T 输出frequency频数</li>
+<li>chull画凸形</li>
+<li>将图片和文字打印到pdf里：pdf(‘file’); plot(…) ; gridExtra::grid.table(data.frame); dev.off()</li>
+<li>plot.new() 打印空白图片</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html">16进制颜色介绍</a></p>
+<p>将数字转成16进制可以用as.hexmode()这个函数，R=G=B这个颜色将是黑(0)灰白(255)</p>
+<p><a target="_blank" rel="noopener" href="https://www.rapidtables.com/web/color/html-color-codes.html">HTML文件中的颜色</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.sthda.com/english/wiki/visualize-correlation-matrix-using-correlogram">corrplot</a></p>
+<pre><code class="hljs r">guides(fill = guide_legend(reverse = <span class="hljs-literal">TRUE</span>)) <span class="hljs-comment"># 翻转legend顺序 离散</span>
+guides(colour = guide_legend(reverse=<span class="hljs-literal">T</span>)) <span class="hljs-comment"># 翻转legend顺序 连续</span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/11774703/adding-text-to-a-grid-table-plot">如何在打印table并且加上title和footnote?</a></p>
+<pre><code class="hljs r"><span class="hljs-comment"># 想以一个data.frame的每一列为变量画图，想加图例(并且调整图例的顺序)</span>
+df &lt;- data.frame(x1 = rnorm(<span class="hljs-number">100</span>),x2 = rnorm(<span class="hljs-number">100</span>)-<span class="hljs-number">0.5</span>, x3 = rnorm(<span class="hljs-number">100</span>)+<span class="hljs-number">0.5</span>)
+
+ggplot(df)+
+  geom_density(aes(x = x1, fill = <span class="hljs-string">&#x27;liu&#x27;</span>),alpha = <span class="hljs-number">0.2</span>)+
+  geom_density(aes(x = x2, fill = <span class="hljs-string">&#x27;yu&#x27;</span>),alpha = <span class="hljs-number">0.2</span>)+
+  geom_density(aes(x = x3, fill = <span class="hljs-string">&#x27;meng&#x27;</span>),alpha = <span class="hljs-number">0.2</span>)+
+  scale_fill_manual(yumeng,values=c(liu=<span class="hljs-string">&quot;red&quot;</span>, yu=<span class="hljs-string">&quot;blue&quot;</span>, meng=<span class="hljs-string">&quot;purple&quot;</span>), breaks = c(<span class="hljs-string">&#x27;liu&#x27;</span>, <span class="hljs-string">&#x27;yu&#x27;</span>, <span class="hljs-string">&#x27;meng&#x27;</span>))<span class="hljs-comment"># breaks用来调整图例的顺序</span></code></pre>
+<ul>
+<li>
+<p>rug 在基本图中添加数据点所对应的横纵坐标小竖线</p>
+</li>
+<li>
+<p>geom_bar + errorbar 想画横线在上下：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/35424162/problem-placing-error-bars-at-the-center-of-the-columns-in-ggplot">如何对齐</a> <a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/8137/how-to-add-horizontal-lines-to-ggplot2-boxplot">如何加横线</a></p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/18055838">保存ps半透明图片</a></p>
+<pre><code class="hljs r"><span class="hljs-keyword">library</span>(scales)
+show_col(hue_pal()(<span class="hljs-number">2</span>)) <span class="hljs-comment">#可以查看R默认前两种颜色的16进制表示</span></code></pre>
+<h2 id="ggplot"><a class="markdownIt-Anchor" href="#ggplot"></a> GGplot：</h2>
+<p>分为七个主要部分：dataset, a geom, a set of mappings, a stat, a position adjustment, a coordinate system, and a faceting scheme.</p>
+<ul>
+<li>ggplot(data=<data>):负责创建坐标系，之后的图会贴在上面。</li>
+<li>aes()里面的可调参数有x, y, color, alpha(color的黑白版), size(单位mm), shape(一个图最多6个，共有0-24种), group(单纯的分组而不加区别)</li>
+<li>如果不是想按照某个变量来分组，而是想对所有数据进行统一操作，需要将命令放在aes外面，整个函数里面。</li>
+<li>stroke=num: 点的边界宽度</li>
+<li>注意连接函数的加号不能放在新一行的开头，要放在旧一行的结尾</li>
+<li>facet_wrap(~class, nrow=) 将原有的plot根据class来分成小图</li>
+<li>facet_grid(A~B) 将原有的plot根据AB来分成行列小图（A可以为.）这样就变成了nrow=1的facet_wrap</li>
+<li>show.legend=FALSE 放在整个函数里面，隐藏图例</li>
+<li>可以将geom的函数共同的mapping挪到ggplot函数里面，也可以在随后的函数中重新定义mapping（改变setting）甚至是data（取子集）来覆盖或者增添条件。</li>
+<li>coord_flip()坐标系转置（常用于转置箱型图以及处理x名字过长）</li>
+<li>coord_quickmap()自动选择x-y的合适比例</li>
+<li>coord_polar()极坐标</li>
+<li>labs(x=, y=, title=, subtitle=, caption=(底注)) 添加注释，只要是一切能改的</li>
+<li>如果想打印数学符号，可以用quote()，更多数学语言的包尽在plotmath</li>
+<li>count(data,cut_width(num)): 把关于连续变量的密度图以特定宽度统计个数, cut_number则是以特定数据量进行划分。</li>
+<li>coord_cartesian(ylim=c(0,50)):  在画条形图的时候有的x观测量相对之下超小，在图上难以观察，于是用这个函数可以将很矮小的条拉起来。</li>
+<li>改变图例的展示方式：guides/guide_legend/guide_colourbar</li>
+<li>有时候我们对数据进行log变换，但是这样的话axes就变得不好解释，所以我们可以选择对x和y轴的scale进行变换：scale_x_log10()</li>
+<li>theme(legend.position = “none”) 将图例去掉，分散在图中。一般来说position可以取left/right/top/bottom。还有很多其他的theme比如theme_bw（background-white）</li>
+<li>colorbrewer这个包针对色盲人群做了优化</li>
+<li>如果想对固定颜色种类：scale_colour_manual(values = c(Republican = “red”, Democratic = “blue”))</li>
+<li>scale_color_x / scale_fill_x(x还可以特别设为gradient/gradient2/viridis)</li>
+<li>ggsave可以保存最近的一张图片，但是大小尺寸都是根据当前窗口自适应的，不是很reproducible，所以我们最好自己固定尺寸</li>
+<li>如果想画多个图在一个画板上。将每一个ggplot保存成p1-p4. gridExtra::grid.arrange(p1, p2, p3, p4, ncol=2)</li>
+<li>如果想用颜色区分多条线并且加图例：aes(x=x,y=y3,color = ‘y3’)</li>
+<li>想自定义颜色的话：scale_colour_manual( values=c(‘springgreen4’, ‘tomato3’, ‘lightskyblue’,‘orange’))</li>
+</ul>
+<pre><code class="hljs R">linetype=<span class="hljs-string">&quot;dotted&quot;</span> <span class="hljs-comment">#可以决定线的形状</span></code></pre>
+<pre><code class="hljs R">annotate(<span class="hljs-string">&quot;text&quot;</span>, x = <span class="hljs-number">7.5</span>, y = <span class="hljs-number">0.9</span>, label = <span class="hljs-string">&quot;ratio = 96%&quot;</span>) <span class="hljs-comment"># 在图中标记注释</span></code></pre>
+<pre><code class="hljs R">theme(panel.background = element_rect(fill = <span class="hljs-string">&#x27;blue4&#x27;</span>), panel.grid.major =element_blank(), panel.grid.minor = element_blank()) <span class="hljs-comment">#可以改变背景色+网格</span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://ggplot2.tidyverse.org/reference/theme.html">更改theme 比如说字体方向等…</a></p>
+<pre><code class="hljs R">scale_fill_discrete(name = <span class="hljs-string">&quot;Group Mean&quot;</span>) <span class="hljs-comment">#更改legend title</span></code></pre>
+<pre><code class="hljs R">scale_x_discrete(limits=c(<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>)) <span class="hljs-comment"># 可以改变X轴顺序</span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://rpkgs.datanovia.com/ggpubr/reference/ggpar.html">ggpubr</a></p>
+<pre><code class="hljs R">theme(axis.text=element_text(size=<span class="hljs-number">12</span>),
+        axis.title=element_text(size=<span class="hljs-number">20</span>)) <span class="hljs-comment"># 调大坐标轴字体</span></code></pre>
+<pre><code class="hljs R">facet_wrap(~variable,ncol=<span class="hljs-number">4</span>,scales=<span class="hljs-string">&quot;free&quot;</span>)+ <span class="hljs-comment"># 根据variable直接画出多个图而不用grid.arrange</span>
+  theme(strip.text.x = element_text(size = <span class="hljs-number">30</span>)) <span class="hljs-comment"># 调整facet_wrap的变量字体</span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46783163/r-ggplot2-boxplots-with-wilcoxon-significance-levels-and-facets-show-only-sig">Stat_compare_mean如何只画出来显著的变量</a></p>
+<h2 id="geom系的函数"><a class="markdownIt-Anchor" href="#geom系的函数"></a> geom系的函数：</h2>
+<ul>
+<li>geom_smooth() 拟合图，method中可选lm, glm, loess… aes中可选linetype=class 来对不同的class进行分别拟合. se=T/F来控制是否画出线周围的灰色置信区域。span越大，拟合图就越光滑</li>
+<li>geom_bar()个数柱状图, 可以修改stat=选择其他统计量.bar函数默认的stat是count，同样的，stat_count函数的默认geom也是bar，这种情况下，可以用stat_count来代替geom_bar。color选择外框颜色，fill选择填充颜色(可以等于其他变量，画出分层色彩的柱状图。也可以等于NA，就是不涂色)。<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/30183199/ggplot2-plot-mean-with-geom-bar">Plot Group Mean</a></li>
+<li>bar中position=（identity：每种类别都画出具体位置，但比如有的最小值小于其他的最大值，就会导致重叠的问题。fill：将所有集合都变成高度1，然后内部填充颜色，有助于比较不同集合之间的成分比例。dodge：每个集合都是好几个小柱状图，解决了重叠的问题。Jitter：给每个数据点加一个小随机误差，解决over-plotting问题）</li>
+<li>stat_summary()对于每种类别画出一条垂直的竖线，两个端点和中间一个黑点代表着最大值最小值和中位数/均值</li>
+<li>geom_jitter()等同于geom_point(position=‘jitter’)</li>
+<li>geom_count也是来解决over-plotting的，把数据重合点用一个更大的点来表示。也用来画出两个因子变量的联合图</li>
+<li>geom_freqpoly(): 另一种密度图像，用线来代替条形。有时候各个类别的个数相差很多，而如果我们想看类别内的分布情况，需要标准化，在ggplot主函数的mapping中令aes(x=price,y=…density…)这样每条线下面的面积都是1</li>
+<li>geom_boxplot()：对于无序的变量，可以用reorder(x,y,FUN=median)来根据中位数从左至右排序,varwidth=T用来使每个箱型图的宽度与数据量成正比 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33524669/labeling-outliers-of-boxplots-in-r">如何加outlier的label</a></li>
+<li>geom_tile(mapping=aes(fill=n)) 为count填色</li>
+<li>geom_bin2d geom_hex 都是对两个连续变量画出分块密度图。前者是方形，后者是六边形（需要安装包hexbin）。</li>
+<li>geom_ref_line(h = ?): 添加一条白色指示线</li>
+<li>geom_text()是geom_point的扩展板，带个label可以在点附近写东西</li>
+<li>geom_label(nudge_y=？)将geom_text里面的文字外面套了一个矩形框，可以将矩形框上移？个单位</li>
+<li>但是以上两种geom都解决不了重叠的问题，这时候就要用到ggrepel::geom_label_repel 再配合一下给对应的点圈出来，就很清晰了</li>
+<li>geom_rect(xmin,xmax,ymin,ymax): 框住兴趣点</li>
+<li>geom_segment(x,y,xend,yend): 画一个箭头</li>
+<li>scale_name-of-the-aesthetic_name-of-the-scale: scale一般都会默认选，除非要改变default。scale里面两个重要的参数breaks=和labels = NULL对axes进行操作</li>
+<li>geom_vline(): 添加一条竖线</li>
+<li>geom_errorbar(aes(ymin=len, ymax=len+sd), width=.2, position=position_dodge(.9))  柱状图中画出置信区间</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://ggplot2.tidyverse.org/reference/scale_grey.html">如何画出灰色图片</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/30183199/ggplot2-plot-mean-with-geom-bar">geom_bar画出groupmean</a></p>
+<h2 id="ggpubr"><a class="markdownIt-Anchor" href="#ggpubr"></a> ggpubr</h2>
+<p>ggboxplot(data = dat_tmp,x = ‘X’, y = ‘Y’, color = ‘X’, palette = ‘set1’, add = “jitter”,outlier.shape = NA)</p>
+<ul>
+<li>Add = jitter 可以画出所有点</li>
+<li>但是有了add = jitter之后 离群的点会出现两次，outlier.shape = NA 可以只显示一次</li>
+</ul>
+<h1 id="数据基本处理"><a class="markdownIt-Anchor" href="#数据基本处理"></a> 数据基本处理：</h1>
+<ul>
+<li>
+<p>as_tibble(): 将data.frame变成tibble</p>
+</li>
+<li>
+<p>tibble(x=…, y=…, z=…)：直接生成tibble</p>
+</li>
+<li>
+<p>print(tibble, width = Inf)这样在打印的时候会把所有列都打出来</p>
+</li>
+<li>
+<p>tribble：复杂一点但是易读懂的tibble生成方式。<sub>x,</sub>y,~z  ‘a’,2,3,‘b’,4,5…</p>
+</li>
+<li>
+<p>取某一列的时候可以用$也可以用[]来取出tibble, [[]]来取出数据。如果用pipe方式的话需要加一个点。data %&gt;% .$x</p>
+</li>
+<li>
+<p>enframe(): 将一个列变量变成一个两列的tibble，有名字的话名字变成第一列，没有的话将第二列复制一遍放在第一列</p>
+</li>
+<li>
+<p>deframe(): 干的事情和enframe相反，讲一个两列的tibble变成一个向量，第一列被当成名字</p>
+</li>
+<li>
+<p>data &lt;- read.table(&quot;&quot;,sep=&quot;\t&quot;,header=T,fileEncoding=“UCS-2LE”) 把数据从excel里面拷到txt必须这么输入，要不然会有隐藏字符看不到</p>
+</li>
+<li>
+<p>read.table() 参数：stringAsFactor=F 不将字符转化为因子  na.strings=&quot;.&quot;  缺失值在这组数据中以&quot;.&quot;来标记  注意read.table默认header=F</p>
+</li>
+<li>
+<p>scan(“filename”,what=list(data=character(0),high=numeric(0)))</p>
+<p>其他参数： n=number nlines=number skip=number na.strings=list 分别表示读取number个数据后停止，读取number行后停止，先跳过number行在读取，将list中的字符串解释为na。scan可以从网页中读取数据</p>
+</li>
+<li>
+<p>load(‘file’)从本地读进去一个数据。一般都是以.Rdata结尾。.Rdata也是save语句的默认格式</p>
+</li>
+</ul>
+<p>tally 统计group mean</p>
+<ul>
+<li>psych::describe 是一个比summary更详细的方法</li>
+</ul>
+<h2 id="tidyr"><a class="markdownIt-Anchor" href="#tidyr"></a> tidyr</h2>
+<ul>
+<li>gather(xxx, key = ‘a’, value = ‘b’): 如果在tibble的第一行存在一些数据而非数据名（就像2*2联表中的列那样），那么我们就把这些数据放在xxx的位置，为他们产生一个新变量叫做a，而原本的数据框里面的数据也有了一个新的名字叫做b，这样就把这些数据所在的列变成了两列，a和b。可以添加na.rm=T参数</li>
+<li>spread(data, key = ‘a’, value = ‘b’): 针对有些时候某一列a中包含的都是变量名，而b列分别存了这些变量的值，所以我们只用这两个参数就可以把数据清洗干净。</li>
+<li>separate(data, col1, into = c(‘col2’, ‘col3’), sep = ‘/’): 若有一列中包含了两列的数据，并且用’/'字符分隔的，那么我们可以用这个函数将col1分成col2和col3. 如果我们不确定是怎么分割的，可以将sep换成convert = TRUE，我们还可以给sep附一个数字向量，他会在对应的位置进行分割</li>
+<li>unite(colnew, col1, col2, sep=’’): 将原来的col1和col2合并成colnew</li>
+<li>complete(data,col1,col2): 将col1和col2的所有组合都检查一遍，如果没有的就添加成NA</li>
+<li>fill(data, col): 有时候的NA出现是因为想表示这些空的数据跟上面的数据一样，所以就不用再写一遍了。这时候我们可以用fill来告诉计算机col列所有的NA都用在它上面离它最近的数据填充</li>
+</ul>
+<h2 id="readr"><a class="markdownIt-Anchor" href="#readr"></a> readr</h2>
+<ul>
+<li>read_csv():逗号分隔。read_csv2()：分号分隔。read_tsv():tab分隔。read_delim()：不管什么分隔都ok。read_fwf()：固定宽度文件（可用里面的参数fwf_widths()来固定宽度，或fwf_positions()来确定位置）read_table():列和列之间用空格分隔。read_log()：apache style还不懂这是什么</li>
+<li>read_csv: 默认是把第一行作为列名，所以如果我们不想要开始的n行：skip=n, 我们不想要开头带井号的行：comment=’#’，或者直接这些数据都没有名字：col_names=F. 或者可以col_names=c(…)来创建新的名字. na=’'告诉计算机这个文件中na是以什么方式存下来的。</li>
+<li>parse_*(): *可以为logical, integer, double, number, character , factor, datetime, time, date : 将输入的字符转换成其他格式，如果有错的话，可以用problem()来查看为何出错</li>
+<li>对于number来说，各个国家地区的书写方式不同，如果小数点不是.而是’,’ 那么我们可以在最后加上，locale = locale(decimal_mark = ‘,’) 同时parse_number()这个函数忽略掉数字前和后的字符，所以如果是123.45，点之后的45会被忽略掉，读成123. 而$100也会读成100. 最后，如果是像美国这种每三个数字就加一个逗号的问题，number可以解决，而对于除了逗号其他的组间分隔符，要用parse_number(’…’, locale = locale(grouping_mark = ‘?’))</li>
+<li>对于strings来说，问题就只有编码的不同产生的问题。现在大家都用UTF-8，但是一些老文件可能不是。所以如果我们知道这些字符的编码，可以用parse_character(… , locale = locale(encoding = ‘某种编码’)) 如果我们不知道编码的话，可以用内置函数来猜。guess_encoding(charToRaw(‘char’)) 其中charToRaw是将char变成源代码。当然大部分情况下他们也猜不准，除非数据量很大。</li>
+<li>关于时间。date返回从1970-1-1以来的天数。date-time返回从1970-1-1以来的秒数。time返回从前一天晚上12点到现在的秒数. date-time接受八位加T加六位的字符。date接受八位，time接受六位。（都是默认，可以根据情况不同而有所调整）。关于时间还有很多灵活地参数表示，这里先不说了…R4ds书上P135有说到。</li>
+<li>guess_parser()来猜测某个字符是什么类型。parse_guess()用猜测的类型进行parse</li>
+<li>readr工作的时候会选取前1000列来guess（代码中guess_max=1000），再用guess的结果进行parse，但有时候前1000行不具有代表性，所以问题就来了，这时候我们可以用problems(x)或者stop_for_problems(x)进行查验，并对col_types = cols(x=col_double()…) 放入readr中重新读。因为readr只查前1000，我们也可以用tail(data)来检验一下最后的几条数据看看是否符合预期。有时我们也用col_types = cols(.default = col_character()) 全部读成character，再用type_convert进行修正。</li>
+<li>写出函数：write_csv(), write_tsv(). 默认采用UTF-8编码。如果我们想输出一个CSV文件给excel 可以用write_excel_csv()会在文件的开头告诉excel我们是用UTF-8进行编码的。但是以上类型会在有NA的时候出一些小问题。这里我们引入一种专为R应用的函数write_rds()&amp;read_rds(),文件也要以rds为后缀。还有一种方法是所有编程语言通用的feather格式。write_feather()和read_feather()同样需要后缀为feather.</li>
+<li>其他格式：haven:读spss和sas文件。readxl：读xls和xlsx文件。DBI（以及RMySQL，RSQLite，RPostgreSQL）可以对数据跑SQL语句并且返回一个data.frame. jsonlite: for JSON. xml2: for XML</li>
+<li>readfwf :像SAS一样按照固定的格式读取文件：fixed with format</li>
+</ul>
+<p>##dplyr:</p>
+<ul>
+<li>tibbles格式是一种特殊的data.frame(四种基本格式：int整数，dbl实数，chr字符，dttm日期加时间，lgl逻辑，fctr类别，date日期)</li>
+<li>between(x,left,right): 判断x是否大于等于left小于等于right，返回逻辑值</li>
+<li>rename(data, new_name=old_name) : 对列改名</li>
+<li>inner_join对于key只在x或者y的数据予以删除。outerjoin中left_join保留x中所有，right_join保留y中所有，full_join保留全部。</li>
+<li>对于left_join.如果key是一对一，一对多，多对一都ok。但是如果是多对多的时候，会产生笛卡尔积。</li>
+<li>left_join选择key的方式，默认是by = NULL 即对xy所有重合的列名进行join，第二种by=c(‘col’)根据选定的key进行join，第三种by=c(‘a’=‘b’)对于x中的a和y中的b进行比较。</li>
+<li>merge(x,y, all.x = T, all.y = T)和join系列效果一样，只不过join系列一是看得清楚，二是算得快并且不容易出错。SQL也能做，但是看不懂，先不嗦了</li>
+<li>semi_join(x,y) 保留x中所有match了y的观测值。anti_join(x,y)丢掉x中所有match了y的观测值</li>
+<li>intersect() ,union() ,setdiff(x,y). 最后一个函数返回x\y .集合语言可以对tibble的观测值进行作用</li>
+</ul>
+<p>###六种基本函数</p>
+<p>格式：第一个位置放置data.frame，后面的都是用不加引号的变量名对数据进行操作，最后返回一个data.frame。</p>
+<ul>
+<li>filter():根据变量筛选观测值集合. 注意filter会自动去掉逻辑式中False和NA的观测值，如果需要保留NA，<a target="_blank" rel="noopener" href="http://xn--is-os3cr2hg20e6rza.na">则要使用is.na</a>() | xxx</li>
+<li>arrange()：将观测值以某些指标进行排列.默认升序，降序用desc(col.names). NA会被放在最后</li>
+<li>select()：选出特定变量. -(name1:name2) 表示去掉name1到name2中间的全部列。还可以用其他辅助函数：starts_with(‘xx’), ends_with, contains(), matches(’’)满足特定正则表达式，num_range(‘x’,1:3)选出x1,x2和x3, one_of(vars)选出字符表示的列名集合（但我发现不用one_of直接对vars进行select也OK）。式子最后加上everything()：把前面选择的变量移到列的最前面，相当于不仅选出了特定变量，还补上了其他未选择的变量。如果想区分大小写，在match类函数里面添加：ignore.case=F</li>
+<li>mutate()：根据已有变量产生新变量. 如果只想保留新变量，使用transmute(). 将一些异常(大于0的)观测值填写成NA：mutate(y=ifelse(y&gt;0,NA,y))</li>
+<li>summarize()：将多个变量浓缩成一个统计量, 常与group_by连用. 里面的函数n()返回观测值的个数，n_distinct()返回不同的观测值的个数。计数还可以用count(,wt=…)代替summarize()</li>
+<li>group_by()：将命令对每个分组作用, 想去掉分组用ungroup().</li>
+<li>nest：常与group_by连用，在tibble里面生成小tibble.使用unnest(data, varaible) 来变回常规tibble. 还有一个用法是nest(col1:col2): 将col1到col2中间的列都捆绑起来</li>
+</ul>
+<h1 id="stringr字符"><a class="markdownIt-Anchor" href="#stringr字符"></a> stringr字符</h1>
+<p>很多stringr的函数都有第二个版本_all ：works with all matches</p>
+<p>stringi包是stringr的扩充版，函数从42个增加到了234，遇到了棘手的问题可以试着从stringi中找一下，函数名称的开头也会变成stri_…</p>
+<ul>
+<li>有时候console里面打印出来的字符不是他本来的样子，要用writeLines()</li>
+<li>r4ds作者建议用双引号来引用字符。</li>
+<li>?&quot;’&quot; 或者 ?’&quot;’ 都可以来查看一系列关于各种字符的表达</li>
+<li>str_length(): 求字符长度</li>
+<li>str_c()：combine字符，相当于paste。如果想让NA变成字符型的NA打印或者操作，使用str_replace_na(x)。把一个字符向量变成一个字符：collapse = “,”</li>
+<li>str_sub(str, start, end): subsetting，注意这个str_sub不是创建了一个新的变量而是提供指针，这样的话如果你对sub之后的字符进行了修改，那么原来的字符也会被修改</li>
+<li>str_to_lower()/ str_to_upper()/str_to_title: 全部变成小写/大写/首字母大写。但是不同语言的大小写可能略有不同，需要通过locale = “en” 来获得robust的结果。str_order和str_sort比起原生的排序也是多了locale可以选择。</li>
+<li>str_trim(): 去掉字符开始和结尾的空格。</li>
+<li>str_wrap(): 把字符变成一个格式化段落</li>
+<li>str_view(x,‘match’): 用来可视化匹配结果</li>
+<li>str_detect(): 判断是否匹配，返回逻辑值</li>
+<li>str_count(): 返回一个数字，匹配了多少次。注意match不会重叠。str_count(“abababa”, “aba”) <em>#&gt; [1] 2</em>  而不是三个</li>
+<li>str_subset(): 选出匹配的字符们</li>
+<li>str_extract(): 将Match的部分提取出来（默认值是第一个match的）。如果想提取出来所有的match，用str_extract_all()会返回一个列表，可以加上simplify = T 就会变成一个矩阵，宽度用NA填补成最长宽度来对齐。</li>
+<li>str_match()&amp;all: 分组匹配，返回一个矩阵。第一列是str_extract的所有组合在一起的完整内容，后面每一列是每一组分别的内容。如果数据集是一个tibble，可以用tidyr::extract(tibble, name-of-matches, matches, remove = F)来代替str_match.(remove的意思是是否删除原tibble)</li>
+<li>str_replace()&amp;all: 用给定字符替换匹配字符。可以用c(‘match1’=‘new1’,…)来建立一个多维替换。还可以用分组的方法调换位置。str_replace(&quot;([ ^ ]+) ([ ^ ]+)&quot;, “\\2 \\1”)</li>
+<li>str_split(“分隔符”): 进行切割，返回一个list。可用simplify = T 来返回一个Matrix。参数n=几，可以固定最多切成几份。可用boundary(“word”)作为match来选中所有的单词而忽略标点以及空格。</li>
+<li>str_locate()&amp;all: 返回每个match的开始和结束位置</li>
+</ul>
+<h2 id="正则表达式"><a class="markdownIt-Anchor" href="#正则表达式"></a> 正则表达式</h2>
+<ul>
+<li>. 匹配任何字符（except a newline）但是我们如果只想匹配&quot;.“这个字符，需要变成「\\.」第一个斜杠告诉计算机我们现在是特殊字符，第二个斜杠保护了”.&quot;不会单独出现。想要match一个「\」我们需要用四个「\」</li>
+<li>锚定：&quot;^“从字符的开始进行匹配，”$&quot;从字符的结尾开始匹配：记忆口诀：<em>if you begin with power (<code>^</code>), you end up with money (<code>$</code>).</em> 如果想让正则表达式只匹配全字符，可以同时加上^和$。</li>
+<li>match the boundary between words with \b</li>
+<li>\d: 匹配一个数字。\s: match white space（space/tab/newline）\S:匹配所有非空白 [abc]: match a,b, or c. [ ^abc]: match anything except a,b, or c. 注意前两个带斜杠的在match的时候都需要再加一个斜杠</li>
+<li>abc|xyz 可以match到&quot;abc&quot;或者&quot;xyz&quot; 复杂的式子中可以加上圆括号，例如 “gr(e|a)y” 都可以match到灰色</li>
+<li>repetition：一个match可以用几次。?可以用0或1. +可以用1或更多。*可以用0或更多。还可以特意指定匹配多少个。{n}：正好n个。{n,}：n或更多。{,m}：最多m个。{n,m}：在n和m之间。（在有三个匹配项时，{2,3}最后还是会匹配三个，说明匹配的时候默认是越多越好。可以再、在最后添加一个问号&quot;{2,3}?&quot;来变成匹配的越少越好）</li>
+<li>可以使用斜杠来分组\1\2… 注意在匹配时还是要多加一个斜杠。</li>
+<li>再用str函数的时候，匹配的&quot;match&quot;其实都是regex(“match”)的缩写版。regex函数还有很多参数：ignore_case = T. multiline = T（让^和$ match每一行的开始和结束而不是整个字符的开始和结束）dotall = T (允许&quot;.&quot; match everything including \n)</li>
+<li>regex()的替代品们。fixed()：能让我们告别复杂的斜杠并且算的比正则式快，只能match一模一样的，但对于一些含有音调的字母的多种表达方式可能会不识别。coll()太复杂了感觉暂时不用学。</li>
+<li>apropos(‘replace’): 常用来选出带有特定字符的函数（带有replace的）</li>
+<li>dir(pattern = ‘正则式’)：在目录中搜索文件，返回match的文件名</li>
+<li>AB*表示的是一个A加n个B，n为自然数</li>
+<li>(Y|F)(.)\2：匹配Y或者F，后面跟上两个一样的字符</li>
+<li>[A-T]匹配A到T，但(A-T) 匹配「A-T」</li>
+<li>grep函数如果匹配不到的话，会返回长度为0的东西，可以用length()来catch</li>
+</ul>
+<h1 id="forcats因子变量"><a class="markdownIt-Anchor" href="#forcats因子变量"></a> forcats因子变量</h1>
+<ul>
+<li>创建因子变量：factor(char, levels = …) 对于不在levels里的字符会自动转成NA（对于这种情况如果需要error提示的话，可用readr::parse_factor代替factor）</li>
+<li>对于levels的顺序，默认是字母表顺序，如果想按照char本身出现的顺序来排序的话，方法1：factor(char, levels = unique(char)) 方法2： fct_inorder(factor(char))</li>
+<li>对于tibble中的因子变量，可以用count来轻松看到有哪些levels，数量各是多少。或者可用geom_bar(). 默认ggplot会将数据量为0的类别在图中删去，可以+scale_x_discrete(drop = F)来强制显示</li>
+<li>modifying factor order: fct_reorder(f,x, fun) f是要修改的变量。x是一个向量，按照从小至大的顺序对f重新编排。fun：如果对于一个f有多个x跟他对应，那么默认value=median</li>
+<li>fct_relevel(f, level1)：将level1移到所有level最前面。</li>
+<li>fct_reorder2(f, x, y): 根据x取到最大值时y的取值进行排序。（画图完interpret的时候常用）</li>
+<li>fct_rev(): reverse</li>
+<li>fct_infreq(): 按照频率，从大到小排序。（一般还是从小到大舒服，所以配合fct_rev使用）</li>
+<li>modifying factor levels: fct_recode(f, “new”=“old”) 可以将多个old指向同一个new</li>
+<li>fct_collapse(f, “new”=c(“old1”, “old2”, …)): 快速的进行多个old指向一个new的操作</li>
+<li>fct_lump(): 默认会将多个迷你组合，合并成一个小组，并且保持他仍然是最小的组合。我们可以加上参数n=几，来告诉他合并之后保留几个组</li>
+<li>增加一个factor的level可以用c连接，删除的话只需要再z1<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mi>N</mi><mi>C</mi><mi>N</mi><mi>O</mi><mi>N</mi><mi>W</mi><mn>1</mn><mo>&lt;</mo><mo>−</mo><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi><mo stretchy="false">(</mo><mi>z</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">INCNONW1&lt;-factor(z1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mord">1</span></span></span></span>INCNONW1) 留下用到的level</li>
+</ul>
+<h1 id="lubridate时间"><a class="markdownIt-Anchor" href="#lubridate时间"></a> lubridate时间</h1>
+<ul>
+<li>today(): 获取当前日期。now(): 获取当前日期+时间</li>
+<li>从字符或数字变成日期+时间：m/d/y + _ + h/m/s的任何一个排列组合都是一个函数。参数tz = “Timezone”</li>
+<li>make_date/make_datetime(year=, month=…): 如果时间的每个部分被存在了不同地方，用这个函数。</li>
+<li>as_date/as_datetime(): 在两种格式的时间中相互转换。也可以把从1970-1-1开始的天数/秒数转换成时间。</li>
+<li>year/month/mday/yday/wday(time): 从一个时间变量里面抽取信息也可以进行赋值。对于month/wday 可以选择label=T返回英文，abbr=F返回全称。</li>
+<li>floor/round/ceiling_date(time, “unit”): 四舍五入到最近的单位</li>
+<li>如果是对多项指标同时修改/赋值的话可以使用update(time,year=…)，如果赋值超过上界，会被直接加到下一个时间单元</li>
+<li>在r中如果时间减去时间会得到一个difftime变量，但是由于时间的单位可以是秒分时天…很难处理，所以用as.duration将他变成秒。</li>
+<li>duration家族还有：dseconds/dminutes/dhours/ddays/dweeks/dyears都是将对应的后缀变成秒，duration可以进行加减乘除。</li>
+<li>period家族：seconds/minutes/hours/days/months/weeks/years时间单位是多种多样的，也可以加减乘除</li>
+<li>intervals：(start %–% end) : 是一个有开始结束点的时间段，多用于时间段相除</li>
+<li>Sys.timezone(): 查看当前时区</li>
+<li>除非特殊表明，否则lubricate采用UTC时间。想变换时区（时间会随之更改）：with_tz(time, tzone = “continent/city”)。想变换时区（时间不会变）：force_tz(time, tzone = “continent/city”)</li>
+</ul>
+<h1 id="modelr模型"><a class="markdownIt-Anchor" href="#modelr模型"></a> modelr模型</h1>
+<ul>
+<li>data_grid()：求出离散数据的自变量集合。.model可以添加模型信息</li>
+<li>seq_range()：求出连续数据的模拟自变量集合. pretty = T 可以使output更加好看。 trim=0.1 会把两端10%的数据去掉（总共去掉20%的数据）expend = 0.1 与trim相反，将两端拉长5%（合在一起是0.1）</li>
+<li>add_predictions(data, model) 根据自变量和模型算出预测值并进行连接</li>
+<li>add_residuals(data, model) 跟上一个函数同理</li>
+<li>可视化残差的方法：geom_freqpoly 或者 画散点图和 y=0进行比较</li>
+<li>model_matrix 生成设计矩阵</li>
+<li>对于多个model来说 有gather_prediction/spread_prediction. 前者是多出一列mod类型（分为1和2）一列是预测值。后者直接多出来两类预测值，所以前者窄长，后者扁宽。</li>
+</ul>
+<h1 id="回归分析"><a class="markdownIt-Anchor" href="#回归分析"></a> 回归分析：</h1>
+<ul>
+<li>如果formula里面带有加减乘除等符号，要用I()括起来</li>
+<li>再用poly的时候，有时候因为不可导会导致设计矩阵出现正负无穷。这时候用splines::ns(x, n)来代替poly(x, n)</li>
+<li>有缺失值的时候一般R都会默默地不出声自动drop掉那一行，options(na.action = na.warn) 会在drop之后给出一行warning。options(na.action = na.exclude)还原。</li>
+<li>nobs(formula)可以查看某个fit到底使用了多少个观测值（number of observations）</li>
+<li>常用的模型：lm/glm/gam(generalized additive model)/penalized(glmnet)/rlm(robust)/tree</li>
+<li>lm(v1~I(v2 * v3))真的是v2乘v3。但如果是lm(v1~v2 * v3)就会有v2,v3,以及v2:v3</li>
+<li>rstudent 返回fit之后的残差</li>
+<li>xtabs可以根据不同字符型变量组合生成01的设计矩阵</li>
+<li>sigma(fit)可以返回fit的standardized residual</li>
+<li>Logistic: glm(formula, family = binomial( link = ‘logit’ ))</li>
+</ul>
+<p>aov函数默认给出type1，anova函数默认给出type2，type2&amp;3可以用car::Anova(type = c(‘II’,‘III’)) 来使用</p>
+<p>conf.int获得置信区间</p>
+<p><code>poly(2, raw = T)</code>与<code>I(x^2)</code> 效果相同，否则<code>poly</code>会给出orthogonal polynomial。用orthogona的目的就是保证那些多余的项不会影响到前面的估计。</p>
+<ul>
+<li>即使是overfit的话，如果多余的项是orthogonal的话，也不会影响正常的估计值。所以很多时候我们喜欢orthogonal。</li>
+<li>神奇的是，是否加raw，得到的预测值相同。因为<code>poly(2)</code>的两列其实是<code>poly(2, raw = T)</code>两列的线性组合，以一种orthogonal的形式。</li>
+<li>poly的算法：先使列均值为0，然后使用QR分解。为了得到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">y_1 = a_1x_1+a_2x_2,y_2 = b_1x_1+b_2x_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>⊥</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">y_1 \perp y_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⊥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。并且R的算法会使得即使你从ploy2 -&gt; poly3，poly3的前两列仍然能和poly2保持一致。</li>
+</ul>
+<h2 id="主成分分析"><a class="markdownIt-Anchor" href="#主成分分析"></a> 主成分分析</h2>
+<ul>
+<li>prcomp函数</li>
+<li>biplot可以画出PCscores and loadings- 二维图只能选择前两个PC</li>
+<li>pls::pcr</li>
+<li>validationplot</li>
+<li>princomp 可以直接给出loadings 需要用<code>fit2$loadings[]</code>取出matrix形式
+<ul>
+<li>这个函数即使定义了cor = F, 也会自动中心化score矩阵</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/112-pca-principal-component-analysis-essentials/">PCA画图很好看</a></li>
+</ul>
+<h1 id="时间序列"><a class="markdownIt-Anchor" href="#时间序列"></a> 时间序列</h1>
+<p>主要用的包有TSA/latticeExtra</p>
+<ul>
+<li>lattice::xyplot 可以画出时间序列图。比plot好看一点点点</li>
+<li>TSA::as.ts 将向量变成时间序列</li>
+<li>xyplot(hours, panel = function(x, y, …) {panel.xyplot(x, y, …) panel.text(x = x, y = y, labels = months)}) 标出各个月份的信息</li>
+<li>harmonic fit一个cosine-trend</li>
+<li>densityplot&amp;qqmath判断是否正态</li>
+</ul>
+<p>Econometricians often talk about a time series being <em>integrated with order k, I(k)</em>. <em>k</em> being the minimum number of differences required to obtain a stationary time series. forecast::nsdiffs() 可以做ADF test</p>
+<p>R output 的 ma 和 ar 都是 等式右面直接的值。</p>
+<p>tsdiag 返回更详细的诊断</p>
+<h1 id="stat471"><a class="markdownIt-Anchor" href="#stat471"></a> Stat471</h1>
+<p>ecoreg::gauss.hermite(k) 获取g(x)的多项式分解。<a target="_blank" rel="noopener" href="http://xn--integrate-4u8o548ns7cf42p.gh">同样还有integrate.gh</a></p>
+<p>预分配数据框——有助于提高运算速度：<br />
+N&lt;-1000000<br />
+dfrm&lt;- data.frame(dosage=numeric(N),lab=factor(N,levels=c(“A”,“B”)))</p>
+<p>根据位置选择数据框的列：<br />
+dfrm[[n]]=dfrm[,n] 返回第n列<br />
+特别的，dfrm[,n,drop=FALSE] = dfrm[n] 返回一个数据框，元素为第n列<br />
+dfrm[c(n1,n2)]=dfrm[,c(n1,n2)] 返回一个数据框，元素为第n1和n2列</p>
+<p>根据条件更便捷的选定行和列： subset(dfrm,select=c(colname1,…,colnameN))<br />
+subset(dfrm,select=c(predictor,response),subset=(response&gt;0))</p>
+<p>直接编辑数据框：①temp&lt;-edit(dfrm) dfrm&lt;-temp  ② fix(dfrm)</p>
+<p>从数据中移除包含NA值的一整行： new&lt;-na.omit(dfrm)</p>
+<p>根据名称排除列： subset(dfrm,select= c(-badboy,-patient.id))</p>
+<p>根据共有列合并数据框： new&lt;-merge(born,died,by=“name”)</p>
+<p>对于快速一次性使用数据框内的数据，可以不用attach&amp;detach ： with(dataframe,expr)<br />
+z&lt;-with(data,(pop-mean(pop))/sd(pop))<br />
+但注意attach之后就别对原数据进行操作了，因为无法改变原来的值。只能将值调出来赋给新的变量。</p>
+<p>【重点】不同类型的数据转换，P156页： 首先要记住可以单独用cbind/rbind 来达到转换成行/列的效果</p>
+<p>nls可以根据特定形式的函数进行最小二乘拟合，用coef来提取参数</p>
+<p>mvnormalmixEM 可以计算多元正太的EM</p>
+<p>5.5</p>
+<p>基础篇（4）</p>
+<p>split(列表的一行，列表的另一个用来分类的行)<br />
+unstack(data.frame(列表的一行，列表的另一个用来分类的行))  用来对列表中向量进行分组</p>
+<p>对列表的每一个元素进行操作：用lapply/sapply s是简化的意思<br />
+对列表的每一行进行操作：apply(list,1,f) 其中1表示行，2表示列，c(1,2)表示行和列<br />
+tapply(data,factor,fx) 对列表的某一列按照另一分组的列进行分类并操作<br />
+by(data,factor,fx)  把整个数据框按照某一分类方式进行分类并操作<br />
+mapply 将函数应用于多维向量上 mapply(gcd,c(1,2,3),c(9,6,3))</p>
+<p>第七章：字符串和日期：</p>
+<p>获取字符串长度： nchar()</p>
+<p>连接字符串 paste(&quot;&quot;,&quot;&quot;,sep=&quot;&quot;)<br />
+paste(c(“a”,“b”),“c”,sep=“e”,collapse=“f”)  输出结果：[1] “aecfbec”</p>
+<p>提取字符串： substr(string,start,end)</p>
+<p>根据字符中有的分隔符来分割字符串：  strsplit(“LOVE”,&quot;&quot;)  可能的拓展参数 fixed=TRUE</p>
+<p>将字符串中的某些字符替换成其他字符：<br />
+sub(old,new,string)  将string中第一个old找出来替换成new<br />
+gsub(old,new,string) 将string中所有old都替换成new</p>
+<p>针对某些特殊字符，如&quot;first\rsecond\n&quot; 使用函数print和cat输出的结果是不一样的</p>
+<p>生成两组字符串的笛卡尔积：  m&lt;-outer(strings1,strings2,paste,sep=&quot;&quot;)<br />
+此法生成一个矩阵，可用as.vector变成一个向量<br />
+用m[!lower.tri(m)]可以去掉m矩阵的下三角中所有元素 （上三角为upper.tri）</p>
+<p>得到当前日期： Sys.Date()</p>
+<p>将字符串转换为时间： as.Date(“12/31/2016”,format=&quot;%m/%d/%Y&quot;)</p>
+<p>改变时间输出格式：  format(Sys.Date(),format=&quot;%m/%d/%Y&quot;)</p>
+<p>%b 缩写的月份名称 %B完整的月份名称 %d两位数字的日期 %m两位数字的月份 %y没有世纪的年份 %Y有世纪的年份</p>
+<p>生成给定数字的时间： ISOdate(年，月，日，小时，分钟，秒) 可在外面套上一层as.Date将具体时间变成为某一天</p>
+<p>将时间变成从1970-1-1以来的天数： julian(date)/as.integer(date)</p>
+<p>要具体知道某一天的其他信息（如它是一年中的第几天，是个星期几…）p&lt;-as.POSIXlt(date)<br />
+参数p$: sec,min,hour,mday(该月的天数),mon,year(from1900),wday(0~6—0为周日),yday(该年的天数),isdst(夏时令标记)</p>
+<p>创建日期序列： seq(from=d1,to=d2,by=天数/“month”,length.out=多少天)</p>
+<p>5.6<br />
+第八章：概率<br />
+dnorm正态密度 pnorm正态的分布函数（累计概率） qnorm正态分位数 rnorm正态分布随机数<br />
+binom二项分布 geom几何分布 hyper超几何分布 nbinom负二项分布 pois泊松分布<br />
+beta贝塔 cauchy柯西 chisq卡方 exp指数 f-F分布 gamma伽马 lnorm对数正态 logis逻辑分布 t—T分布 unif均匀分布 weibull威布尔分布 wilcox-Wilcoxon分布</p>
+<p>combn(items,k) 从items里面抽k个出来，把所有组合排列出来</p>
+<p>生成随机样本序列： sample(vec,n，prob=c(…))</p>
+<p>d+分布为独立概率，q+概率能求分位数  p+分布为累计概率，在参数中添加 lower.tail=F表明求出互补概率1-P</p>
+<p>diff(pbinom(c(3,7),size=10,prob=0.5)) 可以求出在3~7之间的概率  但diff并不是绝对值</p>
+<p>polygon(region.x, region.y, density=) 可以为图形填充阴影</p>
+<p>第九章：统计概论</p>
+<p>统计惯例：选择显著水平α=0.05 则计算出p值小于0.05拒绝原假设，p&gt;0.05不拒绝</p>
+<p>summary不提供关于数据波动方面的信息，所以要自己加上sd()等</p>
+<p>计算相对频数：mean(逻辑判别式)  如：mean(x&gt;0)  此法也可用来求逆分位数</p>
+<p>table(f1,f2) 将数据按照f1,f2的因子类进行计数，形成一个列联表</p>
+<p>检验分类变量的独立性： summary(table()) 观察结果中的p值</p>
+<p>为了保证一个有意义的置信区间或者是T检验，在数据&lt;30个的时候要保证数据是服从正态分布的</p>
+<p>中位数的置信区间： wilcox.test(x,conf.int=T)</p>
+<p>问题：有一组数据由失败与成功构成，你认为成功的比例是p，你需要用样本数据来检验<br />
+prop.test(x,n,p，alternative=“greater/less/two.sided”) 记得要将想证明的结论放在对立假设<br />
+prop.test(x,n)可以输出一个比例的置信区间</p>
+<p>游程检验——一个序列是否是随机的：<br />
+library(tseries)<br />
+runs.test(as.factor())</p>
+<p>比较两组样本的均值： t.test(x,y,paired=, var.equal= )</p>
+<p>两个总体具有相同的图形形状，但他们的均值是否相同呢？：wilcox.test(x,y,paired=)</p>
+<p>检验相关系数的显著性: cor.test(x,y)  对于非正态总体： cor.test(x,y,method=“Spearman”)</p>
+<p>两组数据都由成功/失败组成，我想知道这两组是否具有相同的成功比例：prop.test(每一组的成功个数，每一组的总数)</p>
+<p>把一些样本的均值与其他任何一个样本的均值进行比较：pairwise.t.test(data,factor)</p>
+<p>两个样本是否取自同一个分布？： ks.test(x,y)</p>
+<p>17.11.7<br />
+grep(pattern = “j”, x = a, ignore.case=F, value = TRUE)取出特定字符，ignorecase表明去不区分大小写，value意思是输出字符还是输出字符的位置<br />
+sub(pattern = “e”, replacement = “E”, x = a)只替换每个字符第一个出现的位置 gsub替换所有<br />
+coef(summary(lm))也是一种输出系数的方法<br />
+lm(xx<sub>0+yy,data=?)/lm(xx</sub>yy-1,data=?) 不要截距<br />
+lm(xx~(.-1),data=?) 彻底不要截距  (.-x)去掉x之外其他的进行拟合</p>
+<p>ggplot:<br />
+ggplot之后是什么也没有的，需要通过+geom_bar()等一系列来输出<br />
+例子①ggplot(mpg, aes(cty, hwy)) +geom_point(aes(color = drv, size=cyl), shape=19, alpha=0.5)<br />
+例子②ggplot(a,aes(carb,optden))+geom_point()+geom_smooth(method=lm)</p>
+<p>多项式线性拟合 ~poly(x,n)<br />
+confint(lm,level=0.95)给出置信区间<br />
+model.tables(av1, type=“means”) 可以给出aov()各个分类的均值（默认的是给出系数）<br />
+xtabs(~ wool + tension, warpbreaks) 给出wool和tension每个类别都有多少个观测值<br />
+model.matrix输出设计矩阵<br />
+invisible(capture.output(y &lt;- ff(2))) 可以隐藏赋值语句中自带的print<br />
+<strong>reformulate</strong>(paste(“X”, 1:p, sep=&quot;&quot;), “Y”) 可以自动输出线性回归的格式：Y~X1+…+Xp<br />
+faraway包里面有Cpplot<br />
+leaps包里有leap，可以算Mallow’s Cp</p>
+<p>fit1&lt;-rpart(lowbwt~.,data=test0,parms=list(split=“information”,<br />
+loss=matrix(c(0,1,5,0),byrow=TRUE,nrow=2)))  可以用来在rpart里面添加misclassification cost</p>
+<h1 id="r-markdown"><a class="markdownIt-Anchor" href="#r-markdown"></a> R-Markdown:</h1>
+<ul>
+<li>一个星号包围是斜体，两个星号包围是粗体，code是用斜点包围</li>
+<li>上标用^包围，下标用~包围</li>
+<li>无序列表使用一个星号加两个tab，子列表分别在星号前面加上tab</li>
+<li>有序列表1.加tab 并且后面的数字也都是1. Rmarkdown会自动修正</li>
+<li>新建代码chunk可以用insert和cmd+alt+I. chunk的名字在r加一个空格之后输入。如果一个chunk起名叫setup，那么不管运行哪一个chunk，这个chunk都会被先运行一遍</li>
+<li>options们：eval = FALSE:这框框的代码不会被计算(evaluate)但是会显示。include = FALSE：跑代码但是不显示代码或者结果。echo = FALSE：跑代码，不显示代码，显示结果。message = FALSE/warning = FALSE：让最后的结果不显示message和warning。results = ‘hide’：隐藏printed output。fig.show = ‘hide’：隐藏plot。error = TRUE：如果这个chunk坏了那么还会继续运行其他chunk的内容。</li>
+<li>knitr::kable(): 使得表格打印效果更好，同类函数包还有xtable, stargazer, pander, tables, ascii</li>
+<li>如果某个工程运行一次耗时很大，可以加上cached=TRUE来让运行的结果存起来，只要代码没变，之后运行的时候就不会重复计算。但有时这个chunk要接受其他chunk的结果，其他chunk如果变了的话是发现不了的，所以可以加上 dependson =‘chunk name’ 另外如果有读文件的操作的话，文件的修改也是不能被发现的，<a target="_blank" rel="noopener" href="http://xn--cache-4h1h64ckwod6c.extra=file.info">可以加上cache.extra=file.info</a>(). 最后记得清理：knitr::clean_cache()</li>
+<li>可以通过knitr::opts_chunk$set()来修改默认的option</li>
+<li>在R-markdown中添加数字可以用format(x, digits=2, big.mark=’,’)等来规范格式</li>
+<li>如果我们在文字中想添加一些简短的数据信息(比如一个dataframe的行数)，这时候重开一个chunk显然不是最好的做法，可以用r+空格+语句并用斜点来包围</li>
+<li>要注意有时候markdown的working directory和主环境的wd不是一个，可能会导致一些错误</li>
+<li>可以设置全局参数，在三个断线分隔的开头，加上 params: my_class:“suv” 这主要是想批量产生一些markdown文件，具体详见P437.书上的后一页有一些关于在markdown结尾加上注释和参考文献等信息，暂时也用不到</li>
+<li>图像的大小参数：老哥推荐的default: fig.width=6 fig.asp=0.618 out.width = “70%” fig.align = “center”。如果是多个图的话out.width = “50%”/“33%”/“25%” + fig.align = “default”</li>
+<li>fig.show = “hold” 可以将图片强制放在代码的最后，而不是插在中间</li>
+<li>fig.cap 可以添加caption</li>
+<li>dev = “png” 损失了一点图片质量，但是可以换来效率。否则图片是pdf格式</li>
+<li>不同格式的帮助文件 ?rmarkdown::html_document()</li>
+<li>对于html文件，可以隐藏代码并且可以通过点击来打开：output：+回车+html_document: +回车+ code_folding:hide</li>
+<li>{r include=FALSE, cache=FALSE} 不显示任何输出：<em># 可用来载入library</em></li>
+<li>用$和$$包围Latex可以得到行间或者单独的公式。后面那个$符号前面不能带空格</li>
+<li>换行用大于等于两个空格+回车或者两个回车</li>
+</ul>
+<pre><code class="hljs rmarkdown">&#96;&#96;&#96;&#123;r, out.width &#x3D; &quot;400px&quot;&#125;
+knitr::include_graphics(&quot;path&#x2F;to&#x2F;image.png&quot;) #调整插入本地图片大小
+&#96;&#96;&#96;</code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.datadreaming.org/post/r-markdown-theme-gallery/">打印出来不同主题</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33965560/r-markdown-table-with-a-caption">表格的title</a></p>
+<h1 id="shiny"><a class="markdownIt-Anchor" href="#shiny"></a> Shiny</h1>
+<h1 id="杂七杂八的问题"><a class="markdownIt-Anchor" href="#杂七杂八的问题"></a> 杂七杂八的问题</h1>
+<ul>
+<li>
+<p>当错误信息是中文的时候：</p>
+<p>Sys.setenv(LANGUAGE = ‘en’) 再跑一遍程序，然后谷歌</p>
+</li>
+<li>
+<p>手动更新某个包：tidyverse_update()</p>
+</li>
+<li>
+<p>?也可以应用在内置数据集上，帮助文档会显示出每列的含义</p>
+</li>
+<li>
+<p>Over-plotting: 很多函数在画图的时候用了取整，导致很多数据点重叠。</p>
+</li>
+<li>
+<p>NA stands for ‘Not Available’</p>
+</li>
+<li>
+<p>seriation包对两个因子变量同时排序，d3heatmap和heatmaply也是关于探求双因子变量关系的包</p>
+</li>
+<li>
+<p>一般来说，注释#是用来解释why而不是what和how。</p>
+</li>
+<li>
+<p>想看if的帮助文件需要加上``</p>
+</li>
+<li>
+<p>对于R里面的函数如果没有调用的话，它甚至都不会生成（lazy evaluation）。</p>
+</li>
+<li>
+<p>好像对于函数可以用testthat包来进行模拟测试，不太会用以后可以看看</p>
+</li>
+<li>
+<p>traceback(): prints the functions called that generate the error.</p>
+</li>
+<li>
+<p>经常在自己的函数里面加一个check输入格式的部分，使之变得robust</p>
+</li>
+<li>
+<p>options(warn=-1/0) 可以将warning藏起来/显示</p>
+</li>
+</ul>
+<pre><code class="hljs R">assign(paste(<span class="hljs-string">&#x27;X&#x27;</span>, i, sep=<span class="hljs-string">&#x27;&#x27;</span>), <span class="hljs-literal">NULL</span>) <span class="hljs-comment">#这段代码可以配合for循环快速产生变量Xi</span></code></pre>
+<p>加载包的时候有时候会显示: <code>Reason: image not found</code></p>
+<ul>
+<li>解决方法<a target="_blank" rel="noopener" href="https://github.com/rstudio/rstudio/issues/2254">关于rjava</a> ：<code>sudo R CMD javareconf</code></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/23050928/error-in-plot-new-figure-margins-too-large-scatter-plot">Error in plot.new() : figure margins too large</a></p>
+<pre><code class="hljs R">lapply(paste(<span class="hljs-string">&#x27;package:&#x27;</span>,names(sessionInfo()$otherPkgs),sep=<span class="hljs-string">&quot;&quot;</span>),<span class="hljs-keyword">detach</span>,character.only=<span class="hljs-literal">TRUE</span>,unload=<span class="hljs-literal">TRUE</span>) <span class="hljs-comment"># detach_all_packages</span></code></pre>
+<p>我们对一个factor变量，即使把某一类全部删去了，当我们打印的时候，那个空白的level还在里面。这会让plsDA函数失效</p>
+<p><a target="_blank" rel="noopener" href="https://d.cosx.org/d/419420-r-markdown-pdf/2">rmarkdown: Unicode char \u8:骞?not set up for use with LaTeX.</a></p>
+<p><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/11109/how-to-deal-with-perfect-separation-in-logistic-regression">logistic出现perfect separation</a></p>
+<p>有的github包装不上，需要先加载remote包：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a></p>
+<h1 id="advanced-r"><a class="markdownIt-Anchor" href="#advanced-r"></a> Advanced R</h1>
+<p>这个作者Hadley Wickham好强，我唯一看过的R书《R For Data Science》就是他写的。他写过很多著名的包，我用过的有：ggplot2, dplyr, stringr, lubridate, readr, haven, devtools, roxygen2, testthat… tidyverse像是一个他的工作合集。</p>
+<p><img src="https://i.imgur.com/mg2hgeP.png" srcset="/img/loading.gif" alt="https://i.imgur.com/mg2hgeP.png" /></p>
+<h2 id="第一章"><a class="markdownIt-Anchor" href="#第一章"></a> 第一章</h2>
+<ul>
+<li>一些R的特性：</li>
+</ul>
+<blockquote>
+<p>阅读源代码之所以重要是因为他可以帮助你写出更好的代码。开始培养这种技能的一种好方法就是<strong>查看你经常使用的函数和package的源代码</strong>。</p>
+</blockquote>
+<ul>
+<li>推荐阅读：
+<ul>
+<li>《计算机程序的构造和解释》（英語：Structure and Interpretation of Computer Programs，SICP）简明又深奥，理解R的对象系统</li>
+<li>Concepts, Techniques, and Models of Computer Programming. 理解R相对于其他编程语言的优缺点</li>
+<li>程序员修炼之道: 从小工到专家 (The Pragmatic Programmer) 让你成为一个更好的程序员</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>本书的网站使用jekyll构建，使用bootstrap样式，并通过travis-ci自动推送的Amazon的S3</p>
+</blockquote>
+<ul>
+<li>
+<p>array可以用来存放n维的数组</p>
+<p><img src="https://i.imgur.com/QS2mHvK.png" srcset="/img/loading.gif" alt="https://i.imgur.com/QS2mHvK.png" /></p>
+</li>
+</ul>
+<p>R没有0维数据（Really? What about <code>numeric(0)</code> 我的理解是这个东西是一个一维但长度为0的数据），也没有标量类型。单独的数字或字符串都是向量。可以使用代码 <code>str</code> 给出结构，比typeof复杂。</p>
+<p>不要使用<code>is.vector()</code>来判断是否是向量，只有当x没有任何其他属性的时候才会返回<code>True</code>。要使用 <code>is.atomic()</code> 或者 <code>is.list()</code> 来判断。1维的数据 (vector)，只要不是list就一定是atomic。List <strong>也属于</strong> vector。</p>
+<h2 id="第二章"><a class="markdownIt-Anchor" href="#第二章"></a> 第二章</h2>
+<h3 id="vector"><a class="markdownIt-Anchor" href="#vector"></a> Vector</h3>
+<ul>
+<li>Atomic的六种类型
+<ol>
+<li>logical
+<ul>
+<li>NA 默认是逻辑向量，如果在c()中使用就会被转成正确的类型，也可以直接使用：NA_integer_ , NA_real_ , NA_character_ 。
+<ul>
+<li><code>c(FALSE, NA_character_)</code> 的输出是 <code>#[1] &quot;FALSE&quot; NA</code> 。所以 <code>NA</code> 默认是逻辑向量，因为他的<strong>等级最低</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>integer （<code>x = 1L</code> 而不是 x = 1 ）</li>
+<li>double (numeric)
+<ul>
+<li><code>is.numeric()</code> 也可以用来检查 <code>integer</code></li>
+</ul>
+</li>
+<li>character</li>
+<li>complex (略过)</li>
+<li>raw (略过)</li>
+</ol>
+</li>
+</ul>
+<p>Atomic总是被展开，即使用嵌套来创建。<code>x = c(1,c(2))</code> 等同于 <code>x = c(1,2)</code> 。</p>
+<p>使用<code>c()</code>来进行合并：Atomic类型的强制转换，服从顺序：logical → integer → double → character。不过有时也会反着来，比如使用逻辑运算符 <code>&amp;，|</code> 等。当 list 和 atomic 结合在一起的时候，atomic 会被强制转换成 list 。将 list 转变成 atomic 需要用 <code>unlist()</code> 。</p>
+<p><code>1 == c(&quot;1&quot;)</code> 会返回 <code>True</code> 。</p>
+<h3 id="attribute"><a class="markdownIt-Anchor" href="#attribute"></a> Attribute</h3>
+<p>基本操作：</p>
+<ul>
+<li>
+<p><code>attr(x, 'class')</code> 可以访问某一个特定的属性，<code>attributes(x)</code> 可以一次获得全部的属性。</p>
+</li>
+<li>
+<p>structure 可以创建数据并同时赋予属性</p>
+<p>可以创建数据并同时赋予属性</p>
+<ul>
+<li>难怪我会经常在 <code>dput()</code> 里面看到这个函数，比如：<code>structure(c(1L, 2L), .Label = c(&quot;A&quot;, &quot;B&quot;), class = &quot;factor&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<p>默认情况下，当向量被修改 / 变换之后他的大多数属性都会丢失，但是三个最重要的属性不会：</p>
+<ol>
+<li>
+<p>Name：给每个元素一个名字的字符向量，使用</p>
+<pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">names</span><span class="hljs-params">(x)</span></span></code></pre>
+<ul>
+<li><code>unnames(x)</code> 可以创建没有名字的新向量，或是使用 <code>names = NULL</code> 来去掉名字。</li>
+</ul>
+</li>
+<li>
+<p>Dimension：将向量转换为矩阵和数组，使用 <code>dim(x)</code></p>
+</li>
+<li>
+<p>Class：用于实现S3对象系统, 使用 <code>class(x)</code></p>
+</li>
+</ol>
+<p>factor 只能包含<strong>预先定义</strong>的值，虽然看上去很像character，但<strong>其实是integer</strong>。</p>
+<p>有时一列数值型变量会因为非标准编码NA而被读成factor，转换的办法：</p>
+<ol>
+<li>先 <code>as.character</code> 再 <code>as.double</code> .</li>
+<li>在用 <code>read.csv</code> 读入的时候，使用参数 <code>na.strings =</code> 来提前做好预防。</li>
+</ol>
+<p>不推荐修改全局选项， 比如 <code>options(stringAssFactors = FALSE)</code> 。因为与其他代码联合使用的时候会造成无法预知的后果，也使代码变得难以理解。</p>
+<p><code>x = structure(1:5, name = 'my attribute')</code> R对待comment属性很特殊，它不会被打印。</p>
+<pre><code class="hljs r"><span class="hljs-comment"># 这段代码有点意思，展示了四种情况</span>
+f1 = factor(letters) <span class="hljs-comment"># 数据是正序abcd level的order也是正序</span>
+levels(f1) = rev(levels(f1)) <span class="hljs-comment"># 数据逆序，level逆序</span>
+f2 = rev(factor(letters)) <span class="hljs-comment"># 数据逆序， level正序</span>
+f3 = factor(letters, levels = rev(letters)) <span class="hljs-comment"># 数据正序，level逆序</span></code></pre>
+<p>对于data.frame来说，<code>length()</code> 和 <code>ncol()</code> 的结果是一样的。</p>
+<p><code>plyr::rbind.fill()</code> 可以解决 <code>rbind</code> 找不到同样名字的列会报错的问题，默认填成 NA .</p>
+<p><code>cbind()</code> 默认变成矩阵，如果想变成 data.frame 可以直接用 <code>data.frame()</code> 。在使用 <code>cbind()</code> 的时候最好保证所有输入都是同一类型来避免错误。</p>
+<p><code>data.frame(x = 1:3, y = I(list(1:2,1:3,1:4)))</code> 函数 <code>I()</code> 可以修复这个本来报错的代码。</p>
+<p>data.frame 虽然支持把列表 / 数组变成他的列，不过要注意，很多处理 data.frame 的函数都假设所有的列都是 atomic 的。</p>
+<h2 id="第三章-subset"><a class="markdownIt-Anchor" href="#第三章-subset"></a> 第三章 Subset</h2>
+<h1 id="包包"><a class="markdownIt-Anchor" href="#包包"></a> 包包</h1>
+<ul>
+<li>mc2d::rtrunc:  truncate distribution generator</li>
+<li>if(!require(“astro”)) install.packages(“astro”) 来检测包</li>
+</ul>
+<p>reshape里面辅助ggplot可以画出来相关系数热度图</p>
+<pre><code class="hljs R">cm = cor(dat1[,-<span class="hljs-number">1</span>])
+melted_cormat &lt;- melt(cm)
+ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) + 
+  geom_tile()</code></pre>
+<p><strong>DiagrammeR:</strong> 用来画各类流程图</p>
+<h1 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h1>
+<ul>
+<li>ctl+alt+上：将光标变长，可以好几行一起编辑</li>
+<li>在console里面使用cmd+上：可以查看最近敲过的代码</li>
+<li>在出现备选函数名的时候，敲击回车或tab都可以选中。</li>
+<li>cmd+shift+P: 重新发送刚刚的代码到console</li>
+<li>cmd+shift+R: 添加代码之间分隔线</li>
+</ul>
+<p>#<mark><mark><mark>xxx</mark></mark></mark>== 可以创建可折叠代码段</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/">Study</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/Coding/">Coding</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Study/Coding/R/">R</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/02/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">机器学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/01/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">统计学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://iamwangsiyu.com/2020/07/01/R%E5%BF%83%E5%BE%97/';
+        this.page.identifier = '/2020/07/01/R%E5%BF%83%E5%BE%97/';
+      };
+      function loadDisqus() {
+        (function () {
+          var d = document,
+            s = d.createElement('script');
+          s.src = '//' + 'iamwangsiyu' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      }
+      waitElementVisible('disqus_thread', loadDisqus);
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 2,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "R心得&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
