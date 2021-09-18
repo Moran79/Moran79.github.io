@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7k 字
+      7.5k 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      112
+      120
        分钟
     </span>
   
@@ -388,6 +388,40 @@
 <p>记录一下学统计的时候遇到的一些问题</p>
 <a id="more"></a>
 <h1 id="日常"><a class="markdownIt-Anchor" href="#日常"></a> 日常</h1>
+<h2 id="20210914-miaoyans-602"><a class="markdownIt-Anchor" href="#20210914-miaoyans-602"></a> 2021/09/14 Miaoyan’s 602</h2>
+<p>关于Linear Regression里面的参数如何解读，经典的说法是：</p>
+<blockquote>
+<p>A unit change in <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">X_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> is associated with a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>β</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\beta_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> average change in <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>, while holding all other predictors ﬁxed.</p>
+</blockquote>
+<ul>
+<li>听上去没毛病，但是问题来了，<code>如果设计矩阵X之间存在correlation呢</code>？如果有cor，你很难做到在改变一个的同时，不改变其他X。所以这个定义干脆是用不了。</li>
+</ul>
+<p>所以最后的解决办法是：</p>
+<blockquote>
+<p>“The only way to ﬁnd out what will happen when a complex system is disturbed is to disturb the system, not merely to observe it passively ”—— Fred Mosteller and John Tukey , paraphrasing George Box</p>
+</blockquote>
+<p>检测Multicollinearity的方法：Variance Inflation Factor</p>
+<p><img src="https://i.imgur.com/iiYI1XJ.png" srcset="/img/loading.gif" alt="" /></p>
+<h3 id="dependent-tests"><a class="markdownIt-Anchor" href="#dependent-tests"></a> <a target="_blank" rel="noopener" href="https://stats.stackexchange.com/a/270421/242782">Dependent Tests</a></h3>
+<blockquote>
+<p>一个Positive的例子：</p>
+<p>Consider testing all pairwise differences in means between four groups; this is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>𝑁</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mi mathvariant="normal">/</mi><mn>2</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">𝑁=4⋅3/2=6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord">/</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> tests. Each of the six <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-values alone is uniformly distributed. But they are all positively correlated: if (on a given attempt) group A by chance has particularly low mean, then A-vs-B comparison might yield a low <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-value (this would be a false positive). But in this situation it is likely that A-vs-C, as well as A-vs-D, will also yield low <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-values. So the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-values are obviously non-independent and moreover <u>they are positively correlated</u> between each other.</p>
+</blockquote>
+<ul>
+<li>可以见得这种comparison testing，如果有一个显著了，会使得其他的comparison也显著。</li>
+</ul>
+<blockquote>
+<p>一个 Negative (Positive) 的例子：</p>
+<p>Imagine I am testing whether A = 0 and also whether B = 0 against one-tailed alternatives (A &gt; 0 and B &gt; 0). Further imagine that B depends on A. For example, imagine I want to know if a population contains more women than men, and also if the population contains more ovaries than testes. Clearly knowing the p-value of the first question changes our expectation of the p-value for the second. Both p-values change in the same direction, and this is PRD. But if I instead test the second hypothesis that population 2 has more testes than ovaries, our expectation for the second p-value decreases as the first p-value increases. This is not PRD.</p>
+</blockquote>
+<ul>
+<li>PRD: Positive Regression Dependency</li>
+<li>这个dependence感觉有点偏理论了，先溜了。
+<ul>
+<li>详见论文： <a target="_blank" rel="noopener" href="http://projecteuclid.org/download/pdf_1/euclid.aos/1013699998">Benjamini &amp; Yekutieli 2001</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="20210913"><a class="markdownIt-Anchor" href="#20210913"></a> 2021/09/13</h2>
 <p><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/a/113022">Interpreting Residual and Null Deviance in GLM R</a></p>
 <ul>

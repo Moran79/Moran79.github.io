@@ -947,7 +947,7 @@ and teaching them to obey everything I have commanded you. And surely I am with 
 <h1 id="熟练记忆库"><a class="markdownIt-Anchor" href="#熟练记忆库"></a> 熟练记忆库</h1>
 ]]></content>
       <categories>
-        <category>Holy</category>
+        <category>道</category>
         <category>经文记忆之路</category>
       </categories>
   </entry>
@@ -5152,6 +5152,40 @@ Queue: FIFO 先进先出<br />
 <p>记录一下学统计的时候遇到的一些问题</p>
 <a id="more"></a>
 <h1 id="日常"><a class="markdownIt-Anchor" href="#日常"></a> 日常</h1>
+<h2 id="20210914-miaoyans-602"><a class="markdownIt-Anchor" href="#20210914-miaoyans-602"></a> 2021/09/14 Miaoyan’s 602</h2>
+<p>关于Linear Regression里面的参数如何解读，经典的说法是：</p>
+<blockquote>
+<p>A unit change in <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">X_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> is associated with a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>β</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\beta_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> average change in <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>, while holding all other predictors ﬁxed.</p>
+</blockquote>
+<ul>
+<li>听上去没毛病，但是问题来了，<code>如果设计矩阵X之间存在correlation呢</code>？如果有cor，你很难做到在改变一个的同时，不改变其他X。所以这个定义干脆是用不了。</li>
+</ul>
+<p>所以最后的解决办法是：</p>
+<blockquote>
+<p>“The only way to ﬁnd out what will happen when a complex system is disturbed is to disturb the system, not merely to observe it passively ”—— Fred Mosteller and John Tukey , paraphrasing George Box</p>
+</blockquote>
+<p>检测Multicollinearity的方法：Variance Inflation Factor</p>
+<p><img src="https://i.imgur.com/iiYI1XJ.png" alt="" /></p>
+<h3 id="dependent-tests"><a class="markdownIt-Anchor" href="#dependent-tests"></a> <a href="https://stats.stackexchange.com/a/270421/242782">Dependent Tests</a></h3>
+<blockquote>
+<p>一个Positive的例子：</p>
+<p>Consider testing all pairwise differences in means between four groups; this is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>𝑁</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mi mathvariant="normal">/</mi><mn>2</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">𝑁=4⋅3/2=6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord">/</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> tests. Each of the six <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-values alone is uniformly distributed. But they are all positively correlated: if (on a given attempt) group A by chance has particularly low mean, then A-vs-B comparison might yield a low <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-value (this would be a false positive). But in this situation it is likely that A-vs-C, as well as A-vs-D, will also yield low <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-values. So the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>-values are obviously non-independent and moreover <u>they are positively correlated</u> between each other.</p>
+</blockquote>
+<ul>
+<li>可以见得这种comparison testing，如果有一个显著了，会使得其他的comparison也显著。</li>
+</ul>
+<blockquote>
+<p>一个 Negative (Positive) 的例子：</p>
+<p>Imagine I am testing whether A = 0 and also whether B = 0 against one-tailed alternatives (A &gt; 0 and B &gt; 0). Further imagine that B depends on A. For example, imagine I want to know if a population contains more women than men, and also if the population contains more ovaries than testes. Clearly knowing the p-value of the first question changes our expectation of the p-value for the second. Both p-values change in the same direction, and this is PRD. But if I instead test the second hypothesis that population 2 has more testes than ovaries, our expectation for the second p-value decreases as the first p-value increases. This is not PRD.</p>
+</blockquote>
+<ul>
+<li>PRD: Positive Regression Dependency</li>
+<li>这个dependence感觉有点偏理论了，先溜了。
+<ul>
+<li>详见论文： <a href="http://projecteuclid.org/download/pdf_1/euclid.aos/1013699998">Benjamini &amp; Yekutieli 2001</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="20210913"><a class="markdownIt-Anchor" href="#20210913"></a> 2021/09/13</h2>
 <p><a href="https://stats.stackexchange.com/a/113022">Interpreting Residual and Null Deviance in GLM R</a></p>
 <ul>
@@ -5535,7 +5569,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>郭振游门训笔记</title>
-    <url>/2020/06/30/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>最近才了解到，门徒训练是灵命成长的关键一环。郭振游牧师编写了<a href="http://afcresources.org/contents/zh-cn/p3657.html">一套门徒小组研习课程</a>。这篇笔记主要是在听他<a href="https://www.youtube.com/playlist?list=PLr2lsVlkvbYvJMh3KwAXMHEGa203H_9Iq">CD内容</a>的时候整理出来的心得与大家分享。希望大家都能在灵命培养的路上走的更远。</p>
 <blockquote>
@@ -6118,7 +6152,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p>祝福你，并借着你祝福他人。</p>
 ]]></content>
       <categories>
-        <category>Holy</category>
+        <category>道</category>
         <category>References</category>
         <category>郭振游门徒训练</category>
       </categories>
@@ -8907,7 +8941,7 @@ To Titus, my true son in our common faith: Grace and peace from God the Father a
 <p>希望以上的这些例子，可以成为我们在世上的榜样。这个世界有什么比耶稣还大，让我们不舍得放下呢？</p>
 ]]></content>
       <categories>
-        <category>Holy</category>
+        <category>道</category>
         <category>格物记</category>
       </categories>
   </entry>
@@ -11919,14 +11953,14 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
 </blockquote>
 ]]></content>
       <categories>
-        <category>Holy</category>
+        <category>道</category>
         <category>References</category>
         <category>C.S.Lewis</category>
       </categories>
   </entry>
   <entry>
     <title>Timothy Keller</title>
-    <url>/2020/07/01/The-Reason-for-God/</url>
+    <url>/2020/07/02/The-Reason-for-God/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>这里记录一下Timothy Keller的读书笔记，目前我心中的排序是：</p>
 <p>The Reason for God &gt; The Prodigal God &gt; Counterfeit Gods &gt; The Meaning of Marriage</p>
@@ -12919,7 +12953,7 @@ But then marriage’s enormous potential for spiritual growth is lost. If I come
 </blockquote>
 ]]></content>
       <categories>
-        <category>Holy</category>
+        <category>道</category>
         <category>References</category>
         <category>Timothy Keller</category>
       </categories>
@@ -14736,6 +14770,50 @@ Ps：【不老神鸡】（一家店名）重磅安利！！这家店用什么特
       <categories>
         <category>生活</category>
         <category>滑板</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>yijing</title>
+    <url>/2021/09/18/yijing/</url>
+    <content><![CDATA[<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4ZMLYL4A2ts&amp;list=PLWOEDSjpHE-W5yGIX2kaXQTy3kzUmqjeh">曾仕强-易经的智慧144集全集-上经</a></li>
+<li><a href="https://www.youtube.com/watch?v=1yI5MP712tY&amp;list=PLWOEDSjpHE-W02bmX49o_N6E01Y6SGo5T">曾仕强-易经的智慧144集全集-下经</a></li>
+</ul>
+<h1 id="占卜方法"><a class="markdownIt-Anchor" href="#占卜方法"></a> 占卜方法</h1>
+<ul>
+<li>
+<p>每次扔出三个硬币</p>
+</li>
+<li>
+<p>一个正面为3，一个反面为2，将三个数字加在一起</p>
+</li>
+<li>
+<p>如果是奇数（7/9），则为阳，偶数（6/8）则为阴。</p>
+</li>
+<li>
+<p>重复这个过程6次，将得到的结果从下往上排列，即为一挂。</p>
+</li>
+</ul>
+<h1 id="卦象"><a class="markdownIt-Anchor" href="#卦象"></a> 卦象</h1>
+<h2 id="11-泰卦"><a class="markdownIt-Anchor" href="#11-泰卦"></a> 11 泰卦</h2>
+<p>下乾上坤</p>
+<p>阐述了君子与小人的关系</p>
+<ul>
+<li>君子若想致小人于死地，则与小人无异乎</li>
+<li>你很难改变一个人，但是人可以自己改变。我们能做的，只是被动的影响别人。</li>
+<li>盛极而衰，否极泰来。</li>
+</ul>
+<h2 id="64-未济挂"><a class="markdownIt-Anchor" href="#64-未济挂"></a> 64 未济挂</h2>
+<p>下坎上离</p>
+<ul>
+<li>自己已经处于危难之中。在先救自己之前，没有办法救别人。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>道</category>
+        <category>传统国学</category>
+        <category>易经</category>
       </categories>
   </entry>
 </search>
