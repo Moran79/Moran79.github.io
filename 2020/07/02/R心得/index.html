@@ -329,8 +329,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-07-01 22:19" pubdate>
-        2020年7月1日 晚上
+      <time datetime="2020-07-02 11:19" pubdate>
+        2020年7月2日 上午
       </time>
     </span>
   
@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      15.3k 字
+      15.7k 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      187
+      193
        分钟
     </span>
   
@@ -1240,6 +1240,8 @@ knitr::include_graphics(&quot;path&#x2F;to&#x2F;image.png&quot;) #调整插入�
 <p><a target="_blank" rel="noopener" href="https://d.cosx.org/d/419420-r-markdown-pdf/2">rmarkdown: Unicode char \u8:骞?not set up for use with LaTeX.</a></p>
 <p><a target="_blank" rel="noopener" href="https://stats.stackexchange.com/questions/11109/how-to-deal-with-perfect-separation-in-logistic-regression">logistic出现perfect separation</a></p>
 <p>有的github包装不上，需要先加载remote包：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a></p>
+<pre><code class="hljs R"><span class="hljs-keyword">library</span>(installr) <span class="hljs-comment"># 更新R，同时保持package的方法</span>
+updateR()</code></pre>
 <h1 id="advanced-r"><a class="markdownIt-Anchor" href="#advanced-r"></a> Advanced R</h1>
 <p>这个作者Hadley Wickham好强，我唯一看过的R书《R For Data Science》就是他写的。他写过很多著名的包，我用过的有：ggplot2, dplyr, stringr, lubridate, readr, haven, devtools, roxygen2, testthat… tidyverse像是一个他的工作合集。</p>
 <p><img src="https://i.imgur.com/mg2hgeP.png" srcset="/img/loading.gif" alt="https://i.imgur.com/mg2hgeP.png" /></p>
@@ -1359,6 +1361,38 @@ melted_cormat &lt;- melt(cm)
 ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) + 
   geom_tile()</code></pre>
 <p><strong>DiagrammeR:</strong> 用来画各类流程图</p>
+<h1 id="r-package-r包开发"><a class="markdownIt-Anchor" href="#r-package-r包开发"></a> R Package R包开发</h1>
+<h2 id="基础部分"><a class="markdownIt-Anchor" href="#基础部分"></a> 基础部分</h2>
+<blockquote>
+<p>A package bundles together <strong>code, data, documentation, and tests</strong>, and is easy to share with others.</p>
+</blockquote>
+<blockquote>
+<p><strong>RStudio can initialize a Git repository, in any Project, even if it’s not an R package</strong>, as long you’ve set up RStudio + Git integration. Do <em>Tools &gt; Version Control &gt; Project Setup</em>. Then choose <em>Version control system: Git</em> and <em>initialize a new git repository for this project</em>.</p>
+</blockquote>
+<blockquote>
+<p>A reasonable starting position is to make a new <code>.R</code> file for each function in your package and name the file after the function. As you add more functions, you’ll want to relax this and begin to group related functions together.</p>
+</blockquote>
+<blockquote>
+<p>Packages and scripts use different mechanisms to declare their dependency on other packages and to store example or test code.</p>
+</blockquote>
+<blockquote>
+<p>It’s considered a best practice to include a full license in your package’s source, such as on GitHub, but CRAN disallows the inclusion of this file in a package tarball.</p>
+</blockquote>
+<p><code>create_package('path')</code>: 创建一个新的package</p>
+<p><code>use_git()</code> ：使用Git来进行version control</p>
+<p><code>use_r()</code>：创建函数，会自动产生R文件</p>
+<p><code>load_all()</code>：把R文件夹下的所有.R文件都运行，把函数都存进Rstudio，但是并不在Environment里面</p>
+<ul>
+<li><code>exists(&quot;function_name&quot;, where = globalenv(), inherits = FALSE)</code></li>
+</ul>
+<p><code>check()</code>：检查这个package是否存在问题，耗时不短，但是特别有用的一个函数。</p>
+<p><code>use_mit_license(&quot;Author Name&quot;)</code>：使用一个license</p>
+<p><code>document()</code>：产生各种文件，比如NAMESPACE</p>
+<p><code>install()</code>：将包安装进本地</p>
+<p><code>use_testthat()</code>：准备使用testthat来做testing</p>
+<p><code>use_test('function_name')</code>：写一个test case，不过现在我还不知道该怎么写</p>
+<p><code>test()</code>：开始测试那个testthat函数</p>
+<p><code>use_package('package_name')</code>：放在这里的目的是保证在安装包的时候，这些附加的包也存在在电脑里。相当于<code>require()</code>的感觉。</p>
 <h1 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h1>
 <ul>
 <li>ctl+alt+上：将光标变长，可以好几行一起编辑</li>
@@ -1395,9 +1429,9 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/07/02/The-Reason-for-God/">
+                      <a href="/2020/07/02/Spark%E5%BF%83%E5%BE%97/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Timothy Keller</span>
+                        <span class="hidden-mobile">Spark心得</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1405,8 +1439,8 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/07/01/%E9%83%AD%E6%8C%AF%E6%B8%B8%E9%97%A8%E8%AE%AD%E7%AC%94%E8%AE%B0/">
-                        <span class="hidden-mobile">郭振游门训笔记</span>
+                      <a href="/2020/07/02/Python%E5%BF%83%E5%BE%97/">
+                        <span class="hidden-mobile">Python心得</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -1425,8 +1459,8 @@ ggplot(data = melted_cormat, aes(x=X1, y=X2, fill=value)) +
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://iamwangsiyu.com/2020/07/01/R%E5%BF%83%E5%BE%97/';
-        this.page.identifier = '/2020/07/01/R%E5%BF%83%E5%BE%97/';
+        this.page.url = 'https://iamwangsiyu.com/2020/07/02/R%E5%BF%83%E5%BE%97/';
+        this.page.identifier = '/2020/07/02/R%E5%BF%83%E5%BE%97/';
       };
       function loadDisqus() {
         (function () {
