@@ -17,7 +17,7 @@
   <meta name="description" content="Personal blog in Chinese, to count the blessings in every moment.">
   <meta name="author" content="大连铁板王">
   <meta name="keywords" content="">
-  <title>统计学习笔记【9/21更新】 - Siyu Wang</title>
+  <title>统计学习笔记 - Siyu Wang</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -341,7 +341,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      8.5k 字
+      9.2k 字
     </span>
   
 
@@ -351,7 +351,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      132
+      140
        分钟
     </span>
   
@@ -381,13 +381,30 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">统计学习笔记【9/21更新】</h1>
+            <h1 style="display: none">统计学习笔记</h1>
             
             <div class="markdown-body" id="post-body">
               <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>记录一下学统计的时候遇到的一些问题</p>
 <a id="more"></a>
 <h1 id="日常"><a class="markdownIt-Anchor" href="#日常"></a> 日常</h1>
+<h2 id="20211003"><a class="markdownIt-Anchor" href="#20211003"></a> 2021/10/03</h2>
+<p>把numeric的数据变成categorical感觉有一个好处：边缘效应？如果有一个变量在小于5和大于10的表现相似，numerical的方法无法检测出来，但是categorical可以。</p>
+<p>对于某一些0/1的influence point，我们是否可以将它重新采样为0.6/0.4？</p>
+<ul>
+<li>因为在人烟稀少的地方，可能p = 0.51，但是因为只有0/1，我们就会把他当成p=1来看待。所以重新采样的过程可以使得数据的influence point没那么夸张</li>
+<li>这个重新采样的过程也只适用于那些对于influencial point敏感的算法，比如说linear regression。</li>
+</ul>
+<p>在老罗讲COVID data的时候，说数据集是一天天积累起来的，数据其实不是iid。因为随着时间的推移，可能我们有了更好的医疗条件，我们也有可能面临的不是同一种病毒（比如说Delta Variation）</p>
+<p>老罗用GUIDE发现了一个95% missing 的数据其实很重要。仔细一想，95%NA的数据怎么用？我可能根本不会用。</p>
+<p>老罗开始上课的时候抨击了ACS采数据的时候用5%的人口来采，这样就导致各个州的数据集大小相差很大。</p>
+<ul>
+<li>后来上课时讲到，其实可以用IPW来补偿，也没啥问题。如果每个州的取样相同的话，那么一个加州人可能代表了100个加州人，而一个威斯康辛人可能只代表10个威州人。</li>
+</ul>
+<p>老罗88年写了个文章，说<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>χ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\chi^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">χ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>检验收敛到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>χ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\chi^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">χ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>分布的速率是不同的，与df有关系。所以那些continous correction都有些许扯淡，因为所有事情都应该depends on df。</p>
+<ul>
+<li>但是收敛速度这个东西并不是一个统计学的名词，我们该怎么来刻画他呢？</li>
+</ul>
 <h2 id="20210928"><a class="markdownIt-Anchor" href="#20210928"></a> 2021/09/28</h2>
 <p>Importance Score利用了Multiple Correction，所以会导致变量多的时候，IS的大小会变（但是因为是同样的修正系数，所以我猜相对位置应该不会变）。</p>
 <h2 id="20210921"><a class="markdownIt-Anchor" href="#20210921"></a> 2021/09/21</h2>
@@ -648,6 +665,11 @@ p.adjust(pp,method = <span class="hljs-string">&#x27;hochberg&#x27;</span>)
 <ul>
 <li>直接summary(aov)用的是type-I，是不对的。</li>
 </ul>
+<h1 id="关于guide"><a class="markdownIt-Anchor" href="#关于guide"></a> 关于GUIDE</h1>
+<p>description file可以放入更多的信息：每一行虽然有默认输出，但是GUIDE只读取第一个Entry，之后你可以任意添加comments，而不需要考虑用什么comment符号。</p>
+<p>未来是不是可以加入一个回去重选的功能？要不然反复输入同一个命令，还是有些annoying的。</p>
+<p>GUIDE dsc file的路径问题，可以通过修改dsc中的第一行，把数据的相对路径改成绝对路径来解决（记得带引号）。这样一劳永逸。</p>
+<p>Minimum Node Size可能是被老罗设置成为了1%的total sample size。我看到老罗有一个30层的树，这可能说明他设置的maximum level比30还要大。</p>
 <h1 id="stat641"><a class="markdownIt-Anchor" href="#stat641"></a> STAT641</h1>
 <p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
 <ul>
@@ -1047,7 +1069,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "统计学习笔记【9/21更新】&nbsp;",
+        "统计学习笔记&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
