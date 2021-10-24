@@ -660,6 +660,7 @@ else return(gcd(b,a%%b))<br />
 <p>当前的包安装不上的时候：</p>
 <pre><code class="hljs R">install.packages(<span class="hljs-string">&#x27;/Users/moran/Desktop/Epi_2.33.tar.gz&#x27;</span>,repos = <span class="hljs-literal">NULL</span>, type=<span class="hljs-string">&quot;source&quot;</span>)</code></pre>
 <p>tryCatch里面赋值的时候，要用&lt;&lt;-而不是&lt;-</p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1335830/why-cant-rs-ifelse-statements-return-vectors"><code>ifelse</code> returns a value with the same shape as <code>test</code></a></p>
 <h3 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h3>
 <ul>
 <li>
@@ -765,6 +766,7 @@ ggplot(df)+
 <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/18055838">保存ps半透明图片</a></p>
 <pre><code class="hljs r"><span class="hljs-keyword">library</span>(scales)
 show_col(hue_pal()(<span class="hljs-number">2</span>)) <span class="hljs-comment">#可以查看R默认前两种颜色的16进制表示</span></code></pre>
+<p>mosaic::plotModel Francisco用这个画出了很好看的图</p>
 <h2 id="ggplot"><a class="markdownIt-Anchor" href="#ggplot"></a> GGplot：</h2>
 <p>分为七个主要部分：dataset, a geom, a set of mappings, a stat, a position adjustment, a coordinate system, and a faceting scheme.</p>
 <ul>

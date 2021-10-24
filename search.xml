@@ -162,8 +162,6 @@ A void return type means the method returns no value.</p>
 <h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h1>
 <ul>
 <li>\docunmentclass{book/report/letter/article} 确定文件类型</li>
-<li>\begin{document}文章开始</li>
-<li>\end{document} 文章结束</li>
 <li>\title{} 添加题目</li>
 <li>\author{}添加作者</li>
 <li>\maketitle 制作封面-如果不在begin{document}后面加这句话，其他话都白写了</li>
@@ -178,13 +176,6 @@ A void return type means the method returns no value.</p>
 <ul>
 <li><a href="https://www.latex-tutorial.com/tutorials/figures/">添加图片</a></li>
 </ul>
-<pre><code class="hljs latex"><span class="hljs-tag">\<span class="hljs-name">begin</span><span class="hljs-string">&#123;enumerate&#125;</span></span> 
-<span class="hljs-tag">\<span class="hljs-name">item</span></span> 带编号的列表
-<span class="hljs-tag">\<span class="hljs-name">end</span><span class="hljs-string">&#123;enumerate&#125;</span></span> 
-
-<span class="hljs-tag">\<span class="hljs-name">begin</span><span class="hljs-string">&#123;itemize&#125;</span></span> 
-<span class="hljs-tag">\<span class="hljs-name">item</span></span> 不带编号的列表
-<span class="hljs-tag">\<span class="hljs-name">end</span><span class="hljs-string">&#123;itemize&#125;</span></span></code></pre>
 <p><a href="https://tex.stackexchange.com/a/349100">如何在Beamer里加gif动图</a></p>
 <p>##环境：</p>
 <p>\begin{环境名}[可选参数]{参数}。document可以被看成最大的环境。</p>
@@ -2246,6 +2237,7 @@ A,B 曲式结构为：AB</p>
 <li>Chicken Alfredo Pizza 8分
 <ul>
 <li>要选Thin Crust，算是吃过的pizza里面好吃的</li>
+<li>2021/09 选了正常厚度，感觉不太妙。有助于吃饱，但味道不好。</li>
 </ul>
 </li>
 <li>Santa Fe Pizza 6分
@@ -2345,6 +2337,19 @@ A,B 曲式结构为：AB</p>
 <li>不够咸，海鲜不够多，味道感觉没出来</li>
 </ul>
 </li>
+</ul>
+<h2 id="taiwan-little-eats5分"><a class="markdownIt-Anchor" href="#taiwan-little-eats5分"></a> Taiwan Little Eats【5分】</h2>
+<p><img src="https://i.imgur.com/6fumzgs.jpg" alt="" /></p>
+<p>Tainan Braised Pork Over Rice 台南卤肉饭 6分</p>
+<p>Baby Fried Chicken Cutlet 5分</p>
+<p>Pineapple Shrimp Balls 5分</p>
+<p>Crispy &amp; Salty Popcorn Chicken 3分</p>
+<ul>
+<li>这个菜外焦里硬，很难想象能把鸡米花做的这么差</li>
+</ul>
+<p>BBQ Pork Sausages NA</p>
+<ul>
+<li>老姚说一般</li>
 </ul>
 <h2 id="toppers"><a class="markdownIt-Anchor" href="#toppers"></a> Toppers</h2>
 <p>MEAT TOPPER 7.5分</p>
@@ -3615,6 +3620,17 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <li>复制了上一次的操作，车停在了南面，走了小路，沿着铁轨走到公园的北面。租了三个单人皮艇 + 两个板。平平无奇的划船些许无聊，用手收放无人机就开始有些意思，双人paddle board落水就更加锦上添花 😅</li>
 <li>大家坐在一棵树干上一起拍照，感觉很有趣，很考验平衡。碰到了一棵老朽的树干，在上最后一个人的时候树干直接断了… 哈哈哈</li>
 </ul>
+<h2 id="governor-dodge-state-park"><a class="markdownIt-Anchor" href="#governor-dodge-state-park"></a> Governor Dodge State Park</h2>
+<p><img src="https://i.imgur.com/elj902b.jpg" alt="" /></p>
+<p><img src="https://i.imgur.com/spnJkr0.jpg" alt="IMG_1414" /></p>
+<ul>
+<li>推荐指数6分</li>
+</ul>
+<p>2020/10/24</p>
+<ul>
+<li>第一次来，疫苗人感觉不太妙，于是只走了一个pine cliff trail。因为这个地方比较远，所以有一些期待。但是感觉走过的路稍微差了点意思。风景确实有很多种，不过cave的距离太远，如果想去cave一定要绕园走一周。而一周是16km… 看了瀑布，但是瀑布没多少水。这就像你买了NBA的票去看杜兰特打球，结果杜兰特上了10分钟就下场了，还砍下了三个失误。</li>
+<li>下次可能有机会来？如果有的话希望能全走一遍。要么开心，要么死心。</li>
+</ul>
 <h2 id="governor-nelson-state-park"><a class="markdownIt-Anchor" href="#governor-nelson-state-park"></a> Governor Nelson State Park</h2>
 <p><img src="https://i.imgur.com/bSRjw4j.png" alt="" /></p>
 <p><img src="https://i.imgur.com/wsHuebk.jpg" alt="" /></p>
@@ -3625,6 +3641,14 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <ul>
 <li>州立公园，停车费单次$8年卡$28。开始以为只有一个trail是值得一走的，JZ建议我们去湖边看看。后来发现湖边才是宝藏。适逢风大，有老哥在水上翱翔滑水，很有水平。</li>
 <li>草地Trail乏善可陈，湖边有下船的地方，有一片小沙滩可以打排球，还有儿童嬉戏区。不过玩的不多，树林小路也很短。但是鉴于有树有水，勉强及格。</li>
+</ul>
+<p>2020/10/15</p>
+<p><img src="https://i.imgur.com/zcXotqY.jpg" alt="" /></p>
+<p><img src="https://i.imgur.com/qoqbKWs.jpg" alt="" /></p>
+<p><img src="https://i.imgur.com/6jujn0p.jpg" alt="" /></p>
+<ul>
+<li>这次来赶上了万圣节预热活动，林间小路的两旁点起了燃烧的火把。待到天色渐暗，有点感觉。</li>
+<li>海豹找到了一棵树🌲，爬树活动从天而降，为6分的Governor增添一抹色彩。</li>
 </ul>
 <h2 id="howard-temin-lakeshore-path"><a class="markdownIt-Anchor" href="#howard-temin-lakeshore-path"></a> Howard Temin Lakeshore Path</h2>
 <p><em>就是指从Nat到Coli的一段沿湖小路，没想到居然还有名字</em></p>
@@ -3809,6 +3833,7 @@ GROUP BY origin; SUM的求和要放在Then后面</li>
 <ul>
 <li>新疆/西藏/内蒙/宁夏/山西/河北/海南/贵州/港澳 15</li>
 <li>北京：护国寺小吃（店名，京八件）、西四包子铺（西什库）、峨眉酒家（川菜），小肠陈，北新桥卤煮，门框胡同卤煮</li>
+<li>杭州：于谦祠，岳飞墓</li>
 </ul>
 <h3 id="广州"><a class="markdownIt-Anchor" href="#广州"></a> 广州</h3>
 <blockquote>
@@ -4771,6 +4796,48 @@ Queue: FIFO 先进先出<br />
 <p>记录一下学统计的时候遇到的一些问题</p>
 <a id="more"></a>
 <h1 id="日常"><a class="markdownIt-Anchor" href="#日常"></a> 日常</h1>
+<h2 id="20211019"><a class="markdownIt-Anchor" href="#20211019"></a> 2021/10/19</h2>
+<p>在我们impute categorical的时候，我们可以先变成dummy matrix，再impute mean。这样会获得一个weighted版本的imputation。</p>
+<h2 id="20211014"><a class="markdownIt-Anchor" href="#20211014"></a> 2021/10/14</h2>
+<p>如果有NA的话，在plug-in mean和mode之后，可以考虑再添加一列indicator（是否为imputed），这样可能会稍微好一点。（好像是Loh在2019年参加的会议提到的想法）</p>
+<p>Logistic里面不太好加interaction，因为不好解释，interaction是作用在log-odds上面的。如果变回到pi的level，interaction的关系会变得很复杂。</p>
+<p>Least Square和正态没关系。我们可以有一个lm模型，但是没有正态假设。</p>
+<p>只有Random Sample才能去引入那些正态假设，如果我们有了Population数据，就没法做inference了。或者说这样做是不ethical的。</p>
+<p>老罗举了个好玩的例子，你来上课又不听光看，就像你去健身房不锻炼，光看别人锻炼一样。哈哈哈哈</p>
+<p>Transforming Y can affect both linearity and equal variance, but transforming X can affect only linearity.</p>
+<ul>
+<li>假设是一个指数变换。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal">′</mo></msup><mo>=</mo><msup><mi>e</mi><mi>Y</mi></msup></mrow><annotation encoding="application/x-tex">Y^{\prime} = e^{Y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.751892em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.22222em;">Y</span></span></span></span></span></span></span></span></span></span></span></span>。那么会有效果是越大的Y越容易有大的方差。</li>
+</ul>
+<h2 id="20211013"><a class="markdownIt-Anchor" href="#20211013"></a> 2021/10/13</h2>
+<p>Linear Regression里面随着data变多，模型一直保持不变。所以才会有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>β</mi><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat{\beta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1523199999999998em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9578799999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05278em;">β</span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.16666em;">^</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span> 正态收敛到均值。但是GUIDE不同。分类树算法随着数据不断变多之后，树会发生变化，所以不存在limiting distribution的说法。</p>
+<p>如果把伴侣年龄给impute了，那这套数据集就无法代表整体的population。因为整体的population中，有40%是没有伴侣的。</p>
+<h2 id="20211010-变异系数"><a class="markdownIt-Anchor" href="#20211010-变异系数"></a> 2021/10/10 变异系数</h2>
+<p>变异系数：Coefficient of variation / relative standard deviation (CV / RSD)</p>
+<ul>
+<li>判断准则随便找了一个：0.1/0.4/1 弱变异 - 低等变异 - 中等变异 - 强变异</li>
+</ul>
+<h2 id="20211009-方差齐性检验"><a class="markdownIt-Anchor" href="#20211009-方差齐性检验"></a> 2021/10/09 方差齐性检验</h2>
+<p><a href="https://blog.csdn.net/junhongzhang/article/details/107903044">转自这篇CSDN</a></p>
+<p>方法：</p>
+<ol>
+<li>【正态敏感】方差比：大除小，得到一个F值。（所以可以是单边检验）</li>
+<li>【正态敏感】Hartley检验：用于多组方差的检验，用多组中最大的方差除最小的方差，得到一个F值。
+<ul>
+<li>这里用的F table是一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mrow><mi>M</mi><mi>A</mi><mi>X</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{MAX}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mathdefault mtight">A</span><span class="mord mathdefault mtight" style="margin-right:0.07847em;">X</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的 sample distribution。</li>
+<li>假设正态，并且每组的数量相同。不足之处是正态不满足的时候不够robust，有时候小p值会来自于非正态。</li>
+</ul>
+</li>
+<li>【正态敏感】Bartlett检验：一个诡异的构造，出来一个卡方检验</li>
+<li>【正态敏感】Cochran’s C test: 检验的其实是方差的outlier，是否有某一个variance超出去了。统计量十分简单，就是方差除方差和的ratio。
+<ul>
+<li>需要每组数量相同。</li>
+<li>比起Hartley，Cochran用了更多的数据</li>
+</ul>
+</li>
+<li>【正态不敏感】Levene检验：将每个值先转换为为该值与其组内均值的偏离程度绝对值，然后再用转换后的偏离程度去做方差分析（常规ANOVA），即组间方差/组内方差。</li>
+<li>【正态不敏感】Brown–Forsythe检验：修改版的Levene。偏离程度用median刻画（其他方法还有用trimmed mean）。比Levene更robust</li>
+</ol>
+<p>方差不齐次的时候，将ANOVA变成了Kruskal–Wallis one-way analysis of variance：比较中位数。</p>
 <h2 id="20211003"><a class="markdownIt-Anchor" href="#20211003"></a> 2021/10/03</h2>
 <p>把numeric的数据变成categorical感觉有一个好处：边缘效应？如果有一个变量在小于5和大于10的表现相似，numerical的方法无法检测出来，但是categorical可以。</p>
 <p>对于某一些0/1的influence point，我们是否可以将它重新采样为0.6/0.4？</p>
@@ -5053,6 +5120,16 @@ p.adjust(pp,method = <span class="hljs-string">&#x27;hochberg&#x27;</span>)
 <p>未来是不是可以加入一个回去重选的功能？要不然反复输入同一个命令，还是有些annoying的。</p>
 <p>GUIDE dsc file的路径问题，可以通过修改dsc中的第一行，把数据的相对路径改成绝对路径来解决（记得带引号）。这样一劳永逸。</p>
 <p>Minimum Node Size可能是被老罗设置成为了1%的total sample size。我看到老罗有一个30层的树，这可能说明他设置的maximum level比30还要大。</p>
+<blockquote>
+<p>KL03的NA解决办法：</p>
+<p>C Method: 遍历所有变量对，选出resubstitution error最小的那一组。在fit LDA的时候如果有NA的话就直接扔掉对应的数据，用其他的数据进行拟合。在predict（resubstitution）的时候，所有的NA都被填成了mean和mode。</p>
+</blockquote>
+<p>High leverage point 在GUIDE里面不是问题，因为二分法不在乎数值的具体大小（相对即可）。</p>
+<p>Missing value flag在GUIDE里面可以帮助划分。没有的话NA只会全去某一侧，如果有的话可能missing code A会去左侧，missing code B会去右侧。</p>
+<p>Party&amp;Partykit在利用weight的时候会要求是正整数，因为算法是将同样的数据复制w遍。这样会导致在那一个点处的样本方差 = 0。</p>
+<ul>
+<li>或许以后需要了解一下其他算法的缺点，defend for GUIDE</li>
+</ul>
 <h1 id="stat641"><a class="markdownIt-Anchor" href="#stat641"></a> STAT641</h1>
 <p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
 <ul>
@@ -9743,6 +9820,7 @@ else return(gcd(b,a%%b))<br />
 <p>当前的包安装不上的时候：</p>
 <pre><code class="hljs R">install.packages(<span class="hljs-string">&#x27;/Users/moran/Desktop/Epi_2.33.tar.gz&#x27;</span>,repos = <span class="hljs-literal">NULL</span>, type=<span class="hljs-string">&quot;source&quot;</span>)</code></pre>
 <p>tryCatch里面赋值的时候，要用&lt;&lt;-而不是&lt;-</p>
+<p><a href="https://stackoverflow.com/questions/1335830/why-cant-rs-ifelse-statements-return-vectors"><code>ifelse</code> returns a value with the same shape as <code>test</code></a></p>
 <h3 id="循环"><a class="markdownIt-Anchor" href="#循环"></a> 循环</h3>
 <ul>
 <li>
@@ -9848,6 +9926,7 @@ ggplot(df)+
 <p><a href="https://stackoverflow.com/a/18055838">保存ps半透明图片</a></p>
 <pre><code class="hljs r"><span class="hljs-keyword">library</span>(scales)
 show_col(hue_pal()(<span class="hljs-number">2</span>)) <span class="hljs-comment">#可以查看R默认前两种颜色的16进制表示</span></code></pre>
+<p>mosaic::plotModel Francisco用这个画出了很好看的图</p>
 <h2 id="ggplot"><a class="markdownIt-Anchor" href="#ggplot"></a> GGplot：</h2>
 <p>分为七个主要部分：dataset, a geom, a set of mappings, a stat, a position adjustment, a coordinate system, and a faceting scheme.</p>
 <ul>
