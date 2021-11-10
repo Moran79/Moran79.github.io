@@ -383,6 +383,12 @@
             <!-- SEO header -->
             <h1 style="display: none">机器学习笔记</h1>
             
+              <p class="note note-info">
+                
+                  本文最后更新于：1 年前
+                
+              </p>
+            
             <div class="markdown-body" id="post-body">
               <h1 id="关于这门mooc"><a class="markdownIt-Anchor" href="#关于这门mooc"></a> 关于这门MOOC</h1>
 <p>Coursera上面吴恩达的机器学习。老老实实学完的，代码都是自己打的，很有成就感。</p>
@@ -538,7 +544,7 @@ c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z'/></svg><
 <p>High-bias = under-fitting. High-variance = over-fitting</p>
 </li>
 <li>
-<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed.png?expiry=1522454400000&amp;hmac=1E-Lq6rt765ATz0C9v6hVDu6kI-vvqxkgRDRJjPzv6g" srcset="/img/loading.gif" alt="" /><br />
+<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/I4dRkz_pEeeHpAqQsW8qwg_bed7efdd48c13e8f75624c817fb39684_fixed.png?expiry=1522454400000&amp;hmac=1E-Lq6rt765ATz0C9v6hVDu6kI-vvqxkgRDRJjPzv6g" alt="" /><br />
 这个图表示如果Train&amp;CV的误差都很大，那么是under-fitting，如果Train小CV大很可能是over-fitting</p>
 </li>
 <li>
@@ -546,7 +552,7 @@ c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z'/></svg><
 </li>
 <li>
 <p>所以我们该如何选择<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>?：将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>从小到大排即是不同的模型，再用cost来拟合，CV来选择（这个CV的cost是不含regular那一项的，同理我们只用含regular的来拟合参数，报告train-error的时候也是不含regular那一项的）<br />
-<img src="http://spark-public.s3.amazonaws.com/ml/images/10.5-quiz-1-option4.png" srcset="/img/loading.gif" alt="" /></p>
+<img src="http://spark-public.s3.amazonaws.com/ml/images/10.5-quiz-1-option4.png" alt="" /></p>
 </li>
 <li>
 <p>一般来说，用一个复杂的神经网络+regularization，要比用一个简单的神经网络效果要好<br />
@@ -559,10 +565,10 @@ c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z'/></svg><
 <p>在出现high-bias(under-fitting)的时候，增加数据量是没什么用的，但是overfitting的时候，增加数据量有用（模型不变的情况下）</p>
 </li>
 <li>
-<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/bpAOvt9uEeaQlg5FcsXQDA_ecad653e01ee824b231ff8b5df7208d9_2-am.png?expiry=1522454400000&amp;hmac=B5ywTJzWN1IdcfxIx5LZi95HO4qj3LSKt58YMNlcFk8" srcset="/img/loading.gif" alt="High Bias" /></p>
+<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/bpAOvt9uEeaQlg5FcsXQDA_ecad653e01ee824b231ff8b5df7208d9_2-am.png?expiry=1522454400000&amp;hmac=B5ywTJzWN1IdcfxIx5LZi95HO4qj3LSKt58YMNlcFk8" alt="High Bias" /></p>
 </li>
 <li>
-<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/vqlG7t9uEeaizBK307J26A_3e3e9f42b5e3ce9e3466a0416c4368ee_ITu3antfEeam4BLcQYZr8Q_37fe6be97e7b0740d1871ba99d4c2ed9_300px-Learning1.png?expiry=1522454400000&amp;hmac=r2oACMou0U4Qm-LtPW7WwfdD-rd7dRiokQU8jYo61Co" srcset="/img/loading.gif" alt="High Variance" /></p>
+<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/vqlG7t9uEeaizBK307J26A_3e3e9f42b5e3ce9e3466a0416c4368ee_ITu3antfEeam4BLcQYZr8Q_37fe6be97e7b0740d1871ba99d4c2ed9_300px-Learning1.png?expiry=1522454400000&amp;hmac=r2oACMou0U4Qm-LtPW7WwfdD-rd7dRiokQU8jYo61Co" alt="High Variance" /></p>
 </li>
 </ul>
 <h1 id="recommended-approach"><a class="markdownIt-Anchor" href="#recommended-approach"></a> Recommended Approach</h1>
@@ -579,7 +585,7 @@ c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z'/></svg><
 <p>Precision/Recall: 可以写成一个二乘二矩阵<br />
 Precison = True prositive/Predicted Positive(第一行)<br />
 Recall = True prositive/Actual Positive(第一列)</p>
-<p><img src="http://spark-public.s3.amazonaws.com/ml/images/11.3-quiz-1-q1.png" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://spark-public.s3.amazonaws.com/ml/images/11.3-quiz-1-q1.png" alt="" /></p>
 </li>
 <li>
 <p>一般来说都用y=1 来表示那个稀少的类（比如患了癌症）</p>
@@ -630,7 +636,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 </ol>
 <h1 id="unsupervised-learning"><a class="markdownIt-Anchor" href="#unsupervised-learning"></a> Unsupervised Learning</h1>
 <h2 id="clustering-algorithm"><a class="markdownIt-Anchor" href="#clustering-algorithm"></a> Clustering Algorithm</h2>
-<p><img src="https://i.stack.imgur.com/Yl4tV.png" srcset="/img/loading.gif" alt="各个聚类方法的scale时间" /></p>
+<p><img src="https://i.stack.imgur.com/Yl4tV.png" alt="各个聚类方法的scale时间" /></p>
 <h3 id="k-means"><a class="markdownIt-Anchor" href="#k-means"></a> K-means</h3>
 <ul>
 <li>先随机找到两个点（只分两组的时候）</li>
@@ -691,7 +697,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 <h2 id="multivariate-gaussian-distribution"><a class="markdownIt-Anchor" href="#multivariate-gaussian-distribution"></a> Multivariate Gaussian Distribution</h2>
 <p>如果两个变量之间存在cor，那么原来的圆形置信域就会变成椭圆形，导致一些异常点检测不出来(例子：一三象限方向的椭圆，对于二四象限的异常点有可能检测不出来，因为关于x-y轴的两个投影都不是很小)</p>
 <ul>
-<li><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fpwrxdd0l3j30qu0miwu5.jpg" srcset="/img/loading.gif" alt="" /></li>
+<li><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fpwrxdd0l3j30qu0miwu5.jpg" alt="" /></li>
 </ul>
 <p>我们只需要将原来的p(x)连乘变成多元正态里面的p(x)就可以了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>π</mi><msup><mo stretchy="false">)</mo><mrow><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msup><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Σ</mi><msup><mi mathvariant="normal">∣</mi><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msup></mrow></mfrac><mi>e</mi><mi>x</mi><mi>p</mi><mo stretchy="false">(</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false">)</mo><mi>T</mi></msup><msup><mi mathvariant="normal">Σ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x)=\frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.405533em;vertical-align:-0.560425em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.614575em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8220357142857143em;"><span style="top:-2.8220357142857138em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mord mtight">/</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mord mtight">∣</span><span class="mord mtight">Σ</span><span class="mord mtight"><span class="mord mtight">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8220357142857143em;"><span style="top:-2.8220357142857138em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">/</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.560425em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord"><span class="mord">Σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span><br />
 同样使用样本均值和样本协方差矩阵来估计那两个参数</p>
@@ -1123,10 +1129,6 @@ CTR: 用户搜索一个信息，我们来预测他会不会点击我们给他提
 
 <!-- Plugins -->
 
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
 
 
 

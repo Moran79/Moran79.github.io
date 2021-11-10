@@ -383,6 +383,12 @@
             <!-- SEO header -->
             <h1 style="display: none">算法心得</h1>
             
+              <p class="note note-info">
+                
+                  本文最后更新于：1 年前
+                
+              </p>
+            
             <div class="markdown-body" id="post-body">
               <h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
 <p>以下知识来自于：</p>
@@ -662,7 +668,7 @@
 </table>
 <p>Log* 是迭代对数函数</p>
 <h2 id="applicationspercolation"><a class="markdownIt-Anchor" href="#applicationspercolation"></a> Applications——Percolation</h2>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frk8va07k3j31860yc0ti.jpg" alt="" /></p>
 <p>很明显，概率越小越不容易渗透。</p>
 <p>Phase Transition: 在能不能渗透的某个临界值p，图像会变得十分陡峭。</p>
 <p>用蒙特卡洛模拟来找出临界值p：先给一个黑色方块。将其中的黑块一个一个的变成白块，直至渗透。</p>
@@ -683,13 +689,13 @@ Brute Force：三层for循环</p>
 <p>但是这种获得explcit的方式有点太难了，所以一般也不采用这种方法</p>
 <h2 id="order-of-growth"><a class="markdownIt-Anchor" href="#order-of-growth"></a> Order Of Growth</h2>
 <p>1, log(N), N, Nlog(N), N^2, N^3, 2^N…</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" srcset="/img/loading.gif" alt="" /></p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng0jikt8j30ua0oqjuz.jpg" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frng24qffuj311c0rsn26.jpg" alt="" /></p>
 <h3 id="四种记号"><a class="markdownIt-Anchor" href="#四种记号"></a> 四种记号</h3>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frngs9k2d7j30wo0lqgq6.jpg" alt="" /></p>
 <p><strong>Common mistake：</strong> Interpreting big-Oh as an approximate model.</p>
 <h2 id="内存使用"><a class="markdownIt-Anchor" href="#内存使用"></a> 内存使用</h2>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frnh4vnyhhj319a0zon2v.jpg" alt="" /></p>
 <h1 id="stack-queue"><a class="markdownIt-Anchor" href="#stack-queue"></a> Stack &amp; Queue</h1>
 <p>Stack: LIFO 后进先出<br />
 Queue: FIFO 先进先出<br />
@@ -727,14 +733,14 @@ Queue: FIFO 先进先出<br />
 <h1 id="map"><a class="markdownIt-Anchor" href="#map"></a> Map</h1>
 <p>在Python里面是用dict来实现</p>
 <p>The <u>MutableMapping</u> abstract base class, from Python’s <strong>collections</strong> module and discussed in the preceding pages, is a valuable tool when implementing a map.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpywugxnuj30y80kg41s.jpg" alt="" /></p>
 <h2 id="hash-table"><a class="markdownIt-Anchor" href="#hash-table"></a> Hash Table</h2>
 <p>Python的dict功能是用Hash Table实现的，因此查找才辣么快。</p>
 <p>The novel concept for a hash table is the use of a <u>hash function to map general keys to corresponding indices</u> in a table.</p>
 <p>The <strong>goal</strong> of a hash function, h, is to <u>map each key k to an integer in the range [0,N − 1]</u>, where N is the capacity of the bucket array for a hash table.</p>
 <p>If there are two or more keys with the same hash value, then two different items will be mapped to the same bucket in A. In this case, we say that a collision has occurred.</p>
 <p>We say that a hash function is “good” if it maps the keys in our map so as to sufﬁciently minimize collisions. For practical reasons, we also would like a hash function to be fast and easy to compute.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzbnkc5ej30xa0h8jtt.jpg" alt="" /></p>
 <p>The advantage of separating the hash function into two such components is that the hash code portion of that computation is independent of a speciﬁc hash table size. This allows the development of a general hash code for each object that can be used for a hash table of any size; only the compression function depends upon the table size. This is particularly convenient, <u>because the underlying bucket array for a hash table may be dynamically resized</u>, depending on the number of items currently stored in the map.</p>
 <h3 id="几种常见hash编码方法"><a class="markdownIt-Anchor" href="#几种常见hash编码方法"></a> 几种常见Hash编码方法</h3>
 <h4 id="treating-the-bit-representation-as-an-integer"><a class="markdownIt-Anchor" href="#treating-the-bit-representation-as-an-integer"></a> Treating the Bit Representation as an Integer</h4>
@@ -750,7 +756,7 @@ Queue: FIFO 先进先出<br />
 <p>We have done some experimental studies that suggest that <u>33, 37, 39, and 41</u> are particularly good choices for a when working with character strings that are English words.</p>
 <h4 id="cyclic-shift-hash-codes"><a class="markdownIt-Anchor" href="#cyclic-shift-hash-codes"></a> Cyclic-Shift Hash Codes</h4>
 <p>A variant of the polynomial hash code replaces multiplication by a with a cyclic shift of a partial sum by a certain number of bits.</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frpzy363p5j30xg09440q.jpg" alt="" /></p>
 <p>python里面的hash(x)可以计算一个x的hash值，However, only <u>immutable data types</u> are deemed hashable in Python. This restriction is meant to ensure that a particular object’s hash code remains constant during that object’s lifespan. Among Python’s built-in data types, <u>the immutable int, ﬂoat, str, tuple, and frozenset</u> classes produce robust hash codes via the hash function. Instances of <u>user-deﬁned classes</u> are treated as unhashable by default, with a TypeError raised by the hash function.</p>
 <p>An important rule to obey is that if x == y, then hash(x) == hash(y).</p>
 <h3 id="compression-functions"><a class="markdownIt-Anchor" href="#compression-functions"></a> Compression Functions</h3>
@@ -766,7 +772,7 @@ Queue: FIFO 先进先出<br />
 </ol>
 <p>计算一个p*q矩阵和一个q*r矩阵的成绩，需要计算p*q*r个标量乘法</p>
 <p>钢条切割中每一个分段都是相同的，所有长度为k的钢条都属于一个子问题。但是矩阵链乘法每一个长度为k的子链都不相同，不属于一个子问题。</p>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1frteyli23mj31260s07qh.jpg" alt="" /></p>
 <h1 id="numeric-optimization"><a class="markdownIt-Anchor" href="#numeric-optimization"></a> Numeric Optimization</h1>
 <h3 id="newtons-method"><a class="markdownIt-Anchor" href="#newtons-method"></a> Newton’s Method</h3>
 <p>算法</p>
@@ -817,7 +823,7 @@ Queue: FIFO 先进先出<br />
 </ul>
 <h1 id="排序算法"><a class="markdownIt-Anchor" href="#排序算法"></a> 排序算法</h1>
 <h2 id="插入排序"><a class="markdownIt-Anchor" href="#插入排序"></a> 插入排序</h2>
-<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" srcset="/img/loading.gif" alt="" /></p>
+<p><img src="http://ww1.sinaimg.cn/large/006CO3nzly1fs87tgwbsrj30ge0fiq7x.jpg" alt="" /></p>
 <h1 id="数学基础知识"><a class="markdownIt-Anchor" href="#数学基础知识"></a> 数学基础知识</h1>
 <p>对称性+传递性无法推出自反性的例子：平行关系</p>
 
@@ -972,10 +978,6 @@ Queue: FIFO 先进先出<br />
 
 <!-- Plugins -->
 
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
 
 
 

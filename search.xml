@@ -4796,6 +4796,12 @@ Queue: FIFO 先进先出<br />
 <p>记录一下学统计的时候遇到的一些问题</p>
 <a id="more"></a>
 <h1 id="日常"><a class="markdownIt-Anchor" href="#日常"></a> 日常</h1>
+<h2 id="20211031"><a class="markdownIt-Anchor" href="#20211031"></a> 2021/1031</h2>
+<p>Lasso 和 Stepwise 来选变量都会导致biased parameter。所以我们做inference的时候会出问题。但是我们可以只用它来做prediction，那还尚可。</p>
+<h2 id="20211027"><a class="markdownIt-Anchor" href="#20211027"></a> 2021/10/27</h2>
+<p>拉格朗日乘数法：约束条件的等高线与曲线相切 -&gt; 两者的梯度平行。梯度平行的定义即是：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∇</mi><mi>f</mi><mo>=</mo><mi>λ</mi><mi mathvariant="normal">∇</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">\nabla f=\lambda \nabla g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">∇</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">λ</span><span class="mord">∇</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span></span></p>
+<p>拉格朗日乘数法遇到不等式：</p>
+<p><img src="https://i.imgur.com/T38Yp0V.png" alt="" /></p>
 <h2 id="20211019"><a class="markdownIt-Anchor" href="#20211019"></a> 2021/10/19</h2>
 <p>在我们impute categorical的时候，我们可以先变成dummy matrix，再impute mean。这样会获得一个weighted版本的imputation。</p>
 <h2 id="20211014"><a class="markdownIt-Anchor" href="#20211014"></a> 2021/10/14</h2>
@@ -5130,6 +5136,7 @@ p.adjust(pp,method = <span class="hljs-string">&#x27;hochberg&#x27;</span>)
 <ul>
 <li>或许以后需要了解一下其他算法的缺点，defend for GUIDE</li>
 </ul>
+<p>如果左右孩子的class name list过长，可能会导致overlap。我们这时候可以用<strong>左右不同颜色</strong>来区分。当然我认为老罗的方法更好，太长的直接trancate为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">S_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</p>
 <h1 id="stat641"><a class="markdownIt-Anchor" href="#stat641"></a> STAT641</h1>
 <p>Never adjust for post-randomized variable. It might introduce a non-zero term.</p>
 <ul>
