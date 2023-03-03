@@ -1,47 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo心得体会</title>
-    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
-    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
-<a id="more"></a>
-<h1 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h1>
-<blockquote>
-<p>部署Hexo + GithubPages</p>
-</blockquote>
-<ul>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/">参考1</a></li>
-<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/">参考2</a></li>
-</ul>
-<blockquote>
-<p>如何只显示缩略内容？</p>
-</blockquote>
-<pre><code class="hljs md">在md文件中加入<span class="xml"><span class="hljs-comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</code></pre>
-<p><a href="https://blog.csdn.net/weixin_43971764/article/details/97644190">定义侧边栏新内容</a></p>
-<h1 id="bugs解决"><a class="markdownIt-Anchor" href="#bugs解决"></a> Bugs解决</h1>
-<p><strong>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</strong></p>
-<p>最后的解决方法是：</p>
-<pre><code class="hljs linux">$$ rm -rf .deploy
-$$ hexo generate
-$$ hexo deploy</code></pre>
-<p><strong>关于博文发布</strong></p>
-<pre><code class="hljs linux">$$ hexo clean
-$$ hexo deploy -g</code></pre>
-<p><strong>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</strong></p>
-<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
-<p><strong>搜索引擎无法搜索到我的博客</strong></p>
-<ul>
-<li>Google：<a href="https://liwengo.top/2019/10/11/google-search-console/">李子园的解决方法</a></li>
-<li>百度：<a href="https://zpjiang.me/2020/01/15/let-baidu-index-github-page/">zpjiang的解决办法</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Java心得</title>
     <url>/2020/07/02/Java%E5%BF%83%E5%BE%97/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
@@ -151,6 +110,164 @@ A void return type means the method returns no value.</p>
         <category>Study</category>
         <category>Coding</category>
         <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hexo心得体会</title>
+    <url>/2020/07/01/Hexo%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<p>Hexo是一个博客编写的框架，这个网站就采用了这个。网上有太多的资料了，这里只列出来我在学习的时候发现的有趣点，整理下来。</p>
+<a id="more"></a>
+<h1 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h1>
+<blockquote>
+<p>部署Hexo + GithubPages</p>
+</blockquote>
+<ul>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/">参考1</a></li>
+<li><a href="https://michael728.github.io/2019/05/19/hexo-blog-full-note/">参考2</a></li>
+</ul>
+<blockquote>
+<p>如何只显示缩略内容？</p>
+</blockquote>
+<pre><code class="hljs md">在md文件中加入<span class="xml"><span class="hljs-comment">&lt;!--more--&gt;</span></span> 即可实现手动分割。前面的内容变成了description</code></pre>
+<p><a href="https://blog.csdn.net/weixin_43971764/article/details/97644190">定义侧边栏新内容</a></p>
+<h1 id="bugs解决"><a class="markdownIt-Anchor" href="#bugs解决"></a> Bugs解决</h1>
+<p><strong>hexo deploy 之后github上面的文件更新了，但是网页没有更新。</strong></p>
+<p>最后的解决方法是：</p>
+<pre><code class="hljs linux">$$ rm -rf .deploy
+$$ hexo generate
+$$ hexo deploy</code></pre>
+<p><strong>关于博文发布</strong></p>
+<pre><code class="hljs linux">$$ hexo clean
+$$ hexo deploy -g</code></pre>
+<p><strong>博文发布之后，发现和本地预览的结果不一样，总转圈，加载不出来。</strong></p>
+<p>大佬说是CSS样式的问题，不过我等了一会他自己就好了。。。</p>
+<p><strong>搜索引擎无法搜索到我的博客</strong></p>
+<ul>
+<li>Google：<a href="https://liwengo.top/2019/10/11/google-search-console/">李子园的解决方法</a></li>
+<li>百度：<a href="https://zpjiang.me/2020/01/15/let-baidu-index-github-page/">zpjiang的解决办法</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Latex心得</title>
+    <url>/2020/07/02/Latex%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
+<a id="more"></a>
+<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h1>
+<ul>
+<li>\docunmentclass{book/report/letter/article} 确定文件类型</li>
+<li>\title{} 添加题目</li>
+<li>\author{}添加作者</li>
+<li>\maketitle 制作封面-如果不在begin{document}后面加这句话，其他话都白写了</li>
+<li>\tableofcontents 加入目录，包括页码</li>
+<li>层次结构：part-chapter-section-subsection 用法: \part{}</li>
+<li>无序列表：\begin{itemize}  换行\item ***  换行\end{itemize}</li>
+<li>自定义列表：将itemize变成enumerate。默认是数字，可以加其他宏包</li>
+<li>输入一些\alpha这种特殊字符要在句子前后各加一个$</li>
+<li>一般字符需要用\来转义：{, }, %, $, &amp;,#, ~, ^, _ 但是反斜杠需要用\textbackslash</li>
+</ul>
+<p>换行 \\</p>
+<ul>
+<li><a href="https://www.latex-tutorial.com/tutorials/figures/">添加图片</a></li>
+</ul>
+<p><a href="https://tex.stackexchange.com/a/349100">如何在Beamer里加gif动图</a></p>
+<p>##环境：</p>
+<p>\begin{环境名}[可选参数]{参数}。document可以被看成最大的环境。</p>
+<p>常用环境：</p>
+<ul>
+<li>居中：center</li>
+<li>左对齐/右对齐：flushleft/flushright</li>
+<li>verbatim：抄录环境内的字符，忽视tex命令。verbatim* 将空格以␣␣的形式标注出来。行内抄录\verb+内容+和\verb*+内容+</li>
+<li>定理类环境：<br />
+\newtheorem{Theorem}{ 定 理 }[section]<br />
+\newtheorem{Proposition}[Theorem]{命题}<br />
+\newtheorem{Lemma}[Theorem]{引理}<br />
+\newtheorem{Definition}[Theorem]{定义}<br />
+最后加上：<br />
+\begin{Theorem} \label{thm:math}<br />
+定理内容。<br />
+\end{Theorem}</li>
+</ul>
+<h2 id="间距"><a class="markdownIt-Anchor" href="#间距"></a> 间距：</h2>
+<ul>
+<li>.\\表示一行的结束 相当于换行符</li>
+<li>\hskip(vskip) 长度 或 \hspace{长度} 或 hspace*{长度}</li>
+<li>长度单位sp&lt;&lt;pt&lt;=bp&lt;mm&lt;cm&lt;in 还有em表示字母m的宽度，ex表示字母x的高度</li>
+<li>不可换行的水平间距：\enspace =0.5em   , =1/6em    \!=-1/6em  ~=空格</li>
+<li>可换行的水平间距：\quad=1em  \qquad=2em  \enskip=0.5em \空格=空格</li>
+</ul>
+<h2 id="段落"><a class="markdownIt-Anchor" href="#段落"></a> 段落：</h2>
+<ul>
+<li>\section{} \subsection … 可以在中括号前面加个星号，避免自动标号</li>
+</ul>
+<h2 id="数学"><a class="markdownIt-Anchor" href="#数学"></a> 数学：</h2>
+<ul>
+<li>行内公式用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.10556em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span>连接</li>
+<li>行间公式：\[…\] 连接 \mbox添加有空格的文字。\mathrm添加没空格的文字</li>
+<li>为数字a戴上帽子：hat{a}或者hat a 其他符号：\tilde波浪线，\bar一条横线，\vec向量</li>
+<li>三种矩阵：中括号bmatrix，圆括号pmatrix，竖线vmatrix。行间公式—\begin{bmatrix}—a_ {1,1}&amp;\dots&amp;a_ {1,n}\\</li>
+<li>带编号的表达式：\begin{equation}\label{eq:ex1}</li>
+<li>不带编号的多行表达式：\begin{eqnarray*}  都是用\\换行</li>
+<li>带编号多行表达式：\begin{eqnarray} 没有标号的行用\nonumber \\换行 最后一行\label{eq:a2}</li>
+<li>大算子号：迭代指标写在求和号上下的情况用行间公式括起来。迭代指标写在求和号右侧的用行间公式连接起来。如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>a</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sum_{i=1}^n a_i^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.113818em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>其他大算子：连乘\prod 积分\int 环路积分\oint 交集\bigcap 并集\bigcup</li>
+<li>圆括号和大括号大小：\Bigg( &gt;bigg &gt;Big &gt;big&gt;什么都不加就是一个(</li>
+<li>像分段函数之类的东西，要用\left\{\begin{array}{ll} 配合 \right</li>
+<li>不等号 \not=  或者 \ne</li>
+<li>元素不属于\not\in 集合不属于 \not\subset</li>
+<li>不小于等于 \not\le  不大于等于\not\ge</li>
+<li>^上标 _下标</li>
+<li>\stackrel{i.i.d}{\sim}  波浪线上添加iid</li>
+<li>偏导数用frac + \partial</li>
+<li>正比于 \propto</li>
+<li>hat如果不够大的话还有widehat reallywidehat….</li>
+<li>二项式系数：\binom 或者直接 C_3^2</li>
+</ul>
+<h2 id="字体与字号"><a class="markdownIt-Anchor" href="#字体与字号"></a> 字体与字号：</h2>
+<h3 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h3>
+<p>影响字形的参数有：fontencoding-fontfamily-fontseries-fontshape 用花括号括起来</p>
+<p>常用的有:</p>
+<ul>
+<li>缺省\rmfamily  打印机字体\ttfamily 无衬线字体\sffamily</li>
+<li>缺省\mdseries 粗体\bfseries</li>
+<li>缺省\upshape 意大利体\itshape 斜体\slshape 小号大写字体\scshape</li>
+</ul>
+<p>还可以通过{\fontspec{Times New Roman} 文本}来特定某一种字体</p>
+<p>还可以通过\textbf \textsf \textit{文本}…的方式</p>
+<p>\mathcal{花体字} 、mathbb{实数集R}</p>
+<h3 id="字号"><a class="markdownIt-Anchor" href="#字号"></a> 字号</h3>
+<p>格式：{\tiny 文本}</p>
+<p>从小到大：tiny-footnotesize-small-normalsize-large-Large-LARGE-huge=Huge</p>
+<ul>
+<li>还可以固定宽度高度{\fontsize{120}{160} \selectfont 文本}</li>
+<li>不过一般来说，TEX文件正文中不需要设置字体/字号</li>
+</ul>
+<h2 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格：</h2>
+<p>\begin{tabular}[pos]{table spec}<br />
+…<br />
+\end{tabular}</p>
+<ul>
+<li>table spec定义了表格的格式:| l | c | rcl | 竖线就是竖线，lrc分别是左/右对齐和居中，还可以用p{width}来创建一个段落单元格</li>
+<li>tabular环境中，用&amp;分隔列，\\开始新的一行</li>
+<li>\hline 添加一个水平线 \cline{i-j}添加一个第i列到第j列的水平线</li>
+</ul>
+<h1 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h1>
+<ul>
+<li>alt+delete 迅速删除一行t</li>
+</ul>
+<h1 id="犯过的错误"><a class="markdownIt-Anchor" href="#犯过的错误"></a> 犯过的错误</h1>
+<p>使用\\来进行换行操作的时候报错，解决方法：<a href="https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end">https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end</a></p>
+<pre><code class="hljs latex">~<span class="hljs-tag">\<span class="hljs-name">\</span></span> 使用它来代替 <span class="hljs-tag">\<span class="hljs-name">\</span></span></code></pre>]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Coding</category>
+        <category>Latex</category>
       </categories>
   </entry>
   <entry>
@@ -288,123 +405,6 @@ wc -l &lt; <filename> 返回文件有多少行</p>
         <category>Study</category>
         <category>Coding</category>
         <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Latex心得</title>
-    <url>/2020/07/02/Latex%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
-<p>老罗曾说Latex Book 和 S Book 是他看过写的最好的两本书。那我得跟上啊！</p>
-<a id="more"></a>
-<h1 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h1>
-<ul>
-<li>\docunmentclass{book/report/letter/article} 确定文件类型</li>
-<li>\title{} 添加题目</li>
-<li>\author{}添加作者</li>
-<li>\maketitle 制作封面-如果不在begin{document}后面加这句话，其他话都白写了</li>
-<li>\tableofcontents 加入目录，包括页码</li>
-<li>层次结构：part-chapter-section-subsection 用法: \part{}</li>
-<li>无序列表：\begin{itemize}  换行\item ***  换行\end{itemize}</li>
-<li>自定义列表：将itemize变成enumerate。默认是数字，可以加其他宏包</li>
-<li>输入一些\alpha这种特殊字符要在句子前后各加一个$</li>
-<li>一般字符需要用\来转义：{, }, %, $, &amp;,#, ~, ^, _ 但是反斜杠需要用\textbackslash</li>
-</ul>
-<p>换行 \\</p>
-<ul>
-<li><a href="https://www.latex-tutorial.com/tutorials/figures/">添加图片</a></li>
-</ul>
-<p><a href="https://tex.stackexchange.com/a/349100">如何在Beamer里加gif动图</a></p>
-<p>##环境：</p>
-<p>\begin{环境名}[可选参数]{参数}。document可以被看成最大的环境。</p>
-<p>常用环境：</p>
-<ul>
-<li>居中：center</li>
-<li>左对齐/右对齐：flushleft/flushright</li>
-<li>verbatim：抄录环境内的字符，忽视tex命令。verbatim* 将空格以␣␣的形式标注出来。行内抄录\verb+内容+和\verb*+内容+</li>
-<li>定理类环境：<br />
-\newtheorem{Theorem}{ 定 理 }[section]<br />
-\newtheorem{Proposition}[Theorem]{命题}<br />
-\newtheorem{Lemma}[Theorem]{引理}<br />
-\newtheorem{Definition}[Theorem]{定义}<br />
-最后加上：<br />
-\begin{Theorem} \label{thm:math}<br />
-定理内容。<br />
-\end{Theorem}</li>
-</ul>
-<h2 id="间距"><a class="markdownIt-Anchor" href="#间距"></a> 间距：</h2>
-<ul>
-<li>.\\表示一行的结束 相当于换行符</li>
-<li>\hskip(vskip) 长度 或 \hspace{长度} 或 hspace*{长度}</li>
-<li>长度单位sp&lt;&lt;pt&lt;=bp&lt;mm&lt;cm&lt;in 还有em表示字母m的宽度，ex表示字母x的高度</li>
-<li>不可换行的水平间距：\enspace =0.5em   , =1/6em    \!=-1/6em  ~=空格</li>
-<li>可换行的水平间距：\quad=1em  \qquad=2em  \enskip=0.5em \空格=空格</li>
-</ul>
-<h2 id="段落"><a class="markdownIt-Anchor" href="#段落"></a> 段落：</h2>
-<ul>
-<li>\section{} \subsection … 可以在中括号前面加个星号，避免自动标号</li>
-</ul>
-<h2 id="数学"><a class="markdownIt-Anchor" href="#数学"></a> 数学：</h2>
-<ul>
-<li>行内公式用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.10556em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span>连接</li>
-<li>行间公式：\[…\] 连接 \mbox添加有空格的文字。\mathrm添加没空格的文字</li>
-<li>为数字a戴上帽子：hat{a}或者hat a 其他符号：\tilde波浪线，\bar一条横线，\vec向量</li>
-<li>三种矩阵：中括号bmatrix，圆括号pmatrix，竖线vmatrix。行间公式—\begin{bmatrix}—a_ {1,1}&amp;\dots&amp;a_ {1,n}\\</li>
-<li>带编号的表达式：\begin{equation}\label{eq:ex1}</li>
-<li>不带编号的多行表达式：\begin{eqnarray*}  都是用\\换行</li>
-<li>带编号多行表达式：\begin{eqnarray} 没有标号的行用\nonumber \\换行 最后一行\label{eq:a2}</li>
-<li>大算子号：迭代指标写在求和号上下的情况用行间公式括起来。迭代指标写在求和号右侧的用行间公式连接起来。如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>a</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sum_{i=1}^n a_i^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.113818em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span></span></span></span></li>
-<li>其他大算子：连乘\prod 积分\int 环路积分\oint 交集\bigcap 并集\bigcup</li>
-<li>圆括号和大括号大小：\Bigg( &gt;bigg &gt;Big &gt;big&gt;什么都不加就是一个(</li>
-<li>像分段函数之类的东西，要用\left\{\begin{array}{ll} 配合 \right</li>
-<li>不等号 \not=  或者 \ne</li>
-<li>元素不属于\not\in 集合不属于 \not\subset</li>
-<li>不小于等于 \not\le  不大于等于\not\ge</li>
-<li>^上标 _下标</li>
-<li>\stackrel{i.i.d}{\sim}  波浪线上添加iid</li>
-<li>偏导数用frac + \partial</li>
-<li>正比于 \propto</li>
-<li>hat如果不够大的话还有widehat reallywidehat….</li>
-<li>二项式系数：\binom 或者直接 C_3^2</li>
-</ul>
-<h2 id="字体与字号"><a class="markdownIt-Anchor" href="#字体与字号"></a> 字体与字号：</h2>
-<h3 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h3>
-<p>影响字形的参数有：fontencoding-fontfamily-fontseries-fontshape 用花括号括起来</p>
-<p>常用的有:</p>
-<ul>
-<li>缺省\rmfamily  打印机字体\ttfamily 无衬线字体\sffamily</li>
-<li>缺省\mdseries 粗体\bfseries</li>
-<li>缺省\upshape 意大利体\itshape 斜体\slshape 小号大写字体\scshape</li>
-</ul>
-<p>还可以通过{\fontspec{Times New Roman} 文本}来特定某一种字体</p>
-<p>还可以通过\textbf \textsf \textit{文本}…的方式</p>
-<p>\mathcal{花体字} 、mathbb{实数集R}</p>
-<h3 id="字号"><a class="markdownIt-Anchor" href="#字号"></a> 字号</h3>
-<p>格式：{\tiny 文本}</p>
-<p>从小到大：tiny-footnotesize-small-normalsize-large-Large-LARGE-huge=Huge</p>
-<ul>
-<li>还可以固定宽度高度{\fontsize{120}{160} \selectfont 文本}</li>
-<li>不过一般来说，TEX文件正文中不需要设置字体/字号</li>
-</ul>
-<h2 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格：</h2>
-<p>\begin{tabular}[pos]{table spec}<br />
-…<br />
-\end{tabular}</p>
-<ul>
-<li>table spec定义了表格的格式:| l | c | rcl | 竖线就是竖线，lrc分别是左/右对齐和居中，还可以用p{width}来创建一个段落单元格</li>
-<li>tabular环境中，用&amp;分隔列，\\开始新的一行</li>
-<li>\hline 添加一个水平线 \cline{i-j}添加一个第i列到第j列的水平线</li>
-</ul>
-<h1 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h1>
-<ul>
-<li>alt+delete 迅速删除一行t</li>
-</ul>
-<h1 id="犯过的错误"><a class="markdownIt-Anchor" href="#犯过的错误"></a> 犯过的错误</h1>
-<p>使用\\来进行换行操作的时候报错，解决方法：<a href="https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end">https://tex.stackexchange.com/questions/4690/error-message-theres-no-line-here-to-end</a></p>
-<pre><code class="hljs latex">~<span class="hljs-tag">\<span class="hljs-name">\</span></span> 使用它来代替 <span class="hljs-tag">\<span class="hljs-name">\</span></span></code></pre>]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Coding</category>
-        <category>Latex</category>
       </categories>
   </entry>
   <entry>
@@ -604,6 +604,43 @@ c=sum(A(😃) %矩阵求和</li>
       </categories>
   </entry>
   <entry>
+    <title>See you!</title>
+    <url>/2021/11/15/goodbye/</url>
+    <content><![CDATA[<p>写个人博客是个有趣的事情。但终极的体验，只能在汹涌的生活去寻找。</p>
+<a id="more"></a>
+<h1 id="最近"><a class="markdownIt-Anchor" href="#最近"></a> 最近…</h1>
+<p>今年的10/05日，在老姚的推荐下，重新用起了一个笔记应用：<a href="https://www.notion.so/">Notion</a>。第一次用Notion的时候，因为他的在线加载过于缓慢，并且不支持本地离线预览的特性，没用几天就扔掉了。这次捡起来，给了它更多的机会，发现确实是个功能强大的笔记软件。慢慢的，我抛弃掉用了几年的<a href="https://bear.app/">Bear</a>，很多本地的<a href="https://typora.io/">typora</a>笔记也被我转移到了Notion上面。我现在会说Notion既能满足日常生活需求，也可以作为一个扎实的学术笔记本。</p>
+<p>渐渐的，很多原本会更新到博客上的内容，也被我转移到了更为私人化的Notion上面。在好久没更新博客之后，我反思了这个博客存在的意义，便觉得是时候说一个再见了。</p>
+<h1 id="关于它的诞生"><a class="markdownIt-Anchor" href="#关于它的诞生"></a> 关于它的诞生</h1>
+<p><a href="https://iamwangsiyu.com/archives/page/5/#board">如果你点开这一页</a>，你会发现第一篇博文写于2020/06/29。没错，这也是我建立博客的初衷。</p>
+<p><img src="https://i.imgur.com/BrrtXlM.png" alt="" /></p>
+<p>当时在做这本《聆听音乐》的书后习题的时候，在网上找了很多答案。但是苦于大家都是非科班出身的热心志愿者，我并没能找到一个完美准确的答案。我便想借助自己的力量，再结合多个网友的智慧，凑出一个正确答案供大家分享。于是便开始搜寻如何使用博客，以及如何让自己的博客能够在Google上面搜索的到。</p>
+<p>或许你已发现，在博客的右上角写着<code>大家一起来</code>。哈哈哈，不得不承认，这确实是一个很怪的博客名字。但我想每个人或多或少都会有一些尘封已久的记忆。比如现在提起4399，摩尔庄园，QQ宠物，也会想起那时天真单纯的自己。现在我们用心经营自己的朋友圈，自己的博客，自己的公众号。十多年以前的我们，其实也有好好打理自己的一方小世界。</p>
+<p><img src="https://i.imgur.com/6qXplVq.jpg" alt="" /></p>
+<h1 id="关于它的发展"><a class="markdownIt-Anchor" href="#关于它的发展"></a> 关于它的发展</h1>
+<p>不过博客如果只有一篇文章的话，孤零零的也不是很好看，于是我便把我多年以来零零散散的一些学习笔记都po了上来。于是在7月初的时候，大批的<code>心得</code>被传到了这里来。</p>
+<p><img src="https://i.imgur.com/GiDdrhv.png" alt="" /></p>
+<p>那时正在和教会阿姨和其他弟兄做门徒训练，于是郭振游教授的笔记是我更新最频繁的一个文章。后来Google告诉我，这篇文章是搜索量/点击量最大的一篇博文-.- 大数据诚不欺我，基督徒遍布四方。</p>
+<hr />
+<p>博客开始的主题是默认的版本，很丑陋，在后来的很长时间，我用的都是Hexo的<a href="https://github.com/theme-next/hexo-theme-next">NexT主题</a>。感谢<a href="https://archive.org/web/">Wayback Machine</a> 让我得以找到去年九月份的网页截图。</p>
+<p><img src="https://i.imgur.com/fBMrsOv.png" alt="" /></p>
+<hr />
+<p>后来，我发现了很好看的<a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid主题</a>，一直沿用至今。时间来到了9月份，也迎来了博客的<a href="https://iamwangsiyu.com/2020/09/07/iowapark/">第一篇旅行日记</a>。</p>
+<p><img src="https://i.imgur.com/fvICAPS.jpg" alt="" /></p>
+<p>这时候有朋友开始看游记，使得博客渐渐有了一点生气，有了一定的互动。不过要说投入最多心血的，还是那一篇2021年初连载的长文。那时每天的心情起伏，所思所想都忠实地记录在了里面。虽然我们看到的文字，背后都是一行行没有感情的计算机指令。但正因投入的时间和心血，使得我对博客有了一丝归属感，休戚与共。</p>
+<p>老姚作为铁杆粉丝，吹牛说他能记住里面的任何细节。我不信，因为很多细节现在我都记不住了。</p>
+<hr />
+<p>回国后，po了三篇旅行日记。开始感受到了Markdown的局限。在本地有很多图片的时候，Typora的加载会使得电脑卡顿严重，打不出字。同时图片过多的话，Hexo的Lazy图片加载会使得整个阅读体验变得很差。这些都不是最后放弃博客的直接原因，但跟感情很像的是，失望是会慢慢积累的。</p>
+<h1 id="最后"><a class="markdownIt-Anchor" href="#最后"></a> 最后…</h1>
+<p>未来或许还会时不时来更新一下，毕竟域名已经续到了9年后。我可能也会将一些可能会对大家有用的笔记以Notion Link的形式分享在这里。也欢迎大家通过主页上方的<a href="https://iamwangsiyu.com/links/">友链</a>来了解其他有趣的朋友们。</p>
+<p>谢谢你曾经来过。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>结束语</category>
+      </categories>
+  </entry>
+  <entry>
     <title>八次危机</title>
     <url>/2020/09/29/eight-crisis/</url>
     <content><![CDATA[<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
@@ -677,6 +714,94 @@ c=sum(A(😃) %矩阵求和</li>
       <categories>
         <category>Books</category>
         <category>八次危机</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Henri Nouwen</title>
+    <url>/2022/08/01/henriNouwen/</url>
+    <content><![CDATA[<p><em>Last Updated on 08/01/2022</em></p>
+<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
+<p>2022/08/01 重新翻出待读书单，从新作家Henri Nouwen开始：In the Name of Jesus</p>
+<a id="more"></a>
+<h1 id="in-the-name-of-jesus"><a class="markdownIt-Anchor" href="#in-the-name-of-jesus"></a> In the Name of Jesus</h1>
+<h2 id="prologue"><a class="markdownIt-Anchor" href="#prologue"></a> Prologue</h2>
+<blockquote>
+<p>“Jesus did not send his disciples out alone to preach the word. He sent them <strong>two by two</strong>.”</p>
+</blockquote>
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
+<blockquote>
+<p>“In the midst of this I kept praying, “Lord, show me where you want me to go and I will follow you, but please be clear and unambiguous about it!” Well, God was. In the person of Jean Vanier, the founder of the L’Arche communities for mentally handicapped people, God said, “Go and live among the poor in spirit, and they will heal you.” <strong>The call was so clear and distinct that I had no choice but to follow</strong>.”</p>
+</blockquote>
+<h2 id="from-relevance-to-prayer"><a class="markdownIt-Anchor" href="#from-relevance-to-prayer"></a> From Relevance to Prayer</h2>
+<blockquote>
+<p>“I am telling you all this because I am deeply convinced that the Christian leader of the future is called <strong>to be completely irrelevant and to stand in this world with nothing to offer but his or her own vulnerable self</strong>. That is the way Jesus came to reveal God’s love.”</p>
+</blockquote>
+<ul>
+<li>作者发现在智障群体中，他之前的名校背景丝毫不会带来平时的赞扬或者肯定。他写的书也没人能读，他之前所学习到的技能，掌握的技巧以及人际关系都不能起到帮助作用，唯有将脆弱的自己完全交出去。</li>
+</ul>
+<blockquote>
+<p>“The secular world around us is saying in a loud voice, “We can take care of ourselves. We do not need God, the church, or a priest. <strong>We are in control. And if we are not, then we have to work harder to get in control</strong>.”</p>
+</blockquote>
+<blockquote>
+<p>“God, the church, and the minister have been used for centuries to fill the gaps of incompetence, but today the gaps are being filled in other ways, and <strong>we no longer need spiritual answers to practical questions</strong>.”</p>
+</blockquote>
+<ul>
+<li>有时候现实的问题是通过灵魂的答案来得到解决的</li>
+</ul>
+<blockquote>
+<p>“The question is not: How many people take you seriously? How much are you going to accomplish? Can you show some results? But: <strong>Are you in love with Jesus</strong>?”</p>
+</blockquote>
+<ul>
+<li>John 21:15 在让彼得传福音之前，三次问了：“你是否爱我”。问的不是你讲话是否有人听，是否有人拿你当回事，你是否已经有了一个筹备方案。问的只是一个简单的问题，<strong>你是否爱我</strong>？这句话我觉得揭示了很重要的信息，那就是福音事工的核心点，应该在于传道人<strong>是否爱耶稣</strong>，并能将这份爱带给别人。</li>
+</ul>
+<blockquote>
+<p>“This unconditional and unlimited love is what the evangelist John calls God’s first love. “Let us love,” he says, “because God loved us first” (1 John 4:19). The love that often leaves us doubtful, frustrated, angry, and resentful is the second love, that is to say, the affirmation, affection, sympathy, encouragement, and we receive from our parents, teachers, spouses, and friends. We all know how limited, broken, and very fragile that love is.”</p>
+</blockquote>
+<ul>
+<li>人的爱是不完美的，只有上帝的爱才是完美。我不敢妄想能够做到像上帝爱我一样的去爱别人，但我会尽力的。</li>
+</ul>
+<blockquote>
+<p>“Dealing with burning issues without being rooted in a deep personal relationship with God easily leads to divisiveness because, before we know it, our sense of self is caught up in our opinion about a given subject.”</p>
+</blockquote>
+<ul>
+<li>每当要回答棘手问题的时候，要想想一直以来God是怎样教导我的。</li>
+</ul>
+<h2 id="from-popularity-to-ministry"><a class="markdownIt-Anchor" href="#from-popularity-to-ministry"></a> From Popularity to Ministry</h2>
+<blockquote>
+<p>“When you look at today’s church, it is easy to see the prevalence of individualism among ministers and priests. Not too many of us have a vast repertoire of skills to be proud of, but most of us still feel that, if we have anything at all to show, it is something we have to do solo.”</p>
+</blockquote>
+<ul>
+<li>当我抛出：“我拒绝带领诗歌，因为我无法带给大家同样的感动”时，徐老师说，是神感动人，而不是人感动人。我们永远无法靠自己来传福音，我们也没办法通过自己励志行善来改变别人对基督教的看法。任何事情都不是solo，而是我们和神一起努力。永远不能忽视在一件事情中，那些默默参与的一方。其实更多的时候，神不需要我们也可以做那件事。神是期待我们能够在同工的时候，更多的认识神，给我们一个无与伦比的学习机会。</li>
+</ul>
+<blockquote>
+<p>“First of all, Jesus sends the twelve out in pairs (Mark 6:7). We keep forgetting that we are being sent out two-by-two. We cannot bring good news on our own. We are called to proclaim the Gospel together, in community. There is a divine wisdom here. “If two of you on earth agree to ask anything at all, it will be granted to you by my Father in heaven.”</p>
+</blockquote>
+<ul>
+<li>对抗个人主义的简单举措：有第二个人就够了</li>
+</ul>
+<blockquote>
+<p>“We are not the healers, we are not the reconcilers, we are not the givers of life. We are sinful, broken, vulnerable people who need as much care as anyone we care for. The mystery of ministry is that we have been chosen to <strong>make our own limited and very conditional love the gateway</strong> for the unlimited and unconditional love of God.”</p>
+</blockquote>
+<ul>
+<li>传福音是一个双方的事情，不像医生这样明确的一人听一人讲。如果你不敞开自己生命，你又怎能期待其他人将他们的生命敞开？我们在向其他人传福音的时候，其他人也在向我们传福音。事工的本质是用我们破碎的爱为主耶稣完美的爱铺路。</li>
+</ul>
+<blockquote>
+<p>“Therefore, true ministry must be mutual. When the members of a community of faith cannot truly know and love their shepherd, shepherding quickly becomes a subtle way of <strong>exercising power over others</strong> and begins to show authoritarian and dictatorial traits.”</p>
+</blockquote>
+<blockquote>
+<p>“Even the so-called “helping professions” have been so thoroughly secularized that mutuality can only be seen as a weakness and a dangerous form of role confusion. The leadership about which Jesus speaks is of a radically different kind from the leadership offered by the world. It is a servant leadership—to use Robert Greenleaf’s term*—in which the leader is a <strong>vulnerable servant</strong> who needs the people as much as they need their leader.”</p>
+</blockquote>
+<ul>
+<li>一个leader如果可以跟群羊互换位置，会被视为软弱。但真正的leader，是双向需要的关系。主耶稣也需要我们。祂在什么地方需要我呢…</li>
+</ul>
+<blockquote>
+<p>“How can priests or ministers feel really loved and cared for <strong>when they have to hide their own sins and failings from the people to whom they minister</strong> and run off to a distant stranger to receive a little comfort and consolation?”</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>道</category>
+        <category>References</category>
+        <category>Henri Nouwen</category>
       </categories>
   </entry>
   <entry>
@@ -991,43 +1116,6 @@ c=sum(A(😃) %矩阵求和</li>
       <categories>
         <category>生活</category>
         <category>滑板</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>See you!</title>
-    <url>/2021/11/15/goodbye/</url>
-    <content><![CDATA[<p>写个人博客是个有趣的事情。但终极的体验，只能在汹涌的生活去寻找。</p>
-<a id="more"></a>
-<h1 id="最近"><a class="markdownIt-Anchor" href="#最近"></a> 最近…</h1>
-<p>今年的10/05日，在老姚的推荐下，重新用起了一个笔记应用：<a href="https://www.notion.so/">Notion</a>。第一次用Notion的时候，因为他的在线加载过于缓慢，并且不支持本地离线预览的特性，没用几天就扔掉了。这次捡起来，给了它更多的机会，发现确实是个功能强大的笔记软件。慢慢的，我抛弃掉用了几年的<a href="https://bear.app/">Bear</a>，很多本地的<a href="https://typora.io/">typora</a>笔记也被我转移到了Notion上面。我现在会说Notion既能满足日常生活需求，也可以作为一个扎实的学术笔记本。</p>
-<p>渐渐的，很多原本会更新到博客上的内容，也被我转移到了更为私人化的Notion上面。在好久没更新博客之后，我反思了这个博客存在的意义，便觉得是时候说一个再见了。</p>
-<h1 id="关于它的诞生"><a class="markdownIt-Anchor" href="#关于它的诞生"></a> 关于它的诞生</h1>
-<p><a href="https://iamwangsiyu.com/archives/page/5/#board">如果你点开这一页</a>，你会发现第一篇博文写于2020/06/29。没错，这也是我建立博客的初衷。</p>
-<p><img src="https://i.imgur.com/BrrtXlM.png" alt="" /></p>
-<p>当时在做这本《聆听音乐》的书后习题的时候，在网上找了很多答案。但是苦于大家都是非科班出身的热心志愿者，我并没能找到一个完美准确的答案。我便想借助自己的力量，再结合多个网友的智慧，凑出一个正确答案供大家分享。于是便开始搜寻如何使用博客，以及如何让自己的博客能够在Google上面搜索的到。</p>
-<p>或许你已发现，在博客的右上角写着<code>大家一起来</code>。哈哈哈，不得不承认，这确实是一个很怪的博客名字。但我想每个人或多或少都会有一些尘封已久的记忆。比如现在提起4399，摩尔庄园，QQ宠物，也会想起那时天真单纯的自己。现在我们用心经营自己的朋友圈，自己的博客，自己的公众号。十多年以前的我们，其实也有好好打理自己的一方小世界。</p>
-<p><img src="https://i.imgur.com/6qXplVq.jpg" alt="" /></p>
-<h1 id="关于它的发展"><a class="markdownIt-Anchor" href="#关于它的发展"></a> 关于它的发展</h1>
-<p>不过博客如果只有一篇文章的话，孤零零的也不是很好看，于是我便把我多年以来零零散散的一些学习笔记都po了上来。于是在7月初的时候，大批的<code>心得</code>被传到了这里来。</p>
-<p><img src="https://i.imgur.com/GiDdrhv.png" alt="" /></p>
-<p>那时正在和教会阿姨和其他弟兄做门徒训练，于是郭振游教授的笔记是我更新最频繁的一个文章。后来Google告诉我，这篇文章是搜索量/点击量最大的一篇博文-.- 大数据诚不欺我，基督徒遍布四方。</p>
-<hr />
-<p>博客开始的主题是默认的版本，很丑陋，在后来的很长时间，我用的都是Hexo的<a href="https://github.com/theme-next/hexo-theme-next">NexT主题</a>。感谢<a href="https://archive.org/web/">Wayback Machine</a> 让我得以找到去年九月份的网页截图。</p>
-<p><img src="https://i.imgur.com/fBMrsOv.png" alt="" /></p>
-<hr />
-<p>后来，我发现了很好看的<a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid主题</a>，一直沿用至今。时间来到了9月份，也迎来了博客的<a href="https://iamwangsiyu.com/2020/09/07/iowapark/">第一篇旅行日记</a>。</p>
-<p><img src="https://i.imgur.com/fvICAPS.jpg" alt="" /></p>
-<p>这时候有朋友开始看游记，使得博客渐渐有了一点生气，有了一定的互动。不过要说投入最多心血的，还是那一篇2021年初连载的长文。那时每天的心情起伏，所思所想都忠实地记录在了里面。虽然我们看到的文字，背后都是一行行没有感情的计算机指令。但正因投入的时间和心血，使得我对博客有了一丝归属感，休戚与共。</p>
-<p>老姚作为铁杆粉丝，吹牛说他能记住里面的任何细节。我不信，因为很多细节现在我都记不住了。</p>
-<hr />
-<p>回国后，po了三篇旅行日记。开始感受到了Markdown的局限。在本地有很多图片的时候，Typora的加载会使得电脑卡顿严重，打不出字。同时图片过多的话，Hexo的Lazy图片加载会使得整个阅读体验变得很差。这些都不是最后放弃博客的直接原因，但跟感情很像的是，失望是会慢慢积累的。</p>
-<h1 id="最后"><a class="markdownIt-Anchor" href="#最后"></a> 最后…</h1>
-<p>未来或许还会时不时来更新一下，毕竟域名已经续到了9年后。我可能也会将一些可能会对大家有用的笔记以Notion Link的形式分享在这里。也欢迎大家通过主页上方的<a href="https://iamwangsiyu.com/links/">友链</a>来了解其他有趣的朋友们。</p>
-<p>谢谢你曾经来过。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>结束语</category>
       </categories>
   </entry>
   <entry>
@@ -10261,94 +10349,6 @@ Ps：【不老神鸡】（一家店名）重磅安利！！这家店用什么特
         <category>生活</category>
         <category>旅行</category>
         <category>合肥桂林江西</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Henri Nouwen</title>
-    <url>/2022/08/01/henriNouwen/</url>
-    <content><![CDATA[<p><em>Last Updated on 08/01/2022</em></p>
-<h1 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h1>
-<p>2022/08/01 重新翻出待读书单，从新作家Henri Nouwen开始：In the Name of Jesus</p>
-<a id="more"></a>
-<h1 id="in-the-name-of-jesus"><a class="markdownIt-Anchor" href="#in-the-name-of-jesus"></a> In the Name of Jesus</h1>
-<h2 id="prologue"><a class="markdownIt-Anchor" href="#prologue"></a> Prologue</h2>
-<blockquote>
-<p>“Jesus did not send his disciples out alone to preach the word. He sent them <strong>two by two</strong>.”</p>
-</blockquote>
-<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
-<blockquote>
-<p>“In the midst of this I kept praying, “Lord, show me where you want me to go and I will follow you, but please be clear and unambiguous about it!” Well, God was. In the person of Jean Vanier, the founder of the L’Arche communities for mentally handicapped people, God said, “Go and live among the poor in spirit, and they will heal you.” <strong>The call was so clear and distinct that I had no choice but to follow</strong>.”</p>
-</blockquote>
-<h2 id="from-relevance-to-prayer"><a class="markdownIt-Anchor" href="#from-relevance-to-prayer"></a> From Relevance to Prayer</h2>
-<blockquote>
-<p>“I am telling you all this because I am deeply convinced that the Christian leader of the future is called <strong>to be completely irrelevant and to stand in this world with nothing to offer but his or her own vulnerable self</strong>. That is the way Jesus came to reveal God’s love.”</p>
-</blockquote>
-<ul>
-<li>作者发现在智障群体中，他之前的名校背景丝毫不会带来平时的赞扬或者肯定。他写的书也没人能读，他之前所学习到的技能，掌握的技巧以及人际关系都不能起到帮助作用，唯有将脆弱的自己完全交出去。</li>
-</ul>
-<blockquote>
-<p>“The secular world around us is saying in a loud voice, “We can take care of ourselves. We do not need God, the church, or a priest. <strong>We are in control. And if we are not, then we have to work harder to get in control</strong>.”</p>
-</blockquote>
-<blockquote>
-<p>“God, the church, and the minister have been used for centuries to fill the gaps of incompetence, but today the gaps are being filled in other ways, and <strong>we no longer need spiritual answers to practical questions</strong>.”</p>
-</blockquote>
-<ul>
-<li>有时候现实的问题是通过灵魂的答案来得到解决的</li>
-</ul>
-<blockquote>
-<p>“The question is not: How many people take you seriously? How much are you going to accomplish? Can you show some results? But: <strong>Are you in love with Jesus</strong>?”</p>
-</blockquote>
-<ul>
-<li>John 21:15 在让彼得传福音之前，三次问了：“你是否爱我”。问的不是你讲话是否有人听，是否有人拿你当回事，你是否已经有了一个筹备方案。问的只是一个简单的问题，<strong>你是否爱我</strong>？这句话我觉得揭示了很重要的信息，那就是福音事工的核心点，应该在于传道人<strong>是否爱耶稣</strong>，并能将这份爱带给别人。</li>
-</ul>
-<blockquote>
-<p>“This unconditional and unlimited love is what the evangelist John calls God’s first love. “Let us love,” he says, “because God loved us first” (1 John 4:19). The love that often leaves us doubtful, frustrated, angry, and resentful is the second love, that is to say, the affirmation, affection, sympathy, encouragement, and we receive from our parents, teachers, spouses, and friends. We all know how limited, broken, and very fragile that love is.”</p>
-</blockquote>
-<ul>
-<li>人的爱是不完美的，只有上帝的爱才是完美。我不敢妄想能够做到像上帝爱我一样的去爱别人，但我会尽力的。</li>
-</ul>
-<blockquote>
-<p>“Dealing with burning issues without being rooted in a deep personal relationship with God easily leads to divisiveness because, before we know it, our sense of self is caught up in our opinion about a given subject.”</p>
-</blockquote>
-<ul>
-<li>每当要回答棘手问题的时候，要想想一直以来God是怎样教导我的。</li>
-</ul>
-<h2 id="from-popularity-to-ministry"><a class="markdownIt-Anchor" href="#from-popularity-to-ministry"></a> From Popularity to Ministry</h2>
-<blockquote>
-<p>“When you look at today’s church, it is easy to see the prevalence of individualism among ministers and priests. Not too many of us have a vast repertoire of skills to be proud of, but most of us still feel that, if we have anything at all to show, it is something we have to do solo.”</p>
-</blockquote>
-<ul>
-<li>当我抛出：“我拒绝带领诗歌，因为我无法带给大家同样的感动”时，徐老师说，是神感动人，而不是人感动人。我们永远无法靠自己来传福音，我们也没办法通过自己励志行善来改变别人对基督教的看法。任何事情都不是solo，而是我们和神一起努力。永远不能忽视在一件事情中，那些默默参与的一方。其实更多的时候，神不需要我们也可以做那件事。神是期待我们能够在同工的时候，更多的认识神，给我们一个无与伦比的学习机会。</li>
-</ul>
-<blockquote>
-<p>“First of all, Jesus sends the twelve out in pairs (Mark 6:7). We keep forgetting that we are being sent out two-by-two. We cannot bring good news on our own. We are called to proclaim the Gospel together, in community. There is a divine wisdom here. “If two of you on earth agree to ask anything at all, it will be granted to you by my Father in heaven.”</p>
-</blockquote>
-<ul>
-<li>对抗个人主义的简单举措：有第二个人就够了</li>
-</ul>
-<blockquote>
-<p>“We are not the healers, we are not the reconcilers, we are not the givers of life. We are sinful, broken, vulnerable people who need as much care as anyone we care for. The mystery of ministry is that we have been chosen to <strong>make our own limited and very conditional love the gateway</strong> for the unlimited and unconditional love of God.”</p>
-</blockquote>
-<ul>
-<li>传福音是一个双方的事情，不像医生这样明确的一人听一人讲。如果你不敞开自己生命，你又怎能期待其他人将他们的生命敞开？我们在向其他人传福音的时候，其他人也在向我们传福音。事工的本质是用我们破碎的爱为主耶稣完美的爱铺路。</li>
-</ul>
-<blockquote>
-<p>“Therefore, true ministry must be mutual. When the members of a community of faith cannot truly know and love their shepherd, shepherding quickly becomes a subtle way of <strong>exercising power over others</strong> and begins to show authoritarian and dictatorial traits.”</p>
-</blockquote>
-<blockquote>
-<p>“Even the so-called “helping professions” have been so thoroughly secularized that mutuality can only be seen as a weakness and a dangerous form of role confusion. The leadership about which Jesus speaks is of a radically different kind from the leadership offered by the world. It is a servant leadership—to use Robert Greenleaf’s term*—in which the leader is a <strong>vulnerable servant</strong> who needs the people as much as they need their leader.”</p>
-</blockquote>
-<ul>
-<li>一个leader如果可以跟群羊互换位置，会被视为软弱。但真正的leader，是双向需要的关系。主耶稣也需要我们。祂在什么地方需要我呢…</li>
-</ul>
-<blockquote>
-<p>“How can priests or ministers feel really loved and cared for <strong>when they have to hide their own sins and failings from the people to whom they minister</strong> and run off to a distant stranger to receive a little comfort and consolation?”</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>道</category>
-        <category>References</category>
-        <category>Henri Nouwen</category>
       </categories>
   </entry>
 </search>
