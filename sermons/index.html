@@ -51,12 +51,27 @@
             <input id="search-input" type="search" placeholder="输入标题、经文、关键词或正文片段" autocomplete="off">
           </label>
 
+          <div class="book-filter">
+            <span>书卷</span>
+            <div class="book-filter-actions">
+              <button id="book-toggle" class="book-toggle" type="button" aria-haspopup="true" aria-controls="book-panel">
+                <span id="selected-book">全部书卷</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <button id="clear-book" class="text-button" type="button" hidden>清除</button>
+            </div>
+            <div id="book-panel" class="book-panel" hidden>
+              <div id="book-options" class="book-options"></div>
+            </div>
+          </div>
+
           <div class="tag-panel">
             <div class="tag-heading">
               <span>标签</span>
               <button id="clear-filter" class="text-button" type="button" hidden>清除筛选</button>
             </div>
             <div id="tag-cloud" class="tag-cloud"></div>
+            <button id="toggle-tags" class="text-button tag-more" type="button" hidden>更多标签</button>
           </div>
         </section>
 

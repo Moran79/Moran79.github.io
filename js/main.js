@@ -36,6 +36,21 @@ $(document).ready(function() {
     syncThemeToggle();
   });
 
+  var backToTop = $('<button id="back-to-top" type="button" aria-label="回到顶部" title="回到顶部"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>');
+  $("body").append(backToTop);
+
+  function syncBackToTop() {
+    backToTop.toggleClass("is-visible", $(window).scrollTop() > 360);
+  }
+
+  syncBackToTop();
+
+  $(window).on("scroll", syncBackToTop);
+
+  backToTop.click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 260);
+  });
+
   /**
    * Shows the responsive navigation menu on mobile.
    */

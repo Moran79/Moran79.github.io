@@ -1,6 +1,8 @@
 const state = {
   data: null,
   activeTag: '',
+  activeBook: '',
+  tagsExpanded: false,
   query: '',
   currentPath: ''
 };
@@ -24,12 +26,33 @@ const resourceRecommendations = [
     description: '提摩太·凯勒讲道与福音资源'
   }
 ];
+const oldTestamentBooks = [
+  '创世记', '出埃及记', '利未记', '民数记', '申命记', '约书亚记', '士师记', '路得记',
+  '撒母耳记上', '撒母耳记下', '列王纪上', '列王纪下', '历代志上', '历代志下',
+  '以斯拉记', '尼希米记', '以斯帖记', '约伯记', '诗篇', '箴言', '传道书', '雅歌',
+  '以赛亚书', '耶利米书', '耶利米哀歌', '以西结书', '但以理书', '何西阿书',
+  '约珥书', '阿摩司书', '俄巴底亚书', '约拿书', '弥迦书', '那鸿书', '哈巴谷书',
+  '西番雅书', '哈该书', '撒迦利亚书', '玛拉基书'
+];
+const newTestamentBooks = [
+  '马太福音', '马可福音', '路加福音', '约翰福音', '使徒行传', '罗马书',
+  '哥林多前书', '哥林多后书', '加拉太书', '以弗所书', '腓立比书', '歌罗西书',
+  '帖撒罗尼迦前书', '帖撒罗尼迦后书', '提摩太前书', '提摩太后书', '提多书',
+  '腓利门书', '希伯来书', '雅各书', '彼得前书', '彼得后书', '约翰一书',
+  '约翰二书', '约翰三书', '犹大书', '启示录'
+];
 
 const els = {
   listView: document.querySelector('#list-view'),
   readerView: document.querySelector('#reader-view'),
   search: document.querySelector('#search-input'),
+  bookToggle: document.querySelector('#book-toggle'),
+  selectedBook: document.querySelector('#selected-book'),
+  bookPanel: document.querySelector('#book-panel'),
+  bookOptions: document.querySelector('#book-options'),
+  clearBook: document.querySelector('#clear-book'),
   tagCloud: document.querySelector('#tag-cloud'),
+  toggleTags: document.querySelector('#toggle-tags'),
   clearFilter: document.querySelector('#clear-filter'),
   resultCount: document.querySelector('#result-count'),
   sermonList: document.querySelector('#sermon-list'),
@@ -219,19 +242,71 @@ function formatDate(value) {
   }).format(date);
 }
 
+function normalizeBookText(value) {
+  return String(value).replace(/^#/, '').trim();
+}
+
+function sermonHasBook(sermon, book) {
+  if (!book) return true;
+  return sermon.tags.some(tag => normalizeBookText(tag) === book);
+}
+
 function filteredSermons() {
   const query = state.query.trim().toLowerCase();
   return state.data.sermons.filter(sermon => {
     const tagMatch = !state.activeTag || sermon.tags.includes(state.activeTag);
+    const bookMatch = sermonHasBook(sermon, state.activeBook);
     const queryMatch = !query || sermon.searchText.includes(query);
-    return tagMatch && queryMatch;
+    return tagMatch && bookMatch && queryMatch;
   });
+}
+
+function renderBookOptions() {
+  els.bookOptions.innerHTML = '';
+
+  [
+    { title: '旧约', books: oldTestamentBooks },
+    { title: '新约', books: newTestamentBooks }
+  ].forEach(group => {
+    const section = document.createElement('section');
+    section.className = 'book-group';
+    section.innerHTML = `<h3>${escapeHtml(group.title)}</h3>`;
+
+    const grid = document.createElement('div');
+    grid.className = 'book-grid';
+
+    group.books.forEach(book => {
+      const button = document.createElement('button');
+      button.className = `book-option${state.activeBook === book ? ' is-active' : ''}`;
+      button.type = 'button';
+      button.textContent = book;
+      button.addEventListener('click', () => {
+        state.activeBook = state.activeBook === book ? '' : book;
+        els.bookPanel.hidden = true;
+        render();
+      });
+      grid.append(button);
+    });
+
+    section.append(grid);
+    els.bookOptions.append(section);
+  });
+}
+
+function renderBookFilter() {
+  els.selectedBook.textContent = state.activeBook || '全部书卷';
+  els.clearBook.hidden = !state.activeBook;
+  els.bookToggle.classList.toggle('is-active', Boolean(state.activeBook));
+  els.bookToggle.setAttribute('aria-expanded', String(!els.bookPanel.hidden));
+  renderBookOptions();
 }
 
 function renderTags() {
   els.tagCloud.innerHTML = '';
 
-  state.data.tags.forEach(tag => {
+  const visibleTags = state.tagsExpanded ? state.data.tags : state.data.tags.slice(0, 12);
+
+  visibleTags.forEach(tag => {
     const button = document.createElement('button');
     button.className = `tag-button${state.activeTag === tag.name ? ' is-active' : ''}`;
     button.type = 'button';
@@ -243,7 +318,9 @@ function renderTags() {
     els.tagCloud.append(button);
   });
 
-  els.clearFilter.hidden = !state.activeTag && !state.query;
+  els.toggleTags.hidden = state.data.tags.length <= 12;
+  els.toggleTags.textContent = state.tagsExpanded ? '收起标签' : `更多标签（${state.data.tags.length - 12}）`;
+  els.clearFilter.hidden = !state.activeTag && !state.activeBook && !state.query;
 }
 
 function renderSermonList() {
@@ -272,6 +349,7 @@ function renderSermonList() {
 }
 
 function render() {
+  renderBookFilter();
   renderTags();
   renderSermonList();
 }
@@ -321,11 +399,34 @@ async function boot() {
     render();
   });
 
+  els.bookToggle.addEventListener('click', () => {
+    els.bookPanel.hidden = !els.bookPanel.hidden;
+  });
+
+  els.clearBook.addEventListener('click', () => {
+    state.activeBook = '';
+    els.bookPanel.hidden = true;
+    render();
+  });
+
+  els.toggleTags.addEventListener('click', () => {
+    state.tagsExpanded = !state.tagsExpanded;
+    renderTags();
+  });
+
   els.clearFilter.addEventListener('click', () => {
     state.activeTag = '';
+    state.activeBook = '';
     state.query = '';
+    els.bookPanel.hidden = true;
     els.search.value = '';
     render();
+  });
+
+  document.addEventListener('click', event => {
+    if (!els.bookPanel.hidden && !event.target.closest('.book-filter')) {
+      els.bookPanel.hidden = true;
+    }
   });
 
   els.backToList.addEventListener('click', () => showList());

@@ -43,20 +43,22 @@ input {
 
 .controls {
   display: grid;
-  grid-template-columns: minmax(240px, 320px) 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-items: start;
   margin: 1.5rem 0 0.75rem;
 }
 
-.search-box {
+.search-box,
+.book-filter {
   display: grid;
   gap: 0.35rem;
   color: var(--sermon-muted);
   font-size: 0.95rem;
 }
 
-.search-box input {
+.search-box input,
+.book-toggle {
   width: 100%;
   padding: 0.55rem 0.7rem;
   border: 1px solid var(--sermon-line);
@@ -66,8 +68,79 @@ input {
   outline: none;
 }
 
-.search-box input:focus {
+.search-box input:focus,
+.book-toggle:focus-visible,
+.book-toggle.is-active {
   border-color: var(--sermon-accent);
+}
+
+.book-filter {
+  position: relative;
+}
+
+.book-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.book-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  max-width: 18rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+.book-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  z-index: 10;
+  width: min(100%, 46rem);
+  padding: 1rem;
+  border: 1px solid var(--sermon-line);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.book-options {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1rem;
+}
+
+.book-group h3 {
+  margin: 0 0 0.55rem;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.book-option {
+  border: 1px solid var(--sermon-line);
+  border-radius: 3px;
+  background: var(--sermon-soft);
+  color: inherit;
+  cursor: pointer;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.86rem;
+}
+
+.book-option:hover,
+.book-option:focus-visible,
+.book-option.is-active {
+  border-color: var(--sermon-accent);
+  color: var(--sermon-accent);
+  outline: none;
 }
 
 .tag-panel {
@@ -124,6 +197,10 @@ input {
 .tag-pill {
   padding: 0.12rem 0.42rem;
   color: var(--sermon-muted);
+}
+
+.tag-more {
+  justify-self: start;
 }
 
 .result-bar {
@@ -266,11 +343,27 @@ input {
   border-top: 2px solid var(--sermon-line);
 }
 
+.related-sermons {
+  border-top-color: #8bb59b;
+}
+
+.resource-recommendations {
+  border-top-color: #b9a46b;
+}
+
 .related-sermons h3,
 .resource-recommendations h3 {
   margin: 0 0 1rem;
   font-size: 1.25rem;
   line-height: 1.3;
+}
+
+.related-sermons h3 {
+  color: #2f6f4e;
+}
+
+.resource-recommendations h3 {
+  color: #7a5f1a;
 }
 
 .related-list {
@@ -287,8 +380,12 @@ input {
   padding: 0.85rem;
   border: 1px solid var(--sermon-line);
   border-radius: 3px;
-  background: #fff;
+  background: #fbfcfb;
   text-decoration: none;
+}
+
+.resource-recommendations .related-card {
+  background: #fffdf6;
 }
 
 .related-card:hover,
@@ -325,4 +422,63 @@ input {
   .related-card {
     min-height: 0;
   }
+
+  .book-options {
+    grid-template-columns: 1fr;
+  }
+
+  .book-toggle {
+    max-width: none;
+  }
+}
+
+body.theme-dark .book-toggle,
+body.theme-dark .book-panel,
+body.theme-dark .book-option,
+body.theme-dark .related-card {
+  border-color: #4b5563;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+body.theme-dark .book-panel {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+}
+
+body.theme-dark .book-option:hover,
+body.theme-dark .book-option:focus-visible,
+body.theme-dark .book-option.is-active,
+body.theme-dark .related-card:hover,
+body.theme-dark .related-card:focus-visible {
+  border-color: #9ae6b4;
+  color: #9ae6b4;
+}
+
+body.theme-dark .related-card time,
+body.theme-dark .related-card span {
+  color: #b7c0cc;
+}
+
+body.theme-dark .related-card strong {
+  color: #f3f4f6;
+}
+
+body.theme-dark .related-sermons {
+  border-top-color: #4f8f67;
+}
+
+body.theme-dark .resource-recommendations {
+  border-top-color: #a68a3d;
+}
+
+body.theme-dark .related-sermons h3 {
+  color: #9ae6b4;
+}
+
+body.theme-dark .resource-recommendations h3 {
+  color: #f2d17b;
+}
+
+body.theme-dark .resource-recommendations .related-card {
+  background: #151a16;
 }
