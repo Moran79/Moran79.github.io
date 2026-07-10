@@ -5,6 +5,9 @@ const state = {
   currentPath: ''
 };
 
+const scriptElement = document.currentScript || document.querySelector('script[src$="sermons.js"]');
+const sermonsBaseUrl = scriptElement ? new URL('../', scriptElement.src) : new URL('/sermons/', window.location.origin);
+
 const els = {
   listView: document.querySelector('#list-view'),
   readerView: document.querySelector('#reader-view'),
@@ -20,6 +23,10 @@ const els = {
   readerTags: document.querySelector('#reader-tags'),
   readerContent: document.querySelector('#reader-content')
 };
+
+function sermonsUrl(path) {
+  return new URL(path, sermonsBaseUrl).toString();
+}
 
 function escapeHtml(value) {
   return String(value)
@@ -225,7 +232,7 @@ async function openSermon(path, push = true) {
   if (!sermon) return showList(push);
 
   state.currentPath = path;
-  const response = await fetch(`./${path}`);
+  const response = await fetch(sermonsUrl(path));
   if (!response.ok) {
     els.readerContent.innerHTML = '<p>无法读取这篇讲章，请确认 Markdown 文件已经发布。</p>';
   } else {
@@ -250,7 +257,7 @@ async function openSermon(path, push = true) {
 }
 
 async function boot() {
-  const response = await fetch('./data/sermons.json');
+  const response = await fetch(sermonsUrl('data/sermons.json'));
   state.data = await response.json();
 
   els.search.addEventListener('input', event => {
