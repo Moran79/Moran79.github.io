@@ -7,7 +7,6 @@ const state = {
 
 const scriptElement = document.currentScript || document.querySelector('script[src$="sermons.js"]');
 const sermonsBaseUrl = scriptElement ? new URL('../', scriptElement.src) : new URL('/sermons/', window.location.origin);
-const sermonsDataVersion = '20260710-0054';
 
 const els = {
   listView: document.querySelector('#list-view'),
@@ -233,14 +232,12 @@ async function openSermon(path, push = true) {
   if (!sermon) return showList(push);
 
   state.currentPath = path;
-  const response = await fetch(sermonsUrl(path));
+  const response = await fetch(sermonsUrl(sermon.itemPath));
   if (!response.ok) {
-    els.readerContent.innerHTML = sermon.content
-      ? markdownToHtml(sermon.content)
-      : '<p>无法读取这篇讲章，请确认 Markdown 文件已经发布。</p>';
+    els.readerContent.innerHTML = '<p>无法读取这篇讲章，请确认讲章 JSON 文件已经发布。</p>';
   } else {
-    const markdown = await response.text();
-    els.readerContent.innerHTML = markdownToHtml(stripFrontmatter(markdown));
+    const item = await response.json();
+    els.readerContent.innerHTML = markdownToHtml(item.content || '');
   }
 
   els.readerDate.textContent = formatDate(sermon.date);
@@ -260,7 +257,7 @@ async function openSermon(path, push = true) {
 }
 
 async function boot() {
-  const response = await fetch(sermonsUrl(`data/sermons.json?v=${sermonsDataVersion}`));
+  const response = await fetch(sermonsUrl('data/sermons.json'));
   state.data = await response.json();
 
   els.search.addEventListener('input', event => {
