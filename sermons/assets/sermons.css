@@ -1,0 +1,270 @@
+:root {
+  --sermon-muted: #6b7280;
+  --sermon-line: #d8d8d8;
+  --sermon-soft: #f7f7f7;
+  --sermon-accent: #005cc5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.sermons-shell {
+  margin-top: 2rem;
+}
+
+.sermons-page-title {
+  margin-bottom: 1.5rem;
+}
+
+.sermons-page-title p {
+  margin: 0.35rem 0 0;
+  color: var(--sermon-muted);
+}
+
+.view {
+  display: none;
+}
+
+.view.is-active {
+  display: block;
+}
+
+.intro {
+  padding: 0 0 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--sermon-line);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.search-box {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--sermon-muted);
+  font-size: 0.95rem;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--sermon-line);
+  border-radius: 3px;
+  background: #fff;
+  color: inherit;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--sermon-accent);
+}
+
+.tag-panel {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.tag-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--sermon-muted);
+  font-size: 0.95rem;
+}
+
+.text-button,
+.back-button {
+  color: var(--sermon-accent);
+}
+
+.text-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tag-cloud,
+.reader-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tag-button,
+.tag-pill {
+  border: 1px solid var(--sermon-line);
+  border-radius: 3px;
+  background: #fff;
+  color: inherit;
+  font-size: 0.88rem;
+}
+
+.tag-button {
+  cursor: pointer;
+  padding: 0.22rem 0.5rem;
+}
+
+.tag-button.is-active {
+  border-color: var(--sermon-accent);
+  color: var(--sermon-accent);
+}
+
+.tag-pill {
+  padding: 0.12rem 0.42rem;
+  color: var(--sermon-muted);
+}
+
+.result-bar {
+  min-height: 1.6rem;
+  color: var(--sermon-muted);
+  font-size: 0.92rem;
+}
+
+.result-bar p {
+  margin: 0;
+}
+
+.sermon-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sermon-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--sermon-line);
+  border-radius: 3px;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.sermon-card:hover,
+.sermon-card:focus-visible {
+  border-color: var(--sermon-accent);
+  outline: none;
+}
+
+.sermon-card h2 {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.sermon-card time,
+.reader-date {
+  color: var(--sermon-muted);
+  font-size: 0.88rem;
+}
+
+.sermon-card p {
+  margin: 0 0 0.65rem;
+  color: var(--sermon-muted);
+}
+
+.reader-view {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.back-button {
+  margin: 0 0 1rem;
+  border: 1px solid var(--sermon-line);
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  padding: 0.4rem 0.65rem;
+}
+
+.reader-paper {
+  background: #fff;
+}
+
+.reader-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--sermon-line);
+  margin-bottom: 1.5rem;
+}
+
+.reader-date {
+  margin: 0 0 0.4rem;
+}
+
+.reader-header h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose > :last-child {
+  margin-bottom: 0;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  line-height: 1.3;
+  margin: 1.35em 0 0.45em;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  margin: 0 0 1em;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--sermon-line);
+  background: var(--sermon-soft);
+  padding: 0.8rem 1rem;
+}
+
+.prose pre {
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+.empty-state {
+  border: 1px dashed var(--sermon-line);
+  border-radius: 3px;
+  padding: 1.25rem;
+  background: var(--sermon-soft);
+}
+
+.empty-state h2 {
+  margin: 0 0 0.25rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--sermon-muted);
+}
+
+@media (max-width: 760px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .reader-header h2 {
+    font-size: 1.45rem;
+  }
+}

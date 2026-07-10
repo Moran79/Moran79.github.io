@@ -58,7 +58,7 @@ var searchFunc = function(path, searchId, contentId) {
         return {
           title: $("title", this).text(),
           content: $("content", this).text(),
-          url: $("link", this).attr("href")
+          url: $("link", this).attr("href") || $("url", this).text()
         };
       }).get();
 
@@ -66,7 +66,7 @@ var searchFunc = function(path, searchId, contentId) {
       if (!$input) { return; }
       var $resultContent = document.getElementById(contentId);
 
-      $input.addEventListener("input", function(){
+      function performSearch() {
         var resultList = [];
         var keywords = getAllCombinations(this.value.trim().toLowerCase().split(" "))
           .sort(function(a,b) { return b.split(" ").length - a.split(" ").length; });
@@ -84,7 +84,7 @@ var searchFunc = function(path, searchId, contentId) {
           var dataTitleLowerCase = dataTitle.toLowerCase();
           var dataContent = stripHtml(data.content.trim());
           var dataContentLowerCase = dataContent.toLowerCase();
-          var dataUrl = data.url;
+          var dataUrl = data.url || "#";
           var indexTitle = -1;
           var indexContent = -1;
           var firstOccur = -1;
@@ -109,7 +109,7 @@ var searchFunc = function(path, searchId, contentId) {
           if (matches > 0) {
             var searchResult = {};
             searchResult.rank = matches;
-            searchResult.str = "<li><a href='"+ dataUrl +"' class='search-result-title'>"+ dataTitle +"</a>";
+            searchResult.str = "<li><a href='"+ dataUrl +"' class='search-result-title'>"+ data.title.trim() +"</a>";
             if (firstOccur >= 0) {
               // cut out 100 characters
               var start = firstOccur - 20;
@@ -152,7 +152,12 @@ var searchFunc = function(path, searchId, contentId) {
           result += "</ul>";
           $resultContent.innerHTML = result;
         }
-      });
+      }
+
+      $input.addEventListener("input", performSearch);
+      if ($input.value.trim().length > 0) {
+        performSearch.call($input);
+      }
     }
   });
 };

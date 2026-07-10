@@ -419,7 +419,7 @@ body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   overflow: auto;
   display: block;
 }
@@ -428,7 +428,7 @@ body th {
   border-bottom: 1px dashed #666;
   color: #383838;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 body td {
   padding: 0 8px;
@@ -481,8 +481,8 @@ body {
   background-color: #fff;
   color: #383838;
   font-weight: 400;
-  font-size: 14px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   -moz-osx-font-smoothing: grayscale;
@@ -572,7 +572,7 @@ body {
   }
 }
 .max-width {
-  max-width: 48rem;
+  max-width: 56rem;
 }
 @media (max-width: 480px) {
   .px3 {
@@ -1409,8 +1409,8 @@ article .content .caption {
   color: #fff;
   font-display: swap;
   font-weight: 400;
-  font-size: 11.200000000000001px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 12.8px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1590,6 +1590,153 @@ code {
   border: 1px dotted #666;
   border-radius: 2px;
   -webkit-border-radius: 2px;
+}
+.home-intro-image {
+  display: block;
+  max-width: 100%;
+  margin: 1.25rem 0;
+  border-radius: 4px;
+}
+#theme-toggle {
+  margin-right: 15px;
+  min-width: 1.4rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #2bbc8a;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+}
+#theme-toggle:hover {
+  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+body.theme-dark {
+  background-color: #181c20;
+  color: #e5e7eb;
+  border-top-color: #9ae6b4;
+}
+body.theme-dark .content a {
+  color: #e5e7eb;
+  background-image: linear-gradient(transparent, transparent 5px, #9ae6b4 5px, #9ae6b4);
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+body.theme-dark .content a:hover {
+  background-image: linear-gradient(transparent, transparent 4px, #9ae6b4 4px, #9ae6b4);
+}
+body.theme-dark .content h1,
+body.theme-dark .content .h1 {
+  color: #9ae6b4;
+}
+body.theme-dark .content h2,
+body.theme-dark .content .h2,
+body.theme-dark .content h3 {
+  color: #d1d5db;
+}
+body.theme-dark .content h4,
+body.theme-dark .content h5,
+body.theme-dark .content h6 {
+  color: #a7f3d0;
+}
+body.theme-dark .content blockquote {
+  color: #a7f3d0;
+}
+body.theme-dark #header h1,
+body.theme-dark #header .h1 {
+  color: #e5e7eb;
+}
+body.theme-dark #header #nav {
+  color: #9ae6b4;
+}
+body.theme-dark #header #nav ul a {
+  color: #9ae6b4;
+}
+body.theme-dark #header #nav ul a:hover {
+  background-image: linear-gradient(transparent, transparent 5px, #9ae6b4 5px, #9ae6b4);
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+body.theme-dark #header #nav ul li {
+  border-color: #4b5563;
+}
+body.theme-dark #theme-toggle {
+  color: #9ae6b4;
+}
+body.theme-dark #theme-toggle:hover {
+  background-image: linear-gradient(transparent, transparent 5px, #9ae6b4 5px, #9ae6b4);
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+body.theme-dark #footer {
+  color: #9ca3af;
+}
+body.theme-dark #footer li {
+  border-color: #4b5563;
+}
+body.theme-dark #footer a {
+  color: #9ca3af;
+}
+body.theme-dark article header .meta * {
+  color: #9ca3af;
+}
+body.theme-dark article .content blockquote {
+  background: inherit;
+  color: #a7f3d0;
+}
+body.theme-dark .post-list .post-item .meta {
+  color: #9ca3af;
+}
+body.theme-dark input,
+body.theme-dark textarea,
+body.theme-dark select,
+body.theme-dark button.sermon-card,
+body.theme-dark .back-button {
+  border-color: #4b5563;
+  background: #111827;
+  color: #e5e7eb;
+}
+body.theme-dark .tag-button,
+body.theme-dark .tag-pill {
+  border-color: #4b5563;
+  background: #111827;
+  color: #d1d5db;
+}
+body.theme-dark .tag-button.is-active {
+  border-color: #9ae6b4;
+  color: #9ae6b4;
+}
+body.theme-dark .reader-paper {
+  background: #181c20;
+}
+body.theme-dark .reader-header,
+body.theme-dark .intro {
+  border-color: #374151;
+}
+body.theme-dark .sermon-card:hover,
+body.theme-dark .sermon-card:focus-visible {
+  border-color: #9ae6b4;
+}
+body.theme-dark .empty-state,
+body.theme-dark .prose blockquote {
+  border-color: #4b5563;
+  background: #111827;
+}
+body.theme-dark pre,
+body.theme-dark .highlight {
+  border-color: #4b5563;
+  background: #111827;
+}
+body.theme-dark code {
+  border-color: #4b5563;
+  background: #111827;
+  color: #e5e7eb;
 }
 .highlight {
   overflow-x: auto;

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-14SPZZ7P4W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-14SPZZ7P4W');
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>讲章</title>
+    <meta name="description" content="讲章翻译、检索与阅读">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./assets/sermons.css">
+  </head>
+  <body class="max-width mx-auto px3 ltr">
+    <div class="content index py4">
+      <header id="header">
+        <a class="u-url u-uid" href="/">
+          <img id="logo" alt class="u-logo" src="/images/logo.png">
+          <div id="title">
+            <h1 class="p-name">大家一起来</h1>
+          </div>
+        </a>
+        <div id="nav">
+          <ul>
+            <li class="icon">
+              <a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a>
+            </li>
+            <li><a href="/">首页</a></li>
+            <li><a href="/sermons/">讲章</a></li>
+            <li class="theme-switch"><button id="theme-toggle" type="button" aria-label="切换夜间模式" title="切换夜间模式"><i class="fa-solid fa-moon" aria-hidden="true"></i></button></li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="sermons-shell">
+      <section id="list-view" class="view is-active" aria-live="polite">
+        <section class="controls" aria-label="讲章检索">
+          <label class="search-box">
+            <span>搜索</span>
+            <input id="search-input" type="search" placeholder="输入标题、经文、关键词或正文片段" autocomplete="off">
+          </label>
+
+          <div class="tag-panel">
+            <div class="tag-heading">
+              <span>标签</span>
+              <button id="clear-filter" class="text-button" type="button" hidden>清除筛选</button>
+            </div>
+            <div id="tag-cloud" class="tag-cloud"></div>
+          </div>
+        </section>
+
+        <div class="result-bar">
+          <p id="result-count"></p>
+        </div>
+
+        <section id="sermon-list" class="sermon-list" aria-label="讲章列表"></section>
+      </section>
+
+      <section id="reader-view" class="view reader-view" aria-live="polite">
+        <button id="back-to-list" class="back-button" type="button">← 返回列表</button>
+        <article class="reader-paper">
+          <header class="reader-header">
+            <p id="reader-date" class="reader-date"></p>
+            <h2 id="reader-title"></h2>
+            <div id="reader-tags" class="reader-tags"></div>
+          </header>
+          <div id="reader-content" class="prose"></div>
+        </article>
+      </section>
+
+      <template id="empty-template">
+        <div class="empty-state">
+          <h2>没有找到匹配的讲章</h2>
+          <p>可以换一个关键词，或清除当前标签筛选。</p>
+        </div>
+      </template>
+      </main>
+
+      <footer id="footer">
+        <div class="footer-left">Copyright &copy; 2020-2026 Siyu Wang</div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li><a href="/">首页</a></li>
+              <li><a href="/sermons/">讲章</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="./assets/sermons.js" defer></script>
+  </body>
+</html>

@@ -10,7 +10,31 @@ if (!!$.prototype.justifiedGallery) {
   $(".article-gallery").justifiedGallery(options);
 }
 
+(function() {
+  var storedTheme = localStorage.getItem("theme");
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var theme = storedTheme || (prefersDark ? "dark" : "light");
+  if (theme === "dark") {
+    document.body.classList.add("theme-dark");
+  }
+})();
+
 $(document).ready(function() {
+  function syncThemeToggle() {
+    var isDark = $("body").hasClass("theme-dark");
+    $("#theme-toggle")
+      .attr("aria-label", isDark ? "切换白天模式" : "切换夜间模式")
+      .attr("title", isDark ? "切换白天模式" : "切换夜间模式")
+      .html('<i class="fa-solid ' + (isDark ? 'fa-sun' : 'fa-moon') + '" aria-hidden="true"></i>');
+  }
+
+  syncThemeToggle();
+
+  $("#theme-toggle").click(function() {
+    $("body").toggleClass("theme-dark");
+    localStorage.setItem("theme", $("body").hasClass("theme-dark") ? "dark" : "light");
+    syncThemeToggle();
+  });
 
   /**
    * Shows the responsive navigation menu on mobile.

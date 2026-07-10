@@ -2,31 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iamwangsiyu.com/sermons/data/sermons.json</loc>
+    
+    <lastmod>2026-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://iamwangsiyu.com/search/index.html</loc>
+    
+    <lastmod>2026-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://iamwangsiyu.com/TUFTEDTITMOUSE/index.html</loc>
     
-    <lastmod>2023-08-21T04:30:01.089Z</lastmod>
+    <lastmod>2023-08-21</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://iamwangsiyu.com/2023/06/24/Personal-Wingspan-Record/</loc>
     
-    <lastmod>2023-06-24T23:00:24.103Z</lastmod>
+    <lastmod>2023-06-24</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://iamwangsiyu.com/about/index.html</loc>
     
-    <lastmod>2022-04-07T19:25:14.819Z</lastmod>
+    <lastmod>2022-04-07</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://iamwangsiyu.com/categories/index.html</loc>
     
-    <lastmod>2020-07-01T21:26:03.000Z</lastmod>
+    <lastmod>2020-07-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+  
+
+  <url>
+    <loc>https://iamwangsiyu.com/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
   
 </urlset>
