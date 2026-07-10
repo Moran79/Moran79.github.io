@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://iamwangsiyu.com/sermons/data/sermons.json</loc>
-    
-    <lastmod>2026-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://iamwangsiyu.com/sermons/items/19940619.json</loc>
-    
-    <lastmod>2026-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://iamwangsiyu.com/sermons/items/19970629.json</loc>
-    
-    <lastmod>2026-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://iamwangsiyu.com/search/index.html</loc>
     
     <lastmod>2026-07-10</lastmod>
@@ -81,7 +54,25 @@
     <priority>1.0</priority>
   </url>
 
-  
+  <url>
+    <loc>https://iamwangsiyu.com/sermons/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-  
+  <url>
+    <loc>https://iamwangsiyu.com/sermons/read/19940619/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://iamwangsiyu.com/sermons/read/19970629/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
