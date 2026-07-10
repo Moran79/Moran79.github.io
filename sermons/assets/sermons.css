@@ -389,10 +389,18 @@ input {
   background: #fffdf6;
 }
 
+.resource-recommendations .related-card:hover,
+.resource-recommendations .related-card:focus-visible {
+  background: #fffdf6;
+}
+
 .related-card:hover,
 .related-card:focus-visible {
   border-color: var(--sermon-accent);
   background-image: none;
+  background-position: initial;
+  background-repeat: initial;
+  background-size: initial;
   color: inherit;
   outline: none;
 }
@@ -459,6 +467,9 @@ body.theme-dark .related-card:hover,
 body.theme-dark .related-card:focus-visible {
   border-color: #9ae6b4;
   background-image: none;
+  background-position: initial;
+  background-repeat: initial;
+  background-size: initial;
   color: #e5e7eb;
 }
 
@@ -488,5 +499,10 @@ body.theme-dark .resource-recommendations h3 {
 }
 
 body.theme-dark .resource-recommendations .related-card {
+  background: #151a16;
+}
+
+body.theme-dark .resource-recommendations .related-card:hover,
+body.theme-dark .resource-recommendations .related-card:focus-visible {
   background: #151a16;
 }
