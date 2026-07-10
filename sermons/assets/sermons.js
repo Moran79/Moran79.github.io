@@ -165,8 +165,19 @@ function markdownToHtml(markdown) {
   return html.join('\n');
 }
 
-function stripFrontmatter(markdown) {
-  return markdown.replace(/^---[\s\S]*?\n---\s*/, '');
+function relatedSermonsHtml(related) {
+  if (!related || !related.length) return '';
+
+  return `<section class="related-sermons" aria-label="相似讲章">
+    <h3>相似讲章</h3>
+    <div class="related-list">
+      ${related.map(item => `<a class="related-card" href="${sermonsUrl(item.sharePath)}">
+        <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}</time>
+        <strong>${escapeHtml(item.title)}</strong>
+        ${item.tags && item.tags.length ? `<span>${item.tags.map(tag => escapeHtml(tag)).join(' ')}</span>` : ''}
+      </a>`).join('')}
+    </div>
+  </section>`;
 }
 
 function formatDate(value) {
@@ -255,7 +266,7 @@ async function openSermon(path, push = true) {
     els.readerContent.innerHTML = '<p>无法读取这篇讲章，请确认讲章 JSON 文件已经发布。</p>';
   } else {
     const item = await response.json();
-    els.readerContent.innerHTML = markdownToHtml(item.content || '');
+    els.readerContent.innerHTML = `${markdownToHtml(item.content || '')}${relatedSermonsHtml(item.related)}`;
   }
 
   els.readerDate.textContent = formatDate(sermon.date);

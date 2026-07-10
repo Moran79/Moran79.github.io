@@ -259,6 +259,46 @@ input {
   color: var(--sermon-muted);
 }
 
+.related-sermons {
+  margin-top: 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--sermon-line);
+}
+
+.related-sermons h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+}
+
+.related-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.related-card {
+  display: grid;
+  gap: 0.22rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--sermon-line);
+  text-decoration: none;
+}
+
+.related-card:last-child {
+  border-bottom: 0;
+}
+
+.related-card time,
+.related-card span {
+  color: var(--sermon-muted);
+  font-size: 0.88rem;
+}
+
+.related-card strong {
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
 @media (max-width: 760px) {
   .controls {
     grid-template-columns: 1fr;
