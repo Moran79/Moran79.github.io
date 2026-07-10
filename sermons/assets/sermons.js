@@ -28,6 +28,24 @@ function sermonsUrl(path) {
   return new URL(path, sermonsBaseUrl).toString();
 }
 
+function pathFromLocation() {
+  const params = new URLSearchParams(window.location.hash.slice(1));
+  const hashPath = params.get('read');
+  if (hashPath) return hashPath;
+
+  const basePath = new URL(sermonsBaseUrl).pathname.replace(/\/$/, '');
+  const readPrefix = `${basePath}/read/`;
+  if (!window.location.pathname.startsWith(readPrefix)) return '';
+
+  const slug = decodeURIComponent(window.location.pathname.slice(readPrefix.length).replace(/\/$/, ''));
+  const sermon = state.data && state.data.sermons.find(item => {
+    const sharePath = String(item.sharePath || '').replace(/^read\//, '').replace(/\/$/, '');
+    return sharePath === slug;
+  });
+
+  return sermon ? sermon.path : '';
+}
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -223,7 +241,7 @@ function showList(push = true) {
   els.readerView.classList.remove('is-active');
   els.listView.classList.add('is-active');
   document.title = '讲章翻译检索';
-  if (push) history.pushState({}, '', './');
+  if (push) history.pushState({}, '', sermonsBaseUrl);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -248,9 +266,7 @@ async function openSermon(path, push = true) {
   document.title = `${sermon.title} - 讲章翻译检索`;
 
   if (push) {
-    const url = new URL(window.location.href);
-    url.hash = `read=${encodeURIComponent(path)}`;
-    history.pushState({ path }, '', url);
+    history.pushState({ path }, '', sermonsUrl(sermon.sharePath || `#read=${encodeURIComponent(path)}`));
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -274,16 +290,14 @@ async function boot() {
 
   els.backToList.addEventListener('click', () => showList());
   window.addEventListener('popstate', () => {
-    const params = new URLSearchParams(window.location.hash.slice(1));
-    const path = params.get('read');
+    const path = pathFromLocation();
     if (path) openSermon(path, false);
     else showList(false);
   });
 
   render();
 
-  const params = new URLSearchParams(window.location.hash.slice(1));
-  const path = params.get('read');
+  const path = pathFromLocation();
   if (path) openSermon(path, false);
 }
 
