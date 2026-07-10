@@ -259,13 +259,15 @@ input {
   color: var(--sermon-muted);
 }
 
-.related-sermons {
+.related-sermons,
+.resource-recommendations {
   margin-top: 2.75rem;
   padding-top: 1.5rem;
   border-top: 2px solid var(--sermon-line);
 }
 
-.related-sermons h3 {
+.related-sermons h3,
+.resource-recommendations h3 {
   margin: 0 0 1rem;
   font-size: 1.25rem;
   line-height: 1.3;

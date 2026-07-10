@@ -7,6 +7,23 @@ const state = {
 
 const scriptElement = document.currentScript || document.querySelector('script[src$="sermons.js"]');
 const sermonsBaseUrl = scriptElement ? new URL('../', scriptElement.src) : new URL('/sermons/', window.location.origin);
+const resourceRecommendations = [
+  {
+    title: '以斯拉释经网',
+    url: 'https://www.yisila.net/',
+    description: '中文释经、讲章与研经资源'
+  },
+  {
+    title: '良友资源库',
+    url: 'https://r.729ly.net/',
+    description: '华语信仰、讲道与门训资源'
+  },
+  {
+    title: 'Gospel in Life',
+    url: 'https://gospelinlife.com/',
+    description: '提摩太·凯勒讲道与福音资源'
+  }
+];
 
 const els = {
   listView: document.querySelector('#list-view'),
@@ -180,6 +197,18 @@ function relatedSermonsHtml(related) {
   </section>`;
 }
 
+function resourceRecommendationsHtml() {
+  return `<section class="resource-recommendations" aria-label="优秀资源推荐">
+    <h3>优秀资源推荐</h3>
+    <div class="related-list">
+      ${resourceRecommendations.map(item => `<a class="related-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">
+        <strong>${escapeHtml(item.title)}</strong>
+        <span>${escapeHtml(item.description)}</span>
+      </a>`).join('')}
+    </div>
+  </section>`;
+}
+
 function formatDate(value) {
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
@@ -266,7 +295,7 @@ async function openSermon(path, push = true) {
     els.readerContent.innerHTML = '<p>无法读取这篇讲章，请确认讲章 JSON 文件已经发布。</p>';
   } else {
     const item = await response.json();
-    els.readerContent.innerHTML = `${markdownToHtml(item.content || '')}${relatedSermonsHtml(item.related)}`;
+    els.readerContent.innerHTML = `${markdownToHtml(item.content || '')}${relatedSermonsHtml(item.related)}${resourceRecommendationsHtml()}`;
   }
 
   els.readerDate.textContent = formatDate(sermon.date);
