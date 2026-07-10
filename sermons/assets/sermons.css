@@ -385,8 +385,8 @@ input {
   text-decoration: none;
 }
 
-.related-card:hover,
-.related-card:focus-visible {
+.content .related-card:hover,
+.content .related-card:focus-visible {
   border-color: var(--sermon-accent);
   background-image: none;
   color: inherit;
@@ -451,8 +451,8 @@ body.theme-dark .book-option.is-active {
   color: #9ae6b4;
 }
 
-body.theme-dark .related-card:hover,
-body.theme-dark .related-card:focus-visible {
+body.theme-dark .content .related-card:hover,
+body.theme-dark .content .related-card:focus-visible {
   border-color: #9ae6b4;
   background-image: none;
   color: #e5e7eb;
