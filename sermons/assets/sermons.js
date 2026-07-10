@@ -7,6 +7,7 @@ const state = {
 
 const scriptElement = document.currentScript || document.querySelector('script[src$="sermons.js"]');
 const sermonsBaseUrl = scriptElement ? new URL('../', scriptElement.src) : new URL('/sermons/', window.location.origin);
+const sermonsDataVersion = '20260710-0054';
 
 const els = {
   listView: document.querySelector('#list-view'),
@@ -259,7 +260,7 @@ async function openSermon(path, push = true) {
 }
 
 async function boot() {
-  const response = await fetch(sermonsUrl('data/sermons.json'));
+  const response = await fetch(sermonsUrl(`data/sermons.json?v=${sermonsDataVersion}`));
   state.data = await response.json();
 
   els.search.addEventListener('input', event => {
