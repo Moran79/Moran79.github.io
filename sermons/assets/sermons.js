@@ -234,7 +234,9 @@ async function openSermon(path, push = true) {
   state.currentPath = path;
   const response = await fetch(sermonsUrl(path));
   if (!response.ok) {
-    els.readerContent.innerHTML = '<p>无法读取这篇讲章，请确认 Markdown 文件已经发布。</p>';
+    els.readerContent.innerHTML = sermon.content
+      ? markdownToHtml(sermon.content)
+      : '<p>无法读取这篇讲章，请确认 Markdown 文件已经发布。</p>';
   } else {
     const markdown = await response.text();
     els.readerContent.innerHTML = markdownToHtml(stripFrontmatter(markdown));
