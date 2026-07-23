@@ -50,7 +50,8 @@ input {
 }
 
 .search-box,
-.book-filter {
+.book-filter,
+.series-filter {
   display: grid;
   gap: 0.35rem;
   color: var(--sermon-muted);
@@ -143,7 +144,8 @@ input {
   outline: none;
 }
 
-.tag-panel {
+.tag-panel,
+.series-filter {
   display: grid;
   gap: 0.5rem;
 }
@@ -197,6 +199,11 @@ input {
 .tag-pill {
   padding: 0.12rem 0.42rem;
   color: var(--sermon-muted);
+}
+
+.series-pill {
+  border-color: #8bb59b;
+  color: #2f6f4e;
 }
 
 .tag-more {

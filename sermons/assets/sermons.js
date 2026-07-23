@@ -2,6 +2,7 @@ const state = {
   data: null,
   activeTag: '',
   activeBook: '',
+  activeSeries: '',
   tagsExpanded: false,
   query: '',
   currentPath: ''
@@ -51,6 +52,9 @@ const els = {
   bookPanel: document.querySelector('#book-panel'),
   bookOptions: document.querySelector('#book-options'),
   clearBook: document.querySelector('#clear-book'),
+  seriesFilter: document.querySelector('#series-filter'),
+  seriesCloud: document.querySelector('#series-cloud'),
+  clearSeries: document.querySelector('#clear-series'),
   tagCloud: document.querySelector('#tag-cloud'),
   toggleTags: document.querySelector('#toggle-tags'),
   clearFilter: document.querySelector('#clear-filter'),
@@ -170,7 +174,7 @@ function markdownToHtml(markdown) {
       return;
     }
 
-    const heading = line.match(/^(#{1,3})\s+(.+)$/);
+    const heading = line.match(/^(#{1,6})\s+(.+)$/);
     if (heading) {
       flushParagraph();
       flushList();
@@ -256,8 +260,9 @@ function filteredSermons() {
   return state.data.sermons.filter(sermon => {
     const tagMatch = !state.activeTag || sermon.tags.includes(state.activeTag);
     const bookMatch = sermonHasBook(sermon, state.activeBook);
+    const seriesMatch = !state.activeSeries || sermon.series === state.activeSeries;
     const queryMatch = !query || sermon.searchText.includes(query);
-    return tagMatch && bookMatch && queryMatch;
+    return tagMatch && bookMatch && seriesMatch && queryMatch;
   });
 }
 
@@ -320,7 +325,28 @@ function renderTags() {
 
   els.toggleTags.hidden = state.data.tags.length <= 12;
   els.toggleTags.textContent = state.tagsExpanded ? '收起标签' : `更多标签（${state.data.tags.length - 12}）`;
-  els.clearFilter.hidden = !state.activeTag && !state.activeBook && !state.query;
+  els.clearFilter.hidden = !state.activeTag && !state.activeBook && !state.activeSeries && !state.query;
+}
+
+function renderSeries() {
+  els.seriesCloud.innerHTML = '';
+
+  const series = state.data.series || [];
+  els.seriesFilter.hidden = !series.length;
+
+  series.forEach(item => {
+    const button = document.createElement('button');
+    button.className = `tag-button${state.activeSeries === item.name ? ' is-active' : ''}`;
+    button.type = 'button';
+    button.textContent = `${item.name} ${item.count}`;
+    button.addEventListener('click', () => {
+      state.activeSeries = state.activeSeries === item.name ? '' : item.name;
+      render();
+    });
+    els.seriesCloud.append(button);
+  });
+
+  els.clearSeries.hidden = !state.activeSeries;
 }
 
 function renderSermonList() {
@@ -337,11 +363,12 @@ function renderSermonList() {
     const card = document.createElement('button');
     card.className = 'sermon-card';
     card.type = 'button';
+    const seriesPill = sermon.series ? `<span class="tag-pill series-pill">${escapeHtml(sermon.series)}</span>` : '';
     card.innerHTML = `
       <time datetime="${escapeHtml(sermon.date)}">${escapeHtml(formatDate(sermon.date))}</time>
       <h2>${escapeHtml(sermon.title)}</h2>
       ${sermon.excerpt ? `<p>${escapeHtml(sermon.excerpt)}</p>` : ''}
-      <div class="reader-tags">${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}</div>
+      <div class="reader-tags">${seriesPill}${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}</div>
     `;
     card.addEventListener('click', () => openSermon(sermon.path));
     els.sermonList.append(card);
@@ -350,6 +377,7 @@ function renderSermonList() {
 
 function render() {
   renderBookFilter();
+  renderSeries();
   renderTags();
   renderSermonList();
 }
@@ -378,7 +406,7 @@ async function openSermon(path, push = true) {
 
   els.readerDate.textContent = formatDate(sermon.date);
   els.readerTitle.textContent = sermon.title;
-  els.readerTags.innerHTML = sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('');
+  els.readerTags.innerHTML = `${sermon.series ? `<span class="tag-pill series-pill">${escapeHtml(sermon.series)}</span>` : ''}${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}`;
   els.listView.classList.remove('is-active');
   els.readerView.classList.add('is-active');
   document.title = `${sermon.title} - 讲章翻译检索`;
@@ -409,6 +437,11 @@ async function boot() {
     render();
   });
 
+  els.clearSeries.addEventListener('click', () => {
+    state.activeSeries = '';
+    render();
+  });
+
   els.toggleTags.addEventListener('click', () => {
     state.tagsExpanded = !state.tagsExpanded;
     renderTags();
@@ -417,6 +450,7 @@ async function boot() {
   els.clearFilter.addEventListener('click', () => {
     state.activeTag = '';
     state.activeBook = '';
+    state.activeSeries = '';
     state.query = '';
     els.bookPanel.hidden = true;
     els.search.value = '';
