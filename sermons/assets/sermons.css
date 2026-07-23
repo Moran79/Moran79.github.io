@@ -215,10 +215,17 @@ input {
 }
 
 .series-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
   border-color: #2f8f5f;
   background: #eaf7ef;
   color: #1f6f46;
   font-weight: 600;
+}
+
+.series-pill .fa-book-open {
+  font-size: 0.82em;
 }
 
 .tag-more {

@@ -367,7 +367,8 @@ function renderSermonList() {
     const card = document.createElement('button');
     card.className = 'sermon-card';
     card.type = 'button';
-    const seriesPill = sermon.series ? `<span class="tag-pill series-pill">系列：${escapeHtml(formatSeries(sermon.series))}</span>` : '';
+    const seriesName = formatSeries(sermon.series || '');
+    const seriesPill = seriesName ? `<span class="tag-pill series-pill" aria-label="系列：${escapeHtml(seriesName)}"><i class="fa-solid fa-book-open" aria-hidden="true"></i>${escapeHtml(seriesName)}</span>` : '';
     card.innerHTML = `
       <time datetime="${escapeHtml(sermon.date)}">${escapeHtml(formatDate(sermon.date))}</time>
       <h2>${escapeHtml(sermon.title)}</h2>
@@ -410,7 +411,8 @@ async function openSermon(path, push = true) {
 
   els.readerDate.textContent = formatDate(sermon.date);
   els.readerTitle.textContent = sermon.title;
-  els.readerTags.innerHTML = `${sermon.series ? `<span class="tag-pill series-pill">系列：${escapeHtml(formatSeries(sermon.series))}</span>` : ''}${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}`;
+  const seriesName = formatSeries(sermon.series || '');
+  els.readerTags.innerHTML = `${seriesName ? `<span class="tag-pill series-pill" aria-label="系列：${escapeHtml(seriesName)}"><i class="fa-solid fa-book-open" aria-hidden="true"></i>${escapeHtml(seriesName)}</span>` : ''}${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}`;
   els.listView.classList.remove('is-active');
   els.readerView.classList.add('is-active');
   document.title = `${sermon.title} - 讲章翻译检索`;
