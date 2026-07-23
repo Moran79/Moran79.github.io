@@ -250,6 +250,10 @@ function normalizeBookText(value) {
   return String(value).replace(/^#/, '').trim();
 }
 
+function formatSeries(value) {
+  return String(value).replace(/^#/, '').trim();
+}
+
 function sermonHasBook(sermon, book) {
   if (!book) return true;
   return sermon.tags.some(tag => normalizeBookText(tag) === book);
@@ -338,7 +342,7 @@ function renderSeries() {
     const button = document.createElement('button');
     button.className = `tag-button series-button${state.activeSeries === item.name ? ' is-active' : ''}`;
     button.type = 'button';
-    button.textContent = `${item.name} ${item.count}`;
+    button.textContent = `${formatSeries(item.name)} ${item.count}`;
     button.addEventListener('click', () => {
       state.activeSeries = state.activeSeries === item.name ? '' : item.name;
       render();
@@ -363,7 +367,7 @@ function renderSermonList() {
     const card = document.createElement('button');
     card.className = 'sermon-card';
     card.type = 'button';
-    const seriesPill = sermon.series ? `<span class="tag-pill series-pill">${escapeHtml(sermon.series)}</span>` : '';
+    const seriesPill = sermon.series ? `<span class="tag-pill series-pill">系列：${escapeHtml(formatSeries(sermon.series))}</span>` : '';
     card.innerHTML = `
       <time datetime="${escapeHtml(sermon.date)}">${escapeHtml(formatDate(sermon.date))}</time>
       <h2>${escapeHtml(sermon.title)}</h2>
@@ -406,7 +410,7 @@ async function openSermon(path, push = true) {
 
   els.readerDate.textContent = formatDate(sermon.date);
   els.readerTitle.textContent = sermon.title;
-  els.readerTags.innerHTML = `${sermon.series ? `<span class="tag-pill series-pill">${escapeHtml(sermon.series)}</span>` : ''}${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}`;
+  els.readerTags.innerHTML = `${sermon.series ? `<span class="tag-pill series-pill">系列：${escapeHtml(formatSeries(sermon.series))}</span>` : ''}${sermon.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}`;
   els.listView.classList.remove('is-active');
   els.readerView.classList.add('is-active');
   document.title = `${sermon.title} - 讲章翻译检索`;
