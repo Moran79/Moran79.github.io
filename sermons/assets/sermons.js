@@ -336,7 +336,7 @@ function renderSeries() {
 
   series.forEach(item => {
     const button = document.createElement('button');
-    button.className = `tag-button${state.activeSeries === item.name ? ' is-active' : ''}`;
+    button.className = `tag-button series-button${state.activeSeries === item.name ? ' is-active' : ''}`;
     button.type = 'button';
     button.textContent = `${item.name} ${item.count}`;
     button.addEventListener('click', () => {

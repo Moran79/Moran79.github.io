@@ -196,14 +196,29 @@ input {
   color: var(--sermon-accent);
 }
 
+.series-button:hover,
+.series-button:focus-visible,
+.series-button.is-active {
+  border-color: #2f8f5f;
+  color: #1f6f46;
+  outline: none;
+}
+
+.series-button.is-active {
+  background: #eaf7ef;
+  font-weight: 600;
+}
+
 .tag-pill {
   padding: 0.12rem 0.42rem;
   color: var(--sermon-muted);
 }
 
 .series-pill {
-  border-color: #8bb59b;
-  color: #2f6f4e;
+  border-color: #2f8f5f;
+  background: #eaf7ef;
+  color: #1f6f46;
+  font-weight: 600;
 }
 
 .tag-more {
@@ -453,6 +468,8 @@ input {
 body.theme-dark .book-toggle,
 body.theme-dark .book-panel,
 body.theme-dark .book-option,
+body.theme-dark .tag-button,
+body.theme-dark .tag-pill,
 body.theme-dark .related-card {
   border-color: #4b5563;
   background: #111827;
@@ -468,6 +485,27 @@ body.theme-dark .book-option:focus-visible,
 body.theme-dark .book-option.is-active {
   border-color: #9ae6b4;
   color: #9ae6b4;
+}
+
+body.theme-dark .tag-button:hover,
+body.theme-dark .tag-button:focus-visible,
+body.theme-dark .tag-button.is-active {
+  border-color: #8ab4f8;
+  color: #8ab4f8;
+}
+
+body.theme-dark .series-button:hover,
+body.theme-dark .series-button:focus-visible,
+body.theme-dark .series-button.is-active,
+body.theme-dark .series-pill {
+  border-color: #9ae6b4;
+  background: #123524;
+  color: #b6f2c7;
+}
+
+body.theme-dark .series-button.is-active,
+body.theme-dark .series-pill {
+  font-weight: 600;
 }
 
 body.theme-dark .content .related-card:hover,
